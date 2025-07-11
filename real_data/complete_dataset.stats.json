@@ -1,0 +1,49 @@
+{
+  "total_records": 6714,
+  "tournaments": 80,
+  "formats": {
+    "Legacy": 1799,
+    "Modern": 1697,
+    "Standard": 1673,
+    "Pioneer": 1545
+  },
+  "sources": {
+    "generated": 6714
+  },
+  "archetypes": {
+    "Midrange": 510,
+    "Control": 406,
+    "Tempo": 402,
+    "Tron": 371,
+    "Lotus Field": 340,
+    "Burn": 336,
+    "Ramp": 269,
+    "Rhinos": 261,
+    "Combo": 256,
+    "Creativity": 255,
+    "Show and Tell": 236,
+    "Painter": 230,
+    "Reanimator": 228,
+    "Aggro": 214,
+    "Greasefang": 205,
+    "Lands": 198,
+    "Izzet Phoenix": 195,
+    "Delver": 186,
+    "Izzet Murktide": 175,
+    "Dredge": 169,
+    "Storm": 169,
+    "Elves": 167,
+    "Yawgmoth": 162,
+    "Living End": 149,
+    "Hammer Time": 148,
+    "Mono Red Aggro": 145,
+    "Spirits": 119,
+    "Death and Taxes": 111,
+    "Amulet Titan": 102
+  },
+  "date_range": {
+    "start": "2025-04-15T00:37:46.215237",
+    "end": "2025-07-09T00:37:46.215179"
+  },
+  "generated_at": "2025-07-12T00:37:46.386596"
+}

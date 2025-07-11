@@ -1,0 +1,1059 @@
+{
+  "metadata": {
+    "generated_at": "2025-07-12T00:37:55.964733",
+    "total_decks": 1625,
+    "total_tournaments": 20,
+    "date_range": {
+      "start": "2025-05-15T00:37:46.386995",
+      "end": "2025-07-10T00:37:46.386915"
+    },
+    "formats": [
+      "Modern"
+    ],
+    "sources": [
+      "generated"
+    ],
+    "analysis_parameters": {
+      "min_decks_for_archetype": 5,
+      "min_matches_for_matchup": 5,
+      "confidence_level": 0.95
+    }
+  },
+  "archetype_performance": {
+    "Tron": {
+      "deck_count": 20,
+      "wins": 789,
+      "losses": 722,
+      "matches_played": 1511,
+      "winrate": 0.5095831885065462,
+      "total_wins": 789,
+      "total_losses": 722,
+      "total_matches": 1511,
+      "tournaments_appeared": 20,
+      "meta_share": 0.012307692307692308,
+      "overall_winrate": 0.5221707478491066,
+      "avg_wins_per_deck": 39.45,
+      "avg_losses_per_deck": 36.1,
+      "winrate_ci_lower": 0.49702183984116477,
+      "winrate_ci_upper": 0.5473196558570483,
+      "dominance_score": 0.31822552563254086,
+      "tier": "Tier 3"
+    },
+    "Rhinos": {
+      "deck_count": 19,
+      "wins": 503,
+      "losses": 569,
+      "matches_played": 1072,
+      "winrate": 0.41969220852469585,
+      "total_wins": 503,
+      "total_losses": 569,
+      "total_matches": 1072,
+      "tournaments_appeared": 19,
+      "meta_share": 0.011692307692307693,
+      "overall_winrate": 0.46921641791044777,
+      "avg_wins_per_deck": 26.473684210526315,
+      "avg_losses_per_deck": 29.94736842105263,
+      "winrate_ci_lower": 0.439365671641791,
+      "winrate_ci_upper": 0.49906716417910446,
+      "dominance_score": 0.2862067738231917,
+      "tier": "Tier 4"
+    },
+    "Yawgmoth": {
+      "deck_count": 18,
+      "wins": 428,
+      "losses": 365,
+      "matches_played": 793,
+      "winrate": 0.518942338840298,
+      "total_wins": 428,
+      "total_losses": 365,
+      "total_matches": 793,
+      "tournaments_appeared": 18,
+      "meta_share": 0.011076923076923076,
+      "overall_winrate": 0.5397225725094578,
+      "avg_wins_per_deck": 23.77777777777778,
+      "avg_losses_per_deck": 20.27777777777778,
+      "winrate_ci_lower": 0.5044136191677175,
+      "winrate_ci_upper": 0.5737704918032787,
+      "dominance_score": 0.3282643127364439,
+      "tier": "Tier 3"
+    },
+    "Creativity": {
+      "deck_count": 17,
+      "wins": 626,
+      "losses": 728,
+      "matches_played": 1354,
+      "winrate": 0.44074952249226107,
+      "total_wins": 626,
+      "total_losses": 728,
+      "total_matches": 1354,
+      "tournaments_appeared": 17,
+      "meta_share": 0.010461538461538461,
+      "overall_winrate": 0.4623338257016248,
+      "avg_wins_per_deck": 36.8235294117647,
+      "avg_losses_per_deck": 42.8235294117647,
+      "winrate_ci_lower": 0.4357459379615953,
+      "winrate_ci_upper": 0.48892171344165436,
+      "dominance_score": 0.2815849108055903,
+      "tier": "Tier 4"
+    },
+    "Izzet Murktide": {
+      "deck_count": 17,
+      "wins": 675,
+      "losses": 392,
+      "matches_played": 1067,
+      "winrate": 0.6146888384983623,
+      "total_wins": 675,
+      "total_losses": 392,
+      "total_matches": 1067,
+      "tournaments_appeared": 17,
+      "meta_share": 0.010461538461538461,
+      "overall_winrate": 0.6326148078725399,
+      "avg_wins_per_deck": 39.705882352941174,
+      "avg_losses_per_deck": 23.058823529411764,
+      "winrate_ci_lower": 0.6035613870665417,
+      "winrate_ci_upper": 0.6616682286785379,
+      "dominance_score": 0.3837535001081393,
+      "tier": "Tier 3"
+    },
+    "Hammer Time": {
+      "deck_count": 16,
+      "wins": 377,
+      "losses": 494,
+      "matches_played": 871,
+      "winrate": 0.4181208559373117,
+      "total_wins": 377,
+      "total_losses": 494,
+      "total_matches": 871,
+      "tournaments_appeared": 16,
+      "meta_share": 0.009846153846153846,
+      "overall_winrate": 0.43283582089552236,
+      "avg_wins_per_deck": 23.5625,
+      "avg_losses_per_deck": 30.875,
+      "winrate_ci_lower": 0.399540757749713,
+      "winrate_ci_upper": 0.4661308840413318,
+      "dominance_score": 0.26363995407577495,
+      "tier": "Tier 4"
+    },
+    "Living End": {
+      "deck_count": 16,
+      "wins": 428,
+      "losses": 472,
+      "matches_played": 900,
+      "winrate": 0.4453313253012048,
+      "total_wins": 428,
+      "total_losses": 472,
+      "total_matches": 900,
+      "tournaments_appeared": 16,
+      "meta_share": 0.009846153846153846,
+      "overall_winrate": 0.47555555555555556,
+      "avg_wins_per_deck": 26.75,
+      "avg_losses_per_deck": 29.5,
+      "winrate_ci_lower": 0.44333333333333336,
+      "winrate_ci_upper": 0.5077777777777778,
+      "dominance_score": 0.2892717948717949,
+      "tier": "Tier 4"
+    },
+    "Amulet Titan": {
+      "deck_count": 15,
+      "wins": 362,
+      "losses": 383,
+      "matches_played": 745,
+      "winrate": 0.45939423388402983,
+      "total_wins": 362,
+      "total_losses": 383,
+      "total_matches": 745,
+      "tournaments_appeared": 15,
+      "meta_share": 0.009230769230769232,
+      "overall_winrate": 0.48590604026845635,
+      "avg_wins_per_deck": 24.133333333333333,
+      "avg_losses_per_deck": 25.533333333333335,
+      "winrate_ci_lower": 0.44966442953020136,
+      "winrate_ci_upper": 0.5221476510067115,
+      "dominance_score": 0.29523593185338154,
+      "tier": "Tier 4"
+    },
+    "Burn": {
+      "deck_count": 13,
+      "wins": 270,
+      "losses": 288,
+      "matches_played": 558,
+      "winrate": 0.47215109314165915,
+      "total_wins": 270,
+      "total_losses": 288,
+      "total_matches": 558,
+      "tournaments_appeared": 13,
+      "meta_share": 0.008,
+      "overall_winrate": 0.4838709677419355,
+      "avg_wins_per_deck": 20.76923076923077,
+      "avg_losses_per_deck": 22.153846153846153,
+      "winrate_ci_lower": 0.44265232974910396,
+      "winrate_ci_upper": 0.525089605734767,
+      "dominance_score": 0.2935225806451613,
+      "tier": "Tier 4"
+    }
+  },
+  "matchup_matrix": {
+    "detailed": [
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.5,
+        "matches_count": 40,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.49651234478733136,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.46363967382798993,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.5688363222054168,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.3532269911603269,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.558186015062284,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.5919701320006509,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.5710119280877177,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Tron",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.5625101589331634,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.4786632527156733,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.5,
+        "matches_count": 38,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.45708391065122045,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.5204446912479731,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.2823652402360115,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.5593416274124393,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.5007769920896165,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.5780809849388175,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Rhinos",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.45022257550753986,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.6055610431582586,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.576290469761669,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.5,
+        "matches_count": 36,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.5804342569387353,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.46605685857656715,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.5486897094159329,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.4161488829264478,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.5122963651790882,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Yawgmoth",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.5860745832101613,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.426102842150608,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.5165243468226944,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.39921218970187455,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.5,
+        "matches_count": 34,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.44972488813778294,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.494719634929956,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.5106473743691152,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.4923697215515912,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Creativity",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.46706791590759883,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.5595429777586349,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.5990439485947334,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.5310797140981334,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.6530916905406356,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.5,
+        "matches_count": 34,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.631970324668295,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.6464018193823713,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.6103821830913115,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Izzet Murktide",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.6125324574425544,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.42932643788232727,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.43399582323895236,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.36650124395759975,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.47320126401694373,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.3810022666890996,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.5,
+        "matches_count": 32,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.479298337557638,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.4885547427848671,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Hammer Time",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.48004565379069064,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.43500293233553866,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.47458701313274554,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.5093118134492337,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.46475942262818326,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.37395563790596886,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.5183610840477649,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.5,
+        "matches_count": 32,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.4742633768231917,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Living End",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.5320923725787637,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.47240000932722503,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.46727626758587754,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.4688526997233724,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.49573284229005055,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.45747215100522515,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.590153674993593,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.42814257953714685,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.5,
+        "matches_count": 30,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Amulet Titan",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.5270039341343543,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Tron",
+        "estimated_winrate": 0.4217574033885853,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Rhinos",
+        "estimated_winrate": 0.4727438157050397,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Yawgmoth",
+        "estimated_winrate": 0.5602936447695435,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Creativity",
+        "estimated_winrate": 0.4768330495621206,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Izzet Murktide",
+        "estimated_winrate": 0.43218379956036307,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Hammer Time",
+        "estimated_winrate": 0.4790393669073477,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Living End",
+        "estimated_winrate": 0.5021646476829148,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Amulet Titan",
+        "estimated_winrate": 0.5027014913177944,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Burn",
+        "archetype_b": "Burn",
+        "estimated_winrate": 0.5,
+        "matches_count": 26,
+        "confidence": "perfect"
+      }
+    ],
+    "matrix": {
+      "Amulet Titan": {
+        "Amulet Titan": 0.5,
+        "Burn": 0.5270039341343543,
+        "Creativity": 0.49573284229005055,
+        "Hammer Time": 0.590153674993593,
+        "Izzet Murktide": 0.45747215100522515,
+        "Living End": 0.42814257953714685,
+        "Rhinos": 0.46727626758587754,
+        "Tron": 0.47240000932722503,
+        "Yawgmoth": 0.4688526997233724
+      },
+      "Burn": {
+        "Amulet Titan": 0.5027014913177944,
+        "Burn": 0.5,
+        "Creativity": 0.4768330495621206,
+        "Hammer Time": 0.4790393669073477,
+        "Izzet Murktide": 0.43218379956036307,
+        "Living End": 0.5021646476829148,
+        "Rhinos": 0.4727438157050397,
+        "Tron": 0.4217574033885853,
+        "Yawgmoth": 0.5602936447695435
+      },
+      "Creativity": {
+        "Amulet Titan": 0.4923697215515912,
+        "Burn": 0.46706791590759883,
+        "Creativity": 0.5,
+        "Hammer Time": 0.494719634929956,
+        "Izzet Murktide": 0.44972488813778294,
+        "Living End": 0.5106473743691152,
+        "Rhinos": 0.5165243468226944,
+        "Tron": 0.426102842150608,
+        "Yawgmoth": 0.39921218970187455
+      },
+      "Hammer Time": {
+        "Amulet Titan": 0.4885547427848671,
+        "Burn": 0.48004565379069064,
+        "Creativity": 0.47320126401694373,
+        "Hammer Time": 0.5,
+        "Izzet Murktide": 0.3810022666890996,
+        "Living End": 0.479298337557638,
+        "Rhinos": 0.43399582323895236,
+        "Tron": 0.42932643788232727,
+        "Yawgmoth": 0.36650124395759975
+      },
+      "Izzet Murktide": {
+        "Amulet Titan": 0.6103821830913115,
+        "Burn": 0.6125324574425544,
+        "Creativity": 0.6530916905406356,
+        "Hammer Time": 0.631970324668295,
+        "Izzet Murktide": 0.5,
+        "Living End": 0.6464018193823713,
+        "Rhinos": 0.5990439485947334,
+        "Tron": 0.5595429777586349,
+        "Yawgmoth": 0.5310797140981334
+      },
+      "Living End": {
+        "Amulet Titan": 0.4742633768231917,
+        "Burn": 0.5320923725787637,
+        "Creativity": 0.46475942262818326,
+        "Hammer Time": 0.5183610840477649,
+        "Izzet Murktide": 0.37395563790596886,
+        "Living End": 0.5,
+        "Rhinos": 0.47458701313274554,
+        "Tron": 0.43500293233553866,
+        "Yawgmoth": 0.5093118134492337
+      },
+      "Rhinos": {
+        "Amulet Titan": 0.5780809849388175,
+        "Burn": 0.45022257550753986,
+        "Creativity": 0.5204446912479731,
+        "Hammer Time": 0.5593416274124393,
+        "Izzet Murktide": 0.2823652402360115,
+        "Living End": 0.5007769920896165,
+        "Rhinos": 0.5,
+        "Tron": 0.4786632527156733,
+        "Yawgmoth": 0.45708391065122045
+      },
+      "Tron": {
+        "Amulet Titan": 0.5710119280877177,
+        "Burn": 0.5625101589331634,
+        "Creativity": 0.5688363222054168,
+        "Hammer Time": 0.558186015062284,
+        "Izzet Murktide": 0.3532269911603269,
+        "Living End": 0.5919701320006509,
+        "Rhinos": 0.49651234478733136,
+        "Tron": 0.5,
+        "Yawgmoth": 0.46363967382798993
+      },
+      "Yawgmoth": {
+        "Amulet Titan": 0.5122963651790882,
+        "Burn": 0.5860745832101613,
+        "Creativity": 0.5804342569387353,
+        "Hammer Time": 0.5486897094159329,
+        "Izzet Murktide": 0.46605685857656715,
+        "Living End": 0.4161488829264478,
+        "Rhinos": 0.576290469761669,
+        "Tron": 0.6055610431582586,
+        "Yawgmoth": 0.5
+      }
+    }
+  },
+  "temporal_trends": {
+    "summary": {
+      "Amulet Titan": {
+        "avg_meta_share": 0.10461414517082018,
+        "meta_share_trend": 0.004545454545454547,
+        "avg_winrate": 0.5094567623023845,
+        "winrate_trend": -0.02272727272727273,
+        "periods_present": 12.0,
+        "volatility": 0.0901887852065745,
+        "growth_rate": 3.0,
+        "trend_category": "Stable"
+      },
+      "Burn": {
+        "avg_meta_share": 0.07992566598809307,
+        "meta_share_trend": 0.0196969696969697,
+        "avg_winrate": 0.5025186187269521,
+        "winrate_trend": -0.0064935064935064905,
+        "periods_present": 12.0,
+        "volatility": 0.07079598149405597,
+        "growth_rate": 13.0,
+        "trend_category": "Stable"
+      },
+      "Creativity": {
+        "avg_meta_share": 0.15312166832378352,
+        "meta_share_trend": 0.0010416666666666647,
+        "avg_winrate": 0.509194525743981,
+        "winrate_trend": 0.029166666666666674,
+        "periods_present": 17.0,
+        "volatility": 0.12709125690574166,
+        "growth_rate": 1.0,
+        "trend_category": "Volatil"
+      },
+      "Hammer Time": {
+        "avg_meta_share": 0.10786235187241193,
+        "meta_share_trend": -0.006944444444444441,
+        "avg_winrate": 0.4391568765315632,
+        "winrate_trend": 0.01890589569160998,
+        "periods_present": 13.0,
+        "volatility": 0.09029932495011547,
+        "growth_rate": -0.7142857142857143,
+        "trend_category": "Stable"
+      },
+      "Izzet Murktide": {
+        "avg_meta_share": 0.11397260572919564,
+        "meta_share_trend": -0.0041666666666666675,
+        "avg_winrate": 0.5896018690998135,
+        "winrate_trend": 0.0035937499999999963,
+        "periods_present": 17.0,
+        "volatility": 0.08729730134627896,
+        "growth_rate": -0.3999999999999999,
+        "trend_category": "Stable"
+      },
+      "Living End": {
+        "avg_meta_share": 0.11188321366010341,
+        "meta_share_trend": -0.006410256410256409,
+        "avg_winrate": 0.4464130737734332,
+        "winrate_trend": 0.01010656010656011,
+        "periods_present": 14.0,
+        "volatility": 0.0747632242752965,
+        "growth_rate": -0.4545454545454545,
+        "trend_category": "Stable"
+      },
+      "Rhinos": {
+        "avg_meta_share": 0.11349512527608391,
+        "meta_share_trend": 2.6020852139652106e-18,
+        "avg_winrate": 0.4373974846348796,
+        "winrate_trend": -0.012109374999999999,
+        "periods_present": 17.0,
+        "volatility": 0.10937843539000616,
+        "growth_rate": 0.0,
+        "trend_category": "Volatil"
+      },
+      "Tron": {
+        "avg_meta_share": 0.20512735946129168,
+        "meta_share_trend": -0.0020833333333333294,
+        "avg_winrate": 0.5027775991900132,
+        "winrate_trend": 0.00452719155844156,
+        "periods_present": 17.0,
+        "volatility": 0.12400465514816758,
+        "growth_rate": -0.09090909090909094,
+        "trend_category": "Volatil"
+      },
+      "Yawgmoth": {
+        "avg_meta_share": 0.10939775300436519,
+        "meta_share_trend": -0.0010416666666666669,
+        "avg_winrate": 0.48465174669426103,
+        "winrate_trend": -0.02083333333333334,
+        "periods_present": 17.0,
+        "volatility": 0.08936676997915083,
+        "growth_rate": -0.33333333333333337,
+        "trend_category": "Stable"
+      }
+    },
+    "categories": {
+      "Stable": 6,
+      "Volatil": 3
+    }
+  },
+  "statistical_analysis": {
+    "correlations": {
+      "meta_share": {
+        "meta_share": 1.0,
+        "overall_winrate": 0.2321471832302835,
+        "avg_wins_per_deck": 0.5687492405249049,
+        "tournaments_appeared": 1.0
+      },
+      "overall_winrate": {
+        "meta_share": 0.2321471832302835,
+        "overall_winrate": 1.0,
+        "avg_wins_per_deck": 0.5277186665914848,
+        "tournaments_appeared": 0.23214718323028377
+      },
+      "avg_wins_per_deck": {
+        "meta_share": 0.5687492405249049,
+        "overall_winrate": 0.5277186665914848,
+        "avg_wins_per_deck": 1.0,
+        "tournaments_appeared": 0.5687492405249053
+      },
+      "tournaments_appeared": {
+        "meta_share": 1.0,
+        "overall_winrate": 0.23214718323028377,
+        "avg_wins_per_deck": 0.5687492405249053,
+        "tournaments_appeared": 1.0
+      }
+    },
+    "diversity_metrics": {
+      "shannon_diversity": 0.42429529976544544,
+      "simpson_diversity": 0.999027124260355,
+      "effective_archetypes": 0
+    },
+    "clustering": [
+      {
+        "archetype": "Tron",
+        "cluster": 2,
+        "cluster_name": "Niche"
+      },
+      {
+        "archetype": "Rhinos",
+        "cluster": 0,
+        "cluster_name": "Populaires"
+      },
+      {
+        "archetype": "Yawgmoth",
+        "cluster": 1,
+        "cluster_name": "Performants"
+      },
+      {
+        "archetype": "Creativity",
+        "cluster": 0,
+        "cluster_name": "Populaires"
+      },
+      {
+        "archetype": "Izzet Murktide",
+        "cluster": 3,
+        "cluster_name": "Émergents"
+      },
+      {
+        "archetype": "Hammer Time",
+        "cluster": 1,
+        "cluster_name": "Performants"
+      },
+      {
+        "archetype": "Living End",
+        "cluster": 1,
+        "cluster_name": "Performants"
+      },
+      {
+        "archetype": "Amulet Titan",
+        "cluster": 1,
+        "cluster_name": "Performants"
+      },
+      {
+        "archetype": "Burn",
+        "cluster": 1,
+        "cluster_name": "Performants"
+      }
+    ],
+    "significant_archetypes": [
+      "Rhinos",
+      "Yawgmoth",
+      "Creativity",
+      "Izzet Murktide",
+      "Hammer Time"
+    ]
+  },
+  "summary_insights": {
+    "dominant_archetype": "Tron",
+    "most_balanced_matchup": "50-50 matchups identified",
+    "emerging_archetypes": [],
+    "declining_archetypes": [],
+    "meta_diversity": 0.42429529976544544
+  }
+}
