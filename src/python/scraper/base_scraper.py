@@ -6,19 +6,55 @@ import json
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Any
 from datetime import datetime, timedelta
-from tenacity import retry, stop_after_attempt, wait_exponential
 import structlog
+
+# Import du système de résilience
+from ..resilience import CircuitBreaker, RetryHandler, ErrorMonitor
 
 logger = structlog.get_logger()
 
 class BaseScraper(ABC):
-    """Classe de base abstraite pour tous les scrapers"""
+    """Classe de base abstraite pour tous les scrapers avec système de résilience intégré"""
     
     def __init__(self, cache_folder: str, config: Dict):
         self.cache_folder = cache_folder
         self.config = config
         self.session: Optional[aiohttp.ClientSession] = None
         self.semaphore = asyncio.Semaphore(config.get('concurrent_requests', 10))
+        
+        # Système de résilience
+        self.circuit_breaker = CircuitBreaker(
+            failure_threshold=config.get('failure_threshold', 5),
+            recovery_timeout=config.get('recovery_timeout', 60),
+            expected_exception=(aiohttp.ClientError, asyncio.TimeoutError, ConnectionError),
+            name=f"{self.__class__.__name__}_CB"
+        )
+        
+        self.retry_handler = RetryHandler(
+            max_attempts=config.get('max_retries', 3),
+            base_delay=config.get('base_delay', 1.0),
+            max_delay=config.get('max_delay', 30.0),
+            retryable_exceptions=(aiohttp.ClientError, asyncio.TimeoutError, ConnectionError),
+            name=f"{self.__class__.__name__}_Retry"
+        )
+        
+        self.error_monitor = ErrorMonitor(
+            error_rate_threshold=config.get('error_rate_threshold', 0.1),
+            name=f"{self.__class__.__name__}_Monitor"
+        )
+        
+        # Callback d'alerte pour logging
+        self.error_monitor.add_alert_callback(self._alert_callback)
+        
+    def _alert_callback(self, alert_data: Dict[str, Any]):
+        """Callback pour les alertes du système de résilience"""
+        logger.warning(
+            "Resilience Alert",
+            alert_type=alert_data['alert_type'],
+            component=alert_data['component'],
+            message=alert_data['message'],
+            severity=alert_data['severity']
+        )
         
     async def __aenter__(self):
         """Context manager entry"""
@@ -47,23 +83,39 @@ class BaseScraper(ABC):
         """Découvrir les tournois dans une plage de dates"""
         pass
         
-    @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=10))
     async def make_request(self, url: str, method: str = "GET", **kwargs) -> aiohttp.ClientResponse:
-        """Faire une requête HTTP avec retry automatique"""
+        """Faire une requête HTTP avec système de résilience intégré"""
         if not self.session:
             raise RuntimeError("Session not initialized")
             
-        async with self.semaphore:
-            await asyncio.sleep(self.config.get('rate_limit_delay', 0.5))
+        async def _make_request():
+            async with self.semaphore:
+                await asyncio.sleep(self.config.get('rate_limit_delay', 0.5))
+                
+                if method.upper() == "GET":
+                    async with self.session.get(url, **kwargs) as response:
+                        response.raise_for_status()
+                        return response
+                elif method.upper() == "POST":
+                    async with self.session.post(url, **kwargs) as response:
+                        response.raise_for_status()
+                        return response
+        
+        try:
+            # Appliquer circuit breaker puis retry
+            async def retry_with_cb():
+                return await self.circuit_breaker.call(_make_request)
             
-            if method.upper() == "GET":
-                async with self.session.get(url, **kwargs) as response:
-                    response.raise_for_status()
-                    return response
-            elif method.upper() == "POST":
-                async with self.session.post(url, **kwargs) as response:
-                    response.raise_for_status()
-                    return response
+            return await self.retry_handler.call(retry_with_cb)
+            
+        except Exception as e:
+            # Enregistrer l'erreur dans le monitor
+            self.error_monitor.record_error(e, "http_request", context={
+                'url': url,
+                'method': method,
+                'circuit_breaker_state': self.circuit_breaker.state.value
+            })
+            raise
                     
     async def save_tournament(self, data: Dict, source: str):
         """Sauvegarder les données d'un tournoi dans le cache"""
@@ -133,4 +185,18 @@ class BaseScraper(ABC):
         except Exception as e:
             logger.error("Failed to fetch date range", format=format_name, error=str(e))
             
-        return tournaments 
+        return tournaments
+    
+    def get_resilience_stats(self) -> Dict[str, Any]:
+        """Retourner les statistiques de résilience"""
+        return {
+            'circuit_breaker': self.circuit_breaker.get_stats(),
+            'retry_handler': self.retry_handler.get_stats(),
+            'error_monitor': self.error_monitor.get_error_summary()
+        }
+    
+    def reset_resilience_stats(self):
+        """Réinitialiser les statistiques de résilience"""
+        self.circuit_breaker.reset()
+        self.retry_handler.reset_stats()
+        self.error_monitor.clear_history() 

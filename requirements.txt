@@ -31,6 +31,65 @@ python-dateutil>=2.8.0
 # Logging
 structlog>=22.3.0
 
+# Redis caching
+redis>=4.5.0
+hiredis>=2.2.0
+
+# File watching
+watchdog>=3.0.0
+
+# Encryption and security
+cryptography>=41.0.0
+
+# Parallel processing
+multiprocessing-logging>=0.3.0
+
+# Compression
+lz4>=4.3.0
+
+# Cloud storage (optional)
+boto3>=1.26.0
+
+# Metrics and monitoring
+prometheus-client>=0.17.0
+
+# Phase 3 - API & WebSocket
+fastapi>=0.104.0
+uvicorn>=0.24.0
+websockets>=12.0
+python-multipart>=0.0.6
+
+# Phase 3 - ML/AI
+torch>=2.1.0
+scikit-learn>=1.3.0
+transformers>=4.35.0
+sentence-transformers>=2.2.0
+
+# Phase 3 - GraphQL
+strawberry-graphql>=0.214.0
+graphql-core>=3.2.0
+
+# Phase 3 - Frontend/Dashboard
+streamlit>=1.28.0
+plotly>=5.17.0
+dash>=2.14.0
+
+# Phase 3 - Database
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+psycopg2-binary>=2.9.0
+
+# Phase 3 - Content Generation
+openai>=1.3.0
+anthropic>=0.7.0
+
+# Phase 3 - Blockchain/Web3
+web3>=6.12.0
+eth-account>=0.10.0
+
+# Phase 3 - Additional utilities
+asyncio-mqtt>=0.13.0
+
 # Testing (optional)
 pytest>=7.2.0
 pytest-asyncio>=0.21.0 
