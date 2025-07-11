@@ -1,0 +1,1 @@
+# Manalytics - Pipeline d'analyse de métagame MTG 

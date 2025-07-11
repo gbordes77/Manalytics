@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "generated_at": "2025-07-11T22:21:40.621042Z",
+    "total_decks": 3,
+    "total_tournaments": 1,
+    "date_range": {
+      "start": "2025-01-15",
+      "end": "2025-01-15"
+    },
+    "formats": [
+      "Modern"
+    ],
+    "sources": [
+      "demo"
+    ],
+    "analysis_parameters": {
+      "min_matches_for_matchup": 10,
+      "min_decks_for_archetype": 1
+    }
+  },
+  "archetype_performance": [
+    {
+      "archetype": "Burn",
+      "deck_count": 1,
+      "win_rate": 1.0,
+      "meta_share": 0.33,
+      "tournaments_appeared": 1
+    },
+    {
+      "archetype": "Control",
+      "deck_count": 1,
+      "win_rate": 0.75,
+      "meta_share": 0.33,
+      "tournaments_appeared": 1
+    },
+    {
+      "archetype": "Midrange",
+      "deck_count": 1,
+      "win_rate": 0.75,
+      "meta_share": 0.33,
+      "tournaments_appeared": 1
+    }
+  ],
+  "temporal_trends": {
+    "trend_summary": [
+      {
+        "archetype": "Burn",
+        "avg_meta_share": 0.33,
+        "meta_share_trend": 0.0,
+        "avg_win_rate": 1.0,
+        "win_rate_trend": 0.0
+      }
+    ]
+  },
+  "source_statistics": [
+    {
+      "tournament_source": "demo",
+      "tournament_count": 1,
+      "deck_count": 3,
+      "avg_win_rate": 0.83,
+      "archetype_diversity": 3
+    }
+  ]
+}

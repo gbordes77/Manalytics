@@ -1,0 +1,6 @@
+[submodule "MTGOFormatData"]
+	path = MTGOFormatData
+	url = https://github.com/Badaro/MTGOFormatData.git
+[submodule "data/reference"]
+	path = data/reference
+	url = https://github.com/Jiliac/MTGODecklistCache.git
