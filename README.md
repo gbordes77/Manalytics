@@ -3,7 +3,7 @@
 ### 🏆 **REMERCIEMENTS HISTORIQUES**
 
 #### **Rémi Fortier & Arnaud Hocquemiller - Projet MTG Data**
-Acteurs essentiels de l'analyse de données Magic: The Gathering en France. Leur excellence et innovation à travers le projet **MTG Data** ont été une source d'inspiration majeure pour ce travail.
+L'excellence de leurs travaux en matière de visualisation de la data, et en terme d'innovation, a été une forte source d'inspiration et un but à atteindre pour moi.
 **Merci Rémi ! 😊**
 
 #### **Jiliac (Valentin Manès) & Aliquanto (Anael Yahi)**
