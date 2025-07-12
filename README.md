@@ -7,11 +7,11 @@ Acteurs essentiels de l'analyse de données Magic: The Gathering en France. Leur
 **Merci Rémi ! 😊**
 
 #### **Jiliac (Valentin Manès) & Aliquanto (Anael Yahi)**
-Créateurs d'outils d'analyse MTG exceptionnels qui génèrent des données très intéressantes. C'est en découvrant le travail remarquable de **Jiliac** que j'ai eu l'envie de comprendre et d'explorer ces approches innovantes.
+C'est en découvrant le travail remarquable de **Jiliac** que j'ai eu l'envie de comprendre et d'explorer ces approches innovantes.
 
 ### 🛠️ **REPOSITORIES GITHUB SOURCES D'INSPIRATION**
 
-Un grand merci aux auteurs de ces projets qui ont pavé la voie :
+Un grand merci aux auteurs de ces projets qui ont pavé la voie vers la création de ce pipeline :
 
 #### **[@fbettega/mtg_decklist_scrapper](https://github.com/fbettega/mtg_decklist_scrapper)**
 **Auteur :** fbettega  
