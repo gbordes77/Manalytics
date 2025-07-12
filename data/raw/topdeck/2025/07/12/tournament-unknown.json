@@ -1,0 +1,30 @@
+{
+  "Tournament": {
+    "ID": "70742",
+    "Name": "MTGTop8 Tournament",
+    "Date": "2025-07-12T03:21:16.012529",
+    "Format": "Modern",
+    "Players": 1,
+    "Rounds": 3,
+    "Type": "Grand Prix",
+    "Source": "mtgtop8",
+    "URL": "https://mtgtop8.com/event?e=70742",
+    "Location": ""
+  },
+  "Standings": [
+    {
+      "Player": "mtgo.com",
+      "Rank": 1,
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "Deck": {
+        "Mainboard": [],
+        "Sideboard": [],
+        "Archetype": "Unknown"
+      }
+    }
+  ],
+  "Rounds": []
+}

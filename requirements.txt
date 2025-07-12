@@ -1,95 +1,31 @@
-# Web scraping and HTTP
+#!/usr/bin/env python3
+# Requirements.txt - Dépendances Python pour le pipeline Manalytics
+
+# Core dependencies
+asyncio
 aiohttp>=3.8.0
-aiofiles>=23.0.0
-requests>=2.28.0
-beautifulsoup4>=4.11.0
-selenium>=4.0.0
-
-# Data manipulation
-pandas>=1.5.0
-polars>=0.19.0
-numpy>=1.24.0
-
-# JSON handling
-jsonschema>=4.17.0
-
-# Configuration
-PyYAML>=6.0
-
-# Async support
-asyncio-throttle>=1.0.0
-
-# Retry mechanisms
-tenacity>=8.2.0
-
-# Progress bars
-tqdm>=4.64.0
-
-# Date/time handling
+aiofiles>=0.8.0
+pyyaml>=6.0
 python-dateutil>=2.8.0
 
-# Logging
-structlog>=22.3.0
+# Data processing
+pandas>=1.5.0
+numpy>=1.21.0
+scipy>=1.9.0
 
-# Redis caching
-redis>=4.5.0
-hiredis>=2.2.0
+# Web scraping
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+requests>=2.28.0
 
-# File watching
-watchdog>=3.0.0
+# Logging and monitoring
+structlog>=22.0.0
+colorlog>=6.7.0
 
-# Encryption and security
-cryptography>=41.0.0
+# File handling
+pathlib2>=2.3.0
 
-# Parallel processing
-multiprocessing-logging>=0.3.0
-
-# Compression
-lz4>=4.3.0
-
-# Cloud storage (optional)
-boto3>=1.26.0
-
-# Metrics and monitoring
-prometheus-client>=0.17.0
-
-# Phase 3 - API & WebSocket
-fastapi>=0.104.0
-uvicorn>=0.24.0
-websockets>=12.0
-python-multipart>=0.0.6
-
-# Phase 3 - ML/AI
-torch>=2.1.0
-scikit-learn>=1.3.0
-transformers>=4.35.0
-sentence-transformers>=2.2.0
-
-# Phase 3 - GraphQL
-strawberry-graphql>=0.214.0
-graphql-core>=3.2.0
-
-# Phase 3 - Frontend/Dashboard
-streamlit>=1.28.0
-plotly>=5.17.0
-dash>=2.14.0
-
-# Phase 3 - Database
-sqlalchemy>=2.0.0
-alembic>=1.12.0
-psycopg2-binary>=2.9.0
-
-# Phase 3 - Content Generation
-openai>=1.3.0
-anthropic>=0.7.0
-
-# Phase 3 - Blockchain/Web3
-web3>=6.12.0
-eth-account>=0.10.0
-
-# Phase 3 - Additional utilities
-asyncio-mqtt>=0.13.0
-
-# Testing (optional)
-pytest>=7.2.0
-pytest-asyncio>=0.21.0 
+# Optional: For enhanced features
+# plotly>=5.11.0
+# matplotlib>=3.6.0
+# seaborn>=0.12.0 

@@ -1,0 +1,31 @@
+2025-07-12 03:29:32,357 - INFO - Starting data treatment for Standard
+2025-07-12 03:29:32,357 - INFO - Loading MTGOFormatData...
+2025-07-12 03:29:32,357 - INFO - Loading format: Vintage
+2025-07-12 03:29:32,364 - INFO - Loaded Vintage: 26 archetypes, 4 fallbacks
+2025-07-12 03:29:32,364 - INFO - Loading format: Legacy
+2025-07-12 03:29:32,386 - WARNING - Error loading color overrides for Legacy: Illegal trailing comma before end of array: line 9 column 56 (char 340)
+2025-07-12 03:29:32,386 - INFO - Loaded Legacy: 105 archetypes, 4 fallbacks
+2025-07-12 03:29:32,386 - INFO - Loading format: Unspecified
+2025-07-12 03:29:32,387 - INFO - Loaded Unspecified: 0 archetypes, 0 fallbacks
+2025-07-12 03:29:32,387 - INFO - Loading format: Standard
+2025-07-12 03:29:32,396 - INFO - Loaded Standard: 43 archetypes, 6 fallbacks
+2025-07-12 03:29:32,396 - INFO - Loading format: Pauper
+2025-07-12 03:29:32,406 - INFO - Loaded Pauper: 56 archetypes, 0 fallbacks
+2025-07-12 03:29:32,406 - INFO - Loading format: Pioneer
+2025-07-12 03:29:32,420 - INFO - Loaded Pioneer: 77 archetypes, 6 fallbacks
+2025-07-12 03:29:32,420 - INFO - Loading format: Modern
+2025-07-12 03:29:32,422 - WARNING - Error loading archetype MTGOFormatData/Formats/Modern/Archetypes/TameshiBloom.json: Illegal trailing comma before end of array: line 16 column 6 (char 319)
+2025-07-12 03:29:32,425 - WARNING - Error loading archetype MTGOFormatData/Formats/Modern/Archetypes/UWControl.json: Illegal trailing comma before end of array: line 48 column 6 (char 991)
+2025-07-12 03:29:32,443 - WARNING - Error loading color overrides for Modern: Illegal trailing comma before end of array: line 9 column 56 (char 340)
+2025-07-12 03:29:32,443 - INFO - Loaded Modern: 123 archetypes, 8 fallbacks
+2025-07-12 03:29:32,443 - INFO - Loading format: Standard-20230701-20240802
+2025-07-12 03:29:32,450 - INFO - Loaded Standard-20230701-20240802: 31 archetypes, 5 fallbacks
+2025-07-12 03:29:32,450 - INFO - Processing tournaments for format: Standard
+2025-07-12 03:30:03,394 - INFO - Found 3 tournaments to process
+2025-07-12 03:30:03,400 - INFO - Generated 32 standings for Standard Weekly 2025-07-05
+2025-07-12 03:30:03,400 - INFO - Generated 32 standings for Standard Weekly 2025-07-06
+2025-07-12 03:30:03,400 - INFO - Generated 32 standings for Standard Weekly 2025-07-12
+2025-07-12 03:30:03,402 - INFO - Saved processing summary: data/processed/processing_summary_Standard.json
+2025-07-12 03:30:03,402 - INFO - Processed 3 tournaments for Standard
+2025-07-12 03:30:03,402 - INFO - Data treatment completed successfully
+2025-07-12 03:30:03,402 - INFO - Processed 3 tournaments
