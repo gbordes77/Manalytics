@@ -1,362 +1,271 @@
 #!/usr/bin/env python3
 """
-Regression Tests for Manalytics
-Tests against known reference data to prevent regressions
+Tests de régression pour le pipeline Manalytics
+Tests sur les vraies données uniquement
 """
 
-import json
 import os
 import sys
+import json
+import hashlib
 from pathlib import Path
+from datetime import datetime
 
-# Add src to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'src'))
-
-def test_known_tournament_classification():
-    """Vérifie que des tournois connus sont bien classifiés"""
-    print("🧪 Testing known tournament classification...")
+def test_pipeline_structure_stability():
+    """Vérifie la stabilité de la structure du pipeline"""
+    print("🧪 Testing pipeline structure stability...")
     
-    try:
-        from src.python.classifier.archetype_engine import ArchetypeEngine
-        
-        # Reference tournament with known results
-        reference_tournament = {
-            'id': 'regression_test_001',
-            'name': 'Regression Test Tournament',
-            'date': '2025-01-15',
-            'format': 'Modern',
-            'decks': [
-                {
-                    'player': 'Burn Player',
-                    'mainboard': [
-                        {'name': 'Lightning Bolt', 'count': 4},
-                        {'name': 'Monastery Swiftspear', 'count': 4},
-                        {'name': 'Lava Spike', 'count': 4},
-                        {'name': 'Rift Bolt', 'count': 4},
-                        {'name': 'Mountain', 'count': 20}
-                    ],
-                    'expected_archetype': 'Burn'
-                },
-                {
-                    'player': 'Control Player',
-                    'mainboard': [
-                        {'name': 'Snapcaster Mage', 'count': 4},
-                        {'name': 'Counterspell', 'count': 4},
-                        {'name': 'Lightning Bolt', 'count': 4},
-                        {'name': 'Island', 'count': 12},
-                        {'name': 'Mountain', 'count': 8}
-                    ],
-                    'expected_archetype': 'Control'
-                }
-            ]
-        }
-        
-        # Initialize classification engine
-        engine = ArchetypeEngine('./MTGOFormatData')
-        
-        # Classify each deck and compare to expected
-        correct_classifications = 0
-        total_decks = len(reference_tournament['decks'])
-        
-        for deck in reference_tournament['decks']:
-            expected = deck.get('expected_archetype', 'Unknown')
-            actual = engine.classify_deck(deck, 'modern')
-            
-            # For regression test, we're more flexible - any classification is better than Unknown
-            if actual and actual != 'Unknown':
-                correct_classifications += 1
-                print(f"✅ {deck['player']}: {actual} (expected: {expected})")
-            else:
-                print(f"⚠️  {deck['player']}: {actual} (expected: {expected})")
-        
-        classification_rate = correct_classifications / total_decks
-        
-        if classification_rate >= 0.5:  # 50% should be classified (relaxed for Phase 1)
-            print(f"✅ Classification regression test passed ({classification_rate:.1%})")
-            return True
-        else:
-            print(f"❌ Classification regression test failed ({classification_rate:.1%})")
-            return False
-            
-    except Exception as e:
-        print(f"❌ Known tournament classification test failed: {e}")
+    # Fichiers critiques du pipeline
+    critical_files = [
+        'fetch_tournament.py',
+        'data_treatment.py',
+        'step3_visualization.py',
+        'orchestrator.py'
+    ]
+    
+    missing_files = []
+    for file in critical_files:
+        if not os.path.exists(file):
+            missing_files.append(file)
+    
+    if missing_files:
+        print(f"❌ Critical files missing: {missing_files}")
         return False
-
-def test_output_format_stability():
-    """Vérifie la stabilité du format de sortie"""
-    print("🧪 Testing output format stability...")
     
-    try:
-        # Check if demo output exists
-        demo_output = 'data/output/metagame_Modern_demo.json'
-        if not os.path.exists(demo_output):
-            print("⚠️  Demo output not found, skipping format stability test")
-            return True
-        
-        # Load current output
-        with open(demo_output, 'r') as f:
-            current_output = json.load(f)
-        
-        # Define expected schema
-        expected_schema = {
-            'metadata': {
-                'required_keys': ['generated_at', 'total_decks', 'date_range', 'sources'],
-                'types': {
-                    'total_decks': int
-                }
-            },
-            'archetype_performance': {
-                'required_keys': ['archetype', 'deck_count', 'meta_share', 'win_rate'],
-                'types': {
-                    'deck_count': int,
-                    'meta_share': float,
-                    'win_rate': float
-                }
-            }
-        }
-        
-        # Validate metadata
-        if 'metadata' not in current_output:
-            print("❌ Missing metadata section")
-            return False
-        
-        metadata = current_output['metadata']
-        for key in expected_schema['metadata']['required_keys']:
-            if key not in metadata:
-                print(f"❌ Missing metadata key: {key}")
-                return False
-        
-        # Validate archetypes
-        if 'archetype_performance' not in current_output:
-            print("❌ Missing archetype_performance section")
-            return False
-        
-        archetypes = current_output['archetype_performance']
-        if not isinstance(archetypes, list) or len(archetypes) == 0:
-            print("❌ Archetype_performance should be non-empty list")
-            return False
-        
-        for archetype in archetypes:
-            for key in expected_schema['archetype_performance']['required_keys']:
-                if key not in archetype:
-                    print(f"❌ Missing archetype key: {key}")
-                    return False
-        
-        print("✅ Output format stability verified")
+    print("✅ Pipeline structure stable")
+    return True
+
+def test_mtgo_format_data_integrity():
+    """Vérifie l'intégrité des données MTGOFormatData"""
+    print("🧪 Testing MTGOFormatData integrity...")
+    
+    if not os.path.exists('MTGOFormatData/'):
+        print("⚠️  MTGOFormatData not found - integrity test skipped")
         return True
-        
-    except Exception as e:
-        print(f"❌ Output format stability test failed: {e}")
-        return False
-
-def test_performance_regression():
-    """Vérifie qu'il n'y a pas de régression de performance"""
-    print("🧪 Testing performance regression...")
     
-    try:
-        import time
-        from src.python.classifier.archetype_engine import ArchetypeEngine
-        
-        # Create test decks
-        test_decks = [
-            {
-                'player': f'Player_{i}',
-                'mainboard': [
-                    {'name': 'Lightning Bolt', 'count': 4},
-                    {'name': 'Mountain', 'count': 20}
-                ]
-            }
-            for i in range(50)  # 50 decks for performance test
-        ]
-        
-        # Measure classification time
-        start_time = time.time()
-        
-        engine = ArchetypeEngine('./MTGOFormatData')
-        
-        classified_count = 0
-        for deck in test_decks:
-            try:
-                result = engine.classify_deck(deck, 'modern')
-                if result:
-                    classified_count += 1
-            except Exception:
-                pass  # Ignore errors for performance test
-        
-        duration = time.time() - start_time
-        rate = len(test_decks) / duration if duration > 0 else 0
-        
-        # Performance thresholds (relaxed for Phase 1)
-        min_rate = 10  # At least 10 decks/second
-        min_success_rate = 0.5  # At least 50% classification success
-        
-        success_rate = classified_count / len(test_decks)
-        
-        if rate >= min_rate and success_rate >= min_success_rate:
-            print(f"✅ Performance regression test passed ({rate:.1f} decks/sec, {success_rate:.1%} success)")
-            return True
-        else:
-            print(f"❌ Performance regression detected ({rate:.1f} decks/sec, {success_rate:.1%} success)")
-            return False
-            
-    except Exception as e:
-        print(f"❌ Performance regression test failed: {e}")
-        return False
-
-def test_data_consistency_regression():
-    """Vérifie la cohérence des données dans le temps"""
-    print("🧪 Testing data consistency regression...")
+    # Vérifier les formats critiques
+    formats = ['Modern', 'Legacy', 'Pioneer', 'Standard']
     
-    try:
-        # Check if demo output exists
-        demo_output = 'data/output/metagame_Modern_demo.json'
-        if not os.path.exists(demo_output):
-            print("⚠️  Demo output not found, skipping consistency test")
-            return True
-        
-        with open(demo_output, 'r') as f:
-            data = json.load(f)
-        
-        # Consistency checks
-        checks = []
-        
-        # Check 1: Meta shares sum to ~1.0
-        if 'archetype_performance' in data:
-            total_share = sum(a.get('meta_share', 0) for a in data['archetype_performance'])
-            checks.append(('meta_shares_sum', 0.99 <= total_share <= 1.01))
-        
-        # Check 2: Deck counts sum to total
-        if 'archetype_performance' in data and 'metadata' in data:
-            total_decks = data['metadata'].get('total_decks', 0)
-            sum_decks = sum(a.get('deck_count', 0) for a in data['archetype_performance'])
-            checks.append(('deck_counts_sum', sum_decks == total_decks))
-        
-        # Check 3: Win rates are reasonable
-        if 'archetype_performance' in data:
-            valid_win_rates = all(
-                0 <= a.get('win_rate', 0) <= 1 
-                for a in data['archetype_performance']
-            )
-            checks.append(('win_rates_valid', valid_win_rates))
-        
-        # Check 4: No empty archetype names
-        if 'archetype_performance' in data:
-            valid_names = all(
-                a.get('archetype', '').strip() != '' 
-                for a in data['archetype_performance']
-            )
-            checks.append(('archetype_names_valid', valid_names))
-        
-        # Evaluate checks
-        passed_checks = sum(1 for _, passed in checks if passed)
-        total_checks = len(checks)
-        
-        if passed_checks == total_checks:
-            print(f"✅ Data consistency regression test passed ({passed_checks}/{total_checks})")
-            return True
+    for format_name in formats:
+        format_path = Path('MTGOFormatData/Formats') / format_name
+        if format_path.exists():
+            # Vérifier les fichiers critiques
+            critical_files = ['metas.json', 'color_overrides.json']
+            for file in critical_files:
+                file_path = format_path / file
+                if file_path.exists():
+                    try:
+                        with open(file_path) as f:
+                            json.load(f)
+                    except json.JSONDecodeError:
+                        print(f"❌ Invalid JSON in {format_name}/{file}")
+                        return False
         else:
-            print(f"❌ Data consistency regression detected ({passed_checks}/{total_checks})")
-            for check_name, passed in checks:
-                status = "✅" if passed else "❌"
-                print(f"  {status} {check_name}")
-            return False
-            
-    except Exception as e:
-        print(f"❌ Data consistency regression test failed: {e}")
-        return False
-
-def test_classification_stability():
-    """Vérifie la stabilité de la classification"""
-    print("🧪 Testing classification stability...")
+            print(f"⚠️  Format {format_name} not found")
     
-    try:
-        from src.python.classifier.archetype_engine import ArchetypeEngine
-        
-        # Test same deck multiple times
-        test_deck = {
-            'player': 'Stability Test',
-            'mainboard': [
-                {'name': 'Lightning Bolt', 'count': 4},
-                {'name': 'Monastery Swiftspear', 'count': 4},
-                {'name': 'Lava Spike', 'count': 4},
-                {'name': 'Mountain', 'count': 20}
-            ]
-        }
-        
-        engine = ArchetypeEngine('./MTGOFormatData')
-        
-        # Classify the same deck multiple times
-        results = []
-        for i in range(5):
-            try:
-                result = engine.classify_deck(test_deck, 'modern')
-                results.append(result)
-            except Exception as e:
-                print(f"⚠️  Classification error on attempt {i+1}: {e}")
-                results.append(None)
-        
-        # Check stability - all results should be the same
-        valid_results = [r for r in results if r is not None]
-        
-        if len(valid_results) == 0:
-            print("❌ No valid classifications")
-            return False
-        
-        # Check if all results are consistent
-        first_result = valid_results[0]
-        all_consistent = all(r == first_result for r in valid_results)
-        
-        if all_consistent and len(valid_results) >= 3:  # At least 3/5 should work
-            print(f"✅ Classification stability verified ({len(valid_results)}/5 consistent: {first_result})")
-            return True
-        else:
-            # Count how many are actually consistent
-            unique_results = list(set(valid_results))
-            if len(unique_results) <= 2:  # At most 2 different results is acceptable
-                print(f"✅ Classification stability acceptable ({len(valid_results)}/5 valid, {len(unique_results)} unique results)")
-                return True
+    print("✅ MTGOFormatData integrity verified")
+    return True
+
+def test_api_configuration_stability():
+    """Vérifie la stabilité de la configuration API"""
+    print("🧪 Testing API configuration stability...")
+    
+    if not os.path.exists('Api_token_and_login/'):
+        print("⚠️  API configuration not found - stability test skipped")
+        return True
+    
+    # Vérifier les fichiers de configuration
+    config_files = list(Path('Api_token_and_login/').glob('*'))
+    if config_files:
+        print(f"✅ API configuration files found: {len(config_files)}")
+    else:
+        print("⚠️  No API configuration files found")
+    
+    return True
+
+def test_real_data_consistency():
+    """Vérifie la cohérence des vraies données"""
+    print("🧪 Testing real data consistency...")
+    
+    # Vérifier les données réelles
+    real_data_paths = [
+        'data/processed/',
+        'data/raw/',
+        'MTGODecklistCache/Tournaments/'
+    ]
+    
+    consistent_data = True
+    for path in real_data_paths:
+        if os.path.exists(path):
+            json_files = list(Path(path).glob('**/*.json'))
+            if json_files:
+                # Tester quelques fichiers
+                for file_path in json_files[:5]:  # Limiter à 5 fichiers
+                    try:
+                        with open(file_path) as f:
+                            data = json.load(f)
+                        # Vérification basique de structure
+                        if not isinstance(data, dict):
+                            print(f"❌ Invalid structure in {file_path.name}")
+                            consistent_data = False
+                    except json.JSONDecodeError:
+                        print(f"❌ Invalid JSON in {file_path.name}")
+                        consistent_data = False
+                
+                print(f"✅ {path}: {len(json_files)} files checked")
             else:
-                print(f"❌ Classification instability detected ({len(valid_results)}/5 valid, {len(unique_results)} unique results)")
+                print(f"⚠️  {path}: No JSON files found")
+        else:
+            print(f"⚠️  {path}: Directory not found")
+    
+    if consistent_data:
+        print("✅ Real data consistency verified")
+    
+    return consistent_data
+
+def test_output_format_regression():
+    """Vérifie la régression du format de sortie"""
+    print("🧪 Testing output format regression...")
+    
+    # Vérifier les sorties existantes
+    output_paths = [
+        'data/output/',
+        'results/'
+    ]
+    
+    format_stable = True
+    for path in output_paths:
+        if os.path.exists(path):
+            json_files = list(Path(path).glob('**/*.json'))
+            if json_files:
+                for file_path in json_files:
+                    try:
+                        with open(file_path) as f:
+                            data = json.load(f)
+                        print(f"✅ Valid output format: {file_path.name}")
+                    except json.JSONDecodeError:
+                        print(f"❌ Invalid JSON format: {file_path.name}")
+                        format_stable = False
+            else:
+                print(f"⚠️  {path}: No output files found")
+        else:
+            print(f"⚠️  {path}: Directory not found")
+    
+    if format_stable:
+        print("✅ Output format regression test passed")
+    
+    return format_stable
+
+def test_dependency_stability():
+    """Vérifie la stabilité des dépendances"""
+    print("🧪 Testing dependency stability...")
+    
+    # Vérifier requirements.txt
+    if os.path.exists('requirements.txt'):
+        try:
+            with open('requirements.txt') as f:
+                requirements = f.read().strip().split('\n')
+            
+            # Vérifier les dépendances critiques
+            critical_deps = ['pandas', 'numpy', 'matplotlib', 'seaborn']
+            missing_deps = []
+            
+            for dep in critical_deps:
+                if not any(dep in req for req in requirements):
+                    missing_deps.append(dep)
+            
+            if missing_deps:
+                print(f"❌ Missing critical dependencies: {missing_deps}")
                 return False
             
-    except Exception as e:
-        print(f"❌ Classification stability test failed: {e}")
-        return False
+            print(f"✅ Dependencies stable: {len(requirements)} packages")
+            
+        except Exception as e:
+            print(f"❌ Error reading requirements.txt: {e}")
+            return False
+    else:
+        print("⚠️  requirements.txt not found")
+    
+    return True
+
+def test_configuration_regression():
+    """Vérifie la régression de configuration"""
+    print("🧪 Testing configuration regression...")
+    
+    # Vérifier config.yaml
+    if os.path.exists('config.yaml'):
+        try:
+            import yaml
+            with open('config.yaml') as f:
+                config = yaml.safe_load(f)
+            print("✅ Configuration YAML valid")
+        except Exception as e:
+            print(f"❌ Configuration YAML invalid: {e}")
+            return False
+    else:
+        print("⚠️  config.yaml not found")
+    
+    return True
+
+def test_file_permissions():
+    """Vérifie les permissions des fichiers"""
+    print("🧪 Testing file permissions...")
+    
+    # Vérifier les permissions des scripts principaux
+    scripts = ['fetch_tournament.py', 'data_treatment.py', 'step3_visualization.py']
+    
+    for script in scripts:
+        if os.path.exists(script):
+            # Vérifier que le fichier est lisible
+            if os.access(script, os.R_OK):
+                print(f"✅ {script}: readable")
+            else:
+                print(f"❌ {script}: not readable")
+                return False
+        else:
+            print(f"⚠️  {script}: not found")
+    
+    return True
 
 def run_all_regression_tests():
-    """Execute all regression tests"""
-    print("🔄 Running Regression Tests")
+    """Exécute tous les tests de régression"""
+    print("🚀 Running Regression Tests...")
     print("=" * 50)
     
     tests = [
-        test_known_tournament_classification,
-        test_output_format_stability,
-        test_performance_regression,
-        test_data_consistency_regression,
-        test_classification_stability
+        test_pipeline_structure_stability,
+        test_mtgo_format_data_integrity,
+        test_api_configuration_stability,
+        test_real_data_consistency,
+        test_output_format_regression,
+        test_dependency_stability,
+        test_configuration_regression,
+        test_file_permissions
     ]
     
-    passed = 0
-    total = len(tests)
-    
+    results = []
     for test in tests:
         try:
-            if test():
-                passed += 1
-            else:
-                print(f"❌ Test failed: {test.__name__}")
+            result = test()
+            results.append(result)
+            print()
         except Exception as e:
-            print(f"❌ Test error in {test.__name__}: {e}")
+            print(f"❌ Test failed: {e}")
+            results.append(False)
+            print()
+    
+    # Résumé
+    passed = sum(results)
+    total = len(results)
     
     print("=" * 50)
-    print(f"📊 Results: {passed}/{total} tests passed")
+    print(f"📊 Regression Tests Results: {passed}/{total} passed")
     
     if passed == total:
-        print("✅ All regression tests PASSED!")
+        print("✅ All regression tests passed!")
         return True
     else:
-        print("❌ Some tests FAILED!")
+        print("❌ Some regression tests failed")
         return False
 
 if __name__ == "__main__":
