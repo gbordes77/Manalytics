@@ -14,7 +14,6 @@ from .error_monitor import ErrorMonitor
 
 logger = logging.getLogger(__name__)
 
-
 def with_circuit_breaker(
     failure_threshold: int = 5,
     recovery_timeout: int = 60,
@@ -63,7 +62,6 @@ def with_circuit_breaker(
         return wrapper
     
     return decorator
-
 
 def with_retry(
     max_attempts: int = 3,
@@ -130,7 +128,6 @@ def with_retry(
     
     return decorator
 
-
 def with_error_monitoring(
     component: Optional[str] = None,
     error_monitor: Optional[ErrorMonitor] = None,
@@ -196,7 +193,6 @@ def with_error_monitoring(
         return wrapper
     
     return decorator
-
 
 def resilient(
     # Circuit Breaker params
@@ -317,7 +313,6 @@ def resilient(
     
     return decorator
 
-
 # Décorateurs prédéfinis pour des cas d'usage courants
 def network_resilient(name: Optional[str] = None):
     """Décorateur prédéfini pour les opérations réseau"""
@@ -331,7 +326,6 @@ def network_resilient(name: Optional[str] = None):
         name=name
     )
 
-
 def database_resilient(name: Optional[str] = None):
     """Décorateur prédéfini pour les opérations base de données"""
     return resilient(
@@ -343,7 +337,6 @@ def database_resilient(name: Optional[str] = None):
         expected_exceptions=(ConnectionError, TimeoutError),
         name=name
     )
-
 
 def file_resilient(name: Optional[str] = None):
     """Décorateur prédéfini pour les opérations fichier"""

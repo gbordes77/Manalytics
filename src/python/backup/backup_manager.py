@@ -16,7 +16,6 @@ import gzip
 
 logger = logging.getLogger(__name__)
 
-
 class BackupManager:
     """Manager for incremental backups with point-in-time recovery."""
     

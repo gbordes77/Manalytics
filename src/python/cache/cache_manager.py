@@ -12,7 +12,6 @@ from .tournament_cache import TournamentCache
 
 logger = logging.getLogger(__name__)
 
-
 class CacheManager:
     """
     Gestionnaire de cache centralisé pour Manalytics.

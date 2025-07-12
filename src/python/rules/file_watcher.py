@@ -13,7 +13,6 @@ from watchdog.events import FileSystemEventHandler
 
 logger = logging.getLogger(__name__)
 
-
 class RulesFileHandler(FileSystemEventHandler):
     """Handler for file system events on rules files."""
     
@@ -67,7 +66,6 @@ class RulesFileHandler(FileSystemEventHandler):
         path = Path(file_path)
         return (path.suffix.lower() in ['.json', '.yaml', '.yml'] and 
                 ('archetype' in path.name.lower() or 'rules' in path.name.lower()))
-
 
 class FileWatcher:
     """File watcher for monitoring rule changes."""
@@ -132,7 +130,6 @@ class FileWatcher:
     def __exit__(self, exc_type, exc_val, exc_tb):
         """Context manager exit."""
         self.stop()
-
 
 class PollingFileWatcher:
     """Fallback file watcher using polling (for systems without inotify)."""
@@ -238,7 +235,6 @@ class PollingFileWatcher:
     def __exit__(self, exc_type, exc_val, exc_tb):
         """Context manager exit."""
         self.stop()
-
 
 def create_file_watcher(callback: Callable[[List[str]], None], use_polling: bool = False) -> FileWatcher:
     """

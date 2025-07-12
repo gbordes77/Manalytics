@@ -12,7 +12,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 class RetryStrategy(Enum):
     """Stratégies de retry disponibles"""
     LINEAR = "linear"
@@ -20,11 +19,9 @@ class RetryStrategy(Enum):
     EXPONENTIAL_JITTER = "exponential_jitter"
     FIXED = "fixed"
 
-
 class RetryExhaustedError(Exception):
     """Exception levée quand tous les retry sont épuisés"""
     pass
-
 
 class RetryHandler:
     """
@@ -176,7 +173,6 @@ class RetryHandler:
     def __repr__(self) -> str:
         return (f"RetryHandler(name='{self.name}', strategy={self.strategy.value}, "
                 f"max_attempts={self.max_attempts})")
-
 
 class RetryConfig:
     """Configuration prédéfinie pour différents types d'opérations"""

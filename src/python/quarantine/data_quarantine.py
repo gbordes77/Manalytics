@@ -10,7 +10,6 @@ from ..schema.validation_result import ValidationResult
 
 logger = logging.getLogger(__name__)
 
-
 class DataQuarantine:
     """System for validating and quarantining suspicious tournament data."""
     

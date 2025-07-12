@@ -22,7 +22,6 @@ except ImportError:
 
 logger = logging.getLogger(__name__)
 
-
 @dataclass
 class CacheConfig:
     """Configuration du cache Redis"""
@@ -45,7 +44,6 @@ class CacheConfig:
     # Monitoring
     enable_stats: bool = True
     stats_interval: int = 60  # Statistiques toutes les minutes
-
 
 class CacheStats:
     """Statistiques du cache"""
@@ -84,7 +82,6 @@ class CacheStats:
             'hit_rate': self.hit_rate,
             'uptime': self.uptime
         }
-
 
 class RedisCache:
     """

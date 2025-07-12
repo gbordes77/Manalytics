@@ -13,7 +13,6 @@ import json
 
 logger = logging.getLogger(__name__)
 
-
 @dataclass
 class ErrorEvent:
     """Représente un événement d'erreur"""
@@ -36,7 +35,6 @@ class ErrorEvent:
             'context': self.context
         }
 
-
 @dataclass
 class ErrorStats:
     """Statistiques d'erreurs pour un composant"""
@@ -47,7 +45,6 @@ class ErrorStats:
     last_error_time: Optional[float] = None
     error_types: Dict[str, int] = field(default_factory=dict)
     recent_errors: List[ErrorEvent] = field(default_factory=list)
-
 
 class ErrorMonitor:
     """

@@ -11,18 +11,15 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 class CircuitState(Enum):
     """États du Circuit Breaker"""
     CLOSED = "CLOSED"      # Fonctionnement normal
     OPEN = "OPEN"          # Circuit ouvert, rejette les requêtes
     HALF_OPEN = "HALF_OPEN"  # Test de récupération
 
-
 class CircuitBreakerError(Exception):
     """Exception levée quand le circuit breaker est ouvert"""
     pass
-
 
 class CircuitBreaker:
     """

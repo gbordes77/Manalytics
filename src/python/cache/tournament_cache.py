@@ -12,7 +12,6 @@ from .redis_cache import RedisCache, CacheConfig
 
 logger = logging.getLogger(__name__)
 
-
 class TournamentCache:
     """
     Cache spécialisé pour les données de tournois MTG.

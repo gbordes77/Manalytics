@@ -9,7 +9,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 class BaseSchema(ABC):
     """Base class for all schema versions."""
     
@@ -26,7 +25,6 @@ class BaseSchema(ABC):
     def get_version(self) -> str:
         """Get schema version."""
         return self.__class__.__name__
-
 
 class MTGOSchemaV1(BaseSchema):
     """MTGO schema version 1 (legacy format)."""
@@ -98,7 +96,6 @@ class MTGOSchemaV1(BaseSchema):
         except Exception:
             return date_str
 
-
 class MTGOSchemaV2(BaseSchema):
     """MTGO schema version 2 (new format with companion support)."""
     
@@ -155,7 +152,6 @@ class MTGOSchemaV2(BaseSchema):
             'archetype': deck_data.get('archetype'),
             'colors': deck_data.get('color_identity', [])
         }
-
 
 class MeleeSchemaV1(BaseSchema):
     """Melee.gg schema version 1."""

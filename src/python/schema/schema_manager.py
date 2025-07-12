@@ -9,7 +9,6 @@ from .validation_result import ValidationResult
 
 logger = logging.getLogger(__name__)
 
-
 class SchemaManager:
     """Manages different schema versions and auto-detects appropriate schema."""
     

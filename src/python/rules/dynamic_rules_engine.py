@@ -14,7 +14,6 @@ from .file_watcher import create_file_watcher
 
 logger = logging.getLogger(__name__)
 
-
 class DynamicRulesEngine:
     """Rules engine with hot-reload capabilities."""
     

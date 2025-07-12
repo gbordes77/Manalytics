@@ -11,7 +11,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 class RulesLoader:
     """Loader for archetype rules from JSON and YAML files."""
     

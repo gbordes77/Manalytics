@@ -13,7 +13,6 @@ import pickle
 
 logger = logging.getLogger(__name__)
 
-
 class ParallelProcessor:
     """High-performance parallel processor for tournament data."""
     
@@ -293,7 +292,6 @@ class ParallelProcessor:
             'active_tasks': len(self.active_tasks)
         }
 
-
 class AsyncParallelProcessor:
     """Async version of parallel processor using asyncio."""
     
@@ -396,7 +394,6 @@ class AsyncParallelProcessor:
             'active_tasks': len(self.active_tasks)
         }
 
-
 # Utility functions for common processing patterns
 
 def process_tournament_classification(tournament_data: Dict[str, Any], 
@@ -425,7 +422,6 @@ def process_tournament_classification(tournament_data: Dict[str, Any],
     except Exception as e:
         logger.error(f"Error in tournament classification: {e}")
         return tournament_data
-
 
 def process_tournament_validation(tournament_data: Dict[str, Any],
                                  validator_func: Callable[[Dict[str, Any]], bool]) -> Dict[str, Any]:

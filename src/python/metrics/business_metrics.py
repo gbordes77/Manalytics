@@ -10,7 +10,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 class BusinessMetrics:
     """Business metrics calculator for executive dashboards."""
     

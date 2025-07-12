@@ -6,7 +6,6 @@ from dataclasses import dataclass
 from typing import List, Optional
 from enum import Enum
 
-
 class ValidationSeverity(Enum):
     """Severity levels for validation issues."""
     INFO = "info"
@@ -14,7 +13,6 @@ class ValidationSeverity(Enum):
     ERROR = "error"
     CRITICAL = "critical"
     QUARANTINE = "quarantine"
-
 
 @dataclass
 class ValidationResult:

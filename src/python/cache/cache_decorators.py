@@ -11,7 +11,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 def cache_key_builder(*args, **kwargs) -> str:
     """Construire une clé de cache à partir des arguments"""
     # Créer une représentation stable des arguments
@@ -23,7 +22,6 @@ def cache_key_builder(*args, **kwargs) -> str:
     # Sérialiser et hasher
     json_str = json.dumps(key_data, sort_keys=True, default=str)
     return hashlib.md5(json_str.encode()).hexdigest()
-
 
 def cached(
     cache_instance: Any,
@@ -96,7 +94,6 @@ def cached(
     
     return decorator
 
-
 def tournament_cached(
     tournament_cache_instance: Any,
     ttl: Optional[int] = None,
@@ -168,7 +165,6 @@ def tournament_cached(
     
     return decorator
 
-
 def cache_invalidate(
     cache_instance: Any,
     pattern: str = "",
@@ -228,7 +224,6 @@ def cache_invalidate(
             return sync_wrapper
     
     return decorator
-
 
 def conditional_cache(
     cache_instance: Any,
@@ -292,7 +287,6 @@ def conditional_cache(
     
     return decorator
 
-
 # Décorateurs prédéfinis pour des cas d'usage courants
 def cache_tournament_metadata(cache_instance: Any, ttl: int = 3600):
     """Décorateur prédéfini pour cacher les métadonnées de tournois"""
@@ -303,7 +297,6 @@ def cache_tournament_metadata(cache_instance: Any, ttl: int = 3600):
         skip_cache_on_error=True
     )
 
-
 def cache_format_data(cache_instance: Any, ttl: int = 1800):
     """Décorateur prédéfini pour cacher les données de format"""
     return cached(
@@ -312,7 +305,6 @@ def cache_format_data(cache_instance: Any, ttl: int = 1800):
         key_prefix="format_data:",
         skip_cache_on_error=True
     )
-
 
 def cache_large_results_only(cache_instance: Any, min_size: int = 100):
     """Décorateur pour cacher seulement les gros résultats"""

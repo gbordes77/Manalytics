@@ -16,7 +16,6 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 logger = logging.getLogger(__name__)
 
-
 class SecureCredentialManager:
     """Secure credential manager with encryption and rotation."""
     
