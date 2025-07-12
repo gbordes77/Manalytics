@@ -1,13 +1,9 @@
 # Manalytics - Phase 1 Validation Complete ✅
 
-## 🙏 **REMERCIEMENTS**
-
-**Ce projet n'aurait pas été possible sans le soutien exceptionnel de :**
-
 ### 🏆 **REMERCIEMENTS HISTORIQUES**
 
 #### **Rémi Fortier & Arnaud Hocquemiller - Projet MTG Data**
-Pionniers de l'analyse de données Magic: The Gathering en France. Leur excellence et innovation à travers le projet **MTG Data** ont été une source d'inspiration majeure pour ce travail.
+Acteurs essentiels de l'analyse de données Magic: The Gathering en France. Leur excellence et innovation à travers le projet **MTG Data** ont été une source d'inspiration majeure pour ce travail.
 **Merci Rémi ! 😊**
 
 #### **Jiliac (Valentin Manès) & Aliquanto (Anael Yahi)**
@@ -23,15 +19,15 @@ Un grand merci aux auteurs de ces projets qui ont pavé la voie :
 
 #### **[@Badaro/MTGOArchetypeParser](https://github.com/Badaro/MTGOArchetypeParser)**
 **Auteur :** Badaro  
-**Contribution :** Moteur de détection d'archétypes basé sur des règles - Référence technique majeure
+**Contribution :** Moteur de détection d'archétypes MTG avec règles JSON - Base technique solide
 
 #### **[@Jiliac/MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache)**
 **Auteur :** Jiliac (Valentin Manès)  
-**Contribution :** Cache structuré de decklists MTGO - Architecture de données exemplaire
+**Contribution :** Cache structuré de decklists MTGO - Organisation et standardisation des données
 
 #### **[@Jiliac/R-Meta-Analysis](https://github.com/Jiliac/R-Meta-Analysis)**
 **Auteur :** Jiliac (Valentin Manès)  
-**Contribution :** Analyses statistiques avancées en R - Inspiration pour les métriques
+**Contribution :** Analyses statistiques avancées en R - Approche rigoureuse du métagame
 
 ---
 
