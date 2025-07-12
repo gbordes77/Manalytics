@@ -1,5 +1,57 @@
 # Manalytics - Phase 1 Validation Complete ✅
 
+## 🙏 **REMERCIEMENTS**
+
+**Ce projet n'aurait pas été possible sans le soutien exceptionnel de :**
+
+### 🏆 **REMERCIEMENTS HISTORIQUES**
+
+#### **Rémi Fortier & Arnaud Hocquemiller - Projet MTG Data**
+Pionniers de l'analyse de données Magic: The Gathering en France. Leur excellence et innovation à travers le projet **MTG Data** ont été une source d'inspiration majeure pour ce travail.
+**Merci Rémi ! 😊**
+
+#### **Jiliac (Valentin Manès) & Aliquanto (Anael Yahi)**
+Créateurs d'outils d'analyse MTG exceptionnels qui génèrent des données très intéressantes. C'est en découvrant le travail remarquable de **Jiliac** que j'ai eu l'envie de comprendre et d'explorer ces approches innovantes.
+
+### 🛠️ **REPOSITORIES GITHUB SOURCES D'INSPIRATION**
+
+Un grand merci aux auteurs de ces projets qui ont pavé la voie :
+
+#### **[@fbettega/mtg_decklist_scrapper](https://github.com/fbettega/mtg_decklist_scrapper)**
+**Auteur :** fbettega  
+**Contribution :** Scraper Python pour données de tournois MTG - Adaptation du travail de Badaro en Python
+
+#### **[@Badaro/MTGOArchetypeParser](https://github.com/Badaro/MTGOArchetypeParser)**
+**Auteur :** Badaro  
+**Contribution :** Moteur de détection d'archétypes basé sur des règles - Référence technique majeure
+
+#### **[@Jiliac/MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache)**
+**Auteur :** Jiliac (Valentin Manès)  
+**Contribution :** Cache structuré de decklists MTGO - Architecture de données exemplaire
+
+#### **[@Jiliac/R-Meta-Analysis](https://github.com/Jiliac/R-Meta-Analysis)**
+**Auteur :** Jiliac (Valentin Manès)  
+**Contribution :** Analyses statistiques avancées en R - Inspiration pour les métriques
+
+---
+
+### 🎯 **Magic: The Gathering Community**
+- **Wizards of the Coast** - Pour ce jeu extraordinaire
+- **Communauté MTGO** - Source de données tournois
+- **Développeurs outils MTG** - Inspiration et références
+- **Joueurs compétitifs** - Validation des archétypes
+
+### 💡 **Technologies Open Source**
+- **Python Ecosystem** - Pandas, Plotly, FastAPI
+- **GitHub** - Plateforme de développement collaborative
+- **Communauté développeurs** - Partage de connaissances
+
+---
+
+**🚀 "De l'inspiration des pionniers à la réalisation collaborative - merci à tous !"**
+
+---
+
 ## 🎯 Statut du Projet
 
 ### ✅ **PHASE 1 VALIDÉE** - Prête pour Phase 2
