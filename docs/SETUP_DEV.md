@@ -2,9 +2,22 @@
 
 > **Objectif** : Développeur opérationnel sur Manalytics en ≤5 min
 
-## 🆕 Nouvelles Fonctionnalités v0.3.1
+## 🆕 Nouvelles Fonctionnalités v0.3.4
 
-> **Mise à jour du 13 juillet 2025** - Améliorations majeures de l'interface utilisateur
+> **Mise à jour du 13 juillet 2025** - Analyses statistiques avancées et intégration R-Meta-Analysis
+
+### **Analyses Statistiques Avancées**
+- **Shannon & Simpson Diversity** : Indices de diversité du métagame
+- **Temporal Trends** : Analyse des tendances temporelles (Rising/Declining/Volatile/Stable)
+- **K-means Clustering** : Groupement d'archétypes par performance
+- **Correlation Analysis** : Analyse des corrélations avec tests de significativité
+- **R-Meta-Analysis Integration** : Intégration avec [Jiliac/Aliquanto3](https://github.com/Jiliac/Aliquanto3)
+
+### **Documentation Complète**
+- **API Reference** : Documentation complète des fonctions analytiques
+- **User Guide** : Guide d'utilisation et d'interprétation
+- **Orchestrator Integration** : Guide d'intégration pipeline
+- **Team Handoff Checklist** : Système de transition d'équipe
 
 ### **Différenciation MTGO**
 - **Challenge vs League** : Distinction claire des types de tournois MTGO

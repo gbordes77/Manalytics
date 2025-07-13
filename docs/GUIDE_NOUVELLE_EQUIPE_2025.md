@@ -2,22 +2,25 @@
 
 ## 📋 RÉSUMÉ EXÉCUTIF
 
-**Projet** : Manalytics v0.3.3 - Pipeline d'analyse métagame MTG
-**Statut** : ✅ **PRODUCTION READY** - Système complet avec nouvelles fonctionnalités
-**Performance** : < 30 secondes pour analyser 1000+ decks
+**Projet** : Manalytics v0.3.4 - Pipeline d'analyse métagame MTG
+**Statut** : ✅ **PRODUCTION READY** - Système complet avec analyses statistiques avancées
+**Performance** : < 30 secondes pour analyser 1000+ decks + 18 analyses statistiques
 **Données** : 28,000+ tournois réels, zéro données fictives
 
 ---
 
-## 🌟 NOUVEAUTÉS MAJEURES (Janvier 2025)
+## 🌟 NOUVEAUTÉS MAJEURES (Juillet 2025)
 
-### 🌈 **SYSTÈME DE COULEURS MTG AUTHENTIQUE**
-**Impact** : Interface professionnelle avec couleurs MTG officielles
+### 🔬 **ANALYSES STATISTIQUES AVANCÉES**
+**Impact** : Analyses académiques avec intégration R-Meta-Analysis
 
 #### **Ce qui a été implémenté** :
-- **Détection automatique des couleurs** : 28,442 cartes analysées depuis MTGOFormatData
-- **Système WUBRG complet** : White, blUe, Black, Red, Green
-- **10 guildes bi-couleurs** : Azorius, Dimir, Rakdos, Gruul, Selesnya, Orzhov, Golgari, Simic, Izzet, Boros
+- **Shannon & Simpson Diversity** : Indices de diversité du métagame avec calcul d'archétypes effectifs
+- **Temporal Trend Analysis** : Catégorisation Rising/Declining/Volatile/Stable des archétypes
+- **K-means Clustering** : Groupement d'archétypes basé sur les métriques de performance
+- **Correlation Analysis** : Analyse des corrélations avec tests de significativité statistique
+- **R-Meta-Analysis Integration** : Intégration avec [Jiliac/Aliquanto3](https://github.com/Jiliac/Aliquanto3)
+- **18 Analytical Features** : Implémentation complète du plan d'exécution original
 - **10 clans tri-couleurs** : Esper, Jeskai, Bant, Mardu, Abzan, Naya, Grixis, Sultai, Temur, Jund
 - **Couleurs appliquées partout** : Tous les graphiques, interface, pages archétypes
 

@@ -1,11 +1,11 @@
 # 🎯 GUIDE COMPLET POUR LA NOUVELLE ÉQUIPE - MANALYTICS
 
-## 📋 ÉTAT ACTUEL DU PROJET (Janvier 2025)
+## 📋 ÉTAT ACTUEL DU PROJET (Juillet 2025)
 
 ### 🏆 **PROJET MANALYTICS - PIPELINE D'ANALYSE MÉTAGAME MTG**
-**Version actuelle** : v0.3.2 (feature/english-migration)
-**Statut** : ✅ **PRODUCTION READY** - Pipeline fonctionnel avec 9 visualisations interactives
-**Performance** : Génération complète d'analyse en < 30 secondes
+**Version actuelle** : v0.3.4 (feature/english-migration)
+**Statut** : ✅ **PRODUCTION READY** - Pipeline fonctionnel avec 9 visualisations interactives + analyses statistiques avancées
+**Performance** : Génération complète d'analyse avec 18 fonctionnalités statistiques en < 30 secondes
 
 ### 🎯 **MISSION ACCOMPLIE**
 Le pipeline Manalytics est un système complet d'analyse du métagame Magic: The Gathering qui :
@@ -13,6 +13,9 @@ Le pipeline Manalytics est un système complet d'analyse du métagame Magic: The
 - ✅ **Classifie les archétypes** avec un système basé sur MTGOFormatData
 - ✅ **Détecte les couleurs MTG** avec un système authentique de guildes
 - ✅ **Génère 9 visualisations interactives** avec couleurs MTG authentiques
+- ✅ **Analyses statistiques avancées** avec 18 fonctionnalités (Shannon/Simpson diversity, clustering, corrélations)
+- ✅ **Intégration R-Meta-Analysis** avec [Jiliac/Aliquanto3](https://github.com/Jiliac/Aliquanto3)
+- ✅ **Documentation complète** avec guides API, utilisateur et intégration
 - ✅ **Exporte les données** en JSON/CSV pour usage externe
 - ✅ **Interface web complète** avec navigation par archétypes
 

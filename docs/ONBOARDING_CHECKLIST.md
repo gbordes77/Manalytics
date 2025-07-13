@@ -5,14 +5,15 @@
 ## 🎯 **STEP 1: Project Understanding** (15 min)
 
 **📋 Before continuing, validate that you can answer:**
-- [ ] What's the difference between v0.3.2 and v1.0?
+- [ ] What's the difference between v0.3.4 and v1.0?
 - [ ] Why do we use multi-source scraping?
 - [ ] What are the 3 supported formats?
 - [ ] What's the purpose of the 9 visualizations?
-- [ ] **🆕 Why distinguish MTGO Challenge vs League?**
-- [ ] **🆕 How to access tournaments directly from the dashboard?**
-- [ ] **🆕 What changed in the English migration (v0.3.2)?**
-- [ ] **🆕 How does the improved archetype classification work?**
+- [ ] **🆕 What is Shannon diversity and how is it calculated?**
+- [ ] **🆕 How does temporal trend analysis categorize archetypes?**
+- [ ] **🆕 What's the purpose of K-means clustering in archetype analysis?**
+- [ ] **🆕 How does the R-Meta-Analysis integration work with Jiliac/Aliquanto3?**
+- [ ] **🆕 What are the 18 analytical features implemented in v0.3.4?**
 
 **🔗 Read**: [ROADMAP.md](ROADMAP.md) | **➡️ Next**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
 

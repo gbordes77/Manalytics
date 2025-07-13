@@ -24,10 +24,17 @@
 - **Key Decision**: International-ready English interface for broader accessibility
 - **Impact**: Professional English experience, improved archetype accuracy, consistent source classification
 
-### ✅ **v0.3.3** - MTG Color System & Link Fixes (Current)
+### ✅ **v0.3.3** - MTG Color System & Link Fixes
 - **Date**: January 15, 2025
 - **Achieved**: Authentic MTG color system, functional decklist links, data deduplication
 - **Features**: Guild-based color palette, working links, 31% duplicate removal, enhanced visualizations
+
+### ✅ **v0.3.4** - Advanced Statistical Analysis Integration (Current)
+- **Date**: July 13, 2025
+- **Achieved**: Complete advanced analytics with R-Meta-Analysis integration, comprehensive documentation
+- **Features**: Shannon/Simpson diversity, temporal trends, K-means clustering, correlation analysis, 18 statistical features
+- **Key Decision**: Academic-grade statistical analysis with GitHub integration to Jiliac/Aliquanto3
+- **Impact**: Professional statistical insights, automated trend analysis, complete documentation ecosystem
 - **Key Decision**: Authentic MTG branding with guild colors throughout interface
 - **Impact**: Professional MTG-authentic experience, functional navigation, improved data quality
 
