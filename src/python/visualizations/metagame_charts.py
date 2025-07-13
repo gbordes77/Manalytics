@@ -902,6 +902,105 @@ class MetagameChartsGenerator:
 
         return fig
 
+    def create_main_archetypes_bar_horizontal(self, data):
+        """
+        Crée un graphique en barres horizontal des archétypes principaux (top 15)
+        """
+        import pandas as pd
+
+        # Convertir en DataFrame si nécessaire
+        if isinstance(data, list):
+            df = pd.DataFrame(data)
+        else:
+            df = data.copy()
+
+        # Calculer les pourcentages réels de métagame
+        archetype_counts = df["archetype"].value_counts()
+        total_decks = len(df)
+        archetype_percentages = (archetype_counts / total_decks * 100).round(2)
+        top_archetypes = archetype_percentages.head(15)
+        others_percentage = (
+            archetype_percentages.iloc[15:].sum()
+            if len(archetype_percentages) > 15
+            else 0
+        )
+        archetypes = list(top_archetypes.index)
+        percentages = list(top_archetypes.values)
+        if others_percentage > 0:
+            archetypes.append("Autres / Non classifiés")
+            percentages.append(others_percentage)
+        colors = [
+            "#FF6B6B",
+            "#4ECDC4",
+            "#45B7D1",
+            "#96CEB4",
+            "#FFEAA7",
+            "#DDA0DD",
+            "#98D8C8",
+            "#F7DC6F",
+            "#BB8FCE",
+            "#85C1E9",
+            "#F8C471",
+            "#82E0AA",
+            "#F1948A",
+            "#AED6F1",
+            "#D7BDE2",
+            "#B2B2B2",
+        ]
+        fig = go.Figure(
+            data=[
+                go.Bar(
+                    y=archetypes,
+                    x=percentages,
+                    orientation="h",
+                    marker=dict(
+                        color=colors[: len(archetypes)],
+                        line=dict(color="white", width=1),
+                    ),
+                    text=[f"{p:.1f}%" for p in percentages],
+                    textposition="outside",
+                    textfont=dict(size=12, color="black"),
+                    hovertemplate="<b>%{y}</b><br>Metagame share: %{x:.1f}%<br>Number of decks: "
+                    + "<extra></extra>",
+                )
+            ]
+        )
+        fig.update_layout(
+            title={
+                "text": f"Main STANDARD Archetypes (Horizontal) - {len(df)} decks analyzed",
+                "x": 0.5,
+                "xanchor": "center",
+                "font": {"size": 18, "family": "Arial, sans-serif", "color": "#2c3e50"},
+            },
+            yaxis_title="Archetype",
+            xaxis_title="Metagame share (%)",
+            font=dict(size=12, family="Arial, sans-serif"),
+            showlegend=False,
+            plot_bgcolor="rgba(248,249,250,0.8)",
+            paper_bgcolor="white",
+            margin=dict(l=120, r=20, t=80, b=60),
+            width=1200,
+            height=600,
+        )
+        fig.update_yaxes(
+            showgrid=False,
+            showline=True,
+            linewidth=1,
+            linecolor="rgba(128,128,128,0.5)",
+            tickfont=dict(size=11),
+            autorange="reversed",
+        )
+        fig.update_xaxes(
+            showgrid=True,
+            gridwidth=1,
+            gridcolor="rgba(128,128,128,0.2)",
+            showline=True,
+            linewidth=1,
+            linecolor="rgba(128,128,128,0.5)",
+            range=[0, max(percentages) * 1.1],
+        )
+        return fig
+
     def export_all_data(
         self,
         stats_df: pd.DataFrame,
@@ -959,6 +1058,9 @@ class MetagameChartsGenerator:
                 df.to_dict("records")
             ),  # NOUVEAU !
             "main_archetypes_bar": self.create_main_archetypes_bar_chart(
+                df.to_dict("records")
+            ),  # NOUVEAU !
+            "main_archetypes_bar_horizontal": self.create_main_archetypes_bar_horizontal(
                 df.to_dict("records")
             ),  # NOUVEAU !
         }

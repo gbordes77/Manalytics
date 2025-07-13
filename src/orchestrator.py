@@ -99,6 +99,10 @@ class ManalyticsOrchestrator:
             # 3. Data is already exported by generate_all_charts
             self.logger.info("💾 Data exported automatically...")
 
+            # 3.5. Export detailed decklists with navigation
+            self.logger.info("📋 Exporting detailed decklists...")
+            detailed_export = self._export_detailed_decklists(df, output_dir)
+
             # 4. Complete dashboard
             self.logger.info("🎯 Generating dashboard...")
             dashboard_path = self.generate_dashboard(output_dir, df)
@@ -160,9 +164,16 @@ class ManalyticsOrchestrator:
         df = pd.DataFrame(all_decks)
         df["tournament_date"] = pd.to_datetime(df["tournament_date"])
 
+        # Remove duplicates: same player + same tournament + same date
+        initial_count = len(df)
+        df = df.drop_duplicates(
+            subset=["player_name", "tournament_id", "tournament_date"], keep="first"
+        )
+        duplicates_removed = initial_count - len(df)
+
         print(f"\n📊 DATA LOADED:")
         print(f"🏆 Tournaments: {tournaments_loaded}")
-        print(f"🎯 Decks: {len(df)}")
+        print(f"🎯 Decks: {len(df)} (removed {duplicates_removed} duplicates)")
         print(
             f"📅 Actual period: {df['tournament_date'].min().strftime('%Y-%m-%d')} to {df['tournament_date'].max().strftime('%Y-%m-%d')}"
         )
@@ -170,7 +181,7 @@ class ManalyticsOrchestrator:
         print(f"🌐 Sources: {', '.join(df['tournament_source'].unique())}")
 
         self.logger.info(
-            f"✅ {len(df)} decks loaded from {df['tournament_source'].nunique()} sources"
+            f"✅ {len(df)} decks loaded from {df['tournament_source'].nunique()} sources ({duplicates_removed} duplicates removed)"
         )
 
         return df
@@ -302,6 +313,9 @@ class ManalyticsOrchestrator:
         # Determine source with MTGO differentiation
         source = self._determine_source(file_path, tournament_info)
 
+        # Extract deck URL from AnchorUri field
+        deck_url = deck.get("AnchorUri", deck.get("anchor_uri", ""))
+
         return {
             "tournament_id": tournament_info.get(
                 "Uri", tournament_info.get("id", file_path)
@@ -321,6 +335,7 @@ class ManalyticsOrchestrator:
             "winrate": wins / max(1, wins + losses) if (wins + losses) > 0 else 0,
             "placement": deck.get("placement", 0),
             "deck_cards": deck.get("Mainboard", deck.get("mainboard", [])),
+            "deck_url": deck_url,
         }
 
     def _extract_results(self, deck):
@@ -716,9 +731,10 @@ class ManalyticsOrchestrator:
                 <div class="stat-number">{total_matches}</div>
                 <div class="stat-label">Matches played</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card clickable" onclick="window.open('all_archetypes.html', '_blank')">
                 <div class="stat-number">{len(archetypes)}</div>
                 <div class="stat-label">Archetypes identified</div>
+                <div class="stat-hint">🔍 Click to view archetypes</div>
             </div>
         </div>
 
@@ -1118,4 +1134,290 @@ class ManalyticsOrchestrator:
 
         except Exception as e:
             self.logger.error(f"❌ Error generating tournament list: {e}")
-            raise
+            return None
+
+    def _export_detailed_decklists(self, df: pd.DataFrame, output_dir: str):
+        """Export detailed decklists CSV/JSON and generate archetype navigation pages"""
+        try:
+            output_path = Path(output_dir)
+
+            # 1. Export detailed CSV/JSON
+            detailed_csv = output_path / "decklists_detailed.csv"
+            detailed_json = output_path / "decklists_detailed.json"
+
+            # Prepare detailed export data
+            export_data = []
+            for _, row in df.iterrows():
+                # Convert Timestamp to string for JSON serialization
+                tournament_date = row.get("tournament_date", "Unknown")
+                if hasattr(tournament_date, "strftime"):
+                    tournament_date = tournament_date.strftime("%Y-%m-%d")
+                elif tournament_date != "Unknown":
+                    tournament_date = str(tournament_date)
+
+                deck_data = {
+                    "deck_id": f"{row.get('tournament_id', 'unknown')}_{row.get('player_name', 'unknown')}",
+                    "archetype": row.get("archetype", "Unknown"),
+                    "player_name": row.get("player_name", "Unknown"),
+                    "tournament_name": row.get("tournament_name", "Unknown"),
+                    "tournament_date": tournament_date,
+                    "tournament_source": row.get("tournament_source", "Unknown"),
+                    "deck_url": row.get("deck_url", ""),
+                    "mainboard": row.get("mainboard", []),
+                    "sideboard": row.get("sideboard", []),
+                }
+                export_data.append(deck_data)
+
+            # Save CSV
+            export_df = pd.DataFrame(export_data)
+            export_df.to_csv(detailed_csv, index=False, encoding="utf-8")
+
+            # Save JSON
+            with open(detailed_json, "w", encoding="utf-8") as f:
+                json.dump(export_data, f, indent=2, ensure_ascii=False)
+
+            self.logger.info(
+                f"📋 Detailed decklists exported: {detailed_csv}, {detailed_json}"
+            )
+
+            # 2. Generate archetype navigation pages
+            archetype_pages = self._generate_archetype_pages(export_data, output_path)
+
+            return {
+                "csv_path": str(detailed_csv),
+                "json_path": str(detailed_json),
+                "archetype_pages": archetype_pages,
+                "total_decks": len(export_data),
+            }
+
+        except Exception as e:
+            self.logger.error(f"❌ Error exporting detailed decklists: {e}")
+            return None
+
+    def _generate_archetype_pages(self, deck_data: list, output_path: Path):
+        """Generate all_archetypes.html and individual archetype pages"""
+        try:
+            # Group decks by archetype
+            archetypes_dict = {}
+            for deck in deck_data:
+                archetype = deck["archetype"]
+                if archetype not in archetypes_dict:
+                    archetypes_dict[archetype] = []
+                archetypes_dict[archetype].append(deck)
+
+            # 1. Generate all_archetypes.html
+            all_archetypes_html = self._generate_all_archetypes_page(archetypes_dict)
+            all_archetypes_path = output_path / "all_archetypes.html"
+            with open(all_archetypes_path, "w", encoding="utf-8") as f:
+                f.write(all_archetypes_html)
+
+            # 2. Generate individual archetype pages
+            archetype_pages = []
+            for archetype, decks in archetypes_dict.items():
+                archetype_html = self._generate_archetype_page(archetype, decks)
+                archetype_filename = (
+                    f"archetype_{archetype.replace(' ', '_').replace('/', '_')}.html"
+                )
+                archetype_path = output_path / archetype_filename
+                with open(archetype_path, "w", encoding="utf-8") as f:
+                    f.write(archetype_html)
+                archetype_pages.append(str(archetype_path))
+
+            self.logger.info(
+                f"🗺️ Generated {len(archetype_pages)} archetype pages + all_archetypes.html"
+            )
+
+            return {
+                "all_archetypes_path": str(all_archetypes_path),
+                "individual_pages": archetype_pages,
+                "total_archetypes": len(archetypes_dict),
+            }
+
+        except Exception as e:
+            self.logger.error(f"❌ Error generating archetype pages: {e}")
+            return None
+
+    def _generate_all_archetypes_page(self, archetypes_dict: dict):
+        """Generate HTML page listing all archetypes"""
+        total_decks = sum(len(decks) for decks in archetypes_dict.values())
+
+        archetype_rows = ""
+        for archetype, decks in sorted(
+            archetypes_dict.items(), key=lambda x: len(x[1]), reverse=True
+        ):
+            deck_count = len(decks)
+            percentage = (deck_count / total_decks * 100) if total_decks > 0 else 0
+            archetype_filename = (
+                f"archetype_{archetype.replace(' ', '_').replace('/', '_')}.html"
+            )
+
+            archetype_rows += f"""
+                <tr onclick="window.location.href='{archetype_filename}'" style="cursor: pointer;">
+                    <td style="font-weight: bold; color: #762a83;">{archetype}</td>
+                    <td style="text-align: center;">{deck_count}</td>
+                    <td style="text-align: center;">{percentage:.1f}%</td>
+                    <td style="text-align: center;">
+                        <span style="background: #4ECDC4; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.9rem;">
+                            View Decks →
+                        </span>
+                    </td>
+                </tr>
+            """
+
+        return f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Archetypes - Manalytics</title>
+    <style>
+        :root {{
+            --primary: #762a83; --secondary: #1b7837; --accent: #4ECDC4;
+            --bg-light: #f8f9fa; --bg-white: #ffffff; --text-dark: #2c3e50;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1); --border-radius: 12px;
+        }}
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }}
+        .header {{ background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                  color: white; padding: 2rem 0; text-align: center; }}
+        .container {{ max-width: 1200px; margin: 2rem auto; padding: 2rem; }}
+        .card {{ background: var(--bg-white); border-radius: var(--border-radius);
+                 box-shadow: var(--shadow); overflow: hidden; }}
+        .card-header {{ background: var(--bg-light); padding: 1.5rem; }}
+        .card-title {{ font-size: 1.5rem; font-weight: 600; color: var(--text-dark); }}
+        table {{ width: 100%; border-collapse: collapse; }}
+        th, td {{ padding: 1rem; text-align: left; border-bottom: 1px solid #eee; }}
+        th {{ background: var(--bg-light); font-weight: 600; }}
+        tr:hover {{ background: rgba(118, 42, 131, 0.05); }}
+        .back-btn {{ display: inline-block; background: var(--primary); color: white;
+                     padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none;
+                     margin-bottom: 2rem; transition: all 0.3s; }}
+        .back-btn:hover {{ background: var(--secondary); transform: translateY(-2px); }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 All Archetypes</h1>
+        <p>Complete list of detected archetypes • {total_decks} total decks analyzed</p>
+    </div>
+
+    <div class="container">
+        <a href="javascript:history.back()" class="back-btn">← Back to Dashboard</a>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">📊 Archetypes Overview</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Archetype</th>
+                        <th style="text-align: center;">Decks</th>
+                        <th style="text-align: center;">Meta Share</th>
+                        <th style="text-align: center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {archetype_rows}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+        """
+
+    def _generate_archetype_page(self, archetype: str, decks: list):
+        """Generate HTML page for a specific archetype"""
+        deck_rows = ""
+        for i, deck in enumerate(decks, 1):
+            deck_url = deck.get("deck_url", "")
+            deck_link = (
+                f'<a href="{deck_url}" target="_blank" style="color: #4ECDC4; text-decoration: none;">🔗 View Deck</a>'
+                if deck_url
+                else "No link available"
+            )
+
+            deck_rows += f"""
+                <tr>
+                    <td>{i}</td>
+                    <td style="font-weight: bold;">{deck.get('player_name', 'Unknown')}</td>
+                    <td>{deck.get('tournament_name', 'Unknown')}</td>
+                    <td>{deck.get('tournament_date', 'Unknown')}</td>
+                    <td>
+                        <span style="background: #27ae60; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.8rem;">
+                            {deck.get('tournament_source', 'Unknown')}
+                        </span>
+                    </td>
+                    <td style="text-align: center;">{deck_link}</td>
+                </tr>
+            """
+
+        return f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{archetype} Decks - Manalytics</title>
+    <style>
+        :root {{
+            --primary: #762a83; --secondary: #1b7837; --accent: #4ECDC4;
+            --bg-light: #f8f9fa; --bg-white: #ffffff; --text-dark: #2c3e50;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1); --border-radius: 12px;
+        }}
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }}
+        .header {{ background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                  color: white; padding: 2rem 0; text-align: center; }}
+        .container {{ max-width: 1400px; margin: 2rem auto; padding: 2rem; }}
+        .card {{ background: var(--bg-white); border-radius: var(--border-radius);
+                 box-shadow: var(--shadow); overflow: hidden; }}
+        .card-header {{ background: var(--bg-light); padding: 1.5rem; }}
+        .card-title {{ font-size: 1.5rem; font-weight: 600; color: var(--text-dark); }}
+        table {{ width: 100%; border-collapse: collapse; }}
+        th, td {{ padding: 0.8rem; text-align: left; border-bottom: 1px solid #eee; }}
+        th {{ background: var(--bg-light); font-weight: 600; font-size: 0.9rem; }}
+        tr:hover {{ background: rgba(118, 42, 131, 0.05); }}
+        .back-btn {{ display: inline-block; background: var(--primary); color: white;
+                     padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none;
+                     margin-bottom: 2rem; transition: all 0.3s; }}
+        .back-btn:hover {{ background: var(--secondary); transform: translateY(-2px); }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 {archetype}</h1>
+        <p>{len(decks)} decklists found for this archetype</p>
+    </div>
+
+    <div class="container">
+        <a href="all_archetypes.html" class="back-btn">← Back to All Archetypes</a>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">📋 All {archetype} Decklists</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Player</th>
+                        <th>Tournament</th>
+                        <th>Date</th>
+                        <th>Source</th>
+                        <th style="text-align: center;">Decklist</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {deck_rows}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+        """
