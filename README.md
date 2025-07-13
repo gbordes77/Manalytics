@@ -244,11 +244,22 @@ Democratize MTG metagame analysis through complete automation, providing profess
 ## 📞 Support & Resources
 
 ### **Documentation**
+
+#### **📋 Core Documentation**
 - [**Team Instructions**](docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md) - Complete onboarding guide
 - [**Architecture Guide**](docs/ARCHITECTURE_QUICKREAD.md) - System design overview
 - [**Development Setup**](docs/SETUP_DEV.md) - Environment configuration
 - [**Project Roadmap**](docs/ROADMAP.md) - Product vision and milestones
 - [**Advanced Analytics Guide**](docs/ADVANCED_ANALYTICS.md) - Statistical analysis documentation
+
+#### **🔧 Developer Documentation**
+- [**API Reference**](docs/API_REFERENCE_ADVANCED_ANALYTICS.md) - Complete function documentation
+- [**Orchestrator Integration**](docs/ORCHESTRATOR_INTEGRATION.md) - Pipeline integration guide
+- [**Implementation Summary**](docs/IMPLEMENTATION_SUMMARY_v0.3.4.md) - Complete v0.3.4 details
+
+#### **👥 User Documentation**
+- [**User Guide**](docs/USER_GUIDE_ADVANCED_ANALYTICS.md) - Practical usage and interpretation
+- [**Changelog**](docs/CHANGELOG.md) - Version history and improvements
 
 ### **Quick Help**
 - **Setup Issues**: Check [troubleshooting guide](docs/SETUP_DEV.md#troubleshooting)
