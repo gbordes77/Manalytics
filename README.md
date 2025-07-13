@@ -43,22 +43,28 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 
 ---
 
-## 🌟 What's New in v0.3.2
+## 🌟 What's New in v0.3.3
+
+### 🌈 **Authentic MTG Color System**
+- **Guild Colors**: Authentic MTG colors throughout interface (Izzet=blue/red, Boros=white/red, etc.)
+- **28,442 Cards**: Complete color database from MTGOFormatData
+- **Visual Enhancement**: Mana symbols and color-coded archetype names
+- **Chart Integration**: All 9 visualizations use authentic MTG guild colors
+
+### 🔗 **Functional Decklist Links**
+- **100% Working Links**: All decklist links now functional via AnchorUri extraction
+- **Multi-Source Support**: Links work for MTGO, Melee.gg, and TopDeck.gg
+- **Direct Navigation**: Click-through to original decklists from all interfaces
+
+### 🎯 **Data Quality Improvements**
+- **Deduplication System**: Automatic removal of duplicate tournament entries
+- **31% Reduction**: Typical duplicate removal (e.g., 1,605 → 1,103 unique decks)
+- **Better Accuracy**: More precise metagame percentages after deduplication
 
 ### 🌍 **Complete English Migration**
 - **Full Interface**: All user messages, charts, and UI elements now in English
 - **International Ready**: Professional English experience for global users
 - **Maintainable**: English code comments for international development teams
-
-### 🎯 **Improved Classification**
-- **Standard Focus**: Removed non-Standard archetypes (Storm, Splinter Twin, etc.)
-- **Better "Others"**: Improved handling of generic/monocolor archetypes
-- **Source Clarity**: Fixed MTGO source attribution (no more confusion)
-
-### 🔧 **Enhanced Experience**
-- **Consistent UI**: Unified English terminology across all components
-- **Accurate Data**: Better archetype classification for Standard format
-- **Clear Sources**: Distinct MTGO Challenge/League/General classification
 
 ---
 

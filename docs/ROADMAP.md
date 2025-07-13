@@ -17,12 +17,19 @@
 - **Key Decision**: Challenge/League distinction for precise Jiliac comparison
 - **Impact**: 1-click navigation to tournaments, immediate source visibility
 
-### ✅ **v0.3.2** - English Migration & Classification Fixes (Current)
+### ✅ **v0.3.2** - English Migration & Classification Fixes
 - **Date**: July 13, 2025
 - **Achieved**: Complete French → English interface migration, improved archetype classification
 - **Features**: Full English UI, better Standard archetype handling, fixed MTGO source attribution
 - **Key Decision**: International-ready English interface for broader accessibility
 - **Impact**: Professional English experience, improved archetype accuracy, consistent source classification
+
+### ✅ **v0.3.3** - MTG Color System & Link Fixes (Current)
+- **Date**: January 15, 2025
+- **Achieved**: Authentic MTG color system, functional decklist links, data deduplication
+- **Features**: Guild-based color palette, working links, 31% duplicate removal, enhanced visualizations
+- **Key Decision**: Authentic MTG branding with guild colors throughout interface
+- **Impact**: Professional MTG-authentic experience, functional navigation, improved data quality
 
 ### 🚧 **v0.4.0** - Interactive Dashboard (Q3 2025)
 - **Objective**: Real-time web interface

@@ -38,7 +38,43 @@ class MetagameChartsGenerator:
             "c+50": "#1b7837",  # Extrême gagnant
         }
 
-        # Couleurs pour les archétypes (palette étendue)
+        # Couleurs MTG pour les guildes et archétypes
+        self.mtg_colors = {
+            # Mono-couleurs
+            "Mono White": "#fffbd5",
+            "Mono Blue": "#0e68ab",
+            "Mono Black": "#150b00",
+            "Mono Red": "#d3202a",
+            "Mono Green": "#00733e",
+            # Guildes (2 couleurs)
+            "Azorius": "#a4c2f4",  # Blanc-Bleu
+            "Dimir": "#4a5568",  # Bleu-Noir
+            "Rakdos": "#8b0000",  # Noir-Rouge
+            "Gruul": "#8b4513",  # Rouge-Vert
+            "Selesnya": "#90ee90",  # Vert-Blanc
+            "Orzhov": "#dda0dd",  # Blanc-Noir
+            "Golgari": "#556b2f",  # Noir-Vert
+            "Simic": "#20b2aa",  # Vert-Bleu
+            "Izzet": "#ff6347",  # Bleu-Rouge
+            "Boros": "#ff8c00",  # Rouge-Blanc
+            # Tri-couleurs
+            "Esper": "#b0c4de",  # Blanc-Bleu-Noir
+            "Jeskai": "#ffd700",  # Blanc-Bleu-Rouge
+            "Bant": "#98fb98",  # Blanc-Bleu-Vert
+            "Mardu": "#cd853f",  # Blanc-Noir-Rouge
+            "Abzan": "#f0e68c",  # Blanc-Noir-Vert
+            "Naya": "#ffa500",  # Rouge-Vert-Blanc
+            "Grixis": "#8b008b",  # Bleu-Noir-Rouge
+            "Sultai": "#2e8b57",  # Noir-Vert-Bleu
+            "Temur": "#ff4500",  # Vert-Bleu-Rouge
+            "Jund": "#a0522d",  # Noir-Rouge-Vert
+            # Multi-couleurs
+            "Four-Color": "#9932cc",
+            "Five-Color": "#ffd700",
+            "Colorless": "#c0c0c0",
+        }
+
+        # Couleurs pour les archétypes (palette étendue de fallback)
         self.archetype_colors = [
             "#762a83",
             "#1b7837",
@@ -71,6 +107,72 @@ class MetagameChartsGenerator:
             "#f6e8c3",
             "#f5f5f5",
         ]
+
+    def get_archetype_color(self, archetype_name: str, guild_name: str = None) -> str:
+        """Obtient la couleur d'un archétype basée sur sa guilde MTG"""
+        # Priorité 1: Utiliser la guilde si disponible
+        if guild_name and guild_name in self.mtg_colors:
+            return self.mtg_colors[guild_name]
+
+        # Priorité 2: Extraire la guilde du nom d'archétype
+        archetype_lower = archetype_name.lower()
+        for guild, color in self.mtg_colors.items():
+            if guild.lower() in archetype_lower:
+                return color
+
+        # Priorité 3: Couleurs par mots-clés
+        if any(word in archetype_lower for word in ["mono white", "white"]):
+            return self.mtg_colors["Mono White"]
+        elif any(word in archetype_lower for word in ["mono blue", "blue"]):
+            return self.mtg_colors["Mono Blue"]
+        elif any(word in archetype_lower for word in ["mono black", "black"]):
+            return self.mtg_colors["Mono Black"]
+        elif any(word in archetype_lower for word in ["mono red", "red"]):
+            return self.mtg_colors["Mono Red"]
+        elif any(word in archetype_lower for word in ["mono green", "green"]):
+            return self.mtg_colors["Mono Green"]
+
+        # Fallback: Couleur par défaut basée sur l'index
+        archetype_hash = hash(archetype_name) % len(self.archetype_colors)
+        return self.archetype_colors[archetype_hash]
+
+    def get_archetype_colors_for_chart(
+        self, archetypes: List[str], guild_names: List[str] = None
+    ) -> List[str]:
+        """Génère une liste de couleurs pour les archétypes dans un graphique"""
+        if guild_names is None:
+            guild_names = [None] * len(archetypes)
+
+        colors = []
+        for i, archetype in enumerate(archetypes):
+            guild = guild_names[i] if i < len(guild_names) else None
+            colors.append(self.get_archetype_color(archetype, guild))
+
+        return colors
+
+    def _get_guild_names_for_archetypes(self, archetype_names: List[str]) -> List[str]:
+        """Helper function to get guild names for a list of archetypes"""
+        guild_names = []
+
+        # Obtenir les guildes depuis les données originales si disponibles
+        if hasattr(self, "original_df") and "guild_name" in self.original_df.columns:
+            for archetype in archetype_names:
+                archetype_data = self.original_df[
+                    self.original_df["archetype"] == archetype
+                ]
+                if not archetype_data.empty:
+                    most_common_guild = archetype_data["guild_name"].mode()
+                    guild_names.append(
+                        most_common_guild.iloc[0]
+                        if len(most_common_guild) > 0
+                        else None
+                    )
+                else:
+                    guild_names.append(None)
+        else:
+            guild_names = [None] * len(archetype_names)
+
+        return guild_names
 
     def load_data(self) -> pd.DataFrame:
         """Charge les données de tournois réels (si un fichier est spécifié)"""
@@ -133,8 +235,28 @@ class MetagameChartsGenerator:
         # Créer le pie chart
         fig = go.Figure()
 
-        # Couleurs pour chaque archétype
-        colors = self.archetype_colors[: len(main_archetypes)]
+        # Couleurs MTG pour chaque archétype
+        archetype_names = main_archetypes.index.tolist()
+
+        # Obtenir les guildes pour chaque archétype depuis les données
+        guild_names = []
+        for archetype in archetype_names:
+            if archetype in ["Autres", "Autres / Non classifiés"]:
+                guild_names.append(None)  # Pas de guilde pour "Autres"
+            else:
+                # Trouver la guilde la plus commune pour cet archétype
+                archetype_data = df[df["archetype"] == archetype]
+                if not archetype_data.empty and "guild_name" in archetype_data.columns:
+                    most_common_guild = archetype_data["guild_name"].mode()
+                    guild_names.append(
+                        most_common_guild.iloc[0]
+                        if len(most_common_guild) > 0
+                        else None
+                    )
+                else:
+                    guild_names.append(None)
+
+        colors = self.get_archetype_colors_for_chart(archetype_names, guild_names)
 
         fig.add_trace(
             go.Pie(
@@ -270,6 +392,11 @@ class MetagameChartsGenerator:
         filtered_df = stats_df[stats_df["metagame_share"] >= threshold].copy()
         filtered_df = filtered_df.sort_values("metagame_share", ascending=True)
 
+        # Obtenir les couleurs MTG pour chaque archétype
+        archetype_names = filtered_df["archetype"].tolist()
+        guild_names = self._get_guild_names_for_archetypes(archetype_names)
+        colors = self.get_archetype_colors_for_chart(archetype_names, guild_names)
+
         # Créer le graphique
         fig = go.Figure()
 
@@ -278,7 +405,7 @@ class MetagameChartsGenerator:
                 y=filtered_df["archetype"],
                 x=filtered_df["metagame_share"] * 100,
                 orientation="h",
-                marker_color=self.archetype_colors[: len(filtered_df)],
+                marker_color=colors,
                 text=[f"{x:.1f}%" for x in filtered_df["metagame_share"] * 100],
                 textposition="auto",
                 hovertemplate=(
@@ -316,6 +443,11 @@ class MetagameChartsGenerator:
 
         sorted_df = stats_df.sort_values("winrate_mean", ascending=False)
 
+        # Obtenir les couleurs MTG pour chaque archétype
+        archetype_names = sorted_df["archetype"].tolist()
+        guild_names = self._get_guild_names_for_archetypes(archetype_names)
+        colors = self.get_archetype_colors_for_chart(archetype_names, guild_names)
+
         fig = go.Figure()
 
         # Barres d'erreur
@@ -334,7 +466,7 @@ class MetagameChartsGenerator:
                 mode="markers",
                 marker=dict(
                     size=10,
-                    color=self.archetype_colors[: len(sorted_df)],
+                    color=colors,
                     line=dict(width=2, color="white"),
                 ),
                 hovertemplate=(
@@ -547,13 +679,18 @@ class MetagameChartsGenerator:
         # Compter par archétype
         archetype_counts = best_players["archetype"].value_counts()
 
+        # Obtenir les couleurs MTG pour chaque archétype
+        archetype_names = archetype_counts.index.tolist()
+        guild_names = self._get_guild_names_for_archetypes(archetype_names)
+        colors = self.get_archetype_colors_for_chart(archetype_names, guild_names)
+
         fig = go.Figure()
 
         fig.add_trace(
             go.Bar(
                 x=archetype_counts.index,
                 y=archetype_counts.values,
-                marker_color=self.archetype_colors[: len(archetype_counts)],
+                marker_color=colors,
                 text=archetype_counts.values,
                 textposition="auto",
                 hovertemplate=(
@@ -820,25 +957,25 @@ class MetagameChartsGenerator:
             archetypes.append("Autres / Non classifiés")
             percentages.append(others_percentage)
 
-        # Palette de couleurs variées et attrayantes
-        colors = [
-            "#FF6B6B",
-            "#4ECDC4",
-            "#45B7D1",
-            "#96CEB4",
-            "#FFEAA7",
-            "#DDA0DD",
-            "#98D8C8",
-            "#F7DC6F",
-            "#BB8FCE",
-            "#85C1E9",
-            "#F8C471",
-            "#82E0AA",
-            "#F1948A",
-            "#AED6F1",
-            "#D7BDE2",
-            "#B2B2B2",  # Gris pour "Autres"
-        ]
+        # Couleurs MTG pour chaque archétype
+        guild_names = []
+        for archetype in archetypes:
+            if archetype in ["Autres", "Autres / Non classifiés"]:
+                guild_names.append(None)  # Pas de guilde pour "Autres"
+            else:
+                # Trouver la guilde la plus commune pour cet archétype
+                archetype_data = df[df["archetype"] == archetype]
+                if not archetype_data.empty and "guild_name" in archetype_data.columns:
+                    most_common_guild = archetype_data["guild_name"].mode()
+                    guild_names.append(
+                        most_common_guild.iloc[0]
+                        if len(most_common_guild) > 0
+                        else None
+                    )
+                else:
+                    guild_names.append(None)
+
+        colors = self.get_archetype_colors_for_chart(archetypes, guild_names)
 
         # Créer le graphique en barres
         fig = go.Figure(
@@ -847,7 +984,7 @@ class MetagameChartsGenerator:
                     x=archetypes,
                     y=percentages,
                     marker=dict(
-                        color=colors[: len(archetypes)],
+                        color=colors,
                         line=dict(color="white", width=1),
                     ),
                     text=[f"{p:.1f}%" for p in percentages],
@@ -929,24 +1066,25 @@ class MetagameChartsGenerator:
         if others_percentage > 0:
             archetypes.append("Autres / Non classifiés")
             percentages.append(others_percentage)
-        colors = [
-            "#FF6B6B",
-            "#4ECDC4",
-            "#45B7D1",
-            "#96CEB4",
-            "#FFEAA7",
-            "#DDA0DD",
-            "#98D8C8",
-            "#F7DC6F",
-            "#BB8FCE",
-            "#85C1E9",
-            "#F8C471",
-            "#82E0AA",
-            "#F1948A",
-            "#AED6F1",
-            "#D7BDE2",
-            "#B2B2B2",
-        ]
+        # Couleurs MTG pour chaque archétype
+        guild_names = []
+        for archetype in archetypes:
+            if archetype in ["Autres", "Autres / Non classifiés"]:
+                guild_names.append(None)  # Pas de guilde pour "Autres"
+            else:
+                # Trouver la guilde la plus commune pour cet archétype
+                archetype_data = df[df["archetype"] == archetype]
+                if not archetype_data.empty and "guild_name" in archetype_data.columns:
+                    most_common_guild = archetype_data["guild_name"].mode()
+                    guild_names.append(
+                        most_common_guild.iloc[0]
+                        if len(most_common_guild) > 0
+                        else None
+                    )
+                else:
+                    guild_names.append(None)
+
+        colors = self.get_archetype_colors_for_chart(archetypes, guild_names)
         fig = go.Figure(
             data=[
                 go.Bar(
@@ -954,7 +1092,7 @@ class MetagameChartsGenerator:
                     x=percentages,
                     orientation="h",
                     marker=dict(
-                        color=colors[: len(archetypes)],
+                        color=colors,
                         line=dict(color="white", width=1),
                     ),
                     text=[f"{p:.1f}%" for p in percentages],
@@ -1037,6 +1175,9 @@ class MetagameChartsGenerator:
         self, df: pd.DataFrame, output_dir: str = "analysis_output"
     ) -> Dict:
         """Génère tous les graphiques de métagame"""
+
+        # Stocker le DataFrame original pour accéder aux informations de guilde
+        self.original_df = df.copy()
 
         # Calculer les statistiques
         stats_df = self.calculate_archetype_stats(df)

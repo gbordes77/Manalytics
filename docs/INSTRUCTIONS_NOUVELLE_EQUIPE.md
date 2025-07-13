@@ -1,6 +1,6 @@
 # 👋 Instructions for New Team - Manalytics
 
-> **Welcome!** You're joining the **Manalytics v0.3.2** project - Magic: The Gathering metagame analysis platform
+> **Welcome!** You're joining the **Manalytics v0.3.3** project - Magic: The Gathering metagame analysis platform with **authentic MTG color system**
 
 ## 🎯 **CLEAR MISSION**
 
@@ -32,14 +32,14 @@ The onboarding system is **self-monitored**. Any code modification without doc u
 1. Clone the repository: `git clone https://github.com/gbordes77/Manalytics.git`
 2. Enter the folder: `cd Manalytics`
 3. **IMPORTANT - Version choice**:
-   - **Recommended**: `git checkout feature/english-migration` (latest with English interface)
-   - **Alternative**: `git checkout v0.3.2` (stable version)
-   - **Legacy**: `git checkout v0.3.1` (if you need French interface)
+   - **Recommended**: `git checkout feature/english-migration` (latest with MTG color system)
+   - **Alternative**: `git checkout v0.3.3` (stable version with colors)
+   - **Legacy**: `git checkout v0.3.2` (English interface without colors)
 
 **⚠️ COMPATIBILITY**:
-- If using **feature/english-migration** → follow these instructions exactly (latest)
+- If using **feature/english-migration** → follow these instructions exactly (latest with MTG colors)
+- If using **v0.3.3** → includes MTG color system, functional links, deduplication
 - If using **v0.3.2** → interface is fully in English, pipeline is stable
-- If using **v0.3.1** → interface is in French, check for French documentation
 
 4. Open the [**✅ VALIDATION CHECKLIST**](ONBOARDING_CHECKLIST.md) in a separate tab
 

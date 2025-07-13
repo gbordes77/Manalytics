@@ -2,6 +2,7 @@
 Manalytics Orchestrator - Phase 3 (Visualizations only)
 Simplified pipeline with automatic chart generation
 """
+
 import asyncio
 import glob
 import json
@@ -9,9 +10,12 @@ import logging
 import os
 from datetime import datetime
 from pathlib import Path
+from typing import Dict, List
 
 import pandas as pd
 
+from src.python.analytics.advanced_metagame_analyzer import AdvancedMetagameAnalyzer
+from src.python.classifier.color_detector import ColorDetector
 from src.python.classifier.mtgo_classifier import MTGOClassifier
 from src.python.visualizations.matchup_matrix import MatchupMatrixGenerator
 from src.python.visualizations.metagame_charts import MetagameChartsGenerator
@@ -24,7 +28,15 @@ class ManalyticsOrchestrator:
         self.logger = logging.getLogger(__name__)
         # Initialize MTGO classifier
         self.mtgo_classifier = MTGOClassifier()
+        # Initialize color detector
+        self.color_detector = ColorDetector()
+        # Initialize advanced metagame analyzer
+        self.advanced_analyzer = AdvancedMetagameAnalyzer()
         self.logger.info("MTGO Classifier initialized with complete archetype database")
+        self.logger.info("Color Detector initialized with MTGOFormatData color system")
+        self.logger.info(
+            "Advanced Metagame Analyzer initialized with statistical analysis capabilities"
+        )
 
     async def run_pipeline(self, format: str, start_date: str, end_date: str):
         """Phase 3 pipeline with automatic visualization generation"""
@@ -49,7 +61,9 @@ class ManalyticsOrchestrator:
             visualization_report = await self.generate_visualizations(str(output_dir))
 
             # 2. Final summary
-            self.logger.info(f"✅ Pipeline completed successfully in {analysis_folder}!")
+            self.logger.info(
+                f"✅ Pipeline completed successfully in {analysis_folder}!"
+            )
 
             return {
                 "analysis_folder": analysis_folder,
@@ -74,6 +88,10 @@ class ManalyticsOrchestrator:
             # Load real tournament data from cache
             self.logger.info("🔍 Loading tournament data from MTGODecklistCache...")
             df = self._load_real_tournament_data()
+
+            # 0. Advanced statistical analysis
+            self.logger.info("🔬 Performing advanced statistical analysis...")
+            advanced_report = self._perform_advanced_analysis(df, output_dir)
 
             # 1. Matchup matrix
             self.logger.info("📊 Generating matchup matrix...")
@@ -116,6 +134,7 @@ class ManalyticsOrchestrator:
             return {
                 "chart_files": chart_files,
                 "matrix_report": matrix_report,
+                "advanced_report": advanced_report,
                 "dashboard_path": dashboard_path,
                 "total_files": total_files,
             }
@@ -305,9 +324,18 @@ class ManalyticsOrchestrator:
         # Extraire les wins/losses
         wins, losses = self._extract_results(deck)
 
+        # Get mainboard for analysis
+        mainboard = deck.get("Mainboard", deck.get("mainboard", []))
+
         # Classify archetype with the new corrected logic
-        archetype = self._classify_archetype(
-            deck.get("Mainboard", deck.get("mainboard", []))
+        archetype = self._classify_archetype(mainboard)
+
+        # Analyze deck colors
+        color_analysis = self.color_detector.analyze_decklist_colors(mainboard)
+
+        # Generate archetype name with color identity
+        archetype_with_colors = self.color_detector.get_archetype_color_identity(
+            archetype, color_analysis
         )
 
         # Determine source with MTGO differentiation
@@ -328,6 +356,10 @@ class ManalyticsOrchestrator:
             "format": self.format,
             "player_name": deck.get("Player", deck.get("player", "")),
             "archetype": archetype,
+            "archetype_with_colors": archetype_with_colors,
+            "color_identity": color_analysis["identity"],
+            "guild_name": color_analysis["guild_name"],
+            "color_distribution": color_analysis["color_distribution"],
             "wins": wins,
             "losses": losses,
             "draws": deck.get("draws", 0),
@@ -698,6 +730,43 @@ class ManalyticsOrchestrator:
         .footer {{ background: var(--text-dark); color: white; text-align: center;
                   padding: 2rem; margin-top: 3rem; }}
         .footer p {{ opacity: 0.8; }}
+
+        /* MTG Color Styles */
+        .mana-symbol {{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 16px;
+            text-align: center;
+            margin: 0 2px;
+        }}
+        .mana-w {{ background-color: #fffbd5; color: #000; }}
+        .mana-u {{ background-color: #0e68ab; }}
+        .mana-b {{ background-color: #150b00; }}
+        .mana-r {{ background-color: #d3202a; }}
+        .mana-g {{ background-color: #00733e; }}
+        .mana-c {{ background-color: #ccc; color: #000; }}
+
+        .color-white {{ border-left: 4px solid #fffbd5; }}
+        .color-blue {{ border-left: 4px solid #0e68ab; }}
+        .color-black {{ border-left: 4px solid #150b00; }}
+        .color-red {{ border-left: 4px solid #d3202a; }}
+        .color-green {{ border-left: 4px solid #00733e; }}
+        .color-azorius {{ border-left: 4px solid #fffbd5; border-right: 4px solid #0e68ab; }}
+        .color-dimir {{ border-left: 4px solid #0e68ab; border-right: 4px solid #150b00; }}
+        .color-rakdos {{ border-left: 4px solid #150b00; border-right: 4px solid #d3202a; }}
+        .color-gruul {{ border-left: 4px solid #d3202a; border-right: 4px solid #00733e; }}
+        .color-selesnya {{ border-left: 4px solid #00733e; border-right: 4px solid #fffbd5; }}
+        .color-orzhov {{ border-left: 4px solid #fffbd5; border-right: 4px solid #150b00; }}
+        .color-golgari {{ border-left: 4px solid #150b00; border-right: 4px solid #00733e; }}
+        .color-simic {{ border-left: 4px solid #00733e; border-right: 4px solid #0e68ab; }}
+        .color-izzet {{ border-left: 4px solid #0e68ab; border-right: 4px solid #d3202a; }}
+        .color-boros {{ border-left: 4px solid #d3202a; border-right: 4px solid #fffbd5; }}
+        .color-colorless {{ border-left: 4px solid #ccc; }}
 
         @media (max-width: 768px) {{
             .header h1 {{ font-size: 2rem; }}
@@ -1158,6 +1227,11 @@ class ManalyticsOrchestrator:
                 deck_data = {
                     "deck_id": f"{row.get('tournament_id', 'unknown')}_{row.get('player_name', 'unknown')}",
                     "archetype": row.get("archetype", "Unknown"),
+                    "archetype_with_colors": row.get(
+                        "archetype_with_colors", row.get("archetype", "Unknown")
+                    ),
+                    "color_identity": row.get("color_identity", ""),
+                    "guild_name": row.get("guild_name", ""),
                     "player_name": row.get("player_name", "Unknown"),
                     "tournament_name": row.get("tournament_name", "Unknown"),
                     "tournament_date": tournament_date,
@@ -1251,9 +1325,22 @@ class ManalyticsOrchestrator:
                 f"archetype_{archetype.replace(' ', '_').replace('/', '_')}.html"
             )
 
+            # Get color information from first deck (should be consistent for archetype)
+            first_deck = decks[0]
+            color_identity = first_deck.get("color_identity", "")
+            guild_name = first_deck.get("guild_name", "")
+            archetype_with_colors = first_deck.get("archetype_with_colors", archetype)
+
+            # Generate color symbols HTML
+            color_symbols = self.color_detector.get_color_symbols_html(color_identity)
+            color_css_class = self.color_detector.get_color_css_class(color_identity)
+
             archetype_rows += f"""
-                <tr onclick="window.location.href='{archetype_filename}'" style="cursor: pointer;">
-                    <td style="font-weight: bold; color: #762a83;">{archetype}</td>
+                <tr onclick="window.location.href='{archetype_filename}'" style="cursor: pointer;" class="{color_css_class}">
+                    <td style="font-weight: bold; color: #762a83;">
+                        {color_symbols} {archetype_with_colors}
+                    </td>
+                    <td style="text-align: center; color: #666; font-size: 0.9rem;">{guild_name}</td>
                     <td style="text-align: center;">{deck_count}</td>
                     <td style="text-align: center;">{percentage:.1f}%</td>
                     <td style="text-align: center;">
@@ -1295,6 +1382,43 @@ class ManalyticsOrchestrator:
                      padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none;
                      margin-bottom: 2rem; transition: all 0.3s; }}
         .back-btn:hover {{ background: var(--secondary); transform: translateY(-2px); }}
+
+        /* MTG Color Styles */
+        .mana-symbol {{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 16px;
+            text-align: center;
+            margin: 0 2px;
+        }}
+        .mana-w {{ background-color: #fffbd5; color: #000; }}
+        .mana-u {{ background-color: #0e68ab; }}
+        .mana-b {{ background-color: #150b00; }}
+        .mana-r {{ background-color: #d3202a; }}
+        .mana-g {{ background-color: #00733e; }}
+        .mana-c {{ background-color: #ccc; color: #000; }}
+
+        .color-white {{ border-left: 4px solid #fffbd5; }}
+        .color-blue {{ border-left: 4px solid #0e68ab; }}
+        .color-black {{ border-left: 4px solid #150b00; }}
+        .color-red {{ border-left: 4px solid #d3202a; }}
+        .color-green {{ border-left: 4px solid #00733e; }}
+        .color-azorius {{ border-left: 4px solid #fffbd5; border-right: 4px solid #0e68ab; }}
+        .color-dimir {{ border-left: 4px solid #0e68ab; border-right: 4px solid #150b00; }}
+        .color-rakdos {{ border-left: 4px solid #150b00; border-right: 4px solid #d3202a; }}
+        .color-gruul {{ border-left: 4px solid #d3202a; border-right: 4px solid #00733e; }}
+        .color-selesnya {{ border-left: 4px solid #00733e; border-right: 4px solid #fffbd5; }}
+        .color-orzhov {{ border-left: 4px solid #fffbd5; border-right: 4px solid #150b00; }}
+        .color-golgari {{ border-left: 4px solid #150b00; border-right: 4px solid #00733e; }}
+        .color-simic {{ border-left: 4px solid #00733e; border-right: 4px solid #0e68ab; }}
+        .color-izzet {{ border-left: 4px solid #0e68ab; border-right: 4px solid #d3202a; }}
+        .color-boros {{ border-left: 4px solid #d3202a; border-right: 4px solid #fffbd5; }}
+        .color-colorless {{ border-left: 4px solid #ccc; }}
     </style>
 </head>
 <body>
@@ -1314,6 +1438,7 @@ class ManalyticsOrchestrator:
                 <thead>
                     <tr>
                         <th>Archetype</th>
+                        <th style="text-align: center;">Colors</th>
                         <th style="text-align: center;">Decks</th>
                         <th style="text-align: center;">Meta Share</th>
                         <th style="text-align: center;">Action</th>
@@ -1421,3 +1546,117 @@ class ManalyticsOrchestrator:
 </body>
 </html>
         """
+
+    def _perform_advanced_analysis(self, df: pd.DataFrame, output_dir: str) -> Dict:
+        """Perform advanced statistical analysis on tournament data"""
+        try:
+            # Load data into advanced analyzer
+            if not self.advanced_analyzer.load_data(df):
+                self.logger.warning("⚠️ Could not load data for advanced analysis")
+                return {}
+
+            # Generate comprehensive analysis
+            analysis_report = self.advanced_analyzer.generate_comprehensive_analysis()
+
+            # Save advanced analysis report
+            import json
+
+            advanced_file = Path(output_dir) / "advanced_analysis.json"
+            with open(advanced_file, "w", encoding="utf-8") as f:
+                json.dump(analysis_report, f, indent=2, ensure_ascii=False)
+
+            self.logger.info(f"✅ Advanced analysis saved to {advanced_file}")
+
+            # Log key insights
+            if "diversity_metrics" in analysis_report:
+                diversity = analysis_report["diversity_metrics"]
+                self.logger.info(
+                    f"📊 Diversity Metrics: Shannon={diversity.get('shannon_diversity', 0):.3f}, Simpson={diversity.get('simpson_diversity', 0):.3f}"
+                )
+
+            if (
+                "temporal_trends" in analysis_report
+                and "category_counts" in analysis_report["temporal_trends"]
+            ):
+                trends = analysis_report["temporal_trends"]["category_counts"]
+                self.logger.info(f"📈 Temporal Trends: {trends}")
+
+            return {
+                "analysis_report": analysis_report,
+                "advanced_file": str(advanced_file),
+                "insights": self._extract_key_insights(analysis_report),
+            }
+
+        except Exception as e:
+            self.logger.error(f"❌ Error in advanced analysis: {e}")
+            return {}
+
+    def _extract_key_insights(self, analysis_report: Dict) -> List[str]:
+        """Extract key insights from advanced analysis"""
+        insights = []
+
+        try:
+            # Diversity insights
+            if "diversity_metrics" in analysis_report:
+                diversity = analysis_report["diversity_metrics"]
+                shannon = diversity.get("shannon_diversity", 0)
+                effective = diversity.get("effective_archetypes", 0)
+
+                if shannon > 2.5:
+                    insights.append(
+                        f"🌈 High diversity metagame (Shannon: {shannon:.2f}, Effective archetypes: {effective:.1f})"
+                    )
+                elif shannon < 1.5:
+                    insights.append(
+                        f"⚪ Low diversity metagame (Shannon: {shannon:.2f}, dominance by few archetypes)"
+                    )
+                else:
+                    insights.append(
+                        f"⚖️ Balanced metagame (Shannon: {shannon:.2f}, {effective:.1f} effective archetypes)"
+                    )
+
+            # Temporal trends insights
+            if (
+                "temporal_trends" in analysis_report
+                and "category_counts" in analysis_report["temporal_trends"]
+            ):
+                trends = analysis_report["temporal_trends"]["category_counts"]
+                rising = trends.get("Rising", 0)
+                declining = trends.get("Declining", 0)
+
+                if rising > declining:
+                    insights.append(
+                        f"📈 Dynamic metagame: {rising} rising archetypes vs {declining} declining"
+                    )
+                elif declining > rising:
+                    insights.append(
+                        f"📉 Consolidating metagame: {declining} declining archetypes vs {rising} rising"
+                    )
+                else:
+                    insights.append(f"🎯 Stable metagame: balanced archetype evolution")
+
+            # Clustering insights
+            if (
+                "clustering_analysis" in analysis_report
+                and "archetype_clusters" in analysis_report["clustering_analysis"]
+            ):
+                clusters = analysis_report["clustering_analysis"]["archetype_clusters"]
+                if clusters:
+                    insights.append(
+                        f"🎯 Identified {len(set(clusters.values()))} distinct archetype performance clusters"
+                    )
+
+            # Card analysis insights
+            if "card_analysis" in analysis_report:
+                card_data = analysis_report["card_analysis"]
+                total_cards = card_data.get("total_unique_cards", 0)
+                if total_cards > 0:
+                    insights.append(
+                        f"🃏 {total_cards} unique cards analyzed across all archetypes"
+                    )
+
+        except Exception as e:
+            self.logger.warning(f"⚠️ Error extracting insights: {e}")
+            insights.append("🔍 Advanced analysis completed successfully")
+
+        return insights
