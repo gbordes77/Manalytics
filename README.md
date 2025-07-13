@@ -94,6 +94,28 @@ open standard_analysis_2025-07-01_2025-07-07/index.html
 - **Couleurs distinctives** - Turquoise (melee.gg), Rouge (Challenge), Vert (League)
 - **UX optimisée** - Accès tournois en 1 clic depuis dashboard
 
+## 📦 Partage d'Analyses
+
+### **Créer un zip pour partage :**
+```bash
+# Script automatique
+python scripts/create_analysis_zip.py
+
+# Ou spécifier une analyse précise
+python scripts/create_analysis_zip.py standard_analysis_2025-07-01_2025-07-07
+
+# Ou manuellement
+cd Analyses
+zip -r analysis.zip standard_analysis_2025-07-01_2025-07-07/
+```
+
+### **Consultation d'une analyse reçue :**
+1. **Dézipper** le fichier
+2. **Ouvrir** le fichier `.html` principal
+3. **Naviguer** dans l'analyse complète !
+
+> 📖 **Guide complet** : [docs/GUIDE_PARTAGE_ANALYSES.md](docs/GUIDE_PARTAGE_ANALYSES.md)
+
 ## 📖 Documentation
 
 | Document | Description | Pour qui ? |
