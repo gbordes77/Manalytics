@@ -1,23 +1,39 @@
 # 🎯 Manalytics - MTG Metagame Analytics Pipeline
 
-> Analyse automatisée du métagame Magic: The Gathering avec génération de rapports HTML interactifs
+> **Analyse automatisée du métagame Magic: The Gathering** - Pipeline générant **9 visualisations interactives** en moins de 30 secondes
 
-## 🚀 Quick Start (30 secondes)
+## ⚡ Lightning Tour (30 secondes)
 
 ```bash
-# 1. Clone
-git clone https://github.com/gbordes77/Manalytics.git
-cd Manalytics
+# 1. Clone & Setup
+git clone https://github.com/gbordes77/Manalytics.git && cd Manalytics
+git checkout v0.3.0  # Clean baseline
 
-# 2. Install
+# 2. Install  
 pip install -r requirements.txt
 
-# 3. Run
+# 3. Run Analysis
 python run_full_pipeline.py --format Standard --start-date 2025-07-01 --end-date 2025-07-07
 
-# 4. View
-open Standard_analysis_2025-07-01_2025-07-07/index.html
+# 4. View Results (9 interactive charts)
+open standard_analysis_2025-07-01_2025-07-07/index.html
 ```
+
+**Résultat** : 9 graphiques HTML interactifs générés automatiquement (métagame, matchups, winrates, tiers, évolution temporelle...)
+
+---
+
+## 🚀 On-boarding Kit - Équipe Future
+
+| Document | Objectif | Temps |
+|----------|----------|-------|
+| [**📋 ROADMAP**](docs/ROADMAP.md) | Vision produit, tags clés v0.3→v1.0 | 15 min |
+| [**🏗️ ARCHITECTURE_QUICKREAD**](docs/ARCHITECTURE_QUICKREAD.md) | Compréhension technique rapide | 30 min |
+| [**⚙️ SETUP_DEV**](docs/SETUP_DEV.md) | Environnement dev en 5 min | 5 min |
+
+**KPI On-boarding** : Compréhension projet ≤ 2h • Premier run ≤ 15 min • Première PR Jour 1
+
+---
 
 ## 📊 Résultat
 
