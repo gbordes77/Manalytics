@@ -1,82 +1,126 @@
-# 📋 Roadmap Manalytics - Vision Produit
+# 📋 Roadmap Manalytics - Product Vision
 
-> **Mission** : Démocratiser l'analyse métagame MTG par l'automatisation complète
+> **Mission**: Democratize MTG metagame analysis through complete automation
 
-## 🏁 Tags Clés & Jalons
+## 🏁 Key Tags & Milestones
 
 ### ✅ **v0.3.0** - Clean Baseline
-- **Date** : 13 juillet 2025
-- **Réalisé** : Repository professionnel, hooks sécurisés, documentation complète
-- **Décision clé** : Architecture modulaire `src/` pour scalabilité future
-- **Impact** : Équipe peut onboard en <2h, développement collaboratif possible
+- **Date**: July 13, 2025
+- **Achieved**: Professional repository, secured hooks, complete documentation
+- **Key Decision**: Modular `src/` architecture for future scalability
+- **Impact**: Team can onboard in <2h, collaborative development possible
 
-### ✅ **v0.3.1** - UX Améliorée (Actuel)
-- **Date** : 13 juillet 2025
-- **Réalisé** : Interface utilisateur enrichie, différenciation MTGO, navigation optimisée
-- **Features** : Badges colorés sources, URLs cliquables, export CSV, organisation Analyses/
-- **Décision clé** : Distinction Challenge/League pour comparaison Jiliac précise
-- **Impact** : Navigation 1-clic vers tournois, visibilité sources immédiate
+### ✅ **v0.3.1** - UX Improvements
+- **Date**: July 13, 2025
+- **Achieved**: Enhanced user interface, MTGO differentiation, optimized navigation
+- **Features**: Colored source badges, clickable URLs, CSV export, Analyses/ organization
+- **Key Decision**: Challenge/League distinction for precise Jiliac comparison
+- **Impact**: 1-click navigation to tournaments, immediate source visibility
+
+### ✅ **v0.3.2** - English Migration & Classification Fixes (Current)
+- **Date**: July 13, 2025
+- **Achieved**: Complete French → English interface migration, improved archetype classification
+- **Features**: Full English UI, better Standard archetype handling, fixed MTGO source attribution
+- **Key Decision**: International-ready English interface for broader accessibility
+- **Impact**: Professional English experience, improved archetype accuracy, consistent source classification
 
 ### 🚧 **v0.4.0** - Interactive Dashboard (Q3 2025)
-- **Objectif** : Interface web temps réel
-- **Features** : FastAPI + React, sélection formats/dates, export PDF
-- **Décision clé** : API-first design pour découplage frontend/backend
-- **KPI** : Réduction temps analyse de 15min → 30s
+- **Objective**: Real-time web interface
+- **Features**: FastAPI + React, format/date selection, PDF export
+- **Key Decision**: API-first design for frontend/backend decoupling
+- **KPI**: Reduce analysis time from 15min → 30s
 
 ### 🎯 **v1.0.0** - SaaS Ready (Q4 2025)
-- **Vision** : Plateforme multi-utilisateurs
-- **Features** : Auth, cache Redis, alertes métagame, API publique
-- **Business** : Freemium model, analyses premium
-- **Scalabilité** : Support 1000+ utilisateurs simultanés
+- **Vision**: Multi-user platform
+- **Features**: Auth, Redis cache, metagame alerts, public API
+- **Business**: Freemium model, premium analyses
+- **Scalability**: Support 1000+ simultaneous users
 
-## 🧭 Décisions d'Architecture Marquantes
+## 🧭 Architectural Decisions
 
-### **Why Scraping Multi-Sources**
-- **Problème** : Aucune API officielle Wizards
-- **Solution** : Agrégation MTGO + Melee + TopDeck
-- **Bénéfice** : Données complètes, résilience aux pannes
+### **Why Multi-Source Scraping**
+- **Problem**: No official Wizards API
+- **Solution**: MTGO + Melee + TopDeck aggregation
+- **Benefit**: Complete data, resilience to failures
 
 ### **Why Real Data Only**
-- **Problème** : Analyses peu fiables avec données fictives
-- **Solution** : Politique "No Mock Data" stricte avec hooks Git
-- **Bénéfice** : Confiance utilisateurs, insights marketing réels
+- **Problem**: Unreliable analyses with fake data
+- **Solution**: Strict enforcement of tournament data only
+- **Benefit**: Credible results, professional credibility
 
-### **Why Modular `src/` Structure**
-- **Problème** : Monolithe difficile à maintenir
-- **Solution** : Separation classifier/scraper/visualizer
-- **Bénéfice** : Extensibilité (nouveau format = 1 nouveau module)
+### **Why English Interface** (v0.3.2)
+- **Problem**: French interface limited international adoption
+- **Solution**: Complete migration to English while preserving functionality
+- **Benefit**: International accessibility, professional appearance
 
-### **Why HTML/Plotly vs Dashboard**
-- **Phase 1** : Fichiers statiques → déploiement simple
-- **Phase 2** : Dashboard → interaction temps réel
-- **Migration** : Code visualisation réutilisable
+### **Why Source Classification Accuracy** (v0.3.2)
+- **Problem**: Confusion between archetype classification and data sources
+- **Solution**: Fixed MTGO source attribution, improved archetype handling
+- **Benefit**: Clear source understanding, accurate Standard classification
 
-### **Why MTGO Challenge/League Distinction**
-- **Problème** : Comparaison imprécise avec données Jiliac (Challenge only)
-- **Solution** : Parsing URL pour distinguer types tournois MTGO
-- **Bénéfice** : Analyses comparatives fiables, contexte compétitif clair
+## 🎯 Strategic Priorities
 
-## 🎪 Use Cases Futurs
+### **Q3 2025 - User Experience**
+- **Real-time dashboard**: Instant format switching
+- **Visual improvements**: Modern React components
+- **Export capabilities**: PDF reports, data downloads
+- **Performance**: <30s analysis time
 
-- **Joueurs Compétitifs** : Préparation tournois, meta tracking
-- **Organisateurs** : Analytics événements, formats émergents
-- **Créateurs Contenu** : Données visuelles, articles stratégie
-- **Wizards R&D** : Monitoring santé formats (partenariat potentiel)
+### **Q4 2025 - Platform Readiness**
+- **Multi-user support**: Authentication system
+- **API ecosystem**: Public endpoints for developers
+- **Business model**: Freemium with premium features
+- **Scalability**: Cloud-ready architecture
+
+### **2026 - Market Expansion**
+- **Mobile app**: iOS/Android applications
+- **AI insights**: Predictive metagame analysis
+- **Community features**: User-contributed data
+- **Global reach**: Multi-language support
+
+## 🔄 Version Strategy
+
+### **Incremental Value**
+Each version adds measurable user value:
+- **v0.3.x**: Foundation and migration
+- **v0.4.x**: Interactive experience
+- **v1.0.x**: SaaS platform
+
+### **Backward Compatibility**
+- **Data formats**: Preserved across versions
+- **API endpoints**: Versioned for stability
+- **User workflows**: Gradually enhanced
+
+### **Quality Gates**
+- **Testing**: 90%+ code coverage
+- **Documentation**: Living docs with each release
+- **Performance**: Sub-minute analysis times
+- **User feedback**: Continuous improvement
 
 ---
-*Dernière mise à jour : 13 juillet 2025*
+
+## 🚀 Next Steps
+
+### **Immediate (July 2025)**
+1. **Complete v0.3.2 stabilization**
+2. **User feedback collection**
+3. **Performance optimization**
+4. **API design planning**
+
+### **Short-term (Q3 2025)**
+1. **FastAPI backend development**
+2. **React frontend prototyping**
+3. **Real-time features implementation**
+4. **Beta user testing**
+
+### **Long-term (Q4 2025)**
+1. **SaaS platform launch**
+2. **Business model implementation**
+3. **User acquisition strategy**
+4. **Scaling infrastructure**
 
 ---
 
-## 🎯 **ÉTAPE 1 TERMINÉE** ✅
-
-**Checkpoint** : Vous comprenez maintenant l'objectif final de Manalytics v1.0
-
-### ➡️ **ÉTAPE SUIVANTE** : Architecture Technique (30 min)
-👉 **Lisez maintenant** : [**🏗️ ARCHITECTURE_QUICKREAD**](ARCHITECTURE_QUICKREAD.md)
-
-**Pourquoi cette étape** : Maintenant que vous connaissez la vision, découvrez comment le code est organisé pour atteindre ces objectifs.
-
----
-
-*Parcours complet : [README Lightning Tour](../README.md) → **ROADMAP** → [ARCHITECTURE](ARCHITECTURE_QUICKREAD.md) → [SETUP_DEV](SETUP_DEV.md)*
+*Last updated: July 13, 2025*
+*Current: v0.3.2*
+*Next milestone: v0.4.0 Interactive Dashboard*

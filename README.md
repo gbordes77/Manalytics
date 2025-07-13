@@ -1,13 +1,13 @@
 # 🎯 Manalytics - MTG Metagame Analytics Pipeline
 
-> **Analyse automatisée du métagame Magic: The Gathering** - Pipeline générant **9 visualisations interactives** en moins de 30 secondes
+> **Automated Magic: The Gathering metagame analysis** - Pipeline generating **9 interactive visualizations** in under 30 seconds
 
-## ⚡ Lightning Tour (30 secondes)
+## ⚡ Lightning Tour (30 seconds)
 
 ```bash
 # 1. Clone & Setup
 git clone https://github.com/gbordes77/Manalytics.git && cd Manalytics
-git checkout v0.3.0  # Clean baseline
+git checkout feature/english-migration  # Latest English version
 
 # 2. Install
 pip install -r requirements.txt
@@ -16,133 +16,208 @@ pip install -r requirements.txt
 python run_full_pipeline.py --format Standard --start-date 2025-07-01 --end-date 2025-07-07
 
 # 4. View Results (9 interactive charts)
-open standard_analysis_2025-07-01_2025-07-07/index.html
+open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-07-07.html
 ```
 
-**Résultat** : 9 graphiques HTML interactifs générés automatiquement (métagame, matchups, winrates, tiers, évolution temporelle...)
+**Result**: 9 interactive HTML charts generated automatically (metagame share, matchups, winrates, tiers, temporal evolution...)
 
 ---
 
-## 🚀 On-boarding Kit - Parcours Guidé (2h total)
+## 🚀 Onboarding Kit - Guided Journey (2h total)
 
-> **⚠️ NOUVEAU DÉVELOPPEUR ?** Commencez par la [**✅ CHECKLIST DE VALIDATION**](docs/ONBOARDING_CHECKLIST.md) pour vous auto-évaluer à chaque étape.
+> **⚠️ NEW DEVELOPER?** Start with the [**✅ VALIDATION CHECKLIST**](docs/ONBOARDING_CHECKLIST.md) to self-assess at each step.
 
-### 📋 **ÉTAPE 1 : Compréhension Projet** (15 min)
-➡️ **Lisez d'abord** : [**📋 ROADMAP**](docs/ROADMAP.md)
-- Vision produit v0.3 → v1.0
-- Décisions architecturales clés
-- ✅ **Checkpoint** : Vous comprenez l'objectif final
+### 📋 **STEP 1: Project Understanding** (15 min)
+👉 **Read**: [**ROADMAP.md**](docs/ROADMAP.md) - Product vision v0.3.2 → v1.0
 
-### 🏗️ **ÉTAPE 2 : Architecture Technique** (30 min)
-➡️ **Lisez ensuite** : [**🏗️ ARCHITECTURE_QUICKREAD**](docs/ARCHITECTURE_QUICKREAD.md)
-- Pipeline scraping → analyse → visualisation
-- Modules clés et points d'extension
-- ✅ **Checkpoint** : Vous savez où modifier le code
+### 🏗️ **STEP 2: Technical Architecture** (30 min)
+👉 **Read**: [**ARCHITECTURE_QUICKREAD.md**](docs/ARCHITECTURE_QUICKREAD.md) - Modular design & extension points
 
-### ⚙️ **ÉTAPE 3 : Setup Développement** (5 min)
-➡️ **Exécutez** : [**⚙️ SETUP_DEV**](docs/SETUP_DEV.md)
-- Clone, install, hooks, test pipeline
-- Premier run réussi
-- ✅ **Checkpoint** : Environnement opérationnel
+### ⚙️ **STEP 3: Development Setup** (45 min)
+👉 **Follow**: [**SETUP_DEV.md**](docs/SETUP_DEV.md) - Environment setup & first pipeline run
 
-### 🎯 **ÉTAPE 4 : Première Contribution** (Jour 1)
-➡️ **Suivez le workflow** dans [SETUP_DEV.md](docs/SETUP_DEV.md#workflow-développement)
-- Créer branche feature
-- Modifier du code
-- Première PR avec template obligatoire
-- ✅ **Checkpoint** : PR mergée avec succès
+### 🎯 **STEP 4: First Contribution** (30 min)
+👉 **Follow**: [**INSTRUCTIONS_NOUVELLE_EQUIPE.md**](docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md) - Make your first PR
+
+**✅ SUCCESS**: After 2h, you're operational and ready to contribute effectively!
 
 ---
 
-**🎯 KPI On-boarding** : Compréhension ≤ 2h • Premier run ≤ 15 min • Première PR Jour 1
+## 🌟 What's New in v0.3.2
 
-**⚠️ ORDRE OBLIGATOIRE** : Suivre les étapes 1→2→3→4 dans cet ordre. Chaque étape prépare la suivante.
+### 🌍 **Complete English Migration**
+- **Full Interface**: All user messages, charts, and UI elements now in English
+- **International Ready**: Professional English experience for global users
+- **Maintainable**: English code comments for international development teams
 
-## 📊 Résultat
+### 🎯 **Improved Classification**
+- **Standard Focus**: Removed non-Standard archetypes (Storm, Splinter Twin, etc.)
+- **Better "Others"**: Improved handling of generic/monocolor archetypes
+- **Source Clarity**: Fixed MTGO source attribution (no more confusion)
 
-✨ **9 graphiques interactifs générés automatiquement :**
+### 🔧 **Enhanced Experience**
+- **Consistent UI**: Unified English terminology across all components
+- **Accurate Data**: Better archetype classification for Standard format
+- **Clear Sources**: Distinct MTGO Challenge/League/General classification
 
-1. **Distribution du métagame** - Camembert des archétypes
-2. **Matrice de matchups** - Heatmap des winrates
-3. **Analyse des winrates** - Barres avec intervalles de confiance
-4. **Classification par tiers** - Scatter plot performance/popularité
-5. **Bubble chart** - Performance vs Présence
-6. **Top 5-0** - Meilleurs résultats
-7. **Évolution temporelle** - Tendances des archétypes
-8. **Bar chart archétypes** - Top archétypes du format
-9. **Sources de données** - Répartition des tournois
+---
 
-## 🆕 Nouvelles fonctionnalités v0.3.1
+## 🎨 Features Overview
 
-### 🎯 **Différenciation MTGO**
-- **MTGO Challenge** vs **MTGO League 5-0** - Distinction claire pour comparaison avec Jiliac
-- **Badges colorés** - Identification visuelle immédiate des sources
-- **Analyse précise** - Séparation des environnements compétitifs
+### 📊 **9 Interactive Visualizations**
+1. **Metagame Pie Chart** - Archetype distribution overview
+2. **Metagame Bar Chart** - Detailed share percentages
+3. **Winrate Confidence** - Performance with statistical confidence
+4. **Tiers Scatter Plot** - Archetype tier classification
+5. **Bubble Chart** - Winrate vs metagame presence
+6. **Top Performers** - Highest winrate archetypes
+7. **Data Sources** - Tournament source distribution
+8. **Temporal Evolution** - Archetype trends over time
+9. **Matchup Matrix** - Head-to-head performance analysis
 
-### 🔗 **Accès direct aux tournois**
-- **URLs cliquables** - Accès direct aux pages des tournois
-- **Boutons stylisés** - Interface professionnelle avec icônes
-- **Ouverture nouvel onglet** - Navigation fluide
+### 🎯 **Multi-Source Data**
+- **MTGO**: Challenge, League 5-0, and general tournaments
+- **Melee.gg**: Paper tournament results
+- **TopDeck.gg**: Additional tournament coverage
 
-### 📊 **Export & Organisation**
-- **Export CSV** - Données tournois exportables (en développement)
-- **Dossier Analyses/** - Organisation claire avec préfixes format/date
-- **Navigation intuitive** - Boutons retour dashboard fonctionnels
+### 🔄 **Real-Time Processing**
+- **Under 30s**: Complete analysis generation
+- **Real Data Only**: No mock data policy enforced
+- **Scalable**: Handles thousands of tournaments efficiently
 
-### 🎨 **Interface améliorée**
-- **Sources visibles** - Badges sous "Analyse complète" pour transparence
-- **Couleurs distinctives** - Turquoise (melee.gg), Rouge (Challenge), Vert (League)
-- **UX optimisée** - Accès tournois en 1 clic depuis dashboard
+---
 
-## 📦 Partage d'Analyses
+## 🛠️ Technical Stack
 
-### **Créer un zip pour partage :**
-```bash
-# Script automatique
-python scripts/create_analysis_zip.py
+### **Core Technologies**
+- **Python 3.11+**: Main programming language
+- **Plotly**: Interactive visualizations
+- **Pandas**: Data processing and analysis
+- **FastAPI**: API endpoints (for future web interface)
 
-# Ou spécifier une analyse précise
-python scripts/create_analysis_zip.py standard_analysis_2025-07-01_2025-07-07
+### **Data Processing**
+- **Multi-format Support**: Standard, Modern, Legacy
+- **Real Tournament Data**: MTGODecklistCache integration
+- **Intelligent Classification**: Advanced archetype detection
+- **Performance Optimized**: Efficient data pipeline
 
-# Ou manuellement
-cd Analyses
-zip -r analysis.zip standard_analysis_2025-07-01_2025-07-07/
-```
+### **Quality Assurance**
+- **Pre-commit Hooks**: Automated code quality (black, flake8, isort)
+- **No Mock Data**: Strict real data policy
+- **Testing**: Comprehensive test coverage
+- **Documentation**: Living documentation system
 
-### **Consultation d'une analyse reçue :**
-1. **Dézipper** le fichier
-2. **Ouvrir** le fichier `.html` principal
-3. **Naviguer** dans l'analyse complète !
+---
 
-> 📖 **Guide complet** : [docs/GUIDE_PARTAGE_ANALYSES.md](docs/GUIDE_PARTAGE_ANALYSES.md)
+## 📈 Getting Started
 
-## 📖 Documentation
+### **Prerequisites**
+- Python 3.11 or higher
+- Git
+- ~2GB disk space for tournament data
 
-| Document | Description | Pour qui ? |
-|----------|-------------|------------|
-| [**Guide Utilisateur**](docs/GUIDE_UTILISATEUR.md) | Comment utiliser le pipeline | Utilisateurs finaux |
-| [**Architecture Technique**](docs/ARCHITECTURE.md) | Comment ça fonctionne | Développeurs |
-| [**Guide Développeur**](docs/GUIDE_DEVELOPPEUR.md) | Comment contribuer | Contributeurs |
-| [**API Reference**](docs/API_REFERENCE.md) | Documentation des modules | Mainteneurs |
+### **Quick Setup**
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/gbordes77/Manalytics.git
+   cd Manalytics
+   ```
 
-## 🏗️ Architecture Simplifiée
+2. **Choose your version**
+   ```bash
+   # Latest English version (recommended)
+   git checkout feature/english-migration
 
-```
-Input (CLI) → Scraping → Classification → Analysis → Visualization → Output (HTML)
-```
+   # Or stable release
+   git checkout v0.3.2
+   ```
 
-**Détails complets dans [ARCHITECTURE.md](docs/ARCHITECTURE.md)**
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   pre-commit install
+   ```
 
-## ⚡ Performance
+4. **Run your first analysis**
+   ```bash
+   python run_full_pipeline.py --format Standard --start-date 2025-01-01 --end-date 2025-01-15
+   ```
 
-- **12,000+ decks/seconde** - Classification ultra-rapide
-- **100% taux de classification** - Aucun deck non identifié
-- **88% tests coverage** - Robustesse assurée
+5. **View results**
+   - Open the generated HTML dashboard
+   - Explore the 9 interactive visualizations
+   - Check the `Analyses/` folder for all outputs
 
-## 🤝 Contribution
+---
 
-Voir [CONTRIBUTING.md](CONTRIBUTING.md)
+## 🎯 Project Vision
 
-## 📄 License
+### **Mission**
+Democratize MTG metagame analysis through complete automation, providing professional-grade insights to players, organizers, and content creators.
 
-MIT - Voir [LICENSE](LICENSE)
+### **Current State (v0.3.2)**
+- Complete English interface for international use
+- Robust multi-source data pipeline
+- 9 interactive visualization types
+- Professional documentation system
+- Ready for next development phase
+
+### **Next Steps (v0.4.0)**
+- Real-time web dashboard
+- Interactive format/date selection
+- Enhanced user experience
+- API-first architecture
+
+### **Long-term Vision (v1.0)**
+- SaaS platform with authentication
+- Multi-user support
+- Premium analytics features
+- Mobile applications
+
+---
+
+## 🤝 Contributing
+
+### **For New Contributors**
+1. **Complete Onboarding**: Follow the [guided journey](docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md)
+2. **Read Architecture**: Understand the [system design](docs/ARCHITECTURE_QUICKREAD.md)
+3. **Setup Environment**: Follow the [development setup](docs/SETUP_DEV.md)
+4. **Make First PR**: Add your name to the team list
+
+### **Development Workflow**
+- **Branch Strategy**: Feature branches from latest
+- **Code Quality**: Pre-commit hooks enforced
+- **Documentation**: Living docs updated with each PR
+- **Testing**: Comprehensive test coverage required
+
+---
+
+## 📞 Support & Resources
+
+### **Documentation**
+- [**Team Instructions**](docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md) - Complete onboarding guide
+- [**Architecture Guide**](docs/ARCHITECTURE_QUICKREAD.md) - System design overview
+- [**Development Setup**](docs/SETUP_DEV.md) - Environment configuration
+- [**Project Roadmap**](docs/ROADMAP.md) - Product vision and milestones
+
+### **Quick Help**
+- **Setup Issues**: Check [troubleshooting guide](docs/SETUP_DEV.md#troubleshooting)
+- **Architecture Questions**: Review [architecture docs](docs/ARCHITECTURE_QUICKREAD.md)
+- **Contribution Guide**: Follow [development workflow](docs/SETUP_DEV.md#development-workflow)
+
+---
+
+## 🎉 Success Metrics
+
+- **✅ English Migration**: Complete international-ready interface
+- **✅ Real Data Only**: No mock data policy enforced
+- **✅ Fast Analysis**: <30s for complete metagame analysis
+- **✅ Multi-Source**: MTGO, Melee.gg, TopDeck.gg integration
+- **✅ Interactive**: 9 dynamic visualizations
+- **✅ Professional**: Production-ready code and documentation
+
+---
+
+*Last updated: July 13, 2025*
+*Version: v0.3.2*
+*Status: Ready for next development phase*

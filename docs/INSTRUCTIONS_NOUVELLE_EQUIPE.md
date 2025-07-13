@@ -1,183 +1,193 @@
-# 👋 Instructions pour la Nouvelle Équipe Manalytics
+# 👋 Instructions for New Team - Manalytics
 
-> **Bienvenue !** Vous rejoignez le projet **Manalytics v0.3.1** - Plateforme d'analyse du métagame Magic: The Gathering
+> **Welcome!** You're joining the **Manalytics v0.3.2** project - Magic: The Gathering metagame analysis platform
 
-## 🎯 **MISSION CLAIRE**
+## 🎯 **CLEAR MISSION**
 
-Votre objectif est de devenir **opérationnel en 2 heures maximum** et faire votre **première contribution le premier jour**.
+Your goal is to become **operational in 2 hours maximum** and make your **first contribution on day one**.
 
-**KPI à atteindre** :
-- ✅ Compréhension complète du projet ≤ 2h
-- ✅ Premier run du pipeline ≤ 15 min
-- ✅ Première PR mergée Jour 1
-
----
-
-## 📋 **CONSIGNES STRICTES - LISEZ ATTENTIVEMENT**
-
-### ⚠️ **RÈGLE N°1 : ORDRE OBLIGATOIRE**
-Vous **DEVEZ** suivre les étapes **1→2→3→4** dans cet ordre exact. Chaque étape prépare la suivante.
-
-### ⚠️ **RÈGLE N°2 : VALIDATION REQUISE**
-À chaque étape, vous **DEVEZ** valider votre compréhension avec la checklist avant de continuer.
-
-### ⚠️ **RÈGLE N°3 : DOCUMENTATION VIVANTE**
-Le système d'onboarding est **auto-surveillé**. Toute modification de code sans mise à jour de doc sera **automatiquement bloquée**.
+**KPIs to achieve**:
+- ✅ Complete project understanding ≤ 2h
+- ✅ First pipeline run ≤ 15 min
+- ✅ First PR merged Day 1
 
 ---
 
-## 🚀 **PARCOURS D'ONBOARDING (2h max)**
+## 📋 **STRICT GUIDELINES - READ CAREFULLY**
 
-### **AVANT DE COMMENCER**
-1. Clonez le repository : `git clone https://github.com/gbordes77/Manalytics.git`
-2. Entrez dans le dossier : `cd Manalytics`
-3. **IMPORTANT - Choix de version** :
-   - **Recommandé** : `git checkout v0.3.1` (version testée avec ces instructions)
-   - **Alternatif** : `git checkout v0.3.2` ou supérieur (si disponible)
+### ⚠️ **RULE #1: MANDATORY ORDER**
+You **MUST** follow steps **1→2→3→4** in this exact order. Each step prepares the next one.
 
-**⚠️ COMPATIBILITÉ** :
-- Si vous utilisez **v0.3.1** → suivez ces instructions exactement
-- Si vous utilisez **v0.3.2+** → vérifiez d'abord si le fichier `docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md` existe dans votre version
-  - ✅ **Si il existe** → suivez les instructions de VOTRE version (plus récentes)
-  - ❌ **Si il n'existe pas** → revenez à v0.3.1 : `git checkout v0.3.1`
+### ⚠️ **RULE #2: VALIDATION REQUIRED**
+At each step, you **MUST** validate your understanding with the checklist before continuing.
 
-4. Ouvrez la [**✅ CHECKLIST DE VALIDATION**](ONBOARDING_CHECKLIST.md) dans un onglet séparé
+### ⚠️ **RULE #3: LIVING DOCUMENTATION**
+The onboarding system is **self-monitored**. Any code modification without doc update will be **automatically blocked**.
 
 ---
 
-### 📋 **ÉTAPE 1 : Vision Produit** (15 min)
+## 🚀 **ONBOARDING JOURNEY (2h max)**
 
-**🎯 ACTION** : Lisez **ENTIÈREMENT** le document [**ROADMAP.md**](ROADMAP.md)
+### **BEFORE STARTING**
+1. Clone the repository: `git clone https://github.com/gbordes77/Manalytics.git`
+2. Enter the folder: `cd Manalytics`
+3. **IMPORTANT - Version choice**:
+   - **Recommended**: `git checkout feature/english-migration` (latest with English interface)
+   - **Alternative**: `git checkout v0.3.2` (stable version)
+   - **Legacy**: `git checkout v0.3.1` (if you need French interface)
 
-**📝 VALIDATION** : Avant de continuer, vous **DEVEZ** savoir répondre à :
-- [ ] Quelle est la différence entre v0.3 et v1.0 ?
-- [ ] Pourquoi utilise-t-on du scraping multi-sources ?
-- [ ] Quels sont les 3 formats supportés ?
-- [ ] Quel est l'objectif des 9 visualisations ?
+**⚠️ COMPATIBILITY**:
+- If using **feature/english-migration** → follow these instructions exactly (latest)
+- If using **v0.3.2** → interface is fully in English, pipeline is stable
+- If using **v0.3.1** → interface is in French, check for French documentation
 
-**✅ CHECKPOINT** : Vous comprenez maintenant l'objectif final de Manalytics
-
-**➡️ SUIVANT** : Une fois validé, passez à l'Étape 2
-
----
-
-### 🏗️ **ÉTAPE 2 : Architecture Technique** (30 min)
-
-**🎯 ACTION** : Lisez **ENTIÈREMENT** le document [**ARCHITECTURE_QUICKREAD.md**](ARCHITECTURE_QUICKREAD.md)
-
-**📝 VALIDATION** : Avant de continuer, vous **DEVEZ** savoir répondre à :
-- [ ] Comment les données passent de MTGO à l'analyseur ?
-- [ ] Où ajouter un nouveau scraper ?
-- [ ] Comment fonctionne le classifier d'archétypes ?
-- [ ] Quels sont les 4 modules principaux ?
-
-**✅ CHECKPOINT** : Vous savez maintenant où modifier le code et comment le système fonctionne
-
-**➡️ SUIVANT** : Une fois validé, passez à l'Étape 3
+4. Open the [**✅ VALIDATION CHECKLIST**](ONBOARDING_CHECKLIST.md) in a separate tab
 
 ---
 
-### ⚙️ **ÉTAPE 3 : Setup Développement** (5 min)
+### 📋 **STEP 1: Product Vision** (15 min)
 
-**🎯 ACTION** : Exécutez **TOUTES** les commandes du document [**SETUP_DEV.md**](SETUP_DEV.md)
+**🎯 ACTION**: Read **ENTIRELY** the document [**ROADMAP.md**](ROADMAP.md)
 
-**📝 VALIDATION** : Avant de continuer, vous **DEVEZ** avoir réussi :
-- [ ] Cloné le repo et checkout v0.3.1 ✅ (déjà fait)
-- [ ] Installé les dépendances Python
-- [ ] Installé les hooks pre-commit
-- [ ] Lancé avec succès un pipeline de test
-- [ ] Vu les 9 graphiques générés dans le dossier de sortie
+**📝 CONCRETE TASK**:
+- Understand the v0.3.2 → v1.0 progression
+- Identify 3 key architectural decisions
+- Note your understanding of the "why scraping multi-sources" rationale
 
-**✅ CHECKPOINT** : Votre environnement est opérationnel
-
-**➡️ SUIVANT** : Une fois validé, passez à l'Étape 4
+**✅ VALIDATION**: Open [ONBOARDING_CHECKLIST.md](ONBOARDING_CHECKLIST.md) and check the "Step 1" boxes
 
 ---
 
-### 🎯 **ÉTAPE 4 : Première Contribution** (Jour 1)
+### 🏗️ **STEP 2: Technical Architecture** (30 min)
 
-**🎯 ACTION** : Suivez le [**Workflow de Développement**](SETUP_DEV.md#workflow-développement)
+**🎯 ACTION**: Read **ENTIRELY** the document [**ARCHITECTURE_QUICKREAD.md**](ARCHITECTURE_QUICKREAD.md)
 
-**📝 TÂCHE CONCRÈTE** :
-1. Créez une branche : `git checkout -b feature/mon-premier-changement`
-2. Modifiez ce fichier (`INSTRUCTIONS_NOUVELLE_EQUIPE.md`) : ajoutez votre nom dans la section "Équipe" ci-dessous
-3. Commitez : `git add . && git commit -m "docs: add [VOTRE_NOM] to team"`
-4. Poussez : `git push origin feature/mon-premier-changement`
-5. Créez une PR sur GitHub
-6. **IMPORTANT** : Dans le template PR, cochez la case "README Lightning Tour" (car vous modifiez la documentation)
+**📝 CONCRETE TASK**:
+- Understand the modular `src/` structure
+- Identify the 3 main data sources (MTGO, Melee, TopDeck)
+- Locate the pipeline entry point (`run_full_pipeline.py`)
+- Understand the English interface migration (v0.3.2 feature)
 
-**📝 VALIDATION** : Votre onboarding est terminé quand :
-- [ ] Votre branche est créée
-- [ ] Votre modification est commitée
-- [ ] Votre PR est créée avec template rempli
-- [ ] Votre PR est reviewée et mergée
-
-**✅ CHECKPOINT FINAL** : Première contribution réussie !
+**✅ VALIDATION**: Check the "Step 2" boxes in your checklist
 
 ---
 
-## 🏆 **ÉQUIPE - Ajoutez votre nom ici après votre première PR**
+### 💻 **STEP 3: Development Setup** (45 min)
 
-*Développeurs ayant complété avec succès l'onboarding Manalytics v0.3.1 :*
+**🎯 ACTION**: Follow **ENTIRELY** the document [**SETUP_DEV.md**](SETUP_DEV.md)
 
-- Claude Sonnet 4 (AI Assistant) - onboarding terminé le 2025-07-13
-- [Votre nom ici après votre première PR]
+**📝 CONCRETE TASK**:
+1. Install dependencies: `pip install -r requirements-dev.txt`
+2. Setup pre-commit hooks: `pre-commit install`
+3. Run your first pipeline: `python run_full_pipeline.py --format Standard --start-date 2025-01-01 --end-date 2025-01-15`
+4. Verify English interface in generated dashboard
+5. Check that `Analyses/` folder is created with proper structure
 
----
-
-## 🆘 **AIDE & SUPPORT**
-
-### **Bloqué sur l'Étape 1-2 ?**
-Relisez attentivement. Si toujours bloqué, consultez [GUIDE_DEVELOPPEUR.md](GUIDE_DEVELOPPEUR.md)
-
-### **Bloqué sur l'Étape 3 ?**
-Consultez [SETUP_DEV.md - Troubleshooting](SETUP_DEV.md#troubleshooting-express)
-
-### **Bloqué sur l'Étape 4 ?**
-Le template PR vous guide. Chaque case correspond à une section de documentation.
-
-### **PR bloquée par la CI ?**
-Le workflow `onboarding-guard` a détecté que vous modifiez du code sans mettre à jour la documentation. C'est normal ! Cochez la bonne case dans le template PR.
+**✅ VALIDATION**: Check the "Step 3" boxes in your checklist
 
 ---
 
-## ⚡ **RAPPELS CRITIQUES**
+### 🎯 **STEP 4: First Contribution** (30 min)
 
-1. **ORDRE OBLIGATOIRE** : 1→2→3→4 (chaque étape prépare la suivante)
-2. **VALIDATION REQUISE** : Utilisez la checklist à chaque étape
-3. **PREMIÈRE PR OBLIGATOIRE** : Ajoutez votre nom dans ce fichier
-4. **TEMPLATE PR** : Toujours cocher une case (ou n/a avec justification)
-5. **DOCUMENTATION VIVANTE** : Système auto-surveillé pour garantir la qualité
-6. **VERSIONING** : Ces instructions sont pour v0.3.1+. Les versions futures incluront leurs propres instructions mises à jour.
+**🎯 ACTION**: Make your first contribution to prove operational readiness
 
----
+**📝 CONCRETE TASK**:
+1. Create a branch: `git checkout -b feature/my-first-change`
+2. Modify this file (`INSTRUCTIONS_NOUVELLE_EQUIPE.md`): add your name in the "Team" section below
+3. Commit: `git add . && git commit -m "docs: add [YOUR_NAME] to team"`
+4. Push: `git push origin feature/my-first-change`
+5. Create a PR on GitHub
+6. **IMPORTANT**: In the PR template, check the "README Lightning Tour" box (since you're modifying documentation)
 
-## 🔄 **ÉVOLUTION DU KIT D'ONBOARDING**
+**📝 VALIDATION**: Your onboarding is complete when:
+- [ ] Your branch is created
+- [ ] Your modification is committed
+- [ ] Your PR is created with template filled
+- [ ] Your PR is reviewed and merged
 
-**Comment ce système évolue** :
-- Chaque nouvelle version (v0.3.2, v0.4.0, etc.) peut avoir des instructions d'onboarding mises à jour
-- **Règle d'or** : Utilisez toujours les instructions de la version que vous avez checkout
-- Si pas d'instructions dans votre version → revenez à v0.3.1 qui est garantie stable
-
-**Pourquoi cette approche** :
-- ✅ Garantit que les instructions correspondent au code
-- ✅ Évite les incompatibilités entre versions
-- ✅ Permet l'évolution du processus d'onboarding
+**✅ FINAL CHECKPOINT**: First contribution successful!
 
 ---
 
-## 🎯 **SUCCÈS**
+## 🏆 **TEAM - Add your name here after your first PR**
 
-**Félicitations !** Si vous avez suivi ces instructions, vous maîtrisez maintenant :
-- ✅ Vision produit Manalytics v0.3 → v1.0
-- ✅ Architecture technique et points d'extension
-- ✅ Environnement de développement opérationnel
-- ✅ Workflow de contribution et gouvernance
+*Developers who successfully completed Manalytics v0.3.2 onboarding:*
 
-**Vous êtes prêt à contribuer efficacement au projet !**
+- Claude Sonnet 4 (AI Assistant) - onboarding completed on 2025-07-13
+- [Your name here after your first PR]
 
 ---
 
-*Instructions créées le : 13 juillet 2025*
-*Baseline : v0.3.1*
-*Système d'onboarding auto-maintenu*
+## 🆘 **HELP & SUPPORT**
+
+### **Stuck on Steps 1-2?**
+Read carefully. If still stuck, consult [GUIDE_DEVELOPPEUR.md](GUIDE_DEVELOPPEUR.md)
+
+### **Stuck on Step 3?**
+Consult [SETUP_DEV.md - Troubleshooting](SETUP_DEV.md#troubleshooting-express)
+
+### **Stuck on Step 4?**
+The PR template guides you. Each checkbox corresponds to a documentation section.
+
+### **PR blocked by CI?**
+The `onboarding-guard` workflow detected that you're modifying code without updating documentation. This is normal! Check the right box in the PR template.
+
+---
+
+## ⚡ **CRITICAL REMINDERS**
+
+1. **MANDATORY ORDER**: 1→2→3→4 (each step prepares the next)
+2. **VALIDATION REQUIRED**: Use the checklist at each step
+3. **FIRST PR MANDATORY**: Add your name to this file
+4. **PR TEMPLATE**: Always check a box (or n/a with justification)
+5. **LIVING DOCUMENTATION**: Self-monitored system to guarantee quality
+6. **VERSIONING**: These instructions are for v0.3.2+. Future versions will include their own updated instructions.
+
+---
+
+## 🌍 **ENGLISH MIGRATION COMPLETED**
+
+### **What Changed in v0.3.2**
+- **Complete Interface Translation**: All user messages, charts, and UI elements are now in English
+- **Improved Classification**: Better archetype handling, removed non-Standard archetypes
+- **Source Attribution**: Fixed MTGO source classification issues
+- **Professional Experience**: Unified English interface for international use
+
+### **What Stayed the Same**
+- **All Functionality**: Complete feature parity with French version
+- **Real Data**: Still uses only real tournament data (no mock data)
+- **Pipeline Performance**: Same speed and reliability
+- **File Structure**: Analyses/ folder structure preserved
+
+---
+
+## 🔄 **ONBOARDING KIT EVOLUTION**
+
+**How this system evolves**:
+- Each new version (v0.3.3, v0.4.0, etc.) may have updated onboarding instructions
+- **Golden Rule**: Always use the instructions from the version you checked out
+- If no instructions in your version → go back to v0.3.2 which is guaranteed stable
+
+**Why this approach**:
+- ✅ Guarantees instructions match the code
+- ✅ Avoids version compatibility issues
+- ✅ Allows onboarding process evolution
+
+---
+
+## 🎯 **SUCCESS**
+
+**Congratulations!** If you followed these instructions, you now master:
+- ✅ Manalytics v0.3.2 → v1.0 product vision
+- ✅ Technical architecture and extension points
+- ✅ Operational development environment
+- ✅ Contribution workflow and governance
+- ✅ English interface and improved classification system
+
+**You're ready to contribute effectively to the project!**
+
+---
+
+*Instructions created on: July 13, 2025*
+*Baseline: v0.3.2*
+*Self-maintained onboarding system*

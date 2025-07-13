@@ -1,84 +1,105 @@
-# ✅ Checklist On-boarding - Validation Étape par Étape
+# ✅ Onboarding Checklist - Step-by-Step Validation
 
-> **Objectif** : Garantir que chaque nouveau développeur maîtrise parfaitement Manalytics
+> **Objective**: Ensure every new developer masters Manalytics perfectly
 
-## 🎯 **ÉTAPE 1 : Compréhension Projet** (15 min)
+## 🎯 **STEP 1: Project Understanding** (15 min)
 
-**📋 Avant de continuer, validez que vous savez répondre à :**
-- [ ] Quelle est la différence entre v0.3 et v1.0 ?
-- [ ] Pourquoi utilise-t-on du scraping multi-sources ?
-- [ ] Quels sont les 3 formats supportés ?
-- [ ] Quel est l'objectif des 9 visualisations ?
-- [ ] **🆕 Pourquoi différencier MTGO Challenge vs League ?**
-- [ ] **🆕 Comment accéder directement aux tournois depuis le dashboard ?**
+**📋 Before continuing, validate that you can answer:**
+- [ ] What's the difference between v0.3.2 and v1.0?
+- [ ] Why do we use multi-source scraping?
+- [ ] What are the 3 supported formats?
+- [ ] What's the purpose of the 9 visualizations?
+- [ ] **🆕 Why distinguish MTGO Challenge vs League?**
+- [ ] **🆕 How to access tournaments directly from the dashboard?**
+- [ ] **🆕 What changed in the English migration (v0.3.2)?**
+- [ ] **🆕 How does the improved archetype classification work?**
 
-**🔗 Lu** : [ROADMAP.md](ROADMAP.md) | **➡️ Suivant** : [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
-
----
-
-## 🏗️ **ÉTAPE 2 : Architecture Technique** (30 min)
-
-**📋 Avant de continuer, validez que vous savez répondre à :**
-- [ ] Comment les données passent de MTGO à l'analyseur ?
-- [ ] Où ajouter un nouveau scraper ?
-- [ ] Comment fonctionne le classifier d'archétypes ?
-- [ ] Quels sont les 4 modules principaux ?
-
-**🔗 Lu** : [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md) | **➡️ Suivant** : [SETUP_DEV.md](SETUP_DEV.md)
+**🔗 Read**: [ROADMAP.md](ROADMAP.md) | **➡️ Next**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
 
 ---
 
-## ⚙️ **ÉTAPE 3 : Setup Développement** (5 min)
+## 🏗️ **STEP 2: Technical Architecture** (30 min)
 
-**📋 Avant de continuer, validez que vous avez :**
-- [ ] Cloné le repo et checkout v0.3.1
-- [ ] Installé les dépendances Python
-- [ ] Installé les hooks pre-commit
-- [ ] Lancé avec succès un pipeline de test
-- [ ] Vu les 9 graphiques générés
-- [ ] **🆕 Testé les badges colorés des sources sous "Analyse complète"**
-- [ ] **🆕 Cliqué sur le lien "Tournois analysés" et testé les URLs**
-- [ ] **🆕 Vérifié la distinction MTGO Challenge vs League 5-0**
+**📋 Before continuing, validate that you can answer:**
+- [ ] How does data flow from MTGO to analyzer?
+- [ ] Where to add a new scraper?
+- [ ] How does the archetype classifier work?
+- [ ] What are the 4 main modules?
+- [ ] **🆕 Where are the English interface elements located?**
+- [ ] **🆕 How does the source attribution system work?**
 
-**🔗 Exécuté** : [SETUP_DEV.md](SETUP_DEV.md) | **➡️ Suivant** : Première PR
+**🔗 Read**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md) | **➡️ Next**: [SETUP_DEV.md](SETUP_DEV.md)
 
 ---
 
-## 🎯 **ÉTAPE 4 : Première Contribution** (Jour 1)
+## ⚙️ **STEP 3: Development Setup** (45 min)
 
-**📋 Avant de considérer l'onboarding terminé, validez que vous avez :**
-- [ ] Créé une branche feature
-- [ ] Modifié un fichier (ex: documentation)
-- [ ] Commité avec les hooks automatiques
-- [ ] Créé une PR avec le template
-- [ ] **Coché la case appropriée** dans le template PR
-- [ ] Reçu une review et mergé la PR
+**📋 Before continuing, validate that you successfully:**
+- [ ] Cloned the repo and checked out the right version ✅ (already done)
+- [ ] Installed Python dependencies
+- [ ] Installed pre-commit hooks
+- [ ] Successfully ran a test pipeline
+- [ ] **🆕 Verified the dashboard interface is in English**
+- [ ] **🆕 Confirmed the Analyses/ folder structure is created**
+- [ ] **🆕 Checked that archetype classification works correctly**
+- [ ] Saw the 9 graphs generated in the output folder
 
-**🔗 Suivi** : [Workflow dans SETUP_DEV.md](SETUP_DEV.md#workflow-développement)
-
----
-
-## 🏆 **ONBOARDING TERMINÉ** ✅
-
-**Félicitations !** Vous maîtrisez maintenant :
-- ✅ Vision produit et architecture
-- ✅ Environnement de développement
-- ✅ Workflow de contribution
-- ✅ Système de gouvernance documentaire
-
-**🎯 KPI Atteints** : Compréhension ≤ 2h • Premier run ≤ 15 min • Première PR Jour 1
+**🔗 Followed**: [SETUP_DEV.md](SETUP_DEV.md) | **➡️ Next**: First Contribution
 
 ---
 
-## 🆘 **Aide & Support**
+## 🎯 **STEP 4: First Contribution** (30 min)
 
-**Bloqué ?** Consultez dans l'ordre :
-1. [SETUP_DEV.md - Troubleshooting](SETUP_DEV.md#troubleshooting-express)
-2. [GUIDE_DEVELOPPEUR.md](GUIDE_DEVELOPPEUR.md) - Guide complet
-3. [ARCHITECTURE.md](ARCHITECTURE.md) - Architecture détaillée
+**📋 Your onboarding is complete when:**
+- [ ] Your branch is created
+- [ ] Your modification is committed
+- [ ] Your PR is created with template filled
+- [ ] Your PR is reviewed and merged
+- [ ] **🆕 Your name is added to the team list**
 
-**Template PR non respecté ?** Le [workflow CI](../.github/workflows/onboarding-guard.yml) bloquera automatiquement.
+**🔗 Followed**: [INSTRUCTIONS_NOUVELLE_EQUIPE.md](INSTRUCTIONS_NOUVELLE_EQUIPE.md) workflow
 
 ---
 
-*Dernière mise à jour : 13 juillet 2025* 
+## 📋 **VALIDATION COMPLETE**
+
+**✅ You now master:**
+- ✅ Manalytics v0.3.2 → v1.0 product vision
+- ✅ Technical architecture and extension points
+- ✅ Operational development environment
+- ✅ Contribution workflow and governance
+- ✅ **🆕 English interface and improved features**
+- ✅ **🆕 Enhanced archetype classification system**
+- ✅ **🆕 MTGO source attribution improvements**
+
+**🚀 You're ready to contribute effectively to the project!**
+
+---
+
+## 🚨 **TROUBLESHOOTING**
+
+### **Step 1-2: Reading Issues**
+- **Problem**: Documentation unclear
+- **Solution**: Re-read carefully, consult [GUIDE_DEVELOPPEUR.md](GUIDE_DEVELOPPEUR.md)
+
+### **Step 3: Setup Issues**
+- **Problem**: Dependencies or pipeline fails
+- **Solution**: Check [SETUP_DEV.md - Troubleshooting](SETUP_DEV.md#troubleshooting-express)
+
+### **Step 4: PR Issues**
+- **Problem**: PR blocked or template unclear
+- **Solution**: Each checkbox corresponds to a documentation section
+
+### **English Interface Issues**
+- **Problem**: Some elements still in French
+- **Solution**: Check if you're on the right branch (feature/english-migration or v0.3.2+)
+
+### **Archetype Classification Issues**
+- **Problem**: Unexpected archetype assignments
+- **Solution**: Check if non-Standard archetypes are correctly classified as "Others"
+
+---
+
+*Checklist created: July 13, 2025*
+*Version: v0.3.2*
+*Last updated: July 13, 2025*
