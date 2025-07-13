@@ -39,8 +39,9 @@ class BaseScraper:
 ### **Classifier** (`src/python/classifier/`)
 - **Rôle** : Identification archétypes depuis decklists
 - **Algo** : Matching cartes signature + fallback couleurs
-- **Base** : `MTGOFormatData/` (105+ archétypes Modern, 77+ Pioneer...)
+- **Base** : [MTGOFormatData](https://github.com/Badaro/MTGOFormatData) (105+ archétypes Modern, 77+ Pioneer...)
 - **Précision** : ~95% sur archétypes connus
+- **Source officielle** : Classification rules from Badaro's MTGOFormatData repository
 
 ```python
 # Classification automatique
@@ -75,7 +76,7 @@ classifier.classify_deck(decklist) → "Rakdos Midrange"
 
 ### **Nouveau Format** (ex: Explorer)
 1. Ajouter config `MTGOFormatData/Explorer/`
-2. Créer archétypes JSON `Explorer/Archetypes/`
+2. Créer archétypes JSON `Explorer/Archetypes/` dans [MTGOFormatData](https://github.com/Badaro/MTGOFormatData)
 3. Run pipeline → classification automatique
 
 ### **Nouvelle Source** (ex: MTGTop8)
@@ -104,6 +105,7 @@ classifier.classify_deck(decklist) → "Rakdos Midrange"
 
 ## 📦 Dependencies Principales
 
+### **Core Libraries**
 ```txt
 pandas           # Data manipulation
 plotly           # Interactive charts
@@ -111,6 +113,11 @@ requests         # HTTP scraping
 beautifulsoup4   # HTML parsing
 pydantic         # Data validation
 ```
+
+### **Essential Data Sources**
+- **[MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache)** : Raw tournament data (Jiliac)
+- **[MTGOFormatData](https://github.com/Badaro/MTGOFormatData)** : Archetype classification rules (Badaro)
+- **Real Data Policy** : No mock data allowed, enforced via pre-commit hooks
 
 ---
 

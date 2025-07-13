@@ -98,8 +98,13 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 ### **Data Processing**
 - **Multi-format Support**: Standard, Modern, Legacy
 - **Real Tournament Data**: MTGODecklistCache integration
-- **Intelligent Classification**: Advanced archetype detection
+- **Intelligent Classification**: Advanced archetype detection using [MTGOFormatData](https://github.com/Badaro/MTGOFormatData)
 - **Performance Optimized**: Efficient data pipeline
+
+### **Essential Dependencies**
+- **[MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache)**: Raw tournament data source
+- **[MTGOFormatData](https://github.com/Badaro/MTGOFormatData)**: Official archetype classification rules and card database
+- **Real Data Only**: Strict policy enforced via pre-commit hooks
 
 ### **Quality Assurance**
 - **Pre-commit Hooks**: Automated code quality (black, flake8, isort)
