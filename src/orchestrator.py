@@ -1,6 +1,6 @@
 """
-Orchestrator Manalytics - Phase 3 (Visualisations uniquement)
-Pipeline simplifié avec génération automatique des graphiques
+Manalytics Orchestrator - Phase 3 (Visualizations only)
+Simplified pipeline with automatic chart generation
 """
 import asyncio
 import glob
@@ -17,35 +17,35 @@ from src.python.visualizations.metagame_charts import MetagameChartsGenerator
 
 
 class ManalyticsOrchestrator:
-    """Orchestrateur Phase 3 - Visualisations uniquement"""
+    """Phase 3 Orchestrator - Visualizations only"""
 
     def __init__(self):
         self.logger = logging.getLogger(__name__)
 
     async def run_pipeline(self, format: str, start_date: str, end_date: str):
-        """Pipeline Phase 3 avec génération automatique des visualisations"""
+        """Phase 3 pipeline with automatic visualization generation"""
         try:
-            # Créer le dossier d'analyse daté dans Analyses/
+            # Create dated analysis folder in Analyses/
             analysis_folder = f"{format.lower()}_analysis_{start_date}_{end_date}"
             analyses_dir = Path("Analyses")
             analyses_dir.mkdir(exist_ok=True)
             output_dir = analyses_dir / analysis_folder
             output_dir.mkdir(exist_ok=True)
 
-            self.logger.info(f"🚀 Démarrage du pipeline complet pour {format}")
-            self.logger.info(f"📁 Dossier d'analyse: {analysis_folder}")
+            self.logger.info(f"🚀 Starting complete pipeline for {format}")
+            self.logger.info(f"📁 Analysis folder: {analysis_folder}")
 
-            # Stocker les paramètres pour le dashboard
+            # Store parameters for dashboard
             self.format = format
             self.start_date = start_date
             self.end_date = end_date
 
-            # 1. Génération des visualisations
-            self.logger.info("🎨 Génération des visualisations...")
+            # 1. Generate visualizations
+            self.logger.info("🎨 Generating visualizations...")
             visualization_report = await self.generate_visualizations(str(output_dir))
 
-            # 2. Résumé final
-            self.logger.info(f"✅ Pipeline terminé avec succès dans {analysis_folder}!")
+            # 2. Final summary
+            self.logger.info(f"✅ Pipeline completed successfully in {analysis_folder}!")
 
             return {
                 "analysis_folder": analysis_folder,
@@ -57,54 +57,52 @@ class ManalyticsOrchestrator:
             }
 
         except Exception as e:
-            self.logger.error(f"❌ Erreur pipeline: {e}")
+            self.logger.error(f"❌ Pipeline error: {e}")
             raise
 
     async def generate_visualizations(self, output_dir: str):
-        """Génère toutes les visualisations avec les vraies données de tournois"""
+        """Generate all visualizations with real tournament data"""
         try:
-            # Créer le dossier visualizations
+            # Create visualizations folder
             viz_dir = Path(output_dir) / "visualizations"
             viz_dir.mkdir(exist_ok=True)
 
-            # Charger les vraies données de tournois depuis le cache
-            self.logger.info(
-                "🔍 Chargement des données de tournois depuis MTGODecklistCache..."
-            )
+            # Load real tournament data from cache
+            self.logger.info("🔍 Loading tournament data from MTGODecklistCache...")
             df = self._load_real_tournament_data()
 
-            # 1. Matrice de matchups
-            self.logger.info("📊 Génération de la matrice de matchups...")
+            # 1. Matchup matrix
+            self.logger.info("📊 Generating matchup matrix...")
             matrix_generator = MatchupMatrixGenerator()
             matrix_report = matrix_generator.generate_full_report(str(viz_dir), df)
 
-            # 2. Graphiques de métagame
-            self.logger.info("📈 Génération des graphiques de métagame...")
+            # 2. Metagame charts
+            self.logger.info("📈 Generating metagame charts...")
             charts_generator = MetagameChartsGenerator()
 
-            # Générer tous les graphiques
+            # Generate all charts
             charts_result = charts_generator.generate_all_charts(df, str(viz_dir))
             charts = charts_result["charts"]
 
-            # Sauvegarder les graphiques individuels
+            # Save individual charts
             chart_files = []
             for chart_name, fig in charts.items():
                 chart_file = viz_dir / f"{chart_name}.html"
                 fig.write_html(str(chart_file))
                 chart_files.append(str(chart_file))
-                self.logger.info(f"Graphique sauvegardé: {chart_file}")
+                self.logger.info(f"Chart saved: {chart_file}")
 
-            # 3. Les données sont déjà exportées par generate_all_charts
-            self.logger.info("💾 Données exportées automatiquement...")
+            # 3. Data is already exported by generate_all_charts
+            self.logger.info("💾 Data exported automatically...")
 
-            # 4. Tableau de bord complet
-            self.logger.info("🎯 Génération du tableau de bord...")
+            # 4. Complete dashboard
+            self.logger.info("🎯 Generating dashboard...")
             dashboard_path = self.generate_dashboard(output_dir, df)
 
-            # 5. Résumé
+            # 5. Summary
             total_files = len(chart_files) + len(matrix_report.get("files", [])) + 1
             self.logger.info(
-                f"✅ {total_files} visualisations générées dans {output_dir}/"
+                f"✅ {total_files} visualizations generated in {output_dir}/"
             )
 
             return {
@@ -115,27 +113,27 @@ class ManalyticsOrchestrator:
             }
 
         except Exception as e:
-            self.logger.error(f"❌ Erreur génération visualisations: {e}")
+            self.logger.error(f"❌ Error generating visualizations: {e}")
             raise
 
     def _load_real_tournament_data(self):
-        """Charge les données de tournois réels depuis MTGODecklistCache avec cache intelligent"""
-        print(f"\n🔍 Recherche des tournois {self.format.upper()}...")
+        """Load real tournament data from MTGODecklistCache with intelligent caching"""
+        print(f"\n🔍 Searching for {self.format.upper()} tournaments...")
 
-        # Patterns de recherche dynamiques (comme l'ancien système)
+        # Dynamic search patterns (like the old system)
         patterns = self._generate_search_patterns()
 
         tournament_files = []
         for pattern in patterns:
             tournament_files.extend(glob.glob(pattern))
 
-        print(f"📁 Fichiers trouvés: {len(tournament_files)}")
+        print(f"📁 Files found: {len(tournament_files)}")
 
         if not tournament_files:
-            print(f"❌ Aucun fichier de tournoi trouvé pour {self.format}")
+            print(f"❌ No tournament files found for {self.format}")
             return pd.DataFrame()
 
-        # Charger et filtrer les tournois avec cache intelligent
+        # Load and filter tournaments with intelligent caching
         all_decks = []
         tournaments_loaded = 0
 
@@ -147,37 +145,37 @@ class ManalyticsOrchestrator:
                     tournaments_loaded += 1
 
             except Exception as e:
-                self.logger.warning(f"Erreur lecture fichier {file_path}: {e}")
+                self.logger.warning(f"Error reading file {file_path}: {e}")
                 continue
 
         if not all_decks:
-            print(f"❌ Aucun deck trouvé pour {self.format} dans la période spécifiée")
+            print(f"❌ No decks found for {self.format} in the specified period")
             return pd.DataFrame()
 
-        # Créer le DataFrame avec la même structure que l'ancien système
+        # Create DataFrame with the same structure as the old system
         df = pd.DataFrame(all_decks)
         df["tournament_date"] = pd.to_datetime(df["tournament_date"])
 
-        print(f"\n📊 DONNÉES CHARGÉES:")
-        print(f"🏆 Tournois: {tournaments_loaded}")
+        print(f"\n📊 DATA LOADED:")
+        print(f"🏆 Tournaments: {tournaments_loaded}")
         print(f"🎯 Decks: {len(df)}")
         print(
-            f"📅 Période réelle: {df['tournament_date'].min().strftime('%Y-%m-%d')} à {df['tournament_date'].max().strftime('%Y-%m-%d')}"
+            f"📅 Actual period: {df['tournament_date'].min().strftime('%Y-%m-%d')} to {df['tournament_date'].max().strftime('%Y-%m-%d')}"
         )
-        print(f"🎲 Archétypes: {df['archetype'].nunique()}")
+        print(f"🎲 Archetypes: {df['archetype'].nunique()}")
         print(f"🌐 Sources: {', '.join(df['tournament_source'].unique())}")
 
         self.logger.info(
-            f"✅ {len(df)} decks chargés depuis {df['tournament_source'].nunique()} sources"
+            f"✅ {len(df)} decks loaded from {df['tournament_source'].nunique()} sources"
         )
 
         return df
 
     def _generate_search_patterns(self):
-        """Générer les patterns de recherche pour les fichiers de tournois (comme l'ancien système)"""
+        """Generate search patterns for tournament files (like the old system)"""
         patterns = []
 
-        # Générer les patterns pour chaque année/mois dans la période
+        # Generate patterns for each year/month in the period
         current_date = datetime.strptime(self.start_date, "%Y-%m-%d").date()
         end_date = datetime.strptime(self.end_date, "%Y-%m-%d").date()
 
@@ -185,7 +183,7 @@ class ManalyticsOrchestrator:
             year = current_date.year
             month = f"{current_date.month:02d}"
 
-            # Patterns pour différentes sources et structures (adaptés à la vraie structure avec jours)
+            # Patterns for different sources and structures (adapted to real structure with days)
             base_patterns = [
                 f"MTGODecklistCache/Tournaments/*/{year}/{month}/*/*{self.format.lower()}*.json",
                 f"MTGODecklistCache/Tournaments/*/{year}/{month}/*/{self.format.lower()}*.json",
@@ -196,7 +194,7 @@ class ManalyticsOrchestrator:
             ]
             patterns.extend(base_patterns)
 
-            # Passer au mois suivant
+            # Move to next month
             if current_date.month == 12:
                 current_date = current_date.replace(year=current_date.year + 1, month=1)
             else:
@@ -205,7 +203,7 @@ class ManalyticsOrchestrator:
         return patterns
 
     def _process_tournament_file(self, file_path):
-        """Traiter un fichier de tournoi individual (comme l'ancien système)"""
+        """Process individual tournament file (like the old system)"""
         with open(file_path, "r", encoding="utf-8") as f:
             tournament_data = json.load(f)
 
@@ -723,7 +721,7 @@ class ManalyticsOrchestrator:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manalytics - Analyse {format_name} ({start_date} à {end_date})</title>
+    <title>Manalytics - {format_name} Analysis ({start_date} to {end_date})</title>
     <style>
         :root {{
             --primary: #762a83; --secondary: #1b7837; --accent: #4ECDC4;
@@ -781,9 +779,9 @@ class ManalyticsOrchestrator:
 <body>
     <div class="header">
         <h1>🎯 Manalytics</h1>
-        <p>Analyse complète du métagame {format_name} • {start_date} à {end_date}</p>
+        <p>Complete analysis of {format_name} metagame • {start_date} to {end_date}</p>
         <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem;">
-            <span style="font-size: 0.9rem; color: white;">Sources des données :</span>
+            <span style="font-size: 0.9rem; color: white;">Data sources:</span>
             {source_badges}
         </div>
     </div>
@@ -792,27 +790,27 @@ class ManalyticsOrchestrator:
         <div class="stats-grid">
             <div class="stat-card clickable" onclick="window.open('{format_name.lower()}_{start_date}_{end_date}_tournaments_list.html', '_blank')">
                 <div class="stat-number">{total_tournaments}</div>
-                <div class="stat-label">Tournois analysés</div>
-                <div class="stat-hint">🔍 Cliquez pour voir la liste</div>
+                <div class="stat-label">Tournaments analyzed</div>
+                <div class="stat-hint">🔍 Click to view list</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">{total_players}</div>
-                <div class="stat-label">Joueurs</div>
+                <div class="stat-label">Players</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">{total_matches}</div>
-                <div class="stat-label">Matchs joués</div>
+                <div class="stat-label">Matches played</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">{len(archetypes)}</div>
-                <div class="stat-label">Archétypes identifiés</div>
+                <div class="stat-label">Archetypes identified</div>
             </div>
         </div>
 
         <div class="viz-grid">
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">🥧 Répartition du Métagame</h3>
+                    <h3 class="viz-title">🥧 Metagame Distribution</h3>
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/metagame_pie.html" class="viz-iframe"></iframe>
@@ -821,7 +819,7 @@ class ManalyticsOrchestrator:
 
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">📊 Archétypes Principaux</h3>
+                    <h3 class="viz-title">📊 Main Archetypes</h3>
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/main_archetypes_bar.html" class="viz-iframe"></iframe>
@@ -830,7 +828,7 @@ class ManalyticsOrchestrator:
 
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">🔥 Matrice de Matchups</h3>
+                    <h3 class="viz-title">🔥 Matchup Matrix</h3>
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/matchup_matrix.html" class="viz-iframe"></iframe>
@@ -839,7 +837,7 @@ class ManalyticsOrchestrator:
 
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">🎯 Winrates avec Intervalles de Confiance</h3>
+                    <h3 class="viz-title">🎯 Winrates with Confidence Intervals</h3>
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/winrate_confidence.html" class="viz-iframe"></iframe>
@@ -848,7 +846,7 @@ class ManalyticsOrchestrator:
 
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">🏆 Classification par Tiers</h3>
+                    <h3 class="viz-title">🏆 Tier Classification</h3>
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/tiers_scatter.html" class="viz-iframe"></iframe>
@@ -857,7 +855,7 @@ class ManalyticsOrchestrator:
 
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">💫 Winrate vs Présence</h3>
+                    <h3 class="viz-title">💫 Winrate vs Presence</h3>
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/bubble_winrate_presence.html" class="viz-iframe"></iframe>
@@ -875,7 +873,7 @@ class ManalyticsOrchestrator:
 
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">📈 Évolution Temporelle</h3>
+                    <h3 class="viz-title">📈 Temporal Evolution</h3>
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/archetype_evolution.html" class="viz-iframe"></iframe>
@@ -884,7 +882,7 @@ class ManalyticsOrchestrator:
 
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">🔍 Sources de Données</h3>
+                    <h3 class="viz-title">🔍 Data Sources</h3>
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/data_sources_pie.html" class="viz-iframe"></iframe>
@@ -894,8 +892,8 @@ class ManalyticsOrchestrator:
     </div>
 
     <div class="footer">
-        <p>🎯 Généré le {datetime.now().strftime('%d/%m/%Y à %H:%M')} • Données 100% réelles • Pipeline automatique Manalytics</p>
-        <p>📊 Tous les graphiques sont interactifs • Cliquez et explorez les données</p>
+        <p>🎯 Generated on {datetime.now().strftime('%Y-%m-%d at %H:%M')} • 100% real data • Automated Manalytics pipeline</p>
+        <p>📊 All charts are interactive • Click and explore the data</p>
     </div>
 </body>
 </html>
@@ -919,9 +917,9 @@ class ManalyticsOrchestrator:
             raise
 
     def generate_tournaments_list(self, output_dir: str, df: pd.DataFrame):
-        """Génère la liste des tournois triée par source et date"""
+        """Generate tournament list sorted by source and date"""
         try:
-            # Préparer les données des tournois
+            # Prepare tournament data
             tournaments_data = (
                 df.groupby(["tournament_source", "tournament_date", "tournament_id"])
                 .size()
@@ -931,19 +929,19 @@ class ManalyticsOrchestrator:
                 ["tournament_source", "tournament_date"]
             )
 
-            # Utiliser les paramètres du pipeline
+            # Use pipeline parameters
             start_date = getattr(self, "start_date", "2025-07-02")
             end_date = getattr(self, "end_date", "2025-07-12")
             format_name = getattr(self, "format", "Standard")
 
-            # Créer le HTML pour la liste des tournois
+            # Create HTML for tournament list
             tournaments_html = f"""
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des Tournois - {format_name} ({start_date} à {end_date})</title>
+    <title>Tournament List - {format_name} ({start_date} to {end_date})</title>
     <style>
         :root {{
             --primary: #762a83; --secondary: #1b7837; --accent: #4ECDC4;
@@ -1058,21 +1056,21 @@ class ManalyticsOrchestrator:
 </head>
 <body>
     <div class="header">
-        <h1>📋 Liste des Tournois</h1>
-        <p>Analyse {format_name} • {start_date} à {end_date}</p>
+        <h1>📋 Tournament List</h1>
+        <p>Analysis {format_name} • {start_date} to {end_date}</p>
     </div>
 
      <div style="display: flex; align-items: center; margin-bottom: 2rem;">
-         <button class="back-button" onclick="window.location.href='{format_name.lower()}_{start_date}_{end_date}.html'">← Retour au Dashboard</button>
-         <button class="export-button" onclick="exportToCSV()">📥 Exporter en CSV (en travaux)</button>
+         <button class="back-button" onclick="window.location.href='{format_name.lower()}_{start_date}_{end_date}.html'">← Back to Dashboard</button>
+         <button class="export-button" onclick="exportToCSV()">📥 Export to CSV (in progress)</button>
      </div>
 
     <div class="stats-summary">
-        <h3>Résumé des Sources</h3>
+        <h3>Source Summary</h3>
         <div class="stats-grid">
 """
 
-            # Ajouter les statistiques par source
+            # Add statistics by source
             source_stats = (
                 tournaments_data.groupby("tournament_source")
                 .agg({"tournament_id": "count", "deck_count": "sum"})
@@ -1101,24 +1099,24 @@ class ManalyticsOrchestrator:
                 <tr>
                     <th>Source</th>
                     <th>Date</th>
-                    <th>Tournoi</th>
+                    <th>Tournament</th>
                     <th>Decks</th>
                 </tr>
             </thead>
             <tbody>
 """
 
-            # Ajouter les lignes des tournois
+            # Add tournament rows
             for _, row in tournaments_data.iterrows():
-                # Créer une classe CSS sûre pour le badge
+                # Create safe CSS class for badge
                 source_name = row["tournament_source"].lower()
                 source_class = f"source-{source_name.replace('.', '').replace(' ', '-').replace('(', '').replace(')', '').replace('-5-0', '-5-0')}"
-                date_formatted = row["tournament_date"].strftime("%d/%m/%Y")
+                date_formatted = row["tournament_date"].strftime("%Y-%m-%d")
 
-                # Créer le lien cliquable pour le tournoi
+                # Create clickable link for tournament
                 tournament_url = row["tournament_id"]
                 if tournament_url.startswith("http"):
-                    tournament_link = f'<a href="{tournament_url}" target="_blank" class="tournament-link">🔗 Voir le tournoi <span class="external-icon">↗</span></a>'
+                    tournament_link = f'<a href="{tournament_url}" target="_blank" class="tournament-link">🔗 View tournament <span class="external-icon">↗</span></a>'
                 else:
                     tournament_link = tournament_url
 
@@ -1137,43 +1135,43 @@ class ManalyticsOrchestrator:
     </div>
 
          <div style="text-align: center; margin-top: 2rem; padding: 1rem; color: #666;">
-         <p>🎯 Données 100% réelles • Triées par source puis par date</p>
+         <p>🎯 100% real data • Sorted by source then by date</p>
      </div>
 
      <script>
          function exportToCSV() {{
-             // Récupérer les données du tableau
+             // Get table data
              const table = document.querySelector('.tournaments-table');
              let csv = [];
 
-             // En-têtes
+             // Headers
              const headers = [];
              table.querySelectorAll('thead th').forEach(th => {{
                  headers.push(th.textContent.trim());
              }});
              csv.push(headers.join(','));
 
-             // Données
+             // Data
              table.querySelectorAll('tbody tr').forEach(tr => {{
                  const row = [];
                  tr.querySelectorAll('td').forEach((td, index) => {{
                      if (index === 0) {{
-                         // Source - extraire le texte du badge
+                         // Source - extract badge text
                          const badge = td.querySelector('.source-badge');
                          row.push(badge ? badge.textContent.trim() : td.textContent.trim());
                      }} else if (index === 2) {{
-                         // Tournoi - extraire l'URL du lien
+                         // Tournament - extract URL from link
                          const link = td.querySelector('a');
                          row.push(link ? link.href : td.textContent.trim());
                      }} else {{
-                         // Autres colonnes - texte brut
+                         // Other columns - plain text
                          row.push(td.textContent.trim());
                      }}
                  }});
                  csv.push(row.join(','));
              }});
 
-             // Créer et télécharger le fichier
+             // Create and download file
              const csvContent = csv.join('\\n');
              const blob = new Blob([csvContent], {{ type: 'text/csv;charset=utf-8;' }});
              const link = document.createElement('a');
@@ -1181,7 +1179,7 @@ class ManalyticsOrchestrator:
              if (link.download !== undefined) {{
                  const url = URL.createObjectURL(blob);
                  link.setAttribute('href', url);
-                 link.setAttribute('download', 'tournois_{format_name.lower()}_{start_date}_{end_date}.csv');
+                 link.setAttribute('download', 'tournaments_{format_name.lower()}_{start_date}_{end_date}.csv');
                  link.style.visibility = 'hidden';
                  document.body.appendChild(link);
                  link.click();
@@ -1193,16 +1191,16 @@ class ManalyticsOrchestrator:
  </html>
 """
 
-            # Sauvegarder le fichier avec préfixe
+            # Save file with prefix
             prefix = f"{format_name.lower()}_{start_date}_{end_date}"
             tournaments_filename = f"{prefix}_tournaments_list.html"
             tournaments_path = Path(output_dir) / tournaments_filename
             with open(tournaments_path, "w", encoding="utf-8") as f:
                 f.write(tournaments_html)
 
-            self.logger.info(f"✅ Liste des tournois créée: {tournaments_filename}")
+            self.logger.info(f"✅ Tournament list created: {tournaments_filename}")
             return str(tournaments_path)
 
         except Exception as e:
-            self.logger.error(f"❌ Erreur génération liste tournois: {e}")
+            self.logger.error(f"❌ Error generating tournament list: {e}")
             raise
