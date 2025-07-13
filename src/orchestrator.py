@@ -12,6 +12,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.python.classifier.mtgo_classifier import MTGOClassifier
 from src.python.visualizations.matchup_matrix import MatchupMatrixGenerator
 from src.python.visualizations.metagame_charts import MetagameChartsGenerator
 
@@ -21,6 +22,9 @@ class ManalyticsOrchestrator:
 
     def __init__(self):
         self.logger = logging.getLogger(__name__)
+        # Initialize MTGO classifier
+        self.mtgo_classifier = MTGOClassifier()
+        self.logger.info("MTGO Classifier initialized with complete archetype database")
 
     async def run_pipeline(self, format: str, start_date: str, end_date: str):
         """Phase 3 pipeline with automatic visualization generation"""
@@ -372,133 +376,74 @@ class ManalyticsOrchestrator:
             return "unknown"
 
     def _classify_archetype(self, mainboard):
-        """Detailed archetype classification based on key cards"""
-        # Convert to list of card names
-        card_names = []
-        for card in mainboard:
-            card_names.extend([card.get("CardName", "")] * card.get("Count", 0))
+        """Classify archetype using MTGOFormatData engine"""
+        try:
+            # Use MTGO classifier for precise archetype classification
+            archetype = self.mtgo_classifier.classify_deck(mainboard, [], self.format)
 
-        card_names_str = " ".join(card_names).lower()
+            # Log classification for debugging
+            if archetype and archetype != "Unknown":
+                self.logger.debug(f"Classified as: {archetype}")
+            else:
+                self.logger.debug(
+                    f"Could not classify deck, using color-based fallback"
+                )
 
-        # Detailed Standard classification
-        # Aggro
-        if any(
-            card in card_names_str
-            for card in [
-                "lightning bolt",
-                "goblin guide",
-                "monastery swiftspear",
-                "torch the tower",
-            ]
-        ):
-            return "Mono Red Aggro"
-        elif any(
-            card in card_names_str
-            for card in ["elite spellbinder", "luminarch aspirant", "adeline"]
-        ):
-            return "Mono White Aggro"
-        elif any(
-            card in card_names_str
-            for card in ["ragavan", "dragon rage channeler", "sprite dragon"]
-        ):
-            return "Izzet Aggro"
+            return archetype
 
-        # Control
-        elif any(
-            card in card_names_str
-            for card in [
-                "teferi hero",
-                "teferi time raveler",
-                "dovin's veto",
-                "narset parter",
-            ]
-        ):
-            return "Jeskai Control"
-        elif any(
-            card in card_names_str
-            for card in ["counterspell", "wrath of god", "supreme verdict", "teferi"]
-        ):
-            return "Azorius Control"
-        elif any(
-            card in card_names_str for card in ["damnation", "thoughtseize", "liliana"]
-        ):
-            return "Dimir Control"
+        except Exception as e:
+            self.logger.error(f"Error in MTGO classification: {e}")
+            # Fallback to color-based classification
+            return self._classify_by_colors_fallback(mainboard)
 
-        # Midrange
-        elif any(
-            card in card_names_str
-            for card in ["tarmogoyf", "bloodbraid elf", "wrenn and six"]
-        ):
-            return "Jund Midrange"
-        elif any(
-            card in card_names_str
-            for card in ["siege rhino", "lingering souls", "path to exile"]
-        ):
-            return "Abzan Midrange"
-        elif any(
-            card in card_names_str
-            for card in ["thoughtseize", "fatal push", "liliana of the veil"]
-        ):
-            return "Grixis Midrange"
+    def _classify_by_colors_fallback(self, mainboard):
+        """Fallback color-based classification if MTGO classifier fails"""
+        try:
+            # Convert to list of card names
+            card_names = []
+            for card in mainboard:
+                card_names.extend([card.get("CardName", "")] * card.get("Count", 0))
 
-        # Ramp
-        elif any(
-            card in card_names_str
-            for card in [
-                "overlord of the hauntwoods",
-                "beza the bounding spring",
-                "leyline binding",
-            ]
-        ):
-            return "Bant Ramp"
-        elif any(
-            card in card_names_str
-            for card in ["primeval titan", "hour of promise", "azusa"]
-        ):
-            return "Green Ramp"
+            # Color-based classification
+            colors = self._detect_colors(card_names)
 
-        # NOTE: Removed non-Standard archetypes (Storm, Splinter Twin, Death Shadow, Burn, Affinity, Tron, etc.)
-        # These decks will be classified as "Others" since they don't exist in Standard format
+            # CRITICAL RULE: Generic monocolor archetypes = "Others"
+            if len(colors) == 1:
+                return "Others"
+            elif len(colors) == 2:
+                color_pairs = {
+                    frozenset(["W", "U"]): "Azorius",
+                    frozenset(["W", "B"]): "Orzhov",
+                    frozenset(["W", "R"]): "Boros",
+                    frozenset(["W", "G"]): "Selesnya",
+                    frozenset(["U", "B"]): "Dimir",
+                    frozenset(["U", "R"]): "Izzet",
+                    frozenset(["U", "G"]): "Simic",
+                    frozenset(["B", "R"]): "Rakdos",
+                    frozenset(["B", "G"]): "Golgari",
+                    frozenset(["R", "G"]): "Gruul",
+                }
+                return f"{color_pairs.get(frozenset(colors), 'Multicolor')} Deck"
+            elif len(colors) == 3:
+                color_triples = {
+                    frozenset(["W", "U", "B"]): "Esper",
+                    frozenset(["W", "U", "R"]): "Jeskai",
+                    frozenset(["W", "U", "G"]): "Bant",
+                    frozenset(["W", "B", "R"]): "Mardu",
+                    frozenset(["W", "B", "G"]): "Abzan",
+                    frozenset(["W", "R", "G"]): "Naya",
+                    frozenset(["U", "B", "R"]): "Grixis",
+                    frozenset(["U", "B", "G"]): "Sultai",
+                    frozenset(["U", "R", "G"]): "Temur",
+                    frozenset(["B", "R", "G"]): "Jund",
+                }
+                return f"{color_triples.get(frozenset(colors), 'Three-Color')} Deck"
+            else:
+                return "Others"
 
-        # Color-based classification if no specific archetype
-        colors = self._detect_colors(card_names)
-
-        # CRITICAL RULE: Generic monocolor archetypes = "Others"
-        if len(colors) == 1:
-            # In Standard: Mono Blue = "Others"
-            # In Modern: Mono Red = "Others"
-            # All other monocolor also = "Others"
+        except Exception as e:
+            self.logger.error(f"Error in color-based classification: {e}")
             return "Others"
-        elif len(colors) == 2:
-            color_pairs = {
-                frozenset(["W", "U"]): "Azorius",
-                frozenset(["W", "B"]): "Orzhov",
-                frozenset(["W", "R"]): "Boros",
-                frozenset(["W", "G"]): "Selesnya",
-                frozenset(["U", "B"]): "Dimir",
-                frozenset(["U", "R"]): "Izzet",
-                frozenset(["U", "G"]): "Simic",
-                frozenset(["B", "R"]): "Rakdos",
-                frozenset(["B", "G"]): "Golgari",
-                frozenset(["R", "G"]): "Gruul",
-            }
-            return f"{color_pairs.get(frozenset(colors), 'Multicolor')} Deck"
-        elif len(colors) == 3:
-            color_triples = {
-                frozenset(["W", "U", "B"]): "Esper",
-                frozenset(["W", "U", "R"]): "Jeskai",
-                frozenset(["W", "U", "G"]): "Bant",
-                frozenset(["W", "B", "R"]): "Mardu",
-                frozenset(["W", "B", "G"]): "Abzan",
-                frozenset(["W", "R", "G"]): "Naya",
-                frozenset(["U", "B", "R"]): "Grixis",
-                frozenset(["U", "B", "G"]): "Sultai",
-                frozenset(["U", "R", "G"]): "Temur",
-                frozenset(["B", "R", "G"]): "Jund",
-            }
-            return f"{color_triples.get(frozenset(colors), 'Three-Color')} Deck"
-        else:
-            return "Autres"
 
     def _detect_colors(self, card_names):
         """Detect deck colors based on card names"""
