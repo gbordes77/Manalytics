@@ -19,4 +19,4 @@ jobs:
       - name: Fail if code changes but docs untouched
         if: steps.diff.outputs.code != '' && steps.diff.outputs.docs == ''
         run: |
-          echo "::error::Code modifié sans update du kit d'on-boarding." && exit 1 
+          echo "::error::Code modifié sans update du kit d'on-boarding." && exit 1

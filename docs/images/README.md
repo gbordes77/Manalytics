@@ -13,4 +13,4 @@ Le diagramme ci-dessus illustre le flow complet du pipeline Manalytics avec :
 
 ---
 
-*Diagrammes générés avec Mermaid • Utilisés dans [ARCHITECTURE_QUICKREAD.md](../ARCHITECTURE_QUICKREAD.md)* 
+*Diagrammes générés avec Mermaid • Utilisés dans [ARCHITECTURE_QUICKREAD.md](../ARCHITECTURE_QUICKREAD.md)*

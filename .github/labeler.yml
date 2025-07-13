@@ -3,4 +3,4 @@ needs-onboarding-update:
       - any-glob-to-any-file: 'src/**'
   - not:
       changed-files:
-        - any-glob-to-any-file: '{docs/**,README.md}' 
+        - any-glob-to-any-file: '{docs/**,README.md}'
