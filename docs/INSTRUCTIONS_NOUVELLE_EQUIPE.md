@@ -120,6 +120,7 @@ Le système d'onboarding est **auto-surveillé**. Toute modification de code san
 
 *Développeurs ayant complété avec succès l'onboarding Manalytics v0.3.1 :*
 
+- Claude Sonnet 4 (AI Assistant) - onboarding terminé le 2025-07-13
 - [Votre nom ici après votre première PR]
 
 ---
@@ -177,6 +178,6 @@ Le workflow `onboarding-guard` a détecté que vous modifiez du code sans mettre
 
 ---
 
-*Instructions créées le : 13 juillet 2025*  
-*Baseline : v0.3.1*  
-*Système d'onboarding auto-maintenu* 
+*Instructions créées le : 13 juillet 2025*
+*Baseline : v0.3.1*
+*Système d'onboarding auto-maintenu*
