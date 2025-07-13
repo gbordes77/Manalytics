@@ -909,7 +909,7 @@ class ManalyticsOrchestrator:
             with open(dashboard_path, "w", encoding="utf-8") as f:
                 f.write(html_template)
 
-            self.logger.info(f"✅ Dashboard complet créé: {dashboard_path}")
+            self.logger.info(f"✅ Complete dashboard created: {dashboard_path}")
             return str(dashboard_path)
 
         except Exception as e:

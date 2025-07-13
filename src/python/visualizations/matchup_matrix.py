@@ -254,7 +254,7 @@ class MatchupMatrixGenerator:
         json_path = output_path / "matchup_matrix.json"
         matchups_df.to_json(json_path, orient='records', indent=2)
         
-        self.logger.info(f"Données exportées: {csv_path}, {json_path}")
+        self.logger.info(f"Data exported: {csv_path}, {json_path}")
         return csv_path, json_path
     
     def generate_full_report(self, output_dir: str = "analysis_output", df: pd.DataFrame = None) -> Dict:

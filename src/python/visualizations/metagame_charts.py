@@ -797,7 +797,7 @@ class MetagameChartsGenerator:
         top_performers.to_csv(top_csv, index=False, encoding='utf-8')
         top_performers.to_json(top_json, orient='records', indent=2)
         
-        self.logger.info(f"Données exportées: {stats_csv}, {stats_json}, {top_csv}, {top_json}")
+        self.logger.info(f"Data exported: {stats_csv}, {stats_json}, {top_csv}, {top_json}")
         
         return {
             'archetype_stats': {'csv': str(stats_csv), 'json': str(stats_json)},
