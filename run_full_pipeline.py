@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script pour lancer le pipeline complet avec visualisations intégrées
+Script to run the complete pipeline with integrated visualizations
 """
 
 import argparse
@@ -11,14 +11,14 @@ import sys
 import webbrowser
 from datetime import datetime, timedelta
 
-# Ajouter le répertoire src au path
+# Add src directory to path
 sys.path.append("src")
 
 from src.orchestrator import ManalyticsOrchestrator
 
 
 def setup_logging():
-    """Configure le logging"""
+    """Configure logging"""
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -27,57 +27,57 @@ def setup_logging():
 
 
 def parse_arguments():
-    """Parse les arguments de ligne de commande"""
-    parser = argparse.ArgumentParser(description="Pipeline complet Manalytics")
+    """Parse command line arguments"""
+    parser = argparse.ArgumentParser(description="Manalytics complete pipeline")
     parser.add_argument(
         "--format",
         default="Standard",
         choices=["Standard", "Modern", "Legacy", "Pioneer", "Pauper"],
-        help="Format de tournoi à analyser",
+        help="Tournament format to analyze",
     )
     parser.add_argument(
-        "--start-date", default="2025-07-02", help="Date de début (YYYY-MM-DD)"
+        "--start-date", default="2025-07-02", help="Start date (YYYY-MM-DD)"
     )
     parser.add_argument(
-        "--end-date", default="2025-07-12", help="Date de fin (YYYY-MM-DD)"
+        "--end-date", default="2025-07-12", help="End date (YYYY-MM-DD)"
     )
     return parser.parse_args()
 
 
 async def main():
-    """Lance le pipeline complet"""
+    """Run the complete pipeline"""
     setup_logging()
     logger = logging.getLogger(__name__)
 
     try:
-        logger.info("🚀 DÉMARRAGE DU PIPELINE COMPLET MANALYTICS")
+        logger.info("🚀 STARTING MANALYTICS COMPLETE PIPELINE")
 
-        # Parser les arguments
+        # Parse arguments
         args = parse_arguments()
 
         format_name = args.format
         start_date = args.start_date
         end_date = args.end_date
 
-        logger.info(f"📅 Période: {start_date} à {end_date}")
+        logger.info(f"📅 Period: {start_date} to {end_date}")
         logger.info(f"🎯 Format: {format_name}")
 
-        # Créer l'orchestrateur
+        # Create orchestrator
         orchestrator = ManalyticsOrchestrator()
 
-        # Lancer le pipeline complet
+        # Run complete pipeline
         result = await orchestrator.run_pipeline(format_name, start_date, end_date)
 
-        logger.info("🎉 PIPELINE TERMINÉ AVEC SUCCÈS!")
-        logger.info("📊 Toutes les visualisations ont été générées automatiquement")
+        logger.info("🎉 PIPELINE COMPLETED SUCCESSFULLY!")
+        logger.info("📊 All visualizations have been generated automatically")
         
-        # Utiliser le nom du fichier principal depuis le result
+        # Use main filename from result
         main_filename = result["main_filename"]
         logger.info(
-            f"🌐 Ouvrez {result['analysis_folder']}/{main_filename} pour voir les résultats"
+            f"🌐 Open {result['analysis_folder']}/{main_filename} to view results"
         )
 
-        # NOUVEAU: Ouvrir automatiquement le dashboard dans l'explorateur
+        # NEW: Automatically open dashboard in browser
         dashboard_path = os.path.join(
             "Analyses", result["analysis_folder"], main_filename
         )
@@ -86,51 +86,51 @@ async def main():
             os.path.join("Analyses", result["analysis_folder"])
         )
 
-        logger.info(f"🚀 Ouverture automatique du dashboard: {absolute_path}")
+        logger.info(f"🚀 Automatically opening dashboard: {absolute_path}")
 
         try:
-            # Ouvrir dans le navigateur par défaut
+            # Open in default browser
             webbrowser.open(f"file://{absolute_path}")
-            logger.info("✅ Dashboard ouvert dans le navigateur!")
+            logger.info("✅ Dashboard opened in browser!")
         except Exception as e:
-            logger.warning(f"⚠️ Impossible d'ouvrir automatiquement le dashboard: {e}")
-            logger.info(f"📂 Ouvrez manuellement: {absolute_path}")
+            logger.warning(f"⚠️ Could not automatically open dashboard: {e}")
+            logger.info(f"📂 Open manually: {absolute_path}")
 
-        # BONUS: Ouvrir aussi le dossier dans l'explorateur de fichiers
+        # BONUS: Also open folder in file explorer
         try:
             import platform
             import time
 
-            # Attendre un peu pour s'assurer que tous les fichiers sont créés
+            # Wait a bit to ensure all files are created
             time.sleep(1)
 
             system = platform.system()
 
             if system == "Darwin":  # macOS
-                # Forcer l'ouverture du dossier principal, pas du sous-dossier
+                # Force opening of main folder, not subfolder
                 os.system(f'open "{analysis_folder_path}"')
-                # Attendre un peu puis sélectionner le fichier index.html
+                # Wait a bit then select the index.html file
                 time.sleep(0.5)
                 os.system(f'open -R "{absolute_path}"')
                 logger.info(
-                    f"📂 Dossier d'analyse ouvert dans le Finder: {analysis_folder_path}"
+                    f"📂 Analysis folder opened in Finder: {analysis_folder_path}"
                 )
             elif system == "Windows":  # Windows
                 os.system(f'explorer "{analysis_folder_path}"')
-                logger.info("📂 Dossier d'analyse ouvert dans l'Explorateur!")
+                logger.info("📂 Analysis folder opened in Explorer!")
             elif system == "Linux":  # Linux
                 os.system(f'xdg-open "{analysis_folder_path}"')
                 logger.info(
-                    "📂 Dossier d'analyse ouvert dans l'explorateur de fichiers!"
+                    "📂 Analysis folder opened in file explorer!"
                 )
         except Exception as e:
-            logger.warning(f"⚠️ Impossible d'ouvrir le dossier automatiquement: {e}")
-            logger.info(f"📂 Ouvrez manuellement: {analysis_folder_path}")
+            logger.warning(f"⚠️ Could not automatically open folder: {e}")
+            logger.info(f"📂 Open manually: {analysis_folder_path}")
 
         return result
 
     except Exception as e:
-        logger.error(f"❌ ERREUR PIPELINE: {e}")
+        logger.error(f"❌ PIPELINE ERROR: {e}")
         import traceback
 
         logger.error(traceback.format_exc())
@@ -142,9 +142,9 @@ async def main():
 if __name__ == "__main__":
     result = asyncio.run(main())
     if result:
-        print(f"\n🎯 SUCCÈS! Dashboard ouvert automatiquement!")
-        print(f"📂 Dossier: Analyses/{result['analysis_folder']}/")
-        print(f"🌐 Fichier: Analyses/{result['analysis_folder']}/{result['main_filename']}")
+        print(f"\n🎯 SUCCESS! Dashboard opened automatically!")
+        print(f"📂 Folder: Analyses/{result['analysis_folder']}/")
+        print(f"🌐 File: Analyses/{result['analysis_folder']}/{result['main_filename']}")
     else:
-        print("\n❌ ÉCHEC! Vérifiez les logs pour plus de détails")
+        print("\n❌ FAILURE! Check logs for more details")
     sys.exit(0 if result else 1)
