@@ -70,13 +70,16 @@ async def main():
 
         logger.info("🎉 PIPELINE TERMINÉ AVEC SUCCÈS!")
         logger.info("📊 Toutes les visualisations ont été générées automatiquement")
+        
+        # Utiliser le nom du fichier principal depuis le result
+        main_filename = result["main_filename"]
         logger.info(
-            f"🌐 Ouvrez {result['analysis_folder']}/index.html pour voir les résultats"
+            f"🌐 Ouvrez {result['analysis_folder']}/{main_filename} pour voir les résultats"
         )
 
         # NOUVEAU: Ouvrir automatiquement le dashboard dans l'explorateur
         dashboard_path = os.path.join(
-            "Analyses", result["analysis_folder"], "index.html"
+            "Analyses", result["analysis_folder"], main_filename
         )
         absolute_path = os.path.abspath(dashboard_path)
         analysis_folder_path = os.path.abspath(
@@ -141,7 +144,7 @@ if __name__ == "__main__":
     if result:
         print(f"\n🎯 SUCCÈS! Dashboard ouvert automatiquement!")
         print(f"📂 Dossier: Analyses/{result['analysis_folder']}/")
-        print(f"🌐 Fichier: Analyses/{result['analysis_folder']}/index.html")
+        print(f"🌐 Fichier: Analyses/{result['analysis_folder']}/{result['main_filename']}")
     else:
         print("\n❌ ÉCHEC! Vérifiez les logs pour plus de détails")
     sys.exit(0 if result else 1)

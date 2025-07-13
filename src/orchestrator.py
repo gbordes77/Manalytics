@@ -50,6 +50,10 @@ class ManalyticsOrchestrator:
             return {
                 "analysis_folder": analysis_folder,
                 "visualization_report": visualization_report,
+                "main_filename": f"{format.lower()}_{start_date}_{end_date}.html",
+                "format": format,
+                "start_date": start_date,
+                "end_date": end_date,
             }
 
         except Exception as e:
@@ -907,13 +911,7 @@ class ManalyticsOrchestrator:
             with open(dashboard_path, "w", encoding="utf-8") as f:
                 f.write(html_template)
 
-            # Créer aussi index.html pour compatibilité (sans préfixe)
-            legacy_index_path = Path(output_dir) / "index.html"
-            with open(legacy_index_path, "w", encoding="utf-8") as f:
-                f.write(html_template)
-
             self.logger.info(f"✅ Dashboard complet créé: {dashboard_path}")
-            self.logger.info(f"✅ Index créé pour compatibilité: index.html")
             return str(dashboard_path)
 
         except Exception as e:
