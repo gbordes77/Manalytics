@@ -457,38 +457,8 @@ class ManalyticsOrchestrator:
         ):
             return "Green Ramp"
 
-        # Combo
-        elif any(
-            card in card_names_str
-            for card in ["splinter twin", "deceiver exarch", "pestermite"]
-        ):
-            return "Splinter Twin"
-        elif any(
-            card in card_names_str for card in ["storm", "grapeshot", "past in flames"]
-        ):
-            return "Storm"
-        elif any(
-            card in card_names_str for card in ["devoted druid", "vizier of remedies"]
-        ):
-            return "Devoted Druid"
-
-        # Archétypes spéciaux
-        elif any(
-            card in card_names_str
-            for card in ["death shadow", "street wraith", "temur battle rage"]
-        ):
-            return "Death Shadow"
-        elif any(
-            card in card_names_str for card in ["burn", "lava spike", "rift bolt"]
-        ):
-            return "Burn"
-        elif any(
-            card in card_names_str
-            for card in ["affinity", "ornithopter", "cranial plating"]
-        ):
-            return "Affinity"
-        elif any(card in card_names_str for card in ["tron", "karn", "ugin"]):
-            return "Tron"
+        # NOTE: Removed non-Standard archetypes (Storm, Splinter Twin, Death Shadow, Burn, Affinity, Tron, etc.)
+        # These decks will be classified as "Others" since they don't exist in Standard format
 
         # Color-based classification if no specific archetype
         colors = self._detect_colors(card_names)
