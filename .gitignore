@@ -241,3 +241,5 @@ tests/fixtures/mock_data/
 data/mock/
 _ARCHIVE_A_SUPPRIMER/obsolete_analyses/
 *.json
+# Ignore analysis zip files
+Analyses/*.zip
