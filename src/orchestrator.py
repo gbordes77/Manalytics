@@ -207,10 +207,10 @@ class ManalyticsOrchestrator:
         with open(file_path, "r", encoding="utf-8") as f:
             tournament_data = json.load(f)
 
-        # Adapter à différents formats de données
+        # Adapt to different data formats
         tournament_info = tournament_data.get("Tournament", tournament_data)
 
-        # Vérifier le format STRICTEMENT (basé sur le nom du fichier ou les données)
+        # Check format STRICTLY (based on filename or data)
         file_format_check = self.format.lower() in file_path.lower()
         data_format_check = False
 
@@ -218,11 +218,11 @@ class ManalyticsOrchestrator:
         if format_in_data:
             data_format_check = self.format.lower() in format_in_data
 
-        # REJET STRICT : doit correspondre au format demandé
+        # STRICT REJECTION: must match requested format
         if not file_format_check and not data_format_check:
             return []
 
-        # REJET EXPLICIT des autres formats
+        # EXPLICIT REJECTION of other formats
         other_formats = ["modern", "legacy", "vintage", "pioneer", "pauper", "standard"]
         if self.format.lower() in other_formats:
             other_formats.remove(self.format.lower())
@@ -256,8 +256,8 @@ class ManalyticsOrchestrator:
         return processed_decks
 
     def _extract_tournament_date(self, tournament_info, file_path):
-        """Extraire la date du tournoi depuis les données ou le nom du fichier (comme l'ancien système)"""
-        # Essayer d'extraire depuis les données
+        """Extract tournament date from data or filename (like the old system)"""
+        # Try to extract from data
         date_str = tournament_info.get("Date", tournament_info.get("date", ""))
 
         if date_str:
@@ -273,7 +273,7 @@ class ManalyticsOrchestrator:
             except:
                 pass
 
-        # Extraire depuis le nom du fichier (ex: tournament-2025-05-01.json)
+        # Extract from filename (ex: tournament-2025-05-01.json)
         import re
 
         date_match = re.search(r"(\d{4}-\d{2}-\d{2})", file_path)
@@ -290,12 +290,12 @@ class ManalyticsOrchestrator:
         # Extraire les wins/losses
         wins, losses = self._extract_results(deck)
 
-        # Classifier l'archétype avec la nouvelle logique corrigée
+        # Classify archetype with the new corrected logic
         archetype = self._classify_archetype(
             deck.get("Mainboard", deck.get("mainboard", []))
         )
 
-        # Déterminer la source avec différenciation MTGO
+        # Determine source with MTGO differentiation
         source = self._determine_source(file_path, tournament_info)
 
         return {
@@ -333,18 +333,18 @@ class ManalyticsOrchestrator:
             except:
                 pass
         else:
-            # Format direct dans les données
+            # Format directly in data
             wins = deck.get("wins", 0)
             losses = deck.get("losses", 0)
 
         return wins, losses
 
     def _determine_source(self, file_path, tournament_info=None):
-        """Déterminer la source du tournoi avec différenciation MTGO Challenge vs League"""
+        """Determine tournament source with MTGO Challenge vs League differentiation"""
         if "mtgo.com" in file_path:
-            # Différencier les types de tournois MTGO
+            # Differentiate MTGO tournament types
             if tournament_info:
-                # Chercher l'URL dans différents champs possibles
+                # Search for URL in different possible fields
                 tournament_url = (
                     tournament_info.get("URL", "")
                     or tournament_info.get("Uri", "")
@@ -353,7 +353,7 @@ class ManalyticsOrchestrator:
                     or tournament_info.get("id", "")
                 )
 
-                # Analyser l'URL/ID pour déterminer le type
+                # Analyze URL/ID to determine type
                 tournament_str = str(tournament_url).lower()
                 if "challenge" in tournament_str:
                     return "mtgo.com (Challenge)"
@@ -372,15 +372,15 @@ class ManalyticsOrchestrator:
             return "unknown"
 
     def _classify_archetype(self, mainboard):
-        """Classification détaillée des archétypes basée sur les cartes clés"""
-        # Convertir en liste de noms de cartes
+        """Detailed archetype classification based on key cards"""
+        # Convert to list of card names
         card_names = []
         for card in mainboard:
             card_names.extend([card.get("CardName", "")] * card.get("Count", 0))
 
         card_names_str = " ".join(card_names).lower()
 
-        # Classification détaillée Standard
+        # Detailed Standard classification
         # Aggro
         if any(
             card in card_names_str
@@ -490,15 +490,15 @@ class ManalyticsOrchestrator:
         elif any(card in card_names_str for card in ["tron", "karn", "ugin"]):
             return "Tron"
 
-        # Classification par couleurs si pas d'archétype spécifique
+        # Color-based classification if no specific archetype
         colors = self._detect_colors(card_names)
 
-        # RÈGLE CRITIQUE: Les archétypes monocolor génériques = "Autres"
+        # CRITICAL RULE: Generic monocolor archetypes = "Others"
         if len(colors) == 1:
-            # En Standard: Mono Blue = "Autres"
-            # En Modern: Mono Red = "Autres"
-            # Tous les autres monocolor aussi = "Autres"
-            return "Autres"
+            # In Standard: Mono Blue = "Others"
+            # In Modern: Mono Red = "Others"
+            # All other monocolor also = "Others"
+            return "Others"
         elif len(colors) == 2:
             color_pairs = {
                 frozenset(["W", "U"]): "Azorius",
@@ -531,7 +531,7 @@ class ManalyticsOrchestrator:
             return "Autres"
 
     def _detect_colors(self, card_names):
-        """Détecte les couleurs d'un deck basé sur les noms de cartes"""
+        """Detect deck colors based on card names"""
         colors = set()
 
         # Cartes de base et terrains
@@ -663,7 +663,7 @@ class ManalyticsOrchestrator:
 
         # Patterns courants
         if "Place" in result:
-            # Approximation basée sur la position
+            # Position-based approximation
             if "1st" in result:
                 return 6, 1  # Gagnant probable
             elif "2nd" in result:
@@ -694,7 +694,7 @@ class ManalyticsOrchestrator:
             total_matches = df["matches_played"].sum()
             archetypes = sorted(df["archetype"].unique())
 
-            # Générer les badges des sources
+            # Generate source badges
             sources = df["tournament_source"].unique()
             source_badges = ""
             for source in sources:
@@ -717,7 +717,7 @@ class ManalyticsOrchestrator:
             # Template HTML complet avec tous les graphiques
             html_template = f"""
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -899,10 +899,10 @@ class ManalyticsOrchestrator:
 </html>
             """
 
-            # Générer la liste des tournois
+            # Generate tournament list
             self.generate_tournaments_list(output_dir, df)
 
-            # Sauvegarder le dashboard avec le nom demandé par l'utilisateur
+            # Save dashboard with user-requested name
             prefix = f"{format_name.lower()}_{start_date}_{end_date}"
             dashboard_filename = f"{prefix}.html"
             dashboard_path = Path(output_dir) / dashboard_filename
@@ -913,7 +913,7 @@ class ManalyticsOrchestrator:
             return str(dashboard_path)
 
         except Exception as e:
-            self.logger.error(f"❌ Erreur génération dashboard: {e}")
+            self.logger.error(f"❌ Dashboard generation error: {e}")
             raise
 
     def generate_tournaments_list(self, output_dir: str, df: pd.DataFrame):
@@ -1078,7 +1078,7 @@ class ManalyticsOrchestrator:
             )
 
             for _, row in source_stats.iterrows():
-                # Créer une classe CSS sûre
+                # Create safe CSS class
                 source_name = row["tournament_source"].lower()
                 source_class = f"source-{source_name.replace('.', '').replace(' ', '-').replace('(', '').replace(')', '').replace('-5-0', '-5-0')}"
                 tournaments_html += f"""

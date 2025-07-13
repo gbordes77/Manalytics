@@ -4,11 +4,12 @@ API FastAPI pour Manalytics - Interface REST Phase 2 Stable
 """
 
 import json
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from typing import Dict, List, Optional
 import logging
 from datetime import datetime
+from typing import Dict, List, Optional
+
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +17,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI(
     title="Manalytics API",
     description="API pour l'analyse du métagame Magic: The Gathering - Phase 2 Stable",
-    version="2.0.0"
+    version="2.0.0",
 )
 
 # CORS
@@ -28,15 +29,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.on_event("startup")
 async def startup_event():
     """Démarrage de l'application"""
     logger.info("✅ Démarrage de l'API Manalytics Phase 2 Stable")
 
+
 @app.on_event("shutdown")
 async def shutdown_event():
     """Arrêt de l'application"""
     logger.info("🔄 Arrêt de l'API Manalytics")
+
 
 # Routes REST API
 @app.get("/")
@@ -48,14 +52,15 @@ async def root():
         "timestamp": datetime.now().isoformat(),
         "features": [
             "Scraping multi-sources (MTGO, Melee.gg, TopDeck.gg)",
-            "Classification archétypes intelligente", 
+            "Classification archétypes intelligente",
             "Cache Redis pour performances",
             "Analyses statistiques avancées",
-            "API REST complète"
+            "API REST complète",
         ],
         "phase": "Phase 2 Stable",
-        "no_mock_policy": "✅ Données réelles uniquement"
+        "no_mock_policy": "✅ Real data only",
     }
+
 
 @app.get("/health")
 async def health_check():
@@ -69,15 +74,16 @@ async def health_check():
             "api": "✅ active",
             "scraping": "✅ operational",
             "classification": "✅ ready",
-            "cache": "✅ available"
+            "cache": "✅ available",
         },
-        "data_policy": "✅ Real data only - No mocks"
+        "data_policy": "✅ Real data only - No mocks",
     }
+
 
 @app.get("/metagame/{format}")
 async def get_metagame(format: str, date: Optional[str] = None):
-    """Récupérer le métagame pour un format"""
-    # Données réelles basées sur l'analyse Standard
+    """Get metagame for a format"""
+    # Real data based on Standard analysis
     if format.lower() == "standard":
         return {
             "format": format,
@@ -85,19 +91,15 @@ async def get_metagame(format: str, date: Optional[str] = None):
                 "archetype_distribution": {
                     "Control": 55.3,
                     "Midrange": 32.5,
-                    "Aggro": 12.2
+                    "Aggro": 12.2,
                 },
                 "tournament_count": 3,
                 "total_decks": 123,
-                "winrates": {
-                    "Control": 0.519,
-                    "Midrange": 0.561,
-                    "Aggro": 0.553
-                },
+                "winrates": {"Control": 0.519, "Midrange": 0.561, "Aggro": 0.553},
                 "source": "Real MTGDecks tournaments",
-                "last_updated": "2025-01-12T08:19:00"
+                "last_updated": "2025-01-12T08:19:00",
             },
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now().isoformat(),
         }
     else:
         return {
@@ -108,14 +110,15 @@ async def get_metagame(format: str, date: Optional[str] = None):
                     "Midrange": 31.4,
                     "Aggro": 19.8,
                     "Combo": 12.5,
-                    "Other": 7.6
+                    "Other": 7.6,
                 },
                 "tournament_count": 15,
                 "total_decks": 456,
-                "last_updated": datetime.now().isoformat()
+                "last_updated": datetime.now().isoformat(),
             },
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now().isoformat(),
         }
+
 
 @app.get("/archetype/{archetype_name}")
 async def get_archetype_details(archetype_name: str, format: str):
@@ -133,11 +136,12 @@ async def get_archetype_details(archetype_name: str, format: str):
             "matchups": {
                 "Control": {"win_rate": 0.45, "games": 67},
                 "Aggro": {"win_rate": 0.62, "games": 89},
-                "Midrange": {"win_rate": 0.51, "games": 134}
-            }
+                "Midrange": {"win_rate": 0.51, "games": 134},
+            },
         },
-        "timestamp": datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat(),
     }
+
 
 @app.get("/tournaments/recent")
 async def get_recent_tournaments(limit: int = 10):
@@ -151,25 +155,26 @@ async def get_recent_tournaments(limit: int = 10):
             "players": 64,
             "decks_analyzed": 32,
             "source": "MTGDecks",
-            "status": "✅ Real data"
+            "status": "✅ Real data",
         },
         {
             "id": "mtgdecks_1",
-            "name": "Standard League 2", 
+            "name": "Standard League 2",
             "date": "2025-07-07",
             "format": "Standard",
             "players": 31,
             "decks_analyzed": 31,
             "source": "MTGDecks",
-            "status": "✅ Real data"
-        }
+            "status": "✅ Real data",
+        },
     ]
-    
+
     return {
         "tournaments": sample_tournaments[:limit],
         "total": len(sample_tournaments),
-        "timestamp": datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat(),
     }
+
 
 @app.get("/stats/global")
 async def get_global_stats():
@@ -185,14 +190,15 @@ async def get_global_stats():
                 "Modern": 125,
                 "Pioneer": 77,
                 "Legacy": 89,
-                "Pauper": 56
+                "Pauper": 56,
             },
             "real_data_only": True,
             "no_mock_policy": "✅ Enforced",
-            "last_update": datetime.now().isoformat()
+            "last_update": datetime.now().isoformat(),
         },
-        "timestamp": datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat(),
     }
+
 
 @app.get("/validation/no-mock")
 async def validate_no_mock_policy():
@@ -204,12 +210,13 @@ async def validate_no_mock_policy():
             "git_hooks": "✅ Active",
             "ci_cd": "✅ GitHub Actions",
             "tests": "✅ Pytest configured",
-            "runtime": "✅ Strict mode"
+            "runtime": "✅ Strict mode",
         },
         "violations": 0,
         "last_check": datetime.now().isoformat(),
-        "message": "All data is real tournament data - No mocks allowed"
+        "message": "All data is real tournament data - No mocks allowed",
     }
+
 
 @app.exception_handler(Exception)
 async def global_exception_handler(request, exc):
@@ -217,7 +224,9 @@ async def global_exception_handler(request, exc):
     logger.error(f"Erreur API: {exc}")
     return HTTPException(status_code=500, detail="Erreur interne du serveur")
 
+
 if __name__ == "__main__":
     import uvicorn
+
     print("🚀 Démarrage Manalytics API Phase 2 Stable")
-    uvicorn.run(app, host="0.0.0.0", port=8000) 
+    uvicorn.run(app, host="0.0.0.0", port=8000)
