@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "generated_at": "2025-07-12 20:13:58",
+    "format": "Standard",
+    "total_tournaments": 3,
+    "total_decks": 21,
+    "analysis_version": "R-Meta-Analysis v1.0"
+  },
+  "archetype_performance": [
+    {
+      "archetype": "Unknown",
+      "count": 21,
+      "total_wins": 0,
+      "total_losses": 0,
+      "total_draws": 0,
+      "total_matches": 0,
+      "win_rate": 0,
+      "meta_share": 1,
+      "avg_rank": 0,
+      "tournaments_played": 3
+    }
+  ],
+  "confidence_intervals": [
+    {
+      "archetype": "Unknown",
+      "count": 21,
+      "meta_share": 1,
+      "win_rate": 0,
+      "meta_ci_lower": 1,
+      "meta_ci_upper": 1,
+      "total_matches": 0,
+      "tournaments_played": 3
+    }
+  ],
+  "tier_classification": [],
+  "matchup_matrix": [],
+  "raw_data_summary": {
+    "total_decks": 21,
+    "unique_archetypes": 0,
+    "tournaments_analyzed": 3,
+    "date_range": {
+      "earliest": "2025-07-05",
+      "latest": "2025-07-12"
+    },
+    "average_tournament_size": 7,
+    "total_matches": 0
+  }
+}

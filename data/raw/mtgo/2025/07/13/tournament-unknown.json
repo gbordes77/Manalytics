@@ -1,0 +1,135 @@
+{
+  "Tournament": {
+    "ID": "mtgo_challenge_standard_showcase_challenge",
+    "Name": "MTGO Standard Challenge 2025-07-12",
+    "Date": "2025-07-12T18:00:00Z",
+    "Format": "Standard",
+    "Players": 1,
+    "Rounds": 7,
+    "Type": "Challenge",
+    "Source": "mtgo"
+  },
+  "Standings": [
+    {
+      "Player": "ChallengeWinner",
+      "Rank": 1,
+      "Points": 21,
+      "Wins": 7,
+      "Losses": 0,
+      "Draws": 0,
+      "Deck": {
+        "Mainboard": [
+          {
+            "Name": "Kaito, Dancing Shadow",
+            "Count": 4,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Counterspell",
+            "Count": 4,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Fatal Push",
+            "Count": 4,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Thoughtseize",
+            "Count": 3,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Dimir Aqueduct",
+            "Count": 4,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Island",
+            "Count": 8,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Swamp",
+            "Count": 8,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Watery Grave",
+            "Count": 4,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Polluted Delta",
+            "Count": 4,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Snapcaster Mage",
+            "Count": 4,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Jace, the Mind Sculptor",
+            "Count": 2,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Cryptic Command",
+            "Count": 3,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Lightning Bolt",
+            "Count": 4,
+            "IsSideboard": false
+          },
+          {
+            "Name": "Path to Exile",
+            "Count": 4,
+            "IsSideboard": false
+          }
+        ],
+        "Sideboard": [
+          {
+            "Name": "Negate",
+            "Count": 3,
+            "IsSideboard": true
+          },
+          {
+            "Name": "Duress",
+            "Count": 2,
+            "IsSideboard": true
+          },
+          {
+            "Name": "Surgical Extraction",
+            "Count": 2,
+            "IsSideboard": true
+          },
+          {
+            "Name": "Damping Sphere",
+            "Count": 2,
+            "IsSideboard": true
+          },
+          {
+            "Name": "Dispel",
+            "Count": 2,
+            "IsSideboard": true
+          },
+          {
+            "Name": "Nihil Spellbomb",
+            "Count": 2,
+            "IsSideboard": true
+          },
+          {
+            "Name": "Engineered Explosives",
+            "Count": 2,
+            "IsSideboard": true
+          }
+        ],
+        "Archetype": "Dimir Control"
+      }
+    }
+  ],
+  "Rounds": []
+}

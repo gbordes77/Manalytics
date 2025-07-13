@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manalytics - Analyse Complète (2025-07-02 à 2025-07-12)</title>
+    <style>
+        :root {
+            --primary: #762a83; --secondary: #1b7837; --accent: #4ECDC4;
+            --bg-light: #f8f9fa; --bg-white: #ffffff; --text-dark: #2c3e50;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1); --border-radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+               background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); 
+                  color: white; padding: 3rem 0; text-align: center; }
+        .header h1 { font-size: 3rem; font-weight: 300; margin-bottom: 1rem; }
+        .header p { font-size: 1.2rem; opacity: 0.9; }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+                      gap: 2rem; margin: 2rem 0 3rem; }
+        .stat-card { background: var(--bg-white); padding: 2rem; border-radius: var(--border-radius); 
+                     box-shadow: var(--shadow); text-align: center; transition: transform 0.3s; }
+        .stat-card:hover { transform: translateY(-5px); }
+        .stat-number { font-size: 3rem; font-weight: bold; color: var(--primary); }
+        .stat-label { font-size: 1.1rem; color: var(--text-dark); margin-top: 0.5rem; }
+        
+        .viz-grid { display: grid; gap: 2rem; }
+        .viz-card { background: var(--bg-white); border-radius: var(--border-radius); 
+                    box-shadow: var(--shadow); overflow: hidden; }
+        .viz-header { background: var(--bg-light); padding: 1.5rem; border-bottom: 1px solid #eee; }
+        .viz-title { font-size: 1.4rem; font-weight: 600; color: var(--text-dark); }
+        .viz-content { height: 600px; }
+        .viz-iframe { width: 100%; height: 100%; border: none; }
+        
+        .footer { background: var(--text-dark); color: white; text-align: center; 
+                  padding: 2rem; margin-top: 3rem; }
+        .footer p { opacity: 0.8; }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+            .viz-content { height: 400px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Manalytics</h1>
+        <p>Analyse complète du métagame • 2025-07-02 à 2025-07-12</p>
+    </div>
+    
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Tournois analysés</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">123</div>
+                <div class="stat-label">Joueurs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">625</div>
+                <div class="stat-label">Matchs joués</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Archétypes identifiés</div>
+            </div>
+        </div>
+        
+        <div class="viz-grid">
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">🥧 Répartition du Métagame</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/metagame_pie.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">📊 Archétypes Principaux</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/main_archetypes_bar.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">🔥 Matrice de Matchups</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/matchup_matrix.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">🎯 Winrates avec Intervalles de Confiance</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/winrate_confidence.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">🏆 Classification par Tiers</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/tiers_scatter.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">💫 Winrate vs Présence</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/bubble_winrate_presence.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">🌟 Top Performers</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/top_5_0.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">📈 Évolution Temporelle</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/archetype_evolution.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">🔍 Sources de Données</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/data_sources_pie.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>🎯 Généré le 13/07/2025 à 00:39 • Données 100% réelles • Pipeline automatique Manalytics</p>
+        <p>📊 Tous les graphiques sont interactifs • Cliquez et explorez les données</p>
+    </div>
+</body>
+</html>
+            

@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "generated_at": "2025-07-12T18:43:33.869607",
+    "total_decks": 1383,
+    "total_tournaments": 20,
+    "date_range": {
+      "start": "2025-05-14T00:48:23.439797",
+      "end": "2025-07-11T00:48:23.439487"
+    },
+    "formats": [
+      "standard"
+    ],
+    "sources": [
+      "melee.gg",
+      "mtgo.com",
+      "topdeck.gg"
+    ],
+    "analysis_parameters": {
+      "min_decks_for_archetype": 5,
+      "min_matches_for_matchup": 5,
+      "confidence_level": 0.95
+    }
+  },
+  "archetype_performance": {
+    "Aggro": {
+      "deck_count": 20,
+      "wins": 1428,
+      "losses": 1175,
+      "matches_played": 2603,
+      "winrate": 0.5227238525206922,
+      "total_wins": 1428,
+      "total_losses": 1175,
+      "total_matches": 2603,
+      "tournaments_appeared": 20,
+      "meta_share": 0.014461315979754157,
+      "overall_winrate": 0.5485977718017672,
+      "avg_wins_per_deck": 71.4,
+      "avg_losses_per_deck": 58.75,
+      "winrate_ci_lower": 0.5293891663465232,
+      "winrate_ci_upper": 0.5678063772570111,
+      "dominance_score": 0.334943189472962,
+      "tier": "Tier 3"
+    },
+    "Control": {
+      "deck_count": 20,
+      "wins": 1769,
+      "losses": 1161,
+      "matches_played": 2930,
+      "winrate": 0.582710193452381,
+      "total_wins": 1769,
+      "total_losses": 1161,
+      "total_matches": 2930,
+      "tournaments_appeared": 20,
+      "meta_share": 0.014461315979754157,
+      "overall_winrate": 0.6037542662116041,
+      "avg_wins_per_deck": 88.45,
+      "avg_losses_per_deck": 58.05,
+      "winrate_ci_lower": 0.5860068259385666,
+      "winrate_ci_upper": 0.6215017064846416,
+      "dominance_score": 0.36803708611886415,
+      "tier": "Tier 3"
+    },
+    "Midrange": {
+      "deck_count": 20,
+      "wins": 1244,
+      "losses": 1074,
+      "matches_played": 2318,
+      "winrate": 0.5186915887850467,
+      "total_wins": 1244,
+      "total_losses": 1074,
+      "total_matches": 2318,
+      "tournaments_appeared": 20,
+      "meta_share": 0.014461315979754157,
+      "overall_winrate": 0.5366695427092321,
+      "avg_wins_per_deck": 62.2,
+      "avg_losses_per_deck": 53.7,
+      "winrate_ci_lower": 0.5163934426229508,
+      "winrate_ci_upper": 0.5569456427955134,
+      "dominance_score": 0.32778625201744094,
+      "tier": "Tier 3"
+    }
+  },
+  "matchup_matrix": {
+    "detailed": [
+      {
+        "archetype_a": "Aggro",
+        "archetype_b": "Aggro",
+        "estimated_winrate": 0.5,
+        "matches_count": 40,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Aggro",
+        "archetype_b": "Control",
+        "estimated_winrate": 0.5334660677080547,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Aggro",
+        "archetype_b": "Midrange",
+        "estimated_winrate": 0.5439275159254506,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Control",
+        "archetype_b": "Aggro",
+        "estimated_winrate": 0.48471881941980377,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Control",
+        "archetype_b": "Control",
+        "estimated_winrate": 0.5,
+        "matches_count": 40,
+        "confidence": "perfect"
+      },
+      {
+        "archetype_a": "Control",
+        "archetype_b": "Midrange",
+        "estimated_winrate": 0.6097215327666494,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Midrange",
+        "archetype_b": "Aggro",
+        "estimated_winrate": 0.49374963517243076,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Midrange",
+        "archetype_b": "Control",
+        "estimated_winrate": 0.368636940193031,
+        "matches_count": 0,
+        "confidence": "low"
+      },
+      {
+        "archetype_a": "Midrange",
+        "archetype_b": "Midrange",
+        "estimated_winrate": 0.5,
+        "matches_count": 40,
+        "confidence": "perfect"
+      }
+    ],
+    "matrix": {
+      "Aggro": {
+        "Aggro": 0.5,
+        "Control": 0.5334660677080547,
+        "Midrange": 0.5439275159254506
+      },
+      "Control": {
+        "Aggro": 0.48471881941980377,
+        "Control": 0.5,
+        "Midrange": 0.6097215327666494
+      },
+      "Midrange": {
+        "Aggro": 0.49374963517243076,
+        "Control": 0.368636940193031,
+        "Midrange": 0.5
+      }
+    }
+  },
+  "temporal_trends": {
+    "summary": {
+      "Aggro": {
+        "avg_meta_share": 0.35081466434702646,
+        "meta_share_trend": 0.0008092125739184497,
+        "avg_winrate": 0.5037438550896003,
+        "winrate_trend": -0.004719346675868415,
+        "periods_present": 16.0,
+        "volatility": 0.14367758514050585,
+        "growth_rate": 0.034391534391534195,
+        "trend_category": "Volatil"
+      },
+      "Control": {
+        "avg_meta_share": 0.3080022462919743,
+        "meta_share_trend": -0.01971318441906677,
+        "avg_winrate": 0.5611633255891029,
+        "winrate_trend": -0.010986831557006993,
+        "periods_present": 16.0,
+        "volatility": 0.21052777087766175,
+        "growth_rate": -0.4950697450697451,
+        "trend_category": "Volatil"
+      },
+      "Midrange": {
+        "avg_meta_share": 0.34118308936099917,
+        "meta_share_trend": 0.01890397184514831,
+        "avg_winrate": 0.48237958809043746,
+        "winrate_trend": -0.015077761744428405,
+        "periods_present": 16.0,
+        "volatility": 0.17398442444932297,
+        "growth_rate": 5.696969696969697,
+        "trend_category": "Volatil"
+      }
+    },
+    "categories": {
+      "Volatil": 3
+    }
+  },
+  "statistical_analysis": {
+    "correlations": {
+      "meta_share": {
+        "meta_share": NaN,
+        "overall_winrate": NaN,
+        "avg_wins_per_deck": NaN,
+        "tournaments_appeared": NaN
+      },
+      "overall_winrate": {
+        "meta_share": NaN,
+        "overall_winrate": 1.0,
+        "avg_wins_per_deck": 0.9828996561195505,
+        "tournaments_appeared": NaN
+      },
+      "avg_wins_per_deck": {
+        "meta_share": NaN,
+        "overall_winrate": 0.9828996561195505,
+        "avg_wins_per_deck": 1.0,
+        "tournaments_appeared": NaN
+      },
+      "tournaments_appeared": {
+        "meta_share": NaN,
+        "overall_winrate": NaN,
+        "avg_wins_per_deck": NaN,
+        "tournaments_appeared": NaN
+      }
+    },
+    "diversity_metrics": {
+      "shannon_diversity": 0.18378646672931742,
+      "simpson_diversity": 0.9993726110204011,
+      "effective_archetypes": 0
+    },
+    "clustering": [
+      {
+        "archetype": "Aggro",
+        "cluster": 2,
+        "cluster_name": "Niche"
+      },
+      {
+        "archetype": "Control",
+        "cluster": 0,
+        "cluster_name": "Populaires"
+      },
+      {
+        "archetype": "Midrange",
+        "cluster": 1,
+        "cluster_name": "Performants"
+      }
+    ],
+    "significant_archetypes": [
+      "Aggro",
+      "Control",
+      "Midrange"
+    ]
+  },
+  "summary_insights": {
+    "dominant_archetype": "Aggro",
+    "most_balanced_matchup": "50-50 matchups identified",
+    "emerging_archetypes": [],
+    "declining_archetypes": [],
+    "meta_diversity": 0.18378646672931742
+  }
+}

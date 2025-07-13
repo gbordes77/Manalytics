@@ -1,0 +1,50 @@
+{
+  "format": "Standard",
+  "processed_date": "2025-07-12T03:30:03.402475",
+  "tournament_count": 3,
+  "tournaments": [
+    {
+      "id": "melee_standard_20250705",
+      "name": "Standard Weekly 2025-07-05",
+      "date": "2025-07-05",
+      "players": 32,
+      "archetypes": [
+        "Izzet Prowess",
+        "Mono Red Aggro",
+        "Azorius Control",
+        "Gruul Aggro",
+        "Unknown",
+        "Dimir Midrange"
+      ]
+    },
+    {
+      "id": "melee_standard_20250706",
+      "name": "Standard Weekly 2025-07-06",
+      "date": "2025-07-06",
+      "players": 32,
+      "archetypes": [
+        "Izzet Prowess",
+        "Mono Red Aggro",
+        "Azorius Control",
+        "Gruul Aggro",
+        "Unknown",
+        "Dimir Midrange"
+      ]
+    },
+    {
+      "id": "melee_standard_20250712",
+      "name": "Standard Weekly 2025-07-12",
+      "date": "2025-07-12",
+      "players": 32,
+      "archetypes": [
+        "Izzet Prowess",
+        "Mono Red Aggro",
+        "Azorius Control",
+        "Gruul Aggro",
+        "Unknown",
+        "Dimir Midrange"
+      ]
+    }
+  ],
+  "Standings": []
+}

@@ -1,0 +1,868 @@
+image.png<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manalytics - Accueil</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px;
+        }
+        
+        .logo {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .feature i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+        
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+        
+        .cta {
+            margin-top: 40px;
+        }
+        
+        .analysis-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .analysis-btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.2);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+        
+        .analysis-btn:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.4);
+        }
+        
+        .analysis-btn i {
+            font-size: 2em;
+            color: #FFD700;
+            min-width: 40px;
+        }
+        
+        .analysis-btn div {
+            text-align: left;
+        }
+        
+        .analysis-btn strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .analysis-btn span {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .analysis-btn.latest {
+            border: 2px solid #FFD700;
+            background: rgba(255, 215, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .analysis-btn.latest::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+        
+        .latest-badge {
+            display: block;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.75em;
+            font-weight: bold;
+            margin-top: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .format-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+        
+        .tab-button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            margin: 0 5px;
+        }
+        
+        .tab-button:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.3);
+        }
+        
+        .tab-button.active {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.4);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-top: 20px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .format-header {
+            margin-bottom: 20px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        
+        .format-header h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+        
+        .format-header p {
+            font-size: 1em;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .latest-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: #FFD700;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .logo {
+                font-size: 3em;
+            }
+            
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .feature {
+                padding: 15px;
+            }
+            
+            .feature i {
+                font-size: 1.5em;
+            }
+            
+            .feature h3 {
+                font-size: 1em;
+            }
+            
+            .feature p {
+                font-size: 0.9em;
+            }
+            
+            .format-tabs {
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+            
+            .tab-button {
+                padding: 12px 16px;
+                font-size: 1em;
+                margin: 0;
+                width: 100%;
+            }
+            
+            .tab-content {
+                padding: 15px;
+                margin-top: 15px;
+            }
+            
+            .format-header {
+                text-align: center;
+                padding-left: 0;
+            }
+            
+            .format-header h3 {
+                font-size: 1.5em;
+            }
+            
+            .format-header p {
+                font-size: 0.9em;
+            }
+            
+            .analysis-links {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .analysis-btn {
+                padding: 15px;
+                gap: 12px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .analysis-btn i {
+                font-size: 1.8em;
+                margin-bottom: 8px;
+            }
+            
+            .analysis-btn div {
+                text-align: center;
+            }
+            
+            .analysis-btn strong {
+                font-size: 1em;
+            }
+            
+            .analysis-btn span {
+                font-size: 0.85em;
+            }
+            
+            .latest-badge {
+                font-size: 0.7em;
+                padding: 4px 8px;
+                margin-top: 6px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 25px 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .subtitle {
+                font-size: 1em;
+            }
+            
+            .logo {
+                font-size: 2.5em;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .feature {
+                padding: 12px;
+            }
+            
+            .feature i {
+                font-size: 1.3em;
+            }
+            
+            .feature h3 {
+                font-size: 0.9em;
+            }
+            
+            .feature p {
+                font-size: 0.8em;
+            }
+            
+            .tab-button {
+                padding: 10px 12px;
+                font-size: 0.9em;
+            }
+            
+            .tab-content {
+                padding: 12px;
+            }
+            
+            .format-header h3 {
+                font-size: 1.3em;
+            }
+            
+            .format-header p {
+                font-size: 0.85em;
+            }
+            
+            .analysis-btn {
+                padding: 12px;
+                gap: 8px;
+            }
+            
+            .analysis-btn i {
+                font-size: 1.5em;
+            }
+            
+            .analysis-btn strong {
+                font-size: 0.9em;
+            }
+            
+            .analysis-btn span {
+                font-size: 0.8em;
+            }
+            
+            .latest-badge {
+                font-size: 0.65em;
+                padding: 3px 6px;
+            }
+            
+            .home-button {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+            
+            .home-button span {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            .container {
+                padding: 8px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .subtitle {
+                font-size: 0.9em;
+            }
+            
+            .logo {
+                font-size: 2em;
+            }
+            
+            .analysis-btn {
+                padding: 10px;
+            }
+            
+            .analysis-btn i {
+                font-size: 1.3em;
+            }
+            
+            .analysis-btn strong {
+                font-size: 0.85em;
+            }
+            
+            .analysis-btn span {
+                font-size: 0.75em;
+            }
+        }
+    </style>
+<style>
+        /* RESPONSIVITÉ MOBILE - RÈGLES GLOBALES */
+        
+        /* Meta viewport déjà ajouté dans le head */
+        
+        /* Règles de base pour tous les éléments */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Styles de base responsifs */
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        /* Conteneurs flexibles */
+        .container, .header, .section, .stats {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        
+        /* Graphiques Plotly responsifs */
+        .plotly-graph-div {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 400px;
+        }
+        
+        /* Liens et boutons */
+        .chart-link, .btn {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        /* Tableaux responsifs */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* Images responsives */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* BREAKPOINTS RESPONSIFS */
+        
+        /* Tablettes (768px et moins) */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 8px;
+                font-size: 14px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em !important;
+            }
+            
+            .header p {
+                font-size: 0.9em;
+            }
+            
+            .section {
+                margin: 20px 0;
+            }
+            
+            .stats {
+                padding: 15px;
+            }
+            
+            .chart-link {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+            
+            /* Graphiques plus petits sur tablette */
+            .plotly-graph-div {
+                min-height: 350px;
+            }
+            
+            /* Bouton home responsive */
+            .home-button-container {
+                top: 10px !important;
+                left: 10px !important;
+            }
+            
+            .home-button {
+                padding: 10px 12px !important;
+                font-size: 12px !important;
+            }
+            
+            /* Tableaux sur tablette */
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+        }
+        
+        /* Smartphones (480px et moins) */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+                font-size: 13px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em !important;
+                margin-bottom: 10px;
+            }
+            
+            .header p {
+                font-size: 0.8em;
+                margin-bottom: 5px;
+            }
+            
+            .section {
+                margin: 15px 0;
+            }
+            
+            .section h2 {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+            }
+            
+            .stats {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+            
+            .chart-link {
+                padding: 12px;
+                font-size: 0.85em;
+                margin: 8px 0;
+            }
+            
+            /* Graphiques optimisés smartphone */
+            .plotly-graph-div {
+                min-height: 300px;
+            }
+            
+            /* Bouton home sur smartphone */
+            .home-button span {
+                display: none !important;
+            }
+            
+            .home-button {
+                padding: 8px 10px !important;
+                font-size: 11px !important;
+            }
+            
+            /* Tableaux sur smartphone */
+            table {
+                font-size: 11px;
+            }
+            
+            th, td {
+                padding: 4px;
+                font-size: 10px;
+            }
+            
+            /* Scroll horizontal pour les tableaux larges */
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+        
+        /* Très petits écrans (320px et moins) */
+        @media screen and (max-width: 320px) {
+            body {
+                padding: 3px;
+                font-size: 12px;
+            }
+            
+            .header h1 {
+                font-size: 1.3em !important;
+            }
+            
+            .header p {
+                font-size: 0.75em;
+            }
+            
+            .stats {
+                padding: 8px;
+                font-size: 0.8em;
+            }
+            
+            .chart-link {
+                padding: 10px;
+                font-size: 0.8em;
+            }
+            
+            /* Graphiques très petits écrans */
+            .plotly-graph-div {
+                min-height: 250px;
+            }
+            
+            /* Tableaux très petits écrans */
+            table {
+                font-size: 10px;
+            }
+            
+            th, td {
+                padding: 2px;
+                font-size: 9px;
+            }
+        }
+        
+        /* Optimisations pour les graphiques Plotly */
+        @media screen and (max-width: 768px) {
+            /* Configuration Plotly responsive */
+            .js-plotly-plot .plotly .modebar {
+                display: none !important;
+            }
+            
+            .js-plotly-plot .plotly .modebar-group {
+                display: none !important;
+            }
+        }
+        
+        /* Améliorations pour la lisibilité mobile */
+        @media screen and (max-width: 480px) {
+            /* Espacement amélioré */
+            p {
+                margin-bottom: 10px;
+                line-height: 1.5;
+            }
+            
+            /* Titres plus lisibles */
+            h1, h2, h3 {
+                line-height: 1.3;
+                margin-bottom: 10px;
+            }
+            
+            /* Liens plus faciles à toucher */
+            a {
+                min-height: 44px;
+                display: inline-block;
+                padding: 8px;
+            }
+            
+            /* Formulaires responsifs si présents */
+            input, select, textarea {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px; /* Évite le zoom sur iOS */
+            }
+        }
+        </style></head>
+<body>
+<div class="container">
+<div class="logo">
+<i class="fas fa-chart-line"></i>
+</div>
+<h1>Manalytics</h1>
+<p class="subtitle">Analyse avancée du métagame Magic: The Gathering</p>
+<div class="features">
+<div class="feature">
+<i class="fas fa-trophy"></i>
+<h3>Performances</h3>
+<p>Analyse des winrates et parts de marché</p>
+</div>
+<div class="feature">
+<i class="fas fa-chart-pie"></i>
+<h3>Métagame</h3>
+<p>Visualisation des tendances du métagame</p>
+</div>
+<div class="feature">
+<i class="fas fa-dice-d20"></i>
+<h3>Matchups</h3>
+<p>Matrices de matchups détaillées</p>
+</div>
+<div class="feature">
+<i class="fas fa-clock"></i>
+<h3>Évolution</h3>
+<p>Suivi temporel des archétypes</p>
+</div>
+</div>
+<div class="cta">
+<h2 style="margin-bottom: 30px; font-size: 1.5em;">📊 Analyses Disponibles</h2>
+<!-- Onglets par format -->
+<div class="format-tabs">
+<button class="tab-button active" onclick="showTab('standard')">
+<i class="fas fa-star"></i> Standard
+                </button>
+<button class="tab-button" onclick="showTab('modern')">
+<i class="fas fa-cog"></i> Modern
+                </button>
+</div>
+<!-- Contenu Standard -->
+<div class="tab-content active" id="standard">
+<div class="format-header">
+<h3><i class="fas fa-star"></i> Format Standard</h3>
+<p>Analyses du métagame Standard (plus récentes en premier)</p>
+</div>
+<div class="analysis-links">
+<!-- Dernière analyse Standard en premier -->
+<a class="analysis-btn latest" href="standard_analysis_2025-07-02_2025-07-12/rapport_complet.html">
+<i class="fas fa-chart-bar"></i>
+<div>
+<strong>Standard Analysis</strong>
+<span>2025-07-02 à 2025-07-12</span>
+<small class="latest-badge">Dernière analyse</small>
+</div>
+</a>
+<a class="analysis-btn" href="standard_analysis_2025-05-01_2025-07-01/rapport_complet.html">
+<i class="fas fa-chart-line"></i>
+<div>
+<strong>Standard Analysis</strong>
+<span>2025-05-01 à 2025-07-01</span>
+</div>
+</a>
+<a class="analysis-btn" href="standard_analysis/rapport_standard_complet.html">
+<i class="fas fa-chart-area"></i>
+<div>
+<strong>Standard Analysis</strong>
+<span>Rapport général</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Contenu Modern -->
+<div class="tab-content" id="modern">
+<div class="format-header">
+<h3><i class="fas fa-cog"></i> Format Modern</h3>
+<p>Analyses du métagame Modern</p>
+</div>
+<div class="analysis-links">
+<a class="analysis-btn" href="modern_analysis_2022-03-01_2022-03-31/rapport_complet.html">
+<i class="fas fa-chart-pie"></i>
+<div>
+<strong>Modern Analysis</strong>
+<span>2022-03-01 à 2022-03-31</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<script>
+            function showTab(format) {
+                // Masquer tous les contenus
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Désactiver tous les boutons
+                document.querySelectorAll('.tab-button').forEach(button => {
+                    button.classList.remove('active');
+                });
+                
+                // Afficher le contenu sélectionné
+                document.getElementById(format).classList.add('active');
+                
+                // Activer le bouton sélectionné
+                event.target.classList.add('active');
+            }
+        </script>
+</div>
+</body>
+</html>
