@@ -47,9 +47,24 @@
 ## 🎪 Use Cases Futurs
 
 - **Joueurs Compétitifs** : Préparation tournois, meta tracking
-- **Organisateurs** : Analytics événements, formats émergents  
+- **Organisateurs** : Analytics événements, formats émergents
 - **Créateurs Contenu** : Données visuelles, articles stratégie
 - **Wizards R&D** : Monitoring santé formats (partenariat potentiel)
 
 ---
-*Dernière mise à jour : 13 juillet 2025* 
+*Dernière mise à jour : 13 juillet 2025*
+
+---
+
+## 🎯 **ÉTAPE 1 TERMINÉE** ✅
+
+**Checkpoint** : Vous comprenez maintenant l'objectif final de Manalytics v1.0
+
+### ➡️ **ÉTAPE SUIVANTE** : Architecture Technique (30 min)
+👉 **Lisez maintenant** : [**🏗️ ARCHITECTURE_QUICKREAD**](ARCHITECTURE_QUICKREAD.md)
+
+**Pourquoi cette étape** : Maintenant que vous connaissez la vision, découvrez comment le code est organisé pour atteindre ces objectifs.
+
+---
+
+*Parcours complet : [README Lightning Tour](../README.md) → **ROADMAP** → [ARCHITECTURE](ARCHITECTURE_QUICKREAD.md) → [SETUP_DEV](SETUP_DEV.md)*

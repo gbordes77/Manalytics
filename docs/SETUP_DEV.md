@@ -101,7 +101,7 @@ git push origin feature/nouvelle-fonctionnalite
 # Test pipeline complet
 python run_full_pipeline.py --format Modern --start-date 2025-07-01 --end-date 2025-07-03
 
-# Test module spécifique  
+# Test module spécifique
 python -m pytest tests/test_classifier.py -v
 
 # Test performance
@@ -129,4 +129,26 @@ time python run_full_pipeline.py --format Standard --start-date 2025-07-12 --end
 
 **🎯 KPI Setup** : ≤5 min • Premier test pipeline ≤15 min total • Première PR Jour 1
 
-*Questions ? Voir [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md) ou [GUIDE_DEVELOPPEUR.md](GUIDE_DEVELOPPEUR.md)* 
+*Questions ? Voir [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md) ou [GUIDE_DEVELOPPEUR.md](GUIDE_DEVELOPPEUR.md)*
+
+---
+
+## 🎯 **ÉTAPE 3 TERMINÉE** ✅
+
+**Checkpoint** : Votre environnement est opérationnel et vous avez fait votre premier run avec succès
+
+### ➡️ **ÉTAPE SUIVANTE** : Première Contribution (Jour 1)
+👉 **Suivez le workflow** ci-dessus section [🔧 Workflow Développement](#workflow-développement)
+
+**Actions concrètes** :
+1. Créer une branche `feature/mon-premier-changement`
+2. Modifier un fichier de documentation (ex: corriger une typo)
+3. Commiter avec les hooks automatiques
+4. Créer une PR avec le template obligatoire
+5. **Cocher la case appropriée** dans le template PR
+
+**Pourquoi cette étape** : Validez que vous maîtrisez le processus complet de contribution.
+
+---
+
+*Parcours complet : [README Lightning Tour](../README.md) → [ROADMAP](ROADMAP.md) → [ARCHITECTURE](ARCHITECTURE_QUICKREAD.md) → **SETUP_DEV** → Première PR*

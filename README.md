@@ -9,7 +9,7 @@
 git clone https://github.com/gbordes77/Manalytics.git && cd Manalytics
 git checkout v0.3.0  # Clean baseline
 
-# 2. Install  
+# 2. Install
 pip install -r requirements.txt
 
 # 3. Run Analysis
@@ -23,17 +23,40 @@ open standard_analysis_2025-07-01_2025-07-07/index.html
 
 ---
 
-## 🚀 On-boarding Kit - Équipe Future
+## 🚀 On-boarding Kit - Parcours Guidé (2h total)
 
-| Document | Objectif | Temps |
-|----------|----------|-------|
-| [**📋 ROADMAP**](docs/ROADMAP.md) | Vision produit, tags clés v0.3→v1.0 | 15 min |
-| [**🏗️ ARCHITECTURE_QUICKREAD**](docs/ARCHITECTURE_QUICKREAD.md) | Compréhension technique rapide | 30 min |
-| [**⚙️ SETUP_DEV**](docs/SETUP_DEV.md) | Environnement dev en 5 min | 5 min |
+> **⚠️ NOUVEAU DÉVELOPPEUR ?** Commencez par la [**✅ CHECKLIST DE VALIDATION**](docs/ONBOARDING_CHECKLIST.md) pour vous auto-évaluer à chaque étape.
 
-**KPI On-boarding** : Compréhension projet ≤ 2h • Premier run ≤ 15 min • Première PR Jour 1
+### 📋 **ÉTAPE 1 : Compréhension Projet** (15 min)
+➡️ **Lisez d'abord** : [**📋 ROADMAP**](docs/ROADMAP.md)
+- Vision produit v0.3 → v1.0
+- Décisions architecturales clés
+- ✅ **Checkpoint** : Vous comprenez l'objectif final
+
+### 🏗️ **ÉTAPE 2 : Architecture Technique** (30 min)
+➡️ **Lisez ensuite** : [**🏗️ ARCHITECTURE_QUICKREAD**](docs/ARCHITECTURE_QUICKREAD.md)
+- Pipeline scraping → analyse → visualisation
+- Modules clés et points d'extension
+- ✅ **Checkpoint** : Vous savez où modifier le code
+
+### ⚙️ **ÉTAPE 3 : Setup Développement** (5 min)
+➡️ **Exécutez** : [**⚙️ SETUP_DEV**](docs/SETUP_DEV.md)
+- Clone, install, hooks, test pipeline
+- Premier run réussi
+- ✅ **Checkpoint** : Environnement opérationnel
+
+### 🎯 **ÉTAPE 4 : Première Contribution** (Jour 1)
+➡️ **Suivez le workflow** dans [SETUP_DEV.md](docs/SETUP_DEV.md#workflow-développement)
+- Créer branche feature
+- Modifier du code
+- Première PR avec template obligatoire
+- ✅ **Checkpoint** : PR mergée avec succès
 
 ---
+
+**🎯 KPI On-boarding** : Compréhension ≤ 2h • Premier run ≤ 15 min • Première PR Jour 1
+
+**⚠️ ORDRE OBLIGATOIRE** : Suivre les étapes 1→2→3→4 dans cet ordre. Chaque étape prépare la suivante.
 
 ## 📊 Résultat
 
@@ -78,4 +101,4 @@ Voir [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 📄 License
 
-MIT - Voir [LICENSE](LICENSE) 
+MIT - Voir [LICENSE](LICENSE)

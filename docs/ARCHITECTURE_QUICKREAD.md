@@ -9,14 +9,14 @@ graph TD
     A[🎯 CLI Input] --> B[🕷️ Scrapers]
     B --> C[📊 Raw Data]
     C --> D[🏷️ Classifier]
-    D --> E[📈 Analyzer] 
+    D --> E[📈 Analyzer]
     E --> F[📊 Visualizer]
     F --> G[📁 HTML Output]
-    
+
     B --> B1[MTGO]
     B --> B2[Melee]
     B --> B3[TopDeck]
-    
+
     F --> F1[Plotly Charts]
     F --> F2[Interactive HTML]
     F --> F3[CSV/JSON Data]
@@ -92,7 +92,7 @@ classifier.classify_deck(decklist) → "Rakdos Midrange"
 
 ```txt
 pandas           # Data manipulation
-plotly           # Interactive charts  
+plotly           # Interactive charts
 requests         # HTTP scraping
 beautifulsoup4   # HTML parsing
 pydantic         # Data validation
@@ -102,4 +102,19 @@ pydantic         # Data validation
 
 **💡 Tip Développeur** : Démarrez par `run_full_pipeline.py` pour comprendre le flow global, puis plongez dans chaque module selon vos besoins.
 
-*Temps lecture : ~15 min • Architecture complète : [docs/ARCHITECTURE.md](ARCHITECTURE.md)* 
+*Temps lecture : ~15 min • Architecture complète : [docs/ARCHITECTURE.md](ARCHITECTURE.md)*
+
+---
+
+## 🎯 **ÉTAPE 2 TERMINÉE** ✅
+
+**Checkpoint** : Vous savez maintenant où modifier le code et comment le système fonctionne
+
+### ➡️ **ÉTAPE SUIVANTE** : Setup Développement (5 min)
+👉 **Exécutez maintenant** : [**⚙️ SETUP_DEV**](SETUP_DEV.md)
+
+**Pourquoi cette étape** : Passez de la théorie à la pratique ! Installez l'environnement et faites votre premier run.
+
+---
+
+*Parcours complet : [README Lightning Tour](../README.md) → [ROADMAP](ROADMAP.md) → **ARCHITECTURE** → [SETUP_DEV](SETUP_DEV.md)*
