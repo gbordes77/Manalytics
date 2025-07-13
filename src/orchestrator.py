@@ -360,7 +360,7 @@ class ManalyticsOrchestrator:
                 elif "league" in tournament_str:
                     return "mtgo.com (League 5-0)"
                 else:
-                    return "mtgo.com (Other)"
+                    return "mtgo.com"
             return "mtgo.com"
         elif "melee.gg" in file_path:
             return "melee.gg"
@@ -976,7 +976,7 @@ class ManalyticsOrchestrator:
          .source-meleegg {{ background: #4ECDC4; }}
          .source-mtgocom-challenge {{ background: #e74c3c; }}
          .source-mtgocom-league-5-0 {{ background: #27ae60; }}
-         .source-mtgocom-other {{ background: #95a5a6; }}
+
          .source-topdeckgg {{ background: #762a83; }}
 
                  .deck-count {{
