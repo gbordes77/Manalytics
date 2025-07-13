@@ -131,7 +131,7 @@ class MetagameChartsGenerator:
         # Mise en page
         fig.update_layout(
             title={
-                'text': f"Part de métagame Standard ({start_date} à {end_date})",
+                'text': f"Standard Metagame Share ({start_date} to {end_date})",
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 16, 'family': 'Arial, sans-serif'}
@@ -229,9 +229,9 @@ class MetagameChartsGenerator:
             textposition='auto',
             hovertemplate=(
                 "<b>%{y}</b><br>"
-                "Part de métagame: %{x:.1f}%<br>"
-                "Joueurs: %{customdata[0]}<br>"
-                "Winrate moyen: %{customdata[1]:.1%}<br>"
+                "Metagame share: %{x:.1f}%<br>"
+                "Players: %{customdata[0]}<br>"
+                "Average winrate: %{customdata[1]:.1%}<br>"
                 "<extra></extra>"
             ),
             customdata=list(zip(
@@ -242,13 +242,13 @@ class MetagameChartsGenerator:
         
         fig.update_layout(
             title={
-                'text': f"Part de métagame des archétypes Standard (seuil ≥{threshold:.0%})",
+                'text': f"Standard Archetypes Metagame Share (threshold ≥{threshold:.0%})",
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 16, 'family': 'Arial, sans-serif'}
             },
-            xaxis_title="Part de métagame (%)",
-            yaxis_title="Archétype",
+            xaxis_title="Metagame share (%)",
+            yaxis_title="Archetype",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
             height=500,
@@ -298,16 +298,16 @@ class MetagameChartsGenerator:
         
         # Ligne de référence à 50%
         fig.add_hline(y=0.5, line_dash="dash", line_color="gray", 
-                     annotation_text="50% (équilibre)")
+                     annotation_text="50% (balance)")
         
         fig.update_layout(
             title={
-                'text': "Winrates des archétypes avec intervalles de confiance 95%",
+                'text': "Archetype Winrates with 95% Confidence Intervals",
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 16, 'family': 'Arial, sans-serif'}
             },
-            xaxis_title="Archétype",
+            xaxis_title="Archetype",
             yaxis_title="Winrate",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
@@ -351,9 +351,9 @@ class MetagameChartsGenerator:
                 hovertemplate=(
                     "<b>%{text}</b><br>"
                     "Tier: " + str(tier) + "<br>"
-                    "Borne inférieure IC: %{x:.3f}<br>"
-                    "Part de métagame: %{y:.1%}<br>"
-                    "Joueurs: %{customdata[0]}<br>"
+                    "Lower CI bound: %{x:.3f}<br>"
+                    "Metagame share: %{y:.1%}<br>"
+                    "Players: %{customdata[0]}<br>"
                     "<extra></extra>"
                 ),
                 customdata=list(zip(
@@ -372,13 +372,13 @@ class MetagameChartsGenerator:
         
         fig.update_layout(
             title={
-                'text': "Classification des archétypes par tiers (borne inférieure IC 95%)",
+                'text': "Archetype Classification by Tiers (95% CI Lower Bound)",
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 16, 'family': 'Arial, sans-serif'}
             },
-            xaxis_title="Part de métagame (%)",
-            yaxis_title="Borne inférieure IC 95%",
+            xaxis_title="Metagame share (%)",
+            yaxis_title="95% CI Lower Bound",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
             height=600,
@@ -422,8 +422,8 @@ class MetagameChartsGenerator:
                     "<b>%{text}</b><br>"
                     "Tier: " + str(tier) + "<br>"
                     "Winrate: %{x:.1%}<br>"
-                    "Part de métagame: %{y:.1%}<br>"
-                    "Joueurs: %{marker.size}<br>"
+                    "Metagame share: %{y:.1%}<br>"
+                    "Players: %{marker.size}<br>"
                     "<extra></extra>"
                 ),
                 customdata=list(zip(
@@ -432,19 +432,19 @@ class MetagameChartsGenerator:
                 ))
             ))
         
-        # Ligne de référence à 50%
+        # Reference line at 50%
         fig.add_hline(y=0.5, line_dash="dash", line_color="gray", 
-                     annotation_text="50% (équilibre)")
+                     annotation_text="50% (balance)")
         
         fig.update_layout(
             title={
-                'text': "Winrate vs Présence métagame (taille = nombre de joueurs)",
+                'text': "Winrate vs Metagame Presence (size = number of players)",
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 16, 'family': 'Arial, sans-serif'}
             },
-            xaxis_title="Part de métagame (%)",
-            yaxis_title="Winrate moyen",
+            xaxis_title="Metagame share (%)",
+            yaxis_title="Average winrate",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
             height=600,
@@ -558,7 +558,7 @@ class MetagameChartsGenerator:
         
         fig.update_layout(
             title={
-                'text': 'Répartition des Sources de Données',
+                'text': 'Data Sources Distribution',
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 20, 'family': 'Arial, sans-serif'}
@@ -632,7 +632,7 @@ class MetagameChartsGenerator:
         # Mise en forme
         fig.update_layout(
             title={
-                'text': 'Évolution temporelle des archétypes Standard',
+                'text': 'Temporal Evolution of Standard Archetypes',
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 20, 'family': 'Arial, sans-serif'}
@@ -733,21 +733,21 @@ class MetagameChartsGenerator:
             textposition='outside',
             textfont=dict(size=12, color='black'),
             hovertemplate='<b>%{x}</b><br>' +
-                         'Part de métagame: %{y:.1f}%<br>' +
-                         f'Nombre de decks: {[int(p/100*total_decks) for p in percentages]}<br>' +
+                         'Metagame share: %{y:.1f}%<br>' +
+                         f'Number of decks: {[int(p/100*total_decks) for p in percentages]}<br>' +
                          '<extra></extra>'
         )])
         
         # Mise en forme
         fig.update_layout(
             title={
-                'text': f'Archétypes principaux STANDARD - {len(df)} decks analysés',
+                'text': f'Main STANDARD Archetypes - {len(df)} decks analyzed',
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 18, 'family': 'Arial, sans-serif', 'color': '#2c3e50'}
             },
-            xaxis_title='Archétype',
-            yaxis_title='Part de métagame (%)',
+            xaxis_title='Archetype',
+            yaxis_title='Metagame share (%)',
             font=dict(size=12, family='Arial, sans-serif'),
             showlegend=False,
             plot_bgcolor='rgba(248,249,250,0.8)',

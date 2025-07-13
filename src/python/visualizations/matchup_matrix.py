@@ -222,13 +222,13 @@ class MatchupMatrixGenerator:
         # Mise en page
         fig.update_layout(
             title={
-                'text': "Matrice de Matchups Standard - Intervalles de Confiance 95%",
+                'text': "Standard Matchup Matrix - 95% Confidence Intervals",
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {'size': 16, 'family': 'Arial, sans-serif'}
             },
-            xaxis_title="Archétype Adversaire",
-            yaxis_title="Archétype Joueur",
+            xaxis_title="Opponent Archetype",
+            yaxis_title="Player Archetype",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
             height=600,
