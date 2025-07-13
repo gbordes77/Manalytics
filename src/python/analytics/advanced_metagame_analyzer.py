@@ -149,9 +149,9 @@ class AdvancedMetagameAnalyzer:
         temporal_trends.loc[
             temporal_trends["meta_share_trend"] < -0.02, "trend_category"
         ] = "Declining"
-        temporal_trends.loc[temporal_trends["volatility"] > 0.1, "trend_category"] = (
-            "Volatile"
-        )
+        temporal_trends.loc[
+            temporal_trends["volatility"] > 0.1, "trend_category"
+        ] = "Volatile"
 
         # Find emerging and declining archetypes
         emerging = temporal_trends[
@@ -301,7 +301,9 @@ class AdvancedMetagameAnalyzer:
                         "strength": (
                             "Strong"
                             if abs(corr_value) > 0.7
-                            else "Moderate" if abs(corr_value) > 0.3 else "Weak"
+                            else "Moderate"
+                            if abs(corr_value) > 0.3
+                            else "Weak"
                         ),
                     }
                 )

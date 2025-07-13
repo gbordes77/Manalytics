@@ -1,6 +1,6 @@
 # 🏗️ Architecture QuickRead - Compréhension Technique (30 min)
 
-> **Pipeline automatisé** : Input CLI → Scraping → Classification → Analysis → Visualization → Output HTML
+> **Pipeline automatisé** : Input CLI → Scraping → Classification → Analysis → Advanced Analytics → Visualization → Output HTML
 
 ## 🔄 Flow Principal
 
@@ -10,16 +10,22 @@ graph TD
     B --> C[📊 Raw Data]
     C --> D[🏷️ Classifier]
     D --> E[📈 Analyzer]
-    E --> F[📊 Visualizer]
-    F --> G[📁 HTML Output]
+    E --> F[🔬 Advanced Analytics]
+    F --> G[📊 Visualizer]
+    G --> H[📁 HTML Output]
 
     B --> B1[MTGO]
     B --> B2[Melee]
     B --> B3[TopDeck]
 
-    F --> F1[Plotly Charts]
-    F --> F2[Interactive HTML]
-    F --> F3[CSV/JSON Data]
+    F --> F1[Shannon Diversity]
+    F --> F2[Temporal Trends]
+    F --> F3[K-means Clustering]
+    F --> F4[Correlation Analysis]
+
+    G --> G1[Plotly Charts]
+    G --> G2[Interactive HTML]
+    G --> G3[CSV/JSON Data]
 ```
 
 ## 📁 Structure `src/` - Modules Clés
@@ -47,6 +53,40 @@ class BaseScraper:
 # Classification automatique
 classifier.classify_deck(decklist) → "Rakdos Midrange"
 ```
+
+### **🔬 Advanced Analytics** (`src/python/analytics/`)
+- **Rôle** : Analyse statistique avancée du métagame
+- **Intégration** : [Jiliac/Aliquanto3](https://github.com/Jiliac/Aliquanto3) R-Meta-Analysis methodology
+- **Fonctionnalités** : 18 analyses statistiques complètes
+- **Standards** : Méthodes académiques peer-reviewed
+
+```python
+# Analyse statistique complète
+analyzer = AdvancedMetagameAnalyzer()
+analyzer.load_data(tournament_data)
+results = analyzer.generate_comprehensive_analysis()
+
+# Métriques de diversité
+diversity = results['diversity_metrics']
+# Shannon: 1.98, Simpson: 0.81, Effective: 7.25
+
+# Tendances temporelles
+trends = results['temporal_trends']
+# Rising: ["Boros Energy"], Declining: ["Mono-Red"]
+
+# Clustering K-means
+clusters = results['clustering_analysis']
+# 3 groupes: high_performers, meta_staples, niche_picks
+```
+
+#### **Analyses Disponibles**
+1. **Shannon Diversity Index** - Mesure de diversité informationnelle
+2. **Simpson Index** - Métrique alternative de diversité
+3. **Effective Archetype Count** - Nombre d'archétypes effectifs
+4. **Temporal Trends** - Analyse des tendances temporelles
+5. **K-means Clustering** - Groupement d'archétypes par performance
+6. **Correlation Analysis** - Analyse de corrélation avec significativité
+7. **Card Usage Statistics** - Statistiques d'utilisation des cartes
 
 ### **Analyzer** (`src/python/metrics/`)
 - **Rôle** : Calculs statistiques (winrates, matchups, méta share)

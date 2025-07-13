@@ -1,6 +1,6 @@
 # 🎯 Manalytics - MTG Metagame Analytics Pipeline
 
-> **Automated Magic: The Gathering metagame analysis** - Pipeline generating **9 interactive visualizations** in under 30 seconds
+> **Automated Magic: The Gathering metagame analysis** - Pipeline generating **9 interactive visualizations + advanced statistical analysis** in under 30 seconds
 
 ## ⚡ Lightning Tour (30 seconds)
 
@@ -15,11 +15,11 @@ pip install -r requirements.txt
 # 3. Run Analysis
 python run_full_pipeline.py --format Standard --start-date 2025-07-01 --end-date 2025-07-07
 
-# 4. View Results (9 interactive charts)
+# 4. View Results (9 interactive charts + advanced analytics)
 open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-07-07.html
 ```
 
-**Result**: 9 interactive HTML charts generated automatically (metagame share, matchups, winrates, tiers, temporal evolution...)
+**Result**: 9 interactive HTML charts + comprehensive statistical analysis generated automatically
 
 ---
 
@@ -43,7 +43,28 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 
 ---
 
-## 🌟 What's New in v0.3.3
+## 🌟 What's New in v0.3.4
+
+### 🔬 **Advanced Statistical Analysis**
+- **Shannon & Simpson Diversity**: Metagame diversity indices with effective archetype count
+- **Temporal Trend Analysis**: Rising/Declining/Volatile/Stable archetype categorization
+- **K-means Clustering**: Archetype grouping based on performance metrics
+- **Correlation Analysis**: Statistical significance testing for archetype relationships
+- **Card Usage Statistics**: Comprehensive card frequency and meta analysis
+- **Key Insights Extraction**: Automated interpretation of statistical patterns
+
+### 📊 **R-Meta-Analysis Integration**
+- **GitHub Integration**: Connected to [Jiliac/Aliquanto3](https://github.com/Jiliac/Aliquanto3) R-Meta-Analysis repository
+- **Statistical Replication**: Reproduces R-based metagame analysis in Python
+- **Academic Standards**: Implements peer-reviewed statistical methodologies
+- **Comprehensive Output**: JSON exports with all 18 analytical features
+
+### 🧮 **Advanced Metrics**
+- **Diversity Indices**: Shannon entropy, Simpson index, effective archetype count
+- **Trend Classification**: Automated categorization of archetype trajectories
+- **Clustering Analysis**: K-means grouping with silhouette scoring
+- **Correlation Matrix**: Pearson correlation with p-value significance testing
+- **Performance Insights**: Automated key findings extraction
 
 ### 🌈 **Authentic MTG Color System**
 - **Guild Colors**: Authentic MTG colors throughout interface (Izzet=blue/red, Boros=white/red, etc.)
@@ -81,13 +102,23 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 8. **Temporal Evolution** - Archetype trends over time
 9. **Matchup Matrix** - Head-to-head performance analysis
 
+### 🔬 **Advanced Statistical Analysis**
+- **Shannon Diversity Index** - Metagame diversity measurement
+- **Simpson Index** - Alternative diversity metric
+- **Effective Archetype Count** - Practical diversity measure
+- **Temporal Trend Analysis** - Rising/Declining/Volatile/Stable categorization
+- **K-means Clustering** - Archetype performance grouping
+- **Correlation Matrix** - Statistical relationship analysis
+- **Card Usage Statistics** - Comprehensive card frequency analysis
+- **Key Insights Extraction** - Automated interpretation of patterns
+
 ### 🎯 **Multi-Source Data**
 - **MTGO**: Challenge, League 5-0, and general tournaments
 - **Melee.gg**: Paper tournament results
 - **TopDeck.gg**: Additional tournament coverage
 
 ### 🔄 **Real-Time Processing**
-- **Under 30s**: Complete analysis generation
+- **Under 30s**: Complete analysis generation including advanced statistics
 - **Real Data Only**: No mock data policy enforced
 - **Scalable**: Handles thousands of tournaments efficiently
 
@@ -99,17 +130,21 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 - **Python 3.11+**: Main programming language
 - **Plotly**: Interactive visualizations
 - **Pandas**: Data processing and analysis
+- **Scikit-learn**: Machine learning and clustering
+- **Scipy**: Statistical analysis and significance testing
 - **FastAPI**: API endpoints (for future web interface)
 
 ### **Data Processing**
 - **Multi-format Support**: Standard, Modern, Legacy
 - **Real Tournament Data**: MTGODecklistCache integration
 - **Intelligent Classification**: Advanced archetype detection using [MTGOFormatData](https://github.com/Badaro/MTGOFormatData)
+- **Statistical Analysis**: Advanced metagame metrics and trend analysis
 - **Performance Optimized**: Efficient data pipeline
 
 ### **Essential Dependencies**
 - **[MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache)**: Raw tournament data source
 - **[MTGOFormatData](https://github.com/Badaro/MTGOFormatData)**: Official archetype classification rules and card database
+- **[Jiliac/Aliquanto3](https://github.com/Jiliac/Aliquanto3)**: R-Meta-Analysis repository for statistical methodology
 - **Real Data Only**: Strict policy enforced via pre-commit hooks
 
 ### **Quality Assurance**
@@ -136,7 +171,7 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 
 2. **Choose your version**
    ```bash
-   # Latest English version (recommended)
+   # Latest English version with advanced analytics (recommended)
    git checkout feature/english-migration
 
    # Or stable release
@@ -157,17 +192,20 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 5. **View results**
    - Open the generated HTML dashboard
    - Explore the 9 interactive visualizations
-   - Check the `Analyses/` folder for all outputs
+   - Check the `advanced_analysis.json` for statistical insights
+   - Review the `Analyses/` folder for all outputs
 
 ---
 
 ## 🎯 Project Vision
 
 ### **Mission**
-Democratize MTG metagame analysis through complete automation, providing professional-grade insights to players, organizers, and content creators.
+Democratize MTG metagame analysis through complete automation, providing professional-grade insights with academic-level statistical analysis to players, organizers, and content creators.
 
-### **Current State (v0.3.2)**
+### **Current State (v0.3.4)**
 - Complete English interface for international use
+- Advanced statistical analysis with R-Meta-Analysis integration
+- 18 analytical features including diversity indices and clustering
 - Robust multi-source data pipeline
 - 9 interactive visualization types
 - Professional documentation system
@@ -210,6 +248,7 @@ Democratize MTG metagame analysis through complete automation, providing profess
 - [**Architecture Guide**](docs/ARCHITECTURE_QUICKREAD.md) - System design overview
 - [**Development Setup**](docs/SETUP_DEV.md) - Environment configuration
 - [**Project Roadmap**](docs/ROADMAP.md) - Product vision and milestones
+- [**Advanced Analytics Guide**](docs/ADVANCED_ANALYTICS.md) - Statistical analysis documentation
 
 ### **Quick Help**
 - **Setup Issues**: Check [troubleshooting guide](docs/SETUP_DEV.md#troubleshooting)
@@ -220,15 +259,16 @@ Democratize MTG metagame analysis through complete automation, providing profess
 
 ## 🎉 Success Metrics
 
+- **✅ Advanced Analytics**: 18 statistical features with R-Meta-Analysis integration
 - **✅ English Migration**: Complete international-ready interface
 - **✅ Real Data Only**: No mock data policy enforced
-- **✅ Fast Analysis**: <30s for complete metagame analysis
+- **✅ Fast Analysis**: <30s for complete metagame analysis + statistical insights
 - **✅ Multi-Source**: MTGO, Melee.gg, TopDeck.gg integration
-- **✅ Interactive**: 9 dynamic visualizations
+- **✅ Interactive**: 9 dynamic visualizations + comprehensive statistics
 - **✅ Professional**: Production-ready code and documentation
 
 ---
 
 *Last updated: July 13, 2025*
-*Version: v0.3.2*
-*Status: Ready for next development phase*
+*Version: v0.3.4*
+*Status: Advanced analytics integrated - Ready for next development phase*

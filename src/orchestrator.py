@@ -61,9 +61,7 @@ class ManalyticsOrchestrator:
             visualization_report = await self.generate_visualizations(str(output_dir))
 
             # 2. Final summary
-            self.logger.info(
-                f"✅ Pipeline completed successfully in {analysis_folder}!"
-            )
+            self.logger.info(f"✅ Pipeline completed successfully in {analysis_folder}!")
 
             return {
                 "analysis_folder": analysis_folder,
