@@ -235,3 +235,9 @@ pauper_analysis_*/
 
 # 🔒 Outputs d'analyse (visualisations générées)
 */visualizations/*
+
+# 🔒 Interdictions globales
+tests/fixtures/mock_data/
+data/mock/
+_ARCHIVE_A_SUPPRIMER/obsolete_analyses/
+*.json
