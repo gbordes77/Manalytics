@@ -261,6 +261,10 @@ Democratize MTG metagame analysis through complete automation, providing profess
 - [**User Guide**](docs/USER_GUIDE_ADVANCED_ANALYTICS.md) - Practical usage and interpretation
 - [**Changelog**](docs/CHANGELOG.md) - Version history and improvements
 
+#### **🔄 Team Management**
+- [**Team Handoff Checklist**](docs/TEAM_HANDOFF_CHECKLIST.md) - Complete transition guide
+- [**Onboarding Checklist**](docs/ONBOARDING_CHECKLIST.md) - Self-assessment validation
+
 ### **Quick Help**
 - **Setup Issues**: Check [troubleshooting guide](docs/SETUP_DEV.md#troubleshooting)
 - **Architecture Questions**: Review [architecture docs](docs/ARCHITECTURE_QUICKREAD.md)
