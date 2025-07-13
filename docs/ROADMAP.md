@@ -4,11 +4,18 @@
 
 ## 🏁 Tags Clés & Jalons
 
-### ✅ **v0.3.0** - Clean Baseline (Actuel)
+### ✅ **v0.3.0** - Clean Baseline
 - **Date** : 13 juillet 2025
 - **Réalisé** : Repository professionnel, hooks sécurisés, documentation complète
 - **Décision clé** : Architecture modulaire `src/` pour scalabilité future
 - **Impact** : Équipe peut onboard en <2h, développement collaboratif possible
+
+### ✅ **v0.3.1** - UX Améliorée (Actuel)
+- **Date** : 13 juillet 2025
+- **Réalisé** : Interface utilisateur enrichie, différenciation MTGO, navigation optimisée
+- **Features** : Badges colorés sources, URLs cliquables, export CSV, organisation Analyses/
+- **Décision clé** : Distinction Challenge/League pour comparaison Jiliac précise
+- **Impact** : Navigation 1-clic vers tournois, visibilité sources immédiate
 
 ### 🚧 **v0.4.0** - Interactive Dashboard (Q3 2025)
 - **Objectif** : Interface web temps réel
@@ -43,6 +50,11 @@
 - **Phase 1** : Fichiers statiques → déploiement simple
 - **Phase 2** : Dashboard → interaction temps réel
 - **Migration** : Code visualisation réutilisable
+
+### **Why MTGO Challenge/League Distinction**
+- **Problème** : Comparaison imprécise avec données Jiliac (Challenge only)
+- **Solution** : Parsing URL pour distinguer types tournois MTGO
+- **Bénéfice** : Analyses comparatives fiables, contexte compétitif clair
 
 ## 🎪 Use Cases Futurs
 

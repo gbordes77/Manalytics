@@ -9,6 +9,8 @@
 - [ ] Pourquoi utilise-t-on du scraping multi-sources ?
 - [ ] Quels sont les 3 formats supportés ?
 - [ ] Quel est l'objectif des 9 visualisations ?
+- [ ] **🆕 Pourquoi différencier MTGO Challenge vs League ?**
+- [ ] **🆕 Comment accéder directement aux tournois depuis le dashboard ?**
 
 **🔗 Lu** : [ROADMAP.md](ROADMAP.md) | **➡️ Suivant** : [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
 
@@ -34,6 +36,9 @@
 - [ ] Installé les hooks pre-commit
 - [ ] Lancé avec succès un pipeline de test
 - [ ] Vu les 9 graphiques générés
+- [ ] **🆕 Testé les badges colorés des sources sous "Analyse complète"**
+- [ ] **🆕 Cliqué sur le lien "Tournois analysés" et testé les URLs**
+- [ ] **🆕 Vérifié la distinction MTGO Challenge vs League 5-0**
 
 **🔗 Exécuté** : [SETUP_DEV.md](SETUP_DEV.md) | **➡️ Suivant** : Première PR
 

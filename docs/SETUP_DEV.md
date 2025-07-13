@@ -2,6 +2,25 @@
 
 > **Objectif** : Développeur opérationnel sur Manalytics en ≤5 min
 
+## 🆕 Nouvelles Fonctionnalités v0.3.1
+
+> **Mise à jour du 13 juillet 2025** - Améliorations majeures de l'interface utilisateur
+
+### **Différenciation MTGO**
+- **Challenge vs League** : Distinction claire des types de tournois MTGO
+- **Badges colorés** : Rouge (Challenge), Vert (League), Turquoise (melee.gg)
+- **Analyse précise** : Comparaison directe avec les données Jiliac
+
+### **Navigation améliorée**
+- **URLs cliquables** : Accès direct aux tournois depuis le dashboard
+- **Boutons fonctionnels** : Retour dashboard + Export CSV (en travaux)
+- **Organisation** : Analyses dans dossier `Analyses/` avec préfixes
+
+### **Interface utilisateur**
+- **Sources visibles** : Badges sous "Analyse complète"
+- **Accès tournois** : Clic sur "XX Tournois analysés"
+- **Navigation fluide** : Ouverture nouvel onglet
+
 ## 🚀 Setup Express
 
 ### 1. **Clone & Baseline** (30s)
@@ -34,8 +53,15 @@ echo "Hooks installés : formatage automatique au commit"
 python run_full_pipeline.py --format Standard --start-date 2025-07-01 --end-date 2025-07-07
 
 # Vérification
-ls standard_analysis_2025-07-01_2025-07-07/  # Doit afficher 13 fichiers
-open standard_analysis_2025-07-01_2025-07-07/index.html
+ls Analyses/standard_analysis_2025-07-01_2025-07-07/  # Doit afficher 13 fichiers
+open Analyses/standard_analysis_2025-07-01_2025-07-07/index.html
+
+# 🆕 Tester les nouvelles fonctionnalités v0.3.1
+echo "🎯 Testez les nouvelles fonctionnalités :"
+echo "1. Dashboard -> Badges colorés sous 'Analyse complète'"
+echo "2. Cliquer sur 'XX Tournois analysés' -> URLs cliquables"
+echo "3. Vérifier distinction MTGO Challenge vs League 5-0"
+echo "4. Bouton 'Retour au Dashboard' fonctionnel"
 ```
 
 ### 5. **Validation Setup** (30s)

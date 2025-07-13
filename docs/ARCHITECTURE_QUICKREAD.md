@@ -56,6 +56,20 @@ classifier.classify_deck(decklist) → "Rakdos Midrange"
 - **Rôle** : Génération 9 charts interactifs Plotly
 - **Types** : Pie charts, heatmaps, scatter plots, évolutions temporelles
 - **Export** : HTML standalone + données CSV/JSON
+- **🆕 v0.3.1** : Badges colorés sources, URLs cliquables, export CSV
+
+## 🆕 Améliorations v0.3.1
+
+### **Orchestrator** (`src/orchestrator.py`)
+- **Différenciation MTGO** : `_determine_source()` distingue Challenge/League
+- **Navigation** : Génération URLs cliquables + boutons fonctionnels
+- **Organisation** : Analyses dans dossier `Analyses/` avec préfixes
+- **Interface** : Badges colorés sources intégrés dashboard
+
+### **Impacts techniques**
+- **Parsing amélioré** : Détection type tournoi via URL patterns
+- **UI/UX enrichie** : CSS/JS pour badges colorés et navigation
+- **Structure fichiers** : Préfixes cohérents pour tous outputs
 
 ## 🔧 Points d'Extension
 

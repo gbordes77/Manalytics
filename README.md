@@ -72,6 +72,28 @@ open standard_analysis_2025-07-01_2025-07-07/index.html
 8. **Bar chart archétypes** - Top archétypes du format
 9. **Sources de données** - Répartition des tournois
 
+## 🆕 Nouvelles fonctionnalités v0.3.1
+
+### 🎯 **Différenciation MTGO**
+- **MTGO Challenge** vs **MTGO League 5-0** - Distinction claire pour comparaison avec Jiliac
+- **Badges colorés** - Identification visuelle immédiate des sources
+- **Analyse précise** - Séparation des environnements compétitifs
+
+### 🔗 **Accès direct aux tournois**
+- **URLs cliquables** - Accès direct aux pages des tournois
+- **Boutons stylisés** - Interface professionnelle avec icônes
+- **Ouverture nouvel onglet** - Navigation fluide
+
+### 📊 **Export & Organisation**
+- **Export CSV** - Données tournois exportables (en développement)
+- **Dossier Analyses/** - Organisation claire avec préfixes format/date
+- **Navigation intuitive** - Boutons retour dashboard fonctionnels
+
+### 🎨 **Interface améliorée**
+- **Sources visibles** - Badges sous "Analyse complète" pour transparence
+- **Couleurs distinctives** - Turquoise (melee.gg), Rouge (Challenge), Vert (League)
+- **UX optimisée** - Accès tournois en 1 clic depuis dashboard
+
 ## 📖 Documentation
 
 | Document | Description | Pour qui ? |
