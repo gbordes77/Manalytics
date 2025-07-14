@@ -24,6 +24,15 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-14 10:57] - Claude_2025-07-14_10-57
+**Fichier(s) concerné(s)** : `scripts/add_tracker_entry.py`
+**Type** : MODIFICATION
+**Description** : Ajout mode non-interactif avec arguments CLI
+**Justification** : Permettre aux assistants IA de faire l'onboarding sans interaction manuelle
+**Tests** : Tester avec et sans arguments
+**Rollback** : git revert du commit correspondant
+
+
 ### [2025-01-14 13:30] - Assistant_AI
 **Fichier(s) concerné(s)** : `docs/MODIFICATION_TRACKER.md`
 **Type** : AJOUT
