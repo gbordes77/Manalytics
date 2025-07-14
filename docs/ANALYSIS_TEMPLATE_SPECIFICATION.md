@@ -115,5 +115,5 @@
 
 ---
 
-> **Note importante** : Ce fichier fait office de **contrat** pour ce qui doit être généré. 
-> Toute modification du pipeline doit être reflétée ici pour assurer la continuité entre équipes. 
+> **Note importante** : Ce fichier fait office de **contrat** pour ce qui doit être généré.
+> Toute modification du pipeline doit être reflétée ici pour assurer la continuité entre équipes.

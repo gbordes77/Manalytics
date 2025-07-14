@@ -9,7 +9,7 @@ Your goal is to become **operational in 2 hours maximum** and make your **first 
 **KPIs to achieve**:
 - ✅ Complete project understanding ≤ 2h
 - ✅ First pipeline run ≤ 15 min
-- ✅ First PR merged Day 1
+- ✅ First contribution merged Day 1
 
 ---
 
@@ -24,6 +24,9 @@ At each step, you **MUST** validate your understanding with the checklist before
 ### ⚠️ **RULE #3: LIVING DOCUMENTATION**
 The onboarding system is **self-monitored**. Any code modification without doc update will be **automatically blocked**.
 
+### ⚠️ **RULE #4: MAIN BRANCH ONLY**
+All work is done directly on `main` branch. No feature branches. This simplifies rollbacks and avoids merge conflicts.
+
 ---
 
 ## 🚀 **ONBOARDING JOURNEY (2h max)**
@@ -31,15 +34,14 @@ The onboarding system is **self-monitored**. Any code modification without doc u
 ### **BEFORE STARTING**
 1. Clone the repository: `git clone https://github.com/gbordes77/Manalytics.git`
 2. Enter the folder: `cd Manalytics`
-3. **IMPORTANT - Version choice**:
-   - **Recommended**: `git checkout feature/english-migration` (latest with MTG color system)
-   - **Alternative**: `git checkout v0.3.3` (stable version with colors)
-   - **Legacy**: `git checkout v0.3.2` (English interface without colors)
+3. **IMPORTANT - Always work on main**:
+   - `git checkout main`
+   - `git pull origin main` (ensure you have latest changes)
 
-**⚠️ COMPATIBILITY**:
-- If using **feature/english-migration** → follow these instructions exactly (latest with MTG colors)
-- If using **v0.3.3** → includes MTG color system, functional links, deduplication
-- If using **v0.3.2** → interface is fully in English, pipeline is stable
+**⚠️ BRANCH POLICY**:
+- **ONLY main branch** - No feature branches
+- **Direct commits** to main after validation
+- **Immediate rollback** if issues via `git revert`
 
 4. Open the [**✅ VALIDATION CHECKLIST**](ONBOARDING_CHECKLIST.md) in a separate tab
 
@@ -92,29 +94,32 @@ The onboarding system is **self-monitored**. Any code modification without doc u
 **🎯 ACTION**: Make your first contribution to prove operational readiness
 
 **📝 CONCRETE TASK**:
-1. Create a branch: `git checkout -b feature/my-first-change`
-2. Modify this file (`INSTRUCTIONS_NOUVELLE_EQUIPE.md`): add your name in the "Team" section below
-3. Commit: `git add . && git commit -m "docs: add [YOUR_NAME] to team"`
-4. Push: `git push origin feature/my-first-change`
-5. Create a PR on GitHub
-6. **IMPORTANT**: In the PR template, check the "README Lightning Tour" box (since you're modifying documentation)
+1. **IMPORTANT**: Check [MODIFICATION_TRACKER.md](MODIFICATION_TRACKER.md) and add your entry BEFORE modifying
+2. Stay on main: `git status` (should show "On branch main")
+3. Modify this file (`INSTRUCTIONS_NOUVELLE_EQUIPE.md`): add your name in the "Team" section below
+4. Commit: `git add . && git commit -m "docs: add [YOUR_NAME_DATETIME] to team"`
+5. Push: `git push origin main`
+6. **NO PR NEEDED** - Direct commit to main
 
 **📝 VALIDATION**: Your onboarding is complete when:
-- [ ] Your branch is created
-- [ ] Your modification is committed
-- [ ] Your PR is created with template filled
-- [ ] Your PR is reviewed and merged
+- [ ] Your entry is added to MODIFICATION_TRACKER.md
+- [ ] Your modification is committed to main
+- [ ] Your name is added to the team list
+- [ ] Your commit is pushed successfully
 
 **✅ FINAL CHECKPOINT**: First contribution successful!
 
 ---
 
-## 🏆 **TEAM - Add your name here after your first PR**
+## 🏆 **TEAM - Add your name here after your first contribution**
 
-*Developers who successfully completed Manalytics v0.3.2 onboarding:*
+*Format: [YOUR_NAME]_[YYYY-MM-DD_HH-MM] - Brief description*
 
-- Claude Sonnet 4 (AI Assistant) - onboarding completed on 2025-07-13
-- [Your name here after your first PR]
+*Developers who successfully completed Manalytics v0.3.4 onboarding:*
+
+- Claude_Sonnet_4_2025-07-13_14-30 - AI Assistant, onboarding system setup
+- Assistant_AI_2025-01-14_13-45 - Workflow simplification and tracking system
+- [Your name here after your first contribution]
 
 ---
 
@@ -127,10 +132,10 @@ Read carefully. If still stuck, consult [GUIDE_DEVELOPPEUR.md](GUIDE_DEVELOPPEUR
 Consult [SETUP_DEV.md - Troubleshooting](SETUP_DEV.md#troubleshooting-express)
 
 ### **Stuck on Step 4?**
-The PR template guides you. Each checkbox corresponds to a documentation section.
+Check [MODIFICATION_TRACKER.md](MODIFICATION_TRACKER.md) for examples of proper entries.
 
-### **PR blocked by CI?**
-The `onboarding-guard` workflow detected that you're modifying code without updating documentation. This is normal! Check the right box in the PR template.
+### **Commit blocked by CI?**
+Ensure you've updated [MODIFICATION_TRACKER.md](MODIFICATION_TRACKER.md) before your change.
 
 ---
 
@@ -138,56 +143,57 @@ The `onboarding-guard` workflow detected that you're modifying code without upda
 
 1. **MANDATORY ORDER**: 1→2→3→4 (each step prepares the next)
 2. **VALIDATION REQUIRED**: Use the checklist at each step
-3. **FIRST PR MANDATORY**: Add your name to this file
-4. **PR TEMPLATE**: Always check a box (or n/a with justification)
+3. **MAIN BRANCH ONLY**: No feature branches, direct commits to main
+4. **MODIFICATION TRACKER**: Always update before making changes
 5. **LIVING DOCUMENTATION**: Self-monitored system to guarantee quality
-6. **VERSIONING**: These instructions are for v0.3.2+. Future versions will include their own updated instructions.
+6. **IMMEDIATE ROLLBACK**: Use `git revert` if issues detected
 
 ---
 
-## 🌍 **ENGLISH MIGRATION COMPLETED**
+## 🌍 **WORKFLOW SIMPLIFICATION**
 
-### **What Changed in v0.3.2**
-- **Complete Interface Translation**: All user messages, charts, and UI elements are now in English
-- **Improved Classification**: Better archetype handling, removed non-Standard archetypes
-- **Source Attribution**: Fixed MTGO source classification issues
-- **Professional Experience**: Unified English interface for international use
+### **What Changed in v0.3.4**
+- **Main Branch Only**: No more feature branches to avoid merge conflicts
+- **Direct Commits**: Faster integration, immediate rollback if needed
+- **Modification Tracker**: Full traceability of all changes
+- **Enhanced Safety**: Pre-commit hooks + rollback procedures
 
-### **What Stayed the Same**
-- **All Functionality**: Complete feature parity with French version
-- **Real Data**: Still uses only real tournament data (no mock data)
-- **Pipeline Performance**: Same speed and reliability
-- **File Structure**: Analyses/ folder structure preserved
+### **Why This Approach**
+- ✅ **Faster Development**: No branch management overhead
+- ✅ **Easier Rollbacks**: `git revert` is simpler than merge conflicts
+- ✅ **Better Tracking**: MODIFICATION_TRACKER.md provides full history
+- ✅ **Reduced Complexity**: One branch to rule them all
 
 ---
 
-## 🔄 **ONBOARDING KIT EVOLUTION**
+## 🔄 **ROLLBACK PROCEDURES**
 
-**How this system evolves**:
-- Each new version (v0.3.3, v0.4.0, etc.) may have updated onboarding instructions
-- **Golden Rule**: Always use the instructions from the version you checked out
-- If no instructions in your version → go back to v0.3.2 which is guaranteed stable
+### **If Your Change Causes Issues**
+1. Identify the commit hash: `git log --oneline`
+2. Revert the change: `git revert <commit-hash>`
+3. Push the revert: `git push origin main`
+4. Update MODIFICATION_TRACKER.md with rollback entry
 
-**Why this approach**:
-- ✅ Guarantees instructions match the code
-- ✅ Avoids version compatibility issues
-- ✅ Allows onboarding process evolution
+### **If You Need to Undo Multiple Changes**
+1. Use `git revert` for each commit in reverse order
+2. Or use `git reset --hard <last-good-commit>` (⚠️ DANGEROUS)
+3. Force push only if absolutely necessary: `git push --force-with-lease`
 
 ---
 
 ## 🎯 **SUCCESS**
 
 **Congratulations!** If you followed these instructions, you now master:
-- ✅ Manalytics v0.3.2 → v1.0 product vision
+- ✅ Manalytics v0.3.4 product vision
 - ✅ Technical architecture and extension points
 - ✅ Operational development environment
-- ✅ Contribution workflow and governance
-- ✅ English interface and improved classification system
+- ✅ Simplified main-branch workflow
+- ✅ Modification tracking system
 
 **You're ready to contribute effectively to the project!**
 
 ---
 
 *Instructions created on: July 13, 2025*
-*Baseline: v0.3.2*
+*Updated for main-branch workflow: January 14, 2025*
 *Self-maintained onboarding system*

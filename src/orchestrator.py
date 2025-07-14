@@ -15,9 +15,9 @@ from typing import Dict, List
 import pandas as pd
 
 from python.analytics.advanced_metagame_analyzer import AdvancedMetagameAnalyzer
+from python.classifier.advanced_archetype_classifier import AdvancedArchetypeClassifier
 from python.classifier.color_detector import ColorDetector
 from python.classifier.mtgo_classifier import MTGOClassifier
-from python.classifier.advanced_archetype_classifier import AdvancedArchetypeClassifier
 from python.visualizations.matchup_matrix import MatchupMatrixGenerator
 from python.visualizations.metagame_charts import MetagameChartsGenerator
 
@@ -31,7 +31,7 @@ class ManalyticsOrchestrator:
         self.deck_analyzer = None
         self.color_detector = None
         self.advanced_classifier = AdvancedArchetypeClassifier()  # NEW
-        
+
         self.logger = logging.getLogger(__name__)
         # Initialize MTGO classifier
         self.mtgo_classifier = MTGOClassifier()
@@ -437,31 +437,35 @@ class ManalyticsOrchestrator:
         """Classify archetype using MTGO classifier then add color integration"""
         try:
             # First get the base archetype using MTGO classifier
-            base_archetype = self.mtgo_classifier.classify_deck(mainboard, [], self.format)
-            
+            base_archetype = self.mtgo_classifier.classify_deck(
+                mainboard, [], self.format
+            )
+
             # If MTGO classifier can't classify, try fallback
             if not base_archetype or base_archetype == "Unknown":
                 base_archetype = self._classify_by_colors_fallback(mainboard)
-            
+
             # Get color analysis
             color_analysis = self.color_detector.analyze_decklist_colors(mainboard)
-            guild_name = color_analysis.get('guild_name', '')
-            
+            guild_name = color_analysis.get("guild_name", "")
+
             # Integrate colors with archetype name
-            if guild_name and guild_name != 'Colorless' and guild_name != 'Unknown':
+            if guild_name and guild_name != "Colorless" and guild_name != "Unknown":
                 archetype_with_colors = f"{guild_name} {base_archetype}"
             else:
                 archetype_with_colors = base_archetype
-            
+
             # Log classification for debugging
-            self.logger.debug(f"Base archetype: {base_archetype} -> With colors: {archetype_with_colors}")
-            
+            self.logger.debug(
+                f"Base archetype: {base_archetype} -> With colors: {archetype_with_colors}"
+            )
+
             return archetype_with_colors
 
         except Exception as e:
             self.logger.error(f"Error in archetype classification: {e}")
             return self._classify_by_colors_fallback(mainboard)
-    
+
     def _classify_with_mtgo_fallback(self, mainboard):
         """Fallback to MTGO classifier if advanced classifier fails"""
         try:
@@ -473,28 +477,55 @@ class ManalyticsOrchestrator:
         except Exception as e:
             self.logger.error(f"Error in MTGO fallback: {e}")
             return self._classify_by_colors_fallback(mainboard)
-    
+
     def _extract_simple_archetype_name(self, archetype_with_colors):
         """Extract simple archetype name without color prefixes for backwards compatibility"""
         if not archetype_with_colors or archetype_with_colors == "Others":
             return "Others"
-        
+
         # Remove common color prefixes
         color_prefixes = [
-            'Azorius ', 'Dimir ', 'Rakdos ', 'Gruul ', 'Selesnya ',
-            'Orzhov ', 'Izzet ', 'Golgari ', 'Boros ', 'Simic ',
-            'Esper ', 'Grixis ', 'Jund ', 'Naya ', 'Bant ',
-            'Mono-White ', 'Mono-Blue ', 'Mono-Black ', 'Mono-Red ', 'Mono-Green ',
-            'White ', 'Blue ', 'Black ', 'Red ', 'Green ',
-            'Five-Color ', '5C ', 'WUBRG ', 'Sans-White ', 'Sans-Blue ', 'Sans-Black ', 'Sans-Red ', 'Sans-Green '
+            "Azorius ",
+            "Dimir ",
+            "Rakdos ",
+            "Gruul ",
+            "Selesnya ",
+            "Orzhov ",
+            "Izzet ",
+            "Golgari ",
+            "Boros ",
+            "Simic ",
+            "Esper ",
+            "Grixis ",
+            "Jund ",
+            "Naya ",
+            "Bant ",
+            "Mono-White ",
+            "Mono-Blue ",
+            "Mono-Black ",
+            "Mono-Red ",
+            "Mono-Green ",
+            "White ",
+            "Blue ",
+            "Black ",
+            "Red ",
+            "Green ",
+            "Five-Color ",
+            "5C ",
+            "WUBRG ",
+            "Sans-White ",
+            "Sans-Blue ",
+            "Sans-Black ",
+            "Sans-Red ",
+            "Sans-Green ",
         ]
-        
+
         simple_name = archetype_with_colors
         for prefix in color_prefixes:
             if simple_name.startswith(prefix):
-                simple_name = simple_name[len(prefix):]
+                simple_name = simple_name[len(prefix) :]
                 break
-        
+
         return simple_name if simple_name else "Others"
 
     def _classify_by_colors_fallback(self, mainboard):
@@ -706,7 +737,9 @@ class ManalyticsOrchestrator:
 
             # Statistiques générales
             total_tournaments = df["tournament_id"].nunique()
-            total_players = df["player_name"].nunique()  # Count unique players like the old system
+            total_players = df[
+                "player_name"
+            ].nunique()  # Count unique players like the old system
             total_matches = len(df)  # Use total decks as matches
             archetypes = sorted(df["archetype"].unique())
 
@@ -828,7 +861,7 @@ class ManalyticsOrchestrator:
             margin: 2rem 0;
             text-align: center;
         }}
-        
+
         .mtgo-button {{
             display: inline-block;
             background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
@@ -843,17 +876,17 @@ class ManalyticsOrchestrator:
             border: none;
             cursor: pointer;
         }}
-        
+
         .mtgo-button:hover {{
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
             background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
         }}
-        
+
         .mtgo-button:active {{
             transform: translateY(-1px);
         }}
-        
+
         .mtgo-description {{
             margin-top: 0.5rem;
             font-size: 0.9rem;
@@ -1737,51 +1770,69 @@ class ManalyticsOrchestrator:
         """Generate players_stats.html page with detailed player analysis"""
         try:
             # Calculate player statistics using simple groupby
-            player_stats = df.groupby('player_name').agg({
-                'tournament_id': 'nunique',  # Number of tournaments
-                'archetype': ['count', lambda x: len(x.unique())],  # Number of decks and unique archetypes
-                'color_identity': lambda x: x.mode().iloc[0] if not x.empty else 'Unknown'  # Most common colors
-            })
-            
+            player_stats = df.groupby("player_name").agg(
+                {
+                    "tournament_id": "nunique",  # Number of tournaments
+                    "archetype": [
+                        "count",
+                        lambda x: len(x.unique()),
+                    ],  # Number of decks and unique archetypes
+                    "color_identity": lambda x: x.mode().iloc[0]
+                    if not x.empty
+                    else "Unknown",  # Most common colors
+                }
+            )
+
             # Flatten column names
-            player_stats.columns = ['tournaments', 'decks', 'archetypes', 'favorite_colors']
+            player_stats.columns = [
+                "tournaments",
+                "decks",
+                "archetypes",
+                "favorite_colors",
+            ]
             player_stats = player_stats.reset_index()
-            
+
             # Get favorite archetype for each player
-            favorite_archetypes = df.groupby('player_name')['archetype'].apply(
-                lambda x: x.value_counts().index[0] if len(x) > 0 else 'Unknown'
-            ).reset_index()
-            favorite_archetypes.columns = ['player_name', 'favorite_archetype']
-            
+            favorite_archetypes = (
+                df.groupby("player_name")["archetype"]
+                .apply(lambda x: x.value_counts().index[0] if len(x) > 0 else "Unknown")
+                .reset_index()
+            )
+            favorite_archetypes.columns = ["player_name", "favorite_archetype"]
+
             # Merge data
-            players_data = player_stats.merge(favorite_archetypes, on='player_name')
-            
+            players_data = player_stats.merge(favorite_archetypes, on="player_name")
+
             # Sort by number of decks (activity)
-            players_data = players_data.sort_values('decks', ascending=False).reset_index(drop=True)
-            players_data['rank'] = range(1, len(players_data) + 1)
-            
+            players_data = players_data.sort_values(
+                "decks", ascending=False
+            ).reset_index(drop=True)
+            players_data["rank"] = range(1, len(players_data) + 1)
+
             # Get summary stats
             total_players = len(players_data)
             most_active_player = players_data.iloc[0] if len(players_data) > 0 else None
-            
+
             # Generate HTML
-            html_content = self._generate_players_html(players_data, total_players, most_active_player)
-            
+            html_content = self._generate_players_html(
+                players_data, total_players, most_active_player
+            )
+
             # Save file
             output_path = Path(output_dir) / "players_stats.html"
             with open(output_path, "w", encoding="utf-8") as f:
                 f.write(html_content)
-                
+
             self.logger.info(f"✅ Players stats page created: {output_path}")
             return str(output_path)
-            
+
         except Exception as e:
             self.logger.error(f"❌ Error generating players stats: {e}")
             return None
 
     def _generate_players_html(self, players_data, total_players, most_active_player):
         """Generate HTML content for players stats page"""
-        
+
         # Generate player rows
         player_rows = ""
         for _, player in players_data.iterrows():
@@ -1799,11 +1850,11 @@ class ManalyticsOrchestrator:
                     <td class="favorite-colors">{player['favorite_colors']}</td>
                 </tr>
             """
-        
+
         most_active_info = ""
         if most_active_player is not None:
             most_active_info = f"<br><small>{most_active_player['player_name']}</small>"
-        
+
         return f"""
         <!DOCTYPE html>
         <html>
@@ -1845,7 +1896,7 @@ class ManalyticsOrchestrator:
         <body>
             <div class="container">
                 <a href="javascript:window.close()" class="back-link">← Back to Dashboard</a>
-                
+
                 <div class="header">
                     <h1>👥 Players Statistics</h1>
                     <p>Detailed analysis of player activity and preferences</p>
@@ -1895,25 +1946,27 @@ class ManalyticsOrchestrator:
         """Generate dedicated MTGO analysis with filtered data"""
         try:
             # Filter for MTGO data only
-            mtgo_df = df[df['tournament_source'].str.contains('mtgo.com', case=False, na=False)]
-            
+            mtgo_df = df[
+                df["tournament_source"].str.contains("mtgo.com", case=False, na=False)
+            ]
+
             if len(mtgo_df) == 0:
                 self.logger.warning("No MTGO data found for dedicated analysis")
                 return None
-            
+
             # Create MTGO analysis directory
             mtgo_dir = Path(output_dir) / "mtgo_analysis"
             mtgo_dir.mkdir(exist_ok=True)
-            
+
             # Generate all MTGO-specific content
             self._generate_mtgo_dashboard(str(mtgo_dir), mtgo_df)
             self._generate_mtgo_visualizations(str(mtgo_dir), mtgo_df)
             self._export_detailed_decklists(mtgo_df, str(mtgo_dir))
-            self._generate_archetype_pages(mtgo_df.to_dict('records'), mtgo_dir)
-            
+            self._generate_archetype_pages(mtgo_df.to_dict("records"), mtgo_dir)
+
             self.logger.info(f"✅ MTGO analysis created: {mtgo_dir}")
             return str(mtgo_dir)
-            
+
         except Exception as e:
             self.logger.error(f"❌ Error generating MTGO analysis: {e}")
             return None
@@ -1921,10 +1974,12 @@ class ManalyticsOrchestrator:
     def _generate_mtgo_dashboard(self, output_dir: str, df: pd.DataFrame):
         """Generate MTGO-specific dashboard"""
         total_tournaments = df["tournament_id"].nunique()
-        total_players = df["player_name"].nunique()  # Use unique players like the old system
+        total_players = df[
+            "player_name"
+        ].nunique()  # Use unique players like the old system
         total_matches = len(df)  # Use deck count as matches
         archetypes = sorted(df["archetype"].unique())
-        
+
         # Generate source badges for MTGO sources
         sources = df["tournament_source"].unique()
         source_badges = ""
@@ -1941,7 +1996,7 @@ class ManalyticsOrchestrator:
         # Use date range from the orchestrator
         start_date = getattr(self, "start_date", "2025-05-08")
         end_date = getattr(self, "end_date", "2025-06-09")
-        
+
         # Generate MTGO-specific HTML with red theme
         html_content = f"""
 <!DOCTYPE html>
@@ -2118,7 +2173,7 @@ class ManalyticsOrchestrator:
 </body>
 </html>
         """
-        
+
         # Save MTGO dashboard
         output_path = Path(output_dir) / f"standard_{start_date}_{end_date}_mtgo.html"
         with open(output_path, "w", encoding="utf-8") as f:
@@ -2126,19 +2181,19 @@ class ManalyticsOrchestrator:
 
     def _generate_mtgo_visualizations(self, output_dir: str, df: pd.DataFrame):
         """Generate ALL MTGO visualizations (same as main analysis)"""
-        from src.python.visualizations.metagame_charts import MetagameChartsGenerator
         from src.python.visualizations.matchup_matrix import MatchupMatrixGenerator
-        
+        from src.python.visualizations.metagame_charts import MetagameChartsGenerator
+
         viz_dir = Path(output_dir) / "visualizations"
         viz_dir.mkdir(exist_ok=True)
-        
+
         # Generate complete set of charts like main analysis
         charts_generator = MetagameChartsGenerator()
         matchup_generator = MatchupMatrixGenerator()
-        
+
         self.logger.info("📊 Generating MTGO matchup matrix...")
         matchup_result = matchup_generator.generate_full_report(str(viz_dir), df)
-        
+
         self.logger.info("📈 Generating MTGO metagame charts...")
         charts_result = charts_generator.generate_all_charts(df, str(viz_dir))
 
@@ -2212,270 +2267,306 @@ class ManalyticsOrchestrator:
 
         return insights
 
-    def generate_metagame_analysis(self, start_date, end_date, format_type="Standard", output_dir=None):
+    def generate_metagame_analysis(
+        self, start_date, end_date, format_type="Standard", output_dir=None
+    ):
         """
         Enhanced metagame analysis with color integration
         Based on Aliquanto3's R-Meta-Analysis system
         """
         print(f"🚀 Generating enhanced metagame analysis for {format_type}...")
         print(f"📅 Period: {start_date} to {end_date}")
-        
+
         # Setup
         if output_dir is None:
             timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-            output_dir = os.path.join("Analyses", f"{format_type.lower()}_analysis_{timestamp}")
-        
+            output_dir = os.path.join(
+                "Analyses", f"{format_type.lower()}_analysis_{timestamp}"
+            )
+
         os.makedirs(output_dir, exist_ok=True)
         self._setup_services()
-        
+
         # Fetch and process data
         print("📊 Fetching tournament data...")
         tournaments = self._fetch_tournaments(start_date, end_date, format_type)
-        
+
         print("🔍 Processing decks with advanced classification...")
         all_decks = []
         processed_tournaments = []
-        
+
         for tournament in tournaments:
             tournament_decks = self._process_tournament_enhanced(tournament)
             all_decks.extend(tournament_decks)
             processed_tournaments.append(tournament)
-        
-        print(f"✅ Processed {len(all_decks)} decks from {len(processed_tournaments)} tournaments")
-        
+
+        print(
+            f"✅ Processed {len(all_decks)} decks from {len(processed_tournaments)} tournaments"
+        )
+
         # Generate enhanced analysis
-        enhanced_data = self._generate_enhanced_analysis_data(all_decks, processed_tournaments)
-        
+        enhanced_data = self._generate_enhanced_analysis_data(
+            all_decks, processed_tournaments
+        )
+
         # Save enhanced data
         enhanced_data_path = os.path.join(output_dir, "enhanced_analysis_data.json")
-        with open(enhanced_data_path, 'w') as f:
+        with open(enhanced_data_path, "w") as f:
             json.dump(enhanced_data, f, indent=2, cls=DateTimeEncoder)
-        
+
         # Generate all outputs
         self._generate_all_enhanced_outputs(enhanced_data, output_dir)
-        
+
         print(f"🎉 Enhanced analysis complete! Results saved to: {output_dir}")
         return output_dir
 
     def _process_tournament_enhanced(self, tournament):
         """Process tournament with enhanced classification"""
         enhanced_decks = []
-        
-        for deck in tournament.get('decks', []):
+
+        for deck in tournament.get("decks", []):
             try:
                 # Basic processing
-                colors = self.color_detector.analyze_decklist_colors(deck['cards'])
-                color_identity = colors.get('color_identity', '')
-                
+                colors = self.color_detector.analyze_decklist_colors(deck["cards"])
+                color_identity = colors.get("color_identity", "")
+
                 # Enhanced classification
                 deck_data = {
-                    'cards': [card['name'] for card in deck['cards']],
-                    'color_identity': color_identity
+                    "cards": [card["name"] for card in deck["cards"]],
+                    "color_identity": color_identity,
                 }
-                
-                advanced_classification = self.advanced_classifier.classify_with_color_integration(deck_data)
-                
+
+                advanced_classification = (
+                    self.advanced_classifier.classify_with_color_integration(deck_data)
+                )
+
                 enhanced_deck = {
-                    'player': deck.get('player', 'Unknown'),
-                    'archetype': advanced_classification['archetype'],
-                    'archetype_with_colors': advanced_classification['archetype_with_colors'],
-                    'color_identity': advanced_classification['color_identity'],
-                    'guild_name': advanced_classification['guild_name'],
-                    'strategy_type': advanced_classification['strategy_type'],
-                    'confidence': advanced_classification['confidence'],
-                    'colors': colors,
-                    'cards': deck['cards'],
-                    'tournament_name': tournament.get('name', ''),
-                    'tournament_date': tournament.get('date', ''),
-                    'placement': deck.get('placement', 0)
+                    "player": deck.get("player", "Unknown"),
+                    "archetype": advanced_classification["archetype"],
+                    "archetype_with_colors": advanced_classification[
+                        "archetype_with_colors"
+                    ],
+                    "color_identity": advanced_classification["color_identity"],
+                    "guild_name": advanced_classification["guild_name"],
+                    "strategy_type": advanced_classification["strategy_type"],
+                    "confidence": advanced_classification["confidence"],
+                    "colors": colors,
+                    "cards": deck["cards"],
+                    "tournament_name": tournament.get("name", ""),
+                    "tournament_date": tournament.get("date", ""),
+                    "placement": deck.get("placement", 0),
                 }
-                
+
                 enhanced_decks.append(enhanced_deck)
-                
+
             except Exception as e:
                 print(f"⚠️ Error processing deck: {e}")
                 continue
-        
+
         return enhanced_decks
 
     def _generate_enhanced_analysis_data(self, all_decks, tournaments):
         """Generate enhanced analysis data structure"""
-        
+
         # Classification statistics
         classification_stats = self.advanced_classifier.generate_archetype_statistics(
-            [{'classification': deck} for deck in all_decks]
+            [{"classification": deck} for deck in all_decks]
         )
-        
+
         # Tournament statistics
         tournament_stats = {
-            'total_tournaments': len(tournaments),
-            'date_range': {
-                'start': min(t.get('date', '') for t in tournaments) if tournaments else '',
-                'end': max(t.get('date', '') for t in tournaments) if tournaments else ''
+            "total_tournaments": len(tournaments),
+            "date_range": {
+                "start": min(t.get("date", "") for t in tournaments)
+                if tournaments
+                else "",
+                "end": max(t.get("date", "") for t in tournaments)
+                if tournaments
+                else "",
             },
-            'tournaments_by_date': self._group_tournaments_by_date(tournaments)
+            "tournaments_by_date": self._group_tournaments_by_date(tournaments),
         }
-        
+
         # Deck statistics
         deck_stats = {
-            'total_decks': len(all_decks),
-            'unique_players': len(set(deck['player'] for deck in all_decks)),
-            'archetype_distribution': dict(classification_stats['archetype_distribution']),
-            'color_integrated_distribution': dict(classification_stats['color_integrated_distribution']),
-            'color_distribution': dict(classification_stats['color_distribution']),
-            'strategy_distribution': dict(classification_stats['strategy_distribution'])
+            "total_decks": len(all_decks),
+            "unique_players": len(set(deck["player"] for deck in all_decks)),
+            "archetype_distribution": dict(
+                classification_stats["archetype_distribution"]
+            ),
+            "color_integrated_distribution": dict(
+                classification_stats["color_integrated_distribution"]
+            ),
+            "color_distribution": dict(classification_stats["color_distribution"]),
+            "strategy_distribution": dict(
+                classification_stats["strategy_distribution"]
+            ),
         }
-        
+
         # Enhanced metagame breakdown
         metagame_breakdown = self._calculate_enhanced_metagame_breakdown(all_decks)
-        
+
         # Diversity metrics (from Aliquanto3's MTGOCardDiversity)
         diversity_metrics = self._calculate_diversity_metrics(all_decks)
-        
+
         return {
-            'metadata': {
-                'generated_at': datetime.now().isoformat(),
-                'classification_accuracy': classification_stats['classification_accuracy'],
-                'others_percentage': classification_stats['others_percentage'],
-                'version': 'Enhanced v1.0 (Aliquanto3 inspired)'
+            "metadata": {
+                "generated_at": datetime.now().isoformat(),
+                "classification_accuracy": classification_stats[
+                    "classification_accuracy"
+                ],
+                "others_percentage": classification_stats["others_percentage"],
+                "version": "Enhanced v1.0 (Aliquanto3 inspired)",
             },
-            'tournament_stats': tournament_stats,
-            'deck_stats': deck_stats,
-            'classification_stats': classification_stats,
-            'metagame_breakdown': metagame_breakdown,
-            'diversity_metrics': diversity_metrics,
-            'raw_decks': all_decks,
-            'raw_tournaments': tournaments
+            "tournament_stats": tournament_stats,
+            "deck_stats": deck_stats,
+            "classification_stats": classification_stats,
+            "metagame_breakdown": metagame_breakdown,
+            "diversity_metrics": diversity_metrics,
+            "raw_decks": all_decks,
+            "raw_tournaments": tournaments,
         }
 
     def _calculate_enhanced_metagame_breakdown(self, all_decks):
         """Calculate enhanced metagame breakdown with color integration"""
         total_decks = len(all_decks)
-        
+
         # Basic archetype breakdown
-        archetype_counts = Counter(deck['archetype'] for deck in all_decks)
-        
+        archetype_counts = Counter(deck["archetype"] for deck in all_decks)
+
         # Color-integrated breakdown
-        color_integrated_counts = Counter(deck['archetype_with_colors'] for deck in all_decks)
-        
+        color_integrated_counts = Counter(
+            deck["archetype_with_colors"] for deck in all_decks
+        )
+
         # Strategy breakdown
-        strategy_counts = Counter(deck['strategy_type'] for deck in all_decks)
-        
+        strategy_counts = Counter(deck["strategy_type"] for deck in all_decks)
+
         # Color breakdown
-        color_counts = Counter(deck['color_identity'] for deck in all_decks)
-        
+        color_counts = Counter(deck["color_identity"] for deck in all_decks)
+
         # Calculate percentages and create breakdown
         breakdown = {
-            'by_archetype': [
+            "by_archetype": [
                 {
-                    'archetype': archetype,
-                    'count': count,
-                    'percentage': round((count / total_decks) * 100, 2)
+                    "archetype": archetype,
+                    "count": count,
+                    "percentage": round((count / total_decks) * 100, 2),
                 }
                 for archetype, count in archetype_counts.most_common()
             ],
-            'by_color_integrated': [
+            "by_color_integrated": [
                 {
-                    'archetype': archetype,
-                    'count': count,
-                    'percentage': round((count / total_decks) * 100, 2)
+                    "archetype": archetype,
+                    "count": count,
+                    "percentage": round((count / total_decks) * 100, 2),
                 }
                 for archetype, count in color_integrated_counts.most_common()
             ],
-            'by_strategy': [
+            "by_strategy": [
                 {
-                    'strategy': strategy,
-                    'count': count,
-                    'percentage': round((count / total_decks) * 100, 2)
+                    "strategy": strategy,
+                    "count": count,
+                    "percentage": round((count / total_decks) * 100, 2),
                 }
                 for strategy, count in strategy_counts.most_common()
             ],
-            'by_colors': [
+            "by_colors": [
                 {
-                    'colors': colors,
-                    'count': count,
-                    'percentage': round((count / total_decks) * 100, 2)
+                    "colors": colors,
+                    "count": count,
+                    "percentage": round((count / total_decks) * 100, 2),
                 }
                 for colors, count in color_counts.most_common()
-            ]
+            ],
         }
-        
+
         return breakdown
 
     def _calculate_diversity_metrics(self, all_decks):
         """Calculate diversity metrics inspired by Aliquanto3's MTGOCardDiversity"""
-        from collections import defaultdict
         import math
-        
+        from collections import defaultdict
+
         # Card diversity metrics
         all_cards = defaultdict(int)
         archetype_card_usage = defaultdict(lambda: defaultdict(int))
-        
+
         for deck in all_decks:
-            archetype = deck['archetype_with_colors']
-            for card in deck['cards']:
-                card_name = card['name']
+            archetype = deck["archetype_with_colors"]
+            for card in deck["cards"]:
+                card_name = card["name"]
                 all_cards[card_name] += 1
                 archetype_card_usage[archetype][card_name] += 1
-        
+
         # Calculate Shannon diversity index for archetypes
-        archetype_counts = Counter(deck['archetype_with_colors'] for deck in all_decks)
+        archetype_counts = Counter(deck["archetype_with_colors"] for deck in all_decks)
         total_decks = len(all_decks)
-        
+
         shannon_diversity = 0
         for count in archetype_counts.values():
             p = count / total_decks
             if p > 0:
                 shannon_diversity -= p * math.log2(p)
-        
+
         # Calculate Simpson diversity index
-        simpson_diversity = 1 - sum((count / total_decks) ** 2 for count in archetype_counts.values())
-        
+        simpson_diversity = 1 - sum(
+            (count / total_decks) ** 2 for count in archetype_counts.values()
+        )
+
         # Card usage statistics
         total_unique_cards = len(all_cards)
-        most_played_cards = sorted(all_cards.items(), key=lambda x: x[1], reverse=True)[:20]
-        
+        most_played_cards = sorted(all_cards.items(), key=lambda x: x[1], reverse=True)[
+            :20
+        ]
+
         return {
-            'shannon_diversity_index': round(shannon_diversity, 3),
-            'simpson_diversity_index': round(simpson_diversity, 3),
-            'total_unique_cards': total_unique_cards,
-            'total_archetype_variants': len(archetype_counts),
-            'most_played_cards': [
-                {'name': name, 'count': count, 'percentage': round((count / total_decks) * 100, 2)}
+            "shannon_diversity_index": round(shannon_diversity, 3),
+            "simpson_diversity_index": round(simpson_diversity, 3),
+            "total_unique_cards": total_unique_cards,
+            "total_archetype_variants": len(archetype_counts),
+            "most_played_cards": [
+                {
+                    "name": name,
+                    "count": count,
+                    "percentage": round((count / total_decks) * 100, 2),
+                }
                 for name, count in most_played_cards
             ],
-            'archetype_diversity_score': round(shannon_diversity / math.log2(max(len(archetype_counts), 2)), 3)
+            "archetype_diversity_score": round(
+                shannon_diversity / math.log2(max(len(archetype_counts), 2)), 3
+            ),
         }
 
     def _generate_all_enhanced_outputs(self, enhanced_data, output_dir):
         """Generate all enhanced outputs based on Aliquanto3's system"""
-        
+
         # 1. Enhanced Dashboard (with color integration)
         self._generate_enhanced_dashboard(enhanced_data, output_dir)
-        
+
         # 2. Enhanced Visualizations
         self._generate_enhanced_visualizations(enhanced_data, output_dir)
-        
+
         # 3. Diversity Analysis (from MTGOCardDiversity)
         self._generate_diversity_analysis(enhanced_data, output_dir)
-        
+
         # 4. Statistical Reports (from Test_Normal.R)
         self._generate_statistical_reports(enhanced_data, output_dir)
-        
+
         # 5. Export Data (from EXPORT_GRAPHS_AND_TXT.R)
         self._generate_export_data(enhanced_data, output_dir)
-        
+
         print("📊 All enhanced outputs generated successfully!")
 
     def _generate_enhanced_dashboard(self, enhanced_data, output_dir):
         """Generate enhanced dashboard with color integration"""
-        
+
         # Extract data
-        deck_stats = enhanced_data['deck_stats']
-        metagame_breakdown = enhanced_data['metagame_breakdown']
-        diversity_metrics = enhanced_data['diversity_metrics']
-        classification_stats = enhanced_data['classification_stats']
-        
+        deck_stats = enhanced_data["deck_stats"]
+        metagame_breakdown = enhanced_data["metagame_breakdown"]
+        diversity_metrics = enhanced_data["diversity_metrics"]
+        classification_stats = enhanced_data["classification_stats"]
+
         html_content = f"""
         <!DOCTYPE html>
         <html lang="en">
@@ -2495,7 +2586,7 @@ class ManalyticsOrchestrator:
                     <p class="subtitle">Advanced Color-Integrated Classification System</p>
                     <div class="version-badge">Enhanced v1.0 (Aliquanto3 Inspired)</div>
                 </header>
-                
+
                 <div class="nav-bar">
                     <button class="nav-btn active" onclick="showSection('overview')">📊 Overview</button>
                     <button class="nav-btn" onclick="showSection('archetypes')">🎮 Archetypes</button>
@@ -2513,7 +2604,7 @@ class ManalyticsOrchestrator:
                                 <div class="stat-label">Total Decks</div>
                             </div>
                         </div>
-                        
+
                         <div class="stat-card enhanced">
                             <div class="stat-icon">👤</div>
                             <div class="stat-info">
@@ -2521,7 +2612,7 @@ class ManalyticsOrchestrator:
                                 <div class="stat-label">Unique Players</div>
                             </div>
                         </div>
-                        
+
                         <div class="stat-card enhanced">
                             <div class="stat-icon">🎯</div>
                             <div class="stat-info">
@@ -2529,7 +2620,7 @@ class ManalyticsOrchestrator:
                                 <div class="stat-label">Archetypes</div>
                             </div>
                         </div>
-                        
+
                         <div class="stat-card enhanced success">
                             <div class="stat-icon">✅</div>
                             <div class="stat-info">
@@ -2537,7 +2628,7 @@ class ManalyticsOrchestrator:
                                 <div class="stat-label">Classification Accuracy</div>
                             </div>
                         </div>
-                        
+
                         <div class="stat-card enhanced info">
                             <div class="stat-icon">🌈</div>
                             <div class="stat-info">
@@ -2545,7 +2636,7 @@ class ManalyticsOrchestrator:
                                 <div class="stat-label">Shannon Diversity</div>
                             </div>
                         </div>
-                        
+
                         <div class="stat-card enhanced warning">
                             <div class="stat-icon">❓</div>
                             <div class="stat-info">
@@ -2554,7 +2645,7 @@ class ManalyticsOrchestrator:
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="chart-container">
                         <canvas id="overviewChart"></canvas>
                     </div>
@@ -2572,7 +2663,7 @@ class ManalyticsOrchestrator:
                             <canvas id="colorIntegratedChart"></canvas>
                         </div>
                     </div>
-                    
+
                     <div class="archetype-table">
                         <h3>📋 Detailed Breakdown</h3>
                         <table>
@@ -2597,7 +2688,7 @@ class ManalyticsOrchestrator:
                     <div class="chart-container">
                         <canvas id="colorChart"></canvas>
                     </div>
-                    
+
                     <div class="color-breakdown">
                         {self._generate_color_breakdown_html(metagame_breakdown['by_colors'])}
                     </div>
@@ -2611,26 +2702,26 @@ class ManalyticsOrchestrator:
                             <div class="diversity-value">{diversity_metrics['shannon_diversity_index']}</div>
                             <p>Measures archetype diversity (higher = more diverse)</p>
                         </div>
-                        
+
                         <div class="diversity-card">
                             <h3>Simpson Diversity Index</h3>
                             <div class="diversity-value">{diversity_metrics['simpson_diversity_index']:.3f}</div>
                             <p>Probability that two random decks are different archetypes</p>
                         </div>
-                        
+
                         <div class="diversity-card">
                             <h3>Unique Cards</h3>
                             <div class="diversity-value">{diversity_metrics['total_unique_cards']}</div>
                             <p>Total number of different cards played</p>
                         </div>
-                        
+
                         <div class="diversity-card">
                             <h3>Archetype Variants</h3>
                             <div class="diversity-value">{diversity_metrics['total_archetype_variants']}</div>
                             <p>Number of distinct archetype variants</p>
                         </div>
                     </div>
-                    
+
                     <div class="most-played-cards">
                         <h3>🔥 Most Played Cards</h3>
                         <div class="cards-grid">
@@ -2648,7 +2739,7 @@ class ManalyticsOrchestrator:
                             <li><strong>Unclassified Rate:</strong> {classification_stats['others_percentage']:.1f}%</li>
                             <li><strong>Archetype Diversity Score:</strong> {diversity_metrics['archetype_diversity_score']:.3f}</li>
                         </ul>
-                        
+
                         <h3>Distribution Analysis</h3>
                         <div class="distribution-charts">
                             <canvas id="strategyChart"></canvas>
@@ -2663,182 +2754,201 @@ class ManalyticsOrchestrator:
         </body>
         </html>
         """
-        
+
         dashboard_path = os.path.join(output_dir, "enhanced_dashboard.html")
-        with open(dashboard_path, 'w', encoding='utf-8') as f:
+        with open(dashboard_path, "w", encoding="utf-8") as f:
             f.write(html_content)
-        
+
         print(f"📊 Enhanced dashboard generated: {dashboard_path}")
 
     def _group_tournaments_by_date(self, tournaments):
         """Group tournaments by date for analysis"""
         from collections import defaultdict
-        
+
         tournaments_by_date = defaultdict(list)
         for tournament in tournaments:
-            date = tournament.get('date', '')
+            date = tournament.get("date", "")
             if date:
                 tournaments_by_date[date].append(tournament)
-        
+
         return dict(tournaments_by_date)
 
     def _generate_enhanced_visualizations(self, enhanced_data, output_dir):
         """Generate enhanced visualizations based on Aliquanto3's ANIMATED_GRAPHS.R"""
-        
+
         # Create visualizations directory
         viz_dir = os.path.join(output_dir, "visualizations")
         os.makedirs(viz_dir, exist_ok=True)
-        
+
         # 1. Animated pie chart showing archetype evolution
         self._create_animated_archetype_chart(enhanced_data, viz_dir)
-        
+
         # 2. Color distribution heatmap
         self._create_color_heatmap(enhanced_data, viz_dir)
-        
+
         # 3. Strategy evolution over time
         self._create_strategy_timeline(enhanced_data, viz_dir)
-        
+
         print(f"📈 Enhanced visualizations generated in: {viz_dir}")
 
     def _create_animated_archetype_chart(self, enhanced_data, viz_dir):
         """Create animated archetype distribution chart"""
-        
+
         # For now, create a static version that can be enhanced with animation later
         import matplotlib.pyplot as plt
         import numpy as np
-        
+
         # Get archetype data
-        archetype_data = enhanced_data['metagame_breakdown']['by_color_integrated']
-        
+        archetype_data = enhanced_data["metagame_breakdown"]["by_color_integrated"]
+
         # Prepare data
-        archetypes = [item['archetype'] for item in archetype_data[:15]]  # Top 15
-        percentages = [item['percentage'] for item in archetype_data[:15]]
-        
+        archetypes = [item["archetype"] for item in archetype_data[:15]]  # Top 15
+        percentages = [item["percentage"] for item in archetype_data[:15]]
+
         # Create figure
         fig, ax = plt.subplots(figsize=(12, 8))
-        
+
         # Create pie chart
         colors = plt.cm.Set3(np.linspace(0, 1, len(archetypes)))
-        wedges, texts, autotexts = ax.pie(percentages, labels=archetypes, autopct='%1.1f%%', 
-                                         colors=colors, startangle=90)
-        
+        wedges, texts, autotexts = ax.pie(
+            percentages,
+            labels=archetypes,
+            autopct="%1.1f%%",
+            colors=colors,
+            startangle=90,
+        )
+
         # Styling
-        plt.title('Color-Integrated Archetype Distribution\n(Enhanced Analysis)', fontsize=16, fontweight='bold')
+        plt.title(
+            "Color-Integrated Archetype Distribution\n(Enhanced Analysis)",
+            fontsize=16,
+            fontweight="bold",
+        )
         plt.setp(autotexts, size=8, weight="bold")
         plt.setp(texts, size=9)
-        
+
         # Save
         chart_path = os.path.join(viz_dir, "animated_archetype_distribution.png")
-        plt.savefig(chart_path, dpi=300, bbox_inches='tight')
+        plt.savefig(chart_path, dpi=300, bbox_inches="tight")
         plt.close()
-        
+
         print(f"📊 Animated archetype chart saved: {chart_path}")
 
     def _create_color_heatmap(self, enhanced_data, viz_dir):
         """Create color distribution heatmap"""
-        
+
         import matplotlib.pyplot as plt
         import numpy as np
-        
+
         # Get color data
-        color_data = enhanced_data['metagame_breakdown']['by_colors']
-        
+        color_data = enhanced_data["metagame_breakdown"]["by_colors"]
+
         # Create a matrix representation
         color_matrix = {}
         for item in color_data:
-            colors = item['colors']
-            percentage = item['percentage']
+            colors = item["colors"]
+            percentage = item["percentage"]
             color_matrix[colors] = percentage
-        
+
         # Create figure
         fig, ax = plt.subplots(figsize=(10, 6))
-        
+
         # Simple bar chart for now (can be enhanced to actual heatmap)
         colors = list(color_matrix.keys())[:10]  # Top 10
         percentages = [color_matrix[c] for c in colors]
-        
-        bars = ax.bar(range(len(colors)), percentages, color='skyblue', alpha=0.7)
-        
+
+        bars = ax.bar(range(len(colors)), percentages, color="skyblue", alpha=0.7)
+
         # Styling
-        ax.set_xlabel('Color Combinations')
-        ax.set_ylabel('Percentage of Decks')
-        ax.set_title('Color Distribution Heatmap')
+        ax.set_xlabel("Color Combinations")
+        ax.set_ylabel("Percentage of Decks")
+        ax.set_title("Color Distribution Heatmap")
         ax.set_xticks(range(len(colors)))
         ax.set_xticklabels(colors, rotation=45)
-        
+
         # Add value labels
         for bar, percentage in zip(bars, percentages):
             height = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width()/2., height + 0.1,
-                   f'{percentage:.1f}%', ha='center', va='bottom')
-        
+            ax.text(
+                bar.get_x() + bar.get_width() / 2.0,
+                height + 0.1,
+                f"{percentage:.1f}%",
+                ha="center",
+                va="bottom",
+            )
+
         plt.tight_layout()
-        
+
         # Save
         heatmap_path = os.path.join(viz_dir, "color_distribution_heatmap.png")
-        plt.savefig(heatmap_path, dpi=300, bbox_inches='tight')
+        plt.savefig(heatmap_path, dpi=300, bbox_inches="tight")
         plt.close()
-        
+
         print(f"🎨 Color heatmap saved: {heatmap_path}")
 
     def _create_strategy_timeline(self, enhanced_data, viz_dir):
         """Create strategy evolution timeline"""
-        
+
         import matplotlib.pyplot as plt
-        
+
         # Get strategy data
-        strategy_data = enhanced_data['metagame_breakdown']['by_strategy']
-        
+        strategy_data = enhanced_data["metagame_breakdown"]["by_strategy"]
+
         # Create figure
         fig, ax = plt.subplots(figsize=(10, 6))
-        
-        strategies = [item['strategy'] for item in strategy_data]
-        percentages = [item['percentage'] for item in strategy_data]
-        
+
+        strategies = [item["strategy"] for item in strategy_data]
+        percentages = [item["percentage"] for item in strategy_data]
+
         # Create horizontal bar chart
-        bars = ax.barh(strategies, percentages, color='lightcoral', alpha=0.7)
-        
+        bars = ax.barh(strategies, percentages, color="lightcoral", alpha=0.7)
+
         # Styling
-        ax.set_xlabel('Percentage of Decks')
-        ax.set_title('Strategy Distribution Analysis')
-        
+        ax.set_xlabel("Percentage of Decks")
+        ax.set_title("Strategy Distribution Analysis")
+
         # Add value labels
         for bar, percentage in zip(bars, percentages):
             width = bar.get_width()
-            ax.text(width + 0.5, bar.get_y() + bar.get_height()/2.,
-                   f'{percentage:.1f}%', ha='left', va='center')
-        
+            ax.text(
+                width + 0.5,
+                bar.get_y() + bar.get_height() / 2.0,
+                f"{percentage:.1f}%",
+                ha="left",
+                va="center",
+            )
+
         plt.tight_layout()
-        
+
         # Save
         timeline_path = os.path.join(viz_dir, "strategy_timeline.png")
-        plt.savefig(timeline_path, dpi=300, bbox_inches='tight')
+        plt.savefig(timeline_path, dpi=300, bbox_inches="tight")
         plt.close()
-        
+
         print(f"📈 Strategy timeline saved: {timeline_path}")
 
     def _generate_diversity_analysis(self, enhanced_data, output_dir):
         """Generate diversity analysis based on Aliquanto3's MTGOCardDiversity"""
-        
+
         diversity_dir = os.path.join(output_dir, "diversity_analysis")
         os.makedirs(diversity_dir, exist_ok=True)
-        
-        diversity_metrics = enhanced_data['diversity_metrics']
-        
+
+        diversity_metrics = enhanced_data["diversity_metrics"]
+
         # 1. Generate diversity report
         self._create_diversity_report(diversity_metrics, diversity_dir)
-        
+
         # 2. Generate card usage analysis
         self._create_card_usage_analysis(enhanced_data, diversity_dir)
-        
+
         # 3. Generate archetype diversity breakdown
         self._create_archetype_diversity_breakdown(enhanced_data, diversity_dir)
-        
+
         print(f"📊 Diversity analysis generated in: {diversity_dir}")
 
     def _create_diversity_report(self, diversity_metrics, diversity_dir):
         """Create comprehensive diversity report"""
-        
+
         report_content = f"""
 # MTG Metagame Diversity Analysis Report
 *Generated by Enhanced Manalytics (Aliquanto3 Inspired)*
@@ -2850,7 +2960,7 @@ This report provides a comprehensive analysis of the metagame diversity using ad
 ## Key Metrics
 
 ### Shannon Diversity Index: {diversity_metrics['shannon_diversity_index']}
-The Shannon diversity index measures the diversity and richness of archetypes in the metagame. 
+The Shannon diversity index measures the diversity and richness of archetypes in the metagame.
 - **Score Range**: 0 to log₂(number of archetypes)
 - **Interpretation**: Higher values indicate greater diversity
 - **Current Score**: {diversity_metrics['shannon_diversity_index']} (Good diversity level)
@@ -2880,10 +2990,10 @@ The number of distinct archetype variants identified by the enhanced classificat
 The following cards appear most frequently across all decks:
 
 """
-        
-        for i, card in enumerate(diversity_metrics['most_played_cards'][:10], 1):
+
+        for i, card in enumerate(diversity_metrics["most_played_cards"][:10], 1):
             report_content += f"{i}. **{card['name']}** - {card['count']} decks ({card['percentage']:.1f}%)\n"
-        
+
         report_content += f"""
 
 ## Methodology
@@ -2905,113 +3015,145 @@ Based on the current diversity metrics:
 ---
 *Report generated on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}*
 """
-        
+
         report_path = os.path.join(diversity_dir, "diversity_report.md")
-        with open(report_path, 'w', encoding='utf-8') as f:
+        with open(report_path, "w", encoding="utf-8") as f:
             f.write(report_content)
-        
+
         print(f"📋 Diversity report saved: {report_path}")
 
     def _create_card_usage_analysis(self, enhanced_data, diversity_dir):
         """Create detailed card usage analysis"""
-        
+
         # Extract card usage data
-        all_decks = enhanced_data['raw_decks']
-        card_usage = defaultdict(lambda: {'total_count': 0, 'archetypes': defaultdict(int)})
-        
+        all_decks = enhanced_data["raw_decks"]
+        card_usage = defaultdict(
+            lambda: {"total_count": 0, "archetypes": defaultdict(int)}
+        )
+
         for deck in all_decks:
-            archetype = deck['archetype_with_colors']
-            for card in deck['cards']:
-                card_name = card['name']
-                card_usage[card_name]['total_count'] += 1
-                card_usage[card_name]['archetypes'][archetype] += 1
-        
+            archetype = deck["archetype_with_colors"]
+            for card in deck["cards"]:
+                card_name = card["name"]
+                card_usage[card_name]["total_count"] += 1
+                card_usage[card_name]["archetypes"][archetype] += 1
+
         # Create CSV export
         import csv
-        
+
         card_usage_data = []
         for card_name, data in card_usage.items():
-            card_usage_data.append({
-                'card_name': card_name,
-                'total_usage': data['total_count'],
-                'archetype_spread': len(data['archetypes']),
-                'most_used_in': max(data['archetypes'].items(), key=lambda x: x[1])[0] if data['archetypes'] else 'None',
-                'usage_percentage': round((data['total_count'] / len(all_decks)) * 100, 2)
-            })
-        
+            card_usage_data.append(
+                {
+                    "card_name": card_name,
+                    "total_usage": data["total_count"],
+                    "archetype_spread": len(data["archetypes"]),
+                    "most_used_in": max(data["archetypes"].items(), key=lambda x: x[1])[
+                        0
+                    ]
+                    if data["archetypes"]
+                    else "None",
+                    "usage_percentage": round(
+                        (data["total_count"] / len(all_decks)) * 100, 2
+                    ),
+                }
+            )
+
         # Sort by usage
-        card_usage_data.sort(key=lambda x: x['total_usage'], reverse=True)
-        
+        card_usage_data.sort(key=lambda x: x["total_usage"], reverse=True)
+
         # Save to CSV
         csv_path = os.path.join(diversity_dir, "card_usage_analysis.csv")
-        with open(csv_path, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=['card_name', 'total_usage', 'archetype_spread', 'most_used_in', 'usage_percentage'])
+        with open(csv_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(
+                f,
+                fieldnames=[
+                    "card_name",
+                    "total_usage",
+                    "archetype_spread",
+                    "most_used_in",
+                    "usage_percentage",
+                ],
+            )
             writer.writeheader()
             writer.writerows(card_usage_data)
-        
+
         print(f"📊 Card usage analysis saved: {csv_path}")
 
     def _create_archetype_diversity_breakdown(self, enhanced_data, diversity_dir):
         """Create archetype diversity breakdown"""
-        
+
         import json
-        
+
         # Create detailed breakdown
         breakdown = {
-            'classification_performance': {
-                'accuracy': enhanced_data['classification_stats']['classification_accuracy'],
-                'others_percentage': enhanced_data['classification_stats']['others_percentage']
+            "classification_performance": {
+                "accuracy": enhanced_data["classification_stats"][
+                    "classification_accuracy"
+                ],
+                "others_percentage": enhanced_data["classification_stats"][
+                    "others_percentage"
+                ],
             },
-            'archetype_analysis': {
-                'basic_archetypes': enhanced_data['deck_stats']['archetype_distribution'],
-                'color_integrated_archetypes': enhanced_data['deck_stats']['color_integrated_distribution'],
-                'improvement_ratio': len(enhanced_data['deck_stats']['color_integrated_distribution']) / max(len(enhanced_data['deck_stats']['archetype_distribution']), 1)
+            "archetype_analysis": {
+                "basic_archetypes": enhanced_data["deck_stats"][
+                    "archetype_distribution"
+                ],
+                "color_integrated_archetypes": enhanced_data["deck_stats"][
+                    "color_integrated_distribution"
+                ],
+                "improvement_ratio": len(
+                    enhanced_data["deck_stats"]["color_integrated_distribution"]
+                )
+                / max(len(enhanced_data["deck_stats"]["archetype_distribution"]), 1),
             },
-            'diversity_trends': enhanced_data['diversity_metrics']
+            "diversity_trends": enhanced_data["diversity_metrics"],
         }
-        
+
         # Save breakdown
-        breakdown_path = os.path.join(diversity_dir, "archetype_diversity_breakdown.json")
-        with open(breakdown_path, 'w', encoding='utf-8') as f:
+        breakdown_path = os.path.join(
+            diversity_dir, "archetype_diversity_breakdown.json"
+        )
+        with open(breakdown_path, "w", encoding="utf-8") as f:
             json.dump(breakdown, f, indent=2)
-        
+
         print(f"📈 Archetype diversity breakdown saved: {breakdown_path}")
 
     def _generate_statistical_reports(self, enhanced_data, output_dir):
         """Generate statistical reports based on Aliquanto3's Test_Normal.R"""
-        
+
         stats_dir = os.path.join(output_dir, "statistical_analysis")
         os.makedirs(stats_dir, exist_ok=True)
-        
+
         # 1. Distribution analysis
         self._create_distribution_analysis(enhanced_data, stats_dir)
-        
+
         # 2. Significance testing
         self._create_significance_tests(enhanced_data, stats_dir)
-        
+
         # 3. Correlation analysis
         self._create_correlation_analysis(enhanced_data, stats_dir)
-        
+
         print(f"📊 Statistical reports generated in: {stats_dir}")
 
     def _create_distribution_analysis(self, enhanced_data, stats_dir):
         """Create distribution analysis report"""
-        
-        all_decks = enhanced_data['raw_decks']
-        
+
+        all_decks = enhanced_data["raw_decks"]
+
         # Analyze archetype distribution
-        archetype_counts = Counter(deck['archetype_with_colors'] for deck in all_decks)
+        archetype_counts = Counter(deck["archetype_with_colors"] for deck in all_decks)
         total_decks = len(all_decks)
-        
+
         # Calculate statistical measures
         counts = list(archetype_counts.values())
-        
+
         import numpy as np
-        
+
         mean_count = np.mean(counts)
         std_count = np.std(counts)
         median_count = np.median(counts)
-        
+
         # Create report
         report = f"""
 # Statistical Distribution Analysis
@@ -3026,11 +3168,11 @@ Based on the current diversity metrics:
 ## Top Archetypes (Color-Integrated)
 
 """
-        
+
         for archetype, count in archetype_counts.most_common(10):
             percentage = (count / total_decks) * 100
             report += f"- **{archetype}**: {count} decks ({percentage:.1f}%)\n"
-        
+
         report += f"""
 
 ## Distribution Analysis
@@ -3043,16 +3185,16 @@ The distribution shows a {'healthy' if std_count/mean_count < 1.0 else 'concentr
 
 {'The metagame shows good diversity with no single archetype dominating.' if std_count/mean_count < 1.0 else 'The metagame shows some concentration. Monitor for potential balance issues.'}
 """
-        
+
         report_path = os.path.join(stats_dir, "distribution_analysis.md")
-        with open(report_path, 'w', encoding='utf-8') as f:
+        with open(report_path, "w", encoding="utf-8") as f:
             f.write(report)
-        
+
         print(f"📊 Distribution analysis saved: {report_path}")
 
     def _create_significance_tests(self, enhanced_data, stats_dir):
         """Create significance testing report"""
-        
+
         # For now, create a placeholder that can be enhanced with actual statistical tests
         report = f"""
 # Statistical Significance Testing
@@ -3077,162 +3219,180 @@ The color integration system shows:
 
 The enhanced classification system demonstrates statistically significant improvements over basic archetype detection.
 """
-        
+
         test_path = os.path.join(stats_dir, "significance_tests.md")
-        with open(test_path, 'w', encoding='utf-8') as f:
+        with open(test_path, "w", encoding="utf-8") as f:
             f.write(report)
-        
+
         print(f"📊 Significance tests saved: {test_path}")
 
     def _create_correlation_analysis(self, enhanced_data, stats_dir):
         """Create correlation analysis between colors and archetypes"""
-        
+
         # Extract correlation data
-        all_decks = enhanced_data['raw_decks']
-        
+        all_decks = enhanced_data["raw_decks"]
+
         # Create correlation matrix data
         color_archetype_matrix = defaultdict(lambda: defaultdict(int))
-        
+
         for deck in all_decks:
-            color = deck['color_identity']
-            archetype = deck['archetype']
+            color = deck["color_identity"]
+            archetype = deck["archetype"]
             color_archetype_matrix[color][archetype] += 1
-        
+
         # Save correlation data
         import json
-        
+
         correlation_data = {
-            'color_archetype_matrix': {k: dict(v) for k, v in color_archetype_matrix.items()},
-            'analysis_summary': {
-                'total_color_combinations': len(color_archetype_matrix),
-                'total_archetypes': len(set(deck['archetype'] for deck in all_decks)),
-                'strongest_correlations': self._find_strongest_correlations(color_archetype_matrix)
-            }
+            "color_archetype_matrix": {
+                k: dict(v) for k, v in color_archetype_matrix.items()
+            },
+            "analysis_summary": {
+                "total_color_combinations": len(color_archetype_matrix),
+                "total_archetypes": len(set(deck["archetype"] for deck in all_decks)),
+                "strongest_correlations": self._find_strongest_correlations(
+                    color_archetype_matrix
+                ),
+            },
         }
-        
+
         correlation_path = os.path.join(stats_dir, "correlation_analysis.json")
-        with open(correlation_path, 'w', encoding='utf-8') as f:
+        with open(correlation_path, "w", encoding="utf-8") as f:
             json.dump(correlation_data, f, indent=2)
-        
+
         print(f"📊 Correlation analysis saved: {correlation_path}")
 
     def _find_strongest_correlations(self, color_archetype_matrix):
         """Find strongest correlations between colors and archetypes"""
-        
+
         correlations = []
-        
+
         for color, archetypes in color_archetype_matrix.items():
             if color:  # Skip empty colors
                 total_color_decks = sum(archetypes.values())
                 for archetype, count in archetypes.items():
                     if count >= 3:  # Minimum threshold
                         correlation = count / total_color_decks
-                        correlations.append({
-                            'color': color,
-                            'archetype': archetype,
-                            'correlation': correlation,
-                            'count': count
-                        })
-        
+                        correlations.append(
+                            {
+                                "color": color,
+                                "archetype": archetype,
+                                "correlation": correlation,
+                                "count": count,
+                            }
+                        )
+
         # Sort by correlation strength
-        correlations.sort(key=lambda x: x['correlation'], reverse=True)
+        correlations.sort(key=lambda x: x["correlation"], reverse=True)
         return correlations[:10]  # Top 10
 
     def _generate_export_data(self, enhanced_data, output_dir):
         """Generate export data based on Aliquanto3's EXPORT_GRAPHS_AND_TXT.R"""
-        
+
         export_dir = os.path.join(output_dir, "exports")
         os.makedirs(export_dir, exist_ok=True)
-        
+
         # 1. CSV exports
         self._create_csv_exports(enhanced_data, export_dir)
-        
+
         # 2. JSON exports
         self._create_json_exports(enhanced_data, export_dir)
-        
+
         # 3. TXT reports
         self._create_txt_reports(enhanced_data, export_dir)
-        
+
         print(f"📁 Export data generated in: {export_dir}")
 
     def _create_csv_exports(self, enhanced_data, export_dir):
         """Create CSV exports for further analysis"""
-        
+
         import csv
-        
+
         # 1. Enhanced deck data
         deck_data = []
-        for deck in enhanced_data['raw_decks']:
-            deck_data.append({
-                'player': deck['player'],
-                'archetype': deck['archetype'],
-                'archetype_with_colors': deck['archetype_with_colors'],
-                'color_identity': deck['color_identity'],
-                'guild_name': deck['guild_name'],
-                'strategy_type': deck['strategy_type'],
-                'confidence': deck['confidence'],
-                'tournament_name': deck['tournament_name'],
-                'tournament_date': deck['tournament_date'],
-                'placement': deck['placement']
-            })
-        
+        for deck in enhanced_data["raw_decks"]:
+            deck_data.append(
+                {
+                    "player": deck["player"],
+                    "archetype": deck["archetype"],
+                    "archetype_with_colors": deck["archetype_with_colors"],
+                    "color_identity": deck["color_identity"],
+                    "guild_name": deck["guild_name"],
+                    "strategy_type": deck["strategy_type"],
+                    "confidence": deck["confidence"],
+                    "tournament_name": deck["tournament_name"],
+                    "tournament_date": deck["tournament_date"],
+                    "placement": deck["placement"],
+                }
+            )
+
         deck_csv_path = os.path.join(export_dir, "enhanced_deck_data.csv")
-        with open(deck_csv_path, 'w', newline='', encoding='utf-8') as f:
+        with open(deck_csv_path, "w", newline="", encoding="utf-8") as f:
             if deck_data:
                 writer = csv.DictWriter(f, fieldnames=deck_data[0].keys())
                 writer.writeheader()
                 writer.writerows(deck_data)
-        
+
         # 2. Archetype summary
         archetype_summary = []
-        for archetype, count in enhanced_data['deck_stats']['color_integrated_distribution'].items():
-            percentage = (count / enhanced_data['deck_stats']['total_decks']) * 100
-            archetype_summary.append({
-                'archetype': archetype,
-                'count': count,
-                'percentage': round(percentage, 2)
-            })
-        
+        for archetype, count in enhanced_data["deck_stats"][
+            "color_integrated_distribution"
+        ].items():
+            percentage = (count / enhanced_data["deck_stats"]["total_decks"]) * 100
+            archetype_summary.append(
+                {
+                    "archetype": archetype,
+                    "count": count,
+                    "percentage": round(percentage, 2),
+                }
+            )
+
         archetype_csv_path = os.path.join(export_dir, "archetype_summary.csv")
-        with open(archetype_csv_path, 'w', newline='', encoding='utf-8') as f:
+        with open(archetype_csv_path, "w", newline="", encoding="utf-8") as f:
             if archetype_summary:
                 writer = csv.DictWriter(f, fieldnames=archetype_summary[0].keys())
                 writer.writeheader()
                 writer.writerows(archetype_summary)
-        
+
         print(f"📊 CSV exports saved: {export_dir}")
 
     def _create_json_exports(self, enhanced_data, export_dir):
         """Create JSON exports for web integration"""
-        
+
         import json
-        
+
         # 1. Complete enhanced data
         full_data_path = os.path.join(export_dir, "complete_enhanced_data.json")
-        with open(full_data_path, 'w', encoding='utf-8') as f:
+        with open(full_data_path, "w", encoding="utf-8") as f:
             json.dump(enhanced_data, f, indent=2, cls=DateTimeEncoder)
-        
+
         # 2. Summary data for APIs
         summary_data = {
-            'metadata': enhanced_data['metadata'],
-            'summary_stats': {
-                'total_decks': enhanced_data['deck_stats']['total_decks'],
-                'unique_players': enhanced_data['deck_stats']['unique_players'],
-                'classification_accuracy': enhanced_data['classification_stats']['classification_accuracy'],
-                'diversity_score': enhanced_data['diversity_metrics']['shannon_diversity_index']
+            "metadata": enhanced_data["metadata"],
+            "summary_stats": {
+                "total_decks": enhanced_data["deck_stats"]["total_decks"],
+                "unique_players": enhanced_data["deck_stats"]["unique_players"],
+                "classification_accuracy": enhanced_data["classification_stats"][
+                    "classification_accuracy"
+                ],
+                "diversity_score": enhanced_data["diversity_metrics"][
+                    "shannon_diversity_index"
+                ],
             },
-            'top_archetypes': enhanced_data['metagame_breakdown']['by_color_integrated'][:10]
+            "top_archetypes": enhanced_data["metagame_breakdown"][
+                "by_color_integrated"
+            ][:10],
         }
-        
+
         summary_path = os.path.join(export_dir, "api_summary.json")
-        with open(summary_path, 'w', encoding='utf-8') as f:
+        with open(summary_path, "w", encoding="utf-8") as f:
             json.dump(summary_data, f, indent=2)
-        
+
         print(f"📊 JSON exports saved: {export_dir}")
 
     def _create_txt_reports(self, enhanced_data, export_dir):
         """Create TXT reports for easy reading"""
-        
+
         # Quick summary report
         summary_report = f"""
 ENHANCED MTG METAGAME ANALYSIS SUMMARY
@@ -3251,10 +3411,12 @@ Diversity Score: {enhanced_data['diversity_metrics']['shannon_diversity_index']}
 TOP 10 COLOR-INTEGRATED ARCHETYPES
 -----------------------------------
 """
-        
-        for i, archetype_data in enumerate(enhanced_data['metagame_breakdown']['by_color_integrated'][:10], 1):
+
+        for i, archetype_data in enumerate(
+            enhanced_data["metagame_breakdown"]["by_color_integrated"][:10], 1
+        ):
             summary_report += f"{i:2d}. {archetype_data['archetype']:<25} {archetype_data['count']:3d} decks ({archetype_data['percentage']:5.1f}%)\n"
-        
+
         summary_report += f"""
 
 DIVERSITY METRICS
@@ -3273,11 +3435,11 @@ The enhanced color-integrated system shows significant improvements:
 
 For detailed analysis, see the complete reports in other directories.
 """
-        
+
         summary_path = os.path.join(export_dir, "summary_report.txt")
-        with open(summary_path, 'w', encoding='utf-8') as f:
+        with open(summary_path, "w", encoding="utf-8") as f:
             f.write(summary_report)
-        
+
         print(f"📄 TXT reports saved: {export_dir}")
 
     def _get_enhanced_dashboard_css(self):
@@ -3288,20 +3450,20 @@ For detailed analysis, see the complete reports in other directories.
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             color: #333;
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
-        
+
         .header {
             text-align: center;
             background: rgba(255, 255, 255, 0.95);
@@ -3310,20 +3472,20 @@ For detailed analysis, see the complete reports in other directories.
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .header h1 {
             color: #2c3e50;
             font-size: 2.5em;
             margin-bottom: 10px;
             font-weight: 700;
         }
-        
+
         .subtitle {
             color: #7f8c8d;
             font-size: 1.2em;
             margin-bottom: 15px;
         }
-        
+
         .version-badge {
             display: inline-block;
             background: linear-gradient(45deg, #667eea, #764ba2);
@@ -3333,7 +3495,7 @@ For detailed analysis, see the complete reports in other directories.
             font-size: 0.9em;
             font-weight: 600;
         }
-        
+
         .nav-bar {
             display: flex;
             justify-content: center;
@@ -3341,7 +3503,7 @@ For detailed analysis, see the complete reports in other directories.
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
-        
+
         .nav-btn {
             padding: 12px 24px;
             border: none;
@@ -3353,17 +3515,17 @@ For detailed analysis, see the complete reports in other directories.
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
-        
+
         .nav-btn:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
-        
+
         .nav-btn.active {
             background: rgba(255, 255, 255, 0.9);
             color: #2c3e50;
         }
-        
+
         .section {
             display: none;
             background: rgba(255, 255, 255, 0.95);
@@ -3371,18 +3533,18 @@ For detailed analysis, see the complete reports in other directories.
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .section.active {
             display: block;
         }
-        
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
-        
+
         .stat-card {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             border-radius: 15px;
@@ -3393,43 +3555,43 @@ For detailed analysis, see the complete reports in other directories.
             transition: transform 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .stat-card.enhanced {
             border-left: 5px solid #667eea;
         }
-        
+
         .stat-card.success {
             border-left-color: #27ae60;
         }
-        
+
         .stat-card.info {
             border-left-color: #3498db;
         }
-        
+
         .stat-card.warning {
             border-left-color: #f39c12;
         }
-        
+
         .stat-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .stat-icon {
             font-size: 2.5em;
         }
-        
+
         .stat-value {
             font-size: 2.2em;
             font-weight: bold;
             color: #2c3e50;
         }
-        
+
         .stat-label {
             color: #7f8c8d;
             font-size: 1em;
             margin-top: 5px;
         }
-        
+
         .chart-container {
             background: white;
             border-radius: 10px;
@@ -3437,21 +3599,21 @@ For detailed analysis, see the complete reports in other directories.
             margin: 20px 0;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .comparison-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin: 30px 0;
         }
-        
+
         .chart-half {
             background: white;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .archetype-table {
             background: white;
             border-radius: 10px;
@@ -3460,36 +3622,36 @@ For detailed analysis, see the complete reports in other directories.
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             overflow-x: auto;
         }
-        
+
         .archetype-table table {
             width: 100%;
             border-collapse: collapse;
         }
-        
+
         .archetype-table th,
         .archetype-table td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid #eee;
         }
-        
+
         .archetype-table th {
             background: #f8f9fa;
             font-weight: 600;
             color: #2c3e50;
         }
-        
+
         .archetype-table tr:hover {
             background: #f8f9fa;
         }
-        
+
         .diversity-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }
-        
+
         .diversity-card {
             background: white;
             border-radius: 10px;
@@ -3497,14 +3659,14 @@ For detailed analysis, see the complete reports in other directories.
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .diversity-value {
             font-size: 2.5em;
             font-weight: bold;
             color: #667eea;
             margin: 15px 0;
         }
-        
+
         .most-played-cards {
             background: white;
             border-radius: 10px;
@@ -3512,14 +3674,14 @@ For detailed analysis, see the complete reports in other directories.
             margin-top: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
-        
+
         .card-item {
             background: #f8f9fa;
             border-radius: 8px;
@@ -3527,11 +3689,11 @@ For detailed analysis, see the complete reports in other directories.
             text-align: center;
             border-left: 4px solid #667eea;
         }
-        
+
         .color-breakdown {
             margin-top: 30px;
         }
-        
+
         .color-item {
             display: flex;
             justify-content: space-between;
@@ -3542,14 +3704,14 @@ For detailed analysis, see the complete reports in other directories.
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         .stats-summary {
             background: white;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .distribution-charts {
             margin-top: 30px;
             background: white;
@@ -3557,29 +3719,29 @@ For detailed analysis, see the complete reports in other directories.
             padding: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         h2 {
             color: #2c3e50;
             margin-bottom: 20px;
             font-size: 1.8em;
         }
-        
+
         h3 {
             color: #34495e;
             margin-bottom: 15px;
             font-size: 1.4em;
         }
-        
+
         @media (max-width: 768px) {
             .comparison-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .nav-bar {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .header h1 {
                 font-size: 2em;
             }
@@ -3588,22 +3750,22 @@ For detailed analysis, see the complete reports in other directories.
 
     def _get_enhanced_dashboard_js(self, enhanced_data):
         """Get JavaScript for the enhanced dashboard"""
-        
+
         # Prepare data for JavaScript
-        archetype_data = enhanced_data['metagame_breakdown']['by_color_integrated']
-        color_data = enhanced_data['metagame_breakdown']['by_colors']
-        strategy_data = enhanced_data['metagame_breakdown']['by_strategy']
-        
+        archetype_data = enhanced_data["metagame_breakdown"]["by_color_integrated"]
+        color_data = enhanced_data["metagame_breakdown"]["by_colors"]
+        strategy_data = enhanced_data["metagame_breakdown"]["by_strategy"]
+
         # Convert to JavaScript format
-        archetype_labels = [item['archetype'] for item in archetype_data[:10]]
-        archetype_values = [item['percentage'] for item in archetype_data[:10]]
-        
-        color_labels = [item['colors'] for item in color_data[:8]]
-        color_values = [item['percentage'] for item in color_data[:8]]
-        
-        strategy_labels = [item['strategy'] for item in strategy_data]
-        strategy_values = [item['percentage'] for item in strategy_data]
-        
+        archetype_labels = [item["archetype"] for item in archetype_data[:10]]
+        archetype_values = [item["percentage"] for item in archetype_data[:10]]
+
+        color_labels = [item["colors"] for item in color_data[:8]]
+        color_values = [item["percentage"] for item in color_data[:8]]
+
+        strategy_labels = [item["strategy"] for item in strategy_data]
+        strategy_values = [item["percentage"] for item in strategy_data]
+
         return f"""
         // Navigation functionality
         function showSection(sectionId) {{
@@ -3611,19 +3773,19 @@ For detailed analysis, see the complete reports in other directories.
             document.querySelectorAll('.section').forEach(section => {{
                 section.classList.remove('active');
             }});
-            
+
             // Remove active class from all nav buttons
             document.querySelectorAll('.nav-btn').forEach(btn => {{
                 btn.classList.remove('active');
             }});
-            
+
             // Show selected section
             document.getElementById(sectionId).classList.add('active');
-            
+
             // Add active class to clicked button
             event.target.classList.add('active');
         }}
-        
+
         // Chart configurations
         const chartOptions = {{
             responsive: true,
@@ -3638,10 +3800,10 @@ For detailed analysis, see the complete reports in other directories.
                 }}
             }}
         }};
-        
+
         // Initialize charts when page loads
         document.addEventListener('DOMContentLoaded', function() {{
-            
+
             // Overview Chart - Archetype Distribution
             const overviewCtx = document.getElementById('overviewChart').getContext('2d');
             new Chart(overviewCtx, {{
@@ -3667,7 +3829,7 @@ For detailed analysis, see the complete reports in other directories.
                     }}
                 }}
             }});
-            
+
             // Basic Archetypes Chart
             if (document.getElementById('basicArchetypesChart')) {{
                 const basicCtx = document.getElementById('basicArchetypesChart').getContext('2d');
@@ -3686,7 +3848,7 @@ For detailed analysis, see the complete reports in other directories.
                     options: chartOptions
                 }});
             }}
-            
+
             // Color Integrated Chart
             if (document.getElementById('colorIntegratedChart')) {{
                 const colorIntegratedCtx = document.getElementById('colorIntegratedChart').getContext('2d');
@@ -3717,7 +3879,7 @@ For detailed analysis, see the complete reports in other directories.
                     }}
                 }});
             }}
-            
+
             // Color Distribution Chart
             if (document.getElementById('colorChart')) {{
                 const colorCtx = document.getElementById('colorChart').getContext('2d');
@@ -3751,7 +3913,7 @@ For detailed analysis, see the complete reports in other directories.
                     }}
                 }});
             }}
-            
+
             // Strategy Distribution Chart
             if (document.getElementById('strategyChart')) {{
                 const strategyCtx = document.getElementById('strategyChart').getContext('2d');
@@ -3788,31 +3950,31 @@ For detailed analysis, see the complete reports in other directories.
 
     def _generate_archetype_table_rows(self, enhanced_data):
         """Generate HTML table rows for archetype breakdown"""
-        
+
         # Combine data for the table
-        basic_archetypes = enhanced_data['deck_stats']['archetype_distribution']
-        color_integrated = enhanced_data['deck_stats']['color_integrated_distribution']
-        total_decks = enhanced_data['deck_stats']['total_decks']
-        
+        basic_archetypes = enhanced_data["deck_stats"]["archetype_distribution"]
+        color_integrated = enhanced_data["deck_stats"]["color_integrated_distribution"]
+        total_decks = enhanced_data["deck_stats"]["total_decks"]
+
         # Get raw deck data to map colors
         deck_color_mapping = {}
-        for deck in enhanced_data['raw_decks']:
-            archetype = deck['archetype_with_colors']
+        for deck in enhanced_data["raw_decks"]:
+            archetype = deck["archetype_with_colors"]
             if archetype not in deck_color_mapping:
                 deck_color_mapping[archetype] = {
-                    'basic_archetype': deck['archetype'],
-                    'color_identity': deck['color_identity'],
-                    'guild_name': deck['guild_name']
+                    "basic_archetype": deck["archetype"],
+                    "color_identity": deck["color_identity"],
+                    "guild_name": deck["guild_name"],
                 }
-        
+
         rows = ""
         for archetype, count in color_integrated.items():
             percentage = (count / total_decks) * 100
             color_info = deck_color_mapping.get(archetype, {})
-            basic_archetype = color_info.get('basic_archetype', archetype)
-            color_identity = color_info.get('color_identity', '')
-            guild_name = color_info.get('guild_name', '')
-            
+            basic_archetype = color_info.get("basic_archetype", archetype)
+            color_identity = color_info.get("color_identity", "")
+            guild_name = color_info.get("guild_name", "")
+
             rows += f"""
                 <tr>
                     <td><strong>{basic_archetype}</strong></td>
@@ -3822,26 +3984,32 @@ For detailed analysis, see the complete reports in other directories.
                     <td><span style="font-family: monospace; background: #f8f9fa; padding: 2px 6px; border-radius: 4px;">{color_identity}</span> ({guild_name})</td>
                 </tr>
             """
-        
+
         return rows
 
     def _generate_color_breakdown_html(self, color_data):
         """Generate HTML for color breakdown"""
-        
+
         html = ""
         for item in color_data[:10]:
-            colors = item['colors']
-            count = item['count']
-            percentage = item['percentage']
-            
+            colors = item["colors"]
+            count = item["count"]
+            percentage = item["percentage"]
+
             # Create color indicator
             color_indicator = ""
             if colors:
                 for color in colors:
-                    color_map = {'W': '#FFFBD5', 'U': '#0E68AB', 'B': '#150B00', 'R': '#D3202A', 'G': '#00733E'}
-                    bg_color = color_map.get(color, '#ccc')
+                    color_map = {
+                        "W": "#FFFBD5",
+                        "U": "#0E68AB",
+                        "B": "#150B00",
+                        "R": "#D3202A",
+                        "G": "#00733E",
+                    }
+                    bg_color = color_map.get(color, "#ccc")
                     color_indicator += f'<span style="display: inline-block; width: 15px; height: 15px; background: {bg_color}; border: 1px solid #ccc; border-radius: 3px; margin-right: 2px;"></span>'
-            
+
             html += f"""
                 <div class="color-item">
                     <div>
@@ -3854,12 +4022,12 @@ For detailed analysis, see the complete reports in other directories.
                     </div>
                 </div>
             """
-        
+
         return html
 
     def _generate_most_played_cards_html(self, most_played_cards):
         """Generate HTML for most played cards"""
-        
+
         html = ""
         for i, card in enumerate(most_played_cards[:12], 1):
             html += f"""
@@ -3869,5 +4037,5 @@ For detailed analysis, see the complete reports in other directories.
                     <div style="color: #666; font-size: 0.9em;">{card['percentage']:.1f}%</div>
                 </div>
             """
-        
+
         return html

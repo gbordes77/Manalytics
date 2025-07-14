@@ -197,7 +197,11 @@ class MetagameChartsGenerator:
         """Crée le pie chart de part de métagame (comme l'image PNG)"""
 
         # Calculer les parts de métagame par archétype avec couleurs
-        archetype_column = "archetype_with_colors" if "archetype_with_colors" in df.columns else "archetype"
+        archetype_column = (
+            "archetype_with_colors"
+            if "archetype_with_colors" in df.columns
+            else "archetype"
+        )
         archetype_counts = df[archetype_column].value_counts()
         total_players = len(df)
 
@@ -312,8 +316,12 @@ class MetagameChartsGenerator:
     def calculate_archetype_stats(self, df: pd.DataFrame) -> pd.DataFrame:
         """Calcule les statistiques par archétype avec intégration des couleurs"""
         # Utiliser archetype_with_colors pour l'affichage avec les couleurs intégrées
-        group_column = "archetype_with_colors" if "archetype_with_colors" in df.columns else "archetype"
-        
+        group_column = (
+            "archetype_with_colors"
+            if "archetype_with_colors" in df.columns
+            else "archetype"
+        )
+
         stats_df = (
             df.groupby(group_column)
             .agg(
@@ -340,7 +348,7 @@ class MetagameChartsGenerator:
         ]
         stats_df = stats_df.reset_index()
         # Renommer la colonne pour maintenir la compatibilité
-        stats_df.rename(columns={group_column: 'archetype'}, inplace=True)
+        stats_df.rename(columns={group_column: "archetype"}, inplace=True)
 
         # Calculer les intervalles de confiance
         stats_df["ci_lower"] = stats_df.apply(
@@ -827,7 +835,11 @@ class MetagameChartsGenerator:
         df["date"] = df["tournament_date"].dt.date
 
         # Grouper par date et archétype avec couleurs
-        archetype_column = "archetype_with_colors" if "archetype_with_colors" in df.columns else "archetype"
+        archetype_column = (
+            "archetype_with_colors"
+            if "archetype_with_colors" in df.columns
+            else "archetype"
+        )
         daily_counts = (
             df.groupby(["date", archetype_column]).size().reset_index(name="count")
         )

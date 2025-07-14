@@ -28,6 +28,8 @@
 - [ ] What are the 4 main modules?
 - [ ] **🆕 Where are the English interface elements located?**
 - [ ] **🆕 How does the source attribution system work?**
+- [ ] **🆕 Why do we work only on main branch?**
+- [ ] **🆕 What is the MODIFICATION_TRACKER.md file for?**
 
 **🔗 Read**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md) | **➡️ Next**: [SETUP_DEV.md](SETUP_DEV.md)
 
@@ -36,13 +38,14 @@
 ## ⚙️ **STEP 3: Development Setup** (45 min)
 
 **📋 Before continuing, validate that you successfully:**
-- [ ] Cloned the repo and checked out the right version ✅ (already done)
+- [ ] Cloned the repo and checked out main branch ✅
 - [ ] Installed Python dependencies
 - [ ] Installed pre-commit hooks
 - [ ] Successfully ran a test pipeline
 - [ ] **🆕 Verified the dashboard interface is in English**
 - [ ] **🆕 Confirmed the Analyses/ folder structure is created**
 - [ ] **🆕 Checked that archetype classification works correctly**
+- [ ] **🆕 Understood the main-branch-only workflow**
 - [ ] Saw the 9 graphs generated in the output folder
 
 **🔗 Followed**: [SETUP_DEV.md](SETUP_DEV.md) | **➡️ Next**: First Contribution
@@ -52,11 +55,12 @@
 ## 🎯 **STEP 4: First Contribution** (30 min)
 
 **📋 Your onboarding is complete when:**
-- [ ] Your branch is created
-- [ ] Your modification is committed
-- [ ] Your PR is created with template filled
-- [ ] Your PR is reviewed and merged
-- [ ] **🆕 Your name is added to the team list**
+- [ ] **🆕 You've added your entry to MODIFICATION_TRACKER.md BEFORE modifying**
+- [ ] You're working on main branch (no feature branch)
+- [ ] Your modification is committed to main
+- [ ] Your commit is pushed to main
+- [ ] **🆕 Your name is added to the team list with [NAME]_[YYYY-MM-DD_HH-MM] format**
+- [ ] **🆕 You understand the rollback procedure if needed**
 
 **🔗 Followed**: [INSTRUCTIONS_NOUVELLE_EQUIPE.md](INSTRUCTIONS_NOUVELLE_EQUIPE.md) workflow
 
@@ -65,10 +69,11 @@
 ## 📋 **VALIDATION COMPLETE**
 
 **✅ You now master:**
-- ✅ Manalytics v0.3.2 → v1.0 product vision
+- ✅ Manalytics v0.3.4 → v1.0 product vision
 - ✅ Technical architecture and extension points
 - ✅ Operational development environment
-- ✅ Contribution workflow and governance
+- ✅ **🆕 Main-branch-only workflow and rollback procedures**
+- ✅ **🆕 Modification tracking system**
 - ✅ **🆕 English interface and improved features**
 - ✅ **🆕 Enhanced archetype classification system**
 - ✅ **🆕 MTGO source attribution improvements**
@@ -87,20 +92,28 @@
 - **Problem**: Dependencies or pipeline fails
 - **Solution**: Check [SETUP_DEV.md - Troubleshooting](SETUP_DEV.md#troubleshooting-express)
 
-### **Step 4: PR Issues**
-- **Problem**: PR blocked or template unclear
-- **Solution**: Each checkbox corresponds to a documentation section
+### **Step 4: Contribution Issues**
+- **Problem**: Confused about main-branch workflow
+- **Solution**: No branches needed, just commit directly to main after validation
+
+### **Modification Tracker Issues**
+- **Problem**: Don't understand the MODIFICATION_TRACKER.md format
+- **Solution**: Check existing entries in the file for examples
 
 ### **English Interface Issues**
 - **Problem**: Some elements still in French
-- **Solution**: Check if you're on the right branch (feature/english-migration or v0.3.2+)
+- **Solution**: Check if you're on main branch with latest changes
 
 ### **Archetype Classification Issues**
 - **Problem**: Unexpected archetype assignments
 - **Solution**: Check if non-Standard archetypes are correctly classified as "Others"
 
+### **Rollback Issues**
+- **Problem**: Need to undo changes
+- **Solution**: Use `git revert <commit-hash>` and update MODIFICATION_TRACKER.md
+
 ---
 
 *Checklist created: July 13, 2025*
-*Version: v0.3.2*
-*Last updated: July 13, 2025*
+*Version: v0.3.4*
+*Updated for main-branch workflow: January 14, 2025*
