@@ -196,8 +196,9 @@ class MetagameChartsGenerator:
     ) -> go.Figure:
         """Crée le pie chart de part de métagame (comme l'image PNG)"""
 
-        # Calculer les parts de métagame par archétype
-        archetype_counts = df["archetype"].value_counts()
+        # Calculer les parts de métagame par archétype avec couleurs
+        archetype_column = "archetype_with_colors" if "archetype_with_colors" in df.columns else "archetype"
+        archetype_counts = df[archetype_column].value_counts()
         total_players = len(df)
 
         # Calculer les pourcentages
@@ -309,9 +310,12 @@ class MetagameChartsGenerator:
         return fig
 
     def calculate_archetype_stats(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Calcule les statistiques par archétype"""
+        """Calcule les statistiques par archétype avec intégration des couleurs"""
+        # Utiliser archetype_with_colors pour l'affichage avec les couleurs intégrées
+        group_column = "archetype_with_colors" if "archetype_with_colors" in df.columns else "archetype"
+        
         stats_df = (
-            df.groupby("archetype")
+            df.groupby(group_column)
             .agg(
                 {
                     "winrate": ["mean", "std", "count"],
@@ -335,6 +339,8 @@ class MetagameChartsGenerator:
             "unique_players",
         ]
         stats_df = stats_df.reset_index()
+        # Renommer la colonne pour maintenir la compatibilité
+        stats_df.rename(columns={group_column: 'archetype'}, inplace=True)
 
         # Calculer les intervalles de confiance
         stats_df["ci_lower"] = stats_df.apply(
@@ -820,18 +826,19 @@ class MetagameChartsGenerator:
         df["tournament_date"] = pd.to_datetime(df["tournament_date"])
         df["date"] = df["tournament_date"].dt.date
 
-        # Grouper par date et archétype
+        # Grouper par date et archétype avec couleurs
+        archetype_column = "archetype_with_colors" if "archetype_with_colors" in df.columns else "archetype"
         daily_counts = (
-            df.groupby(["date", "archetype"]).size().reset_index(name="count")
+            df.groupby(["date", archetype_column]).size().reset_index(name="count")
         )
 
         # Créer un pivot pour avoir les archétypes en colonnes
         pivot_data = daily_counts.pivot(
-            index="date", columns="archetype", values="count"
+            index="date", columns=archetype_column, values="count"
         ).fillna(0)
 
         # Trier les archétypes par popularité totale
-        archetype_totals = df["archetype"].value_counts()
+        archetype_totals = df[archetype_column].value_counts()
         top_archetypes = archetype_totals.head(
             5
         ).index.tolist()  # Limiter à 5 pour la lisibilité

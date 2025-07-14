@@ -63,6 +63,12 @@ class MatchupMatrixGenerator:
         archetype_stats.columns = ['winrate_mean', 'winrate_std', 'sample_size', 'total_wins', 'total_losses']
         archetype_stats = archetype_stats.reset_index()
         
+        # Limiter à 12 archétypes maximum (comme dans la référence)
+        if len(archetype_stats) > 12:
+            # Trier par sample_size pour garder les plus représentés
+            archetype_stats = archetype_stats.nlargest(12, 'sample_size')
+            self.logger.info(f"🎯 Matrice limitée aux 12 archétypes les plus représentés")
+        
         # Générer matrice de matchups
         archetypes = archetype_stats['archetype'].tolist()
         matchups = []
