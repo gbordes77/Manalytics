@@ -361,8 +361,8 @@ class MetagameChartsGenerator:
                 "font": {"size": 16, "family": "Arial, sans-serif"},
             },
             font=dict(family="Arial, sans-serif", size=12),
-            width=900,
-            height=600,
+            width=1000,
+            height=700,
             margin=dict(l=20, r=20, t=80, b=20),
             legend=dict(
                 orientation="v",
@@ -508,8 +508,8 @@ class MetagameChartsGenerator:
             xaxis_title="Metagame share (%)",
             yaxis_title="Archetype",
             font=dict(family="Arial, sans-serif", size=12),
-            width=800,
-            height=500,
+            width=1000,
+            height=700,
             margin=dict(l=150, r=50, t=80, b=50),
         )
 
@@ -518,7 +518,8 @@ class MetagameChartsGenerator:
     def create_winrate_confidence_chart(self, stats_df: pd.DataFrame) -> go.Figure:
         """Crée le graphique à barres d'erreur avec intervalles de confiance"""
 
-        sorted_df = stats_df.sort_values("winrate_mean", ascending=False)
+        # RÈGLE: Limiter à 12 archétypes maximum
+        sorted_df = stats_df.sort_values("winrate_mean", ascending=False).head(12)
 
         # Obtenir les couleurs MTG pour chaque archétype
         archetype_names = sorted_df["archetype"].tolist()
@@ -570,7 +571,7 @@ class MetagameChartsGenerator:
 
         fig.update_layout(
             title={
-                "text": "Archetype Winrates with 95% Confidence Intervals",
+                "text": "Archetype Winrates with 95% Confidence Intervals (Top 12)",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 16, "family": "Arial, sans-serif"},
@@ -591,6 +592,9 @@ class MetagameChartsGenerator:
     def create_tiers_scatter_plot(self, stats_df: pd.DataFrame) -> go.Figure:
         """Crée le scatter plot des tiers basé sur les bornes inférieures des IC"""
 
+        # RÈGLE: Limiter à 12 archétypes maximum
+        filtered_df = stats_df.nlargest(12, "metagame_share")
+
         # Couleurs par tier
         tier_colors = {
             "Tier 1": self.heatmap_colors["c+50"],
@@ -601,8 +605,8 @@ class MetagameChartsGenerator:
 
         fig = go.Figure()
 
-        for tier in stats_df["tier"].unique():
-            tier_data = stats_df[stats_df["tier"] == tier]
+        for tier in filtered_df["tier"].unique():
+            tier_data = filtered_df[filtered_df["tier"] == tier]
 
             fig.add_trace(
                 go.Scatter(
@@ -653,7 +657,7 @@ class MetagameChartsGenerator:
 
         fig.update_layout(
             title={
-                "text": "Archetype Classification by Tiers (95% CI Lower Bound)",
+                "text": "Archetype Classification by Tiers (95% CI Lower Bound) - Top 12",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 16, "family": "Arial, sans-serif"},
@@ -673,6 +677,9 @@ class MetagameChartsGenerator:
     def create_bubble_chart_winrate_presence(self, stats_df: pd.DataFrame) -> go.Figure:
         """Crée le bubble chart winrate vs présence"""
 
+        # RÈGLE: Limiter à 12 archétypes maximum
+        filtered_df = stats_df.nlargest(12, "metagame_share")
+
         # Couleurs par tier
         tier_colors = {
             "Tier 1": self.heatmap_colors["c+50"],
@@ -683,8 +690,8 @@ class MetagameChartsGenerator:
 
         fig = go.Figure()
 
-        for tier in stats_df["tier"].unique():
-            tier_data = stats_df[stats_df["tier"] == tier]
+        for tier in filtered_df["tier"].unique():
+            tier_data = filtered_df[filtered_df["tier"] == tier]
 
             fig.add_trace(
                 go.Scatter(
@@ -722,7 +729,7 @@ class MetagameChartsGenerator:
 
         fig.update_layout(
             title={
-                "text": "Winrate vs Metagame Presence (size = number of players)",
+                "text": "Winrate vs Metagame Presence (size = number of players) - Top 12",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 16, "family": "Arial, sans-serif"},
@@ -756,6 +763,9 @@ class MetagameChartsGenerator:
         # Compter par archétype
         archetype_counts = best_players["archetype"].value_counts()
 
+        # RÈGLE: Limiter à 12 archétypes maximum
+        archetype_counts = archetype_counts.head(12)
+
         # Obtenir les couleurs MTG pour chaque archétype
         archetype_names = archetype_counts.index.tolist()
         guild_names = self._get_guild_names_for_archetypes(archetype_names)
@@ -780,7 +790,7 @@ class MetagameChartsGenerator:
 
         fig.update_layout(
             title={
-                "text": f"Top archétypes {title_suffix}",
+                "text": f"Top archétypes {title_suffix} (Top 12)",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 16, "family": "Arial, sans-serif"},
@@ -873,8 +883,8 @@ class MetagameChartsGenerator:
                 orientation="v", yanchor="middle", y=0.5, xanchor="left", x=1.05
             ),
             margin=dict(l=20, r=120, t=60, b=20),
-            width=800,
-            height=500,
+            width=1000,
+            height=700,
         )
 
         return fig
@@ -1020,13 +1030,13 @@ class MetagameChartsGenerator:
         # Calculer les pourcentages pour tous les archétypes
         archetype_percentages = (archetype_counts / total_decks * 100).round(2)
 
-        # Prendre les 15 archétypes les plus populaires
-        top_archetypes = archetype_percentages.head(15)
+        # RÈGLE: Prendre les 12 archétypes les plus populaires (au lieu de 15)
+        top_archetypes = archetype_percentages.head(12)
 
         # Calculer le reste comme "Autres"
         others_percentage = (
-            archetype_percentages.iloc[15:].sum()
-            if len(archetype_percentages) > 15
+            archetype_percentages.iloc[12:].sum()
+            if len(archetype_percentages) > 12
             else 0
         )
 
@@ -1083,7 +1093,7 @@ class MetagameChartsGenerator:
         # Mise en forme
         fig.update_layout(
             title={
-                "text": f"Main STANDARD Archetypes - {len(df)} decks analyzed",
+                "text": f"Main STANDARD Archetypes - {len(df)} decks analyzed (Top 12)",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 18, "family": "Arial, sans-serif", "color": "#2c3e50"},
@@ -1123,7 +1133,7 @@ class MetagameChartsGenerator:
 
     def create_main_archetypes_bar_horizontal(self, data):
         """
-        Crée un graphique en barres horizontal des archétypes principaux (top 15)
+        Crée un graphique en barres horizontal des archétypes principaux (top 12)
         """
         import pandas as pd
 
@@ -1137,10 +1147,13 @@ class MetagameChartsGenerator:
         archetype_counts = df["archetype"].value_counts()
         total_decks = len(df)
         archetype_percentages = (archetype_counts / total_decks * 100).round(2)
-        top_archetypes = archetype_percentages.head(15)
+
+        # RÈGLE: Prendre les 12 archétypes les plus populaires (au lieu de 15)
+        top_archetypes = archetype_percentages.head(12)
+
         others_percentage = (
-            archetype_percentages.iloc[15:].sum()
-            if len(archetype_percentages) > 15
+            archetype_percentages.iloc[12:].sum()
+            if len(archetype_percentages) > 12
             else 0
         )
         archetypes = list(top_archetypes.index)
@@ -1187,7 +1200,7 @@ class MetagameChartsGenerator:
         )
         fig.update_layout(
             title={
-                "text": f"Main STANDARD Archetypes (Horizontal) - {len(df)} decks analyzed",
+                "text": f"Main STANDARD Archetypes (Horizontal) - {len(df)} decks analyzed (Top 12)",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 18, "family": "Arial, sans-serif", "color": "#2c3e50"},

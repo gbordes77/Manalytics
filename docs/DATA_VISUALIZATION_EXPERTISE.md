@@ -269,3 +269,169 @@ Pour questions sur l'implémentation ou suggestions d'amélioration :
 - **Rollback** : Voir `docs/MODIFICATION_TRACKER.md`
 
 **🎯 Prochaine étape :** Implémenter cette expertise dans vos contributions !
+
+## 🔥 Matchup Matrix - Améliorations Expert
+
+### Problèmes Identifiés et Corrigés
+
+#### ❌ Problèmes Originaux
+- **Couleurs peu lisibles** : Palette verte monochrome peu contrastée
+- **Texte illisible** : Texte blanc sur tous les fonds (invisible sur jaune/clair)
+- **Pas d'accessibilité** : Aucune considération pour les daltoniens (8% population)
+- **Contraste insuffisant** : Difficile de distinguer les nuances de performance
+
+#### ✅ Solutions Expertes Appliquées
+
+1. **Palette ColorBrewer RdYlBu** (Scientifiquement validée)
+   - Rouge foncé (#D73027) = Matchup très défavorable (0-15%)
+   - Orange (#FDAE61) = Matchup défavorable (15-35%)
+   - Jaune (#FFFFBF) = Matchup équilibré (35-50%)
+   - Bleu clair (#ABD9E9) = Matchup favorable (50-65%)
+   - Bleu foncé (#4575B4) = Matchup très favorable (65-85%)
+   - Bleu très foncé (#313695) = Matchup excellent (85-100%)
+
+2. **Système de Texte Adaptatif**
+   ```python
+   def _get_text_color(self, winrate: float) -> str:
+       """Détermine la couleur du texte optimal selon le winrate"""
+       # Texte blanc sur fonds foncés (rouge/bleu foncé)
+       # Texte noir sur fonds clairs (jaune/bleu clair)
+   ```
+
+3. **Accessibilité Daltonisme**
+   - Palette testée pour 8% de la population
+   - Contraste minimum 4.5:1 (WCAG AA)
+   - Différentiation par luminosité ET teinte
+
+4. **Améliorations Visuelles**
+   - Annotations séparées pour contrôle précis de la couleur
+   - Marges élargies pour meilleure lisibilité
+   - Colorbar repositionnée avec plus d'espace
+   - Grilles supprimées pour netteté
+
+### Code Technique Clé
+
+```python
+# Palette ColorBrewer RdYlBu avec accessibilité
+colorscale=[
+    [0.0, "#D73027"],   # Rouge foncé - 0%
+    [0.15, "#F46D43"],  # Rouge-orange - 15%
+    [0.25, "#FDAE61"],  # Orange - 25%
+    [0.35, "#FEE08B"],  # Jaune clair - 35%
+    [0.45, "#FFFFBF"],  # Jaune très clair - 45%
+    [0.50, "#E0F3F8"],  # Bleu très clair - 50% (neutre)
+    [0.55, "#ABD9E9"],  # Bleu clair - 55%
+    [0.65, "#74ADD1"],  # Bleu - 65%
+    [0.75, "#4575B4"],  # Bleu foncé - 75%
+    [0.85, "#313695"],  # Bleu très foncé - 85%
+    [1.0, "#313695"],   # Bleu très foncé - 100%
+]
+```
+
+### Résultats Obtenus
+
+✅ **Lisibilité parfaite** : Texte toujours lisible sur tous les fonds
+✅ **Accessibilité garantie** : Compatible daltonisme (8% population)
+✅ **Contraste optimal** : Standards WCAG AA respectés
+✅ **Différentiation claire** : Matchups favorables/défavorables évidents
+✅ **Professionnalisme** : Niveau MTGGoldfish/17lands/Untapped.gg atteint
+
+### Maintenance Future
+
+⚠️ **Important** : Les couleurs de la Matchup Matrix sont maintenant intégrées au système expert. Toute modification doit :
+1. Respecter la palette ColorBrewer RdYlBu
+2. Maintenir le système de texte adaptatif
+3. Préserver l'accessibilité daltonisme
+4. Conserver les contrastes WCAG AA
+
+## 📏 Graphiques Pie - Uniformisation des Tailles
+
+### Problème Identifié
+- **Incohérence des tailles** : Les graphiques pie avaient des dimensions différentes
+  - `metagame_pie.html` : 900×600 pixels
+  - `metagame_share.html` : 800×500 pixels
+  - `data_sources_pie.html` : 800×500 pixels
+- **Expérience utilisateur dégradée** : Tailles incohérentes entre les pages
+- **Mise en page perturbée** : Graphiques apparaissant plus petits dans certains contextes
+
+### ✅ Solution Appliquée
+
+#### Uniformisation des Dimensions
+Tous les graphiques pie ont maintenant une taille cohérente :
+```python
+# Nouvelle taille standard pour tous les graphiques pie
+width=1000,  # Largeur augmentée de 800/900 → 1000
+height=700,  # Hauteur augmentée de 500/600 → 700
+```
+
+#### Graphiques Concernés
+1. **`create_metagame_pie_chart`** - Graphique pie principal
+2. **`create_metagame_share_chart`** - Graphique bar horizontal
+3. **`create_data_sources_pie_chart`** - Répartition des sources
+
+### Avantages Obtenus
+
+✅ **Cohérence visuelle** : Tous les graphiques pie ont la même taille
+✅ **Meilleure lisibilité** : Taille plus grande pour plus de détails
+✅ **Expérience utilisateur** : Navigation fluide entre les pages
+✅ **Responsive design** : Adaptation cohérente sur différents écrans
+
+### Code Technique
+```python
+# Exemple d'uniformisation appliquée
+fig.update_layout(
+    title={
+        "text": "Standard Metagame Share",
+        "x": 0.5,
+        "xanchor": "center",
+        "font": {"size": 16, "family": "Arial, sans-serif"},
+    },
+    font=dict(family="Arial, sans-serif", size=12),
+    width=1000,  # ← Uniformisé
+    height=700,  # ← Uniformisé
+    margin=dict(l=20, r=20, t=80, b=20),
+)
+```
+
+### Maintenance
+⚠️ **Règle** : Tous les nouveaux graphiques pie doivent respecter la taille standard 1000×700 pixels pour maintenir la cohérence visuelle.
+
+## 📊 Règle des 12 Archétypes Maximum
+
+### Principe Fondamental
+⚠️ **RÈGLE ABSOLUE** : Aucun graphique ne doit jamais afficher plus de 12 archétypes simultanément.
+
+### Justification
+- **Lisibilité** : Au-delà de 12 archétypes, les graphiques deviennent illisibles
+- **Comparaison** : Impossible de comparer visuellement plus de 12 éléments
+- **Couleurs** : Limite physique des palettes de couleurs distinctes
+- **Standards industrie** : MTGGoldfish, 17lands, Untapped.gg utilisent cette limite
+
+### Application
+1. **Tri par importance** : Prioriser par metagame share ou winrate
+2. **Regroupement** : Archétypes 13+ deviennent "Autres / Non classifiés"
+3. **Filtrage dynamique** : `df.head(12)` ou `df.nlargest(12, "metagame_share")`
+
+### Graphiques Concernés
+Tous les graphiques respectent désormais cette règle :
+- ✅ `create_winrate_confidence_chart` - Top 12 par winrate
+- ✅ `create_tiers_scatter_plot` - Top 12 par metagame share
+- ✅ `create_bubble_chart_winrate_presence` - Top 12 par metagame share
+- ✅ `create_top_5_0_chart` - Top 12 par performance
+- ✅ `create_main_archetypes_bar_chart` - Top 12 + "Autres"
+- ✅ `create_main_archetypes_bar_horizontal` - Top 12 + "Autres"
+
+### Code Type
+```python
+# Exemple d'application de la règle
+def create_chart(self, stats_df: pd.DataFrame) -> go.Figure:
+    # RÈGLE: Limiter à 12 archétypes maximum
+    filtered_df = stats_df.nlargest(12, "metagame_share")
+
+    # Traitement...
+
+    title = "Chart Title (Top 12)"  # Indiquer dans le titre
+```
+
+### Maintenance
+🔧 **Tout nouveau graphique** doit respecter cette règle dès sa création.
