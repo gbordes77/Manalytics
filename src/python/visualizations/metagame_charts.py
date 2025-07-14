@@ -6,13 +6,11 @@ Utilise les vraies données de tournois pour tous les graphiques
 import json
 import logging
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 
 import numpy as np
 import pandas as pd
-import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 from scipy import stats
 
 
@@ -23,55 +21,104 @@ class MetagameChartsGenerator:
         self.logger = logging.getLogger(__name__)
         self.data_path = data_path  # Optionnel maintenant
 
-        # Palette heatmap (du violet au vert)
+        # 🎨 PALETTE HEATMAP OPTIMISÉE - SYSTÈME EXPERT
+        # Basée sur ColorBrewer RdYlBu pour accessibilité daltonisme
         self.heatmap_colors = {
-            "c-50": "#762a83",  # Extrême perdant
-            "c-40": "#8e4d99",
-            "c-30": "#a66fb0",
-            "c-20": "#be91c7",
-            "c-10": "#d6b3de",
-            "c0": "#f7f7f7",  # Neutre (50%)
-            "c+10": "#c7e9c0",
-            "c+20": "#a1d99b",
-            "c+30": "#7bc87c",
-            "c+40": "#4eb265",
-            "c+50": "#1b7837",  # Extrême gagnant
+            "c-50": "#D73027",  # Rouge intense - Très défavorable (0-35%)
+            "c-40": "#F46D43",  # Orange-rouge - Défavorable (35-40%)
+            "c-30": "#F46D43",  # Orange-rouge - Défavorable (35-40%)
+            "c-20": "#FDAE61",  # Orange clair - Légèrement défavorable (40-45%)
+            "c-10": "#FEE08B",  # Jaune clair - Presque équilibré (45-50%)
+            "c0": "#FFFFBF",  # Jaune neutre - Équilibré (50%)
+            "c+10": "#E0F3DB",  # Vert très clair - Légèrement favorable (50-55%)
+            "c+20": "#A7D96A",  # Vert clair - Favorable (55-60%)
+            "c+30": "#65BD63",  # Vert - Favorable (60-65%)
+            "c+40": "#1A9641",  # Vert foncé - Très favorable (65-70%)
+            "c+50": "#006837",  # Vert intense - Extrêmement favorable (70%+)
         }
 
-        # Couleurs MTG pour les guildes et archétypes
+        # Palette alternative pour matrices (échelle continue)
+        self.matchup_scale_colors = [
+            "#D73027",  # 0% - Rouge intense
+            "#F46D43",  # 20% - Orange-rouge
+            "#FDAE61",  # 40% - Orange clair
+            "#FEE08B",  # 45% - Jaune clair
+            "#FFFFBF",  # 50% - Jaune neutre
+            "#E0F3DB",  # 55% - Vert très clair
+            "#A7D96A",  # 60% - Vert clair
+            "#65BD63",  # 70% - Vert
+            "#1A9641",  # 80% - Vert foncé
+            "#006837",  # 100% - Vert intense
+        ]
+
+        # 🎨 COULEURS OPTIMALES MANALYTICS - SYSTÈME EXPERT
+        # Basé sur l'expertise data viz et psychologie des couleurs gaming
+
+        # Système hiérarchique : Primary > Secondary > Tertiary
+        self.manalytics_colors = {
+            # 🏆 COULEURS PRIMAIRES (Archétypes dominants >10%)
+            "Izzet Prowess": "#E74C3C",  # Rouge vif - Aggro dominant
+            "Azorius Control": "#3498DB",  # Bleu profond - Contrôle dominant
+            "Mono Red Aggro": "#C0392B",  # Rouge foncé - Aggro pur
+            "Jeskai Control": "#9B59B6",  # Violet - Contrôle complexe
+            # 🎯 COULEURS SECONDAIRES (Archétypes moyens 5-10%)
+            "Dimir Ramp": "#2C3E50",  # Bleu-noir - Contrôle sombre
+            "Jeskai Oculus": "#E67E22",  # Orange - Combo-contrôle
+            "Azorius Omniscience": "#5DADE2",  # Bleu clair - Contrôle alternatif
+            "Mono Black Demons": "#34495E",  # Noir - Midrange sombre
+            "Azorius Ramp": "#AED6F1",  # Bleu très clair
+            "Mono Red Ramp": "#F1948A",  # Rouge clair
+            # 🔧 COULEURS TERTIAIRES (Archétypes mineurs <5%)
+            "Orzhov Selfbounce": "#BDC3C7",  # Gris clair
+            "Orzhov Demons": "#85929E",  # Gris moyen
+            "Grixis Midrange": "#8E44AD",  # Violet foncé
+            "Boros Aggro": "#F39C12",  # Orange doré
+            "Selesnya Midrange": "#27AE60",  # Vert équilibré
+            "Simic Ramp": "#16A085",  # Turquoise
+            "Rakdos Aggro": "#E74C3C",  # Rouge-noir
+            "Gruul Aggro": "#D35400",  # Rouge-vert
+            "Golgari Midrange": "#7D6608",  # Noir-vert
+            "Temur Midrange": "#C0392B",  # Tri-couleur équilibré
+            # 🎯 COULEUR SPÉCIALE (JAMAIS la plus importante)
+            "Autres": "#95A5A6",  # Gris neutre
+            "Autres / Non classifiés": "#95A5A6",  # Gris neutre
+            "Non classifiés": "#95A5A6",  # Gris neutre
+        }
+
+        # Ancienne palette MTG conservée pour compatibilité
         self.mtg_colors = {
             # Mono-couleurs
-            "Mono White": "#fffbd5",
-            "Mono Blue": "#0e68ab",
-            "Mono Black": "#150b00",
-            "Mono Red": "#d3202a",
-            "Mono Green": "#00733e",
+            "Mono White": "#FFF8DC",
+            "Mono Blue": "#0E68AB",
+            "Mono Black": "#2C2C2C",
+            "Mono Red": "#D3202A",
+            "Mono Green": "#00733E",
             # Guildes (2 couleurs)
-            "Azorius": "#a4c2f4",  # Blanc-Bleu
-            "Dimir": "#4a5568",  # Bleu-Noir
-            "Rakdos": "#8b0000",  # Noir-Rouge
-            "Gruul": "#8b4513",  # Rouge-Vert
-            "Selesnya": "#90ee90",  # Vert-Blanc
-            "Orzhov": "#dda0dd",  # Blanc-Noir
-            "Golgari": "#556b2f",  # Noir-Vert
-            "Simic": "#20b2aa",  # Vert-Bleu
-            "Izzet": "#ff6347",  # Bleu-Rouge
-            "Boros": "#ff8c00",  # Rouge-Blanc
+            "Azorius": "#3498DB",  # Optimisé
+            "Dimir": "#2C3E50",  # Optimisé
+            "Rakdos": "#C0392B",  # Optimisé
+            "Gruul": "#D35400",  # Optimisé
+            "Selesnya": "#27AE60",  # Optimisé
+            "Orzhov": "#85929E",  # Optimisé
+            "Golgari": "#7D6608",  # Optimisé
+            "Simic": "#16A085",  # Optimisé
+            "Izzet": "#E74C3C",  # Optimisé
+            "Boros": "#F39C12",  # Optimisé
             # Tri-couleurs
-            "Esper": "#b0c4de",  # Blanc-Bleu-Noir
-            "Jeskai": "#ffd700",  # Blanc-Bleu-Rouge
-            "Bant": "#98fb98",  # Blanc-Bleu-Vert
-            "Mardu": "#cd853f",  # Blanc-Noir-Rouge
-            "Abzan": "#f0e68c",  # Blanc-Noir-Vert
-            "Naya": "#ffa500",  # Rouge-Vert-Blanc
-            "Grixis": "#8b008b",  # Bleu-Noir-Rouge
-            "Sultai": "#2e8b57",  # Noir-Vert-Bleu
-            "Temur": "#ff4500",  # Vert-Bleu-Rouge
-            "Jund": "#a0522d",  # Noir-Rouge-Vert
+            "Esper": "#5DADE2",  # Optimisé
+            "Jeskai": "#9B59B6",  # Optimisé
+            "Bant": "#A3E4D7",  # Optimisé
+            "Mardu": "#CD853F",  # Conservation
+            "Abzan": "#F0E68C",  # Conservation
+            "Naya": "#FFA500",  # Conservation
+            "Grixis": "#8E44AD",  # Optimisé
+            "Sultai": "#2E8B57",  # Conservation
+            "Temur": "#C0392B",  # Optimisé
+            "Jund": "#A0522D",  # Conservation
             # Multi-couleurs
-            "Four-Color": "#9932cc",
-            "Five-Color": "#ffd700",
-            "Colorless": "#c0c0c0",
+            "Four-Color": "#9932CC",
+            "Five-Color": "#FFD700",
+            "Colorless": "#BDC3C7",
         }
 
         # Couleurs pour les archétypes (palette étendue de fallback)
@@ -109,18 +156,34 @@ class MetagameChartsGenerator:
         ]
 
     def get_archetype_color(self, archetype_name: str, guild_name: str = None) -> str:
-        """Obtient la couleur d'un archétype basée sur sa guilde MTG"""
-        # Priorité 1: Utiliser la guilde si disponible
+        """🎨 SYSTÈME EXPERT - Obtient la couleur optimale d'un archétype
+
+        Hiérarchie d'attribution des couleurs :
+        1. Couleurs Manalytics optimales (archétypes spécifiques)
+        2. Couleurs MTG (guildes et patterns)
+        3. Couleurs fallback (basées sur l'index)
+        """
+
+        # 🏆 PRIORITÉ 1: Couleurs Manalytics optimales (correspondance exacte)
+        if archetype_name in self.manalytics_colors:
+            return self.manalytics_colors[archetype_name]
+
+        # 🏆 PRIORITÉ 2: Correspondance partielle pour archétypes Manalytics
+        archetype_lower = archetype_name.lower()
+        for mana_archetype, color in self.manalytics_colors.items():
+            if mana_archetype.lower() in archetype_lower:
+                return color
+
+        # 🎯 PRIORITÉ 3: Utiliser la guilde si disponible
         if guild_name and guild_name in self.mtg_colors:
             return self.mtg_colors[guild_name]
 
-        # Priorité 2: Extraire la guilde du nom d'archétype
-        archetype_lower = archetype_name.lower()
+        # 🎯 PRIORITÉ 4: Extraire la guilde du nom d'archétype
         for guild, color in self.mtg_colors.items():
             if guild.lower() in archetype_lower:
                 return color
 
-        # Priorité 3: Couleurs par mots-clés
+        # 🎯 PRIORITÉ 5: Couleurs par mots-clés
         if any(word in archetype_lower for word in ["mono white", "white"]):
             return self.mtg_colors["Mono White"]
         elif any(word in archetype_lower for word in ["mono blue", "blue"]):
@@ -132,7 +195,7 @@ class MetagameChartsGenerator:
         elif any(word in archetype_lower for word in ["mono green", "green"]):
             return self.mtg_colors["Mono Green"]
 
-        # Fallback: Couleur par défaut basée sur l'index
+        # 🔧 PRIORITÉ 6: Fallback - Couleur tertiaire basée sur l'index
         archetype_hash = hash(archetype_name) % len(self.archetype_colors)
         return self.archetype_colors[archetype_hash]
 
