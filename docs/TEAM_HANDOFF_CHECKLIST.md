@@ -95,27 +95,32 @@
 #### **2. Advanced Features (1.5 hours)**
 17. **ADVANCED_ANALYTICS.md** - Statistical features overview
 18. **API_REFERENCE_ADVANCED_ANALYTICS.md** - Function documentation
-19. **ORCHESTRATOR_INTEGRATION.md** - Pipeline integration
-20. **🔥 ANALYSIS_TEMPLATE_SPECIFICATION.md** - Analysis template specifications
+19. **🎨 DATA_VISUALIZATION_EXPERTISE.md** - **OBLIGATOIRE** Color system and visualization expertise
+    - **⚠️ CRITIQUE** : Lecture obligatoire pour tous les contributeurs
+    - **🎯 45 minutes** : Système de couleurs professionnel niveau industrie
+    - **♿ Accessibilité** : Standards WCAG + daltonisme (8% population)
+    - **🔧 Implémentation** : Code prêt à l'emploi dans metagame_charts.py
+20. **ORCHESTRATOR_INTEGRATION.md** - Pipeline integration
+21. **🔥 ANALYSIS_TEMPLATE_SPECIFICATION.md** - Analysis template specifications
 
 #### **3. User Experience (1 hour)**
-21. **USER_GUIDE_ADVANCED_ANALYTICS.md** - Usage and interpretation
-22. **GUIDE_PARTAGE_ANALYSES.md** - Analysis sharing
+22. **USER_GUIDE_ADVANCED_ANALYTICS.md** - Usage and interpretation
+23. **GUIDE_PARTAGE_ANALYSES.md** - Analysis sharing
 
 #### **4. Development Process (30 minutes)**
-23. **GUIDE_DEVELOPPEUR.md** - Development workflow
-24. **CHANGELOG.md** - Version history and patterns
+24. **GUIDE_DEVELOPPEUR.md** - Development workflow
+25. **CHANGELOG.md** - Version history and patterns
 
 ### **🎯 Phase 3: Team Integration (Day 4-5 - 2 hours)**
 
 #### **1. Team Process (1 hour)**
-25. **GUIDE_NOUVELLE_EQUIPE_2025.md** - Team-specific guidance
-26. **PROMPT_FINAL_EQUIPE.md** - Final team instructions
+26. **GUIDE_NOUVELLE_EQUIPE_2025.md** - Team-specific guidance
+27. **PROMPT_FINAL_EQUIPE.md** - Final team instructions
 
 #### **2. Validation & Planning (1 hour)**
-27. **ONBOARDING_CHECKLIST.md** - Complete final validation
-28. **🔥 Create first entry in MODIFICATION_TRACKER.md**
-29. Plan first team contribution
+28. **ONBOARDING_CHECKLIST.md** - Complete final validation
+29. **🔥 Create first entry in MODIFICATION_TRACKER.md**
+30. Plan first team contribution
 
 ---
 
