@@ -14,8 +14,11 @@
 - [ ] **🆕 What's the purpose of K-means clustering in archetype analysis?**
 - [ ] **🆕 How does the R-Meta-Analysis integration work with Jiliac/Aliquanto3?**
 - [ ] **🆕 What are the 18 analytical features implemented in v0.3.4?**
+- [ ] **🔥 Which R files correspond to which Python modules?**
+- [ ] **🔥 What improvements were made over the original R system?**
+- [ ] **🔥 How does the color-guild integration work for archetype classification?**
 
-**🔗 Read**: [ROADMAP.md](ROADMAP.md) | **➡️ Next**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
+**🔗 Read**: [ROADMAP.md](ROADMAP.md) | [ALIQUANTO3_TO_MANALYTICS_MAPPING.md](ALIQUANTO3_TO_MANALYTICS_MAPPING.md) | **➡️ Next**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
 
 ---
 
@@ -79,6 +82,9 @@
 - ✅ **🆕 English interface and improved features**
 - ✅ **🆕 Enhanced archetype classification system**
 - ✅ **🆕 MTGO source attribution improvements**
+- ✅ **🔥 Aliquanto3 R → Python transformation (18 functionalities)**
+- ✅ **🔥 Color-guild integration system for archetype classification**
+- ✅ **🔥 Source repository references and technical heritage**
 
 **🚀 You're ready to contribute effectively to the project!**
 
@@ -113,6 +119,15 @@
 ### **Rollback Issues**
 - **Problem**: Need to undo changes
 - **Solution**: Use `git revert <commit-hash>` and update MODIFICATION_TRACKER.md
+
+### **🔥 Aliquanto3 Mapping Issues**
+- **Problem**: Don't understand the R → Python transformation
+- **Solution**: Read [ALIQUANTO3_TO_MANALYTICS_MAPPING.md](ALIQUANTO3_TO_MANALYTICS_MAPPING.md) completely
+- **Key Points**:
+  - 18 R functionalities → Python modules (1:1 mapping)
+  - Color-guild integration: "Prowess" → "Izzet Prowess"
+  - Performance improvements: +155% archetype diversity, +21% Shannon index
+  - Source repositories: 4 GitHub repos analyzed
 
 ---
 
