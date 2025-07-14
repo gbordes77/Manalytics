@@ -5,7 +5,7 @@
 ## 🎯 **STEP 1: Project Understanding** (15 min)
 
 **📋 Before continuing, validate that you can answer:**
-- [ ] What's the difference between v0.3.4 and v1.0?
+- [ ] What's the difference between v0.3.5 and v1.0?
 - [ ] Why do we use multi-source scraping?
 - [ ] What are the 3 supported formats?
 - [ ] What's the purpose of the 9 visualizations?
@@ -17,6 +17,9 @@
 - [ ] **🔥 Which R files correspond to which Python modules?**
 - [ ] **🔥 What improvements were made over the original R system?**
 - [ ] **🔥 How does the color-guild integration work for archetype classification?**
+- [ ] **🎯 v0.3.5: Why does Izzet Prowess always appear first in all visualizations?**
+- [ ] **🎯 v0.3.5: What methods ensure consistency between bar charts and matchup matrix?**
+- [ ] **🎯 v0.3.5: How does the centralized ordering system work?**
 
 **🔗 Read**: [ROADMAP.md](ROADMAP.md) | [ALIQUANTO3_TO_MANALYTICS_MAPPING.md](ALIQUANTO3_TO_MANALYTICS_MAPPING.md) | **➡️ Next**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
 
@@ -48,6 +51,9 @@
 - [ ] **🆕 Verified the dashboard interface is in English**
 - [ ] **🆕 Confirmed the Analyses/ folder structure is created**
 - [ ] **🆕 Checked that archetype classification works correctly**
+- [ ] **🎯 v0.3.5: Verified Izzet Prowess appears first in all generated charts**
+- [ ] **🎯 v0.3.5: Confirmed identical archetype names between bar charts and matchup matrix**
+- [ ] **🎯 v0.3.5: Tested that matchup matrix axes follow hierarchical ordering**
 - [ ] **🆕 Understood the main-branch-only workflow**
 - [ ] Saw the 9 graphs generated in the output folder
 

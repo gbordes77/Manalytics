@@ -2,9 +2,16 @@
 
 > **Objectif** : Développeur opérationnel sur Manalytics en ≤5 min
 
-## 🆕 Nouvelles Fonctionnalités v0.3.4
+## 🆕 Nouvelles Fonctionnalités v0.3.5
 
-> **Mise à jour du 13 juillet 2025** - Analyses statistiques avancées et intégration R-Meta-Analysis
+> **Mise à jour du 15 janvier 2025** - Corrections critiques de consistance des visualisations
+
+### **🎯 Corrections Critiques Matchup Matrix (v0.3.5)**
+- **Ordre Hiérarchique** : Izzet Prowess maintenant TOUJOURS en première position
+- **Cohérence Noms** : Parfaite alignement entre bar charts et matchup matrix
+- **Axes Ordonnés** : Ordre hiérarchique appliqué aux axes X et Y
+- **Méthodes Centralisées** : `sort_archetypes_by_hierarchy()` et `_get_archetype_column()`
+- **Intégration Transparente** : Aucun changement d'orchestrateur requis
 
 ### **Analyses Statistiques Avancées**
 - **Shannon & Simpson Diversity** : Indices de diversité du métagame

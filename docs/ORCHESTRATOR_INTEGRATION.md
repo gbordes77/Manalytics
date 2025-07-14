@@ -323,8 +323,72 @@ def cached_analysis(self, data_hash):
     return self._perform_advanced_analysis(data)
 ```
 
+## 🎨 Visualization Consistency Integration (v0.3.5)
+
+### **Centralized Visualization System**
+
+The orchestrator now seamlessly integrates with the enhanced visualization consistency system introduced in v0.3.5.
+
+#### **Key Integration Points**:
+
+1. **MetagameChartsGenerator Integration**
+```python
+# In orchestrator.py
+from src.python.visualizations.metagame_charts import MetagameChartsGenerator
+
+def _generate_visualizations(self, data):
+    generator = MetagameChartsGenerator()
+    # Automatic hierarchical ordering applied
+    pie_chart = generator.create_metagame_pie_chart(data)
+    bar_chart = generator.create_main_archetypes_bar_chart(data)
+    # All charts use consistent archetype ordering
+```
+
+2. **MatchupMatrixGenerator Integration**
+```python
+# In orchestrator.py
+from src.python.visualizations.matchup_matrix import MatchupMatrixGenerator
+
+def _generate_matchup_matrix(self, data):
+    generator = MatchupMatrixGenerator()
+    # Automatic hierarchical ordering and axis alignment
+    matrix = generator.create_matchup_matrix(data)
+    # Perfect consistency with bar charts
+```
+
+#### **Automatic Consistency Features**:
+
+- **Hierarchical Ordering**: All visualizations automatically use `sort_archetypes_by_hierarchy()`
+- **Unified Naming**: All charts use `_get_archetype_column()` for consistent archetype names
+- **Izzet Prowess Priority**: Automatically appears first across all visualizations
+- **Transparent Integration**: No orchestrator code changes required
+
+#### **Benefits for Pipeline**:
+- **Zero Configuration**: Consistency applied automatically
+- **Maintainable**: Centralized logic prevents inconsistencies
+- **Future-Proof**: New visualizations inherit consistent behavior
+- **Professional**: Industry-standard consistency across all outputs
+
+#### **Technical Implementation**:
+```python
+# The orchestrator doesn't need to handle ordering
+# All visualization generators handle consistency internally
+def _create_all_visualizations(self, data):
+    charts_gen = MetagameChartsGenerator()
+    matrix_gen = MatchupMatrixGenerator()
+    
+    # All methods automatically apply consistent ordering
+    results = {
+        'pie_chart': charts_gen.create_metagame_pie_chart(data),
+        'bar_chart': charts_gen.create_main_archetypes_bar_chart(data),
+        'matrix': matrix_gen.create_matchup_matrix(data)
+    }
+    # Perfect consistency guaranteed
+    return results
+```
+
 ## 🎪 Conclusion
 
-The orchestrator integration provides seamless access to advanced analytics while maintaining the simplicity of the original pipeline. Users get enhanced insights automatically, while developers can customize and extend the analysis capabilities as needed.
+The orchestrator integration provides seamless access to advanced analytics and perfectly consistent visualizations while maintaining the simplicity of the original pipeline. Users get enhanced insights with professional-grade consistency automatically, while developers can customize and extend the analysis capabilities as needed.
 
 For detailed function documentation, see [API_REFERENCE_ADVANCED_ANALYTICS.md](API_REFERENCE_ADVANCED_ANALYTICS.md).

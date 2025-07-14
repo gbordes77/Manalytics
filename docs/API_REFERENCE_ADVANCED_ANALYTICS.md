@@ -8,8 +8,9 @@
 2. [Core Functions](#core-functions)
 3. [Statistical Analysis Functions](#statistical-analysis-functions)
 4. [Clustering & Correlation Functions](#clustering--correlation-functions)
-5. [Utility Functions](#utility-functions)
-6. [Usage Examples](#usage-examples)
+5. [Visualization Consistency Functions](#visualization-consistency-functions)
+6. [Utility Functions](#utility-functions)
+7. [Usage Examples](#usage-examples)
 
 ---
 
@@ -396,6 +397,73 @@ strong_correlations = [
     if abs(corr["correlation"]) > 0.7
 ]
 ```
+
+---
+
+## 🎨 Visualization Consistency Functions
+
+### **NEW in v0.3.5**: Centralized Visualization Consistency
+
+The visualization modules now include centralized methods for ensuring consistency across all chart types.
+
+#### **MetagameChartsGenerator & MatchupMatrixGenerator**
+
+### `sort_archetypes_by_hierarchy(self, archetypes: List[str]) -> List[str]`
+
+**Purpose**: Ensures consistent hierarchical ordering of archetypes across all visualizations.
+
+**Parameters**:
+- `archetypes`: List of archetype names to sort
+
+**Returns**: List of archetypes sorted by hierarchical priority
+
+**Logic**:
+1. Izzet Prowess always first (if present)
+2. Remaining archetypes sorted by predefined hierarchy
+3. Unknown archetypes sorted alphabetically at the end
+
+**Example**:
+```python
+generator = MetagameChartsGenerator()
+archetypes = ["Ramp", "Izzet Prowess", "Control", "Aggro"]
+ordered = generator.sort_archetypes_by_hierarchy(archetypes)
+# Result: ["Izzet Prowess", "Control", "Aggro", "Ramp"]
+```
+
+### `_get_archetype_column(self, df: pd.DataFrame) -> str`
+
+**Purpose**: Centralized archetype column selection for consistent naming across all charts.
+
+**Parameters**:
+- `df`: DataFrame containing archetype data
+
+**Returns**: Column name to use for archetype identification
+
+**Logic**:
+- Prefers `archetype_with_colors` if available (full names like "Izzet Prowess")
+- Falls back to `archetype` if `archetype_with_colors` not present
+- Ensures identical naming between bar charts and matchup matrix
+
+**Example**:
+```python
+generator = MetagameChartsGenerator()
+column = generator._get_archetype_column(df)
+# Returns: "archetype_with_colors" or "archetype"
+```
+
+### **Key Benefits**:
+- **Consistency**: Identical archetype ordering across all visualizations
+- **Professional**: Izzet Prowess always appears first as required
+- **Maintainable**: Centralized logic prevents inconsistencies
+- **Extensible**: New chart types automatically inherit consistent behavior
+
+### **Integration**:
+These methods are used by:
+- `create_metagame_pie_chart()`
+- `create_main_archetypes_bar_chart()`
+- `create_main_archetypes_bar_horizontal()`
+- `simulate_matchups_from_winrates()`
+- `create_matchup_matrix()`
 
 ---
 

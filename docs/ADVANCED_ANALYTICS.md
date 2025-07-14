@@ -30,6 +30,12 @@ The Manalytics pipeline now includes **18 advanced analytical features** that pr
 - **Meta-level Insights**: Card popularity trends and patterns
 - **Archetype-specific Usage**: Card distribution by deck type
 
+### 🎨 **Visualization Consistency (v0.3.5)**
+- **Hierarchical Ordering**: Izzet Prowess always appears first across all visualizations
+- **Unified Naming**: Perfect alignment between bar charts and matchup matrix
+- **Professional Standards**: Industry-grade consistency matching MTGGoldfish standards
+- **Centralized Methods**: `sort_archetypes_by_hierarchy()` and `_get_archetype_column()`
+
 ---
 
 ## 🔧 Technical Implementation
@@ -293,6 +299,77 @@ TREND_THRESHOLD = 0.5  # R² threshold for trend classification
 - **Recommended**: 500+ decks for robust statistics
 - **Optimal**: 1000+ decks for comprehensive insights
 - **Time Period**: At least 2 weeks for temporal analysis
+
+---
+
+## 🎨 Visualization Consistency System (v0.3.5)
+
+### **Critical Enhancement: Perfect Visual Alignment**
+
+Version 0.3.5 introduces a revolutionary centralized system ensuring perfect consistency across all visualizations.
+
+#### **Problem Solved**
+- **Before**: Bar charts showed "Prowess" while matchup matrix showed "Izzet Prowess"
+- **Before**: Different ordering between chart types created confusion
+- **Before**: Inconsistent archetype positioning across visualizations
+
+#### **Solution Architecture**
+
+##### **Centralized Ordering System**
+```python
+def sort_archetypes_by_hierarchy(self, archetypes: List[str]) -> List[str]:
+    """
+    Ensures consistent hierarchical ordering across ALL visualizations
+    
+    Priority:
+    1. Izzet Prowess (always first if present)
+    2. Descending by frequency/percentage
+    3. Alphabetical for ties
+    """
+```
+
+##### **Unified Naming System**
+```python
+def _get_archetype_column(self, df: pd.DataFrame) -> str:
+    """
+    Centralized column selection for consistent archetype naming
+    
+    Logic:
+    - Prefers 'archetype_with_colors' (e.g., "Izzet Prowess")
+    - Falls back to 'archetype' if not available
+    - Ensures identical naming across all chart types
+    """
+```
+
+#### **Implementation Impact**
+
+##### **Affected Visualizations**
+- **MetagameChartsGenerator**: All pie charts and bar charts
+- **MatchupMatrixGenerator**: Complete matchup matrix system
+- **Integration**: Seamless orchestrator integration
+
+##### **Technical Benefits**
+- **Zero Configuration**: Consistency applied automatically
+- **Maintainable**: Centralized logic prevents future inconsistencies
+- **Professional**: Industry-standard presentation quality
+- **Extensible**: New visualizations inherit consistent behavior
+
+#### **User Experience Improvements**
+
+##### **Navigation**
+- **Logical Flow**: Same archetype order across all charts
+- **Professional**: Izzet Prowess consistently leads when present
+- **Intuitive**: Cross-chart comparison becomes effortless
+
+##### **Analysis Benefits**
+- **Reduced Confusion**: No more wondering about different orders
+- **Faster Insights**: Consistent positioning speeds up analysis
+- **Professional Reports**: Industry-standard consistency
+
+#### **Performance Impact**
+- **Speed**: No performance degradation
+- **Memory**: Minimal overhead from centralized methods
+- **Compatibility**: Fully backward compatible
 
 ---
 

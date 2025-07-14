@@ -48,6 +48,44 @@ cat analysis_output/insights_summary.txt
 #### Effective Archetypes
 - **What it means**: "How many equally popular archetypes would give the same diversity?"
 - **Practical use**: Easier to understand than raw Shannon
+
+## 🎨 Visualization Consistency (v0.3.5)
+
+### **What's New in Visual Consistency**
+
+**Perfect Alignment**: All visualizations now show identical archetype ordering and naming.
+
+#### **Hierarchical Ordering**
+- **Izzet Prowess**: Always appears first when present
+- **Descending Order**: Remaining archetypes ordered by frequency
+- **Consistency**: Same order in pie charts, bar charts, and matchup matrix
+
+#### **Unified Naming**
+- **Full Names**: "Izzet Prowess" instead of just "Prowess"
+- **Color Integration**: "Azorius Omniscience", "Dimir Ramp", "Jeskai Control"
+- **Professional**: Industry-standard MTG archetype naming
+
+### **How to Interpret**
+
+#### **Bar Charts**
+- **First Position**: Izzet Prowess always leads when present
+- **Descending Order**: Next archetypes by percentage
+- **Consistent Colors**: Same colors across all chart types
+
+#### **Matchup Matrix**
+- **Axes Order**: Both X and Y axes use hierarchical ordering
+- **Reading**: Top-left corner always shows Izzet Prowess matchups
+- **Navigation**: Logical flow from most to least popular archetypes
+
+#### **Pie Charts**
+- **Segments**: Maximum 12 segments for optimal readability
+- **Ordering**: Clockwise from most to least popular
+- **No "Others"**: Only specific archetypes shown
+
+### **Benefits for Analysis**
+- **Easier Comparison**: Same order makes cross-chart analysis intuitive
+- **Professional Consistency**: Industry-standard presentation
+- **Reduced Confusion**: No more wondering why charts show different orders
 - **Example**: Shannon=1.95 → ~7 effective archetypes
 
 **🎯 Actionable Insights**:
