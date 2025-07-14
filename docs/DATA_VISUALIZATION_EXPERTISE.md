@@ -92,6 +92,7 @@
 
 ### **📍 Où Trouver le Système :**
 - **Code principal** : `src/python/visualizations/metagame_charts.py`
+- **Orchestrateur** : `src/orchestrator.py` (toutes les générations utilisent le système expert)
 - **Guide complet** : `docs/COLOR_GUIDE_EXPERT.md`
 - **Système actuel** : `self.manalytics_colors` (priorité 1)
 
@@ -167,6 +168,23 @@ colorscale = self.matchup_scale_colors
 ```python
 # Maintenir cohérence avec pie charts
 colors = self.get_archetype_colors_for_chart(archetypes)
+```
+
+### **🎯 Orchestrateur (Pipeline Complet)**
+```python
+# Dans src/orchestrator.py - TOUJOURS utiliser le système expert
+from python.visualizations.metagame_charts import MetagameChartsGenerator
+
+charts_generator = MetagameChartsGenerator()
+expert_colors = [charts_generator.get_archetype_color(arch) for arch in archetypes]
+
+# Appliquer aux visualisations matplotlib
+plt.pie(values, colors=expert_colors)  # ✅ CORRECT
+plt.bar(x, y, color=expert_colors)     # ✅ CORRECT
+
+# JAMAIS utiliser matplotlib automatique
+plt.cm.Set3(...)  # ❌ INTERDIT
+color="skyblue"   # ❌ INTERDIT
 ```
 
 ---

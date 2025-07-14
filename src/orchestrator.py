@@ -23,7 +23,22 @@ from python.visualizations.metagame_charts import MetagameChartsGenerator
 
 
 class ManalyticsOrchestrator:
-    """Phase 3 Orchestrator - Visualizations only"""
+    """Phase 3 Orchestrator - Visualizations only
+
+    🎨 IMPORTANT: EXPERT COLOR SYSTEM
+    All visualizations MUST use the expert color system from MetagameChartsGenerator.
+    This ensures:
+    - Professional industry-level appearance (MTGGoldfish/17lands standard)
+    - Accessibility for 8% colorblind population
+    - Consistent hierarchical color logic across all charts
+    - "Autres/Non classifiés" always in neutral gray #95A5A6
+
+    For new visualizations, ALWAYS use:
+    charts_generator = MetagameChartsGenerator()
+    colors = [charts_generator.get_archetype_color(arch) for arch in archetypes]
+
+    See docs/DATA_VISUALIZATION_EXPERTISE.md for complete guidance.
+    """
 
     def __init__(self, config_manager=None):
         self.config_manager = config_manager  # Optionnel, peut être None
@@ -2793,11 +2808,14 @@ class ManalyticsOrchestrator:
         print(f"📈 Enhanced visualizations generated in: {viz_dir}")
 
     def _create_animated_archetype_chart(self, enhanced_data, viz_dir):
-        """Create animated archetype distribution chart"""
+        """Create animated archetype distribution chart with EXPERT COLOR SYSTEM"""
 
         # For now, create a static version that can be enhanced with animation later
         import matplotlib.pyplot as plt
         import numpy as np
+
+        # 🎨 IMPORT EXPERT COLOR SYSTEM
+        from python.visualizations.metagame_charts import MetagameChartsGenerator
 
         # Get archetype data
         archetype_data = enhanced_data["metagame_breakdown"]["by_color_integrated"]
@@ -2809,13 +2827,18 @@ class ManalyticsOrchestrator:
         # Create figure
         fig, ax = plt.subplots(figsize=(12, 8))
 
-        # Create pie chart
-        colors = plt.cm.Set3(np.linspace(0, 1, len(archetypes)))
+        # 🎨 USE EXPERT COLOR SYSTEM instead of matplotlib automatic
+        charts_generator = MetagameChartsGenerator()
+        expert_colors = [
+            charts_generator.get_archetype_color(arch) for arch in archetypes
+        ]
+
+        # Create pie chart with EXPERT COLORS
         wedges, texts, autotexts = ax.pie(
             percentages,
             labels=archetypes,
             autopct="%1.1f%%",
-            colors=colors,
+            colors=expert_colors,  # 🎨 EXPERT COLORS APPLIED
             startangle=90,
         )
 
@@ -2836,10 +2859,13 @@ class ManalyticsOrchestrator:
         print(f"📊 Animated archetype chart saved: {chart_path}")
 
     def _create_color_heatmap(self, enhanced_data, viz_dir):
-        """Create color distribution heatmap"""
+        """Create color distribution heatmap with EXPERT COLOR SYSTEM"""
 
         import matplotlib.pyplot as plt
         import numpy as np
+
+        # 🎨 IMPORT EXPERT COLOR SYSTEM
+        from python.visualizations.metagame_charts import MetagameChartsGenerator
 
         # Get color data
         color_data = enhanced_data["metagame_breakdown"]["by_colors"]
@@ -2858,7 +2884,22 @@ class ManalyticsOrchestrator:
         colors = list(color_matrix.keys())[:10]  # Top 10
         percentages = [color_matrix[c] for c in colors]
 
-        bars = ax.bar(range(len(colors)), percentages, color="skyblue", alpha=0.7)
+        # 🎨 USE EXPERT COLOR SYSTEM - Create gradient based on percentage
+        charts_generator = MetagameChartsGenerator()
+        # Use heatmap colors from expert system for color combinations
+        bar_colors = []
+        for i, color_combo in enumerate(colors):
+            # Use expert heatmap colors or archetype colors based on percentage
+            if percentages[i] > 15:  # High percentage - use primary color
+                bar_colors.append("#E74C3C")  # Primary red
+            elif percentages[i] > 10:  # Medium percentage - use secondary color
+                bar_colors.append("#3498DB")  # Primary blue
+            elif percentages[i] > 5:  # Low percentage - use tertiary color
+                bar_colors.append("#95A5A6")  # Neutral gray
+            else:  # Very low - use light color
+                bar_colors.append("#BDC3C7")  # Light gray
+
+        bars = ax.bar(range(len(colors)), percentages, color=bar_colors, alpha=0.8)
 
         # Styling
         ax.set_xlabel("Color Combinations")
