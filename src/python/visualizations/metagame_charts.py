@@ -257,7 +257,13 @@ class MetagameChartsGenerator:
     def create_metagame_pie_chart(
         self, df: pd.DataFrame, min_threshold: float = 0.01
     ) -> go.Figure:
-        """Crée le pie chart de part de métagame (comme l'image PNG)"""
+        """Crée le pie chart de part de métagame 
+        
+        RÈGLES ABSOLUES:
+        - JAMAIS afficher "Autres / Non classifiés" 
+        - MAXIMUM 12 segments dans le camembert
+        - Prendre seulement les 12 archétypes les plus représentés
+        """
 
         # Calculer les parts de métagame par archétype avec couleurs
         archetype_column = (
@@ -271,34 +277,18 @@ class MetagameChartsGenerator:
         # Calculer les pourcentages
         archetype_shares = (archetype_counts / total_players * 100).round(2)
 
-        # Filtrer les archétypes au-dessus du seuil
-        main_archetypes = archetype_shares[archetype_shares >= min_threshold * 100]
+        # RÈGLE ABSOLUE : MAXIMUM 12 archétypes, JAMAIS d'Autres
+        main_archetypes = archetype_shares.head(12)
 
-        # Regrouper les petits archétypes
-        small_archetypes_sum = archetype_shares[
-            archetype_shares < min_threshold * 100
-        ].sum()
-
-        if small_archetypes_sum > 0:
-            main_archetypes["Autres / Non classifiés"] = small_archetypes_sum
-
-        # Trier par valeur décroissante MAIS "Autres" ne doit jamais être en premier
-        main_archetypes = main_archetypes.sort_values(ascending=False)
-
-        # RÈGLE CRITIQUE: "Autres" ne doit jamais apparaître en premier
-        if main_archetypes.index[0] == "Autres" and len(main_archetypes) > 1:
-            # Réorganiser pour que "Autres" soit en dernier
-            other_value = main_archetypes["Autres"]
+        # RÈGLE ABSOLUE : "Autres" ne doit JAMAIS apparaître dans un pie chart
+        # On supprime complètement toute trace d'Autres
+        if "Autres" in main_archetypes.index:
             main_archetypes = main_archetypes.drop("Autres")
-            main_archetypes["Autres"] = other_value
-        elif (
-            main_archetypes.index[0] == "Autres / Non classifiés"
-            and len(main_archetypes) > 1
-        ):
-            # Réorganiser pour que "Autres" soit en dernier
-            other_value = main_archetypes["Autres / Non classifiés"]
+        if "Autres / Non classifiés" in main_archetypes.index:
             main_archetypes = main_archetypes.drop("Autres / Non classifiés")
-            main_archetypes["Autres / Non classifiés"] = other_value
+
+        # Trier par valeur décroissante
+        main_archetypes = main_archetypes.sort_values(ascending=False)
 
         # Créer le pie chart
         fig = go.Figure()
@@ -309,20 +299,17 @@ class MetagameChartsGenerator:
         # Obtenir les guildes pour chaque archétype depuis les données
         guild_names = []
         for archetype in archetype_names:
-            if archetype in ["Autres", "Autres / Non classifiés"]:
-                guild_names.append(None)  # Pas de guilde pour "Autres"
+            # Trouver la guilde la plus commune pour cet archétype
+            archetype_data = df[df["archetype"] == archetype]
+            if not archetype_data.empty and "guild_name" in archetype_data.columns:
+                most_common_guild = archetype_data["guild_name"].mode()
+                guild_names.append(
+                    most_common_guild.iloc[0]
+                    if len(most_common_guild) > 0
+                    else None
+                )
             else:
-                # Trouver la guilde la plus commune pour cet archétype
-                archetype_data = df[df["archetype"] == archetype]
-                if not archetype_data.empty and "guild_name" in archetype_data.columns:
-                    most_common_guild = archetype_data["guild_name"].mode()
-                    guild_names.append(
-                        most_common_guild.iloc[0]
-                        if len(most_common_guild) > 0
-                        else None
-                    )
-                else:
-                    guild_names.append(None)
+                guild_names.append(None)
 
         colors = self.get_archetype_colors_for_chart(archetype_names, guild_names)
 
@@ -347,15 +334,10 @@ class MetagameChartsGenerator:
             )
         )
 
-        # Période d'analyse (à partir des données)
-        dates = pd.to_datetime(df["tournament_date"])
-        start_date = dates.min().strftime("%Y-%m-%d")
-        end_date = dates.max().strftime("%Y-%m-%d")
-
         # Mise en page
         fig.update_layout(
             title={
-                "text": "Standard Metagame Share",
+                "text": "Standard Metagame Share (Top 12 Only)",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 16, "family": "Arial, sans-serif"},
@@ -1014,6 +996,11 @@ class MetagameChartsGenerator:
     def create_main_archetypes_bar_chart(self, data):
         """
         Crée un graphique en barres des archétypes principaux avec les vraies données
+        
+        RÈGLES ABSOLUES:
+        - JAMAIS afficher "Autres / Non classifiés" 
+        - MAXIMUM 12 segments 
+        - Prendre seulement les 12 archétypes les plus représentés
         """
         import pandas as pd
 
@@ -1030,42 +1017,34 @@ class MetagameChartsGenerator:
         # Calculer les pourcentages pour tous les archétypes
         archetype_percentages = (archetype_counts / total_decks * 100).round(2)
 
-        # RÈGLE: Prendre les 12 archétypes les plus populaires (au lieu de 15)
+        # RÈGLE ABSOLUE : Prendre SEULEMENT les 12 archétypes les plus populaires
         top_archetypes = archetype_percentages.head(12)
 
-        # Calculer le reste comme "Autres"
-        others_percentage = (
-            archetype_percentages.iloc[12:].sum()
-            if len(archetype_percentages) > 12
-            else 0
-        )
+        # RÈGLE ABSOLUE : "Autres" ne doit JAMAIS apparaître dans les graphiques
+        # On supprime complètement toute trace d'Autres
+        if "Autres" in top_archetypes.index:
+            top_archetypes = top_archetypes.drop("Autres")
+        if "Autres / Non classifiés" in top_archetypes.index:
+            top_archetypes = top_archetypes.drop("Autres / Non classifiés")
 
         # Préparer les données pour le graphique
         archetypes = list(top_archetypes.index)
         percentages = list(top_archetypes.values)
 
-        # Ajouter "Autres" si nécessaire
-        if others_percentage > 0:
-            archetypes.append("Autres / Non classifiés")
-            percentages.append(others_percentage)
-
         # Couleurs MTG pour chaque archétype
         guild_names = []
         for archetype in archetypes:
-            if archetype in ["Autres", "Autres / Non classifiés"]:
-                guild_names.append(None)  # Pas de guilde pour "Autres"
+            # Trouver la guilde la plus commune pour cet archétype
+            archetype_data = df[df["archetype"] == archetype]
+            if not archetype_data.empty and "guild_name" in archetype_data.columns:
+                most_common_guild = archetype_data["guild_name"].mode()
+                guild_names.append(
+                    most_common_guild.iloc[0]
+                    if len(most_common_guild) > 0
+                    else None
+                )
             else:
-                # Trouver la guilde la plus commune pour cet archétype
-                archetype_data = df[df["archetype"] == archetype]
-                if not archetype_data.empty and "guild_name" in archetype_data.columns:
-                    most_common_guild = archetype_data["guild_name"].mode()
-                    guild_names.append(
-                        most_common_guild.iloc[0]
-                        if len(most_common_guild) > 0
-                        else None
-                    )
-                else:
-                    guild_names.append(None)
+                guild_names.append(None)
 
         colors = self.get_archetype_colors_for_chart(archetypes, guild_names)
 
@@ -1093,7 +1072,7 @@ class MetagameChartsGenerator:
         # Mise en forme
         fig.update_layout(
             title={
-                "text": f"Main STANDARD Archetypes - {len(df)} decks analyzed (Top 12)",
+                "text": f"Main STANDARD Archetypes - {len(df)} decks analyzed (Top 12 Only)",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 18, "family": "Arial, sans-serif", "color": "#2c3e50"},
@@ -1134,6 +1113,11 @@ class MetagameChartsGenerator:
     def create_main_archetypes_bar_horizontal(self, data):
         """
         Crée un graphique en barres horizontal des archétypes principaux (top 12)
+        
+        RÈGLES ABSOLUES:
+        - JAMAIS afficher "Autres / Non classifiés" 
+        - MAXIMUM 12 segments 
+        - Prendre seulement les 12 archétypes les plus représentés
         """
         import pandas as pd
 
@@ -1147,37 +1131,34 @@ class MetagameChartsGenerator:
         archetype_counts = df["archetype"].value_counts()
         total_decks = len(df)
         archetype_percentages = (archetype_counts / total_decks * 100).round(2)
-
-        # RÈGLE: Prendre les 12 archétypes les plus populaires (au lieu de 15)
+        
+        # RÈGLE ABSOLUE : Prendre SEULEMENT les 12 archétypes les plus populaires
         top_archetypes = archetype_percentages.head(12)
-
-        others_percentage = (
-            archetype_percentages.iloc[12:].sum()
-            if len(archetype_percentages) > 12
-            else 0
-        )
+        
+        # RÈGLE ABSOLUE : "Autres" ne doit JAMAIS apparaître dans les graphiques
+        # On supprime complètement toute trace d'Autres
+        if "Autres" in top_archetypes.index:
+            top_archetypes = top_archetypes.drop("Autres")
+        if "Autres / Non classifiés" in top_archetypes.index:
+            top_archetypes = top_archetypes.drop("Autres / Non classifiés")
+        
         archetypes = list(top_archetypes.index)
         percentages = list(top_archetypes.values)
-        if others_percentage > 0:
-            archetypes.append("Autres / Non classifiés")
-            percentages.append(others_percentage)
+        
         # Couleurs MTG pour chaque archétype
         guild_names = []
         for archetype in archetypes:
-            if archetype in ["Autres", "Autres / Non classifiés"]:
-                guild_names.append(None)  # Pas de guilde pour "Autres"
+            # Trouver la guilde la plus commune pour cet archétype
+            archetype_data = df[df["archetype"] == archetype]
+            if not archetype_data.empty and "guild_name" in archetype_data.columns:
+                most_common_guild = archetype_data["guild_name"].mode()
+                guild_names.append(
+                    most_common_guild.iloc[0]
+                    if len(most_common_guild) > 0
+                    else None
+                )
             else:
-                # Trouver la guilde la plus commune pour cet archétype
-                archetype_data = df[df["archetype"] == archetype]
-                if not archetype_data.empty and "guild_name" in archetype_data.columns:
-                    most_common_guild = archetype_data["guild_name"].mode()
-                    guild_names.append(
-                        most_common_guild.iloc[0]
-                        if len(most_common_guild) > 0
-                        else None
-                    )
-                else:
-                    guild_names.append(None)
+                guild_names.append(None)
 
         colors = self.get_archetype_colors_for_chart(archetypes, guild_names)
         fig = go.Figure(
@@ -1200,7 +1181,7 @@ class MetagameChartsGenerator:
         )
         fig.update_layout(
             title={
-                "text": f"Main STANDARD Archetypes (Horizontal) - {len(df)} decks analyzed (Top 12)",
+                "text": f"Main STANDARD Archetypes (Horizontal) - {len(df)} decks analyzed (Top 12 Only)",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 18, "family": "Arial, sans-serif", "color": "#2c3e50"},

@@ -396,7 +396,49 @@ fig.update_layout(
 ### Maintenance
 ⚠️ **Règle** : Tous les nouveaux graphiques pie doivent respecter la taille standard 1000×700 pixels pour maintenir la cohérence visuelle.
 
-## 📊 Règle des 12 Archétypes Maximum
+## 🚨 RÈGLES ABSOLUES - NON NÉGOCIABLES
+
+### ⛔ RÈGLE #1 : JAMAIS D'AUTRES DANS LES PIE CHARTS
+**INTERDIT ABSOLU** : Les graphiques pie (camembert) ne doivent **JAMAIS** afficher "Autres", "Autres / Non classifiés" ou toute variante.
+
+**Pourquoi :**
+- Les pie charts servent à montrer la composition précise du métagame
+- "Autres" dilue l'information et rend l'analyse impossible
+- Contraire aux standards MTGGoldfish/17lands/Untapped.gg
+
+**Application :**
+```python
+# CORRECT - Supprimer complètement "Autres"
+if "Autres" in data.index:
+    data = data.drop("Autres")
+if "Autres / Non classifiés" in data.index:
+    data = data.drop("Autres / Non classifiés")
+```
+
+### ⛔ RÈGLE #2 : MAXIMUM 12 SEGMENTS PIE CHART
+**LIMITE ABSOLUE** : Aucun graphique pie ne peut avoir plus de 12 segments.
+
+**Pourquoi :**
+- Au-delà de 12 segments, illisible
+- Couleurs indistinguables
+- Comparaison visuelle impossible
+
+**Application :**
+```python
+# CORRECT - Limiter à 12 archétypes maximum
+main_archetypes = archetype_shares.head(12)
+```
+
+### 🎯 Graphiques Concernés par ces Règles
+- ✅ `create_metagame_pie_chart` - PIE CHART PRINCIPAL
+- ✅ `create_main_archetypes_bar_chart` - 12 max, pas d'Autres
+- ✅ `create_main_archetypes_bar_horizontal` - 12 max, pas d'Autres
+
+### ⚠️ SANCTIONS
+**Toute violation de ces règles est INTERDITE et sera corrigée immédiatement.**
+Ces règles sont codées en dur dans le pipeline et dans la documentation.
+
+## 📊 Règle des 12 Archétypes Maximum - TOUS GRAPHIQUES
 
 ### Principe Fondamental
 ⚠️ **RÈGLE ABSOLUE** : Aucun graphique ne doit jamais afficher plus de 12 archétypes simultanément.
@@ -409,17 +451,19 @@ fig.update_layout(
 
 ### Application
 1. **Tri par importance** : Prioriser par metagame share ou winrate
-2. **Regroupement** : Archétypes 13+ deviennent "Autres / Non classifiés"
-3. **Filtrage dynamique** : `df.head(12)` ou `df.nlargest(12, "metagame_share")`
+2. **Pour PIE CHARTS** : JAMAIS d'Autres, seulement top 12
+3. **Pour BAR CHARTS** : Peut avoir "Autres" pour le reste
+4. **Filtrage dynamique** : `df.head(12)` ou `df.nlargest(12, "metagame_share")`
 
 ### Graphiques Concernés
 Tous les graphiques respectent désormais cette règle :
+- ✅ `create_metagame_pie_chart` - Top 12 SEULEMENT, JAMAIS Autres
 - ✅ `create_winrate_confidence_chart` - Top 12 par winrate
 - ✅ `create_tiers_scatter_plot` - Top 12 par metagame share
 - ✅ `create_bubble_chart_winrate_presence` - Top 12 par metagame share
 - ✅ `create_top_5_0_chart` - Top 12 par performance
-- ✅ `create_main_archetypes_bar_chart` - Top 12 + "Autres"
-- ✅ `create_main_archetypes_bar_horizontal` - Top 12 + "Autres"
+- ✅ `create_main_archetypes_bar_chart` - Top 12 SEULEMENT, JAMAIS Autres
+- ✅ `create_main_archetypes_bar_horizontal` - Top 12 SEULEMENT, JAMAIS Autres
 
 ### Code Type
 ```python
@@ -427,10 +471,17 @@ Tous les graphiques respectent désormais cette règle :
 def create_chart(self, stats_df: pd.DataFrame) -> go.Figure:
     # RÈGLE: Limiter à 12 archétypes maximum
     filtered_df = stats_df.nlargest(12, "metagame_share")
-
+    
+    # Pour PIE CHARTS : Supprimer TOUT "Autres"
+    if chart_type == "pie":
+        if "Autres" in filtered_df.index:
+            filtered_df = filtered_df.drop("Autres")
+        if "Autres / Non classifiés" in filtered_df.index:
+            filtered_df = filtered_df.drop("Autres / Non classifiés")
+    
     # Traitement...
-
-    title = "Chart Title (Top 12)"  # Indiquer dans le titre
+    
+    title = "Chart Title (Top 12 Only)"  # Indiquer dans le titre
 ```
 
 ### Maintenance
