@@ -59,8 +59,10 @@
 - [ ] You're working on main branch (no feature branch)
 - [ ] Your modification is committed to main
 - [ ] Your commit is pushed to main
-- [ ] **🆕 Your name is added to the team list with [NAME]_[YYYY-MM-DD_HH-MM] format**
+- [ ] **🆕 Your assistant name is added to the team list with [ASSISTANT_NAME]_[YYYY-MM-DD_HH-MM] format**
 - [ ] **🆕 You understand the rollback procedure if needed**
+
+**📝 NOTE**: Use your assistant name (Claude, GPT-4, Gemini, etc.) followed by automatic date/time format.
 
 **🔗 Followed**: [INSTRUCTIONS_NOUVELLE_EQUIPE.md](INSTRUCTIONS_NOUVELLE_EQUIPE.md) workflow
 

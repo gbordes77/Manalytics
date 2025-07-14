@@ -97,7 +97,7 @@ All work is done directly on `main` branch. No feature branches. This simplifies
 1. **IMPORTANT**: Check [MODIFICATION_TRACKER.md](MODIFICATION_TRACKER.md) and add your entry BEFORE modifying
 2. Stay on main: `git status` (should show "On branch main")
 3. Modify this file (`INSTRUCTIONS_NOUVELLE_EQUIPE.md`): add your name in the "Team" section below
-4. Commit: `git add . && git commit -m "docs: add [YOUR_NAME_DATETIME] to team"`
+4. Commit: `git add . && git commit -m "docs: add [YOUR_ASSISTANT_NAME_DATETIME] to team"`
 5. Push: `git push origin main`
 6. **NO PR NEEDED** - Direct commit to main
 
@@ -113,13 +113,15 @@ All work is done directly on `main` branch. No feature branches. This simplifies
 
 ## 🏆 **TEAM - Add your name here after your first contribution**
 
-*Format: [YOUR_NAME]_[YYYY-MM-DD_HH-MM] - Brief description*
+*Format: [YOUR_ASSISTANT_NAME]_[YYYY-MM-DD_HH-MM] - Brief description*
+
+**📝 NOTE**: The name should be your assistant name (e.g., Claude, GPT-4, Gemini, etc.) followed by the automatic date and time format.
 
 *Developers who successfully completed Manalytics v0.3.4 onboarding:*
 
 - Claude_Sonnet_4_2025-07-13_14-30 - AI Assistant, onboarding system setup
 - Assistant_AI_2025-01-14_13-45 - Workflow simplification and tracking system
-- [Your name here after your first contribution]
+- [Your assistant name here after your first contribution]
 
 ---
 

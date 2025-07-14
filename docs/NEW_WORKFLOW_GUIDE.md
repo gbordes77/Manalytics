@@ -7,7 +7,7 @@
 ### ✅ **Ce qui a changé**
 - **Fini les branches**: Tout se fait sur `main` directement
 - **Traçabilité obligatoire**: Chaque modification doit être tracée
-- **Nom avec date/heure**: Format `[NOM]_[YYYY-MM-DD_HH-MM]`
+- **Nom assistant + date/heure**: Format `[ASSISTANT_NAME]_[YYYY-MM-DD_HH-MM]`
 - **Scripts d'automatisation**: Outils pour simplifier le processus
 - **Rollback immédiat**: Procédures d'urgence intégrées
 
@@ -73,7 +73,9 @@ python scripts/add_tracker_entry.py
 ```
 🔧 Ajout d'une entrée dans MODIFICATION_TRACKER.md
 ==================================================
-Nom de l'intervenant : Claude
+📝 Nom de l'assistant (ex: Claude, GPT-4, Gemini, etc.)
+Nom de l'assistant : Claude
+✅ Nom complet généré: Claude_2025-01-14_14-30
 Fichier(s) concerné(s) : src/orchestrator.py
 Type de modification : 2
 Description : Correction du bug de taille des graphiques
@@ -212,7 +214,7 @@ git log --oneline -5
 - Créer un backup avant modification importante
 - Tester immédiatement après chaque modification
 - Commiter avec des messages clairs et référence au tracker
-- Utiliser le format `[NOM]_[YYYY-MM-DD_HH-MM]`
+- Utiliser le format `[ASSISTANT_NAME]_[YYYY-MM-DD_HH-MM]` (nom de l'assistant + date/heure)
 
 ### **❌ À NE PAS FAIRE**
 - Modifier sans ajouter d'entrée dans le tracker
@@ -236,14 +238,14 @@ git log --oneline -5
 ```bash
 # 1. Préparer
 python scripts/add_tracker_entry.py
-# (Ajouter une entrée pour "ajout nom à la liste")
+# (Ajouter une entrée pour "ajout nom d'assistant à la liste")
 
 # 2. Modifier
-# Ajouter votre nom dans docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md
+# Ajouter votre nom d'assistant dans docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md
 
 # 3. Commiter
 git add docs/MODIFICATION_TRACKER.md docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md
-git commit -m "onboarding: add [VOTRE_NOM] to team (tracked)"
+git commit -m "onboarding: add [VOTRE_ASSISTANT_NAME] to team (tracked)"
 git push origin main
 ```
 
@@ -310,4 +312,4 @@ git checkout backup-xyz-20250114-1400 -- docs/MODIFICATION_TRACKER.md
 
 *Guide créé le : 2025-01-14*
 *Version du système : 1.0*
-*Compatible avec : Manalytics v0.3.4+* 
+*Compatible avec : Manalytics v0.3.4+*
