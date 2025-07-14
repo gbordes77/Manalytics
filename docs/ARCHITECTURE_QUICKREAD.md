@@ -94,23 +94,26 @@ clusters = results['clustering_analysis']
 - **Features** : Intervalles confiance, significance tests
 
 ### **Visualizer** (`src/python/visualizations/`)
-- **Rôle** : Génération 9 charts interactifs Plotly
-- **Types** : Pie charts, heatmaps, scatter plots, évolutions temporelles
+- **Rôle** : Génération 9 charts interactifs Plotly de qualité industrie
+- **Types** : Pie charts, heatmaps, scatter plots, évolutions temporelles, matchup matrix
 - **Export** : HTML standalone + données CSV/JSON
-- **🆕 v0.3.1** : Badges colorés sources, URLs cliquables, export CSV
+- **🆕 v0.3.4.1** : Standardisation 700px, accessibilité daltoniens, règles absolues pie charts
+- **Standards** : Niveau MTGGoldfish/17lands/Untapped.gg avec compliance WCAG AA
 
-## 🆕 Améliorations v0.3.1
+## 🆕 Améliorations v0.3.4.1
 
-### **Orchestrator** (`src/orchestrator.py`)
-- **Différenciation MTGO** : `_determine_source()` distingue Challenge/League
-- **Navigation** : Génération URLs cliquables + boutons fonctionnels
-- **Organisation** : Analyses dans dossier `Analyses/` avec préfixes
-- **Interface** : Badges colorés sources intégrés dashboard
+### **Visualizations** (`src/python/visualizations/`)
+- **Standardisation Universelle** : Toutes les visualisations à 700px de hauteur
+- **Accessibilité Complète** : Support daltoniens (8% population) avec WCAG AA
+- **Matchup Matrix Révolutionnée** : Palette ColorBrewer RdYlBu + texte adaptatif
+- **Règles Absolues Pie Charts** : Zéro "Autres/Non classifiés", maximum 12 segments
+- **Qualité Professionnelle** : Standards industrie MTGGoldfish/17lands/Untapped.gg
 
 ### **Impacts techniques**
-- **Parsing amélioré** : Détection type tournoi via URL patterns
-- **UI/UX enrichie** : CSS/JS pour badges colorés et navigation
-- **Structure fichiers** : Préfixes cohérents pour tous outputs
+- **Cohérence Visuelle** : Navigation fluide avec dimensions uniformes
+- **Code Hardcodé** : Règles non-négociables intégrées dans codebase
+- **Performance Optimisée** : Rendu efficace pour tailles standardisées
+- **Maintenance Simplifiée** : Dimensionnement prévisible et documenté
 
 ## 🔧 Points d'Extension
 

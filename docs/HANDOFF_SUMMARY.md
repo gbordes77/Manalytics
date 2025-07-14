@@ -55,6 +55,16 @@
 - **Better Accuracy**: More precise metagame percentages after deduplication
 - **Source Validation**: Improved tournament data validation and processing
 
+#### 🎨 **NEW: Data Visualization Excellence & Standardization**
+- **Matchup Matrix Color Correction**: ColorBrewer RdYlBu palette with accessibility compliance (WCAG AA)
+- **Adaptive Text System**: White text on dark backgrounds, black text on light backgrounds
+- **Full Colorblind Support**: Scientifically-validated palette for 8% of population
+- **Graph Size Standardization**: All pie charts unified to 1000×700 pixels for consistent UX
+- **12 Archetype Maximum Rule**: Scientific limit matching industry standards (MTGGoldfish, 17lands, Untapped.gg)
+- **Absolute Pie Chart Rules**: Zero "Autres/Non classifiés" in pie charts, maximum 12 segments
+- **700px Height Standardization**: All visualizations standardized to 700px (except matchup matrix)
+- **Professional Standards**: Industry-grade visualization quality with publication-ready aesthetics
+
 #### 🌍 **Complete French → English Migration**
 - **Interface Translation**: All user-facing messages, buttons, labels now in English
 - **Chart Titles**: All visualization titles translated (metagame share, winrates, etc.)

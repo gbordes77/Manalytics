@@ -396,6 +396,50 @@ fig.update_layout(
 ### Maintenance
 ⚠️ **Règle** : Tous les nouveaux graphiques pie doivent respecter la taille standard 1000×700 pixels pour maintenir la cohérence visuelle.
 
+## 📏 **STANDARDISATION FINALE : 700px DE HAUTEUR**
+
+### **🎯 Règle de Cohérence Visuelle Universelle**
+**STANDARD** : Toutes les visualisations utilisent maintenant 700px de hauteur (sauf exceptions spécifiques)
+
+### **📊 Graphiques Standardisés à 700px :**
+```python
+# Toutes ces méthodes utilisent height=700
+create_winrate_confidence_chart()      # 800×700 (anciennement 500px)
+create_tiers_scatter_plot()            # 800×700 (anciennement 600px)
+create_bubble_chart_winrate_presence()  # 800×700 (anciennement 600px)
+create_top_5_0_chart()                 # 800×700 (anciennement 500px)
+create_archetype_evolution_chart()     # 1000×700 (anciennement 600px)
+create_main_archetypes_bar_chart()     # 1200×700 (anciennement 600px)
+create_main_archetypes_bar_horizontal() # 1200×700 (anciennement 600px)
+create_metagame_pie_chart()            # 1000×700 (maintenue)
+create_metagame_share_chart()          # 1000×700 (maintenue)
+create_data_sources_pie_chart()        # 1000×700 (maintenue)
+```
+
+### **🔧 Exceptions à la Règle 700px :**
+- **Matchup Matrix** : Conserve ses dimensions optimisées (900px) pour la lisibilité des données tabulaires
+- **Graphiques futurs** : Peuvent utiliser d'autres hauteurs si justification technique valide
+
+### **🌟 Bénéfices de la Standardisation :**
+- **Expérience utilisateur cohérente** : Navigation fluide entre pages
+- **Intégration visuelle** : Harmonie parfaite pages main/MTGO
+- **Maintenance simplifiée** : Dimensionnement prévisible
+- **Qualité professionnelle** : Standards industrie respectés
+
+### **💡 Implementation Technique :**
+```python
+# Pattern standard pour tous les graphiques
+fig.update_layout(
+    title="Titre du Graphique",
+    width=largeur_appropriée,  # Variable selon le type
+    height=700,                # ← STANDARD UNIFORME
+    margin=dict(l=50, r=50, t=80, b=80),
+)
+```
+
+### **⚡ Maintenance**
+🔧 **Tout nouveau graphique** doit utiliser 700px de hauteur sauf justification technique documentée.
+
 ## 🚨 RÈGLES ABSOLUES - NON NÉGOCIABLES
 
 ### ⛔ RÈGLE #1 : JAMAIS D'AUTRES DANS LES PIE CHARTS
@@ -471,16 +515,16 @@ Tous les graphiques respectent désormais cette règle :
 def create_chart(self, stats_df: pd.DataFrame) -> go.Figure:
     # RÈGLE: Limiter à 12 archétypes maximum
     filtered_df = stats_df.nlargest(12, "metagame_share")
-    
+
     # Pour PIE CHARTS : Supprimer TOUT "Autres"
     if chart_type == "pie":
         if "Autres" in filtered_df.index:
             filtered_df = filtered_df.drop("Autres")
         if "Autres / Non classifiés" in filtered_df.index:
             filtered_df = filtered_df.drop("Autres / Non classifiés")
-    
+
     # Traitement...
-    
+
     title = "Chart Title (Top 12 Only)"  # Indiquer dans le titre
 ```
 

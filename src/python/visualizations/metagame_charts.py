@@ -247,7 +247,8 @@ class MetagameChartsGenerator:
                 data = json.load(f)
             df = pd.DataFrame(data)
             self.logger.info(
-                f"Données chargées: {len(df)} entrées de {df['tournament_source'].nunique()} sources"
+                f"Données chargées: {len(df)} entrées de "
+                f"{df['tournament_source'].nunique()} sources"
             )
             return df
         except Exception as e:
@@ -257,10 +258,10 @@ class MetagameChartsGenerator:
     def create_metagame_pie_chart(
         self, df: pd.DataFrame, min_threshold: float = 0.01
     ) -> go.Figure:
-        """Crée le pie chart de part de métagame 
-        
+        """Crée le pie chart de part de métagame
+
         RÈGLES ABSOLUES:
-        - JAMAIS afficher "Autres / Non classifiés" 
+        - JAMAIS afficher "Autres / Non classifiés"
         - MAXIMUM 12 segments dans le camembert
         - Prendre seulement les 12 archétypes les plus représentés
         """
@@ -304,9 +305,7 @@ class MetagameChartsGenerator:
             if not archetype_data.empty and "guild_name" in archetype_data.columns:
                 most_common_guild = archetype_data["guild_name"].mode()
                 guild_names.append(
-                    most_common_guild.iloc[0]
-                    if len(most_common_guild) > 0
-                    else None
+                    most_common_guild.iloc[0] if len(most_common_guild) > 0 else None
                 )
             else:
                 guild_names.append(None)
@@ -482,7 +481,8 @@ class MetagameChartsGenerator:
 
         fig.update_layout(
             title={
-                "text": f"Standard Archetypes Metagame Share (threshold ≥{threshold:.0%})",
+                "text": f"Standard Archetypes Metagame Share "
+                f"(threshold ≥{threshold:.0%})",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 16, "family": "Arial, sans-serif"},
@@ -562,7 +562,7 @@ class MetagameChartsGenerator:
             yaxis_title="Winrate",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
-            height=500,
+            height=700,
             margin=dict(l=50, r=50, t=80, b=80),
         )
 
@@ -648,7 +648,7 @@ class MetagameChartsGenerator:
             yaxis_title="95% CI Lower Bound",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
-            height=600,
+            height=700,
             margin=dict(l=50, r=50, t=80, b=50),
         )
 
@@ -720,7 +720,7 @@ class MetagameChartsGenerator:
             yaxis_title="Average winrate",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
-            height=600,
+            height=700,
             margin=dict(l=50, r=50, t=80, b=50),
         )
 
@@ -781,7 +781,7 @@ class MetagameChartsGenerator:
             yaxis_title="Nombre de joueurs",
             font=dict(family="Arial, sans-serif", size=12),
             width=800,
-            height=500,
+            height=700,
             margin=dict(l=50, r=50, t=80, b=80),
         )
 
@@ -799,7 +799,6 @@ class MetagameChartsGenerator:
 
         for entry in data:
             source = entry.get("tournament_source", "Unknown")
-            players = entry.get("tournament_players", 1)
 
             if source not in source_counts:
                 source_counts[source] = 0
@@ -875,8 +874,6 @@ class MetagameChartsGenerator:
         """
         Crée un graphique d'évolution temporelle des archétypes Standard
         """
-        from datetime import datetime
-
         import pandas as pd
 
         # Convertir en DataFrame si nécessaire
@@ -968,7 +965,7 @@ class MetagameChartsGenerator:
             paper_bgcolor="white",
             margin=dict(l=60, r=20, t=80, b=60),
             width=1000,
-            height=600,
+            height=700,
             hovermode="x unified",
         )
 
@@ -996,10 +993,10 @@ class MetagameChartsGenerator:
     def create_main_archetypes_bar_chart(self, data):
         """
         Crée un graphique en barres des archétypes principaux avec les vraies données
-        
+
         RÈGLES ABSOLUES:
-        - JAMAIS afficher "Autres / Non classifiés" 
-        - MAXIMUM 12 segments 
+        - JAMAIS afficher "Autres / Non classifiés"
+        - MAXIMUM 12 segments
         - Prendre seulement les 12 archétypes les plus représentés
         """
         import pandas as pd
@@ -1039,9 +1036,7 @@ class MetagameChartsGenerator:
             if not archetype_data.empty and "guild_name" in archetype_data.columns:
                 most_common_guild = archetype_data["guild_name"].mode()
                 guild_names.append(
-                    most_common_guild.iloc[0]
-                    if len(most_common_guild) > 0
-                    else None
+                    most_common_guild.iloc[0] if len(most_common_guild) > 0 else None
                 )
             else:
                 guild_names.append(None)
@@ -1085,7 +1080,7 @@ class MetagameChartsGenerator:
             paper_bgcolor="white",
             margin=dict(l=60, r=20, t=80, b=120),
             width=1200,
-            height=600,
+            height=700,
         )
 
         # Améliorer les axes
@@ -1113,10 +1108,10 @@ class MetagameChartsGenerator:
     def create_main_archetypes_bar_horizontal(self, data):
         """
         Crée un graphique en barres horizontal des archétypes principaux (top 12)
-        
+
         RÈGLES ABSOLUES:
-        - JAMAIS afficher "Autres / Non classifiés" 
-        - MAXIMUM 12 segments 
+        - JAMAIS afficher "Autres / Non classifiés"
+        - MAXIMUM 12 segments
         - Prendre seulement les 12 archétypes les plus représentés
         """
         import pandas as pd
@@ -1131,20 +1126,20 @@ class MetagameChartsGenerator:
         archetype_counts = df["archetype"].value_counts()
         total_decks = len(df)
         archetype_percentages = (archetype_counts / total_decks * 100).round(2)
-        
+
         # RÈGLE ABSOLUE : Prendre SEULEMENT les 12 archétypes les plus populaires
         top_archetypes = archetype_percentages.head(12)
-        
+
         # RÈGLE ABSOLUE : "Autres" ne doit JAMAIS apparaître dans les graphiques
         # On supprime complètement toute trace d'Autres
         if "Autres" in top_archetypes.index:
             top_archetypes = top_archetypes.drop("Autres")
         if "Autres / Non classifiés" in top_archetypes.index:
             top_archetypes = top_archetypes.drop("Autres / Non classifiés")
-        
+
         archetypes = list(top_archetypes.index)
         percentages = list(top_archetypes.values)
-        
+
         # Couleurs MTG pour chaque archétype
         guild_names = []
         for archetype in archetypes:
@@ -1153,9 +1148,7 @@ class MetagameChartsGenerator:
             if not archetype_data.empty and "guild_name" in archetype_data.columns:
                 most_common_guild = archetype_data["guild_name"].mode()
                 guild_names.append(
-                    most_common_guild.iloc[0]
-                    if len(most_common_guild) > 0
-                    else None
+                    most_common_guild.iloc[0] if len(most_common_guild) > 0 else None
                 )
             else:
                 guild_names.append(None)
@@ -1194,7 +1187,7 @@ class MetagameChartsGenerator:
             paper_bgcolor="white",
             margin=dict(l=120, r=20, t=80, b=60),
             width=1200,
-            height=600,
+            height=700,
         )
         fig.update_yaxes(
             showgrid=False,

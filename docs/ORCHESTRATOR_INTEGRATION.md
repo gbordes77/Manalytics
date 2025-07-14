@@ -116,19 +116,19 @@ graph TD
     E --> F[🔬 Advanced Analysis]
     F --> G[📈 Visualization]
     G --> H[💾 Output Generation]
-    
+
     F --> F1[Shannon Diversity]
     F --> F2[Temporal Trends]
     F --> F3[K-means Clustering]
     F --> F4[Correlation Analysis]
     F --> F5[Card Usage Analysis]
-    
+
     F1 --> I[📋 Insights Extraction]
     F2 --> I
     F3 --> I
     F4 --> I
     F5 --> I
-    
+
     I --> J[💾 JSON + CSV Output]
     J --> K[📄 HTML Integration]
 ```
@@ -140,7 +140,7 @@ graph TD
 # In orchestrator.py
 def run_analysis(self, format_name, start_date, end_date):
     # ... existing data processing ...
-    
+
     # NEW: Advanced analysis integration
     if len(processed_data) > 0:
         advanced_results = self._perform_advanced_analysis(processed_data)
@@ -153,28 +153,40 @@ def run_analysis(self, format_name, start_date, end_date):
 # Advanced analysis results are automatically included in HTML reports
 def generate_html_report(self):
     # ... existing HTML generation ...
-    
+
     # NEW: Include advanced analytics section
     if os.path.exists(f"{self.output_dir}/advanced_analysis.json"):
         with open(f"{self.output_dir}/advanced_analysis.json") as f:
             advanced_data = json.load(f)
-        
+
         # Add advanced analytics section to HTML
         self.add_advanced_analytics_section(advanced_data)
 ```
 
-### 3. **Visualization Enhancement**
+### 3. **Visualization Enhancement (v0.3.4.1)**
 ```python
-# Visualizations now include advanced analytics
+# Professional-grade visualizations with industry standards
 def create_enhanced_charts(self):
-    # ... existing basic charts ...
-    
-    # NEW: Advanced analytics charts
-    self.create_diversity_timeline()
-    self.create_trend_analysis_chart()
-    self.create_cluster_visualization()
-    self.create_correlation_heatmap()
+    # ... existing basic charts with 700px standardization ...
+
+    # ENHANCED: Industry-standard visualizations
+    self.create_diversity_timeline()           # 1000×700 standardized
+    self.create_trend_analysis_chart()         # 800×700 standardized
+    self.create_cluster_visualization()        # 800×700 standardized
+    self.create_correlation_heatmap()          # 800×700 standardized
+
+    # NEW: Accessibility-compliant visualizations
+    self.create_matchup_matrix()               # ColorBrewer RdYlBu palette
+    self.create_metagame_pie_chart()           # Zero "Autres", max 12 segments
+    self.create_professional_bar_charts()     # WCAG AA compliance
 ```
+
+#### **Key Integration Enhancements**:
+- **Standardization**: All charts automatically use 700px height
+- **Accessibility**: ColorBrewer palettes for 8% colorblind population
+- **Professional Quality**: MTGGoldfish/17lands/Untapped.gg standards
+- **Absolute Rules**: Hardcoded pie chart rules (no "Autres", max 12 segments)
+- **Performance**: Optimized rendering for consistent dimensions
 
 ## 🚀 Usage in Practice
 
@@ -263,7 +275,7 @@ The orchestrator integrates with methodologies from [Jiliac/Aliquanto3](https://
 def calculate_diversity_metrics(self):
     # Uses Shannon diversity formula from ecology R packages
     # Matches diversity() function from vegan package
-    
+
 def analyze_temporal_trends(self):
     # Implements time series analysis similar to forecast package
     # Compatible with R's ts() and lm() functions
@@ -286,7 +298,7 @@ def export_for_r_analysis(self):
 def validate_data_quality(self, data):
     if len(data) < 100:
         self.logger.warning("Small dataset - statistical results may be unreliable")
-    
+
     if data['archetype'].nunique() < 5:
         self.logger.warning("Low archetype diversity - some analyses may be skipped")
 ```
@@ -315,4 +327,4 @@ def cached_analysis(self, data_hash):
 
 The orchestrator integration provides seamless access to advanced analytics while maintaining the simplicity of the original pipeline. Users get enhanced insights automatically, while developers can customize and extend the analysis capabilities as needed.
 
-For detailed function documentation, see [API_REFERENCE_ADVANCED_ANALYTICS.md](API_REFERENCE_ADVANCED_ANALYTICS.md). 
+For detailed function documentation, see [API_REFERENCE_ADVANCED_ANALYTICS.md](API_REFERENCE_ADVANCED_ANALYTICS.md).

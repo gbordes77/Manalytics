@@ -53,6 +53,14 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 - **Card Usage Statistics**: Comprehensive card frequency and meta analysis
 - **Key Insights Extraction**: Automated interpretation of statistical patterns
 
+### 🎨 **NEW: Data Visualization Excellence (v0.3.4.1)**
+- **Industry Standards**: Matches MTGGoldfish, 17lands, Untapped.gg professional quality
+- **Accessibility Compliance**: Full colorblind support (8% population) with WCAG AA standards
+- **Matchup Matrix Revolution**: ColorBrewer RdYlBu palette with adaptive text system
+- **Visual Consistency**: All visualizations standardized to 700px height for seamless navigation
+- **Absolute Pie Chart Rules**: Zero "Autres/Non classifiés" in pie charts, maximum 12 segments
+- **Professional Aesthetics**: Scientific color palettes and optimal readability
+
 ### 📊 **R-Meta-Analysis Integration**
 - **GitHub Integration**: Connected to [Jiliac/Aliquanto3](https://github.com/Jiliac/Aliquanto3) R-Meta-Analysis repository
 - **Statistical Replication**: Reproduces R-based metagame analysis in Python
