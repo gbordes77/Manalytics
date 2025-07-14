@@ -68,7 +68,9 @@ class ManalyticsOrchestrator:
             visualization_report = await self.generate_visualizations(str(output_dir))
 
             # 2. Final summary
-            self.logger.info(f"✅ Pipeline completed successfully in {analysis_folder}!")
+            self.logger.info(
+                f"✅ Pipeline completed successfully in {analysis_folder}!"
+            )
 
             return {
                 "analysis_folder": analysis_folder,
@@ -812,7 +814,7 @@ class ManalyticsOrchestrator:
         .viz-header {{ background: var(--bg-light); padding: 1.5rem; border-bottom: 1px solid #eee; }}
         .viz-title {{ font-size: 1.4rem; font-weight: 600; color: var(--text-dark); }}
         .viz-content {{ height: 650px; }}
-        .viz-content.matchup-matrix {{ height: 850px; }}
+        .viz-content.matchup-matrix {{ height: 1275px; }}
         .viz-iframe {{ width: 100%; height: 100%; border: none; }}
 
         .footer {{ background: var(--text-dark); color: white; text-align: center;
@@ -1777,9 +1779,9 @@ class ManalyticsOrchestrator:
                         "count",
                         lambda x: len(x.unique()),
                     ],  # Number of decks and unique archetypes
-                    "color_identity": lambda x: x.mode().iloc[0]
-                    if not x.empty
-                    else "Unknown",  # Most common colors
+                    "color_identity": lambda x: (
+                        x.mode().iloc[0] if not x.empty else "Unknown"
+                    ),  # Most common colors
                 }
             )
 
@@ -1945,9 +1947,9 @@ class ManalyticsOrchestrator:
     def generate_mtgo_analysis(self, output_dir: str, df: pd.DataFrame):
         """Generate dedicated MTGO analysis with filtered data"""
         try:
-            # Filter for MTGO data only
+            # Filter for MTGO data only - Keep "mtgo.com (Challenge)" and "mtgo.com"
             mtgo_df = df[
-                df["tournament_source"].str.contains("mtgo.com", case=False, na=False)
+                df["tournament_source"].isin(["mtgo.com (Challenge)", "mtgo.com"])
             ]
 
             if len(mtgo_df) == 0:
@@ -2038,7 +2040,7 @@ class ManalyticsOrchestrator:
         .viz-header {{ background: var(--bg-light); padding: 1.5rem; border-bottom: 1px solid #eee; }}
         .viz-title {{ font-size: 1.4rem; font-weight: 600; color: var(--text-dark); }}
         .viz-content {{ height: 650px; }}
-        .viz-content.matchup-matrix {{ height: 850px; }}
+        .viz-content.matchup-matrix {{ height: 1275px; }}
         .viz-iframe {{ width: 100%; height: 100%; border: none; }}
 
         .navigation {{
@@ -2377,12 +2379,12 @@ class ManalyticsOrchestrator:
         tournament_stats = {
             "total_tournaments": len(tournaments),
             "date_range": {
-                "start": min(t.get("date", "") for t in tournaments)
-                if tournaments
-                else "",
-                "end": max(t.get("date", "") for t in tournaments)
-                if tournaments
-                else "",
+                "start": (
+                    min(t.get("date", "") for t in tournaments) if tournaments else ""
+                ),
+                "end": (
+                    max(t.get("date", "") for t in tournaments) if tournaments else ""
+                ),
             },
             "tournaments_by_date": self._group_tournaments_by_date(tournaments),
         }
@@ -3048,11 +3050,11 @@ Based on the current diversity metrics:
                     "card_name": card_name,
                     "total_usage": data["total_count"],
                     "archetype_spread": len(data["archetypes"]),
-                    "most_used_in": max(data["archetypes"].items(), key=lambda x: x[1])[
-                        0
-                    ]
-                    if data["archetypes"]
-                    else "None",
+                    "most_used_in": (
+                        max(data["archetypes"].items(), key=lambda x: x[1])[0]
+                        if data["archetypes"]
+                        else "None"
+                    ),
                     "usage_percentage": round(
                         (data["total_count"] / len(all_decks)) * 100, 2
                     ),

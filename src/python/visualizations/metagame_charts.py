@@ -292,7 +292,7 @@ class MetagameChartsGenerator:
         # Mise en page
         fig.update_layout(
             title={
-                "text": f"Standard Metagame Share ({start_date} to {end_date})",
+                "text": "Standard Metagame Share",
                 "x": 0.5,
                 "xanchor": "center",
                 "font": {"size": 16, "family": "Arial, sans-serif"},
