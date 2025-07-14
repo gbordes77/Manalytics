@@ -55,13 +55,21 @@
 **Justification** : Améliorer lisibilité, taille graphiques, et filtrer données MTGO correctement
 **Tests** : ✅ Pipeline lancé 3x, analyses générées, pages ouvertes avec succès
 **Rollback** : `git revert a95eb9d && git revert 9fc7958 && git revert 87d4b37` ou backup-auto-backup-20250714-0954
-**Détails** : 
+**Détails** :
 - ✅ **Commit 87d4b37**: Titres sans dates + filtres MTGO initial
-- ✅ **Commit 9fc7958**: Taille matchup matrix container (1275px) + correction graphique (1200x900px)  
+- ✅ **Commit 9fc7958**: Taille matchup matrix container (1275px) + correction graphique (1200x900px)
 - ✅ **Commit a95eb9d**: Couleurs matchup matrix Rouge-Blanc-Vert (plus lisibles)
 - ✅ **Filtrage MTGO**: Inclut tous tournois mtgo.com SAUF 5-0 leagues
 - ✅ **Tests confirmés**: 42 tournois MTGO, 422 joueurs, 1344 matches
 - ✅ **Code source**: Toutes modifications dans templates (pas fichiers générés)
+
+### [2025-07-14 10:49] - Claude_2025-07-14_10-49
+**Fichier(s) concerné(s)** : `docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md`
+**Type** : MODIFICATION
+**Description** : Onboarding complet effectué - ajout nom d'assistant à la liste équipe
+**Justification** : Compléter le parcours d'intégration Phase 1 selon TEAM_HANDOFF_CHECKLIST.md
+**Tests** : Pipeline lancé avec succès (2025-05-08 à 2025-06-09), 5521 decks analysés, 14 visualisations générées
+**Rollback** : Retirer l'entrée ajoutée dans la section équipe du fichier INSTRUCTIONS_NOUVELLE_EQUIPE.md
 
 ---
 
@@ -83,9 +91,9 @@
 
 ## 📊 **STATISTIQUES**
 
-- **Total modifications** : 4
+- **Total modifications** : 5
 - **Dernière modification** : 2025-01-14 16:20
-- **Fichiers les plus modifiés** : 
+- **Fichiers les plus modifiés** :
   - `docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md` (2x)
   - `src/orchestrator.py` (2x)
   - `src/python/visualizations/metagame_charts.py` (1x)
