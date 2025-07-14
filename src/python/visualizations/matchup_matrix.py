@@ -272,8 +272,8 @@ class MatchupMatrixGenerator:
             xaxis_title="Opponent Archetype",
             yaxis_title="Player Archetype",
             font=dict(family="Arial, sans-serif", size=12),
-            width=800,
-            height=600,
+            width=1200,
+            height=900,
             margin=dict(l=120, r=120, t=80, b=80),
         )
 

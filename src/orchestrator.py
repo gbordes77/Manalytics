@@ -68,9 +68,7 @@ class ManalyticsOrchestrator:
             visualization_report = await self.generate_visualizations(str(output_dir))
 
             # 2. Final summary
-            self.logger.info(
-                f"✅ Pipeline completed successfully in {analysis_folder}!"
-            )
+            self.logger.info(f"✅ Pipeline completed successfully in {analysis_folder}!")
 
             return {
                 "analysis_folder": analysis_folder,
@@ -1947,9 +1945,10 @@ class ManalyticsOrchestrator:
     def generate_mtgo_analysis(self, output_dir: str, df: pd.DataFrame):
         """Generate dedicated MTGO analysis with filtered data"""
         try:
-            # Filter for MTGO data only - Keep "mtgo.com (Challenge)" and "mtgo.com"
+            # Filter for MTGO data only - Include all mtgo.com sources EXCEPT 5-0 leagues
             mtgo_df = df[
-                df["tournament_source"].isin(["mtgo.com (Challenge)", "mtgo.com"])
+                (df["tournament_source"].str.contains("mtgo.com", na=False)) & 
+                (~df["tournament_source"].str.contains("5-0", na=False))
             ]
 
             if len(mtgo_df) == 0:
