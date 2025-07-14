@@ -16,6 +16,7 @@ import pandas as pd
 
 from python.analytics.advanced_metagame_analyzer import AdvancedMetagameAnalyzer
 from python.classifier.advanced_archetype_classifier import AdvancedArchetypeClassifier
+from python.classifier.archetype_engine import ArchetypeEngine
 from python.classifier.color_detector import ColorDetector
 from python.classifier.mtgo_classifier import MTGOClassifier
 from python.visualizations.matchup_matrix import MatchupMatrixGenerator
@@ -48,13 +49,20 @@ class ManalyticsOrchestrator:
         self.advanced_classifier = AdvancedArchetypeClassifier()  # NEW
 
         self.logger = logging.getLogger(__name__)
-        # Initialize MTGO classifier
+        # Initialize ArchetypeEngine (PRIMARY classifier - MTGOFormatData)
+        self.archetype_engine = ArchetypeEngine(
+            "./MTGOFormatData", "./input", "./output"
+        )
+        # Initialize MTGO classifier (FALLBACK)
         self.mtgo_classifier = MTGOClassifier()
         # Initialize color detector
         self.color_detector = ColorDetector()
         # Initialize advanced metagame analyzer
         self.advanced_analyzer = AdvancedMetagameAnalyzer()
-        self.logger.info("MTGO Classifier initialized with complete archetype database")
+        self.logger.info(
+            "ArchetypeEngine initialized as PRIMARY classifier (MTGOFormatData)"
+        )
+        self.logger.info("MTGO Classifier initialized as FALLBACK classifier")
         self.logger.info("Color Detector initialized with MTGOFormatData color system")
         self.logger.info(
             "Advanced Metagame Analyzer initialized with statistical analysis capabilities"
@@ -364,6 +372,11 @@ class ManalyticsOrchestrator:
         # Extract simple archetype name (without colors) for backwards compatibility
         archetype = self._extract_simple_archetype_name(archetype_with_colors)
 
+        # DEBUG: Log archetype classification for troubleshooting
+        self.logger.debug(
+            f"Deck classification: '{archetype_with_colors}' -> '{archetype}'"
+        )
+
         # Determine source with MTGO differentiation
         source = self._determine_source(file_path, tournament_info)
 
@@ -449,37 +462,155 @@ class ManalyticsOrchestrator:
             return "unknown"
 
     def _classify_archetype(self, mainboard):
-        """Classify archetype using MTGO classifier then add color integration"""
+        """Classify archetype using ArchetypeEngine (MTGOFormatData) as PRIMARY classifier"""
         try:
-            # First get the base archetype using MTGO classifier
+            # Step 1: PRIMARY - Use ArchetypeEngine (MTGOFormatData) for specific archetypes
+            # Convert mainboard format for ArchetypeEngine
+            deck_data = {
+                "Mainboard": [
+                    {"Name": card["CardName"], "Count": card["Count"]}
+                    for card in mainboard
+                ],
+                "Sideboard": [],  # No sideboard for now
+            }
+
+            # Use ArchetypeEngine for precise archetype detection
+            archetype_name = self.archetype_engine.classify_deck(deck_data, self.format)
+
+            if archetype_name and archetype_name != "Unknown":
+                # Apply color integration for IncludeColorInName archetypes
+                archetype_with_colors = self._apply_color_integration_mtgoformatdata(
+                    archetype_name, mainboard
+                )
+                self.logger.debug(
+                    f"ArchetypeEngine classification: {archetype_name} -> {archetype_with_colors}"
+                )
+                return archetype_with_colors
+
+            # Step 2: FALLBACK 1 - Use MTGOClassifier if ArchetypeEngine fails
             base_archetype = self.mtgo_classifier.classify_deck(
                 mainboard, [], self.format
             )
 
-            # If MTGO classifier can't classify, try fallback
-            if not base_archetype or base_archetype == "Unknown":
-                base_archetype = self._classify_by_colors_fallback(mainboard)
+            if base_archetype and base_archetype != "Unknown":
+                # Apply Aliquanto3-style color integration
+                color_analysis = self.color_detector.analyze_decklist_colors(mainboard)
+                guild_name = color_analysis.get("guild_name", "")
 
-            # Get color analysis
-            color_analysis = self.color_detector.analyze_decklist_colors(mainboard)
-            guild_name = color_analysis.get("guild_name", "")
+                if guild_name and guild_name != "Colorless" and guild_name != "Unknown":
+                    archetype_with_colors = self._apply_aliquanto3_color_rules(
+                        base_archetype, guild_name
+                    )
+                else:
+                    archetype_with_colors = base_archetype
 
-            # Integrate colors with archetype name
-            if guild_name and guild_name != "Colorless" and guild_name != "Unknown":
-                archetype_with_colors = f"{guild_name} {base_archetype}"
-            else:
-                archetype_with_colors = base_archetype
+                self.logger.debug(
+                    f"MTGOClassifier fallback: {base_archetype} -> {archetype_with_colors}"
+                )
+                return archetype_with_colors
 
-            # Log classification for debugging
-            self.logger.debug(
-                f"Base archetype: {base_archetype} -> With colors: {archetype_with_colors}"
-            )
-
-            return archetype_with_colors
+            # Step 3: FALLBACK 2 - Color-based classification as last resort
+            fallback_archetype = self._classify_by_colors_fallback(mainboard)
+            self.logger.debug(f"Color fallback classification: {fallback_archetype}")
+            return fallback_archetype
 
         except Exception as e:
             self.logger.error(f"Error in archetype classification: {e}")
             return self._classify_by_colors_fallback(mainboard)
+
+    def _apply_color_integration_mtgoformatdata(self, archetype_name, mainboard):
+        """Apply color integration for MTGOFormatData archetypes with IncludeColorInName"""
+        try:
+            # Analyze deck colors
+            color_analysis = self.color_detector.analyze_decklist_colors(mainboard)
+            guild_name = color_analysis.get("guild_name", "")
+
+            # Check if this archetype should include color in name
+            # For now, assume all MTGOFormatData archetypes should include colors
+            # (Most have IncludeColorInName: true)
+            if guild_name and guild_name != "Colorless" and guild_name != "Unknown":
+                return f"{guild_name} {archetype_name}"
+            else:
+                return archetype_name
+
+        except Exception as e:
+            self.logger.error(f"Error in color integration: {e}")
+            return archetype_name
+
+    def _apply_aliquanto3_color_rules(self, base_archetype, guild_name):
+        """
+        Apply Aliquanto3 R-Meta-Analysis color integration rules
+
+        Based on the 04-Metagame_Graph_Generation.R logic:
+        - Smart archetype naming instead of simple concatenation
+        - Handle generic archetypes vs specific ones
+        - Apply MTG guild color logic correctly
+        """
+        # Generic archetypes that benefit from color specification
+        generic_archetypes = [
+            "Aggro",
+            "Control",
+            "Midrange",
+            "Ramp",
+            "Tempo",
+            "Combo",
+            "Prowess",
+            "Burn",
+            "Tokens",
+            "Artifacts",
+            "Enchantments",
+        ]
+
+        # Specific archetypes that shouldn't be color-prefixed
+        specific_archetypes = [
+            "Tron",
+            "Lantern",
+            "Affinity",
+            "Storm",
+            "Ad Nauseam",
+            "Scapeshift",
+            "Living End",
+            "Dredge",
+            "Infect",
+        ]
+
+        # Clean base archetype name
+        base_clean = base_archetype.strip()
+
+        # Rule 1: If archetype is already color-specific, don't modify
+        for color in [
+            "Azorius",
+            "Dimir",
+            "Rakdos",
+            "Gruul",
+            "Selesnya",
+            "Orzhov",
+            "Izzet",
+            "Golgari",
+            "Boros",
+            "Simic",
+            "Mono-White",
+            "Mono-Blue",
+            "Mono-Black",
+            "Mono-Red",
+            "Mono-Green",
+        ]:
+            if color in base_clean:
+                return base_clean
+
+        # Rule 2: Generic archetypes get color prefix (Aliquanto3 logic)
+        if any(generic in base_clean for generic in generic_archetypes):
+            return f"{guild_name} {base_clean}"
+
+        # Rule 3: Specific archetypes stay as-is
+        if any(specific in base_clean for specific in specific_archetypes):
+            return base_clean
+
+        # Rule 4: Default - add color if it improves clarity
+        if len(base_clean) < 15:  # Short names benefit from color
+            return f"{guild_name} {base_clean}"
+        else:
+            return base_clean
 
     def _classify_with_mtgo_fallback(self, mainboard):
         """Fallback to MTGO classifier if advanced classifier fails"""
@@ -554,9 +685,17 @@ class ManalyticsOrchestrator:
             # Color-based classification
             colors = self._detect_colors(card_names)
 
-            # CRITICAL RULE: Generic monocolor archetypes = "Others"
+            # Improved rule: Don't default all monocolor to "Others"
             if len(colors) == 1:
-                return "Others"
+                color_names = {
+                    "W": "White",
+                    "U": "Blue",
+                    "B": "Black",
+                    "R": "Red",
+                    "G": "Green",
+                }
+                color_name = color_names.get(list(colors)[0], "Unknown")
+                return f"Mono-{color_name} Deck"
             elif len(colors) == 2:
                 color_pairs = {
                     frozenset(["W", "U"]): "Azorius",

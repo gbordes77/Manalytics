@@ -201,6 +201,7 @@ class AdvancedArchetypeClassifier:
     def classify_with_color_integration(self, deck_data: Dict) -> Dict[str, str]:
         """
         Advanced classification that integrates colors with archetype names
+        Compatible with Manalytics orchestrator format
         Returns both simple archetype and color-integrated archetype
         """
         result = {
@@ -212,12 +213,23 @@ class AdvancedArchetypeClassifier:
             "strategy_type": "unknown",
         }
 
-        # Get basic info
-        cards = deck_data.get("cards", [])
-        color_identity = deck_data.get("color_identity", "")
+        # Get basic info from orchestrator format
+        mainboard = deck_data.get("mainboard", [])
+        # Handle both formats: MTGODecklistCache ("CardName") and other formats ("name")
+        cards = [
+            card.get("CardName", card.get("name", ""))
+            for card in mainboard
+            if card.get("CardName", card.get("name", ""))
+        ]
+        format_name = deck_data.get("format", "Standard")
 
-        # Normalize color identity
-        normalized_colors = self.normalize_color_identity(color_identity)
+        # Detect colors from cards if no color_identity provided
+        if not cards:
+            return result
+
+        # Detect colors from the card list
+        detected_colors = self._detect_colors_from_cards(cards)
+        normalized_colors = self.normalize_color_identity(detected_colors)
         guild_name = self.get_color_name(normalized_colors)
 
         result["color_identity"] = normalized_colors
@@ -226,29 +238,46 @@ class AdvancedArchetypeClassifier:
         # Analyze synergies
         synergy_scores = self.analyze_deck_synergies(cards)
 
-        # Find best matching archetype
+        # Try to identify archetype from card patterns
+        base_archetype = self._identify_archetype_from_cards(cards)
+
+        if base_archetype and base_archetype != "Others":
+            # Integrate colors with archetype
+            if guild_name and guild_name != "Colorless":
+                archetype_with_colors = f"{guild_name} {base_archetype}"
+            else:
+                archetype_with_colors = base_archetype
+
+            result["archetype"] = base_archetype
+            result["archetype_with_colors"] = archetype_with_colors
+            result["confidence"] = 0.8
+            result["strategy_type"] = "pattern-based"
+            return result
+
+        # Fallback: simple classification based on guild name
+        if guild_name and guild_name != "Colorless":
+            archetype_with_colors = f"{guild_name} Deck"
+            result["archetype"] = "Generic"
+            result["archetype_with_colors"] = archetype_with_colors
+            result["confidence"] = 0.6
+            result["strategy_type"] = "color-based"
+            return result
+        else:
+            # No color detected, return minimal result to trigger fallback
+            return None
+
+        # Find best matching archetype (when enhanced system is implemented)
         best_archetype = None
         best_score = 0.0
 
         for archetype, score in synergy_scores.items():
-            if (
-                score > best_score and score > 0.5
-            ):  # Lowered threshold for better matching
+            if score > best_score and score > 0.5:
                 best_score = score
                 best_archetype = archetype
 
         if best_archetype:
-            archetype_data = self.enhanced_archetypes[best_archetype]
-
-            # Check if color identity matches common colors for this archetype
-            color_match = False
-            for common_color in archetype_data["common_colors"]:
-                if self.normalize_color_identity(common_color) == normalized_colors:
-                    color_match = True
-                    break
-
             result["archetype"] = best_archetype
-            result["strategy_type"] = archetype_data["strategy_type"]
+            result["strategy_type"] = "detected"
             result["confidence"] = min(best_score / 10.0, 1.0)  # Normalize to 0-1
 
             # Generate color-integrated name - more lenient approach
@@ -373,3 +402,133 @@ class AdvancedArchetypeClassifier:
                 self.enhanced_archetypes[archetype]["key_cards"] = list(
                     existing_cards.union(new_cards)
                 )[:10]
+
+    def _identify_archetype_from_cards(self, cards: List[str]) -> str:
+        """
+        Identify archetype from card patterns
+        """
+        card_names = [card.lower() for card in cards]
+
+        # Aggro patterns
+        aggro_cards = [
+            "monastery swiftspear",
+            "heartfire hero",
+            "burst lightning",
+            "lightning bolt",
+            "prowess",
+            "challenger",
+            "hired claw",
+            "manifold mouse",
+            "screaming nemesis",
+        ]
+
+        # Control patterns
+        control_cards = [
+            "counterspell",
+            "negate",
+            "day of judgment",
+            "wrath",
+            "control",
+            "draw",
+            "leyline binding",
+            "up the beanstalk",
+            "zur eternal schemer",
+            "temporary lockdown",
+        ]
+
+        # Midrange patterns
+        midrange_cards = [
+            "sheoldred",
+            "preacher of the schism",
+            "deep-cavern bat",
+            "archfiend of the dross",
+            "llanowar elves",
+            "scavenger regent",
+            "tranquil frillback",
+        ]
+
+        # Combo patterns
+        combo_cards = [
+            "brightglass gearhulk",
+            "novice inspector",
+            "sentinel of the nameless city",
+            "herd heirloom",
+            "teething wurmlet",
+            "inspector",
+        ]
+
+        # Prowess/Spells patterns
+        prowess_cards = [
+            "abhorrent oculus",
+            "fear of missing out",
+            "helping hand",
+            "proft's eidetic memory",
+            "steamcore scholar",
+            "torch the tower",
+            "opt",
+            "sleight of hand",
+            "stock up",
+        ]
+
+        # Count matches
+        aggro_count = sum(
+            1 for card in card_names if any(pattern in card for pattern in aggro_cards)
+        )
+        control_count = sum(
+            1
+            for card in card_names
+            if any(pattern in card for pattern in control_cards)
+        )
+        midrange_count = sum(
+            1
+            for card in card_names
+            if any(pattern in card for pattern in midrange_cards)
+        )
+        combo_count = sum(
+            1 for card in card_names if any(pattern in card for pattern in combo_cards)
+        )
+        prowess_count = sum(
+            1
+            for card in card_names
+            if any(pattern in card for pattern in prowess_cards)
+        )
+
+        # Determine archetype
+        if prowess_count >= 3:
+            return "Prowess"
+        elif aggro_count >= 3:
+            return "Aggro"
+        elif control_count >= 3:
+            return "Control"
+        elif midrange_count >= 3:
+            return "Midrange"
+        elif combo_count >= 3:
+            return "Combo"
+        else:
+            return "Others"
+
+    def _detect_colors_from_cards(self, cards: List[str]) -> str:
+        """
+        Detect color identity from card names
+        Simplified version for MTG color detection
+        """
+        # This is a simplified color detection
+        # In a real implementation, you'd use a card database
+        color_indicators = {
+            "W": ["Plains", "White", "Azorius", "Orzhov", "Boros", "Selesnya"],
+            "U": ["Island", "Blue", "Azorius", "Dimir", "Izzet", "Simic"],
+            "B": ["Swamp", "Black", "Dimir", "Rakdos", "Orzhov", "Golgari"],
+            "R": ["Mountain", "Red", "Rakdos", "Izzet", "Boros", "Gruul"],
+            "G": ["Forest", "Green", "Gruul", "Golgari", "Simic", "Selesnya"],
+        }
+
+        detected_colors = set()
+
+        for card in cards:
+            card_name = str(card).lower()
+            for color, indicators in color_indicators.items():
+                if any(indicator.lower() in card_name for indicator in indicators):
+                    detected_colors.add(color)
+
+        # Return sorted colors
+        return "".join(sorted(detected_colors))

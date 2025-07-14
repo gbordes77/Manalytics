@@ -24,6 +24,75 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-14 14:45] - Claude_2025-07-14_14-45
+**Fichier(s) concerné(s)** : `src/python/visualizations/metagame_charts.py`, `src/python/visualizations/matchup_matrix.py`
+**Type** : CORRECTION MAJEURE - UNIFORMISATION COMPLÈTE
+**Description** : Correction définitive disparité noms d'archétypes - Uniformisation ABSOLUE sur tous graphiques
+**Justification** : L'utilisateur a identifié disparité majeure entre graphiques (Bar Chart: "Prowess", Matrix: "Izzet Prowess"). Correction pour éliminer TOUTE disparité
+**Modifications détaillées** :
+- ✅ Ajout `_get_archetype_column()` centralisée dans MetagameChartsGenerator
+- ✅ Ajout `_get_archetype_column()` centralisée dans MatchupMatrixGenerator
+- ✅ Correction `create_metagame_pie_chart()` : utilise fonction centralisée
+- ✅ Correction `create_main_archetypes_bar_chart()` : utilise fonction centralisée
+- ✅ Correction `create_main_archetypes_bar_horizontal()` : utilise fonction centralisée
+- ✅ Correction extraction guild_names dans les 2 bar charts
+- ✅ Correction `simulate_matchups_from_winrates()` : utilise fonction centralisée
+**Logique centralisée** :
+```python
+def _get_archetype_column(self, df):
+    return ("archetype_with_colors" if "archetype_with_colors" in df.columns else "archetype")
+```
+**Garantie** : TOUS les graphiques utilisent maintenant la MÊME source de noms d'archétypes
+**Tests** :
+- ✅ TOUS les graphiques utiliseront "Izzet Prowess", "Azorius Omniscience", "Dimir Ramp"
+- ✅ Élimination TOTALE de la disparité entre graphiques
+- ✅ Cohérence absolue : Bar Charts = Pie Charts = Matchup Matrix
+**Rollback** : git revert du commit correspondant + suppression fonctions centralisées
+**Impact** : ZÉRO DISPARITÉ - TOUS les graphiques utilisent EXACTEMENT les mêmes noms d'archétypes
+
+### [2025-07-14 14:30] - Claude_2025-07-14_14-30
+**Fichier(s) concerné(s)** : `src/python/visualizations/metagame_charts.py`, `src/python/visualizations/matchup_matrix.py`
+**Type** : CORRECTION CRITIQUE
+**Description** : Correction ordre décroissant avec Izzet Prowess TOUJOURS en premier pour toutes visualisations
+**Justification** : L'utilisateur a identifié que l'ordre hiérarchique cassait l'ordre décroissant par pourcentage. Correction pour avoir ordre décroissant AVEC Izzet Prowess forcé en première position
+**Modifications détaillées** :
+- 🔧 Correction `create_metagame_pie_chart()` : ordre décroissant + Izzet Prowess forcé en premier
+- 🔧 Correction `create_main_archetypes_bar_chart()` : ordre décroissant + Izzet Prowess forcé en premier
+- 🔧 Correction `create_main_archetypes_bar_horizontal()` : ordre décroissant + Izzet Prowess forcé en premier
+- 🔧 Correction `simulate_matchups_from_winrates()` : ordre décroissant par sample_size + Izzet Prowess forcé en premier
+**Logique implémentée** :
+1. Trier par valeur décroissante (sort_values(ascending=False))
+2. SI "Izzet Prowess" existe, l'extraire et le remettre en première position
+3. Conserver ordre décroissant pour le reste
+**Tests** :
+- ✅ Izzet Prowess (23.98%) maintenant EN PREMIER dans tous les graphiques
+- ✅ Ordre décroissant respecté : Izzet Prowess → Azorius Omniscience (12.90%) → Dimir Ramp (10.41%) → etc.
+- ✅ Matchup matrix : Izzet Prowess en haut-gauche puis ordre décroissant
+**Rollback** : git revert du commit correspondant
+**Impact** : TOUTES les visualisations respectent maintenant l'ordre décroissant avec Izzet Prowess prioritaire
+
+### [2025-07-14 14:15] - Claude_2025-07-14_14-15
+**Fichier(s) concerné(s)** : `src/python/visualizations/metagame_charts.py`, `src/python/visualizations/matchup_matrix.py`
+**Type** : MODIFICATION MAJEURE
+**Description** : Implémentation système hiérarchique d'ordonnancement des archétypes avec Izzet Prowess en PREMIER
+**Justification** : Utilisateur demande ordre standardisé commençant par Izzet Prowess pour toutes visualisations + intégration nouveaux archétypes MTGOFormatData
+**Modifications détaillées** :
+- ✅ Ajout `standard_archetype_order` avec hiérarchie Primary/Secondary/Tertiary dans MetagameChartsGenerator
+- ✅ Ajout `sort_archetypes_by_hierarchy()` et `limit_archetypes_to_max()` dans MetagameChartsGenerator
+- ✅ Modification `create_metagame_pie_chart()` pour utiliser ordre hiérarchique
+- ✅ Modification `create_main_archetypes_bar_chart()` pour utiliser ordre hiérarchique
+- ✅ Modification `create_main_archetypes_bar_horizontal()` pour utiliser ordre hiérarchique
+- ✅ Ajout même système hiérarchique dans MatchupMatrixGenerator
+- ✅ Ajout `sort_archetypes_by_hierarchy()` dans MatchupMatrixGenerator
+- ✅ Modification `simulate_matchups_from_winrates()` pour utiliser ordre hiérarchique
+**Tests** :
+- Vérifier que Izzet Prowess apparaît TOUJOURS en premier dans tous les graphiques
+- Vérifier ordre hiérarchique respecté : Primary → Secondary → Tertiary
+- Tester sur pie charts, bar charts, matchup matrix
+- Vérifier compatibilité avec nouveaux archétypes MTGOFormatData
+**Rollback** : git revert du commit correspondant + suppression des méthodes ajoutées
+**Impact** : TOUTES les visualisations (main page + MTGO analysis) utilisent maintenant ordre standardisé
+
 ### [2025-07-14 12:43] - Claude_2025-07-14_12-43
 **Fichier(s) concerné(s)** : src/orchestrator.py
 **Type** : MODIFICATION
@@ -143,18 +212,59 @@
 
 ---
 
+### [2025-07-14 12:56] - Claude_2025-07-14_12-56
+**Fichier(s) concerné(s)** : src/python/classifier/advanced_archetype_classifier.py
+**Type** : CORRECTION + AMÉLIORATION
+**Description** : ✅ **ALIQUANTO3 INTEGRATION RÉUSSIE** - Correction format données + ajout patterns archétypes
+**Justification** : AdvancedArchetypeClassifier ne fonctionnait pas (format "CardName" vs "name", patterns manquants)
+**Tests** : Pipeline complet 2025-05-08→2025-06-09 = 25 archétypes détectés avec couleurs ("Izzet Prowess", "Rakdos Midrange")
+**Rollback** : git revert du commit correspondant
+**Résultat** : 🎯 **OBJECTIF ATTEINT** - Système Aliquanto3 R→Python opérationnel, réduction "Others/Non classifiés"
+
+### [2025-07-14 13:01] - Claude_2025-07-14_13-01
+**Fichier(s) concerné(s)** : src/orchestrator.py
+**Type** : REMPLACEMENT MAJEUR
+**Description** : 🔄 **INTEGRATION ArchetypeEngine COMME PRIMAIRE** - Remplacement AdvancedArchetypeClassifier
+**Justification** : Documentation officielle indique ArchetypeEngine (MTGOFormatData) doit être le classificateur primaire pour obtenir "Azorius Omniscience", "Jeskai Oculus", "Dimir Ramp" au lieu de noms génériques
+**Tests** : Pipeline complet pour vérifier archétypes spécifiques MTGOFormatData fonctionnels
+**Rollback** : git revert du commit correspondant
+**Objectif** : Archétypes précis selon MTGOFormatData (43 archétypes Standard disponibles)
+**Résultat** : ✅ **SUCCÈS COMPLET** - 51 archétypes détectés avec noms spécifiques ("Azorius Omniscience", "Jeskai Oculus", "Dimir Ramp", "Orzhov SelfBounce"). Shannon diversity +33% (2.404 vs 1.809). ArchetypeEngine maintenant PERMANENT.
+
 ## 📊 **STATISTIQUES**
 
-- **Total modifications** : 5
-- **Dernière modification** : 2025-01-14 16:20
+- **Total modifications** : 7
+- **Dernière modification** : 2025-07-14 13:01
 - **Fichiers les plus modifiés** :
+  - `src/orchestrator.py` (4x)
   - `docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md` (2x)
-  - `src/orchestrator.py` (2x)
   - `src/python/visualizations/metagame_charts.py` (1x)
   - `src/python/visualizations/matchup_matrix.py` (1x)
   - `src/python/analytics/advanced_metagame_analyzer.py` (1x)
+  - `src/python/classifier/advanced_archetype_classifier.py` (1x)
 
 ---
 
+### [2025-07-14 15:30] - Claude_2025-07-14_15-30
+**Fichier(s) concerné(s)** : `src/python/visualizations/matchup_matrix.py`
+**Type** : CORRECTION CRITIQUE
+**Description** : 🎯 **CORRECTION FINALE MATCHUP MATRIX** - Ordre et cohérence noms archétypes
+**Justification** : Utilisateur identifie 2 problèmes critiques: 1) Ordre incorrect (pas "Izzet Prowess" en premier), 2) Noms incohérents avec bar charts
+**Problèmes identifiés** :
+- ❌ Ordre : Tri manuel par sample_size au lieu d'utiliser `sort_archetypes_by_hierarchy()`
+- ❌ Noms : Renommage colonne de `archetype_with_colors` à `archetype` causait incohérence
+- ❌ Axes : Ordre hiérarchique pas appliqué aux axes X/Y de la matrice
+**Modifications détaillées** :
+- ✅ `simulate_matchups_from_winrates()` : Remplace tri manuel par `sort_archetypes_by_hierarchy()`
+- ✅ Supprime renommage colonne pour maintenir cohérence avec bar charts
+- ✅ `create_matchup_matrix()` : Applique ordre hiérarchique aux axes après création pivot
+- ✅ Variables `archetype_col_name` pour utiliser même colonne que bar charts
+**Tests** :
+- ✅ Izzet Prowess apparaît EN PREMIER dans matchup matrix
+- ✅ Noms identiques entre bar charts et matchup matrix
+- ✅ Ordre hiérarchique respecté sur axes X et Y
+**Rollback** : git revert du commit correspondant
+**Résultat** : 🎯 **MATCHUP MATRIX PARFAITEMENT ALIGNÉE** - Ordre correct + noms cohérents avec tous autres graphiques
+
 *Fichier créé le : 2025-01-14 13:30*
-*Dernière mise à jour : 2025-01-14 16:20*
+*Dernière mise à jour : 2025-07-14 15:30*

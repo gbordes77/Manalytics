@@ -23,6 +23,50 @@ class MatchupMatrixGenerator:
         self.data_path = Path(data_path) if data_path else None
         self.logger = logging.getLogger(__name__)
 
+        # 🎯 ORDRE STANDARD DES ARCHÉTYPES (HIÉRARCHIQUE)
+        # Basé sur l'expertise métagame et psychologie des couleurs gaming
+        # ORDRE OBLIGATOIRE : Izzet Prowess en PREMIER
+        self.standard_archetype_order = [
+            # 🏆 ARCHÉTYPES PRIMAIRES (>10% métagame) - ORDRE FIXE
+            "Izzet Prowess",  # 1. TOUJOURS EN PREMIER - Aggro dominant
+            "Azorius Control",  # 2. Contrôle dominant
+            "Mono Red Aggro",  # 3. Aggro pur
+            "Jeskai Control",  # 4. Contrôle complexe
+            # 🎯 ARCHÉTYPES SECONDAIRES (5-10% métagame)
+            "Dimir Ramp",  # 5. Contrôle sombre
+            "Jeskai Oculus",  # 6. Combo-contrôle
+            "Azorius Omniscience",  # 7. Contrôle alternatif
+            "Mono Black Demons",  # 8. Midrange sombre
+            "Azorius Ramp",  # 9. Ramp contrôle
+            "Mono Red Ramp",  # 10. Ramp aggro
+            # 🔧 ARCHÉTYPES TERTIAIRES (<5% métagame)
+            "Orzhov Selfbounce",  # 11. Combo-contrôle
+            "Orzhov Demons",  # 12. Midrange sombre
+            "Grixis Midrange",  # 13. Midrange complexe
+            "Boros Aggro",  # 14. Aggro rapide
+            "Selesnya Midrange",  # 15. Midrange équilibré
+            "Simic Ramp",  # 16. Ramp-combo
+            "Rakdos Aggro",  # 17. Aggro agressif
+            "Gruul Aggro",  # 18. Aggro naturel
+            "Golgari Midrange",  # 19. Midrange valeur
+            "Temur Midrange",  # 20. Midrange tri-couleur
+            # 📊 ARCHÉTYPES GÉNÉRIQUES (ordonnés par fréquence)
+            "Four-Color Ramp",  # 21. Multi-couleur
+            "Esper Control",  # 22. Contrôle tri-couleur
+            "Bant Control",  # 23. Contrôle tri-couleur
+            "Mardu Midrange",  # 24. Midrange tri-couleur
+            "Abzan Midrange",  # 25. Midrange tri-couleur
+            "Naya Aggro",  # 26. Aggro tri-couleur
+            "Sultai Midrange",  # 27. Midrange tri-couleur
+            "Jund Midrange",  # 28. Midrange tri-couleur
+            "Five-Color",  # 29. Multi-couleur extrême
+            "Colorless",  # 30. Artéfacts
+            # ⚠️ CATÉGORIES FALLBACK (JAMAIS en première position)
+            "Autres",  # 31. Toujours à la fin
+            "Autres / Non classifiés",  # 32. Toujours à la fin
+            "Non classifiés",  # 33. JAMAIS en première position
+        ]
+
         # Palette ColorBrewer RdYlBu optimisée pour l'accessibilité (8% daltoniens)
         # Rouge = défavorable, Jaune = neutre, Bleu = favorable
         self.heatmap_colors = {
@@ -49,6 +93,53 @@ class MatchupMatrixGenerator:
             0.85: "white",  # Texte blanc sur bleu foncé
             1.0: "white",  # Texte blanc sur bleu très foncé
         }
+
+    def sort_archetypes_by_hierarchy(self, archetypes: List[str]) -> List[str]:
+        """🎯 SYSTÈME EXPERT - Ordonne les archétypes selon la hiérarchie standardisée
+
+        Ordre obligatoire : Izzet Prowess en PREMIER
+        Puis hiérarchie Primary > Secondary > Tertiary
+
+        Args:
+            archetypes: Liste d'archétypes à ordonner
+
+        Returns:
+            Liste ordonnée selon standard_archetype_order
+        """
+
+        def get_archetype_priority(archetype: str) -> int:
+            """Retourne la priorité d'un archétype selon l'ordre standard"""
+            try:
+                return self.standard_archetype_order.index(archetype)
+            except ValueError:
+                # Si archétype non trouvé, le placer avant les catégories fallback
+                return len(self.standard_archetype_order) - 10
+
+        # Trier selon la hiérarchie, avec Izzet Prowess toujours en premier
+        sorted_archetypes = sorted(archetypes, key=get_archetype_priority)
+
+        # Vérification : Izzet Prowess doit être en premier s'il existe
+        if "Izzet Prowess" in sorted_archetypes:
+            sorted_archetypes.remove("Izzet Prowess")
+            sorted_archetypes.insert(0, "Izzet Prowess")
+
+        return sorted_archetypes
+
+    def _get_archetype_column(self, df: pd.DataFrame) -> str:
+        """🎯 FONCTION CENTRALISÉE - Détermine la colonne d'archétype correcte
+
+        RÈGLE ABSOLUE : Utiliser TOUJOURS la même logique que MetagameChartsGenerator
+        pour garantir la cohérence des noms d'archétypes dans TOUS les graphiques
+
+        Returns:
+            "archetype_with_colors" si disponible (noms complets comme "Izzet Prowess")
+            "archetype" sinon (noms simples comme "Prowess")
+        """
+        return (
+            "archetype_with_colors"
+            if "archetype_with_colors" in df.columns
+            else "archetype"
+        )
 
     def _get_text_color(self, winrate: float) -> str:
         """Détermine la couleur du texte optimal selon le winrate pour une lisibilité maximale"""
@@ -81,9 +172,12 @@ class MatchupMatrixGenerator:
         Simule les matchups directs à partir des winrates globaux des archétypes
         Méthode: Monte Carlo basée sur les performances réelles
         """
+        # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
+        archetype_column = self._get_archetype_column(df)
+
         # Calculer les winrates moyens par archétype
         archetype_stats = (
-            df.groupby("archetype")
+            df.groupby(archetype_column)
             .agg({"winrate": ["mean", "std", "count"], "wins": "sum", "losses": "sum"})
             .round(4)
         )
@@ -96,6 +190,8 @@ class MatchupMatrixGenerator:
             "total_losses",
         ]
         archetype_stats = archetype_stats.reset_index()
+        # 🎯 Garder le nom de colonne original pour cohérence avec bar charts
+        archetype_col_name = archetype_column
 
         # Limiter à 12 archétypes maximum (comme dans la référence)
         if len(archetype_stats) > 12:
@@ -105,8 +201,20 @@ class MatchupMatrixGenerator:
                 f"🎯 Matrice limitée aux 12 archétypes les plus représentés"
             )
 
+        # 🎯 APPLIQUER L'ORDRE HIÉRARCHIQUE STANDARD
+        # Utiliser la méthode centralisée pour garantir cohérence avec les bar charts
+        archetype_list = archetype_stats[archetype_col_name].tolist()
+        ordered_archetypes = self.sort_archetypes_by_hierarchy(archetype_list)
+
+        # Réorganiser le DataFrame selon l'ordre hiérarchique
+        archetype_stats = (
+            archetype_stats.set_index(archetype_col_name)
+            .reindex(ordered_archetypes)
+            .reset_index()
+        )
+
         # Générer matrice de matchups
-        archetypes = archetype_stats["archetype"].tolist()
+        archetypes = archetype_stats[archetype_col_name].tolist()
         matchups = []
 
         for i, arch_a in enumerate(archetypes):
@@ -114,10 +222,10 @@ class MatchupMatrixGenerator:
                 if i != j:  # Pas de matchup contre soi-même
                     # Récupérer les stats des deux archétypes
                     stats_a = archetype_stats[
-                        archetype_stats["archetype"] == arch_a
+                        archetype_stats[archetype_col_name] == arch_a
                     ].iloc[0]
                     stats_b = archetype_stats[
-                        archetype_stats["archetype"] == arch_b
+                        archetype_stats[archetype_col_name] == arch_b
                     ].iloc[0]
 
                     # Calculer winrate du matchup basé sur les performances relatives
@@ -201,6 +309,23 @@ class MatchupMatrixGenerator:
         )
         matches_matrix = matchups_df.pivot(
             index="archetype_a", columns="archetype_b", values="total_matches"
+        )
+
+        # 🎯 APPLIQUER L'ORDRE HIÉRARCHIQUE AUX AXES DE LA MATRICE
+        # Garantir cohérence avec les bar charts en utilisant l'ordre hiérarchique
+        all_archetypes = list(set(matrix.index.tolist() + matrix.columns.tolist()))
+        ordered_archetypes = self.sort_archetypes_by_hierarchy(all_archetypes)
+
+        # Réorganiser les matrices selon l'ordre hiérarchique
+        matrix = matrix.reindex(index=ordered_archetypes, columns=ordered_archetypes)
+        ci_lower_matrix = ci_lower_matrix.reindex(
+            index=ordered_archetypes, columns=ordered_archetypes
+        )
+        ci_upper_matrix = ci_upper_matrix.reindex(
+            index=ordered_archetypes, columns=ordered_archetypes
+        )
+        matches_matrix = matches_matrix.reindex(
+            index=ordered_archetypes, columns=ordered_archetypes
         )
 
         # Remplir la diagonale avec 0.5 (matchup contre soi-même)
