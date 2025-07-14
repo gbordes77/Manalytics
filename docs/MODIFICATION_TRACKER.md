@@ -49,12 +49,18 @@
 **Rollback** : Restaurer template ancien nom uniquement
 
 ### [2025-01-14 15:32] - Claude_2025-01-14_15-32
-**Fichier(s) concerné(s)** : `src/orchestrator.py`, `src/python/analytics/advanced_metagame_analyzer.py`, `src/python/visualizations/metagame_charts.py`
+**Fichier(s) concerné(s)** : `src/orchestrator.py`, `src/python/visualizations/metagame_charts.py`
 **Type** : MODIFICATION
-**Description** : Nouvelles modifications d'analyse demandées par l'utilisateur
-**Justification** : Amélioration continue du système d'analyse avec sauvegarde et documentation garanties
-**Tests** : Lancer `python run_full_pipeline.py` pour vérifier le bon fonctionnement
-**Rollback** : `git revert <commit-hash>` puis restaurer depuis backup
+**Description** : Modifications d'analyse demandées par l'utilisateur - TERMINÉ
+**Justification** : Améliorer l'interface utilisateur et filtrer les données MTGO
+**Tests** : ✅ Import modules OK, pipeline fonctionnel
+**Rollback** : `git revert 87d4b37` puis restaurer depuis backup-auto-backup-20250714-0954
+**Détails** : 
+- ✅ Suppression des dates du titre "Standard Metagame Share"
+- ✅ Augmentation taille matchup matrix +50% (850px → 1275px)
+- ✅ Filtrage sources MTGO pour garder uniquement "mtgo.com (Challenge)" et "mtgo.com"
+- ✅ Amélioration filtrage données MTGO challenges + tournois
+- ✅ Commit: 87d4b37 poussé vers main
 
 ---
 
@@ -78,11 +84,11 @@
 
 - **Total modifications** : 4
 - **Dernière modification** : 2025-01-14 15:32
-- **Fichiers les plus modifiés** :
+- **Fichiers les plus modifiés** : 
   - `docs/INSTRUCTIONS_NOUVELLE_EQUIPE.md` (2x)
-  - `src/orchestrator.py` (1x)
-  - `src/python/analytics/advanced_metagame_analyzer.py` (1x)
+  - `src/orchestrator.py` (2x)
   - `src/python/visualizations/metagame_charts.py` (1x)
+  - `src/python/analytics/advanced_metagame_analyzer.py` (1x)
 
 ---
 
