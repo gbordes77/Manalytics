@@ -24,6 +24,15 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-14 12:43] - Claude_2025-07-14_12-43
+**Fichier(s) concerné(s)** : src/orchestrator.py
+**Type** : MODIFICATION
+**Description** : Correction gestion archétypes - intégration AdvancedArchetypeClassifier dans pipeline
+**Justification** : AdvancedArchetypeClassifier initialisé mais jamais utilisé. Doit implémenter logique Aliquanto3 R→Python
+**Tests** : Tester pipeline avec nouvelles classifications d'archétypes améliorées
+**Rollback** : git revert du commit correspondant
+
+
 ### [2025-07-14 12:30] - Claude_2025-07-14_12-30
 **Fichier(s) concerné(s)** : docs/ONBOARDING_CHECKLIST.md
 **Type** : MODIFICATION
