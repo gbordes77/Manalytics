@@ -2,6 +2,47 @@
 
 > **Version History** - All improvements documented
 
+## 🆕 **v0.3.5** - Critical Matchup Matrix Corrections & Visualization Consistency (January 15, 2025)
+
+### 🎯 **CRITICAL FIXES - MATCHUP MATRIX ALIGNMENT**
+
+#### 🔧 **Hierarchical Ordering Correction**
+- **Problem Resolved**: Matchup matrix not starting with "Izzet Prowess" as specified
+- **Solution**: Replaced manual sorting with centralized `sort_archetypes_by_hierarchy()` method
+- **Result**: Izzet Prowess now consistently appears first across ALL visualizations
+- **Impact**: Perfect alignment between bar charts and matchup matrix ordering
+
+#### 📊 **Naming Consistency Fix**
+- **Problem Resolved**: Disparity between bar charts ("Prowess") and matchup matrix ("Izzet Prowess")
+- **Solution**: Unified archetype column usage via centralized `_get_archetype_column()` method
+- **Result**: All visualizations now use identical archetype names
+- **Impact**: Enhanced user experience with consistent naming across all charts
+
+#### 🎨 **Axis Ordering Enhancement**
+- **Problem Resolved**: Matchup matrix axes not following hierarchical order
+- **Solution**: Applied hierarchical ordering to both X and Y axes via `reindex()` method
+- **Result**: Professional matrix layout with logical archetype progression
+- **Impact**: Improved readability and user navigation
+
+### 🛠️ **Technical Implementation**
+
+#### **Enhanced Module**: `src/python/visualizations/matchup_matrix.py`
+- **Method**: `simulate_matchups_from_winrates()` - Uses hierarchical sorting instead of manual ordering
+- **Method**: `create_matchup_matrix()` - Applies hierarchical order to matrix axes
+- **Variable**: `archetype_col_name` - Maintains consistency with bar chart column usage
+- **Integration**: Full alignment with existing visualization standards
+
+#### **Documentation Update**: `docs/MODIFICATION_TRACKER.md`
+- **Session Tracking**: Complete documentation of all matchup matrix corrections
+- **Technical Details**: Comprehensive explanation of changes and their impacts
+- **Rollback Instructions**: Clear guidance for reverting changes if needed
+
+### 🔄 **Pipeline Integration**
+- **Production Ready**: All changes integrated into main pipeline
+- **Testing Complete**: Full analysis generated and validated
+- **Backward Compatible**: Existing functionality preserved
+- **Performance**: No impact on analysis generation speed
+
 ## 🆕 **v0.3.4.1** - Data Visualization Excellence & Standardization (January 15, 2025)
 
 ### ✨ **MAJOR VISUALIZATION IMPROVEMENTS**

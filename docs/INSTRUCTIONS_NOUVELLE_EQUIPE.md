@@ -1,6 +1,6 @@
 # 👋 Instructions for New Team - Manalytics
 
-> **Welcome!** You're joining the **Manalytics v0.3.4** project - Magic: The Gathering metagame analysis platform with **advanced statistical analysis and authentic MTG color system**
+> **Welcome!** You're joining the **Manalytics v0.3.5** project - Magic: The Gathering metagame analysis platform with **advanced statistical analysis and perfected visualization consistency**
 
 ## 🎯 **CLEAR MISSION**
 

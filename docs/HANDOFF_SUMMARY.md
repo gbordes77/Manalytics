@@ -1,13 +1,21 @@
-# 🚀 Handoff Summary - Manalytics v0.3.4
+# 🚀 Handoff Summary - Manalytics v0.3.5
 
-> **Status**: Complete advanced analytics integration delivered - PRODUCTION READY
-> **Date**: July 13, 2025
-> **Branch**: `feature/english-migration`
-> **Next Team**: Ready to take over with enhanced statistical analysis capabilities
+> **Status**: Critical visualization corrections completed - PRODUCTION READY
+> **Date**: January 15, 2025
+> **Branch**: `main`
+> **Next Team**: Ready to take over with perfected visualization consistency and ordering
 
 ## 📋 **CURRENT STATE**
 
 ### ✅ **What's Been Completed**
+
+#### 🎯 **LATEST: Critical Matchup Matrix Corrections (v0.3.5)**
+- **Hierarchical Ordering**: Izzet Prowess now consistently appears first across ALL visualizations
+- **Naming Consistency**: Perfect alignment between bar charts and matchup matrix archetype names
+- **Axis Ordering**: Hierarchical order applied to both X and Y axes for optimal readability
+- **Technical Implementation**: Centralized `sort_archetypes_by_hierarchy()` method usage
+- **Pipeline Integration**: All changes integrated into production pipeline
+- **Testing Complete**: Full analysis generated and validated
 
 #### 🔬 **NEW: Advanced Statistical Analysis Engine**
 - **Shannon & Simpson Diversity**: Metagame diversity measurement using information theory

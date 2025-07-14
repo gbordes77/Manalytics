@@ -43,7 +43,12 @@ open Analyses/standard_analysis_2025-07-01_2025-07-07/standard_2025-07-01_2025-0
 
 ---
 
-## 🌟 What's New in v0.3.4
+## 🌟 What's New in v0.3.5
+
+### 🎯 **Critical Matchup Matrix Corrections**
+- **Hierarchical Ordering**: Izzet Prowess now consistently appears first across ALL visualizations
+- **Naming Consistency**: Perfect alignment between bar charts and matchup matrix archetype names
+- **Axis Ordering**: Hierarchical order applied to both X and Y axes for optimal readability
 
 ### 🔬 **Advanced Statistical Analysis**
 - **Shannon & Simpson Diversity**: Metagame diversity indices with effective archetype count

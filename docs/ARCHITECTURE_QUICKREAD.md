@@ -49,6 +49,13 @@ class BaseScraper:
 - **Précision** : ~95% sur archétypes connus
 - **Source officielle** : Classification rules from Badaro's MTGOFormatData repository
 
+### **Visualizations** (`src/python/visualizations/`)
+- **Rôle** : Génération visualisations interactives avec cohérence totale
+- **Architecture** : Système d'ordonnancement hiérarchique centralisé
+- **Méthodes unifiées** : `sort_archetypes_by_hierarchy()` et `_get_archetype_column()`
+- **Cohérence** : Noms et ordre identiques entre tous les graphiques
+- **Extensibilité** : 1 nouveau graphique = réutilisation méthodes centralisées
+
 ```python
 # Classification automatique
 classifier.classify_deck(decklist) → "Rakdos Midrange"
