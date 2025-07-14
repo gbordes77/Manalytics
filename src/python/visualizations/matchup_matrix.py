@@ -23,19 +23,19 @@ class MatchupMatrixGenerator:
         self.data_path = Path(data_path) if data_path else None
         self.logger = logging.getLogger(__name__)
 
-        # Palette heatmap (du violet au vert)
+        # Palette heatmap (du rouge au vert - plus lisible)
         self.heatmap_colors = {
-            "c-50": "#762a83",  # Extrême perdant
-            "c-40": "#8e4d99",
-            "c-30": "#a66fb0",
-            "c-20": "#be91c7",
-            "c-10": "#d6b3de",
-            "c0": "#f7f7f7",  # Neutre (50%)
-            "c+10": "#c7e9c0",
-            "c+20": "#a1d99b",
-            "c+30": "#7bc87c",
-            "c+40": "#4eb265",
-            "c+50": "#1b7837",  # Extrême gagnant
+            "c-50": "#d73027",  # Extrême perdant (rouge foncé)
+            "c-40": "#f46d43", 
+            "c-30": "#fdae61",
+            "c-20": "#fee08b",
+            "c-10": "#ffffbf",
+            "c0": "#ffffff",   # Neutre (50%) - blanc
+            "c+10": "#d9f0a3",
+            "c+20": "#addd8e",
+            "c+30": "#78c679",
+            "c+40": "#41ab5d",
+            "c+50": "#006837",  # Extrême gagnant (vert foncé)
         }
 
     def load_data(self) -> pd.DataFrame:

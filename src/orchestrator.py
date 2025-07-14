@@ -1947,8 +1947,8 @@ class ManalyticsOrchestrator:
         try:
             # Filter for MTGO data only - Include all mtgo.com sources EXCEPT 5-0 leagues
             mtgo_df = df[
-                (df["tournament_source"].str.contains("mtgo.com", na=False)) & 
-                (~df["tournament_source"].str.contains("5-0", na=False))
+                (df["tournament_source"].str.contains("mtgo.com", na=False))
+                & (~df["tournament_source"].str.contains("5-0", na=False))
             ]
 
             if len(mtgo_df) == 0:
