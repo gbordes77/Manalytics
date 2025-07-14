@@ -24,6 +24,15 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-14 11:18] - Claude_2025-07-14_11-18
+**Fichier(s) concerné(s)** : docs/DATA_VISUALIZATION_EXPERTISE.md,docs/TEAM_HANDOFF_CHECKLIST.md
+**Type** : MODIFICATION
+**Description** : Documentation expertise dataviz et couleurs pour onboarding équipes
+**Justification** : Centraliser l'expertise pour transmission aux futures équipes
+**Tests** : Vérifier intégration dans processus onboarding
+**Rollback** : git revert du commit correspondant
+
+
 ### [2025-07-14 11:13] - Claude_2025-07-14_11-13
 **Fichier(s) concerné(s)** : src/python/visualizations/metagame_charts.py,docs/COLOR_GUIDE_EXPERT.md
 **Type** : MODIFICATION
