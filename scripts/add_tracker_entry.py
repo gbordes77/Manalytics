@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """
 Script pour ajouter automatiquement une entrée dans MODIFICATION_TRACKER.md
-Usage: python scripts/add_tracker_entry.py
+Usage:
+  python scripts/add_tracker_entry.py --name "Claude" --files "docs/test.py" \
+    --description "test modification"
+  python scripts/add_tracker_entry.py  # Mode interactif (ancien comportement)
 """
 
+import argparse
 import os
 import sys
 from datetime import datetime
@@ -76,7 +80,27 @@ def get_user_input():
         "description": description,
         "justification": justification,
         "tests": tests,
-        "rollback": rollback
+        "rollback": rollback,
+    }
+
+
+def get_non_interactive_input(args):
+    """Collecte les informations depuis les arguments en ligne de commande."""
+    now = datetime.now()
+    datetime_str = now.strftime("%Y-%m-%d %H:%M")
+
+    # Nom avec date/heure
+    full_name = f"{args.name}_{now.strftime('%Y-%m-%d_%H-%M')}"
+
+    return {
+        "name": full_name,
+        "datetime": datetime_str,
+        "files": args.files,
+        "type": args.type,
+        "description": args.description,
+        "justification": args.justification,
+        "tests": args.tests,
+        "rollback": args.rollback,
     }
 
 
@@ -95,7 +119,7 @@ def add_tracker_entry(info):
     # Créer la nouvelle entrée
     entry = f"""
 ### [{info['datetime']}] - {info['name']}
-**Fichier(s) concerné(s)** : `{info['files']}`
+**Fichier(s) concerné(s)** : {info['files']}
 **Type** : {info['type']}
 **Description** : {info['description']}
 **Justification** : {info['justification']}
@@ -130,14 +154,59 @@ def add_tracker_entry(info):
 
 def main():
     """Fonction principale."""
+    parser = argparse.ArgumentParser(
+        description="Ajouter une entrée dans MODIFICATION_TRACKER.md",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Exemples d'utilisation:
+  python scripts/add_tracker_entry.py --name "Claude" --files "docs/test.py" \
+    --description "test modification"
+  python scripts/add_tracker_entry.py  # Mode interactif
+        """,
+    )
+
+    parser.add_argument("--name", help="Nom de l'assistant (ex: Claude, GPT-4)")
+    parser.add_argument(
+        "--files", help="Fichier(s) concerné(s) (ex: src/orchestrator.py)"
+    )
+    parser.add_argument(
+        "--type",
+        choices=["AJOUT", "MODIFICATION", "SUPPRESSION"],
+        default="MODIFICATION",
+        help="Type de modification",
+    )
+    parser.add_argument("--description", help="Description de la modification")
+    parser.add_argument(
+        "--justification",
+        default="Amélioration du système",
+        help="Justification de la modification",
+    )
+    parser.add_argument(
+        "--tests",
+        default="Tests manuels du pipeline",
+        help="Comment tester la modification",
+    )
+    parser.add_argument(
+        "--rollback",
+        default="git revert du commit correspondant",
+        help="Procédure de rollback",
+    )
+
+    args = parser.parse_args()
+
     try:
         # Vérifier qu'on est dans le bon répertoire
         if not os.path.exists("docs/MODIFICATION_TRACKER.md"):
             print("❌ Veuillez exécuter ce script depuis la racine du projet Manalytics")
             sys.exit(1)
 
-        # Collecter les informations
-        info = get_user_input()
+        # Mode non-interactif si les arguments requis sont fournis
+        if args.name and args.files and args.description:
+            print("🤖 Mode non-interactif activé")
+            info = get_non_interactive_input(args)
+        else:
+            # Mode interactif (ancien comportement)
+            info = get_user_input()
 
         # Ajouter l'entrée
         add_tracker_entry(info)
