@@ -1,4 +1,8 @@
 """
+
+from python.utils.logging_manager import get_logger
+logger = get_logger(__name__)
+
 Manalytics Orchestrator - Phase 3 (Visualizations only)
 Simplified pipeline with automatic chart generation
 """
@@ -181,7 +185,7 @@ class ManalyticsOrchestrator:
 
     def _load_real_tournament_data(self):
         """Load real tournament data from MTGODecklistCache with intelligent caching"""
-        print(f"\n🔍 Searching for {self.format.upper()} tournaments...")
+        self.logger.info(f"\n🔍 Searching for {self.format.upper()} tournaments...")
 
         # Dynamic search patterns (like the old system)
         patterns = self._generate_search_patterns()
@@ -190,10 +194,10 @@ class ManalyticsOrchestrator:
         for pattern in patterns:
             tournament_files.extend(glob.glob(pattern))
 
-        print(f"📁 Files found: {len(tournament_files)}")
+        self.logger.info(f"Files found: {len(tournament_files)}")
 
         if not tournament_files:
-            print(f"❌ No tournament files found for {self.format}")
+            self.logger.error(f"No tournament files found for {self.format}")
             return pd.DataFrame()
 
         # Load and filter tournaments with intelligent caching
@@ -212,7 +216,7 @@ class ManalyticsOrchestrator:
                 continue
 
         if not all_decks:
-            print(f"❌ No decks found for {self.format} in the specified period")
+            self.logger.error(f"No decks found for {self.format} in the specified period")
             return pd.DataFrame()
 
         # Create DataFrame with the same structure as the old system
@@ -226,14 +230,14 @@ class ManalyticsOrchestrator:
         )
         duplicates_removed = initial_count - len(df)
 
-        print(f"\n📊 DATA LOADED:")
-        print(f"🏆 Tournaments: {tournaments_loaded}")
-        print(f"🎯 Decks: {len(df)} (removed {duplicates_removed} duplicates)")
-        print(
+        self.logger.info(f"\n📊 DATA LOADED:")
+        self.logger.info(f"🏆 Tournaments: {tournaments_loaded}")
+        self.logger.info(f"🎯 Decks: {len(df)} (removed {duplicates_removed} duplicates)")
+        self.logger.info(
             f"📅 Actual period: {df['tournament_date'].min().strftime('%Y-%m-%d')} to {df['tournament_date'].max().strftime('%Y-%m-%d')}"
         )
-        print(f"🎲 Archetypes: {df['archetype'].nunique()}")
-        print(f"🌐 Sources: {', '.join(df['tournament_source'].unique())}")
+        self.logger.info(f"🎲 Archetypes: {df['archetype'].nunique()}")
+        self.logger.info(f"🌍 Sources: {', '.join(df['tournament_source'].unique())}")
 
         self.logger.info(
             f"✅ {len(df)} decks loaded from {df['tournament_source'].nunique()} sources ({duplicates_removed} duplicates removed)"
@@ -255,12 +259,17 @@ class ManalyticsOrchestrator:
 
             # Patterns for different sources and structures (adapted to real structure with days)
             base_patterns = [
+                # MTGODecklistCache patterns
                 f"MTGODecklistCache/Tournaments/*/{year}/{month}/*/*{self.format.lower()}*.json",
                 f"MTGODecklistCache/Tournaments/*/{year}/{month}/*/{self.format.lower()}*.json",
                 f"MTGODecklistCache/Tournaments/*/{year}/{month}/*-{self.format.lower()}-*.json",
                 f"MTGODecklistCache/Tournaments/*/{year}/{month}/*-{self.format.lower()}.json",
+                # data/reference patterns
                 f"data/reference/Tournaments/*/{year}/{month}/*/*{self.format.lower()}*.json",
                 f"data/reference/Tournaments/*/{year}/{month}/*/{self.format.lower()}*.json",
+                # NEW: data/raw patterns (where current data is)
+                f"data/raw/*/{year}/{month}/*/*.json",
+                f"data/raw/*/{year}/{month}/*/*/*.json",
             ]
             patterns.extend(base_patterns)
 
@@ -274,8 +283,34 @@ class ManalyticsOrchestrator:
 
     def _process_tournament_file(self, file_path):
         """Process individual tournament file (like the old system)"""
-        with open(file_path, "r", encoding="utf-8") as f:
-            tournament_data = json.load(f)
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                # Clean up malformed JSON - more robust approach
+                content = content.replace('}]', '}').replace('}s', '}').replace('"}\n}', '"}')
+                
+                # Find the end of the main JSON structure
+                brace_count = 0
+                json_end = -1
+                for i, char in enumerate(content):
+                    if char == '{':
+                        brace_count += 1
+                    elif char == '}':
+                        brace_count -= 1
+                        if brace_count == 0:
+                            json_end = i + 1
+                            break
+                
+                if json_end > 0:
+                    content = content[:json_end]
+                
+                tournament_data = json.loads(content)
+        except json.JSONDecodeError as e:
+            logger.warning(f"Invalid JSON in {file_path}: {e}")
+            return []
+        except Exception as e:
+            logger.warning(f"Error reading {file_path}: {e}")
+            return []
 
         # Adapt to different data formats
         tournament_info = tournament_data.get("Tournament", tournament_data)
@@ -312,10 +347,27 @@ class ManalyticsOrchestrator:
         if not (start_date <= tournament_date <= end_date):
             return []
 
-        # Traiter les decks
-        decks = tournament_data.get("Decks", tournament_data.get("decks", []))
+        # Traiter les decks - gérer différents formats
+        decks = []
+        
+        # Format 1: Decks/decks dans les données
+        if "Decks" in tournament_data:
+            decks = tournament_data["Decks"]
+        elif "decks" in tournament_data:
+            decks = tournament_data["decks"]
+        # Format 2: Standings (comme dans data/raw)
+        elif "Standings" in tournament_data:
+            standings = tournament_data["Standings"]
+            for standing in standings:
+                if "Deck" in standing:
+                    deck_with_player = standing["Deck"].copy()
+                    deck_with_player["Player"] = standing.get("Player", "Unknown")
+                    deck_with_player["Rank"] = standing.get("Rank", 0)
+                    deck_with_player["Wins"] = standing.get("Wins", 0)
+                    deck_with_player["Losses"] = standing.get("Losses", 0)
+                    decks.append(deck_with_player)
+        
         processed_decks = []
-
         for deck in decks:
             deck_data = self._process_deck(
                 deck, tournament_info, tournament_date, file_path
@@ -423,9 +475,9 @@ class ManalyticsOrchestrator:
             except:
                 pass
         else:
-            # Format directly in data
-            wins = deck.get("wins", 0)
-            losses = deck.get("losses", 0)
+            # Format directly in data (handle both cases)
+            wins = deck.get("wins", deck.get("Wins", 0))
+            losses = deck.get("losses", deck.get("Losses", 0))
 
         return wins, losses
 
@@ -2429,8 +2481,8 @@ class ManalyticsOrchestrator:
         Enhanced metagame analysis with color integration
         Based on Aliquanto3's R-Meta-Analysis system
         """
-        print(f"🚀 Generating enhanced metagame analysis for {format_type}...")
-        print(f"📅 Period: {start_date} to {end_date}")
+        logger.rocket_info("Generating enhanced metagame analysis for {format_type}...")
+        logger.calendar_info("Period: {start_date} to {end_date}")
 
         # Setup
         if output_dir is None:
@@ -2443,10 +2495,10 @@ class ManalyticsOrchestrator:
         self._setup_services()
 
         # Fetch and process data
-        print("📊 Fetching tournament data...")
+        logger.data_info("Fetching tournament data...")
         tournaments = self._fetch_tournaments(start_date, end_date, format_type)
 
-        print("🔍 Processing decks with advanced classification...")
+        logger.search_info("Processing decks with advanced classification...")
         all_decks = []
         processed_tournaments = []
 
@@ -2455,7 +2507,7 @@ class ManalyticsOrchestrator:
             all_decks.extend(tournament_decks)
             processed_tournaments.append(tournament)
 
-        print(
+        logger.info(
             f"✅ Processed {len(all_decks)} decks from {len(processed_tournaments)} tournaments"
         )
 
@@ -2472,7 +2524,7 @@ class ManalyticsOrchestrator:
         # Generate all outputs
         self._generate_all_enhanced_outputs(enhanced_data, output_dir)
 
-        print(f"🎉 Enhanced analysis complete! Results saved to: {output_dir}")
+        logger.party_info("Enhanced analysis complete! Results saved to: {output_dir}")
         return output_dir
 
     def _process_tournament_enhanced(self, tournament):
@@ -2515,7 +2567,7 @@ class ManalyticsOrchestrator:
                 enhanced_decks.append(enhanced_deck)
 
             except Exception as e:
-                print(f"⚠️ Error processing deck: {e}")
+                logger.warning("Error processing deck: {e}")
                 continue
 
         return enhanced_decks
@@ -2711,7 +2763,7 @@ class ManalyticsOrchestrator:
         # 5. Export Data (from EXPORT_GRAPHS_AND_TXT.R)
         self._generate_export_data(enhanced_data, output_dir)
 
-        print("📊 All enhanced outputs generated successfully!")
+        logger.data_info("All enhanced outputs generated successfully!")
 
     def _generate_enhanced_dashboard(self, enhanced_data, output_dir):
         """Generate enhanced dashboard with color integration"""
@@ -2914,7 +2966,7 @@ class ManalyticsOrchestrator:
         with open(dashboard_path, "w", encoding="utf-8") as f:
             f.write(html_content)
 
-        print(f"📊 Enhanced dashboard generated: {dashboard_path}")
+        logger.data_info("Enhanced dashboard generated: {dashboard_path}")
 
     def _group_tournaments_by_date(self, tournaments):
         """Group tournaments by date for analysis"""
@@ -2944,7 +2996,7 @@ class ManalyticsOrchestrator:
         # 3. Strategy evolution over time
         self._create_strategy_timeline(enhanced_data, viz_dir)
 
-        print(f"📈 Enhanced visualizations generated in: {viz_dir}")
+        logger.chart_trend_info("Enhanced visualizations generated in: {viz_dir}")
 
     def _create_animated_archetype_chart(self, enhanced_data, viz_dir):
         """Create animated archetype distribution chart with EXPERT COLOR SYSTEM"""
@@ -2995,7 +3047,7 @@ class ManalyticsOrchestrator:
         plt.savefig(chart_path, dpi=300, bbox_inches="tight")
         plt.close()
 
-        print(f"📊 Animated archetype chart saved: {chart_path}")
+        logger.data_info("Animated archetype chart saved: {chart_path}")
 
     def _create_color_heatmap(self, enhanced_data, viz_dir):
         """Create color distribution heatmap with EXPERT COLOR SYSTEM"""
@@ -3065,7 +3117,7 @@ class ManalyticsOrchestrator:
         plt.savefig(heatmap_path, dpi=300, bbox_inches="tight")
         plt.close()
 
-        print(f"🎨 Color heatmap saved: {heatmap_path}")
+        logger.chart_info("Color heatmap saved: {heatmap_path}")
 
     def _create_strategy_timeline(self, enhanced_data, viz_dir):
         """Create strategy evolution timeline"""
@@ -3106,7 +3158,7 @@ class ManalyticsOrchestrator:
         plt.savefig(timeline_path, dpi=300, bbox_inches="tight")
         plt.close()
 
-        print(f"📈 Strategy timeline saved: {timeline_path}")
+        logger.chart_trend_info("Strategy timeline saved: {timeline_path}")
 
     def _generate_diversity_analysis(self, enhanced_data, output_dir):
         """Generate diversity analysis based on Aliquanto3's MTGOCardDiversity"""
@@ -3125,7 +3177,7 @@ class ManalyticsOrchestrator:
         # 3. Generate archetype diversity breakdown
         self._create_archetype_diversity_breakdown(enhanced_data, diversity_dir)
 
-        print(f"📊 Diversity analysis generated in: {diversity_dir}")
+        logger.data_info("Diversity analysis generated in: {diversity_dir}")
 
     def _create_diversity_report(self, diversity_metrics, diversity_dir):
         """Create comprehensive diversity report"""
@@ -3201,7 +3253,7 @@ Based on the current diversity metrics:
         with open(report_path, "w", encoding="utf-8") as f:
             f.write(report_content)
 
-        print(f"📋 Diversity report saved: {report_path}")
+        logger.report_info("Diversity report saved: {report_path}")
 
     def _create_card_usage_analysis(self, enhanced_data, diversity_dir):
         """Create detailed card usage analysis"""
@@ -3259,7 +3311,7 @@ Based on the current diversity metrics:
             writer.writeheader()
             writer.writerows(card_usage_data)
 
-        print(f"📊 Card usage analysis saved: {csv_path}")
+        logger.data_info("Card usage analysis saved: {csv_path}")
 
     def _create_archetype_diversity_breakdown(self, enhanced_data, diversity_dir):
         """Create archetype diversity breakdown"""
@@ -3298,7 +3350,7 @@ Based on the current diversity metrics:
         with open(breakdown_path, "w", encoding="utf-8") as f:
             json.dump(breakdown, f, indent=2)
 
-        print(f"📈 Archetype diversity breakdown saved: {breakdown_path}")
+        logger.chart_trend_info("Archetype diversity breakdown saved: {breakdown_path}")
 
     def _generate_statistical_reports(self, enhanced_data, output_dir):
         """Generate statistical reports based on Aliquanto3's Test_Normal.R"""
@@ -3315,7 +3367,7 @@ Based on the current diversity metrics:
         # 3. Correlation analysis
         self._create_correlation_analysis(enhanced_data, stats_dir)
 
-        print(f"📊 Statistical reports generated in: {stats_dir}")
+        logger.data_info("Statistical reports generated in: {stats_dir}")
 
     def _create_distribution_analysis(self, enhanced_data, stats_dir):
         """Create distribution analysis report"""
@@ -3371,7 +3423,7 @@ The distribution shows a {'healthy' if std_count/mean_count < 1.0 else 'concentr
         with open(report_path, "w", encoding="utf-8") as f:
             f.write(report)
 
-        print(f"📊 Distribution analysis saved: {report_path}")
+        logger.data_info("Distribution analysis saved: {report_path}")
 
     def _create_significance_tests(self, enhanced_data, stats_dir):
         """Create significance testing report"""
@@ -3405,7 +3457,7 @@ The enhanced classification system demonstrates statistically significant improv
         with open(test_path, "w", encoding="utf-8") as f:
             f.write(report)
 
-        print(f"📊 Significance tests saved: {test_path}")
+        logger.data_info("Significance tests saved: {test_path}")
 
     def _create_correlation_analysis(self, enhanced_data, stats_dir):
         """Create correlation analysis between colors and archetypes"""
@@ -3441,7 +3493,7 @@ The enhanced classification system demonstrates statistically significant improv
         with open(correlation_path, "w", encoding="utf-8") as f:
             json.dump(correlation_data, f, indent=2)
 
-        print(f"📊 Correlation analysis saved: {correlation_path}")
+        logger.data_info("Correlation analysis saved: {correlation_path}")
 
     def _find_strongest_correlations(self, color_archetype_matrix):
         """Find strongest correlations between colors and archetypes"""
@@ -3482,7 +3534,7 @@ The enhanced classification system demonstrates statistically significant improv
         # 3. TXT reports
         self._create_txt_reports(enhanced_data, export_dir)
 
-        print(f"📁 Export data generated in: {export_dir}")
+        logger.file_info("Export data generated in: {export_dir}")
 
     def _create_csv_exports(self, enhanced_data, export_dir):
         """Create CSV exports for further analysis"""
@@ -3535,7 +3587,7 @@ The enhanced classification system demonstrates statistically significant improv
                 writer.writeheader()
                 writer.writerows(archetype_summary)
 
-        print(f"📊 CSV exports saved: {export_dir}")
+        logger.data_info("CSV exports saved: {export_dir}")
 
     def _create_json_exports(self, enhanced_data, export_dir):
         """Create JSON exports for web integration"""
@@ -3569,7 +3621,7 @@ The enhanced classification system demonstrates statistically significant improv
         with open(summary_path, "w", encoding="utf-8") as f:
             json.dump(summary_data, f, indent=2)
 
-        print(f"📊 JSON exports saved: {export_dir}")
+        logger.data_info("JSON exports saved: {export_dir}")
 
     def _create_txt_reports(self, enhanced_data, export_dir):
         """Create TXT reports for easy reading"""
@@ -3621,7 +3673,7 @@ For detailed analysis, see the complete reports in other directories.
         with open(summary_path, "w", encoding="utf-8") as f:
             f.write(summary_report)
 
-        print(f"📄 TXT reports saved: {export_dir}")
+        logger.page_info("TXT reports saved: {export_dir}")
 
     def _get_enhanced_dashboard_css(self):
         """Get enhanced CSS for the dashboard"""
