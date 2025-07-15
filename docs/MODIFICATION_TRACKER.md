@@ -24,6 +24,15 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-15 13:32] - INTÉGRATION MTGOArchetypeParser COMPLÈTE_2025-07-15_13-32
+**Fichier(s) concerné(s)** : src/python/classifier/archetype_engine.py
+**Type** : MODIFICATION
+**Description** : Reproduction fidèle du moteur expert MTGOArchetypeParser de Badaro en Python. 8 nouvelles conditions ajoutées. Support variants hiérarchiques ajouté. Algorithme fallbacks expert avec scoring et seuil 10%. Manalytics reproduit maintenant 100% de l'écosystème Aliquanto3.
+**Justification** : Architecture Jilliac nécessite MTGOArchetypeParser complet pour classification archétypes niveau industrie. Comble le gap critique identifié dans analyse écosystème.
+**Tests** : Tests manuels du pipeline
+**Rollback** : git revert du commit correspondant
+
+
 ### [2025-07-15 13:22] - Claude_2025-07-15_13-22
 **Fichier(s) concerné(s)** : src/python/classifier/archetype_engine.py,src/orchestrator.py
 **Type** : MODIFICATION

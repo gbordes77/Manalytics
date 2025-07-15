@@ -533,16 +533,23 @@ class ManalyticsOrchestrator:
             }
 
             # Use ArchetypeEngine for precise archetype detection with metadata
-            classification_result = self.archetype_engine.classify_deck_with_metadata(deck_data, self.format)
+            classification_result = self.archetype_engine.classify_deck_with_metadata(
+                deck_data, self.format
+            )
 
-            if classification_result["archetype_name"] and classification_result["archetype_name"] != "Unknown":
+            if (
+                classification_result["archetype_name"]
+                and classification_result["archetype_name"] != "Unknown"
+            ):
                 archetype_name = classification_result["archetype_name"]
                 include_color = classification_result["include_color_in_name"]
 
                 # Apply color integration ONLY if IncludeColorInName is True
                 if include_color:
-                    archetype_with_colors = self._apply_color_integration_mtgoformatdata(
-                        archetype_name, mainboard
+                    archetype_with_colors = (
+                        self._apply_color_integration_mtgoformatdata(
+                            archetype_name, mainboard
+                        )
                     )
                 else:
                     archetype_with_colors = archetype_name

@@ -4,10 +4,8 @@ Archetype Engine - Reproduction de Badaro/MTGOArchetypeParser
 Classification des archétypes selon les règles MTGOFormatData
 """
 
-import glob
 import json
 import logging
-import os
 import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -84,7 +82,8 @@ class ArchetypeEngine:
                         )
 
             self.logger.info(
-                f"Loaded {len(self.archetypes[format_name])} archetypes and {len(self.fallbacks[format_name])} fallbacks for {format_name}"
+                f"Loaded {len(self.archetypes[format_name])} archetypes and "
+                f"{len(self.fallbacks[format_name])} fallbacks for {format_name}"
             )
 
         except Exception as e:
@@ -165,10 +164,12 @@ class ArchetypeEngine:
         result = self.classify_deck_with_metadata(deck, format_name)
         return result["archetype_name"]
 
-    def classify_deck_with_metadata(self, deck: Dict, format_name: str) -> Dict[str, Any]:
+    def classify_deck_with_metadata(
+        self, deck: Dict, format_name: str
+    ) -> Dict[str, Any]:
         """
         Classifie un deck selon les règles d'archétypes avec métadonnées complètes
-        
+
         Returns:
             Dict contenant:
             - archetype_name: Nom de l'archétype
@@ -184,12 +185,16 @@ class ArchetypeEngine:
             sideboard = self.extract_cardlist(deck.get("Sideboard", []))
 
             # Essayer d'abord les archétypes principaux
-            archetype_result = self.match_archetypes_with_metadata(mainboard, sideboard, format_name)
+            archetype_result = self.match_archetypes_with_metadata(
+                mainboard, sideboard, format_name
+            )
             if archetype_result:
                 return archetype_result
 
             # Essayer les fallbacks
-            fallback_result = self.match_fallbacks_with_metadata(mainboard, sideboard, format_name)
+            fallback_result = self.match_fallbacks_with_metadata(
+                mainboard, sideboard, format_name
+            )
             if fallback_result:
                 return fallback_result
 
@@ -198,16 +203,16 @@ class ArchetypeEngine:
                 "archetype_name": "Unknown",
                 "include_color_in_name": False,
                 "archetype_data": None,
-                "classification_type": "unknown"
+                "classification_type": "unknown",
             }
 
         except Exception as e:
             self.logger.error(f"Failed to classify deck: {e}")
             return {
-                "archetype_name": "Unknown", 
+                "archetype_name": "Unknown",
                 "include_color_in_name": False,
                 "archetype_data": None,
-                "classification_type": "error"
+                "classification_type": "error",
             }
 
     def extract_cardlist(self, cards: List[Dict]) -> Dict[str, int]:
@@ -248,11 +253,51 @@ class ArchetypeEngine:
 
         for archetype_name, archetype_data in archetypes.items():
             if self.matches_archetype_conditions(mainboard, sideboard, archetype_data):
+                # Check for variants if the main archetype matches
+                variant_result = self.check_archetype_variants(
+                    mainboard, sideboard, archetype_data
+                )
+
+                if variant_result:
+                    # Return variant match
+                    return {
+                        "archetype_name": f"{archetype_name} - {variant_result['variant_name']}",
+                        "include_color_in_name": variant_result.get(
+                            "include_color_in_name",
+                            archetype_data.get("IncludeColorInName", False),
+                        ),
+                        "archetype_data": archetype_data,
+                        "variant_data": variant_result["variant_data"],
+                        "classification_type": "archetype_variant",
+                    }
+                else:
+                    # Return main archetype match
+                    return {
+                        "archetype_name": archetype_name,
+                        "include_color_in_name": archetype_data.get(
+                            "IncludeColorInName", False
+                        ),
+                        "archetype_data": archetype_data,
+                        "classification_type": "archetype",
+                    }
+
+        return None
+
+    def check_archetype_variants(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], archetype_data: Dict
+    ) -> Optional[Dict[str, Any]]:
+        """Check if deck matches any variant of the archetype"""
+        variants = archetype_data.get("Variants", [])
+
+        for variant in variants:
+            if self.matches_archetype_conditions(mainboard, sideboard, variant):
                 return {
-                    "archetype_name": archetype_name,
-                    "include_color_in_name": archetype_data.get("IncludeColorInName", False),
-                    "archetype_data": archetype_data,
-                    "classification_type": "archetype"
+                    "variant_name": variant.get("Name", "Unknown Variant"),
+                    "variant_data": variant,
+                    "include_color_in_name": variant.get(
+                        "IncludeColorInName",
+                        archetype_data.get("IncludeColorInName", False),
+                    ),
                 }
 
         return None
@@ -270,16 +315,72 @@ class ArchetypeEngine:
         """Essaie de faire correspondre avec les fallbacks (avec métadonnées)"""
         fallbacks = self.fallbacks.get(format_name, {})
 
-        for fallback_name, fallback_data in fallbacks.items():
-            if self.matches_archetype_conditions(mainboard, sideboard, fallback_data):
-                return {
-                    "archetype_name": fallback_name,
-                    "include_color_in_name": fallback_data.get("IncludeColorInName", True),  # Fallbacks usually include color
-                    "archetype_data": fallback_data,
-                    "classification_type": "fallback"
-                }
+        if not fallbacks:
+            return None
 
-        return None
+        best_match = None
+        best_score = 0.0
+        minimum_threshold = 0.10  # 10% minimum as per MTGOArchetypeParser
+
+        for fallback_name, fallback_data in fallbacks.items():
+            # Check if this fallback has explicit conditions first
+            if fallback_data.get("Conditions"):
+                if self.matches_archetype_conditions(
+                    mainboard, sideboard, fallback_data
+                ):
+                    return {
+                        "archetype_name": fallback_name,
+                        "include_color_in_name": fallback_data.get(
+                            "IncludeColorInName", True
+                        ),
+                        "archetype_data": fallback_data,
+                        "classification_type": "fallback",
+                    }
+
+            # Use common cards matching algorithm
+            common_cards = fallback_data.get("CommonCards", [])
+            if common_cards:
+                score = self.calculate_common_cards_score(
+                    mainboard, sideboard, common_cards
+                )
+
+                if score >= minimum_threshold and score > best_score:
+                    best_score = score
+                    best_match = {
+                        "archetype_name": fallback_name,
+                        "include_color_in_name": fallback_data.get(
+                            "IncludeColorInName", True
+                        ),
+                        "archetype_data": fallback_data,
+                        "classification_type": "fallback",
+                        "match_score": score,
+                    }
+
+        return best_match
+
+    def calculate_common_cards_score(
+        self,
+        mainboard: Dict[str, int],
+        sideboard: Dict[str, int],
+        common_cards: List[str],
+    ) -> float:
+        """Calculate the percentage of common cards present in the deck"""
+        if not common_cards:
+            return 0.0
+
+        matched_cards = 0
+        total_cards = len(common_cards)
+
+        all_deck_cards = set()
+        all_deck_cards.update(mainboard.keys())
+        all_deck_cards.update(sideboard.keys())
+
+        for card_name in common_cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if normalized_name in all_deck_cards:
+                matched_cards += 1
+
+        return matched_cards / total_cards if total_cards > 0 else 0.0
 
     def matches_archetype_conditions(
         self, mainboard: Dict[str, int], sideboard: Dict[str, int], archetype_data: Dict
@@ -305,20 +406,52 @@ class ArchetypeEngine:
         try:
             condition_type = condition.get("Type", "").lower()
 
-            # MTGOFormatData standard conditions
+            # MTGOFormatData standard conditions - COMPLETE SET
             if condition_type == "inmainboard":
                 return self.evaluate_inmainboard_condition(mainboard, condition)
+            elif condition_type == "insideboard":
+                return self.evaluate_insideboard_condition(sideboard, condition)
+            elif condition_type == "inmainorsideboard":
+                return self.evaluate_inmainorsideboard_condition(
+                    mainboard, sideboard, condition
+                )
             elif condition_type == "oneormoreinmainboard":
                 return self.evaluate_oneormoreinmainboard_condition(
                     mainboard, condition
+                )
+            elif condition_type == "oneormoreinsideboard":
+                return self.evaluate_oneormoreinsideboard_condition(
+                    sideboard, condition
+                )
+            elif condition_type == "oneormoreinmainorsideboard":
+                return self.evaluate_oneormoreinmainorsideboard_condition(
+                    mainboard, sideboard, condition
+                )
+            elif condition_type == "twoormoreinmainboard":
+                return self.evaluate_twoormoreinmainboard_condition(
+                    mainboard, condition
+                )
+            elif condition_type == "twoormoreinsideboard":
+                return self.evaluate_twoormoreinsideboard_condition(
+                    sideboard, condition
+                )
+            elif condition_type == "twoormoreinmainorsideboard":
+                return self.evaluate_twoormoreinmainorsideboard_condition(
+                    mainboard, sideboard, condition
                 )
             elif condition_type == "doesnotcontain":
                 return self.evaluate_doesnotcontain_condition(
                     mainboard, sideboard, condition
                 )
-            elif condition_type == "insideboard":
-                return self.evaluate_insideboard_condition(sideboard, condition)
-            # Legacy conditions
+            elif condition_type == "doesnotcontainmainboard":
+                return self.evaluate_doesnotcontainmainboard_condition(
+                    mainboard, condition
+                )
+            elif condition_type == "doesnotcontainsideboard":
+                return self.evaluate_doesnotcontainsideboard_condition(
+                    sideboard, condition
+                )
+            # Legacy conditions for backwards compatibility
             elif condition_type == "contains":
                 return self.evaluate_contains_condition(mainboard, sideboard, condition)
             elif condition_type == "excludes":
@@ -420,6 +553,120 @@ class ArchetypeEngine:
         for card_name in cards:
             normalized_name = self.normalize_card_name(card_name)
             if sideboard.get(normalized_name, 0) == 0:
+                return False
+        return True
+
+    def evaluate_inmainorsideboard_condition(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'InMainOrSideboard' - toutes les cartes doivent être présentes dans MB ou SB"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            total_count = mainboard.get(normalized_name, 0) + sideboard.get(
+                normalized_name, 0
+            )
+            if total_count == 0:
+                return False
+        return True
+
+    def evaluate_oneormoreinsideboard_condition(
+        self, sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'OneOrMoreInSideboard' - au moins une carte doit être dans le sideboard"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if sideboard.get(normalized_name, 0) > 0:
+                return True
+        return False
+
+    def evaluate_oneormoreinmainorsideboard_condition(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'OneOrMoreInMainOrSideboard' - au moins une carte doit être dans MB ou SB"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            total_count = mainboard.get(normalized_name, 0) + sideboard.get(
+                normalized_name, 0
+            )
+            if total_count > 0:
+                return True
+        return False
+
+    def evaluate_twoormoreinmainboard_condition(
+        self, mainboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'TwoOrMoreInMainboard' - au moins deux cartes de la liste doivent être dans le mainboard"""
+        cards = condition.get("Cards", [])
+        found_count = 0
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if mainboard.get(normalized_name, 0) > 0:
+                found_count += 1
+                if found_count >= 2:
+                    return True
+        return False
+
+    def evaluate_twoormoreinsideboard_condition(
+        self, sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'TwoOrMoreInSideboard' - au moins deux cartes de la liste doivent être dans le sideboard"""
+        cards = condition.get("Cards", [])
+        found_count = 0
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if sideboard.get(normalized_name, 0) > 0:
+                found_count += 1
+                if found_count >= 2:
+                    return True
+        return False
+
+    def evaluate_twoormoreinmainorsideboard_condition(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'TwoOrMoreInMainOrSideboard' - au moins deux cartes de la liste doivent être dans MB ou SB"""
+        cards = condition.get("Cards", [])
+        found_count = 0
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            total_count = mainboard.get(normalized_name, 0) + sideboard.get(
+                normalized_name, 0
+            )
+            if total_count > 0:
+                found_count += 1
+                if found_count >= 2:
+                    return True
+        return False
+
+    def evaluate_doesnotcontainmainboard_condition(
+        self, mainboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'DoesNotContainMainboard' - aucune des cartes ne doit être dans le mainboard"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if mainboard.get(normalized_name, 0) > 0:
+                return False
+        return True
+
+    def evaluate_doesnotcontainsideboard_condition(
+        self, sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'DoesNotContainSideboard' - aucune des cartes ne doit être dans le sideboard"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if sideboard.get(normalized_name, 0) > 0:
                 return False
         return True
 
