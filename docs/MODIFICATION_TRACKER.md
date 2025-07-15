@@ -24,6 +24,15 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-15 13:40] - GUIDE RÉFÉRENCE ULTIME ÉCOSYSTÈME_2025-07-15_13-40
+**Fichier(s) concerné(s)** : docs/ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md
+**Type** : AJOUT
+**Description** : Guide de référence complet expliquant l'architecture Aliquanto3/Jilliac et sa reproduction dans Manalytics. Documentation technique complète avec diagrammes, exemples de code, workflow détaillé, et guide pour nouveaux développeurs. Couvre les 4 repositories GitHub, fonctions clés, comparaisons techniques, et points d'extension.
+**Justification** : Demande utilisateur pour documentation ultime permettant aux nouveaux arrivants de comprendre complètement l'écosystème MTG data analysis. Facilite onboarding et contributions futures.
+**Tests** : Tests manuels du pipeline
+**Rollback** : git revert du commit correspondant
+
+
 ### [2025-07-15 13:32] - INTÉGRATION MTGOArchetypeParser COMPLÈTE_2025-07-15_13-32
 **Fichier(s) concerné(s)** : src/python/classifier/archetype_engine.py
 **Type** : MODIFICATION
