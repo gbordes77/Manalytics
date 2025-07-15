@@ -1948,7 +1948,7 @@ SOLUTIONS :
 - `docs/ARCHITECTURE_QUICKREAD.md` - Architecture système
 - `docs/NEW_WORKFLOW_GUIDE.md` - Workflow de développement
 - `docs/MODIFICATION_TRACKER.md` - Traçabilité des modifications
-- `docs/ALIQUANTO3_TO_MANALYTICS_MAPPING.md` - Mapping complet R→Python
+- `docs/ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md` - Mapping complet R→Python (Chapitre 5)
 
 ### **Fichiers de Configuration**
 - `config/settings.py` - Configuration centrale

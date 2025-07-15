@@ -17,7 +17,7 @@
 - [ ] **IMPLEMENTATION_SUMMARY_v0.X.X.md** - Create new version summary
 - [ ] **API_REFERENCE_ADVANCED_ANALYTICS.md** - Update function documentation
 - [ ] **ORCHESTRATOR_INTEGRATION.md** - Update integration details
-- [ ] **🔥 ALIQUANTO3_TO_MANALYTICS_MAPPING.md** - Update R→Python transformation documentation
+- [ ] **🔥 ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md** - Update R→Python transformation documentation (Chapitre 5)
 
 #### **3. User & Developer Guides (IMPORTANT)**
 - [ ] **INSTRUCTIONS_NOUVELLE_EQUIPE.md** - Update onboarding instructions
@@ -71,7 +71,7 @@
 #### **2. Technical Foundation (45 minutes)**
 5. **ARCHITECTURE_QUICKREAD.md** - System design overview
 6. **IMPLEMENTATION_SUMMARY_v0.X.X.md** - Current implementation details
-7. **🔥 ALIQUANTO3_TO_MANALYTICS_MAPPING.md** - R→Python transformation guide
+7. **🔥 ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md** - R→Python transformation guide (Chapitre 5)
 
 #### **3. Setup & First Run (60 minutes)**
 8. **SETUP_DEV.md** - Development environment setup
@@ -102,6 +102,11 @@
     - **🔧 Implémentation** : Code prêt à l'emploi dans metagame_charts.py
 20. **ORCHESTRATOR_INTEGRATION.md** - Pipeline integration
 21. **🔥 ANALYSIS_TEMPLATE_SPECIFICATION.md** - Analysis template specifications
+22. **🎨 ARCHETYPE_COLOR_MANAGEMENT.md** - **CRITIQUE** Gestion complète des couleurs d'archétypes
+    - **⚠️ OBLIGATOIRE** : Système de couleurs/guildes pour classification
+    - **🎯 30 minutes** : Processus complet de détection et intégration
+    - **🔧 Code** : ColorIntegrationSystem dans archetype_engine.py
+    - **📊 Données** : color_overrides.json et guild_mapping.json
 
 #### **3. User Experience (1 hour)**
 22. **USER_GUIDE_ADVANCED_ANALYTICS.md** - Usage and interpretation
@@ -193,7 +198,7 @@
 - **Rushing the process** → Take time to understand properly
 - **🔥 Not understanding main-branch workflow** → Read NEW_WORKFLOW_GUIDE.md carefully
 - **🔥 Forgetting to update MODIFICATION_TRACKER.md** → Use scripts/add_tracker_entry.py
-- **🔥 Not understanding R→Python transformation** → Study ALIQUANTO3_TO_MANALYTICS_MAPPING.md
+- **🔥 Not understanding R→Python transformation** → Study ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md (Chapitre 5)
 
 ---
 
@@ -256,7 +261,7 @@ bash scripts/emergency_rollback.sh
 1. Update all documents in the checklist order
 2. **🔥 Update MODIFICATION_TRACKER.md with all changes**
 3. **🔥 Verify main-branch workflow compliance**
-4. **🔥 Update ALIQUANTO3_TO_MANALYTICS_MAPPING.md if needed**
+4. **🔥 Update ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md Chapitre 5 if needed**
 5. Verify all examples work
 6. Create comprehensive handoff summary
 7. Schedule handoff meeting

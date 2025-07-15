@@ -21,7 +21,7 @@
 - `docs/MODIFICATION_TRACKER.md` - **État des changements récents + rollback**
 - `README.md` - Version, fonctionnalités, état actuel
 - `HANDOFF_SUMMARY.md` - Statut de livraison actuel
-- `docs/ALIQUANTO3_TO_MANALYTICS_MAPPING.md` - **Mapping R→Python (18 fonctionnalités)**
+- `docs/ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md` - **Mapping R→Python (18 fonctionnalités) - Chapitre 5**
 
 ### 📊 Documentation Projet
 - `CHANGELOG.md` - Tous les changements récents
@@ -79,7 +79,7 @@
 4. `config/no_mock_policy.py` - **POLITIQUE ANTI-FAKE DATA (CRITIQUE)**
 
 ### 🏗️ Fondations Manalytics (90 min)
-1. `docs/ALIQUANTO3_TO_MANALYTICS_MAPPING.md` - **Contexte R→Python**
+1. `docs/ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md` - **Contexte R→Python (Chapitre 5)**
 2. `docs/ARCHITECTURE_QUICKREAD.md` - Design système
 3. `src/orchestrator.py` (lignes 1-50) - Point d'entrée principal
 4. `docs/IMPLEMENTATION_SUMMARY_v0.X.X.md` - Détails implémentation
@@ -145,11 +145,11 @@
 ### 🔄 Rollback des modifications récentes
 ```bash
 git revert a95eb9d  # Couleurs matchup matrix
-git revert 9fc7958  # Taille matchup matrix  
+git revert 9fc7958  # Taille matchup matrix
 git revert 87d4b37  # Titres + filtres MTGO
 ```
 
 ### 📞 Contacts & Ressources
 - Backup tag: `backup-auto-backup-20250714-0954`
 - Documentation tracking: `docs/MODIFICATION_TRACKER.md`
-- Tests: `python run_full_pipeline.py --help` 
+- Tests: `python run_full_pipeline.py --help`

@@ -21,7 +21,7 @@
 - [ ] **🎯 v0.3.5: What methods ensure consistency between bar charts and matchup matrix?**
 - [ ] **🎯 v0.3.5: How does the centralized ordering system work?**
 
-**🔗 Read**: [ROADMAP.md](ROADMAP.md) | [ALIQUANTO3_TO_MANALYTICS_MAPPING.md](ALIQUANTO3_TO_MANALYTICS_MAPPING.md) | **➡️ Next**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
+**🔗 Read**: [ROADMAP.md](ROADMAP.md) | [ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md](ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md) (Chapitre 5) | **➡️ Next**: [ARCHITECTURE_QUICKREAD.md](ARCHITECTURE_QUICKREAD.md)
 
 ---
 
@@ -128,7 +128,7 @@
 
 ### **🔥 Aliquanto3 Mapping Issues**
 - **Problem**: Don't understand the R → Python transformation
-- **Solution**: Read [ALIQUANTO3_TO_MANALYTICS_MAPPING.md](ALIQUANTO3_TO_MANALYTICS_MAPPING.md) completely
+- **Solution**: Read [ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md](ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md) Chapitre 5 completely
 - **Key Points**:
   - 18 R functionalities → Python modules (1:1 mapping)
   - Color-guild integration: "Prowess" → "Izzet Prowess"
