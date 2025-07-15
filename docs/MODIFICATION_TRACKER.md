@@ -24,6 +24,15 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-15 12:57] - Claude_2025-07-15_12-57
+**Fichier(s) concerné(s)** : MTGOFormatData/Formats/Pauper/Archetypes/graveyard.json,MTGOFormatData/Formats/Modern/Archetypes/TameshiBloom.json,MTGOFormatData/Formats/Modern/Archetypes/UWControl.json
+**Type** : MODIFICATION
+**Description** : Correction des 3 fichiers JSON corrompus - suppression virgules traînantes bloquant pipeline
+**Justification** : Pipeline totalement bloqué par 'Illegal trailing comma before end of array' - correction obligatoire pour rendre système fonctionnel
+**Tests** : Valider JSON avec python -m json.tool, tester imports src.orchestrator, lancer pipeline test
+**Rollback** : git revert du commit de correction
+
+
 ### [2025-07-14 14:45] - Claude_2025-07-14_14-45
 **Fichier(s) concerné(s)** : `src/python/visualizations/metagame_charts.py`, `src/python/visualizations/matchup_matrix.py`
 **Type** : CORRECTION MAJEURE - UNIFORMISATION COMPLÈTE
