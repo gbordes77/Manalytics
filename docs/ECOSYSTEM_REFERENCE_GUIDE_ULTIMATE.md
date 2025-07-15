@@ -106,16 +106,44 @@ Lien direct : [ArchetypeAnalyzer.cs](https://github.com/Badaro/MTGOArchetypePars
 **Fonctions principales** :
 ```csharp
 // Classification principale
-public ArchetypeMatch DetectArchetype(Deck deck, Format format)
+public ArchetypeMatch DetectArchetype(Deck deck, Format format) {
+    // 1. Test archétypes principaux
+    foreach (var archetype in format.Archetypes) {
+        if (EvaluateConditions(deck, archetype.Conditions)) {
+            // 2. Test variants
+            var variant = CheckVariants(deck, archetype);
+            if (variant != null) {
+                return new ArchetypeMatch {
+                    Name = $"{archetype.Name} - {variant.Name}",
+                    IncludeColorInName = variant.IncludeColorInName
+                };
+            }
+            return new ArchetypeMatch {
+                Name = archetype.Name,
+                IncludeColorInName = archetype.IncludeColorInName
+            };
+        }
+    }
 
-// Évaluation des conditions
-private bool EvaluateCondition(Deck deck, Condition condition)
+    // 3. Test fallbacks
+    return MatchFallbacks(deck, format.Fallbacks);
+}
 
-// Support des variants
-private VariantMatch CheckVariants(Deck deck, Archetype archetype)
+private bool EvaluateConditions(Deck deck, List<Condition> conditions) {
+    return conditions.All(condition => EvaluateCondition(deck, condition));
+}
 
-// Algorithme fallbacks
-private FallbackMatch MatchFallbacks(Deck deck, List<Fallback> fallbacks)
+private bool EvaluateCondition(Deck deck, Condition condition) {
+    switch (condition.Type) {
+        case "InMainboard":
+            return condition.Cards.All(card =>
+                deck.Mainboard.Any(c => c.Name == card));
+        case "TwoOrMoreInMainboard":
+            return condition.Cards.Count(card =>
+                deck.Mainboard.Any(c => c.Name == card)) >= 2;
+        // ... 10 autres types
+    }
+}
 ```
 
 **Types de conditions supportées** :
@@ -332,6 +360,24 @@ class ManalyticsOrchestrator:
 
 ## 🔄 **WORKFLOW DÉTAILLÉ ÉTAPE PAR ÉTAPE**
 
+### **🚨 AVERTISSEMENT CRITIQUE - DONNÉES 2025**
+> **⚠️ ATTENTION :** Manalytics utilise MTGODecklistCache comme git submodule local.
+> **Les données 2025 sont VIDE depuis juin 2025** car Badaro/Jilliac ont arrêté le scraping quotidien.
+>
+> **Conséquence :** Manalytics ne peut analyser que les données 2024 et avant.
+> **Solution :** Pour analyser 2025+, il faut implémenter le scraping direct ou obtenir les données d'ailleurs.
+
+### 🚨 RÈGLE ABSOLUE : Couverture minimale 1 an de données
+> **Obligation :** Manalytics doit garantir au minimum 1 an de données réelles de tournois (tous formats confondus).
+>
+> **Comportement automatique :**
+> 1. Vérification de la période couverte par les fichiers JSON locaux (MTGODecklistCache et data/reference).
+> 2. Si la période < 1 an, le système tente d'abord de mettre à jour le submodule MTGODecklistCache.
+> 3. Si ce n'est pas suffisant, il lance automatiquement le scraping direct (MTGO/Melee).
+> 4. Si la récupération échoue, le pipeline s'arrête et alerte l'utilisateur (erreur critique).
+>
+> **But :** Empêcher toute analyse sur des périodes trop courtes ou incomplètes, garantir la robustesse et la fiabilité des analyses.
+
 ### **Phase 1 : Collection de données**
 
 #### **Aliquanto3/Jilliac** :
@@ -349,15 +395,25 @@ class ManalyticsOrchestrator:
 
 #### **Manalytics** :
 ```python
-1. Utilisation directe MTGODecklistCache (git submodule)
-   └── Lecture des mêmes fichiers JSON
+1. LECTURE DONNÉES STATIQUES (⚠️ IMPORTANT : PAS DE SCRAPING DIRECT)
+   ├── MTGODecklistCache/ (git submodule local)
+   │   ├── Tournaments/mtgo.com/2024/ (données 2024 disponibles)
+   │   ├── Tournaments/mtgo.com/2025/ (données 2025 VIDE depuis juin 2025)
+   │   └── Tournaments/melee.gg/ (données papier)
+   └── Lecture fichiers JSON locaux via patterns :
+       f"MTGODecklistCache/Tournaments/*/{year}/{month}/*/*{format}*.json"
 
-2. Chargement optimisé avec cache
+2. PROBLÈME IDENTIFIÉ : Données 2025 manquantes
+   ├── MTGODecklistCache n'est plus maintenu activement
+   ├── Badaro/Jilliac ont arrêté le scraping quotidien
+   └── Résultat : Manalytics ne peut analyser que 2024 et avant
+
+3. Chargement optimisé avec cache local
    def load_tournament_data(self, format_name, start_date, end_date):
        cached_file = f"data_cache/{format_name}_{start_date}_{end_date}.pkl"
        if os.path.exists(cached_file):
            return pickle.load(open(cached_file, 'rb'))
-       # Sinon charge depuis les fichiers JSON
+       # Sinon charge depuis les fichiers JSON statiques (2024 uniquement)
 ```
 
 ### **Phase 2 : Classification des archétypes**
@@ -784,7 +840,7 @@ class MetagameChartsGenerator:
 
 | Composant | Aliquanto3/Jilliac | Manalytics | Notes |
 |-----------|-------------------|------------|-------|
-| **Data Collection** | C# (.NET) | Python | Même source (MTGODecklistCache) |
+| **Data Collection** | C# (.NET) scraping direct | Python lecture statique | ⚠️ DIFFÉRENCE CRUCIALE : Aliquanto3 scrape en direct, Manalytics lit cache statique |
 | **Classification** | C# MTGOArchetypeParser | Python ArchetypeEngine | Reproduction fidèle |
 | **Analytics** | R + ggplot2 | Python + Plotly | Équivalence fonctionnelle |
 | **Visualizations** | R + HTML | Python + HTML | Standards visuels identiques |
@@ -813,11 +869,12 @@ class MetagameChartsGenerator:
 4. Configuration manuelle
 
 # Workflow
-1. git pull MTGODecklistCache
-2. git pull MTGOFormatData
-3. MTGOArchetypeParser.exe console detect format=Modern
-4. Rscript analysis.R --format=Modern --start=2024-01-01
-5. Génération HTML manuelle
+1. MTGODecklistCache.Tools (C#) scrape sites en direct
+2. git pull MTGODecklistCache (données fraîches)
+3. git pull MTGOFormatData
+4. MTGOArchetypeParser.exe console detect format=Modern
+5. Rscript analysis.R --format=Modern --start=2024-01-01
+6. Génération HTML manuelle
 ```
 
 #### **Manalytics** :
@@ -827,9 +884,10 @@ class MetagameChartsGenerator:
 2. pip install -r requirements.txt
 
 # Workflow
-1. python3 src/orchestrator.py --format Modern --start-date 2025-01-01 --end-date 2025-01-31
-2. Génération automatique complète HTML + visualisations
-3. Ouverture automatique dans navigateur
+1. python3 src/orchestrator.py --format Modern --start-date 2024-01-01 --end-date 2024-01-31
+2. Lecture données statiques depuis MTGODecklistCache/ (2024 uniquement)
+3. Génération automatique complète HTML + visualisations
+4. Ouverture automatique dans navigateur
 ```
 
 ### **Fonctionnalités uniques à Manalytics**
@@ -888,8 +946,8 @@ pip install -r requirements.txt
 
 2. **Premier test** :
 ```bash
-# Analyse Modern dernière semaine
-python3 src/orchestrator.py --format Modern --start-date 2025-01-08 --end-date 2025-01-15
+# Analyse Modern 2024 (⚠️ 2025 non disponible)
+python3 src/orchestrator.py --format Modern --start-date 2024-01-08 --end-date 2024-01-15
 
 # Résultat automatique dans analysis_output/
 # Ouverture automatique dans navigateur
@@ -2087,3 +2145,32 @@ graph LR
 *Dernière mise à jour : 2025-01-14*
 *Enrichissement complet : Pipeline détaillé, troubleshooting exhaustif, mapping Aliquanto3 R→Python, outils de diagnostic*
 *Analyse basée sur l'exploration approfondie des repositories GitHub*
+
+### FAQ - Couverture minimale 1 an de données
+
+**Q : Que se passe-t-il si je lance une analyse et que je n'ai pas 1 an de données ?**
+
+- **Réponse :**
+    - Le pipeline vérifie automatiquement la période couverte par les fichiers JSON locaux.
+    - Si la période < 1 an, il tente d'abord de mettre à jour le submodule MTGODecklistCache.
+    - Si ce n'est pas suffisant, il lance le scraping direct (MTGO/Melee).
+    - Si la récupération échoue, le pipeline s'arrête et affiche une erreur critique.
+
+**Exemple de log/alerte :**
+```
+🚨 RÈGLE ABSOLUE VIOLÉE : Pas assez de données!
+   - Données disponibles : 2 fichiers
+   - Période couverte : None à None
+   - Minimum requis : 1 an (depuis 2024-07-15)
+🚀 Lancement automatique du scraping pour récupérer les données manquantes...
+❌ Erreur lors du scraping direct : No module named 'src'
+Exception: Impossible de récupérer les données manquantes!
+```
+
+**Q : Puis-je forcer l'analyse même si la règle n'est pas respectée ?**
+- **Non.** Le pipeline s'arrête pour garantir la fiabilité des résultats. Il faut d'abord compléter la couverture de données.
+
+**Q : Comment corriger ce problème ?**
+- Vérifier la connexion internet et les accès scraping.
+- Mettre à jour le submodule MTGODecklistCache manuellement si besoin.
+- Corriger les éventuelles erreurs de scraping (voir logs détaillés).

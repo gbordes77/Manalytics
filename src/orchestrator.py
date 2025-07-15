@@ -181,6 +181,12 @@ class ManalyticsOrchestrator:
 
     def _load_real_tournament_data(self):
         """Load real tournament data from MTGODecklistCache with intelligent caching"""
+
+        # 🚨 RÈGLE ABSOLUE : MINIMUM 1 AN DE DONNÉES DISPONIBLES
+        self._enforce_minimum_data_requirement()
+
+        self.logger.info("🔍 Loading tournament data from MTGODecklistCache...")
+
         print(f"\n🔍 Searching for {self.format.upper()} tournaments...")
 
         # Dynamic search patterns (like the old system)
@@ -240,6 +246,271 @@ class ManalyticsOrchestrator:
         )
 
         return df
+
+    def _enforce_minimum_data_requirement(self):
+        """🚨 RÈGLE ABSOLUE : Vérifie qu'on a au minimum 1 an de données disponibles
+        Si pas assez de données → lance automatiquement le scraping
+
+        RÈGLE ABSOLUE CACHE : JAMAIS EFFACER LE CACHE EXISTANT
+        - Tous les fichiers existants doivent être préservés
+        - Seulement AJOUTER de nouvelles données
+        - Aucune suppression, remplacement ou écrasement autorisé
+        """
+        import glob
+        import os
+        import subprocess
+        from datetime import datetime, timedelta
+
+        self.logger.info("🔍 Vérification règle absolue : minimum 1 an de données...")
+        self.logger.info("🚨 RÈGLE ABSOLUE CACHE : JAMAIS EFFACER LE CACHE EXISTANT")
+        self.logger.info("📋 Seulement AJOUTER de nouvelles données")
+        self.logger.info("🚫 Aucune suppression, remplacement ou écrasement autorisé")
+
+        # Vérifier le cache existant AVANT toute opération
+        existing_cache_files = self._count_existing_cache_files()
+        self.logger.info(
+            f"📁 Cache existant à préserver : {existing_cache_files} fichiers"
+        )
+
+        # Calculer la date limite (1 an en arrière)
+        today = datetime.now()
+        one_year_ago = today - timedelta(days=365)
+
+        # Vérifier les données disponibles
+        available_data = self._check_available_data_coverage()
+
+        # Vérifier si on a au moins 1 an de données
+        has_minimum_data = False
+        if available_data["total_files"] > 0:
+            earliest_date = available_data["earliest_date"]
+            if earliest_date and earliest_date <= one_year_ago:
+                has_minimum_data = True
+
+        if not has_minimum_data:
+            self.logger.warning(f"🚨 RÈGLE ABSOLUE VIOLÉE : Pas assez de données!")
+            self.logger.warning(
+                f"   - Données disponibles : {available_data['total_files']} fichiers"
+            )
+            self.logger.warning(
+                f"   - Période couverte : {available_data['earliest_date']} à {available_data['latest_date']}"
+            )
+            self.logger.warning(
+                f"   - Minimum requis : 1 an (depuis {one_year_ago.strftime('%Y-%m-%d')})"
+            )
+
+            # Lancer automatiquement le scraping (AJOUT SEULEMENT)
+            self.logger.info(
+                "🚀 Lancement automatique du scraping pour récupérer les données manquantes..."
+            )
+            self.logger.info("📋 MODE AJOUT SEULEMENT : Cache existant préservé")
+            self._launch_emergency_scraping()
+
+            # Vérifier à nouveau après scraping
+            self.logger.info("🔍 Vérification post-scraping...")
+            available_data = self._check_available_data_coverage()
+
+            # Vérifier que le cache a été préservé
+            final_cache_files = self._count_existing_cache_files()
+            new_files = final_cache_files - existing_cache_files
+            self.logger.info(
+                f"✅ RÈGLE CACHE RESPECTÉE : {new_files} nouveaux fichiers ajoutés, {existing_cache_files} préservés"
+            )
+
+            if available_data["total_files"] == 0:
+                raise Exception(
+                    "🚨 CRITIQUE : Impossible de récupérer les données après scraping automatique!"
+                )
+        else:
+            self.logger.info(
+                f"✅ Règle absolue respectée : {available_data['total_files']} fichiers disponibles"
+            )
+            self.logger.info(
+                f"   - Période : {available_data['earliest_date']} à {available_data['latest_date']}"
+            )
+            self.logger.info(
+                f"   - Cache préservé : {existing_cache_files} fichiers existants"
+            )
+
+    def _count_existing_cache_files(self):
+        """Compte tous les fichiers existants dans le cache à préserver"""
+        import glob
+
+        cache_patterns = [
+            "data/raw/mtgo/**/*",
+            "data/raw/melee/**/*",
+            "data/raw/topdeck/**/*",
+            "data/processed/**/*",
+            "Analyses/**/*",
+            "MTGODecklistCache/**/*",
+        ]
+
+        total_files = 0
+        for pattern in cache_patterns:
+            files = glob.glob(pattern, recursive=True)
+            total_files += len(files)
+
+        return total_files
+
+    def _check_available_data_coverage(self):
+        """Vérifie la couverture des données disponibles"""
+        from datetime import datetime
+
+        # Chercher tous les fichiers JSON de tournois
+        patterns = [
+            "../MTGODecklistCache/Tournaments/*/*/*/*.json",
+            "../data/reference/Tournaments/*/*/*/*.json",
+        ]
+
+        all_files = []
+        for pattern in patterns:
+            all_files.extend(glob.glob(pattern))
+
+        if not all_files:
+            return {"total_files": 0, "earliest_date": None, "latest_date": None}
+
+        # Extraire les dates des fichiers
+        dates = []
+        for file_path in all_files:
+            date = self._extract_date_from_filepath(file_path)
+            if date:
+                dates.append(date)
+
+        if not dates:
+            return {
+                "total_files": len(all_files),
+                "earliest_date": None,
+                "latest_date": None,
+            }
+
+        return {
+            "total_files": len(all_files),
+            "earliest_date": min(dates),
+            "latest_date": max(dates),
+        }
+
+    def _extract_date_from_filepath(self, file_path):
+        """Extrait la date d'un chemin de fichier"""
+        import re
+        from datetime import datetime
+
+        # Pattern pour extraire YYYY/MM/DD du chemin
+        date_pattern = r"/(\d{4})/(\d{2})/(\d{2})/"
+        match = re.search(date_pattern, file_path)
+
+        if match:
+            year, month, day = match.groups()
+            try:
+                return datetime(int(year), int(month), int(day)).date()
+            except:
+                pass
+
+        return None
+
+    def _launch_emergency_scraping(self):
+        """Lance le scraping d'urgence pour récupérer les données manquantes
+
+        RÈGLE ABSOLUE CACHE : JAMAIS EFFACER LE CACHE EXISTANT
+        - Tous les fichiers existants doivent être préservés
+        - Seulement AJOUTER de nouvelles données
+        - Aucune suppression, remplacement ou écrasement autorisé
+        """
+        import subprocess
+
+        self.logger.info("🚀 Lancement scraping d'urgence...")
+        self.logger.info("🚨 RÈGLE ABSOLUE CACHE : MODE AJOUT SEULEMENT")
+        self.logger.info(
+            "📋 Cache existant préservé, seulement nouvelles données ajoutées"
+        )
+
+        # Vérifier le cache avant scraping
+        cache_before = self._count_existing_cache_files()
+        self.logger.info(
+            f"📁 Cache avant scraping : {cache_before} fichiers à préserver"
+        )
+
+        try:
+            # Mettre à jour le submodule MTGODecklistCache (AJOUT SEULEMENT)
+            self.logger.info("📥 Mise à jour MTGODecklistCache (AJOUT SEULEMENT)...")
+            subprocess.run(
+                ["git", "submodule", "update", "--remote", "MTGODecklistCache"],
+                check=True,
+                capture_output=True,
+                text=True,
+                cwd="../",
+            )
+
+            # Si pas assez de données, lancer le scraping direct (AJOUT SEULEMENT)
+            available_data = self._check_available_data_coverage()
+            if available_data["total_files"] < 100:  # Seuil arbitraire
+                self.logger.info("📡 Lancement scraping direct (AJOUT SEULEMENT)...")
+                self._launch_direct_scraping()
+
+        except subprocess.CalledProcessError as e:
+            self.logger.error(f"❌ Erreur lors de la mise à jour : {e}")
+            self.logger.info(
+                "📡 Lancement scraping direct de secours (AJOUT SEULEMENT)..."
+            )
+            self._launch_direct_scraping()
+
+        # Vérifier que le cache a été préservé
+        cache_after = self._count_existing_cache_files()
+        new_files = cache_after - cache_before
+        self.logger.info(
+            f"✅ RÈGLE CACHE RESPECTÉE : {new_files} nouveaux fichiers ajoutés"
+        )
+        self.logger.info(
+            f"📁 Cache final : {cache_after} fichiers ({cache_before} préservés + {new_files} ajoutés)"
+        )
+
+    def _launch_direct_scraping(self):
+        """Lance le scraping direct des sites MTG
+
+        RÈGLE ABSOLUE CACHE : JAMAIS EFFACER LE CACHE EXISTANT
+        - Tous les fichiers existants doivent être préservés
+        - Seulement AJOUTER de nouvelles données
+        - Aucune suppression, remplacement ou écrasement autorisé
+        """
+        self.logger.info("📡 Scraping direct des sites MTG...")
+        self.logger.info("🚨 RÈGLE ABSOLUE CACHE : MODE AJOUT SEULEMENT")
+        self.logger.info(
+            "📋 Cache existant préservé, seulement nouvelles données ajoutées"
+        )
+
+        # Vérifier le cache avant scraping
+        cache_before = self._count_existing_cache_files()
+        self.logger.info(
+            f"📁 Cache avant scraping direct : {cache_before} fichiers à préserver"
+        )
+
+        # Importer et lancer les scrapers (AJOUT SEULEMENT)
+        try:
+            from src.python.scraper.melee_scraper import MeleeScraper
+            from src.python.scraper.mtgo_scraper import MTGOScraper
+
+            # Scraping MTGO (AJOUT SEULEMENT)
+            self.logger.info("🌐 Scraping MTGO.com (AJOUT SEULEMENT)...")
+            mtgo_scraper = MTGOScraper()
+            mtgo_scraper.scrape_recent_tournaments()
+
+            # Scraping Melee (AJOUT SEULEMENT)
+            self.logger.info("🌐 Scraping Melee.gg (AJOUT SEULEMENT)...")
+            melee_scraper = MeleeScraper()
+            melee_scraper.scrape_recent_tournaments()
+
+            # Vérifier que le cache a été préservé
+            cache_after = self._count_existing_cache_files()
+            new_files = cache_after - cache_before
+            self.logger.info(
+                f"✅ RÈGLE CACHE RESPECTÉE : {new_files} nouveaux fichiers ajoutés"
+            )
+            self.logger.info(
+                f"📁 Cache final : {cache_after} fichiers ({cache_before} préservés + {new_files} ajoutés)"
+            )
+            self.logger.info("✅ Scraping d'urgence terminé (AJOUT SEULEMENT)")
+
+        except Exception as e:
+            self.logger.error(f"❌ Erreur lors du scraping direct : {e}")
+            raise Exception("Impossible de récupérer les données manquantes!")
 
     def _generate_search_patterns(self):
         """Generate search patterns for tournament files (like the old system)"""
