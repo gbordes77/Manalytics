@@ -216,7 +216,9 @@ class ManalyticsOrchestrator:
                 continue
 
         if not all_decks:
-            self.logger.error(f"No decks found for {self.format} in the specified period")
+            self.logger.error(
+                f"No decks found for {self.format} in the specified period"
+            )
             return pd.DataFrame()
 
         # Create DataFrame with the same structure as the old system
@@ -232,7 +234,9 @@ class ManalyticsOrchestrator:
 
         self.logger.info(f"\n📊 DATA LOADED:")
         self.logger.info(f"🏆 Tournaments: {tournaments_loaded}")
-        self.logger.info(f"🎯 Decks: {len(df)} (removed {duplicates_removed} duplicates)")
+        self.logger.info(
+            f"🎯 Decks: {len(df)} (removed {duplicates_removed} duplicates)"
+        )
         self.logger.info(
             f"📅 Actual period: {df['tournament_date'].min().strftime('%Y-%m-%d')} to {df['tournament_date'].max().strftime('%Y-%m-%d')}"
         )
@@ -287,23 +291,25 @@ class ManalyticsOrchestrator:
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
                 # Clean up malformed JSON - more robust approach
-                content = content.replace('}]', '}').replace('}s', '}').replace('"}\n}', '"}')
-                
+                content = (
+                    content.replace("}]", "}").replace("}s", "}").replace('"}\n}', '"}')
+                )
+
                 # Find the end of the main JSON structure
                 brace_count = 0
                 json_end = -1
                 for i, char in enumerate(content):
-                    if char == '{':
+                    if char == "{":
                         brace_count += 1
-                    elif char == '}':
+                    elif char == "}":
                         brace_count -= 1
                         if brace_count == 0:
                             json_end = i + 1
                             break
-                
+
                 if json_end > 0:
                     content = content[:json_end]
-                
+
                 tournament_data = json.loads(content)
         except json.JSONDecodeError as e:
             logger.warning(f"Invalid JSON in {file_path}: {e}")
@@ -349,7 +355,7 @@ class ManalyticsOrchestrator:
 
         # Traiter les decks - gérer différents formats
         decks = []
-        
+
         # Format 1: Decks/decks dans les données
         if "Decks" in tournament_data:
             decks = tournament_data["Decks"]
@@ -366,7 +372,7 @@ class ManalyticsOrchestrator:
                     deck_with_player["Wins"] = standing.get("Wins", 0)
                     deck_with_player["Losses"] = standing.get("Losses", 0)
                     decks.append(deck_with_player)
-        
+
         processed_decks = []
         for deck in decks:
             deck_data = self._process_deck(
@@ -526,16 +532,23 @@ class ManalyticsOrchestrator:
                 "Sideboard": [],  # No sideboard for now
             }
 
-            # Use ArchetypeEngine for precise archetype detection
-            archetype_name = self.archetype_engine.classify_deck(deck_data, self.format)
+            # Use ArchetypeEngine for precise archetype detection with metadata
+            classification_result = self.archetype_engine.classify_deck_with_metadata(deck_data, self.format)
 
-            if archetype_name and archetype_name != "Unknown":
-                # Apply color integration for IncludeColorInName archetypes
-                archetype_with_colors = self._apply_color_integration_mtgoformatdata(
-                    archetype_name, mainboard
-                )
+            if classification_result["archetype_name"] and classification_result["archetype_name"] != "Unknown":
+                archetype_name = classification_result["archetype_name"]
+                include_color = classification_result["include_color_in_name"]
+
+                # Apply color integration ONLY if IncludeColorInName is True
+                if include_color:
+                    archetype_with_colors = self._apply_color_integration_mtgoformatdata(
+                        archetype_name, mainboard
+                    )
+                else:
+                    archetype_with_colors = archetype_name
+
                 self.logger.debug(
-                    f"ArchetypeEngine classification: {archetype_name} -> {archetype_with_colors}"
+                    f"ArchetypeEngine classification: {archetype_name} (IncludeColorInName: {include_color}) -> {archetype_with_colors}"
                 )
                 return archetype_with_colors
 
@@ -571,17 +584,18 @@ class ManalyticsOrchestrator:
             return self._classify_by_colors_fallback(mainboard)
 
     def _apply_color_integration_mtgoformatdata(self, archetype_name, mainboard):
-        """Apply color integration for MTGOFormatData archetypes with IncludeColorInName"""
+        """
+        Apply color integration for MTGOFormatData archetypes with IncludeColorInName=True
+        Based on Aliquanto3 R-Meta-Analysis logic from 04-Metagame_Graph_Generation.R
+        """
         try:
             # Analyze deck colors
             color_analysis = self.color_detector.analyze_decklist_colors(mainboard)
             guild_name = color_analysis.get("guild_name", "")
 
-            # Check if this archetype should include color in name
-            # For now, assume all MTGOFormatData archetypes should include colors
-            # (Most have IncludeColorInName: true)
             if guild_name and guild_name != "Colorless" and guild_name != "Unknown":
-                return f"{guild_name} {archetype_name}"
+                # Apply Aliquanto3 R logic: smart integration instead of simple concatenation
+                return self._apply_aliquanto3_color_rules(archetype_name, guild_name)
             else:
                 return archetype_name
 

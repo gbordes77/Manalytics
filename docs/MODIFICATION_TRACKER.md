@@ -24,6 +24,15 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-15 13:22] - Claude_2025-07-15_13-22
+**Fichier(s) concerné(s)** : src/python/classifier/archetype_engine.py,src/orchestrator.py
+**Type** : MODIFICATION
+**Description** : Intégration complète MTGOFormatData avec IncludeColorInName - reproduction logique Aliquanto3 R-Meta-Analysis
+**Justification** : Architecture Jilliac nécessite intégration MTGOArchetypeParser + MTGOFormatData pour classification archétypes niveau industrie. Pipeline était en mode 'fait maison' sans règles expertes Badaro.
+**Tests** : Pipeline complet, validation GriefBlade reste 'GriefBlade' (IncludeColorInName=false), Burn devient 'Rakdos Burn' (IncludeColorInName=true)
+**Rollback** : git revert du commit d'intégration
+
+
 ### [2025-07-15 12:57] - Claude_2025-07-15_12-57
 **Fichier(s) concerné(s)** : MTGOFormatData/Formats/Pauper/Archetypes/graveyard.json,MTGOFormatData/Formats/Modern/Archetypes/TameshiBloom.json,MTGOFormatData/Formats/Modern/Archetypes/UWControl.json
 **Type** : MODIFICATION

@@ -162,6 +162,20 @@ class ArchetypeEngine:
 
     def classify_deck(self, deck: Dict, format_name: str) -> str:
         """Classifie un deck selon les règles d'archétypes"""
+        result = self.classify_deck_with_metadata(deck, format_name)
+        return result["archetype_name"]
+
+    def classify_deck_with_metadata(self, deck: Dict, format_name: str) -> Dict[str, Any]:
+        """
+        Classifie un deck selon les règles d'archétypes avec métadonnées complètes
+        
+        Returns:
+            Dict contenant:
+            - archetype_name: Nom de l'archétype
+            - include_color_in_name: Boolean du champ IncludeColorInName
+            - archetype_data: Données complètes de l'archétype
+            - classification_type: "archetype" ou "fallback"
+        """
         try:
             format_name = format_name.lower()
 
@@ -170,21 +184,31 @@ class ArchetypeEngine:
             sideboard = self.extract_cardlist(deck.get("Sideboard", []))
 
             # Essayer d'abord les archétypes principaux
-            archetype = self.match_archetypes(mainboard, sideboard, format_name)
-            if archetype:
-                return archetype
+            archetype_result = self.match_archetypes_with_metadata(mainboard, sideboard, format_name)
+            if archetype_result:
+                return archetype_result
 
             # Essayer les fallbacks
-            fallback = self.match_fallbacks(mainboard, sideboard, format_name)
-            if fallback:
-                return fallback
+            fallback_result = self.match_fallbacks_with_metadata(mainboard, sideboard, format_name)
+            if fallback_result:
+                return fallback_result
 
             # Aucune correspondance trouvée
-            return "Unknown"
+            return {
+                "archetype_name": "Unknown",
+                "include_color_in_name": False,
+                "archetype_data": None,
+                "classification_type": "unknown"
+            }
 
         except Exception as e:
             self.logger.error(f"Failed to classify deck: {e}")
-            return "Unknown"
+            return {
+                "archetype_name": "Unknown", 
+                "include_color_in_name": False,
+                "archetype_data": None,
+                "classification_type": "error"
+            }
 
     def extract_cardlist(self, cards: List[Dict]) -> Dict[str, int]:
         """Extrait une liste de cartes vers un dictionnaire nom -> quantité"""
@@ -213,11 +237,23 @@ class ArchetypeEngine:
         self, mainboard: Dict[str, int], sideboard: Dict[str, int], format_name: str
     ) -> Optional[str]:
         """Essaie de faire correspondre avec les archétypes principaux"""
+        result = self.match_archetypes_with_metadata(mainboard, sideboard, format_name)
+        return result["archetype_name"] if result else None
+
+    def match_archetypes_with_metadata(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], format_name: str
+    ) -> Optional[Dict[str, Any]]:
+        """Essaie de faire correspondre avec les archétypes principaux (avec métadonnées)"""
         archetypes = self.archetypes.get(format_name, {})
 
         for archetype_name, archetype_data in archetypes.items():
             if self.matches_archetype_conditions(mainboard, sideboard, archetype_data):
-                return archetype_name
+                return {
+                    "archetype_name": archetype_name,
+                    "include_color_in_name": archetype_data.get("IncludeColorInName", False),
+                    "archetype_data": archetype_data,
+                    "classification_type": "archetype"
+                }
 
         return None
 
@@ -225,11 +261,23 @@ class ArchetypeEngine:
         self, mainboard: Dict[str, int], sideboard: Dict[str, int], format_name: str
     ) -> Optional[str]:
         """Essaie de faire correspondre avec les fallbacks"""
+        result = self.match_fallbacks_with_metadata(mainboard, sideboard, format_name)
+        return result["archetype_name"] if result else None
+
+    def match_fallbacks_with_metadata(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], format_name: str
+    ) -> Optional[Dict[str, Any]]:
+        """Essaie de faire correspondre avec les fallbacks (avec métadonnées)"""
         fallbacks = self.fallbacks.get(format_name, {})
 
         for fallback_name, fallback_data in fallbacks.items():
             if self.matches_archetype_conditions(mainboard, sideboard, fallback_data):
-                return fallback_name
+                return {
+                    "archetype_name": fallback_name,
+                    "include_color_in_name": fallback_data.get("IncludeColorInName", True),  # Fallbacks usually include color
+                    "archetype_data": fallback_data,
+                    "classification_type": "fallback"
+                }
 
         return None
 
