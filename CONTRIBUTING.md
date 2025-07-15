@@ -46,4 +46,12 @@ footer
 - All tests passing
 - Documentation updated
 - No linting errors
-- Performance benchmarked 
+- Performance benchmarked
+
+## Règles de style et flake8
+
+- **flake8** est utilisé pour garantir la qualité du code Python.
+- **Obligatoire** : Corriger toutes les erreurs sûres (ex : E231, espace manquant après les deux-points).
+- **Optionnel** : Les lignes longues (E501) NE SONT PAS BLOQUANTES pour les scripts/outils, afin de préserver la lisibilité et la robustesse.
+- Si un hook bloque un commit pour une ligne longue ou une règle non critique, corrigez uniquement si cela ne nuit pas à la lisibilité ou à la logique du script.
+- Pour les scripts/outils, la priorité est la robustesse et la clarté, pas la conformité stricte à E501.
