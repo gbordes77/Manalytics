@@ -18,6 +18,7 @@
 ## 📚 1. FICHIERS CRITIQUES (OBLIGATOIRE - Dans l'ordre)
 
 ### 🔥 Urgence Absolue
+- `PROBLEMATIQUE_PRIORITAIRE_A_REGLE.md` - **PROBLÈME CRITIQUE d'intégration fbettega**
 - `docs/MODIFICATION_TRACKER.md` - **État des changements récents + rollback**
 - `README.md` - Version, fonctionnalités, état actuel
 - `HANDOFF_SUMMARY.md` - Statut de livraison actuel
@@ -73,10 +74,11 @@
 ## 🎯 Phase 1: Contexte Critique (Jour 1 - 3h)
 
 ### 🔥 URGENT - Compréhension Projet (45 min)
-1. `README.md` - Vue d'ensemble du projet
-2. `docs/MODIFICATION_TRACKER.md` - **DERNIERS CHANGEMENTS + ROLLBACK**
-3. `HANDOFF_SUMMARY.md` - Ce qui vient d'être livré
-4. `config/no_mock_policy.py` - **POLITIQUE ANTI-FAKE DATA (CRITIQUE)**
+1. `PROBLEMATIQUE_PRIORITAIRE_A_REGLE.md` - **PROBLÈME CRITIQUE d'intégration fbettega**
+2. `README.md` - Vue d'ensemble du projet
+3. `docs/MODIFICATION_TRACKER.md` - **DERNIERS CHANGEMENTS + ROLLBACK**
+4. `HANDOFF_SUMMARY.md` - Ce qui vient d'être livré
+5. `config/no_mock_policy.py` - **POLITIQUE ANTI-FAKE DATA (CRITIQUE)**
 
 ### 🏗️ Fondations Manalytics (90 min)
 1. `docs/ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md` - **Contexte R→Python (Chapitre 5)**
