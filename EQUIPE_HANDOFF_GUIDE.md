@@ -15,6 +15,71 @@
 
 ---
 
+## 🚨 DÉCISION STRATÉGIQUE CRITIQUE : R vs PYTHON
+
+### 📊 ANALYSE DU WORKFLOW ALIQUANTO3
+Après analyse approfondie du pipeline établi dans l'écosystème MTG :
+
+```
+Step 1: Data Collection → Step 2: Data Treatment → Step 3: R-Meta-Analysis
+```
+
+### ✅ RECOMMANDATION : GARDER R COMME MOTEUR PRINCIPAL
+
+**Arguments techniques décisifs :**
+
+1. **🔄 CONFORMITÉ PIPELINE ÉTABLI**
+   - `Jiliac/R-Meta-Analysis` est le standard communautaire MTG
+   - Tout l'écosystème utilise cette approche R
+   - Respecte les processus validés par la communauté
+
+2. **💻 CODE R DÉJÀ PRÉSENT ET FONCTIONNEL**
+   ```
+   src/r/analysis/
+   ├── run_analysis.R (375 lignes - reproduction Jiliac)
+   ├── metagame_analysis.R (287 lignes - calculs métagame)
+   ```
+
+3. **⚠️ RISQUES CONVERSION PYTHON**
+   - Perte de précision dans calculs statistiques
+   - Différences subtiles dans algorithmes de confiance
+   - Incompatibilité avec outils communautaires MTG
+   - Introduction de bugs lors de la traduction
+
+4. **🎯 AVANTAGES TECHNIQUES R**
+   - Natif pour statistiques (intervalles de confiance)
+   - Packages spécialisés analyse de données
+   - Reproductibilité garantie avec écosystème R
+   - Maintenance alignée avec Aliquanto3
+
+### 🔄 STRATÉGIE HYBRIDE RECOMMANDÉE
+
+**Option 1 : R Core + Python Interface**
+```python
+def generate_analysis():
+    # 1. Python orchestre et récupère données
+    data = scrape_and_prepare_data()
+
+    # 2. R fait l'analyse statistique (CŒUR)
+    subprocess.run(['Rscript', 'src/r/analysis/run_analysis.R'])
+
+    # 3. Python fait visualisation web
+    create_html_reports()
+```
+
+**Option 2 : Améliorer R existant**
+- Garder `src/r/analysis/` comme moteur principal
+- Ajouter packages R modernes (`tidyverse`, `plotly`)
+- Interfacer avec Python pour orchestration
+
+### 📝 ACTION POUR L'ÉQUIPE SUIVANTE
+- **NE PAS** convertir le code R en Python
+- **AMÉLIORER** le code R existant dans `src/r/analysis/`
+- **MAINTENIR** la compatibilité avec R-Meta-Analysis
+- **TESTER** l'intégration hybride R/Python
+
+---
+
 ## 📚 1. FICHIERS CRITIQUES (OBLIGATOIRE - Dans l'ordre)
 
 ### 🔥 Urgence Absolue
@@ -80,7 +145,7 @@
 4. `HANDOFF_SUMMARY.md` - Ce qui vient d'être livré
 5. `config/no_mock_policy.py` - **POLITIQUE ANTI-FAKE DATA (CRITIQUE)**
 
-### 🏗️ Fondations Manalytics (90 min)
+### ��️ Fondations Manalytics (90 min)
 1. `docs/ECOSYSTEM_REFERENCE_GUIDE_ULTIMATE.md` - **Contexte R→Python (Chapitre 5)**
 2. `docs/ARCHITECTURE_QUICKREAD.md` - Design système
 3. `src/orchestrator.py` (lignes 1-50) - Point d'entrée principal
