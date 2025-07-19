@@ -10,7 +10,7 @@ import logging
 import os
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 import pandas as pd
 
@@ -86,14 +86,67 @@ class ManalyticsOrchestrator:
             self.start_date = start_date
             self.end_date = end_date
 
+            # Load tournament data
+            self.logger.info("🔍 Loading tournament data...")
+
+            # 🚀 INTÉGRATION FBETTEGA PRIORITAIRE
+            fbettega_data = await self._fetch_fbettega_tournaments()
+
+            # Load existing data
+            df = self._load_real_tournament_data()
+
+            # Merge fbettega data if available
+            if fbettega_data is not None and len(fbettega_data) > 0:
+                self.logger.info(
+                    f"🚀 Merging {len(fbettega_data)} fbettega decks with existing data"
+                )
+                df = pd.concat([df, fbettega_data], ignore_index=True)
+
+                # Remove duplicates after merge
+                initial_count = len(df)
+                df = df.drop_duplicates(
+                    subset=["player_name", "tournament_id", "tournament_date"],
+                    keep="first",
+                )
+                duplicates_removed = initial_count - len(df)
+                self.logger.info(
+                    f"📊 After fbettega merge: {len(df)} decks ({duplicates_removed} duplicates removed)"
+                )
+            else:
+                self.logger.info(
+                    "📋 No fbettega data available, using existing MTGODecklistCache only"
+                )
+
+            # Filter out Leagues 5-0 from main analysis (they go to dedicated Leagues page)
+            # Patterns to exclude: League 5-0, fbettega.gg (which are often leagues), and any 5-0 mentions
+            leagues_patterns = ["League 5-0", "5-0", "fbettega.gg"]
+            main_df = df.copy()
+
+            for pattern in leagues_patterns:
+                main_df = main_df[
+                    ~main_df["tournament_source"].str.contains(
+                        pattern, na=False, case=False
+                    )
+                ]
+
+            leagues_count = len(df) - len(main_df)
+            if leagues_count > 0:
+                self.logger.info(
+                    f"📋 Filtered out {leagues_count} League/5-0 decks for dedicated Leagues analysis"
+                )
+
             # 1. Generate visualizations
             self.logger.info("🎨 Generating visualizations...")
-            visualization_report = await self.generate_visualizations(str(output_dir))
-
-            # 2. Final summary
-            self.logger.info(
-                f"✅ Pipeline completed successfully in {analysis_folder}!"
+            visualization_report = await self.generate_visualizations(
+                str(output_dir), main_df
             )
+
+            # 2. Generate Leagues analysis with full df (includes Leagues)
+            self.logger.info("🏆 Generating Leagues analysis...")
+            leagues_path = self.generate_leagues_analysis(str(output_dir), df)
+
+            # 3. Final summary
+            self.logger.info(f"✅ Pipeline completed successfully in {analysis_folder}!")
 
             return {
                 "analysis_folder": analysis_folder,
@@ -108,16 +161,63 @@ class ManalyticsOrchestrator:
             self.logger.error(f"❌ Pipeline error: {e}")
             raise
 
-    async def generate_visualizations(self, output_dir: str):
+    async def generate_visualizations(self, output_dir: str, df: pd.DataFrame):
         """Generate all visualizations with real tournament data"""
         try:
             # Create visualizations folder
             viz_dir = Path(output_dir) / "visualizations"
             viz_dir.mkdir(exist_ok=True)
 
-            # Load real tournament data from cache
-            self.logger.info("🔍 Loading tournament data from MTGODecklistCache...")
+            # Load real tournament data from cache + fbettega integration
+            self.logger.info(
+                "🔍 Loading tournament data from MTGODecklistCache + Fbettega..."
+            )
+
+            # 🚀 INTÉGRATION FBETTEGA PRIORITAIRE
+            fbettega_data = await self._fetch_fbettega_tournaments()
+
+            # Load existing data
             df = self._load_real_tournament_data()
+
+            # Merge fbettega data if available
+            if fbettega_data is not None and len(fbettega_data) > 0:
+                self.logger.info(
+                    f"🚀 Merging {len(fbettega_data)} fbettega decks with existing data"
+                )
+                df = pd.concat([df, fbettega_data], ignore_index=True)
+
+                # Remove duplicates after merge
+                initial_count = len(df)
+                df = df.drop_duplicates(
+                    subset=["player_name", "tournament_id", "tournament_date"],
+                    keep="first",
+                )
+                duplicates_removed = initial_count - len(df)
+                self.logger.info(
+                    f"📊 After fbettega merge: {len(df)} decks ({duplicates_removed} duplicates removed)"
+                )
+            else:
+                self.logger.info(
+                    "📋 No fbettega data available, using existing MTGODecklistCache only"
+                )
+
+            # Filter out Leagues 5-0 from main analysis (they go to dedicated Leagues page)
+            # Patterns to exclude: League 5-0, fbettega.gg (which are often leagues), and any 5-0 mentions
+            leagues_patterns = ["League 5-0", "5-0", "fbettega.gg"]
+            main_df = df.copy()
+
+            for pattern in leagues_patterns:
+                main_df = main_df[
+                    ~main_df["tournament_source"].str.contains(
+                        pattern, na=False, case=False
+                    )
+                ]
+
+            leagues_count = len(df) - len(main_df)
+            if leagues_count > 0:
+                self.logger.info(
+                    f"📋 Filtered out {leagues_count} League/5-0 decks for dedicated Leagues analysis"
+                )
 
             # 0. Advanced statistical analysis
             self.logger.info("🔬 Performing advanced statistical analysis...")
@@ -159,9 +259,11 @@ class ManalyticsOrchestrator:
             self.logger.info("👥 Generating players statistics...")
             players_path = self.generate_players_stats(output_dir, df)
 
-            # 4.6. Generate MTGO analysis
-            self.logger.info("🎯 Generating MTGO analysis...")
-            mtgo_path = self.generate_mtgo_analysis(output_dir, df)
+            # 4.6. Generate Leagues analysis
+            self.logger.info("🏆 Generating Leagues analysis...")
+            leagues_path = self.generate_leagues_analysis(
+                output_dir, df
+            )  # df complet avec Leagues
 
             # 5. Summary
             total_files = len(chart_files) + len(matrix_report.get("files", [])) + 1
@@ -490,30 +592,42 @@ class ManalyticsOrchestrator:
             f"📁 Cache avant scraping direct : {cache_before} fichiers à préserver"
         )
 
-        # Importer et lancer les scrapers (AJOUT SEULEMENT)
+        # 🚀 INTÉGRATION FBETTEGA - Reproduction écosystème Jilliac
         try:
-            from src.python.scraper.melee_scraper import MeleeScraper
-            from src.python.scraper.mtgo_scraper import MTGOScraper
+            from src.python.scraper.fbettega_integrator import FbettegaIntegrator
 
-            # Configuration des scrapers
+            # Configuration fbettega
             cache_folder = "data/raw"
             api_config = {"timeout": 30, "retries": 3}
 
-            # Scraping MTGO (AJOUT SEULEMENT)
-            self.logger.info("🌐 Scraping MTGO.com (AJOUT SEULEMENT)...")
-            mtgo_scraper = MTGOScraper(cache_folder, api_config)
-            # Note: scrape_recent_tournaments method needs to be implemented
-            self.logger.info(
-                "⚠️ MTGO scraper initialized but scraping not implemented yet"
+            self.logger.info("🚀 Lancement Fbettega Integration (écosystème Jilliac)...")
+            fbettega = FbettegaIntegrator(cache_folder, api_config)
+
+            # Fetch tournaments avec tous les clients fbettega (async call)
+            tournaments = asyncio.run(
+                fbettega.get_tournaments_with_cache(
+                    self.format, self.start_date, self.end_date
+                )
             )
 
-            # Scraping Melee (AJOUT SEULEMENT)
-            self.logger.info("🌐 Scraping Melee.gg (AJOUT SEULEMENT)...")
-            melee_scraper = MeleeScraper(cache_folder, api_config)
-            # Note: scrape_recent_tournaments method needs to be implemented
-            self.logger.info(
-                "⚠️ Melee scraper initialized but scraping not implemented yet"
-            )
+            if tournaments:
+                self.logger.info(
+                    f"✅ Fbettega Success: {len(tournaments)} tournaments trouvés"
+                )
+
+                # Convertir au format MTGODecklistCache pour compatibilité
+                converted_tournaments = self._convert_fbettega_to_mtgo_format(
+                    tournaments
+                )
+
+                # Sauvegarder dans le cache MTGODecklistCache
+                self._save_fbettega_tournaments(converted_tournaments)
+
+                self.logger.info(
+                    f"💾 {len(converted_tournaments)} tournois fbettega intégrés au cache"
+                )
+            else:
+                self.logger.warning("⚠️ Fbettega: Aucun tournoi trouvé pour la période")
 
             # Vérifier que le cache a été préservé
             cache_after = self._count_existing_cache_files()
@@ -527,8 +641,220 @@ class ManalyticsOrchestrator:
             self.logger.info("✅ Scraping d'urgence terminé (AJOUT SEULEMENT)")
 
         except Exception as e:
-            self.logger.error(f"❌ Erreur lors du scraping direct : {e}")
-            raise Exception("Impossible de récupérer les données manquantes!")
+            self.logger.error(f"❌ Erreur lors du scraping fbettega : {e}")
+            self.logger.info(
+                "📋 Continuation avec les données MTGODecklistCache existantes"
+            )
+
+    def _convert_fbettega_to_mtgo_format(
+        self, fbettega_tournaments: List[Dict]
+    ) -> List[Dict]:
+        """Convert fbettega tournament format to MTGODecklistCache format"""
+        converted = []
+
+        for tournament in fbettega_tournaments:
+            try:
+                # Format MTGODecklistCache attendu
+                mtgo_tournament = {
+                    "Tournament": {
+                        "Name": tournament.get("name", "Fbettega Tournament"),
+                        "Date": tournament.get("date", ""),
+                        "Uri": tournament.get("url", ""),
+                        "format": tournament.get("format", self.format),
+                    },
+                    "Decks": [],
+                }
+
+                # Convertir les decks
+                for deck in tournament.get("decks", []):
+                    mtgo_deck = {
+                        "Player": deck.get("Player", "Unknown"),
+                        "Result": deck.get("Result", "0-0"),
+                        "AnchorUri": deck.get("AnchorUri", ""),
+                        "Mainboard": deck.get("Mainboard", []),
+                        "Sideboard": deck.get("Sideboard", []),
+                    }
+                    mtgo_tournament["Decks"].append(mtgo_deck)
+
+                if mtgo_tournament["Decks"]:  # Seulement si on a des decks
+                    converted.append(mtgo_tournament)
+
+            except Exception as e:
+                self.logger.warning(f"Error converting fbettega tournament: {e}")
+                continue
+
+        return converted
+
+    def _save_fbettega_tournaments(self, tournaments: List[Dict]):
+        """Save fbettega tournaments to MTGODecklistCache format"""
+        try:
+            import os
+            from datetime import datetime
+
+            # Créer le dossier de cache fbettega
+            cache_dir = Path("MTGODecklistCache/Tournaments/fbettega")
+            cache_dir.mkdir(parents=True, exist_ok=True)
+
+            # Organiser par date
+            for tournament in tournaments:
+                tournament_date = tournament["Tournament"].get("Date", "")
+                if tournament_date:
+                    try:
+                        date_obj = datetime.strptime(tournament_date, "%Y-%m-%d")
+                        year = date_obj.year
+                        month = f"{date_obj.month:02d}"
+                        day = f"{date_obj.day:02d}"
+
+                        # Créer la structure de dossiers
+                        date_dir = cache_dir / str(year) / month / day
+                        date_dir.mkdir(parents=True, exist_ok=True)
+
+                        # Nom du fichier
+                        tournament_name = tournament["Tournament"]["Name"].lower()
+                        safe_name = "".join(
+                            c
+                            for c in tournament_name
+                            if c.isalnum() or c in (" ", "-", "_")
+                        ).rstrip()
+                        filename = (
+                            f"{safe_name}_{self.format.lower()}_{tournament_date}.json"
+                        )
+
+                        # Sauvegarder
+                        file_path = date_dir / filename
+                        with open(file_path, "w", encoding="utf-8") as f:
+                            json.dump(tournament, f, indent=2, ensure_ascii=False)
+
+                    except Exception as e:
+                        self.logger.warning(
+                            f"Error saving tournament {tournament['Tournament']['Name']}: {e}"
+                        )
+
+        except Exception as e:
+            self.logger.error(f"Error saving fbettega tournaments: {e}")
+
+    async def _fetch_fbettega_tournaments(self) -> Optional[pd.DataFrame]:
+        """Fetch tournaments using fbettega integration"""
+        try:
+            from src.python.scraper.fbettega_integrator import FbettegaIntegrator
+
+            self.logger.info("🚀 Fbettega Integration: Fetching tournaments...")
+
+            # Configuration fbettega
+            cache_folder = "data/raw"
+            api_config = {"timeout": 30, "retries": 3}
+
+            fbettega = FbettegaIntegrator(cache_folder, api_config)
+
+            # Fetch tournaments avec cache intelligent
+            tournaments = await fbettega.get_tournaments_with_cache(
+                self.format, self.start_date, self.end_date
+            )
+
+            if not tournaments:
+                self.logger.info("📋 Fbettega: No tournaments found")
+                return None
+
+            self.logger.info(f"✅ Fbettega: {len(tournaments)} tournaments found")
+
+            # Convertir au format DataFrame compatible
+            fbettega_decks = []
+
+            for tournament in tournaments:
+                tournament_info = tournament.get("Tournament", tournament)
+                decks = tournament.get("Decks", tournament.get("decks", []))
+
+                for deck in decks:
+                    # Traiter le deck selon la même logique que _process_deck
+                    deck_data = self._process_fbettega_deck(deck, tournament_info)
+                    if deck_data:
+                        fbettega_decks.append(deck_data)
+
+            if fbettega_decks:
+                df = pd.DataFrame(fbettega_decks)
+                df["tournament_date"] = pd.to_datetime(df["tournament_date"])
+
+                self.logger.info(
+                    f"🎯 Fbettega processed: {len(df)} decks from {len(tournaments)} tournaments"
+                )
+                return df
+            else:
+                self.logger.info("📋 Fbettega: No valid decks processed")
+                return None
+
+        except Exception as e:
+            self.logger.error(f"❌ Error in fbettega integration: {e}")
+            return None
+
+    def _process_fbettega_deck(
+        self, deck: Dict, tournament_info: Dict
+    ) -> Optional[Dict]:
+        """Process fbettega deck to match existing format"""
+        try:
+            # Extraire les wins/losses
+            result = deck.get("Result", "0-0")
+            wins, losses = self._extract_results_from_string(result)
+
+            # Get mainboard for analysis
+            mainboard = deck.get("Mainboard", [])
+
+            # Classify archetype
+            archetype_with_colors = self._classify_archetype(mainboard)
+
+            # Analyze deck colors
+            color_analysis = self.color_detector.analyze_decklist_colors(mainboard)
+
+            # Extract simple archetype name
+            archetype = self._extract_simple_archetype_name(archetype_with_colors)
+
+            # Tournament date
+            tournament_date = tournament_info.get(
+                "Date", tournament_info.get("date", "")
+            )
+            if not tournament_date:
+                tournament_date = datetime.now().strftime("%Y-%m-%d")
+
+            return {
+                "tournament_id": tournament_info.get(
+                    "Uri", tournament_info.get("url", "fbettega-tournament")
+                ),
+                "tournament_name": tournament_info.get(
+                    "Name", tournament_info.get("name", "Fbettega Tournament")
+                ),
+                "tournament_date": tournament_date,
+                "tournament_source": "fbettega.gg",
+                "format": self.format,
+                "player_name": deck.get("Player", "Unknown"),
+                "archetype": archetype,
+                "archetype_with_colors": archetype_with_colors,
+                "color_identity": color_analysis["identity"],
+                "guild_name": color_analysis["guild_name"],
+                "color_distribution": color_analysis["color_distribution"],
+                "wins": wins,
+                "losses": losses,
+                "draws": deck.get("draws", 0),
+                "matches_played": wins + losses,
+                "winrate": wins / max(1, wins + losses) if (wins + losses) > 0 else 0,
+                "placement": deck.get("placement", 0),
+                "deck_cards": mainboard,
+                "deck_url": deck.get("AnchorUri", ""),
+            }
+
+        except Exception as e:
+            self.logger.warning(f"Error processing fbettega deck: {e}")
+            return None
+
+    def _extract_results_from_string(self, result_str: str) -> tuple:
+        """Extract wins/losses from result string"""
+        try:
+            if "-" in str(result_str):
+                parts = str(result_str).split("-")
+                wins = int(parts[0])
+                losses = int(parts[1]) if len(parts) > 1 else 0
+                return wins, losses
+        except:
+            pass
+        return 0, 0
 
     def _generate_search_patterns(self):
         """Generate search patterns for tournament files (like the old system)"""
@@ -739,7 +1065,7 @@ class ManalyticsOrchestrator:
                 elif "league" in tournament_str:
                     return "mtgo.com (League 5-0)"
                 else:
-                    return "mtgo.com"
+                    return "mtgo.com (Other Tournaments)"
             return "mtgo.com"
         elif "melee.gg" in file_path:
             return "melee.gg"
@@ -1299,38 +1625,38 @@ class ManalyticsOrchestrator:
         .color-boros {{ border-left: 4px solid #d3202a; border-right: 4px solid #fffbd5; }}
         .color-colorless {{ border-left: 4px solid #ccc; }}
 
-        /* MTGO Analysis Button Styles */
-        .mtgo-section {{
+        /* Leagues Analysis Button Styles */
+        .leagues-section {{
             margin: 2rem 0;
             text-align: center;
         }}
 
-        .mtgo-button {{
+        .leagues-button {{
             display: inline-block;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
             color: white;
             padding: 1rem 2rem;
             border-radius: 15px;
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
         }}
 
-        .mtgo-button:hover {{
+        .leagues-button:hover {{
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
-            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+            background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
         }}
 
-        .mtgo-button:active {{
+        .leagues-button:active {{
             transform: translateY(-1px);
         }}
 
-        .mtgo-description {{
+        .leagues-description {{
             margin-top: 0.5rem;
             font-size: 0.9rem;
             color: #666;
@@ -1410,12 +1736,12 @@ class ManalyticsOrchestrator:
             </div>
         </div>
 
-        <!-- MTGO Analysis Button - Prominent Position -->
-        <div class="mtgo-section">
-            <a href="mtgo_analysis/{format_name.lower()}_{start_date}_{end_date}_mtgo.html" class="mtgo-button">
-                🎯 MTGO Analysis
+        <!-- Leagues Analysis Button - Prominent Position -->
+        <div class="leagues-section">
+            <a href="leagues_analysis/{format_name.lower()}_{start_date}_{end_date}_leagues.html" class="leagues-button">
+                🏆 Leagues Analysis
             </a>
-            <div class="mtgo-description">Dedicated analysis for MTGO tournaments only</div>
+            <div class="leagues-description">Dedicated analysis for MTGO Leagues 5-0 only</div>
         </div>
 
         <div class="viz-grid">
@@ -1624,6 +1950,7 @@ class ManalyticsOrchestrator:
          .source-meleegg {{ background: #4ECDC4; }}
          .source-mtgocom-challenge {{ background: #e74c3c; }}
          .source-mtgocom-league-5-0 {{ background: #27ae60; }}
+         .source-mtgocom-other-tournaments {{ background: #f39c12; }}
 
          .source-topdeckgg {{ background: #762a83; }}
 
@@ -2385,35 +2712,268 @@ class ManalyticsOrchestrator:
         </html>
         """
 
-    def generate_mtgo_analysis(self, output_dir: str, df: pd.DataFrame):
-        """Generate dedicated MTGO analysis with filtered data"""
+    def generate_leagues_analysis(self, output_dir: str, df: pd.DataFrame):
+        """Generate dedicated Leagues analysis with filtered data"""
         try:
-            # Filter for MTGO data only - Include all mtgo.com sources EXCEPT 5-0 leagues
-            mtgo_df = df[
-                (df["tournament_source"].str.contains("mtgo.com", na=False))
-                & (~df["tournament_source"].str.contains("5-0", na=False))
+            # Filter for Leagues 5-0 data from all sources
+            leagues_patterns = ["League 5-0", "5-0", "fbettega.gg"]
+            leagues_df = df[
+                df["tournament_source"].str.contains(
+                    "|".join(leagues_patterns), na=False, case=False
+                )
             ]
 
-            if len(mtgo_df) == 0:
-                self.logger.warning("No MTGO data found for dedicated analysis")
+            if len(leagues_df) == 0:
+                self.logger.warning(
+                    "No MTGO Leagues 5-0 data found for dedicated analysis"
+                )
                 return None
 
-            # Create MTGO analysis directory
-            mtgo_dir = Path(output_dir) / "mtgo_analysis"
-            mtgo_dir.mkdir(exist_ok=True)
+            # Create Leagues analysis directory
+            leagues_dir = Path(output_dir) / "leagues_analysis"
+            leagues_dir.mkdir(exist_ok=True)
 
-            # Generate all MTGO-specific content
-            self._generate_mtgo_dashboard(str(mtgo_dir), mtgo_df)
-            self._generate_mtgo_visualizations(str(mtgo_dir), mtgo_df)
-            self._export_detailed_decklists(mtgo_df, str(mtgo_dir))
-            self._generate_archetype_pages(mtgo_df.to_dict("records"), mtgo_dir)
+            # Generate all Leagues-specific content
+            self._generate_leagues_dashboard(str(leagues_dir), leagues_df)
+            self._generate_leagues_visualizations(str(leagues_dir), leagues_df)
+            self._export_detailed_decklists(leagues_df, str(leagues_dir))
+            self._generate_archetype_pages(leagues_df.to_dict("records"), leagues_dir)
 
-            self.logger.info(f"✅ MTGO analysis created: {mtgo_dir}")
-            return str(mtgo_dir)
+            self.logger.info(f"✅ Leagues analysis created: {leagues_dir}")
+            return str(leagues_dir)
 
         except Exception as e:
-            self.logger.error(f"❌ Error generating MTGO analysis: {e}")
+            self.logger.error(f"❌ Error generating Leagues analysis: {e}")
             return None
+
+    def _generate_leagues_dashboard(self, output_dir: str, df: pd.DataFrame):
+        """Generate Leagues dashboard HTML"""
+        try:
+            format_name = self.format
+            start_date = self.start_date
+            end_date = self.end_date
+
+            # Generate main leagues HTML file
+            leagues_html_path = (
+                Path(output_dir)
+                / f"{format_name.lower()}_{start_date}_{end_date}_leagues.html"
+            )
+
+            # Use the same template as MTGO but with Leagues branding
+            leagues_html = self._generate_leagues_html_template(
+                df, format_name, start_date, end_date
+            )
+
+            with open(leagues_html_path, "w", encoding="utf-8") as f:
+                f.write(leagues_html)
+
+            self.logger.info(f"✅ Leagues dashboard created: {leagues_html_path}")
+
+        except Exception as e:
+            self.logger.error(f"❌ Error generating Leagues dashboard: {e}")
+
+    def _generate_leagues_visualizations(self, output_dir: str, df: pd.DataFrame):
+        """Generate ALL Leagues visualizations (same as main analysis)"""
+        from src.python.visualizations.matchup_matrix import MatchupMatrixGenerator
+        from src.python.visualizations.metagame_charts import MetagameChartsGenerator
+
+        viz_dir = Path(output_dir) / "visualizations"
+        viz_dir.mkdir(exist_ok=True)
+
+        self.logger.info("📊 Generating Leagues matchup matrix...")
+        matchup_generator = MatchupMatrixGenerator()
+        matchup_result = matchup_generator.generate_full_report(str(viz_dir), df)
+
+        self.logger.info("📈 Generating Leagues metagame charts...")
+        charts_generator = MetagameChartsGenerator()
+        charts_result = charts_generator.generate_all_charts(str(viz_dir), df)
+
+        return {"matchup_matrix": matchup_result, "metagame_charts": charts_result}
+
+    def _generate_leagues_html_template(
+        self, df: pd.DataFrame, format_name: str, start_date: str, end_date: str
+    ) -> str:
+        """Generate Leagues HTML template"""
+
+        # Calculate Leagues-specific stats
+        total_decks = len(df)
+        total_tournaments = df["tournament_id"].nunique()
+        unique_archetypes = df["archetype"].nunique()
+
+        # Get archetype distribution
+        archetype_counts = df["archetype"].value_counts()
+        top_archetypes = archetype_counts.head(10)
+
+        # Generate archetype rows
+        archetype_rows = ""
+        for archetype, count in top_archetypes.items():
+            percentage = (count / total_decks) * 100
+            archetype_rows += f"""
+            <tr>
+                <td>{archetype}</td>
+                <td>{count}</td>
+                <td>{percentage:.1f}%</td>
+            </tr>
+            """
+
+        return f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 Leagues Analysis - {format_name} ({start_date} to {end_date})</title>
+    <style>
+        :root {{
+            --primary-color: #27ae60;
+            --secondary-color: #229954;
+            --accent-color: #1e8449;
+            --text-color: #2c3e50;
+            --bg-color: #ecf0f1;
+        }}
+
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }}
+
+        .header {{
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }}
+
+        .header h1 {{
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }}
+
+        .container {{
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }}
+
+        .stats-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }}
+
+        .stat-card {{
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }}
+
+        .stat-number {{
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }}
+
+        .archetype-table {{
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }}
+
+        .archetype-table table {{
+            width: 100%;
+            border-collapse: collapse;
+        }}
+
+        .archetype-table th {{
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }}
+
+        .archetype-table td {{
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #ecf0f1;
+        }}
+
+        .footer {{
+            text-align: center;
+            padding: 2rem;
+            color: #7f8c8d;
+            background: white;
+            margin-top: 2rem;
+        }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏆 Leagues Analysis</h1>
+        <p>MTGO Leagues 5-0 Analysis • {start_date} to {end_date}</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem;">
+            <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">
+                📊 {total_decks} Decks
+            </span>
+            <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">
+                🏆 {total_tournaments} Leagues
+            </span>
+            <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">
+                🎯 {unique_archetypes} Archetypes
+            </span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">{total_decks}</div>
+                <div>Total 5-0 Decks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{total_tournaments}</div>
+                <div>League Events</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{unique_archetypes}</div>
+                <div>Unique Archetypes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{(total_decks/total_tournaments):.1f}</div>
+                <div>Avg Decks/League</div>
+            </div>
+        </div>
+
+        <div class="archetype-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Archetype</th>
+                        <th>5-0 Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {archetype_rows}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>🏆 MTGO Leagues 5-0 Analysis • Generated automatically • 100% real tournament data</p>
+    </div>
+</body>
+</html>
+        """
 
     def _generate_mtgo_dashboard(self, output_dir: str, df: pd.DataFrame):
         """Generate MTGO-specific dashboard"""
