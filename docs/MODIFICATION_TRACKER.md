@@ -24,6 +24,24 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-19 07:28] - Claude_2025-07-19_07-28
+**Fichier(s) concerné(s)** : src/python/scraper/fbettega_clients/
+**Type** : MODIFICATION
+**Description** : Diagnostic et réparation intégration fbettega - déblocage point critique
+**Justification** : Reproduire exactement le processus Jilliac, intégration fbettega presque réussie
+**Tests** : Test sur période 1-15 juillet 2025, comparaison avec données Jilliac
+**Rollback** : git revert du commit correspondant
+
+
+### [2025-07-16 20:35] - Claude_2025-07-16_20-35
+**Fichier(s) concerné(s)** : requirements.txt,src/python/scraper/
+**Type** : AJOUT
+**Description** : Reboot Python complet - création requirements.txt et scrapers natifs
+**Justification** : Système fbettega bloqué, passage à scrapers Python purs
+**Tests** : Pipeline complet avec nouvelles dépendances
+**Rollback** : git revert + restauration ancien système
+
+
 ### [2025-07-14 14:45] - Claude_2025-07-14_14-45
 **Fichier(s) concerné(s)** : `src/python/visualizations/metagame_charts.py`, `src/python/visualizations/matchup_matrix.py`
 **Type** : CORRECTION MAJEURE - UNIFORMISATION COMPLÈTE
