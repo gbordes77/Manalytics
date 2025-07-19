@@ -8,19 +8,29 @@ import glob
 import json
 import logging
 import os
+from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 
 import pandas as pd
 
-from python.analytics.advanced_metagame_analyzer import AdvancedMetagameAnalyzer
-from python.classifier.advanced_archetype_classifier import AdvancedArchetypeClassifier
-from python.classifier.archetype_engine import ArchetypeEngine
-from python.classifier.color_detector import ColorDetector
-from python.classifier.mtgo_classifier import MTGOClassifier
-from python.visualizations.matchup_matrix import MatchupMatrixGenerator
-from python.visualizations.metagame_charts import MetagameChartsGenerator
+# Simple DateTimeEncoder for JSON serialization
+class DateTimeEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        return super().default(obj)
+
+from src.python.analytics.advanced_metagame_analyzer import AdvancedMetagameAnalyzer
+from src.python.classifier.advanced_archetype_classifier import (
+    AdvancedArchetypeClassifier,
+)
+from src.python.classifier.archetype_engine import ArchetypeEngine
+from src.python.classifier.color_detector import ColorDetector
+from src.python.classifier.mtgo_classifier import MTGOClassifier
+from src.python.visualizations.matchup_matrix import MatchupMatrixGenerator
+from src.python.visualizations.metagame_charts import MetagameChartsGenerator
 
 
 class ManalyticsOrchestrator:
@@ -146,7 +156,9 @@ class ManalyticsOrchestrator:
             leagues_path = self.generate_leagues_analysis(str(output_dir), df)
 
             # 3. Final summary
-            self.logger.info(f"✅ Pipeline completed successfully in {analysis_folder}!")
+            self.logger.info(
+                f"✅ Pipeline completed successfully in {analysis_folder}!"
+            )
 
             return {
                 "analysis_folder": analysis_folder,
@@ -600,7 +612,9 @@ class ManalyticsOrchestrator:
             cache_folder = "data/raw"
             api_config = {"timeout": 30, "retries": 3}
 
-            self.logger.info("🚀 Lancement Fbettega Integration (écosystème Jilliac)...")
+            self.logger.info(
+                "🚀 Lancement Fbettega Integration (écosystème Jilliac)..."
+            )
             fbettega = FbettegaIntegrator(cache_folder, api_config)
 
             # Fetch tournaments avec tous les clients fbettega (async call)
@@ -1060,11 +1074,21 @@ class ManalyticsOrchestrator:
 
                 # Analyze URL/ID to determine type
                 tournament_str = str(tournament_url).lower()
-                if "challenge" in tournament_str:
-                    return "mtgo.com (Challenge)"
+
+                # CORRECTION: Séparer les différents types de Challenge
+                # Jilliac utilise seulement Standard Challenge 32 et 64
+                if "standard-challenge-32" in tournament_str:
+                    return "mtgo.com (Challenge 32)"
+                elif "standard-challenge-64" in tournament_str:
+                    return "mtgo.com (Challenge 64)"
+                elif "challenge" in tournament_str:
+                    # Autres challenges (Modern, Pioneer, etc.) - exclure
+                    return "mtgo.com (Other Tournaments)"
                 elif "league" in tournament_str:
+                    # CORRECTION: Exclure League 5-0 (pas dans Jilliac)
                     return "mtgo.com (League 5-0)"
                 else:
+                    # CORRECTION: Autres tournois MTGO (RC Qualifier, etc.)
                     return "mtgo.com (Other Tournaments)"
             return "mtgo.com"
         elif "melee.gg" in file_path:
@@ -1505,10 +1529,16 @@ class ManalyticsOrchestrator:
             from datetime import datetime
 
             # Statistiques générales - FILTER OUT UNWANTED SOURCES
-            # Filter out League 5-0 and fbettega.gg from main dashboard statistics
+            # CORRECTION: Filter to match Jilliac's tournament list exactly
+            # Only include Standard Challenge 32 and 64, exclude all others
             filtered_df = df[
-                ~df["tournament_source"].str.contains("League 5-0", case=False)
+                (
+                    df["tournament_source"].str.contains("Challenge", case=False)
+                    | df["tournament_source"].str.contains("melee.gg", case=False)
+                )
+                & ~df["tournament_source"].str.contains("League 5-0", case=False)
                 & ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+                & ~df["tournament_source"].str.contains("Other Tournaments", case=False)
             ]
 
             total_tournaments = filtered_df["tournament_id"].nunique()
@@ -1518,18 +1548,24 @@ class ManalyticsOrchestrator:
             total_matches = len(filtered_df)  # Use total decks as matches
             archetypes = sorted(filtered_df["archetype"].unique())
 
-            # Generate source badges (excluding League 5-0 and fbettega.gg)
+            # CORRECTION: Generate source badges (Challenge 32, 64, Other Tournaments, and melee.gg)
             sources = df["tournament_source"].unique()
             source_badges = ""
             for source in sources:
-                # Exclure League 5-0 et fbettega.gg de la première page
-                if "League 5-0" in source or "fbettega.gg" in source:
+                # CORRECTION: Include sources that match Jilliac's list
+                if (
+                    "Challenge" not in source
+                    and "melee.gg" not in source
+                    and "Other Tournaments" not in source
+                ):
                     continue
 
                 if "melee.gg" in source:
                     badge_color = "#4ECDC4"  # Turquoise
                 elif "Challenge" in source:
                     badge_color = "#e74c3c"  # Rouge
+                elif "Other Tournaments" in source:
+                    badge_color = "#f39c12"  # Orange pour RC Qualifier
                 elif "League" in source:
                     badge_color = "#27ae60"  # Vert
                 else:
@@ -1835,15 +1871,6 @@ class ManalyticsOrchestrator:
 
             <div class="viz-card">
                 <div class="viz-header">
-                    <h3 class="viz-title">🌟 Top Performers</h3>
-                </div>
-                <div class="viz-content">
-                    <iframe src="visualizations/top_5_0.html" class="viz-iframe"></iframe>
-                </div>
-            </div>
-
-            <div class="viz-card">
-                <div class="viz-header">
                     <h3 class="viz-title">📈 Temporal Evolution</h3>
                 </div>
                 <div class="viz-content">
@@ -1873,8 +1900,16 @@ class ManalyticsOrchestrator:
 """
 
             # Prepare tournament data for the dashboard - FILTER OUT UNWANTED SOURCES
+            # Include tournament_name to get real names
             tournaments_data = (
-                df.groupby(["tournament_source", "tournament_date", "tournament_id"])
+                df.groupby(
+                    [
+                        "tournament_source",
+                        "tournament_date",
+                        "tournament_id",
+                        "tournament_name",
+                    ]
+                )
                 .size()
                 .reset_index(name="deck_count")
             )
@@ -1910,19 +1945,28 @@ class ManalyticsOrchestrator:
                 else:
                     badge_color = "#3498db"
 
-                # Create more explicit tournament title
+                # Create more explicit tournament title WITHOUT showing URLs
                 tournament_id = row["tournament_id"]
                 source = row["tournament_source"]
 
-                # Make tournament title more explicit
-                if "challenge" in source.lower():
-                    explicit_title = f"MTGO Challenge - {tournament_id}"
-                elif "melee.gg" in source.lower():
-                    explicit_title = f"Melee Tournament - {tournament_id}"
-                elif "other tournaments" in source.lower():
-                    explicit_title = f"MTGO Tournament - {tournament_id}"
+                # Use REAL tournament names from tournament_name column
+                if "tournament_name" in tournaments_data.columns and pd.notna(
+                    row.get("tournament_name")
+                ):
+                    explicit_title = str(row["tournament_name"])
                 else:
-                    explicit_title = f"{source} - {tournament_id}"
+                    # Fallback si pas de nom disponible
+                    if "challenge" in source.lower():
+                        if "32" in source:
+                            explicit_title = "MTGO Challenge 32"
+                        elif "64" in source:
+                            explicit_title = "MTGO Challenge 64"
+                        else:
+                            explicit_title = "MTGO Challenge"
+                    elif "other tournaments" in source.lower():
+                        explicit_title = "MTGO RC Qualifier"
+                    else:
+                        explicit_title = "Tournament"
 
                 html_template += f"""
                     <div class="tournament-card" style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 1rem; transition: all 0.3s ease;">
@@ -1935,7 +1979,7 @@ class ManalyticsOrchestrator:
                         </div>
                         <div style="display: flex; justify-content: between; align-items: center;">
                             <span style="color: #666; font-size: 0.9rem;">📅 {date_formatted}</span>
-                            <a href="{row['tournament_id']}" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 500; padding: 0.3rem 0.8rem; border-radius: 4px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border: 1px solid #dee2e6; transition: all 0.3s ease; font-size: 0.8rem;">
+                            <a href="{row['tournament_id']}" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 500; padding: 0.3rem 0.8rem; border-radius: 4px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border: 1px solid #dee2e6; transition: all 0.3s ease; font-size: 0.8rem; display: inline-block;">
                                 🔗 Voir le tournoi
                             </a>
                         </div>
@@ -1984,10 +2028,16 @@ class ManalyticsOrchestrator:
         """Generate tournament list sorted by source and date"""
         try:
             # Prepare tournament data - FILTER OUT UNWANTED SOURCES
-            # Filter out League 5-0 and fbettega.gg from tournament list page
+            # CORRECTION: Filter to match Jilliac's tournament list exactly
+            # Only include Standard Challenge 32 and 64, exclude all others
             filtered_df = df[
-                ~df["tournament_source"].str.contains("League 5-0", case=False)
+                (
+                    df["tournament_source"].str.contains("Challenge", case=False)
+                    | df["tournament_source"].str.contains("melee.gg", case=False)
+                )
+                & ~df["tournament_source"].str.contains("League 5-0", case=False)
                 & ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+                & ~df["tournament_source"].str.contains("Other Tournaments", case=False)
             ]
 
             tournaments_data = (
@@ -2203,11 +2253,11 @@ class ManalyticsOrchestrator:
                         tournament_name = "TopDeck.gg Tournament"
                     else:
                         tournament_name = "Tournament"
-                    
+
                     tournament_link = f'<a href="{tournament_url}" target="_blank" class="tournament-link">🔗 Voir le tournoi <span class="external-icon">↗</span></a>'
                 else:
                     tournament_name = "Tournament"
-                    tournament_link = tournament_url
+                    tournament_link = f'<span class="tournament-unavailable">🔗 Lien non disponible</span>'
 
                 tournaments_html += f"""
                 <tr>
@@ -3217,6 +3267,8 @@ class ManalyticsOrchestrator:
                 badge_color = "#27ae60"  # Green
             elif "Challenge" in source:
                 badge_color = "#e74c3c"  # Red
+            elif "Other Tournaments" in source:
+                badge_color = "#f39c12"  # Orange pour RC Qualifier
             else:
                 badge_color = "#3498db"  # Blue
 
