@@ -377,6 +377,53 @@ class MetagameChartsGenerator:
             self.logger.error(f"Erreur lors du chargement des données: {e}")
             raise
 
+    def _get_top_archetypes_consistent(
+        self, df: pd.DataFrame, max_archetypes: int = 12
+    ) -> pd.Series:
+        """🎯 FONCTION CENTRALISÉE - Calcule les top archétypes de manière cohérente
+
+        Cette fonction garantit que TOUS les graphiques utilisent exactement les mêmes données
+        et le même ordre de tri pour éviter les incohérences.
+
+        Args:
+            df: DataFrame avec les données
+            max_archetypes: Nombre maximum d'archétypes à retourner
+
+        Returns:
+            pd.Series avec les archétypes triés par pourcentage décroissant
+        """
+        # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
+        archetype_column = self._get_archetype_column(df)
+        archetype_counts = df[archetype_column].value_counts()
+        total_entries = len(df)
+
+        # Calculer les pourcentages
+        archetype_shares = (archetype_counts / total_entries * 100).round(2)
+
+        # RÈGLE ABSOLUE : Prendre SEULEMENT les max_archetypes les plus populaires
+        top_archetypes = archetype_shares.head(max_archetypes)
+
+        # RÈGLE ABSOLUE : "Autres" ne doit JAMAIS apparaître dans les graphiques
+        if "Autres" in top_archetypes.index:
+            top_archetypes = top_archetypes.drop("Autres")
+        if "Autres / Non classifiés" in top_archetypes.index:
+            top_archetypes = top_archetypes.drop("Autres / Non classifiés")
+
+        # 🎯 ORDRE DÉCROISSANT avec Izzet Prowess TOUJOURS EN PREMIER
+        # Trier par valeur décroissante
+        top_archetypes = top_archetypes.sort_values(ascending=False)
+
+        # Forcer Izzet Prowess en première position s'il existe
+        if "Izzet Prowess" in top_archetypes.index:
+            izzet_value = top_archetypes["Izzet Prowess"]
+            top_archetypes = top_archetypes.drop("Izzet Prowess")
+            # Créer nouvelle série avec Izzet Prowess en premier
+            new_index = ["Izzet Prowess"] + top_archetypes.index.tolist()
+            new_values = [izzet_value] + top_archetypes.values.tolist()
+            top_archetypes = pd.Series(new_values, index=new_index)
+
+        return top_archetypes
+
     def create_metagame_pie_chart(
         self, df: pd.DataFrame, min_threshold: float = 0.01
     ) -> go.Figure:
@@ -389,37 +436,7 @@ class MetagameChartsGenerator:
         """
 
         # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
-        archetype_column = self._get_archetype_column(df)
-        archetype_counts = df[archetype_column].value_counts()
-        total_players = len(df)
-
-        # Calculer les pourcentages
-        archetype_shares = (archetype_counts / total_players * 100).round(2)
-
-        # RÈGLE ABSOLUE : MAXIMUM 12 archétypes, JAMAIS d'Autres
-        main_archetypes = archetype_shares.head(12)
-
-        # RÈGLE ABSOLUE : "Autres" ne doit JAMAIS apparaître dans un pie chart
-        # On supprime complètement toute trace d'Autres
-        if "Autres" in main_archetypes.index:
-            main_archetypes = main_archetypes.drop("Autres")
-        if "Autres / Non classifiés" in main_archetypes.index:
-            main_archetypes = main_archetypes.drop("Autres / Non classifiés")
-
-        # 🎯 ORDRE DÉCROISSANT avec Izzet Prowess TOUJOURS EN PREMIER
-        # Trier par valeur décroissante
-        main_archetypes = main_archetypes.sort_values(ascending=False)
-
-        # Forcer Izzet Prowess en première position s'il existe
-        if "Izzet Prowess" in main_archetypes.index:
-            izzet_value = main_archetypes["Izzet Prowess"]
-            main_archetypes = main_archetypes.drop("Izzet Prowess")
-            # Créer nouvelle série avec Izzet Prowess en premier
-            import pandas as pd
-
-            new_index = ["Izzet Prowess"] + main_archetypes.index.tolist()
-            new_values = [izzet_value] + main_archetypes.values.tolist()
-            main_archetypes = pd.Series(new_values, index=new_index)
+        main_archetypes = self._get_top_archetypes_consistent(df, max_archetypes=12)
 
         # Créer le pie chart
         fig = go.Figure()
@@ -925,13 +942,13 @@ class MetagameChartsGenerator:
         """
         # Compter les sources de données (excluant League 5-0 et fbettega.gg)
         source_counts = df["tournament_source"].value_counts().to_dict()
-        
+
         # Filtrer les sources à exclure
         filtered_source_counts = {}
         for source, count in source_counts.items():
             if "League 5-0" not in source and "fbettega.gg" not in source:
                 filtered_source_counts[source] = count
-        
+
         total_players = sum(filtered_source_counts.values())
 
         # Mapper les sources vers des noms d'affichage
@@ -1131,37 +1148,7 @@ class MetagameChartsGenerator:
         df = df.copy()
 
         # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
-        archetype_column = self._get_archetype_column(df)
-        archetype_counts = df[archetype_column].value_counts()
-        total_decks = len(df)
-
-        # Calculer les pourcentages pour tous les archétypes
-        archetype_percentages = (archetype_counts / total_decks * 100).round(2)
-
-        # RÈGLE ABSOLUE : Prendre SEULEMENT les 12 archétypes les plus populaires
-        top_archetypes = archetype_percentages.head(12)
-
-        # RÈGLE ABSOLUE : "Autres" ne doit JAMAIS apparaître dans les graphiques
-        # On supprime complètement toute trace d'Autres
-        if "Autres" in top_archetypes.index:
-            top_archetypes = top_archetypes.drop("Autres")
-        if "Autres / Non classifiés" in top_archetypes.index:
-            top_archetypes = top_archetypes.drop("Autres / Non classifiés")
-
-        # 🎯 ORDRE DÉCROISSANT avec Izzet Prowess TOUJOURS EN PREMIER
-        # Trier par valeur décroissante
-        top_archetypes = top_archetypes.sort_values(ascending=False)
-
-        # Forcer Izzet Prowess en première position s'il existe
-        if "Izzet Prowess" in top_archetypes.index:
-            izzet_value = top_archetypes["Izzet Prowess"]
-            top_archetypes = top_archetypes.drop("Izzet Prowess")
-            # Créer nouvelle série avec Izzet Prowess en premier
-            import pandas as pd
-
-            new_index = ["Izzet Prowess"] + top_archetypes.index.tolist()
-            new_values = [izzet_value] + top_archetypes.values.tolist()
-            top_archetypes = pd.Series(new_values, index=new_index)
+        top_archetypes = self._get_top_archetypes_consistent(df, max_archetypes=12)
 
         # Préparer les données pour le graphique
         archetypes = list(top_archetypes.index)
@@ -1171,6 +1158,7 @@ class MetagameChartsGenerator:
         guild_names = []
         for archetype in archetypes:
             # 🎯 Trouver la guilde avec la colonne d'archétype correcte
+            archetype_column = self._get_archetype_column(df)
             archetype_data = df[df[archetype_column] == archetype]
             if not archetype_data.empty and "guild_name" in archetype_data.columns:
                 most_common_guild = archetype_data["guild_name"].mode()
@@ -1197,7 +1185,7 @@ class MetagameChartsGenerator:
                     textfont=dict(size=12, color="black"),
                     hovertemplate="<b>%{x}</b><br>"
                     + "Metagame share: %{y:.1f}%<br>"
-                    + f"Number of decks: {[int(p/100*total_decks) for p in percentages]}<br>"
+                    + f"Number of decks: {[int(p/100*len(df)) for p in percentages]}<br>"
                     + "<extra></extra>",
                 )
             ]
@@ -1259,35 +1247,7 @@ class MetagameChartsGenerator:
         df = df.copy()
 
         # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
-        archetype_column = self._get_archetype_column(df)
-        archetype_counts = df[archetype_column].value_counts()
-        total_decks = len(df)
-        archetype_percentages = (archetype_counts / total_decks * 100).round(2)
-
-        # RÈGLE ABSOLUE : Prendre SEULEMENT les 12 archétypes les plus populaires
-        top_archetypes = archetype_percentages.head(12)
-
-        # RÈGLE ABSOLUE : "Autres" ne doit JAMAIS apparaître dans les graphiques
-        # On supprime complètement toute trace d'Autres
-        if "Autres" in top_archetypes.index:
-            top_archetypes = top_archetypes.drop("Autres")
-        if "Autres / Non classifiés" in top_archetypes.index:
-            top_archetypes = top_archetypes.drop("Autres / Non classifiés")
-
-        # 🎯 ORDRE DÉCROISSANT avec Izzet Prowess TOUJOURS EN PREMIER
-        # Trier par valeur décroissante
-        top_archetypes = top_archetypes.sort_values(ascending=False)
-
-        # Forcer Izzet Prowess en première position s'il existe
-        if "Izzet Prowess" in top_archetypes.index:
-            izzet_value = top_archetypes["Izzet Prowess"]
-            top_archetypes = top_archetypes.drop("Izzet Prowess")
-            # Créer nouvelle série avec Izzet Prowess en premier
-            import pandas as pd
-
-            new_index = ["Izzet Prowess"] + top_archetypes.index.tolist()
-            new_values = [izzet_value] + top_archetypes.values.tolist()
-            top_archetypes = pd.Series(new_values, index=new_index)
+        top_archetypes = self._get_top_archetypes_consistent(df, max_archetypes=12)
 
         archetypes = list(top_archetypes.index)
         percentages = list(top_archetypes.values)
@@ -1296,6 +1256,7 @@ class MetagameChartsGenerator:
         guild_names = []
         for archetype in archetypes:
             # 🎯 Trouver la guilde avec la colonne d'archétype correcte
+            archetype_column = self._get_archetype_column(df)
             archetype_data = df[df[archetype_column] == archetype]
             if not archetype_data.empty and "guild_name" in archetype_data.columns:
                 most_common_guild = archetype_data["guild_name"].mode()
@@ -1414,9 +1375,15 @@ class MetagameChartsGenerator:
             ),
             "top_5_0": self.create_top_5_0_chart(df),
             "data_sources_pie": self.create_data_sources_pie_chart(df),  # CORRIGÉ !
-            "archetype_evolution": self.create_archetype_evolution_chart(df),  # CORRIGÉ !
-            "main_archetypes_bar": self.create_main_archetypes_bar_chart(df),  # CORRIGÉ !
-            "main_archetypes_bar_horizontal": self.create_main_archetypes_bar_horizontal(df),  # CORRIGÉ !
+            "archetype_evolution": self.create_archetype_evolution_chart(
+                df
+            ),  # CORRIGÉ !
+            "main_archetypes_bar": self.create_main_archetypes_bar_chart(
+                df
+            ),  # CORRIGÉ !
+            "main_archetypes_bar_horizontal": self.create_main_archetypes_bar_horizontal(
+                df
+            ),  # CORRIGÉ !
         }
 
         # Sauvegarder tous les graphiques

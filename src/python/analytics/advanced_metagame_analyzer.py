@@ -161,9 +161,9 @@ class AdvancedMetagameAnalyzer:
             temporal_trends["trend_category"] == "Declining"
         ].nsmallest(5, "growth_rate")
 
-        self.temporal_trends = {
-            "summary": temporal_trends,
-            "detailed": temporal_data.reset_index() if hasattr(temporal_data, 'reset_index') else temporal_data,
+        summary = temporal_trends.reset_index()
+        temporal_trends = {
+            "summary": summary,
             "emerging": emerging,
             "declining": declining,
             "category_counts": temporal_trends["trend_category"]
@@ -175,7 +175,7 @@ class AdvancedMetagameAnalyzer:
             f"📈 Temporal trends analyzed: {len(temporal_trends)} archetypes"
         )
 
-        return self.temporal_trends
+        return temporal_trends
 
     def perform_archetype_clustering(self, n_clusters: int = 3) -> Dict[str, Any]:
         """Perform K-means clustering on archetype performance"""
@@ -390,6 +390,19 @@ class AdvancedMetagameAnalyzer:
         correlation_analysis = self.calculate_correlations()
         card_analysis = self.analyze_card_usage()
 
+        # Helper function to safely convert DataFrame to dict
+        def safe_df_to_dict(df, default=None):
+            """Safely convert DataFrame to dictionary with string keys"""
+            if df is None or df.empty:
+                return default or {}
+            try:
+                # Reset index to make keys strings instead of tuples
+                df_reset = df.reset_index()
+                return df_reset.to_dict(orient="records")
+            except Exception as e:
+                self.logger.warning(f"Failed to convert DataFrame to dict: {e}")
+                return default or {}
+
         # Compile comprehensive report
         comprehensive_report = {
             "metadata": {
@@ -403,44 +416,26 @@ class AdvancedMetagameAnalyzer:
             },
             "diversity_metrics": diversity_metrics,
             "temporal_trends": {
-                "summary": (
-                    temporal_trends.get("summary", pd.DataFrame()).reset_index().to_dict("index")
-                    if not temporal_trends.get("summary", pd.DataFrame()).empty
-                    else {}
+                "summary": safe_df_to_dict(
+                    temporal_trends.get("summary", pd.DataFrame())
                 ),
                 "category_counts": temporal_trends.get("category_counts", {}),
-                "emerging_archetypes": (
-                    temporal_trends.get("emerging", pd.DataFrame()).reset_index().to_dict("index")
-                    if not temporal_trends.get("emerging", pd.DataFrame()).empty
-                    else {}
+                "emerging_archetypes": safe_df_to_dict(
+                    temporal_trends.get("emerging", pd.DataFrame())
                 ),
-                "declining_archetypes": (
-                    temporal_trends.get("declining", pd.DataFrame()).reset_index().to_dict("index")
-                    if not temporal_trends.get("declining", pd.DataFrame()).empty
-                    else {}
+                "declining_archetypes": safe_df_to_dict(
+                    temporal_trends.get("declining", pd.DataFrame())
                 ),
             },
             "clustering_analysis": {
                 "archetype_clusters": clustering_analysis.get("archetype_clusters", {}),
-                "cluster_profiles": (
-                    clustering_analysis.get("cluster_profiles", pd.DataFrame()).reset_index().to_dict(
-                        "index"
-                    )
-                    if not clustering_analysis.get(
-                        "cluster_profiles", pd.DataFrame()
-                    ).empty
-                    else {}
+                "cluster_profiles": safe_df_to_dict(
+                    clustering_analysis.get("cluster_profiles", pd.DataFrame())
                 ),
             },
             "correlation_analysis": {
-                "correlation_matrix": (
-                    correlation_analysis.get(
-                        "correlation_matrix", pd.DataFrame()
-                    ).reset_index().to_dict("index")
-                    if not correlation_analysis.get(
-                        "correlation_matrix", pd.DataFrame()
-                    ).empty
-                    else {}
+                "correlation_matrix": safe_df_to_dict(
+                    correlation_analysis.get("correlation_matrix", pd.DataFrame())
                 ),
                 "significance_tests": correlation_analysis.get(
                     "significance_tests", {}
@@ -451,10 +446,8 @@ class AdvancedMetagameAnalyzer:
             },
             "card_analysis": {
                 "total_unique_cards": card_analysis.get("total_unique_cards", 0),
-                "top_cards": (
-                    card_analysis.get("top_cards", pd.DataFrame()).reset_index().to_dict("index")
-                    if not card_analysis.get("top_cards", pd.DataFrame()).empty
-                    else {}
+                "top_cards": safe_df_to_dict(
+                    card_analysis.get("top_cards", pd.DataFrame())
                 ),
                 "usage_distribution": card_analysis.get("usage_distribution", {}),
             },
