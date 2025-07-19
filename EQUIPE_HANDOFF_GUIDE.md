@@ -1,17 +1,35 @@
 # 📋 GUIDE DE PASSATION MANALYTICS - ÉQUIPE SORTANTE
 
-## 🎯 MODIFICATIONS RÉCENTES CRITIQUES (À DOCUMENTER EN PRIORITÉ)
+## 🚀 MODIFICATIONS MAJEURES RÉCENTES (COMMIT: 9401f46)
 
-### ✅ Changements de cette session (Commits: 87d4b37, 9fc7958, a95eb9d)
-1. **Titres sans dates** - `src/python/visualizations/metagame_charts.py`
-2. **Matchup matrix agrandi 50%** - `src/orchestrator.py` + `src/python/visualizations/matchup_matrix.py`
-3. **Filtre MTGO corrigé** - `src/orchestrator.py` (inclut tout sauf 5-0 leagues)
-4. **Couleurs matchup matrix** - Rouge-Blanc-Vert pour lisibilité
+### ✅ TRANSFORMATION COMPLÈTE : MTGO Analysis → Leagues Analysis
+1. **🔄 Architecture Report Redesignée**
+   - Suppression complète page MTGO Analysis
+   - Création page dédiée Leagues Analysis (thème vert)
+   - Bouton rouge MTGO → Bouton vert Leagues 🏆
+
+2. **📊 Séparation Sources MTGO**
+   - `mtgo.com (Challenge)` - rouge #e74c3c
+   - `mtgo.com (Other Tournaments)` - orange #f39c12  
+   - `mtgo.com (League 5-0)` - vert #27ae60 (page séparée)
+   - `melee.gg` - teal
+   - `fbettega.gg` - filtré vers Leagues
+
+3. **🔧 Intégration Fbettega Fonctionnelle**
+   - MTGOClient avec découverte d'URLs réelles (vs génération)
+   - Melee authentication avec credentials chiffrés
+   - 854 decks chargés de 67 tournois (1-15 juillet 2025)
+   - MTGODecklistCache alimenté avec données réelles
+
+4. **🎯 Filtrage Amélioré**
+   - Page principale : SANS Leagues 5-0 (filtrage patterns: `["League 5-0", "5-0", "fbettega.gg"]`)
+   - Page Leagues : SEULEMENT Leagues 5-0
+   - Architecture pipeline : `main_df` vs `df` complet
 
 ### 📋 Tracker des modifications
-- **OBLIGATOIRE** : Mettre à jour `docs/MODIFICATION_TRACKER.md`
-- Documenter chaque commit avec instructions de rollback
-- Ajouter entry "Claude_2025-01-14_15-32" si pas fait
+- **COMMIT MAJEUR** : 9401f46 - "Major Report Improvements: MTGO Analysis → Leagues Analysis"
+- **FICHIERS MODIFIÉS** : 33 files changed, 5764 insertions(+), 66 deletions(-)
+- **ROLLBACK** : `git revert 9401f46` si nécessaire
 
 ---
 

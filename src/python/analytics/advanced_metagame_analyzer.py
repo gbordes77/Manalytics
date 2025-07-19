@@ -163,7 +163,7 @@ class AdvancedMetagameAnalyzer:
 
         self.temporal_trends = {
             "summary": temporal_trends,
-            "detailed": temporal_data,
+            "detailed": temporal_data.reset_index() if hasattr(temporal_data, 'reset_index') else temporal_data,
             "emerging": emerging,
             "declining": declining,
             "category_counts": temporal_trends["trend_category"]
@@ -404,18 +404,18 @@ class AdvancedMetagameAnalyzer:
             "diversity_metrics": diversity_metrics,
             "temporal_trends": {
                 "summary": (
-                    temporal_trends.get("summary", pd.DataFrame()).to_dict("index")
+                    temporal_trends.get("summary", pd.DataFrame()).reset_index().to_dict("index")
                     if not temporal_trends.get("summary", pd.DataFrame()).empty
                     else {}
                 ),
                 "category_counts": temporal_trends.get("category_counts", {}),
                 "emerging_archetypes": (
-                    temporal_trends.get("emerging", pd.DataFrame()).to_dict("index")
+                    temporal_trends.get("emerging", pd.DataFrame()).reset_index().to_dict("index")
                     if not temporal_trends.get("emerging", pd.DataFrame()).empty
                     else {}
                 ),
                 "declining_archetypes": (
-                    temporal_trends.get("declining", pd.DataFrame()).to_dict("index")
+                    temporal_trends.get("declining", pd.DataFrame()).reset_index().to_dict("index")
                     if not temporal_trends.get("declining", pd.DataFrame()).empty
                     else {}
                 ),
@@ -423,7 +423,7 @@ class AdvancedMetagameAnalyzer:
             "clustering_analysis": {
                 "archetype_clusters": clustering_analysis.get("archetype_clusters", {}),
                 "cluster_profiles": (
-                    clustering_analysis.get("cluster_profiles", pd.DataFrame()).to_dict(
+                    clustering_analysis.get("cluster_profiles", pd.DataFrame()).reset_index().to_dict(
                         "index"
                     )
                     if not clustering_analysis.get(
@@ -436,7 +436,7 @@ class AdvancedMetagameAnalyzer:
                 "correlation_matrix": (
                     correlation_analysis.get(
                         "correlation_matrix", pd.DataFrame()
-                    ).to_dict("index")
+                    ).reset_index().to_dict("index")
                     if not correlation_analysis.get(
                         "correlation_matrix", pd.DataFrame()
                     ).empty
@@ -452,7 +452,7 @@ class AdvancedMetagameAnalyzer:
             "card_analysis": {
                 "total_unique_cards": card_analysis.get("total_unique_cards", 0),
                 "top_cards": (
-                    card_analysis.get("top_cards", pd.DataFrame()).to_dict("index")
+                    card_analysis.get("top_cards", pd.DataFrame()).reset_index().to_dict("index")
                     if not card_analysis.get("top_cards", pd.DataFrame()).empty
                     else {}
                 ),

@@ -919,21 +919,20 @@ class MetagameChartsGenerator:
 
         return fig
 
-    def create_data_sources_pie_chart(self, data):
+    def create_data_sources_pie_chart(self, df: pd.DataFrame):
         """
         Crée un graphique en secteurs de la répartition des sources de données
         """
-        # Compter les sources de données
-        source_counts = {}
-        total_players = 0
-
-        for entry in data:
-            source = entry.get("tournament_source", "Unknown")
-
-            if source not in source_counts:
-                source_counts[source] = 0
-            source_counts[source] += 1
-            total_players += 1
+        # Compter les sources de données (excluant League 5-0 et fbettega.gg)
+        source_counts = df["tournament_source"].value_counts().to_dict()
+        
+        # Filtrer les sources à exclure
+        filtered_source_counts = {}
+        for source, count in source_counts.items():
+            if "League 5-0" not in source and "fbettega.gg" not in source:
+                filtered_source_counts[source] = count
+        
+        total_players = sum(filtered_source_counts.values())
 
         # Mapper les sources vers des noms d'affichage
         source_mapping = {
@@ -958,7 +957,7 @@ class MetagameChartsGenerator:
             "#FFA500",
         ]
 
-        for source, count in source_counts.items():
+        for source, count in filtered_source_counts.items():
             display_name = source_mapping.get(source, source)
             labels.append(display_name)
             values.append(count)
@@ -1000,17 +999,14 @@ class MetagameChartsGenerator:
 
         return fig
 
-    def create_archetype_evolution_chart(self, data):
+    def create_archetype_evolution_chart(self, df: pd.DataFrame):
         """
         Crée un graphique d'évolution temporelle des archétypes Standard
         """
         import pandas as pd
 
-        # Convertir en DataFrame si nécessaire
-        if isinstance(data, list):
-            df = pd.DataFrame(data)
-        else:
-            df = data.copy()
+        # Utiliser le DataFrame directement
+        df = df.copy()
 
         # Convertir les dates
         df["tournament_date"] = pd.to_datetime(df["tournament_date"])
@@ -1120,7 +1116,7 @@ class MetagameChartsGenerator:
 
         return fig
 
-    def create_main_archetypes_bar_chart(self, data):
+    def create_main_archetypes_bar_chart(self, df: pd.DataFrame):
         """
         Crée un graphique en barres des archétypes principaux avec les vraies données
 
@@ -1131,11 +1127,8 @@ class MetagameChartsGenerator:
         """
         import pandas as pd
 
-        # Convertir en DataFrame si nécessaire
-        if isinstance(data, list):
-            df = pd.DataFrame(data)
-        else:
-            df = data.copy()
+        # Utiliser le DataFrame directement
+        df = df.copy()
 
         # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
         archetype_column = self._get_archetype_column(df)
@@ -1251,7 +1244,7 @@ class MetagameChartsGenerator:
 
         return fig
 
-    def create_main_archetypes_bar_horizontal(self, data):
+    def create_main_archetypes_bar_horizontal(self, df: pd.DataFrame):
         """
         Crée un graphique en barres horizontal des archétypes principaux (top 12)
 
@@ -1262,11 +1255,8 @@ class MetagameChartsGenerator:
         """
         import pandas as pd
 
-        # Convertir en DataFrame si nécessaire
-        if isinstance(data, list):
-            df = pd.DataFrame(data)
-        else:
-            df = data.copy()
+        # Utiliser le DataFrame directement
+        df = df.copy()
 
         # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
         archetype_column = self._get_archetype_column(df)
@@ -1423,18 +1413,10 @@ class MetagameChartsGenerator:
                 stats_df
             ),
             "top_5_0": self.create_top_5_0_chart(df),
-            "data_sources_pie": self.create_data_sources_pie_chart(
-                df.to_dict("records")
-            ),  # NOUVEAU !
-            "archetype_evolution": self.create_archetype_evolution_chart(
-                df.to_dict("records")
-            ),  # NOUVEAU !
-            "main_archetypes_bar": self.create_main_archetypes_bar_chart(
-                df.to_dict("records")
-            ),  # NOUVEAU !
-            "main_archetypes_bar_horizontal": self.create_main_archetypes_bar_horizontal(
-                df.to_dict("records")
-            ),  # NOUVEAU !
+            "data_sources_pie": self.create_data_sources_pie_chart(df),  # CORRIGÉ !
+            "archetype_evolution": self.create_archetype_evolution_chart(df),  # CORRIGÉ !
+            "main_archetypes_bar": self.create_main_archetypes_bar_chart(df),  # CORRIGÉ !
+            "main_archetypes_bar_horizontal": self.create_main_archetypes_bar_horizontal(df),  # CORRIGÉ !
         }
 
         # Sauvegarder tous les graphiques

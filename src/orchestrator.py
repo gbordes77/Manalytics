@@ -1504,18 +1504,28 @@ class ManalyticsOrchestrator:
         try:
             from datetime import datetime
 
-            # Statistiques générales
-            total_tournaments = df["tournament_id"].nunique()
-            total_players = df[
+            # Statistiques générales - FILTER OUT UNWANTED SOURCES
+            # Filter out League 5-0 and fbettega.gg from main dashboard statistics
+            filtered_df = df[
+                ~df["tournament_source"].str.contains("League 5-0", case=False) &
+                ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+            ]
+            
+            total_tournaments = filtered_df["tournament_id"].nunique()
+            total_players = filtered_df[
                 "player_name"
             ].nunique()  # Count unique players like the old system
-            total_matches = len(df)  # Use total decks as matches
-            archetypes = sorted(df["archetype"].unique())
+            total_matches = len(filtered_df)  # Use total decks as matches
+            archetypes = sorted(filtered_df["archetype"].unique())
 
-            # Generate source badges
+            # Generate source badges (excluding League 5-0 and fbettega.gg)
             sources = df["tournament_source"].unique()
             source_badges = ""
             for source in sources:
+                # Exclure League 5-0 et fbettega.gg de la première page
+                if "League 5-0" in source or "fbettega.gg" in source:
+                    continue
+                    
                 if "melee.gg" in source:
                     badge_color = "#4ECDC4"  # Turquoise
                 elif "Challenge" in source:
@@ -1697,6 +1707,30 @@ class ManalyticsOrchestrator:
             .container {{ padding: 1rem; }}
             .viz-content {{ height: 400px; }}
         }}
+
+        /* Tournament Cards Styles */
+        .tournament-card:hover {{
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: var(--primary);
+        }}
+
+        .tournament-card a:hover {{
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
+            color: white !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(118, 42, 131, 0.3);
+        }}
+
+        .tournaments-grid {{
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }}
+
+        @media (max-width: 768px) {{
+            .tournaments-grid {{
+                grid-template-columns: 1fr;
+            }}
+        }}
     </style>
 </head>
 <body>
@@ -1828,6 +1862,88 @@ class ManalyticsOrchestrator:
         </div>
     </div>
 
+    <!-- Tournaments Section -->
+    <div class="tournaments-section" style="margin: 3rem 0;">
+        <div class="viz-card" style="background: var(--bg-white); border-radius: var(--border-radius); box-shadow: var(--shadow); overflow: hidden;">
+            <div class="viz-header" style="background: var(--bg-light); padding: 1.5rem; border-bottom: 1px solid #eee;">
+                <h3 class="viz-title" style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin: 0;">🏆 Tournois Analysés</h3>
+            </div>
+            <div class="viz-content" style="padding: 1.5rem; max-height: 600px; overflow-y: auto;">
+                <div class="tournaments-grid" style="display: grid; gap: 1rem;">
+"""
+
+            # Prepare tournament data for the dashboard - FILTER OUT UNWANTED SOURCES
+            tournaments_data = (
+                df.groupby(["tournament_source", "tournament_date", "tournament_id"])
+                .size()
+                .reset_index(name="deck_count")
+            )
+            
+            # Filter out unwanted sources from main dashboard
+            tournaments_data = tournaments_data[
+                ~tournaments_data["tournament_source"].str.contains("League 5-0", case=False) &
+                ~tournaments_data["tournament_source"].str.contains("fbettega.gg", case=False)
+            ]
+            
+            tournaments_data = tournaments_data.sort_values(
+                ["tournament_source", "tournament_date"]
+            )
+
+            # Add tournament cards
+            for _, row in tournaments_data.iterrows():
+                # Create safe CSS class for badge
+                source_name = row["tournament_source"].lower()
+                source_class = f"source-{source_name.replace('.', '').replace(' ', '-').replace('(', '').replace(')', '').replace('-5-0', '-5-0')}"
+                date_formatted = row["tournament_date"].strftime("%Y-%m-%d")
+                
+                # Determine badge color based on source
+                if "melee.gg" in source_name:
+                    badge_color = "#4ECDC4"
+                elif "challenge" in source_name:
+                    badge_color = "#e74c3c"
+                elif "league" in source_name:
+                    badge_color = "#27ae60"
+                else:
+                    badge_color = "#3498db"
+
+                # Create more explicit tournament title
+                tournament_id = row['tournament_id']
+                source = row['tournament_source']
+                
+                # Make tournament title more explicit
+                if "challenge" in source.lower():
+                    explicit_title = f"MTGO Challenge - {tournament_id}"
+                elif "melee.gg" in source.lower():
+                    explicit_title = f"Melee Tournament - {tournament_id}"
+                elif "other tournaments" in source.lower():
+                    explicit_title = f"MTGO Tournament - {tournament_id}"
+                else:
+                    explicit_title = f"{source} - {tournament_id}"
+
+                html_template += f"""
+                    <div class="tournament-card" style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 1rem; transition: all 0.3s ease;">
+                        <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="background-color: {badge_color}; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">{row['tournament_source']}</span>
+                            <span style="background: var(--bg-light); padding: 0.4rem 0.8rem; border-radius: 6px; font-weight: 600; color: var(--primary); font-size: 0.9rem;">{row['deck_count']} decks</span>
+                        </div>
+                        <div style="margin-bottom: 0.5rem;">
+                            <strong style="color: var(--text-dark); font-size: 1.1rem;">{explicit_title}</strong>
+                        </div>
+                        <div style="display: flex; justify-content: between; align-items: center;">
+                            <span style="color: #666; font-size: 0.9rem;">📅 {date_formatted}</span>
+                            <a href="{row['tournament_id']}" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 500; padding: 0.3rem 0.8rem; border-radius: 4px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border: 1px solid #dee2e6; transition: all 0.3s ease; font-size: 0.8rem;">
+                                🔗 Voir le tournoi
+                            </a>
+                        </div>
+                    </div>
+                """
+
+            html_template += """
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="navigation">
         <a href="{format_name.lower()}_{start_date}_{end_date}_tournaments_list.html" class="nav-button">📋 Tournament List</a>
         <a href="players_stats.html" class="nav-button">👥 Players Stats</a>
@@ -1863,9 +1979,15 @@ class ManalyticsOrchestrator:
     def generate_tournaments_list(self, output_dir: str, df: pd.DataFrame):
         """Generate tournament list sorted by source and date"""
         try:
-            # Prepare tournament data
+            # Prepare tournament data - FILTER OUT UNWANTED SOURCES
+            # Filter out League 5-0 and fbettega.gg from tournament list page
+            filtered_df = df[
+                ~df["tournament_source"].str.contains("League 5-0", case=False) &
+                ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+            ]
+            
             tournaments_data = (
-                df.groupby(["tournament_source", "tournament_date", "tournament_id"])
+                filtered_df.groupby(["tournament_source", "tournament_date", "tournament_id"])
                 .size()
                 .reset_index(name="deck_count")
             )
@@ -2737,7 +2859,9 @@ class ManalyticsOrchestrator:
             self._generate_leagues_dashboard(str(leagues_dir), leagues_df)
             self._generate_leagues_visualizations(str(leagues_dir), leagues_df)
             self._export_detailed_decklists(leagues_df, str(leagues_dir))
-            self._generate_archetype_pages(leagues_df.to_dict("records"), leagues_dir)
+            # Convert DataFrame to list of dictionaries for archetype pages
+            leagues_deck_data = leagues_df.to_dict("records")
+            self._generate_archetype_pages(leagues_deck_data, leagues_dir)
 
             self.logger.info(f"✅ Leagues analysis created: {leagues_dir}")
             return str(leagues_dir)
@@ -2913,6 +3037,12 @@ class ManalyticsOrchestrator:
             background: white;
             margin-top: 2rem;
         }}
+
+        .nav-button:hover {{
+            background: var(--secondary-color) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }}
     </style>
 </head>
 <body>
@@ -2966,6 +3096,51 @@ class ManalyticsOrchestrator:
                 </tbody>
             </table>
         </div>
+
+        <!-- Visualizations Section -->
+        <div class="viz-grid" style="display: grid; gap: 2rem; margin-top: 2rem;">
+            <div class="viz-card" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <div class="viz-header" style="background: var(--primary-color); padding: 1.5rem; border-bottom: 1px solid #eee;">
+                    <h3 class="viz-title" style="font-size: 1.4rem; font-weight: 600; color: white; margin: 0;">🏆 Top 5-0 Archetypes</h3>
+                </div>
+                <div class="viz-content" style="height: 650px;">
+                    <iframe src="visualizations/top_5_0.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+            </div>
+
+            <div class="viz-card" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <div class="viz-header" style="background: var(--primary-color); padding: 1.5rem; border-bottom: 1px solid #eee;">
+                    <h3 class="viz-title" style="font-size: 1.4rem; font-weight: 600; color: white; margin: 0;">🥧 Leagues Metagame Distribution</h3>
+                </div>
+                <div class="viz-content" style="height: 650px;">
+                    <iframe src="visualizations/metagame_pie.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+            </div>
+
+            <div class="viz-card" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <div class="viz-header" style="background: var(--primary-color); padding: 1.5rem; border-bottom: 1px solid #eee;">
+                    <h3 class="viz-title" style="font-size: 1.4rem; font-weight: 600; color: white; margin: 0;">🔥 Leagues Matchup Matrix</h3>
+                </div>
+                <div class="viz-content" style="height: 1275px;">
+                    <iframe src="visualizations/matchup_matrix.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+            </div>
+
+            <div class="viz-card" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <div class="viz-header" style="background: var(--primary-color); padding: 1.5rem; border-bottom: 1px solid #eee;">
+                    <h3 class="viz-title" style="font-size: 1.4rem; font-weight: 600; color: white; margin: 0;">📊 Main Archetypes</h3>
+                </div>
+                <div class="viz-content" style="height: 650px;">
+                    <iframe src="visualizations/main_archetypes_bar.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Section -->
+    <div class="navigation" style="text-align: center; margin: 30px 0; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <a href="../standard_2025-07-01_2025-07-15.html" class="nav-button" style="background: var(--primary-color); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 0 10px; text-decoration: none; display: inline-block; font-weight: 500; transition: all 0.3s ease;">← Retour à l'analyse principale</a>
+        <a href="decklists_detailed.html" class="nav-button" style="background: var(--primary-color); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 0 10px; text-decoration: none; display: inline-block; font-weight: 500; transition: all 0.3s ease;">📋 Decklists détaillés</a>
     </div>
 
     <div class="footer">
@@ -2984,10 +3159,14 @@ class ManalyticsOrchestrator:
         total_matches = len(df)  # Use deck count as matches
         archetypes = sorted(df["archetype"].unique())
 
-        # Generate source badges for MTGO sources
+        # Generate source badges for MTGO sources (excluding League 5-0 and fbettega.gg)
         sources = df["tournament_source"].unique()
         source_badges = ""
         for source in sources:
+            # Exclure League 5-0 et fbettega.gg de la première page
+            if "League 5-0" in source or "fbettega.gg" in source:
+                continue
+                
             if "League" in source:
                 badge_color = "#27ae60"  # Green
             elif "Challenge" in source:
