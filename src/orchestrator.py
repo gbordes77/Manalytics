@@ -1507,10 +1507,10 @@ class ManalyticsOrchestrator:
             # Statistiques générales - FILTER OUT UNWANTED SOURCES
             # Filter out League 5-0 and fbettega.gg from main dashboard statistics
             filtered_df = df[
-                ~df["tournament_source"].str.contains("League 5-0", case=False) &
-                ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+                ~df["tournament_source"].str.contains("League 5-0", case=False)
+                & ~df["tournament_source"].str.contains("fbettega.gg", case=False)
             ]
-            
+
             total_tournaments = filtered_df["tournament_id"].nunique()
             total_players = filtered_df[
                 "player_name"
@@ -1525,7 +1525,7 @@ class ManalyticsOrchestrator:
                 # Exclure League 5-0 et fbettega.gg de la première page
                 if "League 5-0" in source or "fbettega.gg" in source:
                     continue
-                    
+
                 if "melee.gg" in source:
                     badge_color = "#4ECDC4"  # Turquoise
                 elif "Challenge" in source:
@@ -1878,13 +1878,17 @@ class ManalyticsOrchestrator:
                 .size()
                 .reset_index(name="deck_count")
             )
-            
+
             # Filter out unwanted sources from main dashboard
             tournaments_data = tournaments_data[
-                ~tournaments_data["tournament_source"].str.contains("League 5-0", case=False) &
-                ~tournaments_data["tournament_source"].str.contains("fbettega.gg", case=False)
+                ~tournaments_data["tournament_source"].str.contains(
+                    "League 5-0", case=False
+                )
+                & ~tournaments_data["tournament_source"].str.contains(
+                    "fbettega.gg", case=False
+                )
             ]
-            
+
             tournaments_data = tournaments_data.sort_values(
                 ["tournament_source", "tournament_date"]
             )
@@ -1895,7 +1899,7 @@ class ManalyticsOrchestrator:
                 source_name = row["tournament_source"].lower()
                 source_class = f"source-{source_name.replace('.', '').replace(' ', '-').replace('(', '').replace(')', '').replace('-5-0', '-5-0')}"
                 date_formatted = row["tournament_date"].strftime("%Y-%m-%d")
-                
+
                 # Determine badge color based on source
                 if "melee.gg" in source_name:
                     badge_color = "#4ECDC4"
@@ -1907,9 +1911,9 @@ class ManalyticsOrchestrator:
                     badge_color = "#3498db"
 
                 # Create more explicit tournament title
-                tournament_id = row['tournament_id']
-                source = row['tournament_source']
-                
+                tournament_id = row["tournament_id"]
+                source = row["tournament_source"]
+
                 # Make tournament title more explicit
                 if "challenge" in source.lower():
                     explicit_title = f"MTGO Challenge - {tournament_id}"
@@ -1982,12 +1986,14 @@ class ManalyticsOrchestrator:
             # Prepare tournament data - FILTER OUT UNWANTED SOURCES
             # Filter out League 5-0 and fbettega.gg from tournament list page
             filtered_df = df[
-                ~df["tournament_source"].str.contains("League 5-0", case=False) &
-                ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+                ~df["tournament_source"].str.contains("League 5-0", case=False)
+                & ~df["tournament_source"].str.contains("fbettega.gg", case=False)
             ]
-            
+
             tournaments_data = (
-                filtered_df.groupby(["tournament_source", "tournament_date", "tournament_id"])
+                filtered_df.groupby(
+                    ["tournament_source", "tournament_date", "tournament_id"]
+                )
                 .size()
                 .reset_index(name="deck_count")
             )
@@ -2180,18 +2186,34 @@ class ManalyticsOrchestrator:
                 source_class = f"source-{source_name.replace('.', '').replace(' ', '-').replace('(', '').replace(')', '').replace('-5-0', '-5-0')}"
                 date_formatted = row["tournament_date"].strftime("%Y-%m-%d")
 
-                # Create clickable link for tournament
+                # Create clickable link for tournament (URL hidden, only button visible)
                 tournament_url = row["tournament_id"]
                 if tournament_url.startswith("http"):
-                    tournament_link = f'<a href="{tournament_url}" target="_blank" class="tournament-link">🔗 View tournament <span class="external-icon">↗</span></a>'
+                    # Extract a clean tournament name from the URL
+                    if "melee.gg" in tournament_url:
+                        tournament_name = "Melee.gg Tournament"
+                    elif "mtgo.com" in tournament_url:
+                        if "challenge" in tournament_url:
+                            tournament_name = "MTGO Challenge"
+                        elif "league" in tournament_url:
+                            tournament_name = "MTGO League"
+                        else:
+                            tournament_name = "MTGO Tournament"
+                    elif "topdeck.gg" in tournament_url:
+                        tournament_name = "TopDeck.gg Tournament"
+                    else:
+                        tournament_name = "Tournament"
+                    
+                    tournament_link = f'<a href="{tournament_url}" target="_blank" class="tournament-link">🔗 Voir le tournoi <span class="external-icon">↗</span></a>'
                 else:
+                    tournament_name = "Tournament"
                     tournament_link = tournament_url
 
                 tournaments_html += f"""
                 <tr>
                     <td><span class="source-badge {source_class}">{row['tournament_source']}</span></td>
                     <td>{date_formatted}</td>
-                    <td>{tournament_link}</td>
+                    <td><strong>{tournament_name}</strong><br>{tournament_link}</td>
                     <td><span class="deck-count">{row['deck_count']}</span></td>
                 </tr>
 """
@@ -2625,12 +2647,35 @@ class ManalyticsOrchestrator:
             # Generate comprehensive analysis
             analysis_report = self.advanced_analyzer.generate_comprehensive_analysis()
 
+            # Clean the analysis report to ensure JSON serialization
+            def clean_for_json(obj):
+                """Recursively clean object for JSON serialization"""
+                if isinstance(obj, dict):
+                    return {str(k): clean_for_json(v) for k, v in obj.items()}
+                elif isinstance(obj, list):
+                    return [clean_for_json(item) for item in obj]
+                elif isinstance(obj, (pd.DataFrame, pd.Series)):
+                    return (
+                        obj.to_dict(orient="records")
+                        if hasattr(obj, "to_dict")
+                        else obj.tolist()
+                    )
+                elif isinstance(obj, bool):
+                    return obj  # bool is JSON serializable
+                elif isinstance(obj, (int, float, str, type(None))):
+                    return obj  # These are JSON serializable
+                else:
+                    return str(obj)  # Convert anything else to string
+
+            # Clean the analysis report
+            cleaned_report = clean_for_json(analysis_report)
+
             # Save advanced analysis report
             import json
 
             advanced_file = Path(output_dir) / "advanced_analysis.json"
             with open(advanced_file, "w", encoding="utf-8") as f:
-                json.dump(analysis_report, f, indent=2, ensure_ascii=False)
+                json.dump(cleaned_report, f, indent=2, ensure_ascii=False)
 
             self.logger.info(f"✅ Advanced analysis saved to {advanced_file}")
 
@@ -2910,7 +2955,8 @@ class ManalyticsOrchestrator:
 
         self.logger.info("📈 Generating Leagues metagame charts...")
         charts_generator = MetagameChartsGenerator()
-        charts_result = charts_generator.generate_all_charts(str(viz_dir), df)
+        # CORRECTION : Inverser les paramètres (df en premier, output_dir en second)
+        charts_result = charts_generator.generate_all_charts(df, str(viz_dir))
 
         return {"matchup_matrix": matchup_result, "metagame_charts": charts_result}
 
@@ -3166,7 +3212,7 @@ class ManalyticsOrchestrator:
             # Exclure League 5-0 et fbettega.gg de la première page
             if "League 5-0" in source or "fbettega.gg" in source:
                 continue
-                
+
             if "League" in source:
                 badge_color = "#27ae60"  # Green
             elif "Challenge" in source:
