@@ -24,6 +24,15 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-19 07:45] - Claude_2025-07-19_07-45
+**Fichier(s) concerné(s)** : src/python/scraper/fbettega_clients/
+**Type** : MODIFICATION
+**Description** : Intégration fbettega pour plus de tournois - reproduction écosystème Jilliac
+**Justification** : Pipeline fonctionne mais manque de tournois, intégrer fbettega selon architecture Jilliac
+**Tests** : Comparaison nombre tournois avant/après intégration fbettega
+**Rollback** : git revert du commit correspondant
+
+
 ### [2025-07-19 07:28] - Claude_2025-07-19_07-28
 **Fichier(s) concerné(s)** : src/python/scraper/fbettega_clients/
 **Type** : MODIFICATION
