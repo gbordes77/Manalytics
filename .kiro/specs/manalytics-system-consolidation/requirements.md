@@ -110,7 +110,7 @@ The primary objective is to methodically reproduce each step of the original wor
 
 #### Acceptance Criteria
 
-1. WHEN implementing any component THEN the developer SHALL commit and push changes to https://github.com/gbordes77/Manalytics at least every 2 hours of active work
+1. WHEN implementing any component THEN the developer SHALL commit and push changes to https://github.com/gbordes77/Manalytics at least every 20 minutes of active work
 2. WHEN completing any sub-task THEN the developer SHALL immediately commit and push the completed work with descriptive commit messages
 3. WHEN making significant progress THEN the developer SHALL push intermediate working states even if not fully complete
 4. WHEN encountering blockers THEN the developer SHALL commit and push current state before investigating solutions
