@@ -392,10 +392,42 @@ class MetagameChartsGenerator:
         Returns:
             pd.Series avec les archétypes triés par pourcentage décroissant
         """
+        # 🚨 FIX CRITIQUE: Vérifier si le DataFrame est vide avant traitement
+        if df.empty:
+            self.logger.warning("DataFrame vide passé à _get_top_archetypes_consistent")
+            return pd.Series(dtype=float)
+
+        # CORRECTION: Filtrer pour correspondre exactement à la liste de Jilliac
+        # 🚨 FIX: Inclure les données League 5-0 au lieu de les exclure
+        filtered_df = df[
+            (
+                df["tournament_source"].str.contains("Challenge", case=False)
+                | df["tournament_source"].str.contains("melee.gg", case=False)
+                | df["tournament_source"].str.contains("League 5-0", case=False)
+            )
+            & ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+            & ~df["tournament_source"].str.contains("Other Tournaments", case=False)
+        ]
+
+        # 🚨 FIX CRITIQUE: Vérifier si le DataFrame filtré est vide
+        if filtered_df.empty:
+            self.logger.warning(
+                "Aucune donnée après filtrage dans _get_top_archetypes_consistent"
+            )
+            # Fallback: utiliser le DataFrame original si le filtrage est trop restrictif
+            filtered_df = df
+            if filtered_df.empty:
+                return pd.Series(dtype=float)
+
         # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
-        archetype_column = self._get_archetype_column(df)
-        archetype_counts = df[archetype_column].value_counts()
-        total_entries = len(df)
+        archetype_column = self._get_archetype_column(filtered_df)
+        archetype_counts = filtered_df[archetype_column].value_counts()
+        total_entries = len(filtered_df)
+
+        # 🚨 FIX CRITIQUE: Vérifier si nous avons des données
+        if total_entries == 0:
+            self.logger.warning("Aucune entrée trouvée pour calculer les archétypes")
+            return pd.Series(dtype=float)
 
         # Calculer les pourcentages
         archetype_shares = (archetype_counts / total_entries * 100).round(2)
@@ -438,17 +470,49 @@ class MetagameChartsGenerator:
         # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
         main_archetypes = self._get_top_archetypes_consistent(df, max_archetypes=12)
 
+        # 🚨 FIX CRITIQUE: Vérifier si nous avons des données
+        if main_archetypes.empty:
+            self.logger.warning("Aucun archétype trouvé pour create_metagame_pie_chart")
+            # Retourner un graphique vide avec message
+            fig = go.Figure()
+            fig.add_annotation(
+                text="Aucune donnée disponible pour cette période",
+                xref="paper",
+                yref="paper",
+                x=0.5,
+                y=0.5,
+                xanchor="center",
+                yanchor="middle",
+                showarrow=False,
+                font=dict(size=16),
+            )
+            fig.update_layout(
+                title="Répartition du Métagame - Aucune donnée", width=1000, height=700
+            )
+            return fig
+
         # Créer le pie chart
         fig = go.Figure()
 
         # Couleurs MTG pour chaque archétype
         archetype_names = main_archetypes.index.tolist()
 
-        # Obtenir les guildes pour chaque archétype depuis les données
+        # CORRECTION: Filtrer pour correspondre exactement à la liste de Jilliac
+        filtered_df = df[
+            (
+                df["tournament_source"].str.contains("Challenge", case=False)
+                | df["tournament_source"].str.contains("melee.gg", case=False)
+            )
+            & ~df["tournament_source"].str.contains("League 5-0", case=False)
+            & ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+            & ~df["tournament_source"].str.contains("Other Tournaments", case=False)
+        ]
+
+        # Obtenir les guildes pour chaque archétype depuis les données filtrées
         guild_names = []
         for archetype in archetype_names:
             # Trouver la guilde la plus commune pour cet archétype
-            archetype_data = df[df["archetype"] == archetype]
+            archetype_data = filtered_df[filtered_df["archetype"] == archetype]
             if not archetype_data.empty and "guild_name" in archetype_data.columns:
                 most_common_guild = archetype_data["guild_name"].mode()
                 guild_names.append(
@@ -506,15 +570,26 @@ class MetagameChartsGenerator:
 
     def calculate_archetype_stats(self, df: pd.DataFrame) -> pd.DataFrame:
         """Calcule les statistiques par archétype avec intégration des couleurs"""
+        # CORRECTION: Filtrer pour correspondre exactement à la liste de Jilliac
+        filtered_df = df[
+            (
+                df["tournament_source"].str.contains("Challenge", case=False)
+                | df["tournament_source"].str.contains("melee.gg", case=False)
+            )
+            & ~df["tournament_source"].str.contains("League 5-0", case=False)
+            & ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+            & ~df["tournament_source"].str.contains("Other Tournaments", case=False)
+        ]
+
         # Utiliser archetype_with_colors pour l'affichage avec les couleurs intégrées
         group_column = (
             "archetype_with_colors"
-            if "archetype_with_colors" in df.columns
+            if "archetype_with_colors" in filtered_df.columns
             else "archetype"
         )
 
         stats_df = (
-            df.groupby(group_column)
+            filtered_df.groupby(group_column)
             .agg(
                 {
                     "winrate": ["mean", "std", "count"],
@@ -940,13 +1015,13 @@ class MetagameChartsGenerator:
         """
         Crée un graphique en secteurs de la répartition des sources de données
         """
-        # Compter les sources de données (excluant League 5-0 et fbettega.gg)
+        # CORRECTION: Compter les sources de données (seulement Challenge et melee.gg)
         source_counts = df["tournament_source"].value_counts().to_dict()
 
-        # Filtrer les sources à exclure
+        # CORRECTION: Filtrer pour correspondre exactement à la liste de Jilliac
         filtered_source_counts = {}
         for source, count in source_counts.items():
-            if "League 5-0" not in source and "fbettega.gg" not in source:
+            if "Challenge" in source or "melee.gg" in source:
                 filtered_source_counts[source] = count
 
         total_players = sum(filtered_source_counts.values())
@@ -1022,21 +1097,31 @@ class MetagameChartsGenerator:
         """
         import pandas as pd
 
-        # Utiliser le DataFrame directement
-        df = df.copy()
+        # CORRECTION: Filtrer pour correspondre exactement à la liste de Jilliac
+        filtered_df = df[
+            (
+                df["tournament_source"].str.contains("Challenge", case=False)
+                | df["tournament_source"].str.contains("melee.gg", case=False)
+            )
+            & ~df["tournament_source"].str.contains("League 5-0", case=False)
+            & ~df["tournament_source"].str.contains("fbettega.gg", case=False)
+            & ~df["tournament_source"].str.contains("Other Tournaments", case=False)
+        ].copy()
 
         # Convertir les dates
-        df["tournament_date"] = pd.to_datetime(df["tournament_date"])
-        df["date"] = df["tournament_date"].dt.date
+        filtered_df["tournament_date"] = pd.to_datetime(filtered_df["tournament_date"])
+        filtered_df["date"] = filtered_df["tournament_date"].dt.date
 
         # Grouper par date et archétype avec couleurs
         archetype_column = (
             "archetype_with_colors"
-            if "archetype_with_colors" in df.columns
+            if "archetype_with_colors" in filtered_df.columns
             else "archetype"
         )
         daily_counts = (
-            df.groupby(["date", archetype_column]).size().reset_index(name="count")
+            filtered_df.groupby(["date", archetype_column])
+            .size()
+            .reset_index(name="count")
         )
 
         # Créer un pivot pour avoir les archétypes en colonnes
@@ -1045,7 +1130,7 @@ class MetagameChartsGenerator:
         ).fillna(0)
 
         # Trier les archétypes par popularité totale
-        archetype_totals = df[archetype_column].value_counts()
+        archetype_totals = filtered_df[archetype_column].value_counts()
         top_archetypes = archetype_totals.head(
             5
         ).index.tolist()  # Limiter à 5 pour la lisibilité
@@ -1227,7 +1312,10 @@ class MetagameChartsGenerator:
             showline=True,
             linewidth=1,
             linecolor="rgba(128,128,128,0.5)",
-            range=[0, max(percentages) * 1.1],
+            range=[
+                0,
+                max(percentages) * 1.1 if percentages else 10,
+            ],  # 🚨 FIX: Gérer liste vide
         )
 
         return fig
@@ -1248,6 +1336,29 @@ class MetagameChartsGenerator:
 
         # 🎯 UTILISER LA FONCTION CENTRALISÉE pour garantir cohérence
         top_archetypes = self._get_top_archetypes_consistent(df, max_archetypes=12)
+
+        # 🚨 FIX CRITIQUE: Vérifier si nous avons des données
+        if top_archetypes.empty:
+            self.logger.warning(
+                "Aucun archétype trouvé pour create_main_archetypes_bar_horizontal"
+            )
+            # Retourner un graphique vide avec message
+            fig = go.Figure()
+            fig.add_annotation(
+                text="Aucune donnée disponible pour cette période",
+                xref="paper",
+                yref="paper",
+                x=0.5,
+                y=0.5,
+                xanchor="center",
+                yanchor="middle",
+                showarrow=False,
+                font=dict(size=16),
+            )
+            fig.update_layout(
+                title="Archétypes Principaux - Aucune donnée", width=1200, height=700
+            )
+            return fig
 
         archetypes = list(top_archetypes.index)
         percentages = list(top_archetypes.values)
@@ -1317,7 +1428,10 @@ class MetagameChartsGenerator:
             showline=True,
             linewidth=1,
             linecolor="rgba(128,128,128,0.5)",
-            range=[0, max(percentages) * 1.1],
+            range=[
+                0,
+                max(percentages) * 1.1 if percentages else 10,
+            ],  # 🚨 FIX: Gérer liste vide
         )
         return fig
 
@@ -1373,7 +1487,6 @@ class MetagameChartsGenerator:
             "bubble_winrate_presence": self.create_bubble_chart_winrate_presence(
                 stats_df
             ),
-            "top_5_0": self.create_top_5_0_chart(df),
             "data_sources_pie": self.create_data_sources_pie_chart(df),  # CORRIGÉ !
             "archetype_evolution": self.create_archetype_evolution_chart(
                 df

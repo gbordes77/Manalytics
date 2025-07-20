@@ -221,6 +221,37 @@ def _get_archetype_column(self, df):
 **Tests** : Pipeline lancé avec succès (2025-05-08 à 2025-06-09), 5521 decks analysés, 14 visualisations générées
 **Rollback** : Retirer l'entrée ajoutée dans la section équipe du fichier INSTRUCTIONS_NOUVELLE_EQUIPE.md
 
+### [2025-07-20 11:02] - Claude_2025-07-20_11-02
+**Fichier(s) concerné(s)** : `temp_fbettega/New_website/MtgMeleeClientV2.py`, `src/orchestrator.py`
+**Type** : CORRECTION CRITIQUE - PHASE 1
+**Description** : Correction erreur syntaxe MtgMeleeClientV2.py ligne 188 et amélioration gestion erreurs fbettega
+**Justification** : Pipeline fonctionne mais erreur "invalid syntax" bloque intégration fbettega, empêchant récupération de données supplémentaires
+**Problèmes identifiés** :
+- ❌ Erreur syntaxe MtgMeleeClientV2.py ligne 188
+- ❌ Intégration fbettega échoue (0 tournois récupérés)
+- ⚠️ Règle "1 an minimum de données" violée (bypass temporaire)
+- ⚠️ Dépendance forte à MTGODecklistCache (découplage nécessaire)
+**Tests** : Vérifier que l'intégration fbettega fonctionne et récupère des tournois
+**Rollback** : git revert du commit correspondant
+
+### [2025-07-20 11:05] - Claude_2025-07-20_11-05
+**Fichier(s) concerné(s)** : `src/python/scraper/fbettega_integrator.py`, `src/orchestrator.py`
+**Type** : CORRECTION PERFORMANCE - PHASE 1
+**Description** : Amélioration gestion timeouts et rate limiting pour intégration fbettega
+**Justification** : MTGO timeout 30s et Melee 403 rate limiting empêchent récupération de données supplémentaires
+**Problèmes identifiés** :
+- ❌ MTGO timeout 30s (trop court pour scraping complet)
+- ❌ Melee 403 rate limiting (pas de fallback web scraping)
+- ⚠️ Pas de circuit breaker pour gérer les échecs
+- ⚠️ Pas de cache intelligent pour éviter re-scraping
+**Solutions** :
+- Augmenter timeout MTGO à 60s
+- Ajouter fallback web scraping pour Melee
+- Implémenter circuit breaker pattern
+- Optimiser cache avec TTL intelligent
+**Tests** : Vérifier récupération de données fbettega et réduction des timeouts
+**Rollback** : git revert du commit correspondant
+
 ---
 
 ## 🔧 **INSTRUCTIONS D'UTILISATION**

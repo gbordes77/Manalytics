@@ -90,22 +90,46 @@ class FbettegaIntegrator:
     async def _fetch_from_source(
         self, source_name: str, client, format_name: str, start_date: str, end_date: str
     ) -> List[Dict]:
-        """Fetch tournaments from a specific source"""
+        """Fetch tournaments from a specific source with enhanced error handling"""
         try:
-            async with client:
-                tournaments = await client.fetch_tournaments(
-                    format_name, start_date, end_date
-                )
+            # 🚨 FIX: Timeout spécifique par source - AUGMENTÉ pour éviter les timeouts
+            timeout = (
+                120 if source_name == "mtgo" else 90 if source_name == "melee" else 60
+            )  # MTGO plus lent, Melee rate limiting
 
-                # Ajouter métadonnées fbettega
+            async with asyncio.timeout(timeout):
+                async with client:
+                    tournaments = await client.fetch_tournaments(
+                        format_name, start_date, end_date
+                    )
+
+                    # Ajouter métadonnées fbettega
                 for tournament in tournaments:
                     tournament["fbettega_source"] = source_name
                     tournament["fbettega_timestamp"] = datetime.now().isoformat()
 
-                return tournaments
+                    return tournaments
 
+        except asyncio.TimeoutError:
+            self.logger.error(
+                f"⏱️  Timeout fetching from {source_name} after {timeout}s"
+            )
+            return []
         except Exception as e:
-            self.logger.error(f"Error fetching from {source_name}: {e}")
+            # 🚨 FIX: Logging détaillé selon le type d'erreur
+            if "403" in str(e) or "Forbidden" in str(e):
+                self.logger.error(
+                    f"🚫 Access forbidden for {source_name} - API may be restricted"
+                )
+            elif "401" in str(e) or "Unauthorized" in str(e):
+                self.logger.error(
+                    f"🔐 Authentication failed for {source_name} - check credentials"
+                )
+            elif "429" in str(e) or "rate limit" in str(e).lower():
+                self.logger.error(f"⚡ Rate limited by {source_name} - try again later")
+            else:
+                self.logger.error(f"❌ Error fetching from {source_name}: {e}")
+
             return []
 
     def _deduplicate_tournaments(self, tournaments: List[Dict]) -> List[Dict]:

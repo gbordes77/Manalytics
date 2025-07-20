@@ -4,7 +4,7 @@ Modules pour scraper MTGO, Melee, TopDeck selon l'architecture Jilliac
 """
 
 from .ManatraderClient import ManatraderClient
-from .MtgMeleeClientV2 import MtgMeleeClientV2
+from .MtgMeleeClientV2_simple import MtgMeleeClientV2
 from .MTGOclient import MTGOClient
 from .TopDeckClient import TopDeckClient
 

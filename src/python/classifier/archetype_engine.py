@@ -257,19 +257,52 @@ class ArchetypeEngine:
         try:
             condition_type = condition.get("Type", "").lower()
 
-            # MTGOFormatData standard conditions
+            # 🚨 FIX: CONDITIONS COMPLÈTES MTGOFormatData (12 types supportés)
             if condition_type == "inmainboard":
                 return self.evaluate_inmainboard_condition(mainboard, condition)
+            elif condition_type == "insideboard":
+                return self.evaluate_insideboard_condition(sideboard, condition)
+            elif condition_type == "inmainorsideboard":
+                return self.evaluate_inmainorsideboard_condition(
+                    mainboard, sideboard, condition
+                )
             elif condition_type == "oneormoreinmainboard":
                 return self.evaluate_oneormoreinmainboard_condition(
                     mainboard, condition
+                )
+            elif condition_type == "oneormoreinsideboard":
+                return self.evaluate_oneormoreinsideboard_condition(
+                    sideboard, condition
+                )
+            elif condition_type == "oneormoreinmainorsideboard":
+                return self.evaluate_oneormoreinmainorsideboard_condition(
+                    mainboard, sideboard, condition
+                )
+            # 🚨 FIX: Conditions TwoOrMore manquantes
+            elif condition_type == "twoormoreinmainboard":
+                return self.evaluate_twoormoreinmainboard_condition(
+                    mainboard, condition
+                )
+            elif condition_type == "twoormoreinsideboard":
+                return self.evaluate_twoormoreinsideboard_condition(
+                    sideboard, condition
+                )
+            elif condition_type == "twoormoreinmainorsideboard":
+                return self.evaluate_twoormoreinmainorsideboard_condition(
+                    mainboard, sideboard, condition
                 )
             elif condition_type == "doesnotcontain":
                 return self.evaluate_doesnotcontain_condition(
                     mainboard, sideboard, condition
                 )
-            elif condition_type == "insideboard":
-                return self.evaluate_insideboard_condition(sideboard, condition)
+            elif condition_type == "doesnotcontainmainboard":
+                return self.evaluate_doesnotcontainmainboard_condition(
+                    mainboard, condition
+                )
+            elif condition_type == "doesnotcontainsideboard":
+                return self.evaluate_doesnotcontainsideboard_condition(
+                    sideboard, condition
+                )
             # Legacy conditions
             elif condition_type == "contains":
                 return self.evaluate_contains_condition(mainboard, sideboard, condition)
@@ -398,6 +431,122 @@ class ArchetypeEngine:
                 return True
 
         return False
+
+    # 🚨 FIX: Méthodes manquantes pour les conditions complètes MTGOFormatData
+
+    def evaluate_inmainorsideboard_condition(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'InMainOrSideboard' - toutes les cartes doivent être quelque part"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if (
+                mainboard.get(normalized_name, 0) == 0
+                and sideboard.get(normalized_name, 0) == 0
+            ):
+                return False
+        return True
+
+    def evaluate_oneormoreinsideboard_condition(
+        self, sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'OneOrMoreInSideboard' - au moins une carte doit être en sideboard"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if sideboard.get(normalized_name, 0) > 0:
+                return True
+        return False
+
+    def evaluate_oneormoreinmainorsideboard_condition(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'OneOrMoreInMainOrSideboard' - au moins une carte quelque part"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if (
+                mainboard.get(normalized_name, 0) > 0
+                or sideboard.get(normalized_name, 0) > 0
+            ):
+                return True
+        return False
+
+    def evaluate_twoormoreinmainboard_condition(
+        self, mainboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'TwoOrMoreInMainboard' - au moins 2 cartes doivent être présentes"""
+        cards = condition.get("Cards", [])
+        count = 0
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if mainboard.get(normalized_name, 0) > 0:
+                count += 1
+                if count >= 2:
+                    return True
+        return False
+
+    def evaluate_twoormoreinsideboard_condition(
+        self, sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'TwoOrMoreInSideboard' - au moins 2 cartes doivent être en sideboard"""
+        cards = condition.get("Cards", [])
+        count = 0
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if sideboard.get(normalized_name, 0) > 0:
+                count += 1
+                if count >= 2:
+                    return True
+        return False
+
+    def evaluate_twoormoreinmainorsideboard_condition(
+        self, mainboard: Dict[str, int], sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'TwoOrMoreInMainOrSideboard' - au moins 2 cartes quelque part"""
+        cards = condition.get("Cards", [])
+        count = 0
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if (
+                mainboard.get(normalized_name, 0) > 0
+                or sideboard.get(normalized_name, 0) > 0
+            ):
+                count += 1
+                if count >= 2:
+                    return True
+        return False
+
+    def evaluate_doesnotcontainmainboard_condition(
+        self, mainboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'DoesNotContainMainboard' - aucune des cartes ne doit être en mainboard"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if mainboard.get(normalized_name, 0) > 0:
+                return False
+        return True
+
+    def evaluate_doesnotcontainsideboard_condition(
+        self, sideboard: Dict[str, int], condition: Dict
+    ) -> bool:
+        """Évalue une condition 'DoesNotContainSideboard' - aucune des cartes ne doit être en sideboard"""
+        cards = condition.get("Cards", [])
+
+        for card_name in cards:
+            normalized_name = self.normalize_card_name(card_name)
+            if sideboard.get(normalized_name, 0) > 0:
+                return False
+        return True
 
     def get_classification_stats(self, format_name: str) -> Dict[str, Any]:
         """Retourne les statistiques de classification"""
