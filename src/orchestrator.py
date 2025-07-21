@@ -968,12 +968,37 @@ class ManalyticsOrchestrator:
         return None
 
     def _process_deck(self, deck, tournament_info, tournament_date, file_path):
-        """Traiter un deck individual (comme l'ancien système)"""
+        """
+        Traiter un deck individual avec tous les workarounds appliqués
+
+        🔧 WORKAROUNDS APPLIQUÉS:
+        - Workaround #2: Mapping JSON compatible Newtonsoft
+        - Workaround #3: Gestion des dates nullable
+        - Workaround #7: Calculs de précision contrôlée
+        """
+        from src.python.workarounds.date_handler import DateHandler
+        from src.python.workarounds.json_mapper import JsonMapper
+        from src.python.workarounds.precision_calculator import PrecisionCalculator
+
         # Extraire les wins/losses
         wins, losses = self._extract_results(deck)
 
-        # Get mainboard for analysis
+        # 🔧 Workaround #2: Mapping JSON avec compatibilité Newtonsoft
+        # Get mainboard and sideboard avec mapping correct
         mainboard = deck.get("Mainboard", deck.get("mainboard", []))
+        sideboard = deck.get("Sideboard", deck.get("sideboard", []))
+
+        # Normaliser les cartes avec le mapper JSON
+        if mainboard:
+            mainboard = [
+                JsonMapper.map_deck_item(card) if isinstance(card, dict) else card
+                for card in mainboard
+            ]
+        if sideboard:
+            sideboard = [
+                JsonMapper.map_deck_item(card) if isinstance(card, dict) else card
+                for card in sideboard
+            ]
 
         # Classify archetype with Advanced Archetype Classifier (already includes color integration)
         archetype_with_colors = self._classify_archetype(mainboard)
@@ -991,9 +1016,22 @@ class ManalyticsOrchestrator:
 
         # Determine source with MTGO differentiation
         source = self._determine_source(file_path, tournament_info)
+        # 🔧 Assurer que source n'est jamais None (évite KeyError: 'tournament_source')
+        if not source:
+            source = "Unknown"
 
-        # Extract deck URL from AnchorUri field
-        deck_url = deck.get("AnchorUri", deck.get("anchor_uri", ""))
+        # Extract deck URL from AnchorUri field avec mapping JSON
+        deck_url = deck.get(
+            "AnchorUri", deck.get("anchor_uri", deck.get("deck_url", ""))
+        )
+
+        # 🔧 Workaround #7: Calculs de winrate avec précision contrôlée
+        precision_calc = PrecisionCalculator()
+        winrate = (
+            precision_calc.calculate_winrate(wins, losses)
+            if (wins + losses) > 0
+            else 0.0
+        )
 
         return {
             "tournament_id": tournament_info.get(
@@ -1003,7 +1041,7 @@ class ManalyticsOrchestrator:
                 "Name", tournament_info.get("name", "Tournoi")
             ),
             "tournament_date": tournament_date,
-            "tournament_source": source,
+            "tournament_source": source,  # 🔧 Toujours défini maintenant
             "format": self.format,
             "player_name": deck.get("Player", deck.get("player", "")),
             "archetype": archetype,
@@ -1015,9 +1053,11 @@ class ManalyticsOrchestrator:
             "losses": losses,
             "draws": deck.get("draws", 0),
             "matches_played": wins + losses,
-            "winrate": wins / max(1, wins + losses) if (wins + losses) > 0 else 0,
+            "winrate": winrate,  # 🔧 Précision contrôlée
             "placement": deck.get("placement", 0),
-            "deck_cards": deck.get("Mainboard", deck.get("mainboard", [])),
+            # 🔧 Workaround CRITIQUE: Utiliser mainboard/sideboard au lieu de deck_cards
+            "mainboard": mainboard,  # CORRECTION: Utiliser mainboard au lieu de deck_cards
+            "sideboard": sideboard,  # AJOUT: Inclure sideboard
             "deck_url": deck_url,
         }
 
@@ -2388,15 +2428,25 @@ class ManalyticsOrchestrator:
             detailed_csv = output_path / "decklists_detailed.csv"
             detailed_json = output_path / "decklists_detailed.json"
 
+            # 🔧 Workaround #3: Gestion des dates avec DateHandler
+            from src.python.workarounds.date_handler import DateHandler
+
             # Prepare detailed export data
             export_data = []
             for _, row in df.iterrows():
-                # Convert Timestamp to string for JSON serialization
+                # 🔧 Workaround #3: Formatage des dates avec DateHandler
                 tournament_date = row.get("tournament_date", "Unknown")
                 if hasattr(tournament_date, "strftime"):
-                    tournament_date = tournament_date.strftime("%Y-%m-%d")
+                    tournament_date = DateHandler.format_date_for_output(
+                        tournament_date
+                    )
                 elif tournament_date != "Unknown":
                     tournament_date = str(tournament_date)
+
+                # 🔧 Assurer que tournament_source est toujours présent
+                tournament_source = row.get("tournament_source", "Unknown")
+                if not tournament_source:
+                    tournament_source = "Unknown"
 
                 deck_data = {
                     "deck_id": f"{row.get('tournament_id', 'unknown')}_{row.get('player_name', 'unknown')}",
@@ -2409,10 +2459,16 @@ class ManalyticsOrchestrator:
                     "player_name": row.get("player_name", "Unknown"),
                     "tournament_name": row.get("tournament_name", "Unknown"),
                     "tournament_date": tournament_date,
-                    "tournament_source": row.get("tournament_source", "Unknown"),
+                    "tournament_source": tournament_source,  # 🔧 Toujours défini
                     "deck_url": row.get("deck_url", ""),
-                    "mainboard": row.get("mainboard", []),
-                    "sideboard": row.get("sideboard", []),
+                    "mainboard": row.get("mainboard", []),  # 🔧 Maintenant disponible
+                    "sideboard": row.get("sideboard", []),  # 🔧 Maintenant disponible
+                    # 🔧 Ajout de champs supplémentaires pour compatibilité C#
+                    "wins": row.get("wins", 0),
+                    "losses": row.get("losses", 0),
+                    "draws": row.get("draws", 0),
+                    "matches_played": row.get("matches_played", 0),
+                    "winrate": row.get("winrate", 0.0),
                 }
                 export_data.append(deck_data)
 
