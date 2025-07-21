@@ -11,10 +11,30 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from .fbettega_clients.ManatraderClient import ManatraderClient
-from .fbettega_clients.MtgMeleeClientV2 import MtgMeleeClientV2
-from .fbettega_clients.MTGOclient import MTGOClient
-from .fbettega_clients.TopDeckClient import TopDeckClient
+# Utiliser les nouveaux clients fonctionnels créés aujourd'hui
+from .fbettega_clients.melee_client import MtgMeleeClient
+from .fbettega_clients.mtgo_client import TournamentList, TournamentLoader
+
+
+# Clients temporaires pour TopDeck et Manatraders (à implémenter plus tard)
+class TopDeckClient:
+    def __init__(self, cache_folder, config):
+        self.cache_folder = cache_folder
+        self.config = config
+
+    async def get_tournaments(self, format_name, start_date, end_date):
+        # TODO: Implémenter TopDeck scraping
+        return []
+
+
+class ManatraderClient:
+    def __init__(self, cache_folder, config):
+        self.cache_folder = cache_folder
+        self.config = config
+
+    async def get_tournaments(self, format_name, start_date, end_date):
+        # TODO: Implémenter Manatraders scraping
+        return []
 
 
 class FbettegaIntegrator:
@@ -30,8 +50,8 @@ class FbettegaIntegrator:
 
         # Initialiser les clients selon l'architecture fbettega
         self.clients = {
-            "mtgo": MTGOClient(f"{cache_folder}/mtgo", config),
-            "melee": MtgMeleeClientV2(f"{cache_folder}/melee", config),
+            "mtgo": TournamentList(),  # Utiliser TournamentList directement
+            "melee": MtgMeleeClient(),  # Utiliser MtgMeleeClient directement
             "topdeck": TopDeckClient(f"{cache_folder}/topdeck", config),
             "manatraders": ManatraderClient(f"{cache_folder}/manatraders", config),
         }
@@ -98,17 +118,39 @@ class FbettegaIntegrator:
             )  # MTGO plus lent, Melee rate limiting
 
             async with asyncio.timeout(timeout):
-                async with client:
-                    tournaments = await client.fetch_tournaments(
+                # Adapter selon le type de client
+                if source_name == "mtgo":
+                    # TournamentList utilise des méthodes synchrones
+                    from datetime import datetime
+
+                    start_dt = datetime.strptime(start_date, "%Y-%m-%d")
+                    end_dt = datetime.strptime(end_date, "%Y-%m-%d")
+                    tournaments = client.DL_tournaments(start_dt, end_dt)
+                    # Convertir en format dict
+                    tournaments = [
+                        t.__dict__ if hasattr(t, "__dict__") else t for t in tournaments
+                    ]
+
+                elif source_name == "melee":
+                    # MtgMeleeClient utilise des méthodes synchrones
+                    tournaments = client.get_tournaments(start_date, end_date)
+                    # Convertir en format dict
+                    tournaments = [
+                        t.__dict__ if hasattr(t, "__dict__") else t for t in tournaments
+                    ]
+
+                else:
+                    # TopDeck et Manatraders - méthodes async
+                    tournaments = await client.get_tournaments(
                         format_name, start_date, end_date
                     )
 
-                    # Ajouter métadonnées fbettega
+                # Ajouter métadonnées fbettega
                 for tournament in tournaments:
                     tournament["fbettega_source"] = source_name
                     tournament["fbettega_timestamp"] = datetime.now().isoformat()
 
-                    return tournaments
+                return tournaments
 
         except asyncio.TimeoutError:
             self.logger.error(

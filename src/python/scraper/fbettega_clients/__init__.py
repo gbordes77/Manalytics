@@ -3,9 +3,36 @@ Fbettega Clients - Reproduction de l'écosystème fbettega/mtg_decklist_scrapper
 Modules pour scraper MTGO, Melee, TopDeck selon l'architecture Jilliac
 """
 
-from .ManatraderClient import ManatraderClient
-from .MtgMeleeClientV2_simple import MtgMeleeClientV2
-from .MTGOclient import MTGOClient
-from .TopDeckClient import TopDeckClient
+# Utiliser les nouveaux clients fonctionnels créés aujourd'hui
+from .melee_client import MtgMeleeClient
+from .mtgo_client import TournamentList, TournamentLoader
 
-__all__ = ["MTGOClient", "MtgMeleeClientV2", "TopDeckClient", "ManatraderClient"]
+
+# Clients temporaires pour TopDeck et Manatraders (à implémenter plus tard)
+class TopDeckClient:
+    def __init__(self, cache_folder, config):
+        self.cache_folder = cache_folder
+        self.config = config
+
+    async def get_tournaments(self, format_name, start_date, end_date):
+        # TODO: Implémenter TopDeck scraping
+        return []
+
+
+class ManatraderClient:
+    def __init__(self, cache_folder, config):
+        self.cache_folder = cache_folder
+        self.config = config
+
+    async def get_tournaments(self, format_name, start_date, end_date):
+        # TODO: Implémenter Manatraders scraping
+        return []
+
+
+__all__ = [
+    "MtgMeleeClient",
+    "TournamentList",
+    "TournamentLoader",
+    "TopDeckClient",
+    "ManatraderClient",
+]

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport Tournois Standard - Juillet 2025</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .summary {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .summary h2 {
+            color: #34495e;
+            margin-top: 0;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .stat-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            border-left: 4px solid #3498db;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .tournament-list {
+            display: grid;
+            gap: 15px;
+        }
+        .tournament-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .tournament-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .tournament-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .tournament-name a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .tournament-name a:hover {
+            text-decoration: underline;
+        }
+        .tournament-info {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .deck-count {
+            background-color: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .empty-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-radius: 8px;
+            font-style: italic;
+        }
+        .melee-card { border-left: 4px solid #e74c3c; }
+        .league-card { border-left: 4px solid #27ae60; }
+        .challenge-card { border-left: 4px solid #f39c12; }
+        .other-card { border-left: 4px solid #9b59b6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 Rapport Tournois Standard - Juillet 2025</h1>
+
+        <div class="summary">
+            <h2>📊 Résumé du Scraping</h2>
+            <p><strong>Période :</strong> 2025-07-01 au 2025-07-20</p>
+            <p><strong>Format :</strong> Standard</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">43</div>
+                    <div class="stat-label">Total Tournois</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Melee.gg</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">MTGO League 5-0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">22</div>
+                    <div class="stat-label">MTGO Challenges</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">MTGO Autres</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">955</div>
+                    <div class="stat-label">Total Decks</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🎯 Tournois Melee.gg</h3>
+<div class="empty-section">Aucun tournoi Melee.gg dans cette période</div></div>
+        <div class="section">
+            <h3>🏅 MTGO League 5-0</h3>
+<div class="tournament-list">
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-209382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-20 | 🥇 MTGO League
+                        <span class="deck-count">5 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-199382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-19 | 🥇 MTGO League
+                        <span class="deck-count">9 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-189382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-18 | 🥇 MTGO League
+                        <span class="deck-count">9 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-179382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-17 | 🥇 MTGO League
+                        <span class="deck-count">12 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-169382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-16 | 🥇 MTGO League
+                        <span class="deck-count">7 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-159382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-15 | 🥇 MTGO League
+                        <span class="deck-count">10 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-149382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-14 | 🥇 MTGO League
+                        <span class="deck-count">6 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-139382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-13 | 🥇 MTGO League
+                        <span class="deck-count">8 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-129382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-12 | 🥇 MTGO League
+                        <span class="deck-count">17 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-119382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-11 | 🥇 MTGO League
+                        <span class="deck-count">14 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-109382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-10 | 🥇 MTGO League
+                        <span class="deck-count">16 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-099382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-09 | 🥇 MTGO League
+                        <span class="deck-count">7 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-089382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-08 | 🥇 MTGO League
+                        <span class="deck-count">16 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-079382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-07 | 🥇 MTGO League
+                        <span class="deck-count">12 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-069382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-06 | 🥇 MTGO League
+                        <span class="deck-count">9 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-059382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-05 | 🥇 MTGO League
+                        <span class="deck-count">13 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-049382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-04 | 🥇 MTGO League
+                        <span class="deck-count">12 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-039382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-03 | 🥇 MTGO League
+                        <span class="deck-count">10 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-029382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-02 | 🥇 MTGO League
+                        <span class="deck-count">12 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card league-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-league-2025-07-019382" target="_blank">Standard League</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-01 | 🥇 MTGO League
+                        <span class="deck-count">15 decks</span>
+                    </div>
+                </div>
+            </div></div>
+        <div class="section">
+            <h3>⚔️ MTGO Challenges</h3>
+<div class="tournament-list">
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1912803693" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-19 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1912803688" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-19 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1812803681" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-18 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1812803671" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-18 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1712803657" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-17 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-64-2025-07-1512802868" target="_blank">Standard Challenge 64</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-15 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-64-2025-07-1412802856" target="_blank">Standard Challenge 64</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-14 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1312802841" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-13 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1212802816" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-12 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1212802811" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-12 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1112802801" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-11 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1112802789" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-11 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-1012802771" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-10 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-64-2025-07-0812801696" target="_blank">Standard Challenge 64</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-08 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-64-2025-07-0712801688" target="_blank">Standard Challenge 64</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-07 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-0612801677" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-06 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-0512801659" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-05 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-0512801654" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-05 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-0412801647" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-04 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-0412801637" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-04 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-32-2025-07-0312801623" target="_blank">Standard Challenge 32</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-03 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card challenge-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-challenge-64-2025-07-0112801190" target="_blank">Standard Challenge 64</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-01 | ⚔️ MTGO Challenge
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+            </div></div>
+        <div class="section">
+            <h3>🎲 MTGO Autres Tournois</h3>
+<div class="tournament-list">
+                <div class="tournament-card other-card">
+                    <div class="tournament-name">
+                        <a href="https://www.mtgo.com/decklist/standard-rc-qualifier-2025-07-1112802761" target="_blank">Standard RC Qualifier</a>
+                    </div>
+                    <div class="tournament-info">
+                        📅 2025-07-11 | 🎲 MTGO Autre
+                        <span class="deck-count">32 decks</span>
+                    </div>
+                </div>
+            </div></div>
+        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d;">
+            <p>📊 Rapport généré le 20/07/2025 à 21:16</p>
+            <p>🔗 Sources: Melee.gg + MTGO | 🎯 Format: Standard | 📅 Période: 1er-20 juillet 2025</p>
+        </div>
+    </div>
+</body>
+</html>

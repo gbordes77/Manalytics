@@ -1497,6 +1497,9 @@ class MetagameChartsGenerator:
             "main_archetypes_bar_horizontal": self.create_main_archetypes_bar_horizontal(
                 df
             ),  # CORRIGÉ !
+            "step2_classification_table": self.create_step2_classification_table(
+                df
+            ),  # NOUVEAU !
         }
 
         # Sauvegarder tous les graphiques
@@ -1530,3 +1533,90 @@ class MetagameChartsGenerator:
             "files": files,
             "data_exports": data_files,
         }
+
+    def create_step2_classification_table(self, df: pd.DataFrame) -> go.Figure:
+        """Crée un tableau détaillé de classification Step 2"""
+        try:
+            # Préparer les données pour le tableau
+            classification_data = []
+
+            for _, row in df.iterrows():
+                classification_data.append(
+                    {
+                        "Deck ID": row.get("deck_id", "N/A"),
+                        "Joueur": row.get("player_name", "Unknown"),
+                        "Archétype": row.get("archetype", "Unknown"),
+                        "Cartes": row.get("mainboard_cards", 0),
+                        "Cartes Clés": " | ".join(row.get("key_cards", [])[:5])
+                        if row.get("key_cards")
+                        else "N/A",
+                        "Tournoi": row.get("tournament_name", "Unknown"),
+                        "Résultat": row.get("result", "N/A"),
+                        "Source": row.get("tournament_source", "Unknown"),
+                    }
+                )
+
+            # Créer le tableau
+            fig = go.Figure(
+                data=[
+                    go.Table(
+                        header=dict(
+                            values=[
+                                "Deck ID",
+                                "Joueur",
+                                "Archétype",
+                                "Cartes",
+                                "Cartes Clés",
+                                "Tournoi",
+                                "Résultat",
+                                "Source",
+                            ],
+                            fill_color="#667eea",
+                            font=dict(color="white", size=12),
+                            align="left",
+                        ),
+                        cells=dict(
+                            values=[
+                                [d["Deck ID"] for d in classification_data],
+                                [d["Joueur"] for d in classification_data],
+                                [d["Archétype"] for d in classification_data],
+                                [d["Cartes"] for d in classification_data],
+                                [d["Cartes Clés"] for d in classification_data],
+                                [d["Tournoi"] for d in classification_data],
+                                [d["Résultat"] for d in classification_data],
+                                [d["Source"] for d in classification_data],
+                            ],
+                            fill_color="lavender",
+                            font=dict(size=10),
+                            align="left",
+                            height=30,
+                        ),
+                    )
+                ]
+            )
+
+            fig.update_layout(
+                title="🎯 STEP 2: Classification Détaillée des Archétypes",
+                title_x=0.5,
+                width=1400,
+                height=600,
+                margin=dict(l=20, r=20, t=60, b=20),
+            )
+
+            return fig
+
+        except Exception as e:
+            self.logger.error(
+                f"❌ Erreur lors de la création du tableau de classification: {e}"
+            )
+            # Retourner un tableau vide en cas d'erreur
+            return go.Figure(
+                data=[
+                    go.Table(
+                        header=dict(values=["Erreur"], fill_color="red"),
+                        cells=dict(
+                            values=[["Erreur de génération"]], fill_color="lightcoral"
+                        ),
+                    )
+                ]
+            )

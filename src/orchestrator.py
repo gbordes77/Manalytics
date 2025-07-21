@@ -11,7 +11,7 @@ import os
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 import pandas as pd
 
@@ -30,6 +30,7 @@ from src.python.classifier.advanced_archetype_classifier import (
 )
 from src.python.classifier.archetype_engine import ArchetypeEngine
 from src.python.classifier.color_detector import ColorDetector
+from src.python.classifier.mtgo_archetype_parser import MTGOArchetypeParser
 from src.python.classifier.mtgo_classifier import MTGOClassifier
 from src.python.visualizations.matchup_matrix import MatchupMatrixGenerator
 from src.python.visualizations.metagame_charts import MetagameChartsGenerator
@@ -61,23 +62,28 @@ class ManalyticsOrchestrator:
         self.advanced_classifier = AdvancedArchetypeClassifier()  # NEW
 
         self.logger = logging.getLogger(__name__)
-        # Initialize ArchetypeEngine (PRIMARY classifier - MTGOFormatData)
+        # Initialize classifiers - REPRODUIT LE PIPELINE JILIAC ORIGINAL
+        # MTGOArchetypeParser = PRIMARY classifier (Step 2: Data Treatment)
+        self.mtgo_archetype_parser = MTGOArchetypeParser()
         self.archetype_engine = ArchetypeEngine(
             "./MTGOFormatData", "./input", "./output"
-        )
-        # Initialize MTGO classifier (FALLBACK)
-        self.mtgo_classifier = MTGOClassifier()
-        # Initialize color detector
+        )  # Fallback
+        self.mtgo_classifier = MTGOClassifier()  # Fallback
+        # Initialize color detector (corrigé pour color_overrides)
         self.color_detector = ColorDetector()
         # Initialize advanced metagame analyzer
         self.advanced_analyzer = AdvancedMetagameAnalyzer()
+
         self.logger.info(
-            "ArchetypeEngine initialized as PRIMARY classifier (MTGOFormatData)"
+            "🎯 MTGOArchetypeParser initialized as PRIMARY classifier (Step 2: Data Treatment)"
         )
-        self.logger.info("MTGO Classifier initialized as FALLBACK classifier")
-        self.logger.info("Color Detector initialized with MTGOFormatData color system")
+        self.logger.info("🔄 ArchetypeEngine initialized as FALLBACK classifier")
+        self.logger.info("🔄 MTGO Classifier initialized as FALLBACK classifier")
         self.logger.info(
-            "Advanced Metagame Analyzer initialized with statistical analysis capabilities"
+            "🎨 Color Detector initialized with corrected color_overrides support"
+        )
+        self.logger.info(
+            "📊 Advanced Metagame Analyzer initialized with statistical analysis capabilities"
         )
 
     async def run_pipeline(self, format: str, start_date: str, end_date: str):
@@ -364,8 +370,7 @@ class ManalyticsOrchestrator:
         return df
 
     def _enforce_minimum_data_requirement(self):
-        """🚨 RÈGLE ABSOLUE : Vérifie qu'on a au minimum 1 an de données disponibles
-        Si pas assez de données → lance automatiquement le scraping
+        """Vérification des données disponibles (règle supprimée)
 
         RÈGLE ABSOLUE CACHE : JAMAIS EFFACER LE CACHE EXISTANT
         - Tous les fichiers existants doivent être préservés
@@ -377,7 +382,7 @@ class ManalyticsOrchestrator:
         import subprocess
         from datetime import datetime, timedelta
 
-        self.logger.info("🔍 Vérification règle absolue : minimum 1 an de données...")
+        self.logger.info("🔍 Vérification des données disponibles...")
         self.logger.info("🚨 RÈGLE ABSOLUE CACHE : JAMAIS EFFACER LE CACHE EXISTANT")
         self.logger.info("📋 Seulement AJOUTER de nouvelles données")
         self.logger.info("🚫 Aucune suppression, remplacement ou écrasement autorisé")
@@ -388,69 +393,44 @@ class ManalyticsOrchestrator:
             f"📁 Cache existant à préserver : {existing_cache_files} fichiers"
         )
 
-        # Calculer la date limite (1 an en arrière)
-        today = datetime.now()
-        one_year_ago = today - timedelta(days=365)
-
         # Vérifier les données disponibles
         available_data = self._check_available_data_coverage()
 
-        # Vérifier si on a au moins 1 an de données
-        has_minimum_data = False
+        # Afficher les informations sur les données disponibles
         if available_data["total_files"] > 0:
-            earliest_date = available_data["earliest_date"]
-            if earliest_date and earliest_date <= one_year_ago:
-                has_minimum_data = True
-
-        if not has_minimum_data:
-            self.logger.warning(f"🚨 RÈGLE ABSOLUE VIOLÉE : Pas assez de données!")
-            self.logger.warning(
-                f"   - Données disponibles : {available_data['total_files']} fichiers"
-            )
-            self.logger.warning(
-                f"   - Période couverte : {available_data['earliest_date']} à {available_data['latest_date']}"
-            )
-            self.logger.warning(
-                f"   - Minimum requis : 1 an (depuis {one_year_ago.strftime('%Y-%m-%d')})"
-            )
-
-            # BYPASS TEMPORAIRE : Continuer avec les données disponibles
-            self.logger.warning("⚠️ BYPASS TEMPORAIRE : Scraping d'urgence désactivé")
-            self.logger.warning(
-                "📋 Continuation avec les données disponibles dans MTGODecklistCache"
-            )
-
-            # Vérifier si on a au moins quelques données dans MTGODecklistCache
-            mtgo_patterns = [
-                "MTGODecklistCache/Tournaments/*/*/*/*.json",
-                "MTGODecklistCache/**/*.json",
-            ]
-
-            mtgo_files = []
-            for pattern in mtgo_patterns:
-                mtgo_files.extend(glob.glob(pattern))
-
-            if len(mtgo_files) > 0:
-                self.logger.info(
-                    f"✅ Trouvé {len(mtgo_files)} fichiers dans MTGODecklistCache"
-                )
-                self.logger.info(
-                    "📋 Continuation du pipeline avec les données disponibles"
-                )
-            else:
-                self.logger.error("❌ Aucune donnée trouvée dans MTGODecklistCache")
-                self.logger.error(
-                    "💡 Suggestion : Vérifier le submodule MTGODecklistCache"
-                )
-        else:
             self.logger.info(
-                f"✅ Règle absolue respectée : {available_data['total_files']} fichiers disponibles"
+                f"✅ Données disponibles : {available_data['total_files']} fichiers"
             )
             self.logger.info(
                 f"   - Période : {available_data['earliest_date']} à {available_data['latest_date']}"
             )
             self.logger.info(
                 f"   - Cache préservé : {existing_cache_files} fichiers existants"
+            )
+        else:
+            self.logger.info(
+                "📋 Aucune donnée trouvée, utilisation des données MTGODecklistCache"
+            )
+
+        # Vérifier si on a au moins quelques données dans MTGODecklistCache
+        mtgo_patterns = [
+            "MTGODecklistCache/Tournaments/*/*/*/*.json",
+            "MTGODecklistCache/**/*.json",
+        ]
+
+        mtgo_files = []
+        for pattern in mtgo_patterns:
+            mtgo_files.extend(glob.glob(pattern))
+
+        if len(mtgo_files) > 0:
+            self.logger.info(
+                f"✅ Trouvé {len(mtgo_files)} fichiers dans MTGODecklistCache"
+            )
+            self.logger.info("📋 Continuation du pipeline avec les données disponibles")
+        else:
+            self.logger.warning("⚠️ Aucune donnée trouvée dans MTGODecklistCache")
+            self.logger.warning(
+                "💡 Suggestion : Vérifier le submodule MTGODecklistCache"
             )
 
     def _count_existing_cache_files(self):
@@ -888,6 +868,11 @@ class ManalyticsOrchestrator:
                 f"MTGODecklistCache/Tournaments/*/{year}/{month}/*-{self.format.lower()}.json",
                 f"data/reference/Tournaments/*/{year}/{month}/*/*{self.format.lower()}*.json",
                 f"data/reference/Tournaments/*/{year}/{month}/*/{self.format.lower()}*.json",
+                # AJOUTER LES PATTERNS POUR LES ANALYSES EXISTANTES
+                f"Analyses/*{self.format.lower()}*/*.json",
+                f"Analyses/*{self.format.lower()}*/**/*.json",
+                f"temp_fbettega/MTG_decklistcache/Tournaments/*/{year}/{month}/*/*{self.format.lower()}*.json",
+                f"temp_fbettega/MTG_decklistcache/Tournaments/*/{year}/{month}/*/{self.format.lower()}*.json",
             ]
             patterns.extend(base_patterns)
 
@@ -1099,38 +1084,66 @@ class ManalyticsOrchestrator:
             return "unknown"
 
     def _classify_archetype(self, mainboard):
-        """Classify archetype using ArchetypeEngine (MTGOFormatData) as PRIMARY classifier"""
+        """🎯 STEP 2: DATA TREATMENT - Pipeline Jiliac original avec MTGOArchetypeParser"""
         try:
-            # Step 1: PRIMARY - Use ArchetypeEngine (MTGOFormatData) for specific archetypes
-            # Convert mainboard format for ArchetypeEngine
+            # Convert mainboard format for MTGOArchetypeParser
+            mainboard_formatted = [
+                {"Name": card["CardName"], "Quantity": card["Count"]}
+                for card in mainboard
+            ]
+
+            # Step 1: PRIMARY - MTGOArchetypeParser (reproduit github.com/Badaro/MTGOArchetypeParser)
+            classification_result = self.mtgo_archetype_parser.classify_deck(
+                self.format, mainboard_formatted, []
+            )
+
+            archetype_name = classification_result.get("archetype", "Unknown")
+            confidence = classification_result.get("confidence", 0.0)
+            include_color = classification_result.get("include_color_in_name", False)
+            method = classification_result.get("method", "none")
+
+            if archetype_name != "Unknown" and confidence > 0.0:
+                # Appliquer l'intégration des couleurs si nécessaire
+                if include_color:
+                    archetype_with_colors = (
+                        self._apply_color_integration_mtgoformatdata(
+                            archetype_name, mainboard
+                        )
+                    )
+                else:
+                    archetype_with_colors = archetype_name
+
+                self.logger.debug(
+                    f"🎯 MTGOArchetypeParser ({method}): {archetype_name} -> {archetype_with_colors} (confidence: {confidence:.2f})"
+                )
+                return archetype_with_colors
+
+            # Step 2: FALLBACK 1 - ArchetypeEngine if MTGOArchetypeParser fails
             deck_data = {
                 "Mainboard": [
                     {"Name": card["CardName"], "Count": card["Count"]}
                     for card in mainboard
                 ],
-                "Sideboard": [],  # No sideboard for now
+                "Sideboard": [],
             }
 
-            # Use ArchetypeEngine for precise archetype detection
             archetype_name = self.archetype_engine.classify_deck(deck_data, self.format)
 
             if archetype_name and archetype_name != "Unknown":
-                # Apply color integration for IncludeColorInName archetypes
                 archetype_with_colors = self._apply_color_integration_mtgoformatdata(
                     archetype_name, mainboard
                 )
                 self.logger.debug(
-                    f"ArchetypeEngine classification: {archetype_name} -> {archetype_with_colors}"
+                    f"🔄 ArchetypeEngine fallback: {archetype_name} -> {archetype_with_colors}"
                 )
                 return archetype_with_colors
 
-            # Step 2: FALLBACK 1 - Use MTGOClassifier if ArchetypeEngine fails
+            # Step 3: FALLBACK 2 - MTGOClassifier as last resort
             base_archetype = self.mtgo_classifier.classify_deck(
                 mainboard, [], self.format
             )
 
             if base_archetype and base_archetype != "Unknown":
-                # Apply Aliquanto3-style color integration
                 color_analysis = self.color_detector.analyze_decklist_colors(mainboard)
                 guild_name = color_analysis.get("guild_name", "")
 
@@ -1142,17 +1155,17 @@ class ManalyticsOrchestrator:
                     archetype_with_colors = base_archetype
 
                 self.logger.debug(
-                    f"MTGOClassifier fallback: {base_archetype} -> {archetype_with_colors}"
+                    f"🔄 MTGOClassifier fallback: {base_archetype} -> {archetype_with_colors}"
                 )
                 return archetype_with_colors
 
-            # Step 3: FALLBACK 2 - Color-based classification as last resort
+            # Step 4: FALLBACK 3 - Color-based classification as absolute last resort
             fallback_archetype = self._classify_by_colors_fallback(mainboard)
-            self.logger.debug(f"Color fallback classification: {fallback_archetype}")
+            self.logger.debug(f"🎨 Color fallback classification: {fallback_archetype}")
             return fallback_archetype
 
         except Exception as e:
-            self.logger.error(f"Error in archetype classification: {e}")
+            self.logger.error(f"❌ Error in archetype classification: {e}")
             return self._classify_by_colors_fallback(mainboard)
 
     def _apply_color_integration_mtgoformatdata(self, archetype_name, mainboard):
@@ -1539,15 +1552,7 @@ class ManalyticsOrchestrator:
                 & ~df["tournament_source"].str.contains("Other Tournaments", case=False)
             ]
 
-            # RÈGLE DU PATRON : Forcer à 20 tournois UNIQUEMENT pour Standard 2025-07-01 à 2025-07-15
-            if (
-                getattr(self, "format", "") == "Standard"
-                and getattr(self, "start_date", "") == "2025-07-01"
-                and getattr(self, "end_date", "") == "2025-07-15"
-            ):
-                total_tournaments = 20
-            else:
-                total_tournaments = filtered_df["tournament_id"].nunique()
+            total_tournaments = filtered_df["tournament_id"].nunique()
             total_players = filtered_df[
                 "player_name"
             ].nunique()  # Count unique players like the old system
@@ -1890,6 +1895,15 @@ class ManalyticsOrchestrator:
                 </div>
                 <div class="viz-content">
                     <iframe src="visualizations/data_sources_pie.html" class="viz-iframe"></iframe>
+                </div>
+            </div>
+
+            <div class="viz-card">
+                <div class="viz-header">
+                    <h3 class="viz-title">🎯 Classification Détaillée (Step 2)</h3>
+                </div>
+                <div class="viz-content">
+                    <iframe src="visualizations/step2_classification_table.html" class="viz-iframe"></iframe>
                 </div>
             </div>
         </div>

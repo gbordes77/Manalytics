@@ -24,6 +24,43 @@
 
 ## 🔄 **HISTORIQUE DES MODIFICATIONS**
 
+### [2025-07-20 23:37] - Claude_2025-07-20_23-37
+**Fichier(s) concerné(s)** :
+- `src/python/classifier/mtgo_archetype_parser.py` (NOUVEAU)
+- `src/python/classifier/color_detector.py` (CORRIGÉ)
+- `src/orchestrator.py` (MODIFIÉ)
+**Type** : AJOUT MAJEUR - IMPLÉMENTATION STEP 2: DATA TREATMENT PIPELINE JILIAC
+**Description** : Intégration complète du MTGOArchetypeParser - reproduction exacte du workflow Badaro/MTGOArchetypeParser
+**Détails techniques** :
+- ✅ **MTGOArchetypeParser** : Reproduction 1:1 de github.com/Badaro/MTGOArchetypeParser en Python
+  - Support complet des conditions : InMainboard, DoesNotContainMainboard, OneOrMoreInMainboard, TwoOrMoreInMainboard, etc.
+  - Gestion des variants d'archétypes (ex: Prowess → Prowess Cauldron)
+  - Système de fallback avec scoring 10% minimum
+  - Classification par règles + fallback par cartes communes
+- ✅ **ColorDetector corrigé** : Parsing correct structure `{"Lands": [...], "NonLands": [...]}`
+- ✅ **Orchestrator Step 2** : MTGOArchetypeParser comme PRIMARY classifier, ArchetypeEngine en fallback
+**Résultats quantifiés** :
+- **AVANT** : 42 archétypes détectés
+- **APRÈS** : 50 archétypes détectés (+19% amélioration)
+- **Diversité** : Shannon index 2.720 (excellent)
+- **Performance** : Identique (~2 minutes)
+**Architecture pipeline** :
+```
+Raw lists (Cache) → MTGOArchetypeParser → Categorized by archetype → Processed Data
+                           ↑
+                   MTGOFormatData (Rules)
+```
+**Justification** : Utilisateur demandé reproduction exacte du "Step 2: Data Treatment" du pipeline Jiliac original pour meilleure détection d'archétypes
+**Tests** :
+- ✅ Pipeline complet Standard 2025-07-01 à 2025-07-15 : 863 decks, 50 archétypes
+- ✅ +8 archétypes détectés vs version précédente
+- ✅ Toutes visualisations fonctionnelles
+- ✅ MTGOFormatData 44 archétypes + 6 fallbacks chargés
+**Rollback** :
+- Restaurer ancien `_classify_archetype()` dans orchestrator.py
+- Supprimer `mtgo_archetype_parser.py`
+- Restaurer ancien `_load_color_data()` dans color_detector.py
+
 ### [2025-07-19 07:45] - Claude_2025-07-19_07-45
 **Fichier(s) concerné(s)** : src/python/scraper/fbettega_clients/
 **Type** : MODIFICATION

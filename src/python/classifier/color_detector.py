@@ -80,24 +80,14 @@ class ColorDetector:
                     f"✅ Loaded {len(self.card_colors)} card colors from MTGOFormatData"
                 )
 
-            # Charger les overrides Standard
-            overrides_file = os.path.join(
-                self.mtgo_format_data_path,
-                "Formats",
-                "Standard",
-                "color_overrides.json",
-            )
-            if os.path.exists(overrides_file):
-                with open(overrides_file, "r", encoding="utf-8") as f:
-                    self.color_overrides = json.load(f)
-                logger.info(
-                    f"✅ Loaded {len(self.color_overrides)} color overrides for Standard"
-                )
+            # Charger les overrides par format
+            self._load_format_overrides("Standard")
 
         except Exception as e:
             logger.error(f"❌ Error loading color data: {e}")
             # Fallback: couleurs de base
             self.card_colors = {
+                # Lands de base
                 "Plains": "W",
                 "Island": "U",
                 "Swamp": "B",
@@ -105,13 +95,46 @@ class ColorDetector:
                 "Forest": "G",
             }
 
+    def _load_format_overrides(self, format_name: str):
+        """Charge les overrides de couleur pour un format spécifique"""
+        try:
+            overrides_file = os.path.join(
+                self.mtgo_format_data_path,
+                "Formats",
+                format_name,
+                "color_overrides.json",
+            )
+            if os.path.exists(overrides_file):
+                with open(overrides_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+
+                # Parse la structure {"Lands": [...], "NonLands": [...]}
+                override_count = 0
+
+                # Traiter les Lands
+                if "Lands" in data and data["Lands"]:
+                    for card in data["Lands"]:
+                        if "Name" in card and "Color" in card:
+                            self.card_colors[card["Name"]] = card["Color"]
+                            override_count += 1
+
+                # Traiter les NonLands
+                if "NonLands" in data and data["NonLands"]:
+                    for card in data["NonLands"]:
+                        if "Name" in card and "Color" in card:
+                            self.card_colors[card["Name"]] = card["Color"]
+                            override_count += 1
+
+                logger.info(
+                    f"✅ Loaded {override_count} color overrides for {format_name}"
+                )
+
+        except Exception as e:
+            logger.error(f"❌ Error loading color overrides for {format_name}: {e}")
+
     def get_card_color(self, card_name: str) -> str:
         """Obtient la couleur d'une carte"""
-        # Vérifier les overrides d'abord
-        if card_name in self.color_overrides:
-            return self.color_overrides[card_name]
-
-        # Puis les couleurs principales
+        # Les overrides sont déjà intégrés dans card_colors
         if card_name in self.card_colors:
             return self.card_colors[card_name]
 

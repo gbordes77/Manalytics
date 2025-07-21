@@ -1,92 +1,135 @@
 #!/usr/bin/env python3
 """
-Test direct du FbettegaIntegrator avec les améliorations
+Test FBettega Integrator - Test de l'intégrateur complet reproduisant fetch_tournament.py
 """
 
-import asyncio
 import os
 import sys
+from datetime import datetime, timedelta, timezone
 
-sys.path.append("src")
+# Ajouter le chemin du projet
+sys.path.append(os.path.join(os.path.dirname(__file__), "src", "python"))
 
-from python.scraper.fbettega_integrator import FbettegaIntegrator
+from scraper.fbettega_authentic_integrator import *
 
 
-async def test_fbettega_integrator():
-    """Test direct du FbettegaIntegrator"""
+def test_mtgo_integration():
+    """Test de l'intégration MTGO complète"""
+    print("🧪 Test de l'intégration MTGO complète...")
 
-    print("🚀 TEST FBETTEGA INTEGRATOR DIRECT")
-    print("=" * 60)
+    # Créer le dossier de cache
+    cache_folder = "data/raw"
+    os.makedirs(cache_folder, exist_ok=True)
+
+    # Définir une période de test (derniers 3 jours)
+    end_date = datetime.now(timezone.utc)
+    start_date = end_date - timedelta(days=3)
+
+    print(f"📅 Période de test: {start_date.date()} à {end_date.date()}")
+    print(f"📁 Cache folder: {cache_folder}")
 
     try:
-        # Configuration
-        cache_folder = "data/raw"
-        api_config = {"timeout": 30, "retries": 3}
+        # Tester la fonction update_mtgo_folder
+        print("\n🔍 Test de update_mtgo_folder...")
+        update_mtgo_folder(cache_folder, start_date, end_date)
 
-        # Créer l'intégrateur
-        fbettega = FbettegaIntegrator(cache_folder, api_config)
+        # Vérifier que les fichiers ont été créés
+        mtgo_folder = os.path.join(cache_folder, "mtgo.com")
+        if os.path.exists(mtgo_folder):
+            print(f"✅ Dossier MTGO créé: {mtgo_folder}")
 
-        print("📅 Période de test: 2025-07-10 à 2025-07-15")
-        print("🎯 Format: Standard")
-
-        # Fetch tournaments avec cache intelligent
-        tournaments = await fbettega.get_tournaments_with_cache(
-            "Standard", "2025-07-10", "2025-07-15"
-        )
-
-        print(f"\n📊 RÉSULTATS FBETTEGA INTEGRATOR:")
-        print(f"   - Tournois trouvés: {len(tournaments)}")
-
-        total_decks = 0
-        valid_tournaments = 0
-
-        for tournament in tournaments:
-            decks = tournament.get("decks", [])
-            total_decks += len(decks)
-
-            if len(decks) > 0:
-                valid_tournaments += 1
-                source = tournament.get("fbettega_source", "unknown")
-                print(
-                    f"   ✅ [{source}] {tournament.get('name', 'Unknown')}: {len(decks)} decks"
-                )
-
-                # Vérifier quelques decks
-                for deck in decks[:2]:
-                    mainboard = deck.get("Mainboard", [])
-                    player = deck.get("Player", "Unknown")
-                    print(f"      - {player}: {len(mainboard)} cartes mainboard")
-            else:
-                print(f"   ❌ {tournament.get('name', 'Unknown')}: 0 decks")
-
-        print(f"\n📈 STATISTIQUES FINALES:")
-        print(f"   - Tournois valides: {valid_tournaments}/{len(tournaments)}")
-        print(f"   - Total decks: {total_decks}")
-        print(
-            f"   - Taux de succès: {(valid_tournaments/len(tournaments)*100):.1f}%"
-            if tournaments
-            else "0%"
-        )
-
-        # Vérifier les sources
-        sources = set()
-        for tournament in tournaments:
-            source = tournament.get("fbettega_source", "unknown")
-            sources.add(source)
-
-        print(f"   - Sources actives: {', '.join(sources)}")
-
-        if total_decks > 0:
-            print("\n🎉 SUCCÈS ! Fbettega fonctionne avec des données réelles")
+            # Lister les fichiers créés
+            for root, dirs, files in os.walk(mtgo_folder):
+                if files:
+                    print(f"📁 {root}: {len(files)} fichiers")
+                    for file in files[:5]:  # Afficher les 5 premiers
+                        print(f"   📄 {file}")
+                    if len(files) > 5:
+                        print(f"   ... et {len(files) - 5} autres fichiers")
         else:
-            print("\n⚠️ Aucun deck trouvé - vérifier la configuration")
+            print("❌ Dossier MTGO non créé")
 
     except Exception as e:
-        print(f"❌ Erreur: {e}")
+        print(f"❌ Erreur lors du test: {e}")
         import traceback
 
         traceback.print_exc()
 
 
+def test_retry_mechanism():
+    """Test du mécanisme de retry"""
+    print("\n🧪 Test du mécanisme de retry...")
+
+    def failing_function():
+        raise Exception("Test error")
+
+    def succeeding_function():
+        return "Success"
+
+    try:
+        # Test avec une fonction qui échoue
+        print("🔍 Test avec une fonction qui échoue...")
+        result = run_with_retry(failing_function, 3)
+    except Exception as e:
+        print(f"✅ Exception attendue: {e}")
+
+    # Test avec une fonction qui réussit
+    print("🔍 Test avec une fonction qui réussit...")
+    result = run_with_retry(succeeding_function, 3)
+    print(f"✅ Résultat: {result}")
+
+
+def test_logging():
+    """Test du système de logging"""
+    print("\n🧪 Test du système de logging...")
+
+    log_file = "test_log.txt"
+
+    # Sauvegarder stdout original
+    original_stdout = sys.stdout
+
+    try:
+        configure_logging(log_file)
+        print("Test message 1")
+        print("Test message 2")
+
+        # Restaurer stdout
+        sys.stdout = original_stdout
+
+        # Vérifier que le fichier de log a été créé
+        if os.path.exists(log_file):
+            print(f"✅ Fichier de log créé: {log_file}")
+
+            # Lire le contenu
+            with open(log_file, "r", encoding="utf-8") as f:
+                content = f.read()
+                print(f"📄 Contenu du log ({len(content)} caractères):")
+                print(content[:200] + "..." if len(content) > 200 else content)
+        else:
+            print("❌ Fichier de log non créé")
+
+    except Exception as e:
+        print(f"❌ Erreur lors du test de logging: {e}")
+        sys.stdout = original_stdout
+
+
+def main():
+    """Fonction principale de test"""
+    print("🚀 Test de l'intégrateur FBettega Authentic")
+    print("=" * 60)
+
+    # Test du logging
+    test_logging()
+
+    # Test du mécanisme de retry
+    test_retry_mechanism()
+
+    # Test de l'intégration MTGO
+    test_mtgo_integration()
+
+    print("\n" + "=" * 60)
+    print("✅ Tests terminés!")
+
+
 if __name__ == "__main__":
-    asyncio.run(test_fbettega_integrator())
+    main()
