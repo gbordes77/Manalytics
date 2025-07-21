@@ -290,13 +290,11 @@ class MTGMetaAnalyzer:
         matchup_summary = self.data_compat.r_group_by_summarise(
             deck_data,
             ["archetype1", "archetype2"],
-            {"total_wins": ("wins", "sum"), "total_games": ("total", "sum")},
+            {"wins": "sum", "total": "sum"},
         )
 
         # Calcul winrate
-        matchup_summary["winrate"] = (
-            matchup_summary["total_wins"] / matchup_summary["total_games"]
-        )
+        matchup_summary["winrate"] = matchup_summary["wins"] / matchup_summary["total"]
 
         # Pivot vers matrice
         matrix = self.data_compat.r_pivot_wider(
