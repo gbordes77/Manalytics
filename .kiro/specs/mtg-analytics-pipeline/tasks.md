@@ -31,7 +31,7 @@
   - Implémenter la classe MTGOScraper
   - _Requirements: 2.1, 2.2_
 
-- [ ] 3.2 Développer le système de gestion du cache brut
+- [x] 3.2 Développer le système de gestion du cache brut
   - Implémenter la logique de stockage des données scrapées
   - Gérer la déduplication des données
   - Créer la classe CacheManager

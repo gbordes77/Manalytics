@@ -1,34 +1,19 @@
-# Core Data Processing
-pandas>=2.0.0
-numpy>=1.24.0
+# Data collection dependencies
+requests>=2.25.1
+beautifulsoup4>=4.9.3
+lxml>=4.6.3
+pandas>=1.2.4
+numpy>=1.20.2
+tqdm>=4.60.0
+json5>=0.9.5
+python-dateutil>=2.8.1
 
-# Web Scraping
-requests>=2.31.0
-beautifulsoup4>=4.12.0
+# Data processing dependencies
+scikit-learn>=0.24.2
 
-# Data Analysis & Statistics
-scipy>=1.11.0
-scikit-learn>=1.3.0
+# Testing dependencies
+pytest>=6.2.4
 
-# Visualizations
-plotly>=5.17.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-
-# Data Validation
-pydantic>=2.0.0
-
-# Configuration
-pyyaml>=6.0
-
-# Async Support
-asyncio-mqtt>=0.13.0
-
-# Development Tools
-pytest>=7.4.0
-black>=23.0.0
-flake8>=6.1.0
-
-# Optional: FastAPI for future API endpoints
-fastapi>=0.104.0
-uvicorn>=0.24.0
+# General dependencies
+matplotlib>=3.4.2
+seaborn>=0.11.1
