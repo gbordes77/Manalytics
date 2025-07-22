@@ -2,261 +2,348 @@
 # -*- coding: utf-8 -*-
 
 """
-Connectivity test for the MTG Analytics pipeline.
-This script checks connectivity with MTGO and MTGMelee data sources.
+Test de Connectivité MTG Analytics Pipeline
+Ce script teste la connectivité avec les différentes sources de données MTG.
 """
 
 import os
 import sys
 import json
 import time
-import argparse
 import requests
-from datetime import datetime
-from urllib.parse import urljoin
+import subprocess
+from datetime import datetime, timedelta
+from pathlib import Path
 
-# Colors for messages
+# Configuration des couleurs pour les messages
 class Colors:
-    HEADER = '\033[95m'
-    BLUE = '\033[94m'
     GREEN = '\033[92m'
-    YELLOW = '\033[93m'
     RED = '\033[91m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
     ENDC = '\033[0m'
     BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
 
 def log_info(message):
+    """Affiche un message d'information."""
     print(f"{Colors.BLUE}[INFO]{Colors.ENDC} {message}")
 
 def log_success(message):
+    """Affiche un message de succès."""
     print(f"{Colors.GREEN}[SUCCESS]{Colors.ENDC} {message}")
 
 def log_warning(message):
+    """Affiche un message d'avertissement."""
     print(f"{Colors.YELLOW}[WARNING]{Colors.ENDC} {message}")
 
 def log_error(message):
+    """Affiche un message d'erreur."""
     print(f"{Colors.RED}[ERROR]{Colors.ENDC} {message}")
 
-def load_config():
-    """Load configuration from sources.json file."""
-    config_path = os.path.join(os.path.dirname(__file__), "config", "sources.json")
+def test_url_connectivity(url, timeout=10):
+    """Teste la connectivité vers une URL."""
     try:
-        with open(config_path, 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        log_error(f"Configuration file not found: {config_path}")
-        sys.exit(1)
-    except json.JSONDecodeError:
-        log_error(f"JSON format error in configuration file: {config_path}")
-        sys.exit(1)
-
-def load_credentials():
-    """Load credentials from credentials.json file if it exists."""
-    credentials_path = os.path.join(os.path.dirname(__file__), "config", "credentials.json")
-    try:
-        with open(credentials_path, 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        log_warning(f"Credentials file not found: {credentials_path}")
-        return None
-    except json.JSONDecodeError:
-        log_error(f"JSON format error in credentials file: {credentials_path}")
-        return None
-
-def test_mtgo_connection(config):
-    """Test connection to MTGO URLs."""
-    log_info("Testing connection to MTGO URLs...")
-    
-    mtgo_config = config.get("mtgo", {})
-    if not mtgo_config:
-        log_error("MTGO configuration not found in sources.json")
-        return False
-    
-    # Test one URL of each type
-    test_urls = []
-    for url_type in ["base_urls", "challenge_urls", "preliminary_urls", "showcase_urls", "super_qualifier_urls", "premier_urls"]:
-        urls = mtgo_config.get(url_type, {})
-        if urls and "standard" in urls:
-            test_urls.append((url_type, urls["standard"]))
-    
-    if not test_urls:
-        log_error("No MTGO URLs found in configuration")
-        return False
-    
-    success_count = 0
-    failure_count = 0
-    
-    for url_type, url in test_urls:
-        try:
-            log_info(f"Testing {url_type}: {url}")
-            headers = {
-                "User-Agent": mtgo_config.get("scraping_config", {}).get("user_agent", "Mozilla/5.0")
-            }
-            response = requests.get(url, headers=headers, timeout=10)
-            
-            if response.status_code == 200:
-                log_success(f"Successful connection to {url_type}")
-                success_count += 1
-            else:
-                log_error(f"Connection failed to {url_type}: Code {response.status_code}")
-                failure_count += 1
-        except requests.RequestException as e:
-            log_error(f"Error connecting to {url_type}: {str(e)}")
-            failure_count += 1
-        
-        # Pause to avoid being blocked
-        time.sleep(1)
-    
-    log_info(f"MTGO test completed: {success_count} successes, {failure_count} failures")
-    return success_count > 0
-
-def test_mtgmelee_connection(config, credentials=None):
-    """Test connection to MTGMelee API."""
-    log_info("Testing connection to MTGMelee API...")
-    
-    mtgmelee_config = config.get("mtgmelee", {})
-    if not mtgmelee_config:
-        log_error("MTGMelee configuration not found in sources.json")
-        return False
-    
-    api_config = mtgmelee_config.get("api", {})
-    if not api_config:
-        log_error("MTGMelee API configuration not found in sources.json")
-        return False
-    
-    base_url = api_config.get("base_url")
-    if not base_url:
-        log_error("MTGMelee API base URL not found in configuration")
-        return False
-    
-    # Test without authentication
-    try:
-        log_info(f"Testing connection to MTGMelee API (without auth): {base_url}")
-        response = requests.get(urljoin(base_url, "tournaments"), params={"pageSize": 1}, timeout=10)
-        
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        response = requests.get(url, headers=headers, timeout=timeout)
         if response.status_code == 200:
-            log_success("Successful connection to MTGMelee API (without auth)")
-            return True
+            return True, response.status_code, response.elapsed.total_seconds()
         else:
-            log_warning(f"Connection failed to MTGMelee API (without auth): Code {response.status_code}")
-    except requests.RequestException as e:
-        log_error(f"Error connecting to MTGMelee API (without auth): {str(e)}")
-    
-    # Test with authentication if credentials are available
-    if credentials and "mtgmelee" in credentials:
-        try:
-            log_info("Testing connection to MTGMelee API (with auth)")
-            
-            auth_url = api_config.get("auth", {}).get("login_url")
-            if not auth_url:
-                log_error("MTGMelee authentication URL not found in configuration")
-                return False
-            
-            auth_data = {
-                "username": credentials["mtgmelee"].get("username"),
-                "password": credentials["mtgmelee"].get("password")
-            }
-            
-            auth_response = requests.post(auth_url, json=auth_data, timeout=10)
-            
-            if auth_response.status_code == 200:
-                token = auth_response.json().get("token")
-                if token:
-                    log_success("Successful authentication to MTGMelee API")
-                    
-                    # Test an authenticated endpoint
-                    headers = {"Authorization": f"Bearer {token}"}
-                    response = requests.get(
-                        urljoin(base_url, "tournaments"), 
-                        headers=headers, 
-                        params={"pageSize": 1}, 
-                        timeout=10
-                    )
-                    
-                    if response.status_code == 200:
-                        log_success("Successful authenticated connection to MTGMelee API")
-                        return True
-                    else:
-                        log_error(f"Authenticated connection failed to MTGMelee API: Code {response.status_code}")
-                else:
-                    log_error("Authentication token not found in response")
-            else:
-                log_error(f"Authentication failed to MTGMelee API: Code {auth_response.status_code}")
-        except requests.RequestException as e:
-            log_error(f"Error during authentication to MTGMelee API: {str(e)}")
-        except json.JSONDecodeError:
-            log_error("Error decoding JSON response from MTGMelee API")
-    else:
-        log_warning("MTGMelee credentials not found, authentication test skipped")
-    
-    return False
+            return False, response.status_code, response.elapsed.total_seconds()
+    except requests.exceptions.RequestException as e:
+        return False, str(e), 0
 
-def generate_report(mtgo_success, mtgmelee_success):
-    """Generate a test report."""
-    report_dir = os.path.join(os.path.dirname(__file__), "docs")
-    os.makedirs(report_dir, exist_ok=True)
+def test_mtgo_connectivity():
+    """Teste la connectivité vers MTGO."""
+    log_info("Testing MTGO connectivity...")
     
-    report_path = os.path.join(report_dir, "connection_test_report.md")
+    mtgo_urls = [
+        "https://www.mtgo.com/decklists",
+        "https://www.mtgo.com/tournaments",
+        "https://www.mtgo.com/standings"
+    ]
     
-    with open(report_path, 'w') as f:
-        f.write("# Connectivity Test Report\n\n")
-        f.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+    results = {}
+    for url in mtgo_urls:
+        success, status, response_time = test_url_connectivity(url)
+        results[url] = {
+            'success': success,
+            'status': status,
+            'response_time': response_time
+        }
         
-        f.write("## Summary\n\n")
-        f.write(f"- MTGO: {'✅ Connected' if mtgo_success else '❌ Not connected'}\n")
-        f.write(f"- MTGMelee: {'✅ Connected' if mtgmelee_success else '❌ Not connected'}\n\n")
-        
-        f.write("## Details\n\n")
-        
-        f.write("### MTGO\n\n")
-        if mtgo_success:
-            f.write("Connection to MTGO URLs was successful. Scraping should work correctly.\n\n")
+        if success:
+            log_success(f"MTGO {url} - Status: {status}, Time: {response_time:.2f}s")
         else:
-            f.write("Connection to MTGO URLs failed. Check your internet connection and the URLs in the configuration.\n\n")
-        
-        f.write("### MTGMelee\n\n")
-        if mtgmelee_success:
-            f.write("Connection to MTGMelee API was successful. Integration should work correctly.\n\n")
-        else:
-            f.write("Connection to MTGMelee API failed. Check your internet connection, API endpoints, and credentials.\n\n")
-        
-        f.write("## Next steps\n\n")
-        if mtgo_success and mtgmelee_success:
-            f.write("All connections are functional. You can start using the pipeline.\n")
-        else:
-            f.write("Some connections failed. Resolve the issues before using the pipeline.\n")
+            log_error(f"MTGO {url} - Failed: {status}")
     
-    log_info(f"Report generated: {report_path}")
+    return results
+
+def test_mtgmelee_connectivity():
+    """Teste la connectivité vers MTGMelee."""
+    log_info("Testing MTGMelee connectivity...")
+    
+    melee_urls = [
+        "https://melee.gg",
+        "https://melee.gg/Decklists",
+        "https://melee.gg/Tournaments"
+    ]
+    
+    results = {}
+    for url in melee_urls:
+        success, status, response_time = test_url_connectivity(url)
+        results[url] = {
+            'success': success,
+            'status': status,
+            'response_time': response_time
+        }
+        
+        if success:
+            log_success(f"MTGMelee {url} - Status: {status}, Time: {response_time:.2f}s")
+        else:
+            log_error(f"MTGMelee {url} - Failed: {status}")
+    
+    return results
+
+def test_topdeck_connectivity():
+    """Teste la connectivité vers Topdeck."""
+    log_info("Testing Topdeck connectivity...")
+    
+    topdeck_urls = [
+        "https://topdeck.gg",
+        "https://topdeck.gg/decklists",
+        "https://topdeck.gg/tournaments"
+    ]
+    
+    results = {}
+    for url in topdeck_urls:
+        success, status, response_time = test_url_connectivity(url)
+        results[url] = {
+            'success': success,
+            'status': status,
+            'response_time': response_time
+        }
+        
+        if success:
+            log_success(f"Topdeck {url} - Status: {status}, Time: {response_time:.2f}s")
+        else:
+            log_error(f"Topdeck {url} - Failed: {status}")
+    
+    return results
+
+def test_local_repositories():
+    """Teste la présence des repositories locaux."""
+    log_info("Testing local repositories...")
+    
+    base_dir = Path(__file__).parent
+    repositories = {
+        'mtg_decklist_scrapper': base_dir / 'data-collection' / 'scraper' / 'mtgo',
+        'MTG_decklistcache': base_dir / 'data-collection' / 'raw-cache',
+        'MTGODecklistCache': base_dir / 'data-collection' / 'processed-cache',
+        'MTGOArchetypeParser': base_dir / 'data-treatment' / 'parser',
+        'MTGOFormatData': base_dir / 'data-treatment' / 'format-rules',
+        'R-Meta-Analysis': base_dir / 'visualization' / 'r-analysis'
+    }
+    
+    results = {}
+    for repo_name, repo_path in repositories.items():
+        if repo_path.exists():
+            # Vérifier si c'est un repository git
+            git_dir = repo_path / '.git'
+            if git_dir.exists():
+                log_success(f"Repository {repo_name} found at {repo_path}")
+                results[repo_name] = {'exists': True, 'is_git': True, 'path': str(repo_path)}
+            else:
+                log_warning(f"Directory {repo_name} exists but is not a git repository")
+                results[repo_name] = {'exists': True, 'is_git': False, 'path': str(repo_path)}
+        else:
+            log_error(f"Repository {repo_name} not found at {repo_path}")
+            results[repo_name] = {'exists': False, 'is_git': False, 'path': str(repo_path)}
+    
+    return results
+
+def test_configuration_files():
+    """Teste la présence des fichiers de configuration."""
+    log_info("Testing configuration files...")
+    
+    base_dir = Path(__file__).parent
+    config_files = {
+        'sources.json': base_dir / 'config' / 'sources.json',
+        'melee_login.json': base_dir / 'data-collection' / 'scraper' / 'mtgo' / 'melee_login.json',
+        'api_topdeck.txt': base_dir / 'data-collection' / 'scraper' / 'mtgo' / 'Api_token_and_login' / 'api_topdeck.txt'
+    }
+    
+    results = {}
+    for file_name, file_path in config_files.items():
+        if file_path.exists():
+            log_success(f"Configuration file {file_name} found")
+            results[file_name] = {'exists': True, 'path': str(file_path)}
+        else:
+            log_warning(f"Configuration file {file_name} not found at {file_path}")
+            results[file_name] = {'exists': False, 'path': str(file_path)}
+    
+    return results
+
+def test_dependencies():
+    """Teste la présence des dépendances requises."""
+    log_info("Testing dependencies...")
+    
+    # Test Python packages
+    python_packages = [
+        'requests', 'bs4', 'numpy', 'pandas',
+        'click', 'rich', 'tqdm', 'yaml'
+    ]
+    
+    results = {'python_packages': {}, 'system_commands': {}}
+    
+    for package in python_packages:
+        try:
+            __import__(package)
+            log_success(f"Python package {package} is available")
+            results['python_packages'][package] = True
+        except ImportError:
+            log_error(f"Python package {package} is not available")
+            results['python_packages'][package] = False
+    
+    # Test system commands
+    system_commands = ['git', 'python3', 'dotnet', 'R']
+    
+    for command in system_commands:
+        try:
+            result = subprocess.run([command, '--version'], 
+                                  capture_output=True, text=True, timeout=10)
+            if result.returncode == 0:
+                version = result.stdout.strip().split('\n')[0]
+                log_success(f"System command {command} is available: {version}")
+                results['system_commands'][command] = True
+            else:
+                log_error(f"System command {command} failed")
+                results['system_commands'][command] = False
+        except Exception as e:
+            log_error(f"System command {command} is not available: {e}")
+            results['system_commands'][command] = False
+    
+    return results
+
+def test_data_availability():
+    """Teste la disponibilité des données récentes."""
+    log_info("Testing data availability...")
+    
+    base_dir = Path(__file__).parent
+    raw_cache_dir = base_dir / 'data-collection' / 'raw-cache' / 'Tournaments'
+    
+    results = {'tournaments_found': 0, 'recent_tournaments': 0, 'formats': []}
+    
+    if raw_cache_dir.exists():
+        # Compter les tournois
+        tournament_files = list(raw_cache_dir.rglob('*.json'))
+        results['tournaments_found'] = len(tournament_files)
+        
+        # Vérifier les tournois récents (7 derniers jours)
+        recent_date = datetime.now() - timedelta(days=7)
+        recent_count = 0
+        
+        for file_path in tournament_files:
+            try:
+                with open(file_path, 'r') as f:
+                    data = json.load(f)
+                    if 'Tournament' in data and 'date' in data['Tournament']:
+                        tournament_date = datetime.strptime(data['Tournament']['date'], '%Y-%m-%d')
+                        if tournament_date >= recent_date:
+                            recent_count += 1
+                        
+                        # Collecter les formats
+                        if 'formats' in data['Tournament']:
+                            results['formats'].extend(data['Tournament']['formats'])
+            except Exception as e:
+                log_warning(f"Error reading tournament file {file_path}: {e}")
+        
+        results['recent_tournaments'] = recent_count
+        results['formats'] = list(set(results['formats']))  # Dédupliquer
+        
+        log_success(f"Found {results['tournaments_found']} tournament files")
+        log_success(f"Found {results['recent_tournaments']} recent tournaments (last 7 days)")
+        log_success(f"Formats available: {', '.join(results['formats'])}")
+    else:
+        log_warning("Raw cache directory not found")
+    
+    return results
+
+def generate_report(all_results):
+    """Génère un rapport de test."""
+    report = {
+        'timestamp': datetime.now().isoformat(),
+        'summary': {
+            'total_tests': 0,
+            'passed_tests': 0,
+            'failed_tests': 0
+        },
+        'results': all_results
+    }
+    
+    # Calculer les statistiques
+    for category, results in all_results.items():
+        if isinstance(results, dict):
+            for test_name, test_result in results.items():
+                report['summary']['total_tests'] += 1
+                if isinstance(test_result, dict):
+                    if test_result.get('success', test_result.get('exists', False)):
+                        report['summary']['passed_tests'] += 1
+                    else:
+                        report['summary']['failed_tests'] += 1
+                elif isinstance(test_result, bool):
+                    if test_result:
+                        report['summary']['passed_tests'] += 1
+                    else:
+                        report['summary']['failed_tests'] += 1
+    
+    return report
+
+def save_report(report, output_file='connection_test_report.json'):
+    """Sauvegarde le rapport de test."""
+    try:
+        with open(output_file, 'w') as f:
+            json.dump(report, f, indent=2)
+        log_success(f"Test report saved to {output_file}")
+    except Exception as e:
+        log_error(f"Failed to save test report: {e}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Connectivity test for the MTG Analytics pipeline")
-    parser.add_argument("--mtgo-only", action="store_true", help="Test only MTGO connection")
-    parser.add_argument("--mtgmelee-only", action="store_true", help="Test only MTGMelee connection")
-    args = parser.parse_args()
+    """Fonction principale."""
+    print(f"{Colors.BOLD}MTG Analytics Pipeline - Connection Test{Colors.ENDC}")
+    print("=" * 50)
     
-    log_info("Starting connectivity tests...")
+    all_results = {}
     
-    config = load_config()
-    credentials = load_credentials()
+    # Tests de connectivité
+    all_results['mtgo_connectivity'] = test_mtgo_connectivity()
+    all_results['mtgmelee_connectivity'] = test_mtgmelee_connectivity()
+    all_results['topdeck_connectivity'] = test_topdeck_connectivity()
     
-    mtgo_success = False
-    mtgmelee_success = False
+    # Tests locaux
+    all_results['local_repositories'] = test_local_repositories()
+    all_results['configuration_files'] = test_configuration_files()
+    all_results['dependencies'] = test_dependencies()
+    all_results['data_availability'] = test_data_availability()
     
-    if not args.mtgmelee_only:
-        mtgo_success = test_mtgo_connection(config)
+    # Générer et sauvegarder le rapport
+    report = generate_report(all_results)
+    save_report(report)
     
-    if not args.mtgo_only:
-        mtgmelee_success = test_mtgmelee_connection(config, credentials)
+    # Afficher le résumé
+    print("\n" + "=" * 50)
+    print(f"{Colors.BOLD}Test Summary{Colors.ENDC}")
+    print(f"Total tests: {report['summary']['total_tests']}")
+    print(f"Passed: {Colors.GREEN}{report['summary']['passed_tests']}{Colors.ENDC}")
+    print(f"Failed: {Colors.RED}{report['summary']['failed_tests']}{Colors.ENDC}")
     
-    generate_report(mtgo_success, mtgmelee_success)
-    
-    if (not args.mtgmelee_only and not mtgo_success) or (not args.mtgo_only and not mtgmelee_success):
-        log_warning("Some tests failed. Check the report for details.")
-        return 1
-    else:
-        log_success("All requested tests passed!")
+    if report['summary']['failed_tests'] == 0:
+        print(f"\n{Colors.GREEN}✅ All tests passed! The pipeline is ready to use.{Colors.ENDC}")
         return 0
+    else:
+        print(f"\n{Colors.YELLOW}⚠️  Some tests failed. Please check the report for details.{Colors.ENDC}")
+        return 1
 
 if __name__ == "__main__":
     sys.exit(main())

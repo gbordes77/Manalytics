@@ -1,218 +1,373 @@
-# MTG Analytics Pipeline
+# MTG Analytics Pipeline - Pipeline Unifié
 
-A pipeline for collecting, processing, and visualizing Magic: The Gathering tournament data.
+Un pipeline unifié pour l'analyse des données de tournois Magic: The Gathering, intégrant 6 repositories GitHub dans une architecture modulaire et extensible.
 
-## Overview
+## 🎯 Vue d'Ensemble
 
-This project consolidates several existing tools to create a complete pipeline for analyzing Magic: The Gathering tournament data. It allows collecting data from MTGO and MTGMelee platforms, processing it to categorize decks by archetypes, and generating visualizations to analyze the metagame.
+Le pipeline MTG Analytics est un système complet qui :
+- **Collecte** les données depuis MTGO, MTGMelee, Topdeck et Manatraders
+- **Traite** et catégorise les decks par archétypes
+- **Visualise** les données avec des matrices de matchups et analyses du métagame
 
-## Core Rules
-
-- **ALWAYS USE REAL DATA**: Never use example or mock data. All analyses must be based on real tournament data from MTGO and MTGMelee.
-- **PRESERVE CODE INTEGRITY**: Always maintain the original functionality of the source repositories.
-- **DOCUMENT ALL DECISIONS**: Maintain complete traceability of technical choices.
-- **RESPECT RATE LIMITS**: Always adhere to the rate limits of the data sources to avoid being blocked.
-
-## Architecture
-
-The pipeline is organized into three main phases:
-
-1. **Data Collection**: Extraction of tournament data from MTGO and MTGMelee
-2. **Data Processing**: Categorization of decks by archetypes according to defined rules
-3. **Visualization**: Generation of matchup matrices and other visualizations
-
-## Project Structure
+## 🏗️ Architecture
 
 ```
 manalytics/
-├── data-collection/
-│   ├── scraper/               # mtg_decklist_scrapper
-│   │   ├── mtgo/             # Original MTGO code
-│   │   └── mtgmelee/         # MTGMelee API extension
-│   ├── raw-cache/            # MTG_decklistcache
-│   └── processed-cache/      # MTGODecklistCache
-├── data-treatment/
-│   ├── parser/               # MTGOArchetypeParser
-│   └── format-rules/         # MTGOFormatData
-├── visualization/
-│   └── r-analysis/           # R-Meta-Analysis
-├── config/
-│   └── sources.json          # Data sources configuration
-├── data/                     # Generated data
-└── docs/                     # Documentation
+├── data-collection/           # Étape 1 : Collecte de données
+│   ├── scraper/
+│   │   ├── mtgo/             # mtg_decklist_scrapper (fbettega)
+│   │   └── mtgmelee/         # Extension API MTGMelee
+│   ├── raw-cache/            # MTG_decklistcache (fbettega)
+│   └── processed-cache/      # MTGODecklistCache (Jiliac)
+├── data-treatment/           # Étape 2 : Traitement
+│   ├── parser/               # MTGOArchetypeParser (Badaro)
+│   └── format-rules/         # MTGOFormatData (Badaro)
+├── visualization/            # Étape 3 : Visualisation
+│   └── r-analysis/           # R-Meta-Analysis (Jiliac)
+├── config/                   # Configuration
+├── docs/                     # Documentation
+├── data/                     # Données traitées
+└── analyses/                 # Rapports générés
 ```
 
-## Installation
+## 🚀 Installation Rapide
 
-### Prerequisites
+### Prérequis Système
+- **Git** : Gestion des repositories
+- **Python 3.8+** : Scripts de collecte et orchestration
+- **.NET Runtime 8.0** : MTGOArchetypeParser
+- **R 4.0+** : Visualisations et analyses
 
-- Git
-- Python 3.8+
-- R 4.0+ (for visualization)
+### Installation Automatique
 
-### Automatic Installation
-
-#### For Unix/Linux/macOS
-
+#### Linux/macOS
 ```bash
+# Cloner le projet
+git clone https://github.com/your-username/manalytics.git
+cd manalytics
+
+# Installation automatique
 ./setup.sh
 ```
 
-#### For Windows
-
+#### Windows
 ```powershell
+# Cloner le projet
+git clone https://github.com/your-username/manalytics.git
+cd manalytics
+
+# Installation automatique
 .\setup.ps1
 ```
 
-These scripts will:
-1. Clone the 6 required GitHub repositories
-2. Place them in the appropriate folder structure
-3. Generate an installation report
-
-### Manual Installation
-
-If you prefer to install manually, follow these steps:
-
-1. Clone this repository
-2. Clone the following repositories into the corresponding folders:
-   - [mtg_decklist_scrapper](https://github.com/fbettega/mtg_decklist_scrapper) → data-collection/scraper/mtgo
-   - [MTG_decklistcache](https://github.com/fbettega/MTG_decklistcache) → data-collection/raw-cache
-   - [MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache) → data-collection/processed-cache
-   - [MTGOArchetypeParser](https://github.com/Badaro/MTGOArchetypeParser) → data-treatment/parser
-   - [MTGOFormatData](https://github.com/Badaro/MTGOFormatData) → data-treatment/format-rules
-   - [R-Meta-Analysis](https://github.com/Jiliac/R-Meta-Analysis) → visualization/r-analysis
-
-## Configuration
-
-Before using the pipeline, you need to configure the data sources in the `config/sources.json` file. This file contains:
-
-- MTGO URLs to scrape
-- MTGMelee API endpoints
-- Configuration parameters for scraping and API
-
-For the MTGMelee API, you'll need to add your credentials in a `config/credentials.json` file (not included for security reasons).
-
-## Usage
-
-### Quick Analysis (Recommended)
-
-The easiest way to run a complete analysis is using the orchestrator:
-
-#### Interactive Mode
-
+### Installation Manuelle
 ```bash
-# Launch the interactive analyzer
-python analyze.py
+# 1. Installer les dépendances système
+# Ubuntu/Debian
+sudo apt-get install git python3 python3-pip r-base dotnet-runtime-8.0
+
+# macOS
+brew install git python3 r dotnet
+
+# 2. Créer l'environnement virtuel Python
+python3 -m venv venv
+source venv/bin/activate  # Linux/macOS
+# ou
+.\venv\Scripts\Activate.ps1  # Windows
+
+# 3. Installer les dépendances Python
+pip install -r requirements.txt
+
+# 4. Installer les dépendances R
+Rscript install_dependencies.R
 ```
 
-This will guide you through selecting a format and date range, then automatically run the entire pipeline.
+## 📋 Vérification de l'Installation
 
-#### Command Line Mode
-
+### Test de Connectivité
 ```bash
-# Analyze Standard from July 1st to today
-python orchestrator.py --format standard --start-date 2024-07-01 --end-date 2024-07-22
+# Tester tous les composants
+python test_connections.py
 
-# Analyze Modern for the last 30 days
-python orchestrator.py --format modern --start-date 2024-06-22 --end-date 2024-07-22
-
-# Analyze Pioneer with verbose output
-python orchestrator.py --format pioneer --start-date 2024-07-01 --end-date 2024-07-22 --verbose
+# Vérifier les dépendances
+python -c "import requests, beautifulsoup4, numpy; print('✅ Python OK')"
+dotnet --version
+R --version
 ```
 
-The orchestrator will:
-1. Check if data is available in caches
-2. Collect fresh data from MTGO and MTGMelee if needed
-3. Process and categorize the data
-4. Generate visualizations and analysis
-5. Create an HTML report
-6. Automatically open the results in your browser
-
-Results are saved in the `analyses/` folder with timestamps.
-
-### Manual Pipeline Execution
-
-If you prefer to run individual components:
-
-#### 1. Data Collection
-
-##### From MTGO
-
+### Test des Repositories
 ```bash
-# Collect Standard data from the last 7 days
+# Vérifier que tous les repositories sont clonés
+ls -la data-collection/scraper/mtgo/
+ls -la data-collection/raw-cache/
+ls -la data-treatment/parser/
+ls -la visualization/r-analysis/
+```
+
+## 🔧 Configuration
+
+### Fichiers de Configuration
+
+#### 1. Sources de Données (`config/sources.json`)
+```json
+{
+  "mtgo": {
+    "base_url": "https://www.mtgo.com/decklists",
+    "scraping_config": {
+      "rate_limit": 1,
+      "retry_attempts": 5
+    }
+  },
+  "mtgmelee": {
+    "base_url": "https://melee.gg",
+    "authentication": {
+      "login_url": "https://melee.gg/login"
+    }
+  }
+}
+```
+
+#### 2. Credentials MTGMelee (`data-collection/scraper/mtgo/melee_login.json`)
+```json
+{
+  "login": "your-email@example.com",
+  "mdp": "your-password"
+}
+```
+
+#### 3. API Topdeck (`data-collection/scraper/mtgo/Api_token_and_login/api_topdeck.txt`)
+```
+your-api-key-here
+```
+
+## 📊 Utilisation
+
+### Analyse Simple
+```bash
+# Analyser le format Standard sur les 7 derniers jours
+./generate_analysis.sh standard 7
+
+# Analyser le format Modern sur les 30 derniers jours
+./generate_analysis.sh modern 30
+```
+
+### Analyse Avancée
+```bash
+# Utiliser l'orchestrateur Python
+python orchestrator.py --format standard --days 7 --output analyses/standard_analysis
+
+# Collecter des données spécifiques
 python data-collection/scraper/mtgo/main.py --format standard --days 7
 
-# Collect Modern data from the last 7 days
-python data-collection/scraper/mtgo/main.py --format modern --days 7
+# Traiter les données
+python data-treatment/parser/main.py --format standard --input data/raw --output data/processed
+
+# Générer les visualisations
+Rscript visualization/r-analysis/generate_matrix.R --format standard --output analyses/
 ```
 
-##### From MTGMelee
+### Formats Supportés
+- **Standard** : Format actuel
+- **Modern** : Format étendu
+- **Legacy** : Format vintage
+- **Vintage** : Format restreint
+- **Pioneer** : Format intermédiaire
+- **Pauper** : Format commun
 
+## 📈 Exemples de Sortie
+
+### Matrice de Matchups
+```
+           Burn  Spirits  Shadow  Rakdos  Amulet  Heliod
+Burn       0.50    0.45    0.55    0.60    0.40    0.65
+Spirits    0.55    0.50    0.48    0.52    0.58    0.42
+Shadow     0.45    0.52    0.50    0.47    0.53    0.49
+Rakdos     0.40    0.48    0.53    0.50    0.45    0.55
+Amulet     0.60    0.42    0.47    0.55    0.50    0.51
+Heliod     0.35    0.58    0.51    0.45    0.49    0.50
+```
+
+### Répartition du Métagame
+```
+Archetype      Count  Percentage
+Burn              1      7.69%
+Spirits           1      7.69%
+Shadow Prowess    2     15.38%
+Rakdos Midrange   1      7.69%
+Amulet Titan      2     15.38%
+Heliod Combo      2     15.38%
+```
+
+## 🔍 Structure des Données
+
+### Format Raw (MTG_decklistcache)
+```json
+{
+  "Tournament": {
+    "date": "2025-01-15",
+    "name": "MTGO Standard Challenge",
+    "uri": "https://www.mtgo.com/decklists/...",
+    "formats": ["Standard"]
+  },
+  "Decks": [
+    {
+      "player": "yamakiller",
+      "result": "5-0",
+      "mainboard": [
+        {"count": 4, "card_name": "Lightning Bolt"}
+      ],
+      "sideboard": [
+        {"count": 2, "card_name": "Fury"}
+      ]
+    }
+  ]
+}
+```
+
+### Format Processed (MTGOArchetypeParser)
+```json
+{
+  "tournament_id": "mtgo-standard-20250115",
+  "format": "Standard",
+  "decks": [
+    {
+      "player_name": "yamakiller",
+      "archetype": "Burn",
+      "result": "5-0",
+      "mainboard": [...],
+      "sideboard": [...]
+    }
+  ]
+}
+```
+
+## 🛠️ Développement
+
+### Structure du Code
+```
+manalytics/
+├── orchestrator.py           # Orchestrateur principal
+├── analyze.py               # Script d'analyse
+├── test_connections.py      # Tests de connectivité
+├── requirements.txt         # Dépendances Python
+├── install_dependencies.R   # Dépendances R
+└── generate_analysis.sh     # Script d'analyse bash
+```
+
+### Ajout d'un Nouveau Format
+1. **Créer les règles d'archétypes** dans `data-treatment/format-rules/Formats/NouveauFormat/`
+2. **Ajouter la configuration** dans `config/sources.json`
+3. **Tester la collecte** avec `python test_connections.py`
+4. **Valider le parsing** avec `python data-treatment/parser/main.py`
+
+### Extension MTGMelee
+Le module MTGMelee doit être étendu pour :
+- Authentification API
+- Récupération des tournois
+- Extraction des decklists
+- Formatage des données
+
+## 📚 Documentation
+
+### Guides Détaillés
+- [📖 Architecture](docs/ARCHITECTURE.md) - Architecture complète du pipeline
+- [📊 Formats de Données](docs/DATA_FORMATS.md) - Spécifications des formats
+- [🔧 Dépendances](docs/DEPENDENCIES.md) - Guide d'installation des dépendances
+- [📋 Analyse des Repositories](docs/REPO_ANALYSIS.md) - Documentation des 6 repositories
+
+### API Reference
+- **MTGO Scraper** : `data-collection/scraper/mtgo/README.md`
+- **Archetype Parser** : `data-treatment/parser/README.md`
+- **Format Rules** : `data-treatment/format-rules/README.md`
+- **R Analysis** : `visualization/r-analysis/README.md`
+
+## 🐛 Résolution de Problèmes
+
+### Problèmes Courants
+
+#### Erreur de Connectivité
 ```bash
-# Collect Standard data from the last 7 days
-python data-collection/scraper/mtgmelee/main.py --format standard --days 7
+# Tester la connectivité
+python test_connections.py
 
-# Collect Modern data from the last 7 days
-python data-collection/scraper/mtgmelee/main.py --format modern --days 7
+# Vérifier les URLs dans config/sources.json
+# Vérifier les credentials MTGMelee
 ```
 
-#### 2. Data Processing
-
+#### Erreur de Dépendances
 ```bash
-# Process Standard data
-python data-treatment/parser/main.py --format standard
+# Réinstaller les dépendances Python
+pip install -r requirements.txt
 
-# Process Modern data
-python data-treatment/parser/main.py --format modern
+# Réinstaller les dépendances R
+Rscript install_dependencies.R
+
+# Vérifier .NET
+dotnet --version
 ```
 
-#### 3. Visualization
-
+#### Erreur de Parsing
 ```bash
-# Generate a matchup matrix for Standard
-Rscript visualization/r-analysis/generate_matrix.R --format standard
+# Vérifier les règles d'archétypes
+ls data-treatment/format-rules/Formats/Standard/
 
-# Generate a matchup matrix for Modern
-Rscript visualization/r-analysis/generate_matrix.R --format modern
+# Tester le parser manuellement
+python data-treatment/parser/main.py --format standard --input test_data.json
 ```
 
-## Documentation
+### Logs et Debugging
+```bash
+# Activer les logs détaillés
+export MANALYTICS_DEBUG=1
+python orchestrator.py --verbose
 
-For more information, check the documentation in the `docs/` folder:
+# Vérifier les logs de scraping
+tail -f data-collection/scraper/mtgo/log_scraping.txt
+```
 
-- [Architecture](docs/ARCHITECTURE.md): Detailed description of the architecture
-- [Data Formats](docs/DATA_FORMATS.md): Description of data formats
-- [Quick Start Guide](docs/QUICKSTART.md): Guide to get started quickly
+## 🤝 Contribution
 
-## Troubleshooting
+### Maintainers
+- **Jiliac** : Formats Standard, Modern, Legacy, Pioneer, Pauper
+- **IamActuallyLvL1** : Format Vintage
+- **fbettega** : Scraping et cache des données
 
-### Why scripts might not work while they work for Jiliac
+### Workflow de Contribution
+1. **Fork** le repository
+2. **Créer** une branche feature (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. **Commiter** les changements (`git commit -am 'Ajout nouvelle fonctionnalité'`)
+4. **Pousser** vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
+5. **Créer** une Pull Request
 
-The scripts may not work immediately for several reasons:
+### Standards de Code
+- **Python** : PEP 8, Black, Flake8
+- **R** : Style guide tidyverse
+- **Documentation** : Markdown avec exemples
+- **Tests** : Pytest pour Python, testthat pour R
 
-1. **Environment differences**: Jiliac's environment might have specific configurations, paths, or dependencies that are not present in your environment.
+## 📄 Licence
 
-2. **Missing credentials**: Some scripts require API credentials or tokens that Jiliac has configured but are not included in the public repositories.
+Ce projet intègre plusieurs repositories sous différentes licences :
+- **mtg_decklist_scrapper** : MIT License
+- **MTG_decklistcache** : MIT License
+- **MTGOArchetypeParser** : MIT License
+- **MTGOFormatData** : MIT License
+- **R-Meta-Analysis** : MIT License
 
-3. **Path configurations**: The original scripts might have hardcoded paths that work in Jiliac's environment but need to be adjusted for your setup.
+## 🙏 Remerciements
 
-4. **Version differences**: Different versions of Python, R, or dependencies can cause compatibility issues.
+- **fbettega** : Scraping et cache des données
+- **Badaro** : Moteur de parsing d'archétypes
+- **Jiliac** : Maintenance des formats et visualisations
+- **IamActuallyLvL1** : Format Vintage
+- **Aliquanto3** : Base du projet R-Meta-Analysis
 
-5. **Integration points**: The repositories were originally designed to work independently, not as part of a unified pipeline.
+## 📞 Support
 
-To resolve these issues:
-- Check the logs for specific error messages
-- Verify that all dependencies are installed
-- Ensure paths are correctly configured for your environment
-- Make sure all required credentials are properly set up
+- **Issues** : [GitHub Issues](https://github.com/your-username/manalytics/issues)
+- **Discussions** : [GitHub Discussions](https://github.com/your-username/manalytics/discussions)
+- **Documentation** : [Wiki](https://github.com/your-username/manalytics/wiki)
 
-## Credits
+---
 
-This project integrates the following repositories:
-
-- [mtg_decklist_scrapper](https://github.com/fbettega/mtg_decklist_scrapper) by fbettega
-- [MTG_decklistcache](https://github.com/fbettega/MTG_decklistcache) by fbettega
-- [MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache) by Jiliac
-- [MTGOArchetypeParser](https://github.com/Badaro/MTGOArchetypeParser) by Badaro
-- [MTGOFormatData](https://github.com/Badaro/MTGOFormatData) by Badaro
-- [R-Meta-Analysis](https://github.com/Jiliac/R-Meta-Analysis) by Jiliac (fork of Aliquanto3)
+**🚀 Prêt à analyser le métagame MTG ? Commencez par `./setup.sh` !**

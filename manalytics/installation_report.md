@@ -1,6 +1,6 @@
 # MTG Analytics Pipeline Installation Report
 
-Date: Tue Jul 22 13:06:34 CEST 2025
+Date: Tue Jul 22 18:13:54 CEST 2025
 
 ## Repository Status
 
@@ -25,6 +25,12 @@ Date: Tue Jul 22 13:06:34 CEST 2025
   .
   ./analyses
   ./analyses/standard_20250722_130423
+  ./analyses/standard_20250722_130840
+  ./analyses/standard_20250722_140428
+  ./analyses/standard_20250722_142149
+  ./analyses/standard_20250722_142813
+  ./analyses/standard_20250722_160717
+  ./analyses/standard_20250722_161135
   ./config
   ./data
   ./data-collection
@@ -11439,6 +11445,27 @@ Date: Tue Jul 22 13:06:34 CEST 2025
   ./data-collection/raw-cache/.git/refs/remotes
   ./data-collection/raw-cache/.git/refs/remotes/origin
   ./data-collection/raw-cache/.git/refs/tags
+  ./data-collection/raw-cache/MTGO
+  ./data-collection/raw-cache/MTGO/2025
+  ./data-collection/raw-cache/MTGO/2025/06
+  ./data-collection/raw-cache/MTGO/2025/06/29
+  ./data-collection/raw-cache/MTGO/2025/06/30
+  ./data-collection/raw-cache/MTGO/2025/07
+  ./data-collection/raw-cache/MTGO/2025/07/01
+  ./data-collection/raw-cache/MTGO/2025/07/02
+  ./data-collection/raw-cache/MTGO/2025/07/03
+  ./data-collection/raw-cache/MTGO/2025/07/04
+  ./data-collection/raw-cache/MTGO/2025/07/05
+  ./data-collection/raw-cache/MTGO/2025/07/06
+  ./data-collection/raw-cache/MTGO/2025/07/07
+  ./data-collection/raw-cache/MTGO/2025/07/08
+  ./data-collection/raw-cache/MTGO/2025/07/09
+  ./data-collection/raw-cache/MTGO/2025/07/10
+  ./data-collection/raw-cache/MTGO/2025/07/11
+  ./data-collection/raw-cache/MTGO/2025/07/12
+  ./data-collection/raw-cache/MTGO/2025/07/13
+  ./data-collection/raw-cache/MTGO/2025/07/14
+  ./data-collection/raw-cache/MTGO/2025/07/15
   ./data-collection/raw-cache/Tournaments
   ./data-collection/raw-cache/Tournaments/Manatrader
   ./data-collection/raw-cache/Tournaments/Manatrader/2024
@@ -12638,6 +12665,7 @@ Date: Tue Jul 22 13:06:34 CEST 2025
   ./data-collection/raw-cache/Tournaments/Topdeck/2025/04/19
   ./data-collection/scraper
   ./data-collection/scraper/mtgmelee
+  ./data-collection/scraper/mtgmelee/__pycache__
   ./data-collection/scraper/mtgo
   ./data-collection/scraper/mtgo_backup_20250722130635
   ./data-collection/scraper/mtgo/.git
@@ -12659,8 +12687,11 @@ Date: Tue Jul 22 13:06:34 CEST 2025
   ./data-collection/scraper/mtgo/.vscode
   ./data-collection/scraper/mtgo/Api_token_and_login
   ./data-collection/scraper/mtgo/Client
+  ./data-collection/scraper/mtgo/Client/__pycache__
   ./data-collection/scraper/mtgo/comon_tools
+  ./data-collection/scraper/mtgo/comon_tools/__pycache__
   ./data-collection/scraper/mtgo/models
+  ./data-collection/scraper/mtgo/models/__pycache__
   ./data-collection/scraper/mtgo/MTG_decklistcache
   ./data-collection/scraper/mtgo/New_website
   ./data-collection/scraper/mtgo/tests
@@ -12728,15 +12759,68 @@ Date: Tue Jul 22 13:06:34 CEST 2025
   ./data-treatment/parser/.git/refs/tags
   ./data-treatment/parser/MTGOArchetypeParser
   ./data-treatment/parser/MTGOArchetypeParser.App
+  ./data-treatment/parser/MTGOArchetypeParser.App/bin
+  ./data-treatment/parser/MTGOArchetypeParser.App/bin/Debug
+  ./data-treatment/parser/MTGOArchetypeParser.App/bin/Debug/net8.0
+  ./data-treatment/parser/MTGOArchetypeParser.App/obj
+  ./data-treatment/parser/MTGOArchetypeParser.App/obj/Debug
+  ./data-treatment/parser/MTGOArchetypeParser.App/obj/Debug/net8.0
+  ./data-treatment/parser/MTGOArchetypeParser.App/obj/Debug/net8.0/ref
+  ./data-treatment/parser/MTGOArchetypeParser.App/obj/Debug/net8.0/refint
   ./data-treatment/parser/MTGOArchetypeParser.App/Properties
   ./data-treatment/parser/MTGOArchetypeParser.Data
+  ./data-treatment/parser/MTGOArchetypeParser.Data/bin
+  ./data-treatment/parser/MTGOArchetypeParser.Data/bin/Debug
+  ./data-treatment/parser/MTGOArchetypeParser.Data/bin/Debug/netstandard2.1
   ./data-treatment/parser/MTGOArchetypeParser.Data/Model
+  ./data-treatment/parser/MTGOArchetypeParser.Data/obj
+  ./data-treatment/parser/MTGOArchetypeParser.Data/obj/Debug
+  ./data-treatment/parser/MTGOArchetypeParser.Data/obj/Debug/netstandard2.1
   ./data-treatment/parser/MTGOArchetypeParser.Formats.FromJson
+  ./data-treatment/parser/MTGOArchetypeParser.Formats.FromJson/bin
+  ./data-treatment/parser/MTGOArchetypeParser.Formats.FromJson/bin/Debug
+  ./data-treatment/parser/MTGOArchetypeParser.Formats.FromJson/bin/Debug/netstandard2.1
+  ./data-treatment/parser/MTGOArchetypeParser.Formats.FromJson/obj
+  ./data-treatment/parser/MTGOArchetypeParser.Formats.FromJson/obj/Debug
+  ./data-treatment/parser/MTGOArchetypeParser.Formats.FromJson/obj/Debug/netstandard2.1
   ./data-treatment/parser/MTGOArchetypeParser.Tests
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/cs
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/de
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/es
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/fr
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/it
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/ja
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/ko
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/pl
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/pt-BR
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/ru
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/runtimes
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/runtimes/win
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/runtimes/win/lib
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/tr
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/zh-Hans
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/bin/Debug/net8.0/zh-Hant
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/obj
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/obj/Debug
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/obj/Debug/net8.0
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/obj/Debug/net8.0/ref
+  ./data-treatment/parser/MTGOArchetypeParser.Tests/obj/Debug/net8.0/refint
+  ./data-treatment/parser/MTGOArchetypeParser/bin
+  ./data-treatment/parser/MTGOArchetypeParser/bin/Debug
+  ./data-treatment/parser/MTGOArchetypeParser/bin/Debug/netstandard2.1
   ./data-treatment/parser/MTGOArchetypeParser/Data
   ./data-treatment/parser/MTGOArchetypeParser/Model
+  ./data-treatment/parser/MTGOArchetypeParser/obj
+  ./data-treatment/parser/MTGOArchetypeParser/obj/Debug
+  ./data-treatment/parser/MTGOArchetypeParser/obj/Debug/netstandard2.1
   ./data-treatment/parser/MTGODecklistCache
   ./data-treatment/parser/MTGOFormatData
+  ./data/processed
+  ./data/processed/standard
   ./docs
   ./manalytics
   ./manalytics/config

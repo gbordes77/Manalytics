@@ -6,9 +6,13 @@ pandas>=1.2.4
 numpy>=1.20.2
 tqdm>=4.60.0
 json5>=0.9.5
+python-dateutil>=2.8.1
 
 # Data processing dependencies
 scikit-learn>=0.24.2
+
+# Testing dependencies
+pytest>=6.2.4
 
 # General dependencies
 matplotlib>=3.4.2

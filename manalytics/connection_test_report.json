@@ -1,0 +1,130 @@
+{
+  "timestamp": "2025-07-22T19:18:43.438553",
+  "summary": {
+    "total_tests": 23,
+    "passed_tests": 13,
+    "failed_tests": 7
+  },
+  "results": {
+    "mtgo_connectivity": {
+      "https://www.mtgo.com/decklists": {
+        "success": true,
+        "status": 200,
+        "response_time": 4.325567
+      },
+      "https://www.mtgo.com/tournaments": {
+        "success": false,
+        "status": 404,
+        "response_time": 0.665571
+      },
+      "https://www.mtgo.com/standings": {
+        "success": false,
+        "status": 404,
+        "response_time": 0.669405
+      }
+    },
+    "mtgmelee_connectivity": {
+      "https://melee.gg": {
+        "success": true,
+        "status": 200,
+        "response_time": 0.426219
+      },
+      "https://melee.gg/Decklists": {
+        "success": true,
+        "status": 200,
+        "response_time": 0.19661
+      },
+      "https://melee.gg/Tournaments": {
+        "success": true,
+        "status": 200,
+        "response_time": 0.198015
+      }
+    },
+    "topdeck_connectivity": {
+      "https://topdeck.gg": {
+        "success": true,
+        "status": 200,
+        "response_time": 0.29649
+      },
+      "https://topdeck.gg/decklists": {
+        "success": false,
+        "status": 404,
+        "response_time": 0.313447
+      },
+      "https://topdeck.gg/tournaments": {
+        "success": false,
+        "status": 404,
+        "response_time": 0.35663
+      }
+    },
+    "local_repositories": {
+      "mtg_decklist_scrapper": {
+        "exists": true,
+        "is_git": true,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/data-collection/scraper/mtgo"
+      },
+      "MTG_decklistcache": {
+        "exists": true,
+        "is_git": true,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/data-collection/raw-cache"
+      },
+      "MTGODecklistCache": {
+        "exists": true,
+        "is_git": true,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/data-collection/processed-cache"
+      },
+      "MTGOArchetypeParser": {
+        "exists": true,
+        "is_git": true,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/data-treatment/parser"
+      },
+      "MTGOFormatData": {
+        "exists": true,
+        "is_git": true,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/data-treatment/format-rules"
+      },
+      "R-Meta-Analysis": {
+        "exists": true,
+        "is_git": true,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/visualization/r-analysis"
+      }
+    },
+    "configuration_files": {
+      "sources.json": {
+        "exists": true,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/config/sources.json"
+      },
+      "melee_login.json": {
+        "exists": true,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/data-collection/scraper/mtgo/melee_login.json"
+      },
+      "api_topdeck.txt": {
+        "exists": false,
+        "path": "/Volumes/DataDisk/_Projects/Manalytics/manalytics/data-collection/scraper/mtgo/Api_token_and_login/api_topdeck.txt"
+      }
+    },
+    "dependencies": {
+      "python_packages": {
+        "requests": true,
+        "bs4": true,
+        "numpy": true,
+        "pandas": true,
+        "click": true,
+        "rich": true,
+        "tqdm": true,
+        "yaml": true
+      },
+      "system_commands": {
+        "git": true,
+        "python3": true,
+        "dotnet": true,
+        "R": true
+      }
+    },
+    "data_availability": {
+      "tournaments_found": 8887,
+      "recent_tournaments": 0,
+      "formats": []
+    }
+  }
+}

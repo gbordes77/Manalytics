@@ -1,107 +1,108 @@
 {
   "mtgo": {
-    "base_urls": {
-      "standard": "https://magic.wizards.com/en/articles/archive/mtgo-standings/standard-league",
-      "modern": "https://magic.wizards.com/en/articles/archive/mtgo-standings/modern-league",
-      "pioneer": "https://magic.wizards.com/en/articles/archive/mtgo-standings/pioneer-league",
-      "legacy": "https://magic.wizards.com/en/articles/archive/mtgo-standings/legacy-league",
-      "vintage": "https://magic.wizards.com/en/articles/archive/mtgo-standings/vintage-league",
-      "pauper": "https://magic.wizards.com/en/articles/archive/mtgo-standings/pauper-league",
-      "commander": "https://magic.wizards.com/en/articles/archive/mtgo-standings/commander-league"
-    },
-    "challenge_urls": {
-      "standard": "https://magic.wizards.com/en/articles/archive/mtgo-standings/standard-challenge",
-      "modern": "https://magic.wizards.com/en/articles/archive/mtgo-standings/modern-challenge",
-      "pioneer": "https://magic.wizards.com/en/articles/archive/mtgo-standings/pioneer-challenge",
-      "legacy": "https://magic.wizards.com/en/articles/archive/mtgo-standings/legacy-challenge",
-      "vintage": "https://magic.wizards.com/en/articles/archive/mtgo-standings/vintage-challenge",
-      "pauper": "https://magic.wizards.com/en/articles/archive/mtgo-standings/pauper-challenge"
-    },
-    "preliminary_urls": {
-      "standard": "https://magic.wizards.com/en/articles/archive/mtgo-standings/standard-preliminary",
-      "modern": "https://magic.wizards.com/en/articles/archive/mtgo-standings/modern-preliminary",
-      "pioneer": "https://magic.wizards.com/en/articles/archive/mtgo-standings/pioneer-preliminary",
-      "legacy": "https://magic.wizards.com/en/articles/archive/mtgo-standings/legacy-preliminary"
-    },
-    "showcase_urls": {
-      "standard": "https://magic.wizards.com/en/articles/archive/mtgo-standings/standard-showcase-challenge",
-      "modern": "https://magic.wizards.com/en/articles/archive/mtgo-standings/modern-showcase-challenge",
-      "pioneer": "https://magic.wizards.com/en/articles/archive/mtgo-standings/pioneer-showcase-challenge",
-      "legacy": "https://magic.wizards.com/en/articles/archive/mtgo-standings/legacy-showcase-challenge"
-    },
-    "super_qualifier_urls": {
-      "standard": "https://magic.wizards.com/en/articles/archive/mtgo-standings/standard-super-qualifier",
-      "modern": "https://magic.wizards.com/en/articles/archive/mtgo-standings/modern-super-qualifier",
-      "pioneer": "https://magic.wizards.com/en/articles/archive/mtgo-standings/pioneer-super-qualifier",
-      "legacy": "https://magic.wizards.com/en/articles/archive/mtgo-standings/legacy-super-qualifier"
-    },
-    "premier_urls": {
-      "standard": "https://magic.wizards.com/en/articles/archive/mtgo-standings/standard-premier",
-      "modern": "https://magic.wizards.com/en/articles/archive/mtgo-standings/modern-premier",
-      "pioneer": "https://magic.wizards.com/en/articles/archive/mtgo-standings/pioneer-premier",
-      "legacy": "https://magic.wizards.com/en/articles/archive/mtgo-standings/legacy-premier"
+    "base_url": "https://www.mtgo.com/decklists",
+    "api_endpoints": {
+      "decklists": "https://www.mtgo.com/decklists",
+      "tournaments": "https://www.mtgo.com/tournaments",
+      "standings": "https://www.mtgo.com/standings"
     },
     "scraping_config": {
-      "max_retries": 3,
-      "retry_delay": 5,
-      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "rate_limit": 1,
+      "retry_attempts": 5,
       "timeout": 30,
-      "max_days_back": 30
-    }
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "formats": [
+      "Standard",
+      "Modern", 
+      "Legacy",
+      "Vintage",
+      "Pioneer",
+      "Pauper"
+    ],
+    "tournament_types": [
+      "Challenge",
+      "Preliminary",
+      "League",
+      "Showcase"
+    ]
   },
   "mtgmelee": {
-    "api": {
-      "base_url": "https://api.mtgmelee.com/v1",
-      "endpoints": {
-        "tournaments": "/tournaments",
-        "tournament_details": "/tournaments/{tournament_id}",
-        "tournament_standings": "/tournaments/{tournament_id}/standings",
-        "tournament_pairings": "/tournaments/{tournament_id}/pairings",
-        "tournament_decklists": "/tournaments/{tournament_id}/decklists",
-        "decklist": "/decklists/{decklist_id}"
-      },
-      "auth": {
-        "login_url": "https://api.mtgmelee.com/v1/auth/login",
-        "token_refresh_url": "https://api.mtgmelee.com/v1/auth/refresh"
-      }
+    "base_url": "https://melee.gg",
+    "api_endpoints": {
+      "decklists": "https://melee.gg/Decklists",
+      "tournaments": "https://melee.gg/Tournaments",
+      "api_base": "https://melee.gg/api"
     },
-    "formats": {
-      "standard": 1,
-      "modern": 2,
-      "pioneer": 3,
-      "legacy": 4,
-      "vintage": 5,
-      "pauper": 6,
-      "commander": 7,
-      "brawl": 8,
-      "historic": 9,
-      "explorer": 10,
-      "alchemy": 11
+    "authentication": {
+      "login_url": "https://melee.gg/login",
+      "credentials_file": "data-collection/scraper/mtgo/melee_login.json"
     },
-    "api_config": {
-      "rate_limit": {
-        "requests_per_minute": 60,
-        "requests_per_hour": 1000
-      },
-      "max_retries": 3,
-      "retry_delay": 5,
+    "scraping_config": {
+      "rate_limit": 2,
+      "retry_attempts": 3,
       "timeout": 30,
-      "max_days_back": 30
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "formats": [
+      "Standard",
+      "Modern",
+      "Legacy", 
+      "Vintage",
+      "Pioneer",
+      "Pauper"
+    ]
+  },
+  "topdeck": {
+    "base_url": "https://topdeck.gg",
+    "api_endpoints": {
+      "decklists": "https://topdeck.gg/decklists",
+      "tournaments": "https://topdeck.gg/tournaments"
+    },
+    "authentication": {
+      "api_key_file": "data-collection/scraper/mtgo/Api_token_and_login/api_topdeck.txt"
+    },
+    "scraping_config": {
+      "rate_limit": 1,
+      "retry_attempts": 3,
+      "timeout": 30
     }
   },
-  "cache": {
-    "raw_cache_path": "data-collection/raw-cache",
-    "processed_cache_path": "data-collection/processed-cache",
-    "file_format": "json",
-    "max_cache_size_mb": 5000,
-    "cleanup_threshold_mb": 4500,
-    "cleanup_strategy": "oldest_first"
+  "manatraders": {
+    "base_url": "https://www.manatraders.com/tournaments/2",
+    "status": "disabled",
+    "note": "No longer running tournaments as of 2025-03-20"
   },
-  "logging": {
-    "log_level": "INFO",
-    "log_file": "logs/manalytics.log",
-    "max_log_size_mb": 10,
-    "backup_count": 5,
-    "console_output": true
+  "data_storage": {
+    "raw_cache": "data-collection/raw-cache",
+    "processed_cache": "data-collection/processed-cache",
+    "processed_data": "data/processed",
+    "analyses": "analyses"
+  },
+  "formats_supported": {
+    "Standard": {
+      "maintainer": "Jiliac",
+      "archetype_rules": "data-treatment/format-rules/Formats/Standard"
+    },
+    "Modern": {
+      "maintainer": "Jiliac", 
+      "archetype_rules": "data-treatment/format-rules/Formats/Modern"
+    },
+    "Legacy": {
+      "maintainer": "Jiliac",
+      "archetype_rules": "data-treatment/format-rules/Formats/Legacy"
+    },
+    "Vintage": {
+      "maintainer": "IamActuallyLvL1",
+      "archetype_rules": "data-treatment/format-rules/Formats/Vintage"
+    },
+    "Pioneer": {
+      "maintainer": "Jiliac",
+      "archetype_rules": "data-treatment/format-rules/Formats/Pioneer"
+    },
+    "Pauper": {
+      "maintainer": "Jiliac",
+      "archetype_rules": "data-treatment/format-rules/Formats/Pauper"
+    }
   }
 }
