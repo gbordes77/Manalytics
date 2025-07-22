@@ -22,7 +22,43 @@ The Jiliac MTG Analytics System is a comprehensive pipeline for collecting, proc
 - **Automated Pipeline**: End-to-end data processing
 - **Community Driven**: Maintained by format specialists
 
-### System Components
+### Original Architecture (Before Unification)
+
+```mermaid
+graph TB
+    subgraph "Step 1: Data Collection"
+        A1[MTGO Platform] -->|Scrapes decklists| B1[mtg_decklist_scrapper<br/>github.com/fbettega/mtg_decklist_scrapper]
+        B1 -->|Stores raw data| C1[MTG_decklistcache<br/>github.com/fbettega/MTG_decklistcache]
+        C1 -->|Processes| F1[MTGODecklistCache<br/>github.com/Jiliac/MTGODecklistCache]
+        
+        G1[Legacy: MTGODecklistCache.Tools<br/>github.com/Badaro/MTGODecklistCache.Tools<br/>⚠️ Retired by Badaro] -.->|Replaced by| B1
+    end
+    
+    subgraph "Step 2: Data Treatment"
+        F1 -->|Raw lists| H2[MTGOArchetypeParser<br/>github.com/Badaro/MTGOArchetypeParser]
+        I2[MTGOFormatData<br/>github.com/Badaro/MTGOFormatData<br/>Archetype Rules] -->|Defines parsing logic| H2
+        H2 -->|Categorized by archetype| J2[Processed Data<br/>by Format]
+        
+        K2[Maintainers:<br/>- Jiliac: Most formats<br/>- iamactuallylvl1: Vintage] -->|Maintains rules| I2
+    end
+    
+    subgraph "Step 3: Visualization"
+        J2 -->|Archetype data| L3[R-Meta-Analysis Fork<br/>github.com/Jiliac/R-Meta-Analysis]
+        L3 -->|Generates| M3[Matchup Matrix]
+        M3 -->|Published to| N3[Discord]
+        
+        O3[Original: R-Meta-Analysis<br/>github.com/Aliquanto3/R-Meta-Analysis<br/>⚠️ Aliquanto left] -.->|Forked to| L3
+    end
+    
+    style A1 fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style F1 fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+    style J2 fill:#c8e6c9,stroke:#1b5e20,stroke-width:3px
+    style M3 fill:#ffcdd2,stroke:#c62828,stroke-width:3px
+    style G1 fill:#ffebee,stroke:#b71c1c,stroke-width:1px,stroke-dasharray: 5 5
+    style O3 fill:#ffebee,stroke:#b71c1c,stroke-width:1px,stroke-dasharray: 5 5
+```
+
+### Unified System Components (After Unification)
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   DATA INPUT    │    │  DATA PROCESS   │    │  DATA OUTPUT    │

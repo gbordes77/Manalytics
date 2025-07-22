@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline MTG Analytics Unifié - Diagramme Complet</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .diagram-container {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            border: 2px solid #e9ecef;
+        }
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .legend-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #1976d2;
+        }
+        .legend-section h3 {
+            margin: 0 0 15px 0;
+            color: #1976d2;
+            font-size: 1.3em;
+        }
+        .legend-item {
+            margin: 8px 0;
+            padding: 5px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .legend-item:last-child {
+            border-bottom: none;
+        }
+        .tech-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        .status-active {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        .status-legacy {
+            background: #ffebee;
+            color: #c62828;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+        .mermaid {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Pipeline MTG Analytics Unifié</h1>
+            <p>Architecture Complète - Diagramme Interactif</p>
+        </div>
+        
+        <div class="content">
+            <div class="diagram-container">
+                <div class="mermaid">
+graph TB
+    %% ===== NOUVEAUX COMPOSANTS D'ORCHESTRATION =====
+    subgraph "🎯 ORCHESTRATION UNIFIÉE"
+        O1[orchestrator.py<br/>Pipeline Principal] -->|Coordonne tout| O2[analyze.py<br/>Interface Utilisateur]
+        O2 -->|Lance| O1
+        O3[generate_analysis.sh<br/>Script d'automatisation] -->|Exécute| O1
+        O4[test_connections.py<br/>Validation Système] -->|Vérifie| O5[config/sources.json<br/>Configuration Centralisée]
+    end
+
+    %% ===== ÉTAPE 1: COLLECTE DE DONNÉES =====
+    subgraph "📊 ÉTAPE 1: COLLECTE DE DONNÉES"
+        %% Sources de données
+        A1[MTGO Platform<br/>https://www.mtgo.com] -->|Scrapes decklists| B1[mtg_decklist_scrapper<br/>github.com/fbettega/mtg_decklist_scrapper<br/>[Python]]
+        A2[MTGMelee Platform<br/>https://melee.gg] -->|API calls| B2[mtgmelee_client.py<br/>Client API MTGMelee<br/>[Python]]
+        A3[Topdeck Platform<br/>https://topdeck.gg] -->|API calls| B3[topdeck_client.py<br/>Client API Topdeck<br/>[Python]]
+        
+        %% Cache et traitement
+        B1 -->|Stores raw data| C1[MTG_decklistcache<br/>github.com/fbettega/MTG_decklistcache<br/>[Python]]
+        B2 -->|Stores raw data| C1
+        B3 -->|Stores raw data| C1
+        C1 -->|Processes| F1[MTGODecklistCache<br/>github.com/Jiliac/MTGODecklistCache<br/>[Python]]
+        
+        %% Gestionnaire de cache unifié
+        C1 -->|Managed by| G1[cache_manager.py<br/>Gestionnaire de Cache Unifié<br/>[Python]]
+        F1 -->|Managed by| G1
+        
+        %% Legacy (désactivé)
+        H1[Legacy: MTGODecklistCache.Tools<br/>github.com/Badaro/MTGODecklistCache.Tools<br/>⚠️ Retired by Badaro] -.->|Replaced by| B1
+    end
+    
+    %% ===== ÉTAPE 2: TRAITEMENT DES DONNÉES =====
+    subgraph "🔧 ÉTAPE 2: TRAITEMENT DES DONNÉES"
+        F1 -->|Raw lists| I2[MTGOArchetypeParser<br/>github.com/Badaro/MTGOArchetypeParser<br/>[C#/.NET]]
+        J2[MTGOFormatData<br/>github.com/Badaro/MTGOFormatData<br/>Règles d'Archétypes<br/>[JSON]] -->|Defines parsing logic| I2
+        I2 -->|Categorized by archetype| K2[Processed Data<br/>by Format<br/>[JSON]]
+        
+        %% Mainteneurs
+        L2[Maintainers:<br/>- Jiliac: Most formats<br/>- iamactuallylvl1: Vintage] -->|Maintains rules| J2
+        
+        %% Adapter Python pour C#
+        M2[parser/main.py<br/>Adapter Python pour C#<br/>[Python]] -->|Calls| I2
+    end
+    
+    %% ===== ÉTAPE 3: VISUALISATION =====
+    subgraph "📈 ÉTAPE 3: VISUALISATION"
+        K2 -->|Archetype data| N3[R-Meta-Analysis Fork<br/>github.com/Jiliac/R-Meta-Analysis<br/>[R]]
+        N3 -->|Generates| O3[Matchup Matrix<br/>[HTML/PNG]]
+        O3 -->|Published to| P3[Discord]
+        
+        %% Adapter Python pour R
+        Q3[visualization/r-analysis/generate_matrix.R<br/>Adapter Python pour R<br/>[R]] -->|Calls| N3
+        
+        %% Original (désactivé)
+        R3[Original: R-Meta-Analysis<br/>github.com/Aliquanto3/R-Meta-Analysis<br/>⚠️ Aliquanto left] -.->|Forked to| N3
+    end
+    
+    %% ===== NOUVEAUX COMPOSANTS DE SORTIE =====
+    subgraph "🎨 SORTIE ET ANALYSES"
+        O3 -->|Stored in| S1[analyses/<br/>Dossier des Analyses<br/>[HTML/JSON/CSV]]
+        S1 -->|Contains| S2[Rapports Complets<br/>[HTML]]
+        S1 -->|Contains| S3[Graphiques Interactifs<br/>[HTML]]
+        S1 -->|Contains| S4[Données Structurées<br/>[JSON/CSV]]
+        
+        %% Ouverture automatique
+        S2 -->|Auto-opens| T1[Browser<br/>Affichage Automatique]
+        S3 -->|Auto-opens| T1
+    end
+    
+    %% ===== NOUVEAUX COMPOSANTS DE CONFIGURATION =====
+    subgraph "⚙️ CONFIGURATION ET VALIDATION"
+        O5 -->|Configures| U1[Sources de Données<br/>MTGO, MTGMelee, Topdeck]
+        O5 -->|Configures| U2[Formats Supportés<br/>Standard, Modern, Legacy, etc.]
+        O5 -->|Configures| U3[Paramètres de Scraping<br/>Rate limits, timeouts]
+        
+        O4 -->|Validates| V1[Connectivité Internet]
+        O4 -->|Validates| V2[Dépendances Python]
+        O4 -->|Validates| V3[Présence des Repositories]
+        O4 -->|Validates| V4[Configuration Système]
+    end
+    
+    %% ===== NOUVEAUX COMPOSANTS DE DOCUMENTATION =====
+    subgraph "📚 DOCUMENTATION COMPLÈTE"
+        W1[docs/JILIAC_SYSTEM_BIBLE.md<br/>Bible Complète du Système<br/>[Markdown]] -->|Documents| W2[Tous les Composants]
+        W3[docs/ARCHITECTURE.md<br/>Architecture Détaillée<br/>[Markdown]] -->|Explique| W4[Flux de Données]
+        W5[docs/DEPENDENCIES.md<br/>Guide des Dépendances<br/>[Markdown]] -->|Liste| W6[Toutes les Dépendances]
+        W7[docs/REPO_ANALYSIS.md<br/>Analyse des Repositories<br/>[Markdown]] -->|Analyse| W8[6 Repositories GitHub]
+    end
+    
+    %% ===== NOUVEAUX COMPOSANTS DE DÉVELOPPEMENT =====
+    subgraph "🛠️ OUTILS DE DÉVELOPPEMENT"
+        X1[setup.sh<br/>Installation Automatique<br/>[Bash]] -->|Clone| X2[6 Repositories GitHub]
+        X3[setup.ps1<br/>Installation Windows<br/>[PowerShell]] -->|Clone| X2
+        X4[requirements.txt<br/>Dépendances Python<br/>[Text]] -->|Installs| X5[Packages Python]
+        X6[install_dependencies.R<br/>Dépendances R<br/>[R]] -->|Installs| X7[Packages R]
+    end
+    
+    %% ===== FLUX PRINCIPAL =====
+    O1 -->|Step 1| B1
+    O1 -->|Step 1| B2
+    O1 -->|Step 2| M2
+    O1 -->|Step 3| Q3
+    O1 -->|Output| S1
+    
+    %% ===== STYLES =====
+    classDef orchestration fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    classDef dataCollection fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef dataTreatment fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef visualization fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef output fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef config fill:#f1f8e9,stroke:#689f38,stroke-width:2px
+    classDef docs fill:#e0f2f1,stroke:#00695c,stroke-width:2px
+    classDef dev fill:#fafafa,stroke:#424242,stroke-width:2px
+    classDef legacy fill:#ffebee,stroke:#b71c1c,stroke-width:1px,stroke-dasharray: 5 5
+    
+    %% Application des styles
+    class O1,O2,O3,O4 orchestration
+    class A1,A2,A3,B1,B2,B3,C1,F1,G1 dataCollection
+    class I2,J2,K2,L2,M2 dataTreatment
+    class N3,O3,P3,Q3 visualization
+    class S1,S2,S3,S4,T1 output
+    class O5,U1,U2,U3,V1,V2,V3,V4 config
+    class W1,W2,W3,W4,W5,W6,W7,W8 docs
+    class X1,X2,X3,X4,X5,X6,X7 dev
+    class H1,R3 legacy
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-section">
+                    <h3>🎯 Orchestration Unifiée</h3>
+                    <div class="legend-item">
+                        <strong>orchestrator.py</strong><span class="tech-tag">Python</span>
+                        <span class="status-badge status-active">Pipeline Principal</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>analyze.py</strong><span class="tech-tag">Python</span>
+                        <span class="status-badge status-active">Interface Utilisateur</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>generate_analysis.sh</strong><span class="tech-tag">Bash</span>
+                        <span class="status-badge status-active">Automatisation</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>test_connections.py</strong><span class="tech-tag">Python</span>
+                        <span class="status-badge status-active">Validation</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <h3>📊 Collecte de Données</h3>
+                    <div class="legend-item">
+                        <strong>MTGO Platform</strong>
+                        <span class="status-badge status-active">Source Principale</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>MTGMelee Platform</strong>
+                        <span class="status-badge status-active">API Intégrée</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>Topdeck Platform</strong>
+                        <span class="status-badge status-active">API Intégrée</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>cache_manager.py</strong><span class="tech-tag">Python</span>
+                        <span class="status-badge status-active">Cache Unifié</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <h3>🔧 Traitement des Données</h3>
+                    <div class="legend-item">
+                        <strong>MTGOArchetypeParser</strong><span class="tech-tag">C#/.NET</span>
+                        <span class="status-badge status-active">Classification</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>MTGOFormatData</strong><span class="tech-tag">JSON</span>
+                        <span class="status-badge status-active">Règles</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>parser/main.py</strong><span class="tech-tag">Python</span>
+                        <span class="status-badge status-active">Adapter C#</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <h3>📈 Visualisation</h3>
+                    <div class="legend-item">
+                        <strong>R-Meta-Analysis</strong><span class="tech-tag">R</span>
+                        <span class="status-badge status-active">Analyse Statistique</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>generate_matrix.R</strong><span class="tech-tag">R</span>
+                        <span class="status-badge status-active">Adapter R</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>Matchup Matrix</strong><span class="tech-tag">HTML/PNG</span>
+                        <span class="status-badge status-active">Résultats</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <h3>🎨 Sortie et Analyses</h3>
+                    <div class="legend-item">
+                        <strong>analyses/</strong><span class="tech-tag">Dossier</span>
+                        <span class="status-badge status-active">Stockage</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>Rapports Complets</strong><span class="tech-tag">HTML</span>
+                        <span class="status-badge status-active">Interactifs</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>Browser</strong><span class="tech-tag">Auto-ouverture</span>
+                        <span class="status-badge status-active">Affichage</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <h3>📚 Documentation</h3>
+                    <div class="legend-item">
+                        <strong>JILIAC_SYSTEM_BIBLE.md</strong><span class="tech-tag">Markdown</span>
+                        <span class="status-badge status-active">Bible Complète</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>ARCHITECTURE.md</strong><span class="tech-tag">Markdown</span>
+                        <span class="status-badge status-active">Flux Détaillé</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>DEPENDENCIES.md</strong><span class="tech-tag">Markdown</span>
+                        <span class="status-badge status-active">Guide Complet</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <h3>🛠️ Outils de Développement</h3>
+                    <div class="legend-item">
+                        <strong>setup.sh</strong><span class="tech-tag">Bash</span>
+                        <span class="status-badge status-active">Linux/Mac</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>setup.ps1</strong><span class="tech-tag">PowerShell</span>
+                        <span class="status-badge status-active">Windows</span>
+                    </div>
+                    <div class="legend-item">
+                        <strong>requirements.txt</strong><span class="tech-tag">Python</span>
+                        <span class="status-badge status-active">Dépendances</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Pipeline MTG Analytics Unifié</strong> - Architecture complète avec 6 repositories GitHub intégrés</p>
+            <p>Status: ✅ PRODUCTION READY | Commit: 5e8e30d | Date: 22 juillet 2025</p>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html> 
