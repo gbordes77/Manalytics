@@ -1,0 +1,246 @@
+{
+  "tournament_id": "mtgo-standard-sample-20250722",
+  "source": "MTGO",
+  "name": "Sample Standard Tournament",
+  "format": "Standard",
+  "date": "2025-07-22",
+  "url": "https://magic.wizards.com/en/articles/archive/mtgo-standings/standard-league",
+  "decks": [
+    {
+      "deck_id": "mtgo-standard-sample-deck-1",
+      "player_name": "SamplePlayer1",
+      "rank": 1,
+      "mainboard": [
+        {
+          "card_name": "Lightning Bolt",
+          "quantity": 4
+        },
+        {
+          "card_name": "Mountain",
+          "quantity": 20
+        },
+        {
+          "card_name": "Monastery Swiftspear",
+          "quantity": 4
+        },
+        {
+          "card_name": "Goblin Guide",
+          "quantity": 4
+        },
+        {
+          "card_name": "Eidolon of the Great Revel",
+          "quantity": 4
+        }
+      ],
+      "sideboard": [
+        {
+          "card_name": "Abrade",
+          "quantity": 3
+        },
+        {
+          "card_name": "Smash to Smithereens",
+          "quantity": 3
+        },
+        {
+          "card_name": "Roiling Vortex",
+          "quantity": 3
+        }
+      ],
+      "matches": [
+        {
+          "opponent_id": "mtgo-standard-sample-deck-2",
+          "result": "win",
+          "round": 1
+        },
+        {
+          "opponent_id": "mtgo-standard-sample-deck-3",
+          "result": "win",
+          "round": 2
+        },
+        {
+          "opponent_id": "mtgo-standard-sample-deck-4",
+          "result": "loss",
+          "round": 3
+        }
+      ],
+      "archetype": "Mono-Red Aggro"
+    },
+    {
+      "deck_id": "mtgo-standard-sample-deck-2",
+      "player_name": "SamplePlayer2",
+      "rank": 2,
+      "mainboard": [
+        {
+          "card_name": "Island",
+          "quantity": 20
+        },
+        {
+          "card_name": "Counterspell",
+          "quantity": 4
+        },
+        {
+          "card_name": "Brainstorm",
+          "quantity": 4
+        },
+        {
+          "card_name": "Snapcaster Mage",
+          "quantity": 4
+        },
+        {
+          "card_name": "Jace, the Mind Sculptor",
+          "quantity": 2
+        }
+      ],
+      "sideboard": [
+        {
+          "card_name": "Flusterstorm",
+          "quantity": 3
+        },
+        {
+          "card_name": "Mystical Dispute",
+          "quantity": 3
+        },
+        {
+          "card_name": "Rest in Peace",
+          "quantity": 2
+        }
+      ],
+      "matches": [
+        {
+          "opponent_id": "mtgo-standard-sample-deck-1",
+          "result": "loss",
+          "round": 1
+        },
+        {
+          "opponent_id": "mtgo-standard-sample-deck-4",
+          "result": "win",
+          "round": 2
+        },
+        {
+          "opponent_id": "mtgo-standard-sample-deck-3",
+          "result": "win",
+          "round": 3
+        }
+      ],
+      "archetype": "Blue Control"
+    },
+    {
+      "deck_id": "mtgo-standard-sample-deck-3",
+      "player_name": "SamplePlayer3",
+      "rank": 3,
+      "mainboard": [
+        {
+          "card_name": "Swamp",
+          "quantity": 10
+        },
+        {
+          "card_name": "Mountain",
+          "quantity": 10
+        },
+        {
+          "card_name": "Thoughtseize",
+          "quantity": 4
+        },
+        {
+          "card_name": "Ragavan, Nimble Pilferer",
+          "quantity": 4
+        },
+        {
+          "card_name": "Bloodbraid Elf",
+          "quantity": 4
+        }
+      ],
+      "sideboard": [
+        {
+          "card_name": "Fatal Push",
+          "quantity": 3
+        },
+        {
+          "card_name": "Kolaghan's Command",
+          "quantity": 2
+        },
+        {
+          "card_name": "Engineered Explosives",
+          "quantity": 2
+        }
+      ],
+      "matches": [
+        {
+          "opponent_id": "mtgo-standard-sample-deck-4",
+          "result": "win",
+          "round": 1
+        },
+        {
+          "opponent_id": "mtgo-standard-sample-deck-1",
+          "result": "loss",
+          "round": 2
+        },
+        {
+          "opponent_id": "mtgo-standard-sample-deck-2",
+          "result": "loss",
+          "round": 3
+        }
+      ],
+      "archetype": "Black Discard"
+    },
+    {
+      "deck_id": "mtgo-standard-sample-deck-4",
+      "player_name": "SamplePlayer4",
+      "rank": 4,
+      "mainboard": [
+        {
+          "card_name": "Forest",
+          "quantity": 15
+        },
+        {
+          "card_name": "Llanowar Elves",
+          "quantity": 4
+        },
+        {
+          "card_name": "Tarmogoyf",
+          "quantity": 4
+        },
+        {
+          "card_name": "Primeval Titan",
+          "quantity": 4
+        },
+        {
+          "card_name": "Collected Company",
+          "quantity": 4
+        }
+      ],
+      "sideboard": [
+        {
+          "card_name": "Veil of Summer",
+          "quantity": 3
+        },
+        {
+          "card_name": "Reclamation Sage",
+          "quantity": 2
+        },
+        {
+          "card_name": "Scavenging Ooze",
+          "quantity": 2
+        }
+      ],
+      "matches": [
+        {
+          "opponent_id": "mtgo-standard-sample-deck-3",
+          "result": "loss",
+          "round": 1
+        },
+        {
+          "opponent_id": "mtgo-standard-sample-deck-2",
+          "result": "loss",
+          "round": 2
+        },
+        {
+          "opponent_id": "mtgo-standard-sample-deck-1",
+          "result": "win",
+          "round": 3
+        }
+      ],
+      "archetype": "Green Ramp"
+    }
+  ]
+}
