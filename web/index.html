@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manalytics - MTG Meta Analysis</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Manalytics</h1>
+        <p class="subtitle">MTG Meta Analysis Platform</p>
+    </header>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label for="formatSelect">Format:</label>
+            <select id="formatSelect">
+                <option value="standard">Standard</option>
+                <option value="modern">Modern</option>
+                <option value="legacy">Legacy</option>
+                <option value="vintage">Vintage</option>
+                <option value="pioneer">Pioneer</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="dateRange">Date Range:</label>
+            <select id="dateRange">
+                <option value="7">Last 7 days</option>
+                <option value="14">Last 14 days</option>
+                <option value="30">Last 30 days</option>
+                <option value="90">Last 3 months</option>
+            </select>
+        </div>
+        <button id="refreshBtn" class="btn-primary">Refresh Data</button>
+    </div>
+    
+    <main>
+        <div id="loadingIndicator" class="loading hidden">Loading...</div>
+        
+        <section id="metaSnapshot" class="dashboard-section">
+            <h2>Meta Snapshot</h2>
+            <div class="chart-container">
+                <canvas id="archetypeChart"></canvas>
+            </div>
+        </section>
+        
+        <section id="archetypeList" class="dashboard-section">
+            <h2>Archetype Breakdown</h2>
+            <div id="archetypeTable" class="table-container">
+                <!-- Table will be populated by JavaScript -->
+            </div>
+        </section>
+        
+        <section id="recentDecks" class="dashboard-section">
+            <h2>Recent Top Decks</h2>
+            <div id="deckList" class="deck-list">
+                <!-- Deck list will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2024 Manalytics | API Status: <span id="apiStatus" class="status-indicator">Checking...</span></p>
+    </footer>
+    
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4429 @@
+{
+  "source": "mtgo",
+  "format": "modern",
+  "name": "Modern Challenge 64",
+  "date": "2025-07-19",
+  "url": "https://www.mtgo.com/decklist/modern-challenge-64-2025-07-1912803694",
+  "decklists": [
+    {
+      "player": "Edel",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 3,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 3,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 2,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 2,
+          "name": "voice of victory"
+        },
+        {
+          "quantity": 1,
+          "name": "static prison"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 3,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 3,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 3,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 3,
+          "name": "fable of the mirror-breaker"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 2,
+          "name": "vexing bauble"
+        },
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 2,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 1,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 1,
+          "name": "high noon"
+        },
+        {
+          "quantity": 1,
+          "name": "march of otherworldly light"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Supercazzola",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "island"
+        },
+        {
+          "quantity": 4,
+          "name": "subtlety"
+        },
+        {
+          "quantity": 4,
+          "name": "counterspell"
+        },
+        {
+          "quantity": 3,
+          "name": "narset parter of veils"
+        },
+        {
+          "quantity": 3,
+          "name": "lorien revealed"
+        },
+        {
+          "quantity": 4,
+          "name": "suppression ray"
+        },
+        {
+          "quantity": 3,
+          "name": "stock up"
+        },
+        {
+          "quantity": 2,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 4,
+          "name": "prismatic ending"
+        },
+        {
+          "quantity": 2,
+          "name": "beza the bounding spring"
+        },
+        {
+          "quantity": 3,
+          "name": "temporary lockdown"
+        },
+        {
+          "quantity": 3,
+          "name": "teferi time raveler"
+        },
+        {
+          "quantity": 3,
+          "name": "windswept heath"
+        },
+        {
+          "quantity": 1,
+          "name": "steam vents"
+        },
+        {
+          "quantity": 1,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 1,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 1,
+          "name": "days undoing"
+        },
+        {
+          "quantity": 1,
+          "name": "stock up"
+        },
+        {
+          "quantity": 1,
+          "name": "solitude"
+        },
+        {
+          "quantity": 1,
+          "name": "zagoth triome"
+        },
+        {
+          "quantity": 3,
+          "name": "solitude"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "mystic gate"
+        },
+        {
+          "quantity": 1,
+          "name": "scalding tarn"
+        },
+        {
+          "quantity": 1,
+          "name": "supreme verdict"
+        },
+        {
+          "quantity": 1,
+          "name": "supreme verdict"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 4,
+          "name": "cleansing wildfire"
+        },
+        {
+          "quantity": 1,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 1,
+          "name": "days undoing"
+        },
+        {
+          "quantity": 1,
+          "name": "kaheera the orphanguard"
+        },
+        {
+          "quantity": 3,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 1,
+          "name": "narset parter of veils"
+        },
+        {
+          "quantity": 1,
+          "name": "beza the bounding spring"
+        },
+        {
+          "quantity": 1,
+          "name": "celestial purge"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Tobey",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "blood crypt"
+        },
+        {
+          "quantity": 1,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 1,
+          "name": "temple garden"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 1,
+          "name": "wooded foothills"
+        },
+        {
+          "quantity": 3,
+          "name": "wooded foothills"
+        },
+        {
+          "quantity": 2,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 4,
+          "name": "scion of draco"
+        },
+        {
+          "quantity": 4,
+          "name": "territorial kavu"
+        },
+        {
+          "quantity": 4,
+          "name": "leyline binding"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 1,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "lightning bolt"
+        },
+        {
+          "quantity": 1,
+          "name": "lightning bolt"
+        },
+        {
+          "quantity": 4,
+          "name": "tribal flames"
+        },
+        {
+          "quantity": 4,
+          "name": "leyline of the guildpact"
+        },
+        {
+          "quantity": 3,
+          "name": "stubborn denial"
+        },
+        {
+          "quantity": 1,
+          "name": "steam vents"
+        },
+        {
+          "quantity": 1,
+          "name": "indatha triome"
+        },
+        {
+          "quantity": 1,
+          "name": "thundering falls"
+        },
+        {
+          "quantity": 1,
+          "name": "lightning bolt"
+        },
+        {
+          "quantity": 1,
+          "name": "lightning bolt"
+        },
+        {
+          "quantity": 2,
+          "name": "fable of the mirror-breaker"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "pyroclasm"
+        },
+        {
+          "quantity": 3,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 1,
+          "name": "stubborn denial"
+        },
+        {
+          "quantity": 1,
+          "name": "surgical extraction"
+        },
+        {
+          "quantity": 1,
+          "name": "soul-guide lantern"
+        },
+        {
+          "quantity": 1,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Capoeira02",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 3,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 3,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 3,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 2,
+          "name": "static prison"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 2,
+          "name": "voice of victory"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "molten rain"
+        },
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 2,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 1,
+          "name": "showdown of the skalds"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Varo",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 3,
+          "name": "bleachbone verge"
+        },
+        {
+          "quantity": 1,
+          "name": "concealed courtyard"
+        },
+        {
+          "quantity": 1,
+          "name": "eiganjo seat of the empire"
+        },
+        {
+          "quantity": 3,
+          "name": "emperor of bones"
+        },
+        {
+          "quantity": 3,
+          "name": "ephemerate"
+        },
+        {
+          "quantity": 2,
+          "name": "godless shrine"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 4,
+          "name": "ketramose the new dawn"
+        },
+        {
+          "quantity": 3,
+          "name": "relic of progenitus"
+        },
+        {
+          "quantity": 4,
+          "name": "overlord of the balemurk"
+        },
+        {
+          "quantity": 4,
+          "name": "phelia exuberant shepherd"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "prismatic ending"
+        },
+        {
+          "quantity": 1,
+          "name": "raucous theater"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 1,
+          "name": "shadowy backstreet"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 3,
+          "name": "flickerwisp"
+        },
+        {
+          "quantity": 1,
+          "name": "urborg tomb of yawgmoth"
+        },
+        {
+          "quantity": 4,
+          "name": "witch enchanter"
+        },
+        {
+          "quantity": 2,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 3,
+          "name": "fatal push"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 4,
+          "name": "white orchid phantom"
+        },
+        {
+          "quantity": 1,
+          "name": "duress"
+        },
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 1,
+          "name": "prismatic ending"
+        },
+        {
+          "quantity": 1,
+          "name": "vindicate"
+        },
+        {
+          "quantity": 3,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 3,
+          "name": "aven interrupter"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Olivetti",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 3,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 3,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 2,
+          "name": "fable of the mirror-breaker"
+        },
+        {
+          "quantity": 1,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 1,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 1,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 3,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 3,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 3,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 2,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 2,
+          "name": "static prison"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 2,
+          "name": "voice of victory"
+        },
+        {
+          "quantity": 1,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 2,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 1,
+          "name": "phlage titan of fires fury"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 1,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 1,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 2,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 1,
+          "name": "showdown of the skalds"
+        },
+        {
+          "quantity": 1,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 1,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "molten rain"
+        },
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "darklilou",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "suppression ray"
+        },
+        {
+          "quantity": 4,
+          "name": "sea gate restoration"
+        },
+        {
+          "quantity": 3,
+          "name": "flare of denial"
+        },
+        {
+          "quantity": 4,
+          "name": "whir of invention"
+        },
+        {
+          "quantity": 4,
+          "name": "fallaji archaeologist"
+        },
+        {
+          "quantity": 4,
+          "name": "disrupting shoal"
+        },
+        {
+          "quantity": 2,
+          "name": "spell snare"
+        },
+        {
+          "quantity": 1,
+          "name": "into the flood maw"
+        },
+        {
+          "quantity": 4,
+          "name": "thundertrap trainer"
+        },
+        {
+          "quantity": 2,
+          "name": "stern scolding"
+        },
+        {
+          "quantity": 3,
+          "name": "jwari disruption"
+        },
+        {
+          "quantity": 4,
+          "name": "lotus bloom"
+        },
+        {
+          "quantity": 2,
+          "name": "beyeen veil"
+        },
+        {
+          "quantity": 4,
+          "name": "goblin charbelcher"
+        },
+        {
+          "quantity": 4,
+          "name": "hydroelectric specimen"
+        },
+        {
+          "quantity": 4,
+          "name": "sink into stupor"
+        },
+        {
+          "quantity": 4,
+          "name": "tameshi reality architect"
+        },
+        {
+          "quantity": 1,
+          "name": "razorgrass ambush"
+        },
+        {
+          "quantity": 1,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 1,
+          "name": "waterlogged teachings"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 3,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "into the flood maw"
+        },
+        {
+          "quantity": 1,
+          "name": "flusterstorm"
+        },
+        {
+          "quantity": 3,
+          "name": "unable to scream"
+        },
+        {
+          "quantity": 3,
+          "name": "harbinger of the seas"
+        },
+        {
+          "quantity": 1,
+          "name": "hurkyls recall"
+        },
+        {
+          "quantity": 1,
+          "name": "stern scolding"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "RCMerriam",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "soul-guide lantern"
+        },
+        {
+          "quantity": 4,
+          "name": "basking broodscale"
+        },
+        {
+          "quantity": 1,
+          "name": "stomping ground"
+        },
+        {
+          "quantity": 2,
+          "name": "forest"
+        },
+        {
+          "quantity": 2,
+          "name": "emrakul the promised end"
+        },
+        {
+          "quantity": 4,
+          "name": "glaring fleshraker"
+        },
+        {
+          "quantity": 4,
+          "name": "eldrazi temple"
+        },
+        {
+          "quantity": 1,
+          "name": "haywire mite"
+        },
+        {
+          "quantity": 4,
+          "name": "kozileks command"
+        },
+        {
+          "quantity": 4,
+          "name": "malevolent rumble"
+        },
+        {
+          "quantity": 1,
+          "name": "walking ballista"
+        },
+        {
+          "quantity": 1,
+          "name": "cavern of souls"
+        },
+        {
+          "quantity": 3,
+          "name": "blade of the bloodchief"
+        },
+        {
+          "quantity": 4,
+          "name": "urzas saga"
+        },
+        {
+          "quantity": 2,
+          "name": "boseiju who endures"
+        },
+        {
+          "quantity": 1,
+          "name": "walking ballista"
+        },
+        {
+          "quantity": 4,
+          "name": "writhing chrysalis"
+        },
+        {
+          "quantity": 1,
+          "name": "springleaf drum"
+        },
+        {
+          "quantity": 4,
+          "name": "karplusan forest"
+        },
+        {
+          "quantity": 1,
+          "name": "vexing bauble"
+        },
+        {
+          "quantity": 4,
+          "name": "grove of the burnwillows"
+        },
+        {
+          "quantity": 4,
+          "name": "ancient stirrings"
+        },
+        {
+          "quantity": 3,
+          "name": "delighted halfling"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "natures claim"
+        },
+        {
+          "quantity": 1,
+          "name": "pithing needle"
+        },
+        {
+          "quantity": 1,
+          "name": "torpor orb"
+        },
+        {
+          "quantity": 2,
+          "name": "unholy heat"
+        },
+        {
+          "quantity": 1,
+          "name": "grafdiggers cage"
+        },
+        {
+          "quantity": 1,
+          "name": "dismember"
+        },
+        {
+          "quantity": 2,
+          "name": "thief of existence"
+        },
+        {
+          "quantity": 1,
+          "name": "vexing bauble"
+        },
+        {
+          "quantity": 2,
+          "name": "damping sphere"
+        },
+        {
+          "quantity": 1,
+          "name": "kozileks return"
+        },
+        {
+          "quantity": 2,
+          "name": "firespout"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Xerk",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 3,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 2,
+          "name": "fable of the mirror-breaker"
+        },
+        {
+          "quantity": 2,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 3,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 2,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 3,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 3,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "static prison"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 1,
+          "name": "voice of victory"
+        },
+        {
+          "quantity": 2,
+          "name": "windswept heath"
+        },
+        {
+          "quantity": 1,
+          "name": "windswept heath"
+        },
+        {
+          "quantity": 1,
+          "name": "windswept heath"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 2,
+          "name": "molten rain"
+        },
+        {
+          "quantity": 1,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 2,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 2,
+          "name": "showdown of the skalds"
+        },
+        {
+          "quantity": 1,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 1,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 1,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 1,
+          "name": "high noon"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "redryansox",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "forest"
+        },
+        {
+          "quantity": 4,
+          "name": "gruul turf"
+        },
+        {
+          "quantity": 3,
+          "name": "simic growth chamber"
+        },
+        {
+          "quantity": 1,
+          "name": "vesuva"
+        },
+        {
+          "quantity": 3,
+          "name": "summoners pact"
+        },
+        {
+          "quantity": 1,
+          "name": "tolaria west"
+        },
+        {
+          "quantity": 4,
+          "name": "explore"
+        },
+        {
+          "quantity": 4,
+          "name": "amulet of vigor"
+        },
+        {
+          "quantity": 4,
+          "name": "primeval titan"
+        },
+        {
+          "quantity": 4,
+          "name": "crumbling vestige"
+        },
+        {
+          "quantity": 1,
+          "name": "mirrorpool"
+        },
+        {
+          "quantity": 1,
+          "name": "hanweir battlements"
+        },
+        {
+          "quantity": 4,
+          "name": "arboreal grazer"
+        },
+        {
+          "quantity": 2,
+          "name": "lotus field"
+        },
+        {
+          "quantity": 4,
+          "name": "urzas saga"
+        },
+        {
+          "quantity": 1,
+          "name": "otawara soaring city"
+        },
+        {
+          "quantity": 2,
+          "name": "the mycosynth gardens"
+        },
+        {
+          "quantity": 3,
+          "name": "boseiju who endures"
+        },
+        {
+          "quantity": 4,
+          "name": "spelunking"
+        },
+        {
+          "quantity": 1,
+          "name": "echoing deeps"
+        },
+        {
+          "quantity": 1,
+          "name": "aftermath analyst"
+        },
+        {
+          "quantity": 1,
+          "name": "shifting woodland"
+        },
+        {
+          "quantity": 4,
+          "name": "scapeshift"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "vampires vengeance"
+        },
+        {
+          "quantity": 2,
+          "name": "dismember"
+        },
+        {
+          "quantity": 2,
+          "name": "force of vigor"
+        },
+        {
+          "quantity": 1,
+          "name": "aether spellbomb"
+        },
+        {
+          "quantity": 1,
+          "name": "boseiju who endures"
+        },
+        {
+          "quantity": 1,
+          "name": "six"
+        },
+        {
+          "quantity": 1,
+          "name": "vexing bauble"
+        },
+        {
+          "quantity": 2,
+          "name": "mystical dispute"
+        },
+        {
+          "quantity": 2,
+          "name": "tireless tracker"
+        },
+        {
+          "quantity": 1,
+          "name": "bojuka bog"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Aardos",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "undercity sewers"
+        },
+        {
+          "quantity": 4,
+          "name": "preordain"
+        },
+        {
+          "quantity": 2,
+          "name": "darkslick shores"
+        },
+        {
+          "quantity": 4,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 3,
+          "name": "consider"
+        },
+        {
+          "quantity": 1,
+          "name": "sink into stupor"
+        },
+        {
+          "quantity": 2,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 4,
+          "name": "psychic frog"
+        },
+        {
+          "quantity": 2,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "inquisition of kozilek"
+        },
+        {
+          "quantity": 4,
+          "name": "tamiyo inquisitive student"
+        },
+        {
+          "quantity": 2,
+          "name": "watery grave"
+        },
+        {
+          "quantity": 3,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "polluted delta"
+        },
+        {
+          "quantity": 4,
+          "name": "counterspell"
+        },
+        {
+          "quantity": 2,
+          "name": "cling to dust"
+        },
+        {
+          "quantity": 3,
+          "name": "spell snare"
+        },
+        {
+          "quantity": 1,
+          "name": "sheoldreds edict"
+        },
+        {
+          "quantity": 2,
+          "name": "murktide regent"
+        },
+        {
+          "quantity": 1,
+          "name": "subtlety"
+        },
+        {
+          "quantity": 2,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "otawara soaring city"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtseize"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 4,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "mystical dispute"
+        },
+        {
+          "quantity": 1,
+          "name": "harbinger of the seas"
+        },
+        {
+          "quantity": 2,
+          "name": "stern scolding"
+        },
+        {
+          "quantity": 2,
+          "name": "toxic deluge"
+        },
+        {
+          "quantity": 2,
+          "name": "nihil spellbomb"
+        },
+        {
+          "quantity": 1,
+          "name": "sheoldreds edict"
+        },
+        {
+          "quantity": 1,
+          "name": "dress down"
+        },
+        {
+          "quantity": 1,
+          "name": "jace the mind sculptor"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "hauterho",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 3,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 1,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 3,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 4,
+          "name": "fable of the mirror-breaker"
+        },
+        {
+          "quantity": 2,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 2,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 3,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 2,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 3,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 2,
+          "name": "static prison"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 2,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 1,
+          "name": "windswept heath"
+        },
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 1,
+          "name": "witch enchanter"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 2,
+          "name": "bloodstained mire"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 1,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "showdown of the skalds"
+        },
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 2,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 2,
+          "name": "molten rain"
+        },
+        {
+          "quantity": 1,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Raptor_Nachos",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 3,
+          "name": "ephemerate"
+        },
+        {
+          "quantity": 1,
+          "name": "boggart trawler"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 2,
+          "name": "godless shrine"
+        },
+        {
+          "quantity": 4,
+          "name": "emperor of bones"
+        },
+        {
+          "quantity": 2,
+          "name": "orcish bowmasters"
+        },
+        {
+          "quantity": 2,
+          "name": "recruiter of the guard"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 3,
+          "name": "shadowy backstreet"
+        },
+        {
+          "quantity": 4,
+          "name": "witch enchanter"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "overlord of the balemurk"
+        },
+        {
+          "quantity": 2,
+          "name": "bleachbone verge"
+        },
+        {
+          "quantity": 2,
+          "name": "aven interrupter"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 1,
+          "name": "inquisition of kozilek"
+        },
+        {
+          "quantity": 4,
+          "name": "flickerwisp"
+        },
+        {
+          "quantity": 4,
+          "name": "phelia exuberant shepherd"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 3,
+          "name": "vindicate"
+        },
+        {
+          "quantity": 1,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 2,
+          "name": "ashiok dream render"
+        },
+        {
+          "quantity": 3,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 2,
+          "name": "white orchid phantom"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "_Stream",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 3,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 3,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 3,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 3,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 3,
+          "name": "fable of the mirror-breaker"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 2,
+          "name": "voice of victory"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 2,
+          "name": "static prison"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 1,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 1,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 1,
+          "name": "showdown of the skalds"
+        },
+        {
+          "quantity": 2,
+          "name": "molten rain"
+        },
+        {
+          "quantity": 2,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "marcofabrizi",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "flickerwisp"
+        },
+        {
+          "quantity": 2,
+          "name": "ketramose the new dawn"
+        },
+        {
+          "quantity": 1,
+          "name": "bleachbone verge"
+        },
+        {
+          "quantity": 4,
+          "name": "overlord of the balemurk"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 4,
+          "name": "phelia exuberant shepherd"
+        },
+        {
+          "quantity": 1,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 1,
+          "name": "boggart trawler"
+        },
+        {
+          "quantity": 3,
+          "name": "witch enchanter"
+        },
+        {
+          "quantity": 2,
+          "name": "relic of progenitus"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 2,
+          "name": "shadowy backstreet"
+        },
+        {
+          "quantity": 3,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "godless shrine"
+        },
+        {
+          "quantity": 2,
+          "name": "polluted delta"
+        },
+        {
+          "quantity": 4,
+          "name": "emperor of bones"
+        },
+        {
+          "quantity": 4,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 1,
+          "name": "watery grave"
+        },
+        {
+          "quantity": 1,
+          "name": "teferi time raveler"
+        },
+        {
+          "quantity": 3,
+          "name": "ephemerate"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "orcish bowmasters"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 3,
+          "name": "white orchid phantom"
+        },
+        {
+          "quantity": 1,
+          "name": "teferi time raveler"
+        },
+        {
+          "quantity": 1,
+          "name": "elesh norn mother of machines"
+        },
+        {
+          "quantity": 1,
+          "name": "vindicate"
+        },
+        {
+          "quantity": 4,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 1,
+          "name": "celestial purge"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "brandi96",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 2,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 3,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 1,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 3,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 4,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 2,
+          "name": "static prison"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 1,
+          "name": "voice of victory"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "voice of victory"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 1,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 1,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 1,
+          "name": "showdown of the skalds"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "molten rain"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "TerminalJustice",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "scalding tarn"
+        },
+        {
+          "quantity": 2,
+          "name": "artists talent"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 1,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 3,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 4,
+          "name": "ruby medallion"
+        },
+        {
+          "quantity": 4,
+          "name": "ral monsoon mage"
+        },
+        {
+          "quantity": 3,
+          "name": "past in flames"
+        },
+        {
+          "quantity": 4,
+          "name": "mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "opera love song"
+        },
+        {
+          "quantity": 4,
+          "name": "manamorphose"
+        },
+        {
+          "quantity": 4,
+          "name": "pyretic ritual"
+        },
+        {
+          "quantity": 1,
+          "name": "grapeshot"
+        },
+        {
+          "quantity": 4,
+          "name": "reckless impulse"
+        },
+        {
+          "quantity": 1,
+          "name": "gemstone caverns"
+        },
+        {
+          "quantity": 4,
+          "name": "desperate ritual"
+        },
+        {
+          "quantity": 2,
+          "name": "bloodstained mire"
+        },
+        {
+          "quantity": 2,
+          "name": "strike it rich"
+        },
+        {
+          "quantity": 1,
+          "name": "sunbaked canyon"
+        },
+        {
+          "quantity": 2,
+          "name": "valakut awakening"
+        },
+        {
+          "quantity": 2,
+          "name": "wish"
+        },
+        {
+          "quantity": 4,
+          "name": "wrenns resolve"
+        },
+        {
+          "quantity": 2,
+          "name": "wooded foothills"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "brotherhoods end"
+        },
+        {
+          "quantity": 1,
+          "name": "past in flames"
+        },
+        {
+          "quantity": 4,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 1,
+          "name": "grapeshot"
+        },
+        {
+          "quantity": 4,
+          "name": "prismatic ending"
+        },
+        {
+          "quantity": 1,
+          "name": "empty the warrens"
+        },
+        {
+          "quantity": 2,
+          "name": "voice of victory"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Curtisaxel",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 3,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 1,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 1,
+          "name": "snow-covered mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 3,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 1,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "march of otherworldly light"
+        },
+        {
+          "quantity": 1,
+          "name": "wooded foothills"
+        },
+        {
+          "quantity": 2,
+          "name": "snow-covered plains"
+        },
+        {
+          "quantity": 2,
+          "name": "on thin ice"
+        },
+        {
+          "quantity": 2,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 3,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 3,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 1,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 1,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 3,
+          "name": "molten rain"
+        },
+        {
+          "quantity": 2,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 1,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 2,
+          "name": "surgical extraction"
+        },
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Selfeisek",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "pithing needle"
+        },
+        {
+          "quantity": 4,
+          "name": "urzas saga"
+        },
+        {
+          "quantity": 1,
+          "name": "wastes"
+        },
+        {
+          "quantity": 4,
+          "name": "thought-knot seer"
+        },
+        {
+          "quantity": 4,
+          "name": "ifnir deadlands"
+        },
+        {
+          "quantity": 4,
+          "name": "kozileks command"
+        },
+        {
+          "quantity": 1,
+          "name": "graveyard trespasser"
+        },
+        {
+          "quantity": 1,
+          "name": "shadowspear"
+        },
+        {
+          "quantity": 1,
+          "name": "nihil spellbomb"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "urborg tomb of yawgmoth"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "inquisition of kozilek"
+        },
+        {
+          "quantity": 4,
+          "name": "prismatic vista"
+        },
+        {
+          "quantity": 1,
+          "name": "orcish bowmasters"
+        },
+        {
+          "quantity": 4,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 4,
+          "name": "emperor of bones"
+        },
+        {
+          "quantity": 4,
+          "name": "nethergoyf"
+        },
+        {
+          "quantity": 4,
+          "name": "mishras bauble"
+        },
+        {
+          "quantity": 1,
+          "name": "orcish bowmasters"
+        },
+        {
+          "quantity": 4,
+          "name": "eldrazi temple"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtseize"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "break the ice"
+        },
+        {
+          "quantity": 1,
+          "name": "surgical extraction"
+        },
+        {
+          "quantity": 1,
+          "name": "shoot the sheriff"
+        },
+        {
+          "quantity": 3,
+          "name": "damping sphere"
+        },
+        {
+          "quantity": 1,
+          "name": "dreams of steel and oil"
+        },
+        {
+          "quantity": 1,
+          "name": "pithing needle"
+        },
+        {
+          "quantity": 1,
+          "name": "pithing needle"
+        },
+        {
+          "quantity": 1,
+          "name": "wasteland strangler"
+        },
+        {
+          "quantity": 1,
+          "name": "ashiok dream render"
+        },
+        {
+          "quantity": 1,
+          "name": "dismember"
+        },
+        {
+          "quantity": 2,
+          "name": "toxic deluge"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "pfWORTH",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "abhorrent oculus"
+        },
+        {
+          "quantity": 1,
+          "name": "cling to dust"
+        },
+        {
+          "quantity": 2,
+          "name": "watery grave"
+        },
+        {
+          "quantity": 4,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 4,
+          "name": "unearth"
+        },
+        {
+          "quantity": 1,
+          "name": "undercity sewers"
+        },
+        {
+          "quantity": 3,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 2,
+          "name": "harbinger of the seas"
+        },
+        {
+          "quantity": 4,
+          "name": "thought scour"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 3,
+          "name": "spell snare"
+        },
+        {
+          "quantity": 2,
+          "name": "murktide regent"
+        },
+        {
+          "quantity": 2,
+          "name": "pest control"
+        },
+        {
+          "quantity": 2,
+          "name": "scalding tarn"
+        },
+        {
+          "quantity": 4,
+          "name": "psychic frog"
+        },
+        {
+          "quantity": 4,
+          "name": "polluted delta"
+        },
+        {
+          "quantity": 1,
+          "name": "sink into stupor"
+        },
+        {
+          "quantity": 1,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 3,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 3,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 3,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "counterspell"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "nihil spellbomb"
+        },
+        {
+          "quantity": 3,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "subtlety"
+        },
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 1,
+          "name": "ketramose the new dawn"
+        },
+        {
+          "quantity": 1,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 1,
+          "name": "pest control"
+        },
+        {
+          "quantity": 1,
+          "name": "shoot the sheriff"
+        },
+        {
+          "quantity": 2,
+          "name": "stern scolding"
+        },
+        {
+          "quantity": 1,
+          "name": "graveyard trespasser"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "VampireDiaries",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 4,
+          "name": "stock up"
+        },
+        {
+          "quantity": 3,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 1,
+          "name": "sink into stupor"
+        },
+        {
+          "quantity": 4,
+          "name": "thundertrap trainer"
+        },
+        {
+          "quantity": 1,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 1,
+          "name": "lush portico"
+        },
+        {
+          "quantity": 2,
+          "name": "lorien revealed"
+        },
+        {
+          "quantity": 1,
+          "name": "into the flood maw"
+        },
+        {
+          "quantity": 1,
+          "name": "boseiju who endures"
+        },
+        {
+          "quantity": 2,
+          "name": "tune the narrative"
+        },
+        {
+          "quantity": 1,
+          "name": "snow-covered island"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 4,
+          "name": "prismatic ending"
+        },
+        {
+          "quantity": 1,
+          "name": "snow-covered forest"
+        },
+        {
+          "quantity": 3,
+          "name": "eternal witness"
+        },
+        {
+          "quantity": 1,
+          "name": "temple garden"
+        },
+        {
+          "quantity": 2,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 3,
+          "name": "teferi time raveler"
+        },
+        {
+          "quantity": 1,
+          "name": "wooded bastion"
+        },
+        {
+          "quantity": 1,
+          "name": "breeding pool"
+        },
+        {
+          "quantity": 3,
+          "name": "windswept heath"
+        },
+        {
+          "quantity": 3,
+          "name": "ephemerate"
+        },
+        {
+          "quantity": 2,
+          "name": "misty rainforest"
+        },
+        {
+          "quantity": 1,
+          "name": "snow-covered plains"
+        },
+        {
+          "quantity": 1,
+          "name": "oust"
+        },
+        {
+          "quantity": 1,
+          "name": "hedge maze"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "surgical extraction"
+        },
+        {
+          "quantity": 4,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 3,
+          "name": "veil of summer"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 3,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 1,
+          "name": "damping sphere"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "PieGonti",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "spike feeder"
+        },
+        {
+          "quantity": 3,
+          "name": "auriok champion"
+        },
+        {
+          "quantity": 3,
+          "name": "temple garden"
+        },
+        {
+          "quantity": 2,
+          "name": "boseiju who endures"
+        },
+        {
+          "quantity": 4,
+          "name": "collected company"
+        },
+        {
+          "quantity": 1,
+          "name": "enduring innocence"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 4,
+          "name": "heliod sun-crowned"
+        },
+        {
+          "quantity": 4,
+          "name": "windswept heath"
+        },
+        {
+          "quantity": 1,
+          "name": "kaylas reconstruction"
+        },
+        {
+          "quantity": 2,
+          "name": "lush portico"
+        },
+        {
+          "quantity": 1,
+          "name": "pendelhaven"
+        },
+        {
+          "quantity": 2,
+          "name": "forest"
+        },
+        {
+          "quantity": 3,
+          "name": "ranger-captain of eos"
+        },
+        {
+          "quantity": 1,
+          "name": "scavenging ooze"
+        },
+        {
+          "quantity": 2,
+          "name": "skyclave apparition"
+        },
+        {
+          "quantity": 4,
+          "name": "arbor elf"
+        },
+        {
+          "quantity": 4,
+          "name": "utopia sprawl"
+        },
+        {
+          "quantity": 2,
+          "name": "walking ballista"
+        },
+        {
+          "quantity": 3,
+          "name": "wooded foothills"
+        },
+        {
+          "quantity": 1,
+          "name": "yavimaya cradle of growth"
+        },
+        {
+          "quantity": 2,
+          "name": "voice of resurgence"
+        },
+        {
+          "quantity": 2,
+          "name": "conclave mentor"
+        },
+        {
+          "quantity": 2,
+          "name": "horizon canopy"
+        },
+        {
+          "quantity": 2,
+          "name": "agathas soul cauldron"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "damping sphere"
+        },
+        {
+          "quantity": 2,
+          "name": "force of vigor"
+        },
+        {
+          "quantity": 2,
+          "name": "march of otherworldly light"
+        },
+        {
+          "quantity": 1,
+          "name": "split up"
+        },
+        {
+          "quantity": 2,
+          "name": "veil of summer"
+        },
+        {
+          "quantity": 2,
+          "name": "vexing bauble"
+        },
+        {
+          "quantity": 1,
+          "name": "rest in peace"
+        },
+        {
+          "quantity": 1,
+          "name": "skyclave apparition"
+        },
+        {
+          "quantity": 3,
+          "name": "wrath of the skies"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "beaver",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "recruiter of the guard"
+        },
+        {
+          "quantity": 3,
+          "name": "ephemerate"
+        },
+        {
+          "quantity": 4,
+          "name": "flickerwisp"
+        },
+        {
+          "quantity": 1,
+          "name": "boggart trawler"
+        },
+        {
+          "quantity": 4,
+          "name": "overlord of the balemurk"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 2,
+          "name": "bleachbone verge"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 4,
+          "name": "phelia exuberant shepherd"
+        },
+        {
+          "quantity": 4,
+          "name": "witch enchanter"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "godless shrine"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 2,
+          "name": "orcish bowmasters"
+        },
+        {
+          "quantity": 1,
+          "name": "shadowy backstreet"
+        },
+        {
+          "quantity": 1,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 4,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 4,
+          "name": "emperor of bones"
+        },
+        {
+          "quantity": 1,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 2,
+          "name": "aven interrupter"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 4,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 3,
+          "name": "high noon"
+        },
+        {
+          "quantity": 2,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 4,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "jvidarte",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 3,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 3,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 2,
+          "name": "fable of the mirror-breaker"
+        },
+        {
+          "quantity": 2,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 3,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 2,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 1,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 2,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 2,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 2,
+          "name": "static prison"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 2,
+          "name": "voice of victory"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "sacred foundry"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "molten rain"
+        },
+        {
+          "quantity": 1,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 2,
+          "name": "deafening silence"
+        },
+        {
+          "quantity": 1,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 2,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 1,
+          "name": "showdown of the skalds"
+        },
+        {
+          "quantity": 1,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 1,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "path to exile"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Im2SneakyMTG",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "mox opal"
+        },
+        {
+          "quantity": 1,
+          "name": "mox opal"
+        },
+        {
+          "quantity": 3,
+          "name": "mox amber"
+        },
+        {
+          "quantity": 4,
+          "name": "mishras bauble"
+        },
+        {
+          "quantity": 4,
+          "name": "tamiyo inquisitive student"
+        },
+        {
+          "quantity": 4,
+          "name": "emry lurker of the loch"
+        },
+        {
+          "quantity": 4,
+          "name": "cori-steel cutter"
+        },
+        {
+          "quantity": 4,
+          "name": "repeal"
+        },
+        {
+          "quantity": 4,
+          "name": "portable hole"
+        },
+        {
+          "quantity": 1,
+          "name": "jeskai ascendancy"
+        },
+        {
+          "quantity": 3,
+          "name": "narset jeskai waymaster"
+        },
+        {
+          "quantity": 1,
+          "name": "soul-guide lantern"
+        },
+        {
+          "quantity": 1,
+          "name": "aether spellbomb"
+        },
+        {
+          "quantity": 4,
+          "name": "scalding tarn"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 1,
+          "name": "steam vents"
+        },
+        {
+          "quantity": 1,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 1,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 1,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 1,
+          "name": "thundering falls"
+        },
+        {
+          "quantity": 4,
+          "name": "urzas saga"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 2,
+          "name": "galvanic blast"
+        },
+        {
+          "quantity": 1,
+          "name": "flame of anor"
+        },
+        {
+          "quantity": 1,
+          "name": "metallic rebuke"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "flame of anor"
+        },
+        {
+          "quantity": 3,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "pithing needle"
+        },
+        {
+          "quantity": 1,
+          "name": "shadowspear"
+        },
+        {
+          "quantity": 1,
+          "name": "pyroclasm"
+        },
+        {
+          "quantity": 1,
+          "name": "pyroclasm"
+        },
+        {
+          "quantity": 2,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 2,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Kyoto_Maschi",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 3,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 2,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 3,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 2,
+          "name": "windswept heath"
+        },
+        {
+          "quantity": 2,
+          "name": "ranger-captain of eos"
+        },
+        {
+          "quantity": 3,
+          "name": "seasoned pyromancer"
+        },
+        {
+          "quantity": 3,
+          "name": "goblin bombardment"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 3,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 2,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 4,
+          "name": "guide of souls"
+        },
+        {
+          "quantity": 4,
+          "name": "ocelot pride"
+        },
+        {
+          "quantity": 2,
+          "name": "static prison"
+        },
+        {
+          "quantity": 2,
+          "name": "thraben charm"
+        },
+        {
+          "quantity": 4,
+          "name": "galvanic discharge"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 4,
+          "name": "ajani nacatl pariah"
+        },
+        {
+          "quantity": 3,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 3,
+          "name": "voice of victory"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "orims chant"
+        },
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 2,
+          "name": "deafening silence"
+        },
+        {
+          "quantity": 1,
+          "name": "showdown of the skalds"
+        },
+        {
+          "quantity": 2,
+          "name": "obsidian charmaw"
+        },
+        {
+          "quantity": 2,
+          "name": "vexing bauble"
+        },
+        {
+          "quantity": 1,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 1,
+          "name": "blood moon"
+        },
+        {
+          "quantity": 1,
+          "name": "clarion conqueror"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "532at",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "cling to dust"
+        },
+        {
+          "quantity": 3,
+          "name": "consider"
+        },
+        {
+          "quantity": 4,
+          "name": "psychic frog"
+        },
+        {
+          "quantity": 4,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 2,
+          "name": "island"
+        },
+        {
+          "quantity": 4,
+          "name": "preordain"
+        },
+        {
+          "quantity": 4,
+          "name": "polluted delta"
+        },
+        {
+          "quantity": 4,
+          "name": "counterspell"
+        },
+        {
+          "quantity": 2,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "murktide regent"
+        },
+        {
+          "quantity": 1,
+          "name": "otawara soaring city"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "inquisition of kozilek"
+        },
+        {
+          "quantity": 3,
+          "name": "spell snare"
+        },
+        {
+          "quantity": 1,
+          "name": "sheoldreds edict"
+        },
+        {
+          "quantity": 1,
+          "name": "sink into stupor"
+        },
+        {
+          "quantity": 1,
+          "name": "subtlety"
+        },
+        {
+          "quantity": 1,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 4,
+          "name": "tamiyo inquisitive student"
+        },
+        {
+          "quantity": 1,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 2,
+          "name": "undercity sewers"
+        },
+        {
+          "quantity": 3,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 2,
+          "name": "watery grave"
+        },
+        {
+          "quantity": 2,
+          "name": "darkslick shores"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "harbinger of the seas"
+        },
+        {
+          "quantity": 1,
+          "name": "mystical dispute"
+        },
+        {
+          "quantity": 2,
+          "name": "toxic deluge"
+        },
+        {
+          "quantity": 1,
+          "name": "sheoldreds edict"
+        },
+        {
+          "quantity": 2,
+          "name": "stern scolding"
+        },
+        {
+          "quantity": 1,
+          "name": "jace the mind sculptor"
+        },
+        {
+          "quantity": 2,
+          "name": "nihil spellbomb"
+        },
+        {
+          "quantity": 2,
+          "name": "torpor orb"
+        },
+        {
+          "quantity": 1,
+          "name": "dismember"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "TotheparkTeam",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "aether spellbomb"
+        },
+        {
+          "quantity": 3,
+          "name": "tamiyo inquisitive student"
+        },
+        {
+          "quantity": 3,
+          "name": "kappa cannoneer"
+        },
+        {
+          "quantity": 2,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 1,
+          "name": "lavaspur boots"
+        },
+        {
+          "quantity": 2,
+          "name": "darksteel citadel"
+        },
+        {
+          "quantity": 1,
+          "name": "haywire mite"
+        },
+        {
+          "quantity": 1,
+          "name": "otawara soaring city"
+        },
+        {
+          "quantity": 3,
+          "name": "portable hole"
+        },
+        {
+          "quantity": 4,
+          "name": "urzas saga"
+        },
+        {
+          "quantity": 3,
+          "name": "razortide bridge"
+        },
+        {
+          "quantity": 3,
+          "name": "thought monitor"
+        },
+        {
+          "quantity": 1,
+          "name": "shadowspear"
+        },
+        {
+          "quantity": 2,
+          "name": "mox amber"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 2,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 4,
+          "name": "mishras bauble"
+        },
+        {
+          "quantity": 1,
+          "name": "pithing needle"
+        },
+        {
+          "quantity": 4,
+          "name": "mox opal"
+        },
+        {
+          "quantity": 1,
+          "name": "tormods crypt"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtcast"
+        },
+        {
+          "quantity": 3,
+          "name": "metallic rebuke"
+        },
+        {
+          "quantity": 4,
+          "name": "spire of industry"
+        },
+        {
+          "quantity": 4,
+          "name": "emry lurker of the loch"
+        },
+        {
+          "quantity": 2,
+          "name": "harbinger of the seas"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "whipflare"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 2,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 2,
+          "name": "damping sphere"
+        },
+        {
+          "quantity": 4,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 3,
+          "name": "dispatch"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "AgentLion09",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 2,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 1,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 1,
+          "name": "temple garden"
+        },
+        {
+          "quantity": 1,
+          "name": "steam vents"
+        },
+        {
+          "quantity": 1,
+          "name": "blood crypt"
+        },
+        {
+          "quantity": 4,
+          "name": "wooded foothills"
+        },
+        {
+          "quantity": 1,
+          "name": "thundering falls"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 4,
+          "name": "territorial kavu"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "leyline binding"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 1,
+          "name": "lush portico"
+        },
+        {
+          "quantity": 3,
+          "name": "stubborn denial"
+        },
+        {
+          "quantity": 2,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 4,
+          "name": "lightning bolt"
+        },
+        {
+          "quantity": 2,
+          "name": "tribal flames"
+        },
+        {
+          "quantity": 4,
+          "name": "leyline of the guildpact"
+        },
+        {
+          "quantity": 4,
+          "name": "scion of draco"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        },
+        {
+          "quantity": 1,
+          "name": "indatha triome"
+        },
+        {
+          "quantity": 1,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 3,
+          "name": "fable of the mirror-breaker"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 1,
+          "name": "pyroclasm"
+        },
+        {
+          "quantity": 3,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "spell snare"
+        },
+        {
+          "quantity": 2,
+          "name": "mystical dispute"
+        },
+        {
+          "quantity": 1,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 1,
+          "name": "nihil spellbomb"
+        },
+        {
+          "quantity": 2,
+          "name": "doorkeeper thrull"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "danimaak777",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 3,
+          "name": "ephemerate"
+        },
+        {
+          "quantity": 2,
+          "name": "griselbrand"
+        },
+        {
+          "quantity": 4,
+          "name": "atraxa grand unifier"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 4,
+          "name": "goryos vengeance"
+        },
+        {
+          "quantity": 3,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 2,
+          "name": "tamiyo inquisitive student"
+        },
+        {
+          "quantity": 4,
+          "name": "tainted indulgence"
+        },
+        {
+          "quantity": 2,
+          "name": "spell snare"
+        },
+        {
+          "quantity": 2,
+          "name": "prismatic ending"
+        },
+        {
+          "quantity": 1,
+          "name": "godless shrine"
+        },
+        {
+          "quantity": 1,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 1,
+          "name": "overgrown tomb"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "shadowy backstreet"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "undercity sewers"
+        },
+        {
+          "quantity": 1,
+          "name": "watery grave"
+        },
+        {
+          "quantity": 3,
+          "name": "faithful mending"
+        },
+        {
+          "quantity": 4,
+          "name": "psychic frog"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 1,
+          "name": "pest control"
+        },
+        {
+          "quantity": 2,
+          "name": "priest of fell rites"
+        },
+        {
+          "quantity": 3,
+          "name": "polluted delta"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 4,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 2,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "teferi time raveler"
+        },
+        {
+          "quantity": 1,
+          "name": "subtlety"
+        },
+        {
+          "quantity": 1,
+          "name": "pest control"
+        },
+        {
+          "quantity": 3,
+          "name": "thoughtseize"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "faunafaunafauna",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 1,
+          "name": "inquisition of kozilek"
+        },
+        {
+          "quantity": 2,
+          "name": "godless shrine"
+        },
+        {
+          "quantity": 4,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 4,
+          "name": "flickerwisp"
+        },
+        {
+          "quantity": 4,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 3,
+          "name": "ephemerate"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 2,
+          "name": "orcish bowmasters"
+        },
+        {
+          "quantity": 3,
+          "name": "shadowy backstreet"
+        },
+        {
+          "quantity": 1,
+          "name": "aven interrupter"
+        },
+        {
+          "quantity": 4,
+          "name": "witch enchanter"
+        },
+        {
+          "quantity": 1,
+          "name": "boggart trawler"
+        },
+        {
+          "quantity": 2,
+          "name": "recruiter of the guard"
+        },
+        {
+          "quantity": 4,
+          "name": "phelia exuberant shepherd"
+        },
+        {
+          "quantity": 4,
+          "name": "emperor of bones"
+        },
+        {
+          "quantity": 4,
+          "name": "overlord of the balemurk"
+        },
+        {
+          "quantity": 2,
+          "name": "bleachbone verge"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 3,
+          "name": "vindicate"
+        },
+        {
+          "quantity": 2,
+          "name": "ashiok dream render"
+        },
+        {
+          "quantity": 2,
+          "name": "high noon"
+        },
+        {
+          "quantity": 1,
+          "name": "aven interrupter"
+        },
+        {
+          "quantity": 2,
+          "name": "white orchid phantom"
+        },
+        {
+          "quantity": 3,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    },
+    {
+      "player": "Tenco19",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "goryos vengeance"
+        },
+        {
+          "quantity": 4,
+          "name": "marsh flats"
+        },
+        {
+          "quantity": 2,
+          "name": "griselbrand"
+        },
+        {
+          "quantity": 1,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 1,
+          "name": "godless shrine"
+        },
+        {
+          "quantity": 2,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 1,
+          "name": "watery grave"
+        },
+        {
+          "quantity": 4,
+          "name": "ephemerate"
+        },
+        {
+          "quantity": 2,
+          "name": "prismatic ending"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 4,
+          "name": "tainted indulgence"
+        },
+        {
+          "quantity": 4,
+          "name": "fallaji archaeologist"
+        },
+        {
+          "quantity": 4,
+          "name": "atraxa grand unifier"
+        },
+        {
+          "quantity": 3,
+          "name": "force of negation"
+        },
+        {
+          "quantity": 1,
+          "name": "hedge maze"
+        },
+        {
+          "quantity": 1,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 1,
+          "name": "undercity sewers"
+        },
+        {
+          "quantity": 1,
+          "name": "shadowy backstreet"
+        },
+        {
+          "quantity": 1,
+          "name": "pest control"
+        },
+        {
+          "quantity": 4,
+          "name": "psychic frog"
+        },
+        {
+          "quantity": 3,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 3,
+          "name": "polluted delta"
+        },
+        {
+          "quantity": 2,
+          "name": "emperor of bones"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 2,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 3,
+          "name": "fatal push"
+        },
+        {
+          "quantity": 2,
+          "name": "teferi time raveler"
+        },
+        {
+          "quantity": 1,
+          "name": "mystical dispute"
+        },
+        {
+          "quantity": 1,
+          "name": "pest control"
+        },
+        {
+          "quantity": 4,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "wrath of the skies"
+        }
+      ],
+      "wins": null,
+      "losses": null
+    }
+  ]
+}

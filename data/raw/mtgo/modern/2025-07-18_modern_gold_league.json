@@ -1,0 +1,319 @@
+{
+  "source": "mtgo",
+  "format": "modern",
+  "name": "Modern Gold League",
+  "date": "2025-07-18",
+  "url": "https://www.mtgo.com/decklist/modern-gold-league-2025-07-189350",
+  "decklists": [
+    {
+      "player": "yolad",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "arena of glory"
+        },
+        {
+          "quantity": 4,
+          "name": "arid mesa"
+        },
+        {
+          "quantity": 1,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 2,
+          "name": "fable of the mirror-breaker"
+        },
+        {
+          "quantity": 1,
+          "name": "steam vents"
+        },
+        {
+          "quantity": 1,
+          "name": "godless shrine"
+        },
+        {
+          "quantity": 1,
+          "name": "indatha triome"
+        },
+        {
+          "quantity": 4,
+          "name": "leyline binding"
+        },
+        {
+          "quantity": 4,
+          "name": "leyline of the guildpact"
+        },
+        {
+          "quantity": 4,
+          "name": "lightning bolt"
+        },
+        {
+          "quantity": 1,
+          "name": "lush portico"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "ragavan nimble pilferer"
+        },
+        {
+          "quantity": 1,
+          "name": "sacred foundry"
+        },
+        {
+          "quantity": 4,
+          "name": "scion of draco"
+        },
+        {
+          "quantity": 1,
+          "name": "temple garden"
+        },
+        {
+          "quantity": 3,
+          "name": "stubborn denial"
+        },
+        {
+          "quantity": 4,
+          "name": "territorial kavu"
+        },
+        {
+          "quantity": 1,
+          "name": "thundering falls"
+        },
+        {
+          "quantity": 2,
+          "name": "tribal flames"
+        },
+        {
+          "quantity": 4,
+          "name": "wooded foothills"
+        },
+        {
+          "quantity": 1,
+          "name": "nishoba brawler"
+        },
+        {
+          "quantity": 4,
+          "name": "phlage titan of fires fury"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "clarion conqueror"
+        },
+        {
+          "quantity": 3,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 1,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 1,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 2,
+          "name": "wear/tear"
+        },
+        {
+          "quantity": 3,
+          "name": "wrath of the skies"
+        },
+        {
+          "quantity": 1,
+          "name": "thoughtseize"
+        },
+        {
+          "quantity": 2,
+          "name": "nihil spellbomb"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "Evariel",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "brainsurge"
+        },
+        {
+          "quantity": 2,
+          "name": "supreme verdict"
+        },
+        {
+          "quantity": 4,
+          "name": "dress down"
+        },
+        {
+          "quantity": 1,
+          "name": "subtlety"
+        },
+        {
+          "quantity": 4,
+          "name": "flooded strand"
+        },
+        {
+          "quantity": 1,
+          "name": "steam vents"
+        },
+        {
+          "quantity": 1,
+          "name": "spell snare"
+        },
+        {
+          "quantity": 4,
+          "name": "solitude"
+        },
+        {
+          "quantity": 2,
+          "name": "lorien revealed"
+        },
+        {
+          "quantity": 2,
+          "name": "march of otherworldly light"
+        },
+        {
+          "quantity": 1,
+          "name": "scalding tarn"
+        },
+        {
+          "quantity": 1,
+          "name": "rest in peace"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "nulldrifter"
+        },
+        {
+          "quantity": 2,
+          "name": "mystic gate"
+        },
+        {
+          "quantity": 3,
+          "name": "prismatic ending"
+        },
+        {
+          "quantity": 1,
+          "name": "misty rainforest"
+        },
+        {
+          "quantity": 3,
+          "name": "meticulous archive"
+        },
+        {
+          "quantity": 1,
+          "name": "sink into stupor"
+        },
+        {
+          "quantity": 1,
+          "name": "jace the mind sculptor"
+        },
+        {
+          "quantity": 2,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "stock up"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "hallowed fountain"
+        },
+        {
+          "quantity": 4,
+          "name": "field of ruin"
+        },
+        {
+          "quantity": 4,
+          "name": "counterspell"
+        },
+        {
+          "quantity": 1,
+          "name": "the wandering emperor"
+        },
+        {
+          "quantity": 1,
+          "name": "ultima"
+        },
+        {
+          "quantity": 1,
+          "name": "teferi hero of dominaria"
+        },
+        {
+          "quantity": 2,
+          "name": "teferi time raveler"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "stony silence"
+        },
+        {
+          "quantity": 1,
+          "name": "high noon"
+        },
+        {
+          "quantity": 4,
+          "name": "consign to memory"
+        },
+        {
+          "quantity": 2,
+          "name": "celestial purge"
+        },
+        {
+          "quantity": 1,
+          "name": "kaheera the orphanguard"
+        },
+        {
+          "quantity": 1,
+          "name": "mystical dispute"
+        },
+        {
+          "quantity": 2,
+          "name": "beza the bounding spring"
+        },
+        {
+          "quantity": 1,
+          "name": "temporary lockdown"
+        },
+        {
+          "quantity": 1,
+          "name": "wear/tear"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    }
+  ]
+}

@@ -1,0 +1,1867 @@
+{
+  "source": "mtgo",
+  "format": "standard",
+  "name": "Standard League",
+  "date": "2025-07-11",
+  "url": "https://www.mtgo.com/decklist/standard-league-2025-07-119382",
+  "decklists": [
+    {
+      "player": "kobayui",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 4,
+          "name": "cut down"
+        },
+        {
+          "quantity": 2,
+          "name": "underground river"
+        },
+        {
+          "quantity": 1,
+          "name": "go for the throat"
+        },
+        {
+          "quantity": 4,
+          "name": "darkslick shores"
+        },
+        {
+          "quantity": 2,
+          "name": "sheoldreds edict"
+        },
+        {
+          "quantity": 1,
+          "name": "faerie mastermind"
+        },
+        {
+          "quantity": 4,
+          "name": "spyglass siren"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 4,
+          "name": "deep-cavern bat"
+        },
+        {
+          "quantity": 2,
+          "name": "restless reef"
+        },
+        {
+          "quantity": 2,
+          "name": "phantom interference"
+        },
+        {
+          "quantity": 3,
+          "name": "enduring curiosity"
+        },
+        {
+          "quantity": 4,
+          "name": "floodpits drowner"
+        },
+        {
+          "quantity": 3,
+          "name": "kaito bane of nightmares"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 2,
+          "name": "soulstone sanctuary"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "underground river"
+        },
+        {
+          "quantity": 2,
+          "name": "go for the throat"
+        },
+        {
+          "quantity": 2,
+          "name": "tishanas tidebinder"
+        },
+        {
+          "quantity": 4,
+          "name": "gloomlake verge"
+        },
+        {
+          "quantity": 2,
+          "name": "preacher of the schism"
+        },
+        {
+          "quantity": 1,
+          "name": "dark confidant"
+        },
+        {
+          "quantity": 1,
+          "name": "fountainport"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "disdainful stroke"
+        },
+        {
+          "quantity": 1,
+          "name": "duress"
+        },
+        {
+          "quantity": 2,
+          "name": "gixs command"
+        },
+        {
+          "quantity": 1,
+          "name": "anoint with affliction"
+        },
+        {
+          "quantity": 2,
+          "name": "negate"
+        },
+        {
+          "quantity": 1,
+          "name": "preacher of the schism"
+        },
+        {
+          "quantity": 2,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "duress"
+        },
+        {
+          "quantity": 2,
+          "name": "sheoldred the apocalypse"
+        },
+        {
+          "quantity": 2,
+          "name": "tishanas tidebinder"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "Dasikk",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "vivi ornitier"
+        },
+        {
+          "quantity": 4,
+          "name": "riverpyre verge"
+        },
+        {
+          "quantity": 1,
+          "name": "fire magic"
+        },
+        {
+          "quantity": 1,
+          "name": "magic damper"
+        },
+        {
+          "quantity": 2,
+          "name": "astrologians planisphere"
+        },
+        {
+          "quantity": 1,
+          "name": "marang river regent"
+        },
+        {
+          "quantity": 3,
+          "name": "thundertrap trainer"
+        },
+        {
+          "quantity": 4,
+          "name": "stock up"
+        },
+        {
+          "quantity": 2,
+          "name": "roaring furnace"
+        },
+        {
+          "quantity": 1,
+          "name": "get out"
+        },
+        {
+          "quantity": 1,
+          "name": "ral crackling wit"
+        },
+        {
+          "quantity": 2,
+          "name": "mountain"
+        },
+        {
+          "quantity": 3,
+          "name": "sleight of hand"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "shivan reef"
+        },
+        {
+          "quantity": 4,
+          "name": "spirebluff canal"
+        },
+        {
+          "quantity": 4,
+          "name": "opt"
+        },
+        {
+          "quantity": 1,
+          "name": "lithomantic barrage"
+        },
+        {
+          "quantity": 4,
+          "name": "torch the tower"
+        },
+        {
+          "quantity": 1,
+          "name": "into the flood maw"
+        },
+        {
+          "quantity": 4,
+          "name": "stormchasers talent"
+        },
+        {
+          "quantity": 2,
+          "name": "valley floodcaller"
+        },
+        {
+          "quantity": 2,
+          "name": "island"
+        },
+        {
+          "quantity": 2,
+          "name": "island"
+        },
+        {
+          "quantity": 2,
+          "name": "island"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "spell pierce"
+        },
+        {
+          "quantity": 2,
+          "name": "agathas soul cauldron"
+        },
+        {
+          "quantity": 2,
+          "name": "abrade"
+        },
+        {
+          "quantity": 1,
+          "name": "lithomantic barrage"
+        },
+        {
+          "quantity": 2,
+          "name": "faerie mastermind"
+        },
+        {
+          "quantity": 2,
+          "name": "enduring curiosity"
+        },
+        {
+          "quantity": 1,
+          "name": "dissection tools"
+        },
+        {
+          "quantity": 1,
+          "name": "fire magic"
+        },
+        {
+          "quantity": 2,
+          "name": "disdainful stroke"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "YeffPog",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "sentinel of the nameless city"
+        },
+        {
+          "quantity": 1,
+          "name": "restless cottage"
+        },
+        {
+          "quantity": 4,
+          "name": "blooming marsh"
+        },
+        {
+          "quantity": 2,
+          "name": "llanowar wastes"
+        },
+        {
+          "quantity": 2,
+          "name": "go for the throat"
+        },
+        {
+          "quantity": 2,
+          "name": "swamp"
+        },
+        {
+          "quantity": 3,
+          "name": "cut down"
+        },
+        {
+          "quantity": 2,
+          "name": "sheoldred the apocalypse"
+        },
+        {
+          "quantity": 2,
+          "name": "tear asunder"
+        },
+        {
+          "quantity": 1,
+          "name": "gixs command"
+        },
+        {
+          "quantity": 1,
+          "name": "sheoldreds edict"
+        },
+        {
+          "quantity": 2,
+          "name": "swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "forest"
+        },
+        {
+          "quantity": 2,
+          "name": "underground mortuary"
+        },
+        {
+          "quantity": 1,
+          "name": "shoot the sheriff"
+        },
+        {
+          "quantity": 4,
+          "name": "unholy annex"
+        },
+        {
+          "quantity": 2,
+          "name": "forest"
+        },
+        {
+          "quantity": 4,
+          "name": "lumbering worldwagon"
+        },
+        {
+          "quantity": 4,
+          "name": "wastewood verge"
+        },
+        {
+          "quantity": 1,
+          "name": "disruptive stormbrood"
+        },
+        {
+          "quantity": 4,
+          "name": "llanowar elves"
+        },
+        {
+          "quantity": 2,
+          "name": "qarsi revenant"
+        },
+        {
+          "quantity": 4,
+          "name": "demon wall"
+        },
+        {
+          "quantity": 1,
+          "name": "jenova ancient calamity"
+        },
+        {
+          "quantity": 3,
+          "name": "soulstone sanctuary"
+        },
+        {
+          "quantity": 2,
+          "name": "rot-curse rakshasa"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "nissa ascended animist"
+        },
+        {
+          "quantity": 2,
+          "name": "choking miasma"
+        },
+        {
+          "quantity": 1,
+          "name": "tear asunder"
+        },
+        {
+          "quantity": 1,
+          "name": "anoint with affliction"
+        },
+        {
+          "quantity": 3,
+          "name": "duress"
+        },
+        {
+          "quantity": 1,
+          "name": "blot out"
+        },
+        {
+          "quantity": 1,
+          "name": "outrageous robbery"
+        },
+        {
+          "quantity": 2,
+          "name": "liliana of the veil"
+        },
+        {
+          "quantity": 1,
+          "name": "scavenger regent"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "wara",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "patchwork beastie"
+        },
+        {
+          "quantity": 4,
+          "name": "fear of missing out"
+        },
+        {
+          "quantity": 4,
+          "name": "wildfire wickerfolk"
+        },
+        {
+          "quantity": 4,
+          "name": "keen-eyed curator"
+        },
+        {
+          "quantity": 1,
+          "name": "commercial district"
+        },
+        {
+          "quantity": 3,
+          "name": "tersa lightshatter"
+        },
+        {
+          "quantity": 3,
+          "name": "overprotect"
+        },
+        {
+          "quantity": 3,
+          "name": "violent urge"
+        },
+        {
+          "quantity": 4,
+          "name": "seed of hope"
+        },
+        {
+          "quantity": 3,
+          "name": "bushwhack"
+        },
+        {
+          "quantity": 4,
+          "name": "break out"
+        },
+        {
+          "quantity": 1,
+          "name": "beastie beatdown"
+        },
+        {
+          "quantity": 4,
+          "name": "copperline gorge"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "karplusan forest"
+        },
+        {
+          "quantity": 7,
+          "name": "forest"
+        },
+        {
+          "quantity": 4,
+          "name": "thornspire verge"
+        },
+        {
+          "quantity": 1,
+          "name": "wrenn and realmbreaker"
+        },
+        {
+          "quantity": 1,
+          "name": "restless ridgeline"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "pawpatch formation"
+        },
+        {
+          "quantity": 1,
+          "name": "twinmaw stormbrood"
+        },
+        {
+          "quantity": 2,
+          "name": "scrapshooter"
+        },
+        {
+          "quantity": 2,
+          "name": "sunspine lynx"
+        },
+        {
+          "quantity": 2,
+          "name": "pyroclasm"
+        },
+        {
+          "quantity": 1,
+          "name": "wrenn and realmbreaker"
+        },
+        {
+          "quantity": 1,
+          "name": "obliterating bolt"
+        },
+        {
+          "quantity": 2,
+          "name": "pick your poison"
+        },
+        {
+          "quantity": 1,
+          "name": "sword of once and future"
+        },
+        {
+          "quantity": 2,
+          "name": "lithomantic barrage"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "Kraken__",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "monastery swiftspear"
+        },
+        {
+          "quantity": 4,
+          "name": "boltwave"
+        },
+        {
+          "quantity": 1,
+          "name": "case of the crimson pulse"
+        },
+        {
+          "quantity": 4,
+          "name": "lightning helix"
+        },
+        {
+          "quantity": 4,
+          "name": "inspiring vantage"
+        },
+        {
+          "quantity": 4,
+          "name": "burst lightning"
+        },
+        {
+          "quantity": 4,
+          "name": "hired claw"
+        },
+        {
+          "quantity": 4,
+          "name": "battlefield forge"
+        },
+        {
+          "quantity": 4,
+          "name": "opera love song"
+        },
+        {
+          "quantity": 4,
+          "name": "boros charm"
+        },
+        {
+          "quantity": 4,
+          "name": "screaming nemesis"
+        },
+        {
+          "quantity": 4,
+          "name": "slickshot show-off"
+        },
+        {
+          "quantity": 4,
+          "name": "starting town"
+        },
+        {
+          "quantity": 2,
+          "name": "sunbillow verge"
+        },
+        {
+          "quantity": 2,
+          "name": "shock"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 6,
+          "name": "mountain"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "case of the crimson pulse"
+        },
+        {
+          "quantity": 2,
+          "name": "destroy evil"
+        },
+        {
+          "quantity": 2,
+          "name": "fire magic"
+        },
+        {
+          "quantity": 2,
+          "name": "get lost"
+        },
+        {
+          "quantity": 3,
+          "name": "shardmages rescue"
+        },
+        {
+          "quantity": 2,
+          "name": "sheltered by ghosts"
+        },
+        {
+          "quantity": 3,
+          "name": "rest in peace"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "Skeptic2304",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "go for the throat"
+        },
+        {
+          "quantity": 1,
+          "name": "thrun breaker of silence"
+        },
+        {
+          "quantity": 4,
+          "name": "cut down"
+        },
+        {
+          "quantity": 4,
+          "name": "demon wall"
+        },
+        {
+          "quantity": 4,
+          "name": "forest"
+        },
+        {
+          "quantity": 1,
+          "name": "lord skitter sewer king"
+        },
+        {
+          "quantity": 2,
+          "name": "soulstone sanctuary"
+        },
+        {
+          "quantity": 4,
+          "name": "llanowar wastes"
+        },
+        {
+          "quantity": 3,
+          "name": "restless cottage"
+        },
+        {
+          "quantity": 4,
+          "name": "lumbering worldwagon"
+        },
+        {
+          "quantity": 1,
+          "name": "scrapshooter"
+        },
+        {
+          "quantity": 1,
+          "name": "gixs command"
+        },
+        {
+          "quantity": 2,
+          "name": "sheoldred the apocalypse"
+        },
+        {
+          "quantity": 3,
+          "name": "surrak elusive hunter"
+        },
+        {
+          "quantity": 4,
+          "name": "unholy annex"
+        },
+        {
+          "quantity": 4,
+          "name": "swamp"
+        },
+        {
+          "quantity": 3,
+          "name": "tear asunder"
+        },
+        {
+          "quantity": 4,
+          "name": "wastewood verge"
+        },
+        {
+          "quantity": 4,
+          "name": "blooming marsh"
+        },
+        {
+          "quantity": 4,
+          "name": "llanowar elves"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "anoint with affliction"
+        },
+        {
+          "quantity": 1,
+          "name": "cease/desist"
+        },
+        {
+          "quantity": 3,
+          "name": "choking miasma"
+        },
+        {
+          "quantity": 4,
+          "name": "duress"
+        },
+        {
+          "quantity": 1,
+          "name": "scavenging ooze"
+        },
+        {
+          "quantity": 1,
+          "name": "strategic betrayal"
+        },
+        {
+          "quantity": 1,
+          "name": "tranquil frillback"
+        },
+        {
+          "quantity": 2,
+          "name": "nissa ascended animist"
+        },
+        {
+          "quantity": 1,
+          "name": "gixs command"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "Doggo10358",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "atraxa grand unifier"
+        },
+        {
+          "quantity": 2,
+          "name": "blackcleave cliffs"
+        },
+        {
+          "quantity": 2,
+          "name": "blooming marsh"
+        },
+        {
+          "quantity": 4,
+          "name": "cavern of souls"
+        },
+        {
+          "quantity": 1,
+          "name": "copperline gorge"
+        },
+        {
+          "quantity": 2,
+          "name": "cut down"
+        },
+        {
+          "quantity": 4,
+          "name": "darkslick shores"
+        },
+        {
+          "quantity": 2,
+          "name": "ertai resurrected"
+        },
+        {
+          "quantity": 2,
+          "name": "go for the throat"
+        },
+        {
+          "quantity": 4,
+          "name": "honest rutstein"
+        },
+        {
+          "quantity": 2,
+          "name": "ill-timed explosion"
+        },
+        {
+          "quantity": 4,
+          "name": "inti seneschal of the sun"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 1,
+          "name": "karplusan forest"
+        },
+        {
+          "quantity": 1,
+          "name": "llanowar wastes"
+        },
+        {
+          "quantity": 2,
+          "name": "nowhere to run"
+        },
+        {
+          "quantity": 4,
+          "name": "plaza of heroes"
+        },
+        {
+          "quantity": 4,
+          "name": "rakdos joins up"
+        },
+        {
+          "quantity": 1,
+          "name": "raucous theater"
+        },
+        {
+          "quantity": 4,
+          "name": "relic of legends"
+        },
+        {
+          "quantity": 4,
+          "name": "rona herald of invasion"
+        },
+        {
+          "quantity": 1,
+          "name": "sheoldred the apocalypse"
+        },
+        {
+          "quantity": 1,
+          "name": "spirebluff canal"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "underground river"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "thrun breaker of silence"
+        },
+        {
+          "quantity": 1,
+          "name": "ill-timed explosion"
+        },
+        {
+          "quantity": 2,
+          "name": "gixs command"
+        },
+        {
+          "quantity": 1,
+          "name": "elesh norn mother of machines"
+        },
+        {
+          "quantity": 1,
+          "name": "sheoldred the apocalypse"
+        },
+        {
+          "quantity": 2,
+          "name": "loran of the third path"
+        },
+        {
+          "quantity": 2,
+          "name": "disdainful stroke"
+        },
+        {
+          "quantity": 1,
+          "name": "tear asunder"
+        },
+        {
+          "quantity": 2,
+          "name": "soul-guide lantern"
+        },
+        {
+          "quantity": 2,
+          "name": "cut down"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "claudioh",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "cecil dark knight"
+        },
+        {
+          "quantity": 2,
+          "name": "honest rutstein"
+        },
+        {
+          "quantity": 4,
+          "name": "starting town"
+        },
+        {
+          "quantity": 4,
+          "name": "jodah the unifier"
+        },
+        {
+          "quantity": 4,
+          "name": "rona herald of invasion"
+        },
+        {
+          "quantity": 2,
+          "name": "dion bahamuts dominant"
+        },
+        {
+          "quantity": 2,
+          "name": "underground river"
+        },
+        {
+          "quantity": 1,
+          "name": "joshua phoenixs dominant"
+        },
+        {
+          "quantity": 4,
+          "name": "zack fair"
+        },
+        {
+          "quantity": 4,
+          "name": "cavern of souls"
+        },
+        {
+          "quantity": 3,
+          "name": "inti seneschal of the sun"
+        },
+        {
+          "quantity": 3,
+          "name": "jill shivas dominant"
+        },
+        {
+          "quantity": 1,
+          "name": "sigarda font of blessings"
+        },
+        {
+          "quantity": 4,
+          "name": "relic of legends"
+        },
+        {
+          "quantity": 4,
+          "name": "secluded courtyard"
+        },
+        {
+          "quantity": 4,
+          "name": "plaza of heroes"
+        },
+        {
+          "quantity": 2,
+          "name": "battlefield forge"
+        },
+        {
+          "quantity": 2,
+          "name": "concealed courtyard"
+        },
+        {
+          "quantity": 2,
+          "name": "seachrome coast"
+        },
+        {
+          "quantity": 2,
+          "name": "jirina dauntless general"
+        },
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 1,
+          "name": "jirina dauntless general"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "loran of the third path"
+        },
+        {
+          "quantity": 1,
+          "name": "sigarda font of blessings"
+        },
+        {
+          "quantity": 2,
+          "name": "surrak elusive hunter"
+        },
+        {
+          "quantity": 2,
+          "name": "get lost"
+        },
+        {
+          "quantity": 2,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "ertai resurrected"
+        },
+        {
+          "quantity": 4,
+          "name": "hope estheim"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "chiyou",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "cecil dark knight"
+        },
+        {
+          "quantity": 4,
+          "name": "cut down"
+        },
+        {
+          "quantity": 1,
+          "name": "darkslick shores"
+        },
+        {
+          "quantity": 3,
+          "name": "enduring curiosity"
+        },
+        {
+          "quantity": 4,
+          "name": "faerie mastermind"
+        },
+        {
+          "quantity": 4,
+          "name": "floodpits drowner"
+        },
+        {
+          "quantity": 4,
+          "name": "gloomlake verge"
+        },
+        {
+          "quantity": 3,
+          "name": "go for the throat"
+        },
+        {
+          "quantity": 3,
+          "name": "island"
+        },
+        {
+          "quantity": 4,
+          "name": "kaito bane of nightmares"
+        },
+        {
+          "quantity": 2,
+          "name": "phantom interference"
+        },
+        {
+          "quantity": 2,
+          "name": "restless reef"
+        },
+        {
+          "quantity": 2,
+          "name": "saiba cryptomancer"
+        },
+        {
+          "quantity": 2,
+          "name": "sheoldreds edict"
+        },
+        {
+          "quantity": 3,
+          "name": "soulstone sanctuary"
+        },
+        {
+          "quantity": 4,
+          "name": "spyglass siren"
+        },
+        {
+          "quantity": 3,
+          "name": "swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 3,
+          "name": "darkslick shores"
+        },
+        {
+          "quantity": 1,
+          "name": "swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "tishanas tidebinder"
+        },
+        {
+          "quantity": 4,
+          "name": "underground river"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "anoint with affliction"
+        },
+        {
+          "quantity": 3,
+          "name": "preacher of the schism"
+        },
+        {
+          "quantity": 2,
+          "name": "negate"
+        },
+        {
+          "quantity": 2,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "gixs command"
+        },
+        {
+          "quantity": 1,
+          "name": "duress"
+        },
+        {
+          "quantity": 1,
+          "name": "preacher of the schism"
+        },
+        {
+          "quantity": 1,
+          "name": "disdainful stroke"
+        },
+        {
+          "quantity": 1,
+          "name": "tishanas tidebinder"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "tarkanmag",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "overlord of the boilerbilges"
+        },
+        {
+          "quantity": 4,
+          "name": "fear of missing out"
+        },
+        {
+          "quantity": 2,
+          "name": "terra magical adept"
+        },
+        {
+          "quantity": 4,
+          "name": "torch the tower"
+        },
+        {
+          "quantity": 1,
+          "name": "yuna hope of spira"
+        },
+        {
+          "quantity": 3,
+          "name": "yuna hope of spira"
+        },
+        {
+          "quantity": 3,
+          "name": "elegant parlor"
+        },
+        {
+          "quantity": 3,
+          "name": "get lost"
+        },
+        {
+          "quantity": 1,
+          "name": "sunbillow verge"
+        },
+        {
+          "quantity": 2,
+          "name": "cavern of souls"
+        },
+        {
+          "quantity": 2,
+          "name": "starting town"
+        },
+        {
+          "quantity": 2,
+          "name": "mountain"
+        },
+        {
+          "quantity": 3,
+          "name": "forest"
+        },
+        {
+          "quantity": 2,
+          "name": "plains"
+        },
+        {
+          "quantity": 4,
+          "name": "dredgers insight"
+        },
+        {
+          "quantity": 4,
+          "name": "thornspire verge"
+        },
+        {
+          "quantity": 2,
+          "name": "hushwood verge"
+        },
+        {
+          "quantity": 4,
+          "name": "summon fenrir"
+        },
+        {
+          "quantity": 3,
+          "name": "lush portico"
+        },
+        {
+          "quantity": 3,
+          "name": "esper origins"
+        },
+        {
+          "quantity": 2,
+          "name": "overlord of the mistmoors"
+        },
+        {
+          "quantity": 1,
+          "name": "cori mountain monastery"
+        },
+        {
+          "quantity": 1,
+          "name": "buried in the garden"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "fire magic"
+        },
+        {
+          "quantity": 1,
+          "name": "exorcise"
+        },
+        {
+          "quantity": 3,
+          "name": "tranquil frillback"
+        },
+        {
+          "quantity": 2,
+          "name": "day of judgment"
+        },
+        {
+          "quantity": 2,
+          "name": "wrenn and realmbreaker"
+        },
+        {
+          "quantity": 2,
+          "name": "devout decree"
+        },
+        {
+          "quantity": 1,
+          "name": "vivien reid"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "mortadela",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "darkslick shores"
+        },
+        {
+          "quantity": 1,
+          "name": "restless reef"
+        },
+        {
+          "quantity": 3,
+          "name": "island"
+        },
+        {
+          "quantity": 4,
+          "name": "floodpits drowner"
+        },
+        {
+          "quantity": 4,
+          "name": "gloomlake verge"
+        },
+        {
+          "quantity": 2,
+          "name": "dreams of steel and oil"
+        },
+        {
+          "quantity": 2,
+          "name": "soulstone sanctuary"
+        },
+        {
+          "quantity": 4,
+          "name": "cut down"
+        },
+        {
+          "quantity": 2,
+          "name": "phantom interference"
+        },
+        {
+          "quantity": 5,
+          "name": "swamp"
+        },
+        {
+          "quantity": 3,
+          "name": "enduring curiosity"
+        },
+        {
+          "quantity": 4,
+          "name": "underground river"
+        },
+        {
+          "quantity": 4,
+          "name": "faerie mastermind"
+        },
+        {
+          "quantity": 4,
+          "name": "spyglass siren"
+        },
+        {
+          "quantity": 2,
+          "name": "go for the throat"
+        },
+        {
+          "quantity": 3,
+          "name": "kaito bane of nightmares"
+        },
+        {
+          "quantity": 1,
+          "name": "fountainport"
+        },
+        {
+          "quantity": 2,
+          "name": "tishanas tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "anoint with affliction"
+        },
+        {
+          "quantity": 2,
+          "name": "faebloom trick"
+        },
+        {
+          "quantity": 2,
+          "name": "sheoldred the apocalypse"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "disdainful stroke"
+        },
+        {
+          "quantity": 2,
+          "name": "tishanas tidebinder"
+        },
+        {
+          "quantity": 1,
+          "name": "duress"
+        },
+        {
+          "quantity": 2,
+          "name": "ghost vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "anoint with affliction"
+        },
+        {
+          "quantity": 1,
+          "name": "sheoldred the apocalypse"
+        },
+        {
+          "quantity": 1,
+          "name": "negate"
+        },
+        {
+          "quantity": 1,
+          "name": "enduring curiosity"
+        },
+        {
+          "quantity": 1,
+          "name": "faebloom trick"
+        },
+        {
+          "quantity": 1,
+          "name": "kaito bane of nightmares"
+        },
+        {
+          "quantity": 2,
+          "name": "sheoldreds edict"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "philipm",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "agathas soul cauldron"
+        },
+        {
+          "quantity": 4,
+          "name": "fear of missing out"
+        },
+        {
+          "quantity": 2,
+          "name": "glacial dragonhunt"
+        },
+        {
+          "quantity": 3,
+          "name": "into the flood maw"
+        },
+        {
+          "quantity": 3,
+          "name": "tersa lightshatter"
+        },
+        {
+          "quantity": 4,
+          "name": "marauding mako"
+        },
+        {
+          "quantity": 4,
+          "name": "spirebluff canal"
+        },
+        {
+          "quantity": 1,
+          "name": "spell pierce"
+        },
+        {
+          "quantity": 4,
+          "name": "shivan reef"
+        },
+        {
+          "quantity": 4,
+          "name": "riverpyre verge"
+        },
+        {
+          "quantity": 2,
+          "name": "soulstone sanctuary"
+        },
+        {
+          "quantity": 4,
+          "name": "profts eidetic memory"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "torch the tower"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 3,
+          "name": "voldaren thrillseeker"
+        },
+        {
+          "quantity": 1,
+          "name": "island"
+        },
+        {
+          "quantity": 3,
+          "name": "thundering falls"
+        },
+        {
+          "quantity": 4,
+          "name": "vivi ornitier"
+        },
+        {
+          "quantity": 4,
+          "name": "winternight stories"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "tishanas tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "draconautics engineer"
+        },
+        {
+          "quantity": 2,
+          "name": "enduring curiosity"
+        },
+        {
+          "quantity": 3,
+          "name": "lithomantic barrage"
+        },
+        {
+          "quantity": 1,
+          "name": "spell pierce"
+        },
+        {
+          "quantity": 1,
+          "name": "scorching shot"
+        },
+        {
+          "quantity": 2,
+          "name": "negate"
+        },
+        {
+          "quantity": 1,
+          "name": "disdainful stroke"
+        },
+        {
+          "quantity": 2,
+          "name": "unable to scream"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "neb12r",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "fabled passage"
+        },
+        {
+          "quantity": 2,
+          "name": "escape tunnel"
+        },
+        {
+          "quantity": 3,
+          "name": "karplusan forest"
+        },
+        {
+          "quantity": 1,
+          "name": "innkeepers talent"
+        },
+        {
+          "quantity": 2,
+          "name": "obliterating bolt"
+        },
+        {
+          "quantity": 4,
+          "name": "llanowar elves"
+        },
+        {
+          "quantity": 4,
+          "name": "mossborn hydra"
+        },
+        {
+          "quantity": 1,
+          "name": "overprotect"
+        },
+        {
+          "quantity": 2,
+          "name": "royal treatment"
+        },
+        {
+          "quantity": 4,
+          "name": "sazhs chocobo"
+        },
+        {
+          "quantity": 3,
+          "name": "snakeskin veil"
+        },
+        {
+          "quantity": 4,
+          "name": "tifa lockhart"
+        },
+        {
+          "quantity": 4,
+          "name": "torch the tower"
+        },
+        {
+          "quantity": 4,
+          "name": "traveling chocobo"
+        },
+        {
+          "quantity": 2,
+          "name": "bristly bill spine sower"
+        },
+        {
+          "quantity": 11,
+          "name": "forest"
+        },
+        {
+          "quantity": 1,
+          "name": "mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "thornspire verge"
+        },
+        {
+          "quantity": 1,
+          "name": "heritage reclamation"
+        },
+        {
+          "quantity": 1,
+          "name": "karplusan forest"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "fire magic"
+        },
+        {
+          "quantity": 2,
+          "name": "heritage reclamation"
+        },
+        {
+          "quantity": 2,
+          "name": "insidious fungus"
+        },
+        {
+          "quantity": 1,
+          "name": "nissa ascended animist"
+        },
+        {
+          "quantity": 4,
+          "name": "pawpatch recruit"
+        },
+        {
+          "quantity": 1,
+          "name": "soul-guide lantern"
+        },
+        {
+          "quantity": 2,
+          "name": "vivien reid"
+        },
+        {
+          "quantity": 1,
+          "name": "obliterating bolt"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    },
+    {
+      "player": "Atticus1806",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "plains"
+        },
+        {
+          "quantity": 4,
+          "name": "inspiring vantage"
+        },
+        {
+          "quantity": 4,
+          "name": "case of the gateway express"
+        },
+        {
+          "quantity": 4,
+          "name": "nesting bot"
+        },
+        {
+          "quantity": 4,
+          "name": "gleeful demolition"
+        },
+        {
+          "quantity": 4,
+          "name": "imodanes recruiter"
+        },
+        {
+          "quantity": 4,
+          "name": "knight-errant of eos"
+        },
+        {
+          "quantity": 1,
+          "name": "sanguine evangelist"
+        },
+        {
+          "quantity": 4,
+          "name": "novice inspector"
+        },
+        {
+          "quantity": 3,
+          "name": "battlefield forge"
+        },
+        {
+          "quantity": 1,
+          "name": "battlefield forge"
+        },
+        {
+          "quantity": 4,
+          "name": "starting town"
+        },
+        {
+          "quantity": 4,
+          "name": "spyglass siren"
+        },
+        {
+          "quantity": 4,
+          "name": "warden of the inner sky"
+        },
+        {
+          "quantity": 1,
+          "name": "arabella abandoned doll"
+        },
+        {
+          "quantity": 1,
+          "name": "sanguine evangelist"
+        },
+        {
+          "quantity": 4,
+          "name": "spirebluff canal"
+        },
+        {
+          "quantity": 1,
+          "name": "seachrome coast"
+        },
+        {
+          "quantity": 3,
+          "name": "seachrome coast"
+        },
+        {
+          "quantity": 4,
+          "name": "resolute reinforcements"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 3,
+          "name": "destroy evil"
+        },
+        {
+          "quantity": 2,
+          "name": "disdainful stroke"
+        },
+        {
+          "quantity": 4,
+          "name": "protect the negotiators"
+        },
+        {
+          "quantity": 3,
+          "name": "torch the tower"
+        },
+        {
+          "quantity": 1,
+          "name": "rest in peace"
+        },
+        {
+          "quantity": 2,
+          "name": "sheltered by ghosts"
+        }
+      ],
+      "wins": 5,
+      "losses": 0
+    }
+  ]
+}

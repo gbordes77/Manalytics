@@ -1,0 +1,99 @@
+{
+  "dashboard": {
+    "title": "Manalytics Dashboard",
+    "uid": "manalytics-main",
+    "timezone": "browser",
+    "panels": [
+      {
+        "title": "Request Rate",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(http_requests_total[5m])",
+            "legendFormat": "{{method}} {{endpoint}}"
+          }
+        ]
+      },
+      {
+        "title": "Active Requests",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "http_active_requests"
+          }
+        ]
+      },
+      {
+        "title": "Request Duration (p95)",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))",
+            "legendFormat": "{{method}} {{endpoint}}"
+          }
+        ]
+      },
+      {
+        "title": "Cache Hit Rate",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "sum(rate(cache_hits_total[5m])) / (sum(rate(cache_hits_total[5m])) + sum(rate(cache_misses_total[5m]))) * 100"
+          }
+        ],
+        "options": {
+          "graphMode": "area",
+          "unit": "percent"
+        }
+      },
+      {
+        "title": "Scraper Success Rate",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 16},
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "sum by (source, format) (rate(scraper_runs_total{status=\"success\"}[1h]))",
+            "legendFormat": "{{source}} - {{format}}"
+          }
+        ]
+      },
+      {
+        "title": "Tournaments Scraped",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 16},
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "sum(increase(tournaments_scraped_total[24h]))"
+          }
+        ],
+        "options": {
+          "graphMode": "area"
+        }
+      },
+      {
+        "title": "Database Connections",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 24},
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "db_connections_active"
+          }
+        ]
+      },
+      {
+        "title": "Archetype Detection Time",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 24},
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(archetype_detection_duration_seconds_bucket[5m]))"
+          }
+        ]
+      }
+    ]
+  }
+}

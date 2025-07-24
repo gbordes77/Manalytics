@@ -1,0 +1,49 @@
+# docker-compose.dev.yml - Development overrides
+version: '3.8'
+
+services:
+  db:
+    ports:
+      - "5432:5432"
+
+  redis:
+    ports:
+      - "6379:6379"
+
+  chrome:
+    image: browserless/chrome:latest
+    ports:
+      - "3000:3000"
+    environment:
+      MAX_CONCURRENT_SESSIONS: 2
+      MAX_QUEUE_LENGTH: 10
+
+  api:
+    command: uvicorn src.api.app:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      DEBUG: "true"
+      LOG_LEVEL: "DEBUG"
+
+  worker:
+    command: sleep infinity  # Keep container running for manual testing
+    volumes:
+      - .:/app
+    depends_on:
+      - chrome
+
+  # Development tools
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@manalytics.local
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    profiles:
+      - tools

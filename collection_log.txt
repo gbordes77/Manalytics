@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Volumes/DataDisk/_Projects/Manalytics/collect_tournaments_simple.py", line 12, in <module>
+    from database.db_pool import DatabasePool
+  File "/Volumes/DataDisk/_Projects/Manalytics/database/db_pool.py", line 1, in <module>
+    import psycopg2
+ModuleNotFoundError: No module named 'psycopg2'

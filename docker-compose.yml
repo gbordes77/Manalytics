@@ -1,0 +1,82 @@
+# docker-compose.yml - Base configuration
+version: '3.8'
+
+x-common-variables: &common-variables
+  TZ: ${TZ:-UTC}
+  PYTHONUNBUFFERED: 1
+  PYTHONDONTWRITEBYTECODE: 1
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      <<: *common-variables
+      POSTGRES_DB: ${DB_NAME:-manalytics}
+      POSTGRES_USER: ${DB_USER:-manalytics}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-manalytics}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      cache_from:
+        - ${DOCKER_REGISTRY:-local}/manalytics-api:latest
+    image: ${DOCKER_REGISTRY:-local}/manalytics-api:${VERSION:-latest}
+    ports:
+      - "8000:8000"
+    environment:
+      <<: *common-variables
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${DOCKER_REGISTRY:-local}/manalytics-worker:${VERSION:-latest}
+    environment:
+      <<: *common-variables
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    command: ["/bin/sh", "-c", "echo 'Worker ready. Run: docker-compose exec worker python scripts/run_pipeline.py --format FORMAT --days N' && tail -f /dev/null"]
+
+volumes:
+  postgres_data:
+  redis_data:

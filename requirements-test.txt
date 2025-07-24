@@ -1,0 +1,5 @@
+# Testing dependencies
+# Include all dev dependencies (which contain testing tools)
+-r requirements-dev.txt
+
+# Additional test-specific dependencies if needed
