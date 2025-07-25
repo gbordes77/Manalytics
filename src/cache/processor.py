@@ -12,6 +12,7 @@ from ..parsers.color_detector import ColorDetector
 from ..parsers.archetype_parser import ArchetypeParser
 from .database import CacheDatabase
 from .models import CachedTournament, CachedDecklist, CachedCard
+from ..utils.color_names import format_archetype_name
 
 
 logger = logging.getLogger(__name__)
@@ -258,11 +259,14 @@ class CacheProcessor:
                 colors
             )
             
-            # Format archetype name with variant
-            if variant:
-                archetype_name = f"{archetype} ({variant})"
+            # Format archetype name with full color names and variant
+            if archetype:
+                # The archetype already includes the color code, don't pass colors again
+                archetype_name = format_archetype_name(archetype)
+                if variant:
+                    archetype_name = f"{archetype_name} ({variant})"
             else:
-                archetype_name = archetype
+                archetype_name = None
             
             return CachedDecklist(
                 deck_id=deck_id,
@@ -313,11 +317,14 @@ class CacheProcessor:
                 colors
             )
             
-            # Format archetype name with variant
-            if variant:
-                archetype_name = f"{archetype} ({variant})"
+            # Format archetype name with full color names and variant
+            if archetype:
+                # The archetype already includes the color code, don't pass colors again
+                archetype_name = format_archetype_name(archetype)
+                if variant:
+                    archetype_name = f"{archetype_name} ({variant})"
             else:
-                archetype_name = archetype
+                archetype_name = None
             
             return CachedDecklist(
                 deck_id=deck_data.get('DeckId', ''),

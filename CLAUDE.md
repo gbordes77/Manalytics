@@ -144,10 +144,12 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
   - `docs/SIDEBOARD_GUIDE_MATRIX_EXAMPLE.md` - Guide sideboard interactif
   - `docs/PROJECT_SUMMARY_DIFFERENTIATORS.md` - Nos avantages concurrentiels
 
-### 🎯 Phase 2 EN ATTENTE : Pipeline de Traitement
-- Parser d'archétypes (basé sur MTGOArchetypeParser)
-- Base de données PostgreSQL
-- API FastAPI
+### ✅ Phase 2 COMPLÈTE : Pipeline de Traitement
+- **Cache SQLite** : Metadata + JSON decklists storage
+- **Parser d'archétypes** : 44 règles Standard intégrées (basé sur MTGOArchetypeParser)
+- **Détecteur de couleurs** : 28,000+ cartes database (card_colors.json)
+- **Performance** : <500ms par tournoi
+- **Visualisations** : Charts interactifs avec noms complets (Izzet, Naya, etc.)
 
 ### 🚀 Phase 3 PLANIFIÉE : Visualisations Uniques
 **Priorité HAUTE (toutes avec Plotly) :**
@@ -182,6 +184,15 @@ data/
 - **Configuration** : `.env` + `src/manalytics/config.py`
 - **Structure** : 100% professionnelle dans `src/manalytics/`
 
+## **📊 État Actuel du Métagame Standard (25/07/2025)**
+```
+1. Izzet Prowess (Cauldron) - 19.6%
+2. Dimir Midrange - 19.4%  
+3. Mono White Caretaker - 4.6%
+4. Golgari Midrange - 4.4%
+5. Boros Convoke - 3.6%
+```
+
 ## **⚡ Commandes Utiles (NOUVEAU SYSTÈME)**
 ```bash
 # Installation complète
@@ -205,8 +216,13 @@ manalytics serve
 # Ancienne méthode (si besoin)
 python3 scripts/scrape_all_platforms.py --format standard --days 7
 
-# Analyser les données existantes
+# Analyser les données existantes  
 python3 scripts/run_pipeline_with_existing_data.py --format standard --platform melee
+
+# Phase 2: Cache processing et visualisation
+python3 scripts/process_all_standard_data.py
+python3 scripts/create_archetype_visualization.py
+python3 scripts/show_cache_stats.py
 
 # Voir les données disponibles
 python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); print(dl.count_tournaments())"
@@ -216,6 +232,7 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
 - `docs/SCRAPING_BEST_PRACTICES.md` : **LEÇONS CRITIQUES** sur le scraping (notamment pourquoi on ne doit JAMAIS deviner les IDs MTGO)
 - **`docs/MELEE_SCRAPING_GUIDE.md`** : Guide complet du scraping Melee avec authentification
 - **`docs/MTGO_SCRAPING_GUIDE.md`** : Guide complet du scraping MTGO (pas d'auth requise)
+- **`docs/CACHE_SYSTEM_IMPLEMENTATION.md`** : Architecture complète du système de cache Phase 2
 - Les IDs MTGO ne sont PAS séquentiels - toujours parser la page de liste officielle
 - Les tournois du même jour ont des IDs complètement différents (écarts de 5, 10, 17...)
 - L'authentification Melee utilise des cookies valides 21 jours (pas de JWT)

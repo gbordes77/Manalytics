@@ -128,7 +128,7 @@ class ArchetypeParser:
                 
                 # Format name
                 if archetype.include_color_in_name and color:
-                    name = f"{self._format_color_name(color)} {archetype.name}"
+                    name = f"{color} {archetype.name}"
                 else:
                     name = archetype.name
                 

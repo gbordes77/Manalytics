@@ -4,8 +4,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Version**: 1.0.0  
-**Status**: ✅ Phase 1 Complete (Data Collection) | 🚧 Phase 2 (Pipeline) | 📋 Phase 3 (Visualizations)  
+**Version**: 2.0.0  
+**Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | 📋 Phase 3 (Advanced Visualizations)  
 **Last Update**: July 25, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
@@ -18,12 +18,30 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 - **📊 Multi-Deck Visual Comparison** - See exactly why some decks win and others don't
 - **🎯 Unified MTGO + Melee Analysis** - Most sites do one OR the other, we do both
 
-## 🎉 Current Status (Phase 1 Complete)
+## 🎉 Current Status (Phase 1 & 2 Complete!)
 
-- ✅ **Full decklists collection** : MTGO (enhanced scraper) + Melee (Records field parsing)
-- ✅ **July 2025 scraped** : 53 MTGO + 14 Melee tournaments = ~1346 complete decklists
-- ✅ **Fixed initial issue** : Now retrieving complete mainboard + sideboard data
-- ✅ **Phase 3 documentation ready** : 30+ planned visualizations in `docs/`
+### ✅ Phase 1: Data Collection
+- **Full decklists collection** : MTGO (enhanced scraper) + Melee (Records field parsing)
+- **July 2025 scraped** : 67 tournaments = 1,140 complete decklists
+- **Fixed initial issue** : Now retrieving complete mainboard + sideboard data
+
+### ✅ Phase 2: Cache System & Analysis (NEW!)
+- **Archetype Detection** : 44 Standard rules from MTGOFormatData integrated
+- **Color Detection** : 28,000+ cards database for accurate color identification
+- **Performance** : <500ms per tournament processing with SQLite cache
+- **Guild Names** : Full support (Izzet, Dimir, Naya, Jeskai, etc.)
+- **Interactive Visualization** : HTML charts with pie chart labels & percentages
+- **Meta Snapshot** : Real-time metagame breakdown
+
+### 📊 Current Standard Metagame (July 2025)
+1. **Izzet Prowess (Cauldron)** - 19.6%
+2. **Dimir Midrange** - 19.4%
+3. **Mono White Caretaker** - 4.6%
+4. **Golgari Midrange** - 4.4%
+5. **Boros Convoke** - 3.6%
+
+### 📋 Phase 3: Ready to Start
+- **Phase 3 documentation ready** : 30+ planned visualizations in `docs/`
 
 ## 📋 Features
 
@@ -79,17 +97,18 @@ Visit http://localhost:8000/docs for API documentation.
 ### Scraping Tournaments
 
 ```bash
-# Scraper MTGO (standalone)
+# Process all new tournaments through cache
+python3 scripts/process_all_standard_data.py
+
+# Generate visualization
+python3 scripts/create_archetype_visualization.py
+
+# View cache statistics
+python3 scripts/show_cache_stats.py
+
+# Old standalone scrapers (if needed)
 python3 scrape_mtgo_standalone.py
-
-# Scraper Melee (standalone)  
 python3 scrape_melee_from_commit.py
-
-# Valider contre le cache communautaire
-python3 scripts/validate_against_decklistcache.py --platform all
-
-# Ancienne méthode (si besoin)
-python3 scripts/scrape_all_platforms.py --format standard --days 7
 ```
 
 ### Running Tests
@@ -194,6 +213,9 @@ Full documentation at `/api/docs` when running.
 - [MTGO Scraping Guide](docs/MTGO_SCRAPING_GUIDE.md) - Complete MTGO scraping guide
 - [Melee Scraping Guide](docs/MELEE_SCRAPING_GUIDE.md) - Complete Melee scraping guide  
 - [Scraping Best Practices](docs/SCRAPING_BEST_PRACTICES.md) - Critical lessons learned
+
+### Phase 2 Implementation
+- [Cache System Implementation](docs/CACHE_SYSTEM_IMPLEMENTATION.md) - Complete cache architecture
 
 ### Phase 3 Visualizations (Coming Soon)
 - [Phase 3 Roadmap](docs/PHASE3_VISUALIZATIONS_ROADMAP.md) - 30+ planned visualizations

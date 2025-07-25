@@ -1,21 +1,4437 @@
 {
+  "vintage-challenge-32-2025-07-2012803702": {
+    "tournament_id": "vintage-challenge-32-2025-07-2012803702",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.333505"
+  },
+  "vintage-challenge-32-2025-07-0312801629": {
+    "tournament_id": "vintage-challenge-32-2025-07-0312801629",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.335087"
+  },
+  "vintage-challenge-32-2025-07-1012802780": {
+    "tournament_id": "vintage-challenge-32-2025-07-1012802780",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.336518"
+  },
+  "vintage-challenge-32-2025-07-0612801668": {
+    "tournament_id": "vintage-challenge-32-2025-07-0612801668",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.337826"
+  },
+  "vintage-challenge-32-2025-07-0512801662": {
+    "tournament_id": "vintage-challenge-32-2025-07-0512801662",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.339050"
+  },
+  "vintage-challenge-32-2025-07-1112802806": {
+    "tournament_id": "vintage-challenge-32-2025-07-1112802806",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.340317"
+  },
+  "vintage-challenge-32-2025-07-1712803663": {
+    "tournament_id": "vintage-challenge-32-2025-07-1712803663",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.341628"
+  },
+  "vintage-challenge-32-2025-07-1212802820": {
+    "tournament_id": "vintage-challenge-32-2025-07-1212802820",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.342900"
+  },
+  "vintage-challenge-32-2025-07-1912803696": {
+    "tournament_id": "vintage-challenge-32-2025-07-1912803696",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.344125"
+  },
+  "vintage-challenge-32-2025-07-0412801650": {
+    "tournament_id": "vintage-challenge-32-2025-07-0412801650",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.345461"
+  },
+  "vintage-challenge-32-2025-07-2412804860": {
+    "tournament_id": "vintage-challenge-32-2025-07-2412804860",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.346779"
+  },
+  "vintage-challenge-32-2025-07-1312802829": {
+    "tournament_id": "vintage-challenge-32-2025-07-1312802829",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.348092"
+  },
+  "vintage-challenge-32-2025-07-1812803684": {
+    "tournament_id": "vintage-challenge-32-2025-07-1812803684",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.349413"
+  },
+  "vintage-league-2025-07-109390": {
+    "tournament_id": "vintage-league-2025-07-109390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.350743"
+  },
+  "vintage-league-2025-07-179390": {
+    "tournament_id": "vintage-league-2025-07-179390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.352072"
+  },
+  "vintage-league-2025-07-159390": {
+    "tournament_id": "vintage-league-2025-07-159390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.353332"
+  },
+  "vintage-league-2025-07-199390": {
+    "tournament_id": "vintage-league-2025-07-199390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.354637"
+  },
+  "vintage-league-2025-07-129390": {
+    "tournament_id": "vintage-league-2025-07-129390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.355985"
+  },
+  "vintage-league-2025-07-119390": {
+    "tournament_id": "vintage-league-2025-07-119390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.357411"
+  },
+  "vintage-league-2025-07-169390": {
+    "tournament_id": "vintage-league-2025-07-169390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.358864"
+  },
+  "vintage-league-2025-07-149390": {
+    "tournament_id": "vintage-league-2025-07-149390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.360371"
+  },
+  "vintage-league-2025-07-189390": {
+    "tournament_id": "vintage-league-2025-07-189390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.361746"
+  },
+  "vintage-league-2025-07-139390": {
+    "tournament_id": "vintage-league-2025-07-139390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.363221"
+  },
+  "vintage-league-2025-07-019390": {
+    "tournament_id": "vintage-league-2025-07-019390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.364770"
+  },
+  "vintage-league-2025-07-249390": {
+    "tournament_id": "vintage-league-2025-07-249390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.366250"
+  },
+  "vintage-league-2025-07-239390": {
+    "tournament_id": "vintage-league-2025-07-239390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.367670"
+  },
+  "vintage-league-2025-07-069390": {
+    "tournament_id": "vintage-league-2025-07-069390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.369123"
+  },
+  "vintage-league-2025-07-219390": {
+    "tournament_id": "vintage-league-2025-07-219390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.370611"
+  },
+  "vintage-league-2025-07-089390": {
+    "tournament_id": "vintage-league-2025-07-089390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.372112"
+  },
+  "vintage-league-2025-07-049390": {
+    "tournament_id": "vintage-league-2025-07-049390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.373584"
+  },
+  "vintage-league-2025-07-039390": {
+    "tournament_id": "vintage-league-2025-07-039390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.375030"
+  },
+  "vintage-league-2025-07-259390": {
+    "tournament_id": "vintage-league-2025-07-259390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.376510"
+  },
+  "vintage-league-2025-07-229390": {
+    "tournament_id": "vintage-league-2025-07-229390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.377974"
+  },
+  "vintage-league-2025-07-079390": {
+    "tournament_id": "vintage-league-2025-07-079390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.379416"
+  },
+  "vintage-league-2025-07-099390": {
+    "tournament_id": "vintage-league-2025-07-099390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.380875"
+  },
+  "vintage-league-2025-07-209390": {
+    "tournament_id": "vintage-league-2025-07-209390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.382324"
+  },
+  "vintage-league-2025-07-059390": {
+    "tournament_id": "vintage-league-2025-07-059390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.383813"
+  },
+  "vintage-league-2025-07-029390": {
+    "tournament_id": "vintage-league-2025-07-029390",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.385273"
+  },
+  "duel-commander-trial-16-2025-07-0312801630": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0312801630",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.386782"
+  },
+  "duel-commander-trial-16-2025-07-1112802803": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1112802803",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.388406"
+  },
+  "duel-commander-trial-16-2025-07-0912801707": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0912801707",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.389979"
+  },
+  "duel-commander-trial-16-2025-07-1712803664": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1712803664",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.391629"
+  },
+  "duel-commander-trial-16-2025-07-0512801661": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0512801661",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.393215"
+  },
+  "duel-commander-trial-16-2025-07-2412804861": {
+    "tournament_id": "duel-commander-trial-16-2025-07-2412804861",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.394800"
+  },
+  "duel-commander-trial-16-2025-07-0212801620": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0212801620",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.396486"
+  },
+  "duel-commander-trial-16-2025-07-0912802767": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0912802767",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.398112"
+  },
+  "duel-commander-trial-16-2025-07-1612803654": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1612803654",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.399719"
+  },
+  "duel-commander-trial-16-2025-07-0612801678": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0612801678",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.401300"
+  },
+  "duel-commander-trial-16-2025-07-2012803713": {
+    "tournament_id": "duel-commander-trial-16-2025-07-2012803713",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.402886"
+  },
+  "duel-commander-trial-16-2025-07-2012803705": {
+    "tournament_id": "duel-commander-trial-16-2025-07-2012803705",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.404457"
+  },
+  "duel-commander-trial-16-2025-07-1012802779": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1012802779",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.406198"
+  },
+  "duel-commander-trial-16-2025-07-1412802852": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1412802852",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.407905"
+  },
+  "duel-commander-trial-16-2025-07-0212800048": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0212800048",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.409637"
+  },
+  "duel-commander-trial-16-2025-07-1512802872": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1512802872",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.411366"
+  },
+  "duel-commander-trial-16-2025-07-0412801648": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0412801648",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.413091"
+  },
+  "duel-commander-trial-16-2025-07-1612802882": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1612802882",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.414815"
+  },
+  "duel-commander-trial-16-2025-07-1312802843": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1312802843",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.416588"
+  },
+  "duel-commander-trial-16-2025-07-1212802819": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1212802819",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.418307"
+  },
+  "duel-commander-trial-16-2025-07-0112800040": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0112800040",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.420030"
+  },
+  "duel-commander-trial-16-2025-07-2112803720": {
+    "tournament_id": "duel-commander-trial-16-2025-07-2112803720",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.421778"
+  },
+  "duel-commander-trial-16-2025-07-2312804941": {
+    "tournament_id": "duel-commander-trial-16-2025-07-2312804941",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.423510"
+  },
+  "duel-commander-trial-16-2025-07-1312802832": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1312802832",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.425277"
+  },
+  "duel-commander-trial-16-2025-07-1812803682": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1812803682",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.427124"
+  },
+  "duel-commander-trial-16-2025-07-2212803733": {
+    "tournament_id": "duel-commander-trial-16-2025-07-2212803733",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.428895"
+  },
+  "duel-commander-trial-16-2025-07-1912803695": {
+    "tournament_id": "duel-commander-trial-16-2025-07-1912803695",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.430742"
+  },
+  "duel-commander-trial-16-2025-07-0812801699": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0812801699",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.432567"
+  },
+  "duel-commander-trial-16-2025-07-0712801685": {
+    "tournament_id": "duel-commander-trial-16-2025-07-0712801685",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.434265"
+  },
+  "duel-commander-league-2025-07-229225": {
+    "tournament_id": "duel-commander-league-2025-07-229225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.435947"
+  },
+  "duel-commander-league-2025-07-239225": {
+    "tournament_id": "duel-commander-league-2025-07-239225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.437671"
+  },
+  "duel-commander-league-2025-07-219225": {
+    "tournament_id": "duel-commander-league-2025-07-219225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.439387"
+  },
+  "duel-commander-league-2025-07-209225": {
+    "tournament_id": "duel-commander-league-2025-07-209225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.441091"
+  },
+  "duel-commander-league-2025-07-189225": {
+    "tournament_id": "duel-commander-league-2025-07-189225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.442816"
+  },
+  "duel-commander-league-2025-07-259225": {
+    "tournament_id": "duel-commander-league-2025-07-259225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.444544"
+  },
+  "duel-commander-league-2025-07-089225": {
+    "tournament_id": "duel-commander-league-2025-07-089225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.446290"
+  },
+  "duel-commander-league-2025-07-199225": {
+    "tournament_id": "duel-commander-league-2025-07-199225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.448041"
+  },
+  "duel-commander-league-2025-07-249225": {
+    "tournament_id": "duel-commander-league-2025-07-249225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.449796"
+  },
+  "duel-commander-league-2025-07-099225": {
+    "tournament_id": "duel-commander-league-2025-07-099225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.451570"
+  },
+  "duel-commander-league-2025-07-109225": {
+    "tournament_id": "duel-commander-league-2025-07-109225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.453372"
+  },
+  "duel-commander-league-2025-07-119225": {
+    "tournament_id": "duel-commander-league-2025-07-119225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.455215"
+  },
+  "duel-commander-league-2025-07-019225": {
+    "tournament_id": "duel-commander-league-2025-07-019225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.457289"
+  },
+  "duel-commander-league-2025-07-139225": {
+    "tournament_id": "duel-commander-league-2025-07-139225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.459145"
+  },
+  "duel-commander-league-2025-07-039225": {
+    "tournament_id": "duel-commander-league-2025-07-039225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.461111"
+  },
+  "duel-commander-league-2025-07-129225": {
+    "tournament_id": "duel-commander-league-2025-07-129225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.463062"
+  },
+  "duel-commander-league-2025-07-029225": {
+    "tournament_id": "duel-commander-league-2025-07-029225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.464982"
+  },
+  "duel-commander-league-2025-07-179225": {
+    "tournament_id": "duel-commander-league-2025-07-179225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.466913"
+  },
+  "duel-commander-league-2025-07-079225": {
+    "tournament_id": "duel-commander-league-2025-07-079225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.468803"
+  },
+  "duel-commander-league-2025-07-169225": {
+    "tournament_id": "duel-commander-league-2025-07-169225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.470687"
+  },
+  "duel-commander-league-2025-07-069225": {
+    "tournament_id": "duel-commander-league-2025-07-069225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.472534"
+  },
+  "duel-commander-league-2025-07-149225": {
+    "tournament_id": "duel-commander-league-2025-07-149225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.474375"
+  },
+  "duel-commander-league-2025-07-049225": {
+    "tournament_id": "duel-commander-league-2025-07-049225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.476231"
+  },
+  "duel-commander-league-2025-07-159225": {
+    "tournament_id": "duel-commander-league-2025-07-159225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.478060"
+  },
+  "duel-commander-league-2025-07-059225": {
+    "tournament_id": "duel-commander-league-2025-07-059225",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.479905"
+  },
+  "legacy-challenge-32-2025-07-2012803707": {
+    "tournament_id": "legacy-challenge-32-2025-07-2012803707",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.481787"
+  },
+  "legacy-challenge-32-2025-07-1312802835": {
+    "tournament_id": "legacy-challenge-32-2025-07-1312802835",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.483676"
+  },
+  "legacy-challenge-32-2025-07-0612801667": {
+    "tournament_id": "legacy-challenge-32-2025-07-0612801667",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.485562"
+  },
+  "legacy-challenge-32-2025-07-1912803686": {
+    "tournament_id": "legacy-challenge-32-2025-07-1912803686",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.487596"
+  },
+  "legacy-challenge-32-2025-07-0512801658": {
+    "tournament_id": "legacy-challenge-32-2025-07-0512801658",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.489602"
+  },
+  "legacy-challenge-32-2025-07-0212801621": {
+    "tournament_id": "legacy-challenge-32-2025-07-0212801621",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.491704"
+  },
+  "legacy-challenge-32-2025-07-2012803701": {
+    "tournament_id": "legacy-challenge-32-2025-07-2012803701",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.493913"
+  },
+  "legacy-challenge-32-2025-07-1312802828": {
+    "tournament_id": "legacy-challenge-32-2025-07-1312802828",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.496118"
+  },
+  "legacy-challenge-32-2025-07-0512801652": {
+    "tournament_id": "legacy-challenge-32-2025-07-0512801652",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.498286"
+  },
+  "legacy-challenge-32-2025-07-2312804942": {
+    "tournament_id": "legacy-challenge-32-2025-07-2312804942",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.500523"
+  },
+  "legacy-challenge-32-2025-07-1212802815": {
+    "tournament_id": "legacy-challenge-32-2025-07-1212802815",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.502706"
+  },
+  "legacy-challenge-32-2025-07-0912802768": {
+    "tournament_id": "legacy-challenge-32-2025-07-0912802768",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.504878"
+  },
+  "legacy-challenge-32-2025-07-1612803655": {
+    "tournament_id": "legacy-challenge-32-2025-07-1612803655",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.507043"
+  },
+  "legacy-challenge-32-2025-07-1212802808": {
+    "tournament_id": "legacy-challenge-32-2025-07-1212802808",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.509251"
+  },
+  "legacy-showcase-challenge-2025-07-0612801617": {
+    "tournament_id": "legacy-showcase-challenge-2025-07-0612801617",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.511470"
+  },
+  "legacy-challenge-32-2025-07-1912803692": {
+    "tournament_id": "legacy-challenge-32-2025-07-1912803692",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.513706"
+  },
+  "legacy-league-2025-07-159334": {
+    "tournament_id": "legacy-league-2025-07-159334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.515766"
+  },
+  "legacy-league-2025-07-059334": {
+    "tournament_id": "legacy-league-2025-07-059334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.517926"
+  },
+  "legacy-league-2025-07-259334": {
+    "tournament_id": "legacy-league-2025-07-259334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.520171"
+  },
+  "legacy-league-2025-07-219334": {
+    "tournament_id": "legacy-league-2025-07-219334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.522375"
+  },
+  "legacy-league-2025-07-119334": {
+    "tournament_id": "legacy-league-2025-07-119334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.524499"
+  },
+  "legacy-league-2025-07-019334": {
+    "tournament_id": "legacy-league-2025-07-019334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.526658"
+  },
+  "legacy-league-2025-07-199334": {
+    "tournament_id": "legacy-league-2025-07-199334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.528879"
+  },
+  "legacy-league-2025-07-099334": {
+    "tournament_id": "legacy-league-2025-07-099334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.531424"
+  },
+  "legacy-league-2025-07-049334": {
+    "tournament_id": "legacy-league-2025-07-049334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.533625"
+  },
+  "legacy-league-2025-07-149334": {
+    "tournament_id": "legacy-league-2025-07-149334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.535843"
+  },
+  "legacy-league-2025-07-249334": {
+    "tournament_id": "legacy-league-2025-07-249334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.538066"
+  },
+  "legacy-league-2025-07-209334": {
+    "tournament_id": "legacy-league-2025-07-209334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.540148"
+  },
+  "legacy-league-2025-07-109334": {
+    "tournament_id": "legacy-league-2025-07-109334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.542251"
+  },
+  "legacy-league-2025-07-089334": {
+    "tournament_id": "legacy-league-2025-07-089334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.544374"
+  },
+  "legacy-league-2025-07-189334": {
+    "tournament_id": "legacy-league-2025-07-189334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.546506"
+  },
+  "legacy-league-2025-07-079334": {
+    "tournament_id": "legacy-league-2025-07-079334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.548730"
+  },
+  "legacy-league-2025-07-179334": {
+    "tournament_id": "legacy-league-2025-07-179334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.550996"
+  },
+  "legacy-league-2025-07-039334": {
+    "tournament_id": "legacy-league-2025-07-039334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.553291"
+  },
+  "legacy-league-2025-07-139334": {
+    "tournament_id": "legacy-league-2025-07-139334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.555502"
+  },
+  "legacy-league-2025-07-239334": {
+    "tournament_id": "legacy-league-2025-07-239334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.557753"
+  },
+  "legacy-league-2025-07-169334": {
+    "tournament_id": "legacy-league-2025-07-169334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.560066"
+  },
+  "legacy-league-2025-07-069334": {
+    "tournament_id": "legacy-league-2025-07-069334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.562418"
+  },
+  "legacy-league-2025-07-129334": {
+    "tournament_id": "legacy-league-2025-07-129334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.564570"
+  },
+  "legacy-league-2025-07-029334": {
+    "tournament_id": "legacy-league-2025-07-029334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.566825"
+  },
+  "legacy-league-2025-07-229334": {
+    "tournament_id": "legacy-league-2025-07-229334",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.569173"
+  },
   "standard-league-2025-07-099382": {
     "tournament_id": "standard-league-2025-07-099382",
-    "total_decks": 7,
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.952432"
+  },
+  "standard-league-2025-07-239382": {
+    "tournament_id": "standard-league-2025-07-239382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.145933"
+  },
+  "standard-league-2025-07-139382": {
+    "tournament_id": "standard-league-2025-07-139382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:23.996948"
+  },
+  "standard-league-2025-07-219382": {
+    "tournament_id": "standard-league-2025-07-219382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.018369"
+  },
+  "standard-league-2025-07-119382": {
+    "tournament_id": "standard-league-2025-07-119382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.038295"
+  },
+  "standard-league-2025-07-159382": {
+    "tournament_id": "standard-league-2025-07-159382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.057736"
+  },
+  "standard-league-2025-07-259382": {
+    "tournament_id": "standard-league-2025-07-259382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.094799"
+  },
+  "standard-league-2025-07-179382": {
+    "tournament_id": "standard-league-2025-07-179382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.112428"
+  },
+  "standard-league-2025-07-059382": {
+    "tournament_id": "standard-league-2025-07-059382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.129236"
+  },
+  "standard-league-2025-07-079382": {
+    "tournament_id": "standard-league-2025-07-079382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.161923"
+  },
+  "standard-league-2025-07-039382": {
+    "tournament_id": "standard-league-2025-07-039382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.177065"
+  },
+  "standard-league-2025-07-199382": {
+    "tournament_id": "standard-league-2025-07-199382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.191516"
+  },
+  "standard-rc-qualifier-2025-07-1112802761": {
+    "tournament_id": "standard-rc-qualifier-2025-07-1112802761",
+    "total_decks": 32,
     "archetypes": {
-      "WU Omniscience": 2,
-      "WR Convoke": 1,
-      "WRG Yuna": 1,
-      "UR Prowess (Cauldron)": 1
+      "Izzet Prowess (Cauldron)": 10,
+      "Mono White Caretaker (Mono White Caretaker)": 2,
+      "Dimir Midrange": 8,
+      "Azorius Convoke": 1,
+      "Mono Green Landfall": 1,
+      "Colorless Convoke": 2,
+      "Izzet Prowess": 1,
+      "Boros Convoke": 1
     },
     "colors": {
-      "WU": 2,
+      "UR": 11,
+      "W": 2,
+      "UB": 8,
+      "RG": 3,
+      "WU": 3,
+      "G": 1,
+      "C": 2,
       "WR": 1,
+      "R": 1
+    },
+    "timestamp": "2025-07-25T15:44:23.667680"
+  },
+  "standard-league-2025-07-019382": {
+    "tournament_id": "standard-league-2025-07-019382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.205145"
+  },
+  "standard-league-2025-07-129382": {
+    "tournament_id": "standard-league-2025-07-129382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.217431"
+  },
+  "standard-league-2025-07-229382": {
+    "tournament_id": "standard-league-2025-07-229382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.229108"
+  },
+  "standard-league-2025-07-089382": {
+    "tournament_id": "standard-league-2025-07-089382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.239493"
+  },
+  "standard-league-2025-07-109382": {
+    "tournament_id": "standard-league-2025-07-109382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.248749"
+  },
+  "standard-league-2025-07-209382": {
+    "tournament_id": "standard-league-2025-07-209382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.257334"
+  },
+  "standard-league-2025-07-249382": {
+    "tournament_id": "standard-league-2025-07-249382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.265747"
+  },
+  "standard-league-2025-07-149382": {
+    "tournament_id": "standard-league-2025-07-149382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.273823"
+  },
+  "standard-league-2025-07-169382": {
+    "tournament_id": "standard-league-2025-07-169382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.281423"
+  },
+  "standard-league-2025-07-049382": {
+    "tournament_id": "standard-league-2025-07-049382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.288414"
+  },
+  "standard-league-2025-07-069382": {
+    "tournament_id": "standard-league-2025-07-069382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.294661"
+  },
+  "standard-league-2025-07-189382": {
+    "tournament_id": "standard-league-2025-07-189382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.300184"
+  },
+  "standard-league-2025-07-029382": {
+    "tournament_id": "standard-league-2025-07-029382",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:24.304895"
+  },
+  "standard-challenge-32-2025-07-0412801637": {
+    "tournament_id": "standard-challenge-32-2025-07-0412801637",
+    "total_decks": 32,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 2,
+      "Mono Red Aggro": 1,
+      "Azorius Control": 2,
+      "Dimir Midrange": 9,
+      "Azorius Oculus": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 3,
+      "Golgari Midrange": 3,
+      "Golgari Graveyard": 1,
+      "Azorius Convoke": 1,
+      "Izzet Oculus": 1,
+      "Boros Convoke": 1
+    },
+    "colors": {
+      "UR": 3,
+      "R": 1,
+      "WG": 1,
+      "WU": 6,
+      "UB": 9,
+      "RG": 4,
+      "W": 3,
+      "BG": 4,
+      "WR": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.313046"
+  },
+  "standard-challenge-32-2025-07-0312801623": {
+    "tournament_id": "standard-challenge-32-2025-07-0312801623",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 12,
+      "Mono White Caretaker (Mono White Caretaker)": 5,
+      "Izzet Prowess": 2,
+      "Azorius Omniscience": 1,
+      "Mono Red Aggro": 1,
+      "Izzet Prowess (Cauldron)": 1,
+      "Abzan Yuna": 1,
+      "Golgari Midrange": 2
+    },
+    "colors": {
+      "BG": 3,
+      "UB": 12,
+      "WU": 4,
+      "RG": 2,
+      "W": 5,
+      "UR": 3,
+      "R": 2,
+      "WBG": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.323583"
+  },
+  "standard-challenge-64-2025-07-0812801696": {
+    "tournament_id": "standard-challenge-64-2025-07-0812801696",
+    "total_decks": 32,
+    "archetypes": {
+      "Naya Yuna": 1,
+      "Izzet Prowess (Cauldron)": 6,
+      "Golgari Midrange": 2,
+      "Mono Red Burn": 1,
+      "Izzet Prowess": 1,
+      "Dimir Midrange": 6,
+      "Boros Convoke": 4,
+      "Mono Blue Legends": 1,
+      "Colorless Auras": 1,
+      "Colorless Oculus": 1,
+      "Mono Red Prowess (Cauldron)": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1
+    },
+    "colors": {
       "WRG": 1,
+      "UR": 8,
+      "BG": 2,
+      "R": 2,
+      "RG": 2,
+      "UB": 6,
+      "WR": 4,
+      "U": 1,
+      "C": 2,
+      "WU": 1,
+      "WG": 2,
+      "W": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.336635"
+  },
+  "standard-challenge-32-2025-07-1112802801": {
+    "tournament_id": "standard-challenge-32-2025-07-1112802801",
+    "total_decks": 32,
+    "archetypes": {
+      "Azorius Control": 1,
+      "Mono White Legends": 1,
+      "Izzet Prowess (Cauldron)": 8,
+      "Mono Green Landfall": 5,
+      "Izzet Prowess": 2,
+      "Dimir Midrange": 3,
+      "Golgari Midrange": 4,
+      "Boros Convoke": 3,
+      "Mono Red Burn": 1,
+      "Gruul Aggro": 1,
+      "Colorless Oculus": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1
+    },
+    "colors": {
+      "WU": 1,
+      "W": 2,
+      "UR": 11,
+      "G": 5,
+      "UB": 3,
+      "BG": 4,
+      "WR": 3,
+      "R": 1,
+      "RG": 1,
+      "C": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.352294"
+  },
+  "standard-challenge-32-2025-07-1812803671": {
+    "tournament_id": "standard-challenge-32-2025-07-1812803671",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 5,
+      "Izzet Prowess (Cauldron)": 12,
+      "Izzet Oculus": 1,
+      "4c Yuna": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 3,
+      "Golgari Midrange": 1,
+      "Colorless Convoke": 3,
+      "Mono White Convoke": 1,
+      "Gruul Aggro": 1,
+      "URG Prowess": 1
+    },
+    "colors": {
+      "UB": 5,
+      "UR": 13,
+      "WUBG": 1,
+      "WU": 1,
+      "W": 4,
+      "RG": 2,
+      "BG": 1,
+      "C": 3,
+      "URG": 1,
+      "UG": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.370783"
+  },
+  "standard-challenge-64-2025-07-2112803723": {
+    "tournament_id": "standard-challenge-64-2025-07-2112803723",
+    "total_decks": 32,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 13,
+      "Dimir Midrange": 10,
+      "Mono Green Landfall": 2,
+      "Golgari Graveyard": 1,
+      "Azorius Control": 2
+    },
+    "colors": {
+      "UR": 13,
+      "UB": 10,
+      "RG": 1,
+      "G": 2,
+      "WU": 3,
+      "BG": 1,
+      "WR": 1,
+      "WG": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.390480"
+  },
+  "standard-challenge-32-2025-07-1912803688": {
+    "tournament_id": "standard-challenge-32-2025-07-1912803688",
+    "total_decks": 32,
+    "archetypes": {
+      "Mono Green Landfall": 4,
+      "Izzet Prowess (Cauldron)": 8,
+      "Gruul Aggro": 1,
+      "Dimir Midrange": 5,
+      "4c Yuna": 1,
+      "Golgari Midrange": 2,
+      "Boros Convoke": 2,
+      "Colorless Convoke": 3,
+      "Mono White Caretaker": 1,
+      "Abzan Yuna": 1,
+      "Colorless Midrange": 1
+    },
+    "colors": {
+      "G": 4,
+      "UR": 8,
+      "RG": 3,
+      "UB": 5,
+      "WUBG": 1,
+      "BG": 2,
+      "WR": 2,
+      "C": 4,
+      "W": 1,
+      "WG": 1,
+      "WBG": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.412231"
+  },
+  "standard-challenge-64-2025-07-0712801688": {
+    "tournament_id": "standard-challenge-64-2025-07-0712801688",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 7,
+      "Izzet Prowess (Cauldron)": 7,
+      "Naya Yuna": 2,
+      "Izzet Prowess": 1,
+      "Azorius Convoke": 1,
+      "Azorius Omniscience": 1,
+      "Gruul Aggro": 1,
+      "Golgari Midrange": 1,
+      "Dimir Legends": 1,
+      "Boros Convoke": 1,
+      "Mono Red Aggro": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1
+    },
+    "colors": {
+      "WU": 3,
+      "UB": 10,
+      "UR": 8,
+      "WRG": 2,
+      "RG": 4,
+      "BG": 1,
+      "WR": 1,
+      "BR": 1,
+      "R": 1,
+      "W": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.436582"
+  },
+  "standard-challenge-32-2025-07-0412801647": {
+    "tournament_id": "standard-challenge-32-2025-07-0412801647",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 11,
+      "Azorius Omniscience": 2,
+      "Mono White Caretaker (Mono White Caretaker)": 5,
+      "Boros Convoke": 2,
+      "Mono White Auras": 1,
+      "Naya Yuna": 1,
+      "Izzet Prowess (Cauldron)": 1,
+      "Izzet Oculus": 1,
+      "Azorius Control": 1
+    },
+    "colors": {
+      "UB": 11,
+      "WU": 4,
+      "W": 6,
+      "BG": 1,
+      "WR": 2,
+      "WG": 1,
+      "G": 1,
+      "WRG": 1,
+      "RG": 3,
+      "UR": 2
+    },
+    "timestamp": "2025-07-25T15:44:24.463173"
+  },
+  "standard-challenge-32-2025-07-1912803693": {
+    "tournament_id": "standard-challenge-32-2025-07-1912803693",
+    "total_decks": 32,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 9,
+      "Mono Red Aggro": 1,
+      "Dimir Midrange": 3,
+      "Golgari Midrange": 4,
+      "Mono Green Landfall": 5,
+      "Azorius Control": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Rakdos Demons": 1,
+      "Gruul Aggro": 1
+    },
+    "colors": {
+      "UR": 9,
+      "R": 2,
+      "UB": 4,
+      "BG": 4,
+      "G": 5,
+      "WU": 2,
+      "W": 1,
+      "BR": 1,
+      "RG": 1,
+      "WB": 1,
+      "WUB": 1,
+      "B": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.492023"
+  },
+  "standard-challenge-64-2025-07-1512802868": {
+    "tournament_id": "standard-challenge-64-2025-07-1512802868",
+    "total_decks": 32,
+    "archetypes": {
+      "4c Yuna": 1,
+      "Izzet Prowess (Cauldron)": 8,
+      "Dimir Midrange": 11,
+      "Boros Convoke": 3,
+      "Mono White Caretaker (Mono White Caretaker)": 2,
+      "Izzet Prowess": 1,
+      "Selesnya Landfall": 1,
+      "Gruul Aggro": 1,
+      "Poison": 1,
+      "Mono Green Landfall": 1
+    },
+    "colors": {
+      "WUBG": 1,
+      "WU": 1,
+      "UR": 9,
+      "UB": 11,
+      "WR": 3,
+      "W": 3,
+      "WG": 1,
       "RG": 1,
       "BG": 1,
-      "UR": 1
+      "G": 1
     },
-    "timestamp": "2025-07-25T15:09:45.500837"
+    "timestamp": "2025-07-25T15:44:24.525204"
+  },
+  "standard-challenge-64-2025-07-2212803731": {
+    "tournament_id": "standard-challenge-64-2025-07-2212803731",
+    "total_decks": 32,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 12,
+      "Golgari Graveyard": 2,
+      "Dimir Midrange": 6,
+      "Mono Green Landfall": 1,
+      "Golgari Midrange": 1,
+      "Colorless Convoke": 1,
+      "Mono White Legends": 1,
+      "4c Yuna": 1,
+      "Azorius Control": 1,
+      "Gruul Aggro": 1
+    },
+    "colors": {
+      "UR": 12,
+      "BG": 3,
+      "UB": 6,
+      "WU": 2,
+      "G": 1,
+      "C": 1,
+      "W": 1,
+      "WUBG": 1,
+      "RG": 5
+    },
+    "timestamp": "2025-07-25T15:44:24.561848"
+  },
+  "standard-challenge-32-2025-07-0612801677": {
+    "tournament_id": "standard-challenge-32-2025-07-0612801677",
+    "total_decks": 32,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 4,
+      "Azorius Control": 1,
+      "Boros Convoke": 4,
+      "Dimir Midrange": 7,
+      "Izzet Prowess": 2,
+      "Gruul Aggro": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 3,
+      "Reanimator": 1,
+      "Orzhov Demons": 1
+    },
+    "colors": {
+      "UR": 6,
+      "WU": 1,
+      "WR": 5,
+      "R": 1,
+      "UB": 7,
+      "RG": 4,
+      "WG": 2,
+      "W": 4,
+      "BR": 1,
+      "WB": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.601121"
+  },
+  "standard-challenge-32-2025-07-1212802816": {
+    "tournament_id": "standard-challenge-32-2025-07-1212802816",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 3,
+      "Mono Green Landfall": 2,
+      "Izzet Prowess (Cauldron)": 8,
+      "Boros Convoke": 2,
+      "Esper Oculus": 1,
+      "Colorless Convoke": 2,
+      "Golgari Midrange": 1,
+      "Izzet Prowess": 2,
+      "Naya Yuna": 1,
+      "Gruul Aggro": 1,
+      "Mono Black Legends": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1
+    },
+    "colors": {
+      "UB": 3,
+      "WU": 2,
+      "G": 2,
+      "UR": 10,
+      "WR": 2,
+      "WUB": 2,
+      "C": 2,
+      "WB": 1,
+      "RG": 3,
+      "BG": 1,
+      "WRG": 1,
+      "WBRG": 1,
+      "B": 1,
+      "W": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.652297"
+  },
+  "standard-challenge-32-2025-07-1312802841": {
+    "tournament_id": "standard-challenge-32-2025-07-1312802841",
+    "total_decks": 32,
+    "archetypes": {
+      "Mono Green Landfall": 4,
+      "Mono White Legends": 1,
+      "Boros Convoke": 3,
+      "Izzet Prowess (Cauldron)": 6,
+      "Golgari Midrange": 3,
+      "Gruul Aggro": 2,
+      "Naya Yuna": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Azorius Control": 1,
+      "Dimir Midrange": 3,
+      "Azorius Convoke": 1,
+      "Abzan Yuna": 1
+    },
+    "colors": {
+      "G": 4,
+      "W": 3,
+      "WR": 3,
+      "UR": 6,
+      "BG": 4,
+      "RG": 2,
+      "WU": 3,
+      "WRG": 1,
+      "UB": 4,
+      "BR": 1,
+      "WBG": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.705922"
+  },
+  "standard-challenge-32-2025-07-2012803712": {
+    "tournament_id": "standard-challenge-32-2025-07-2012803712",
+    "total_decks": 32,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 9,
+      "Dimir Midrange": 14,
+      "Golgari Graveyard": 1,
+      "4c Yuna": 1,
+      "Mono Green Landfall": 1,
+      "Selesnya Landfall": 1,
+      "Golgari Midrange": 1,
+      "Gruul Aggro": 2
+    },
+    "colors": {
+      "UR": 9,
+      "RG": 3,
+      "UB": 14,
+      "BG": 2,
+      "WUBG": 1,
+      "G": 1,
+      "WU": 1,
+      "WG": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.751014"
+  },
+  "standard-challenge-64-2025-07-0112801190": {
+    "tournament_id": "standard-challenge-64-2025-07-0112801190",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 11,
+      "Mono White Caretaker (Mono White Caretaker)": 4,
+      "Naya Yuna": 1,
+      "Boros Convoke": 1,
+      "Izzet Prowess": 2,
+      "Gruul Aggro": 1,
+      "Azorius Convoke": 1,
+      "Mono White Convoke": 1,
+      "Golgari Midrange": 1,
+      "Izzet Prowess (Cauldron)": 3
+    },
+    "colors": {
+      "UB": 11,
+      "W": 5,
+      "WRG": 1,
+      "WU": 4,
+      "WR": 1,
+      "UR": 5,
+      "BG": 3,
+      "RG": 2
+    },
+    "timestamp": "2025-07-25T15:44:24.798068"
+  },
+  "standard-challenge-32-2025-07-2412804854": {
+    "tournament_id": "standard-challenge-32-2025-07-2412804854",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 5,
+      "Colorless Convoke": 1,
+      "Izzet Prowess (Cauldron)": 6,
+      "Golgari Midrange": 5,
+      "Jeskai Control": 1,
+      "Mono Red Aggro": 2,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Mono Green Landfall": 1,
+      "Colorless Auras": 2
+    },
+    "colors": {
+      "UB": 5,
+      "C": 3,
+      "UR": 6,
+      "BG": 5,
+      "WU": 4,
+      "WUR": 1,
+      "RG": 3,
+      "R": 2,
+      "W": 1,
+      "G": 1,
+      "WG": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.846578"
+  },
+  "standard-challenge-32-2025-07-0512801654": {
+    "tournament_id": "standard-challenge-32-2025-07-0512801654",
+    "total_decks": 32,
+    "archetypes": {
+      "Boros Convoke": 1,
+      "Dimir Midrange": 7,
+      "Izzet Prowess": 1,
+      "Selesnya Yuna": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 3,
+      "Mono Red Aggro": 2,
+      "Izzet Prowess (Cauldron)": 5,
+      "Mono Blue Midrange": 1,
+      "Naya Yuna": 2,
+      "Azorius Omniscience": 1
+    },
+    "colors": {
+      "WR": 1,
+      "UB": 7,
+      "RG": 3,
+      "UR": 6,
+      "WG": 3,
+      "W": 3,
+      "R": 2,
+      "U": 1,
+      "WB": 1,
+      "WUBRG": 1,
+      "G": 1,
+      "WRG": 2,
+      "WU": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.897107"
+  },
+  "standard-challenge-32-2025-07-1212802811": {
+    "tournament_id": "standard-challenge-32-2025-07-1212802811",
+    "total_decks": 32,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 5,
+      "Mono Green Landfall": 3,
+      "Mono White Caretaker (Mono White Caretaker)": 2,
+      "Dimir Midrange": 7,
+      "Azorius Convoke": 1,
+      "Golgari Midrange": 3,
+      "Boros Convoke": 2,
+      "Gruul Aggro": 1,
+      "Izzet Oculus": 1,
+      "Naya Yuna": 1
+    },
+    "colors": {
+      "UR": 6,
+      "G": 3,
+      "W": 3,
+      "UB": 7,
+      "WU": 2,
+      "BG": 4,
+      "WR": 2,
+      "RG": 2,
+      "BR": 1,
+      "WB": 1,
+      "WRG": 1
+    },
+    "timestamp": "2025-07-25T15:44:24.951968"
+  },
+  "standard-challenge-32-2025-07-1112802789": {
+    "tournament_id": "standard-challenge-32-2025-07-1112802789",
+    "total_decks": 32,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 7,
+      "Mono Green Landfall": 1,
+      "Dimir Midrange": 8,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Naya Yuna": 2,
+      "Golgari Midrange": 6,
+      "Boros Convoke": 2
+    },
+    "colors": {
+      "UR": 7,
+      "G": 1,
+      "WG": 1,
+      "UB": 8,
+      "W": 2,
+      "WRG": 2,
+      "WU": 1,
+      "BG": 6,
+      "URG": 1,
+      "RG": 1,
+      "WR": 2
+    },
+    "timestamp": "2025-07-25T15:44:25.008554"
+  },
+  "standard-challenge-32-2025-07-2512804868": {
+    "tournament_id": "standard-challenge-32-2025-07-2512804868",
+    "total_decks": 32,
+    "archetypes": {
+      "Golgari Graveyard": 2,
+      "Izzet Prowess (Cauldron)": 10,
+      "Dimir Midrange": 7,
+      "Mono White Caretaker": 1,
+      "4c Yuna": 1,
+      "Golgari Midrange": 2,
+      "Gruul Aggro": 2,
+      "Mono White Legends": 1,
+      "Azorius Omniscience": 1,
+      "Boros Convoke": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1
+    },
+    "colors": {
+      "BG": 4,
+      "UR": 10,
+      "UB": 7,
+      "W": 3,
+      "WU": 3,
+      "WUBG": 1,
+      "RG": 2,
+      "WR": 1,
+      "WG": 1
+    },
+    "timestamp": "2025-07-25T15:44:25.067508"
+  },
+  "standard-challenge-32-2025-07-0512801659": {
+    "tournament_id": "standard-challenge-32-2025-07-0512801659",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 7,
+      "Izzet Prowess (Cauldron)": 3,
+      "Azorius Control": 1,
+      "Orzhov Demons": 1,
+      "Esper Midrange": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 4,
+      "Golgari Graveyard": 1,
+      "Naya Yuna": 2,
+      "Mono White Convoke": 1,
+      "Boros Convoke": 1,
+      "Izzet Oculus": 1,
+      "4c Ramp": 1
+    },
+    "colors": {
+      "UB": 7,
+      "UR": 4,
+      "WU": 1,
+      "WB": 2,
+      "WUB": 1,
+      "WG": 1,
+      "W": 5,
+      "BG": 2,
+      "RG": 4,
+      "WRG": 2,
+      "WR": 1,
+      "R": 1,
+      "WUBG": 1
+    },
+    "timestamp": "2025-07-25T15:44:25.126914"
+  },
+  "standard-challenge-32-2025-07-1012802771": {
+    "tournament_id": "standard-challenge-32-2025-07-1012802771",
+    "total_decks": 32,
+    "archetypes": {
+      "Boros Convoke": 2,
+      "Izzet Prowess (Cauldron)": 7,
+      "Golgari Midrange": 3,
+      "Dimir Midrange": 7,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Naya Yuna": 1,
+      "Gruul Aggro": 1,
+      "Azorius Omniscience": 1,
+      "Mono Red Burn": 3,
+      "Izzet Prowess": 1
+    },
+    "colors": {
+      "WR": 2,
+      "UR": 8,
+      "BG": 4,
+      "UB": 7,
+      "W": 1,
+      "RG": 4,
+      "WRG": 1,
+      "WU": 2,
+      "R": 3
+    },
+    "timestamp": "2025-07-25T15:44:25.190740"
+  },
+  "standard-challenge-64-2025-07-1412802856": {
+    "tournament_id": "standard-challenge-64-2025-07-1412802856",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 8,
+      "Izzet Prowess (Cauldron)": 10,
+      "Selesnya Landfall": 1,
+      "Mono White Convoke": 1,
+      "Golgari Midrange": 1,
+      "Azorius Convoke": 1,
+      "Boros Convoke": 4,
+      "Mono White Legends": 1,
+      "Gruul Aggro": 1,
+      "Mono Green Landfall": 3,
+      "Mono White Caretaker (Mono White Caretaker)": 1
+    },
+    "colors": {
+      "UB": 8,
+      "UR": 10,
+      "WG": 1,
+      "W": 3,
+      "BG": 1,
+      "WU": 1,
+      "WR": 4,
+      "RG": 1,
+      "G": 3
+    },
+    "timestamp": "2025-07-25T15:44:25.257182"
+  },
+  "standard-challenge-32-2025-07-1812803681": {
+    "tournament_id": "standard-challenge-32-2025-07-1812803681",
+    "total_decks": 32,
+    "archetypes": {
+      "Dimir Midrange": 7,
+      "Mono Green Landfall": 1,
+      "Izzet Prowess (Cauldron)": 13,
+      "URG Prowess": 1,
+      "Gruul Aggro": 1,
+      "4c Yuna": 2,
+      "Boros Convoke": 1
+    },
+    "colors": {
+      "UB": 7,
+      "G": 1,
+      "UR": 13,
+      "RG": 2,
+      "URG": 2,
+      "WU": 2,
+      "WB": 1,
+      "WUBG": 2,
+      "B": 1,
+      "WR": 1
+    },
+    "timestamp": "2025-07-25T15:44:25.327678"
+  },
+  "standard-challenge-32-2025-07-1712803657": {
+    "tournament_id": "standard-challenge-32-2025-07-1712803657",
+    "total_decks": 32,
+    "archetypes": {
+      "Colorless Convoke": 2,
+      "Izzet Prowess (Cauldron)": 10,
+      "Dimir Midrange": 5,
+      "4c Yuna": 2,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Golgari Midrange": 2,
+      "URG Prowess": 1,
+      "Mono Green Landfall": 2,
+      "Mono Green Ramp": 1,
+      "Bant Omniscience": 1,
+      "Abzan Yuna": 1
+    },
+    "colors": {
+      "C": 2,
+      "UR": 10,
+      "UB": 5,
+      "WUBG": 2,
+      "W": 1,
+      "BG": 2,
+      "URG": 2,
+      "BR": 1,
+      "G": 3,
+      "WR": 1,
+      "WG": 1,
+      "WUG": 1,
+      "WBG": 1
+    },
+    "timestamp": "2025-07-25T15:44:25.402191"
+  },
+  "limited-rc-super-qualifier-2025-07-2012803651": {
+    "tournament_id": "limited-rc-super-qualifier-2025-07-2012803651",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:25.471094"
+  },
+  "limited-rc-super-qualifier-2025-07-0412801615": {
+    "tournament_id": "limited-rc-super-qualifier-2025-07-0412801615",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:25.538331"
+  },
+  "pauper-challenge-32-2025-07-1812803677": {
+    "tournament_id": "pauper-challenge-32-2025-07-1812803677",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:25.606493"
+  },
+  "pauper-showcase-challenge-2025-07-1212802762": {
+    "tournament_id": "pauper-showcase-challenge-2025-07-1212802762",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:25.674182"
+  },
+  "pauper-challenge-32-2025-07-1912803691": {
+    "tournament_id": "pauper-challenge-32-2025-07-1912803691",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:25.741924"
+  },
+  "pauper-challenge-32-2025-07-0512801657": {
+    "tournament_id": "pauper-challenge-32-2025-07-0512801657",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:25.809764"
+  },
+  "pauper-challenge-32-2025-07-2012803709": {
+    "tournament_id": "pauper-challenge-32-2025-07-2012803709",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:25.877316"
+  },
+  "pauper-challenge-32-2025-07-1312802837": {
+    "tournament_id": "pauper-challenge-32-2025-07-1312802837",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:25.945117"
+  },
+  "pauper-challenge-32-2025-07-1212802814": {
+    "tournament_id": "pauper-challenge-32-2025-07-1212802814",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.014065"
+  },
+  "pauper-rc-super-qualifier-2025-07-1312802763": {
+    "tournament_id": "pauper-rc-super-qualifier-2025-07-1312802763",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.082591"
+  },
+  "pauper-challenge-32-2025-07-1112802796": {
+    "tournament_id": "pauper-challenge-32-2025-07-1112802796",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.152618"
+  },
+  "pauper-challenge-32-2025-07-0612801674": {
+    "tournament_id": "pauper-challenge-32-2025-07-0612801674",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.219836"
+  },
+  "pauper-challenge-32-2025-07-0412801643": {
+    "tournament_id": "pauper-challenge-32-2025-07-0412801643",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.288084"
+  },
+  "pauper-league-2025-07-019366": {
+    "tournament_id": "pauper-league-2025-07-019366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.355885"
+  },
+  "pauper-league-2025-07-119366": {
+    "tournament_id": "pauper-league-2025-07-119366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.423672"
+  },
+  "pauper-league-2025-07-219366": {
+    "tournament_id": "pauper-league-2025-07-219366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.491524"
+  },
+  "pauper-league-2025-07-259366": {
+    "tournament_id": "pauper-league-2025-07-259366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.559959"
+  },
+  "pauper-league-2025-07-059366": {
+    "tournament_id": "pauper-league-2025-07-059366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.627996"
+  },
+  "pauper-league-2025-07-159366": {
+    "tournament_id": "pauper-league-2025-07-159366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.696059"
+  },
+  "pauper-league-2025-07-099366": {
+    "tournament_id": "pauper-league-2025-07-099366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.763824"
+  },
+  "pauper-league-2025-07-199366": {
+    "tournament_id": "pauper-league-2025-07-199366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.831648"
+  },
+  "pauper-league-2025-07-109366": {
+    "tournament_id": "pauper-league-2025-07-109366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.900007"
+  },
+  "pauper-league-2025-07-209366": {
+    "tournament_id": "pauper-league-2025-07-209366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:26.968921"
+  },
+  "pauper-league-2025-07-249366": {
+    "tournament_id": "pauper-league-2025-07-249366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.038102"
+  },
+  "pauper-league-2025-07-149366": {
+    "tournament_id": "pauper-league-2025-07-149366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.107152"
+  },
+  "pauper-league-2025-07-049366": {
+    "tournament_id": "pauper-league-2025-07-049366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.174968"
+  },
+  "pauper-league-2025-07-189366": {
+    "tournament_id": "pauper-league-2025-07-189366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.244161"
+  },
+  "pauper-league-2025-07-089366": {
+    "tournament_id": "pauper-league-2025-07-089366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.314306"
+  },
+  "pauper-league-2025-07-239366": {
+    "tournament_id": "pauper-league-2025-07-239366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.390165"
+  },
+  "pauper-league-2025-07-139366": {
+    "tournament_id": "pauper-league-2025-07-139366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.461408"
+  },
+  "pauper-league-2025-07-039366": {
+    "tournament_id": "pauper-league-2025-07-039366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.529629"
+  },
+  "pauper-league-2025-07-179366": {
+    "tournament_id": "pauper-league-2025-07-179366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.597738"
+  },
+  "pauper-league-2025-07-079366": {
+    "tournament_id": "pauper-league-2025-07-079366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.665615"
+  },
+  "pauper-league-2025-07-229366": {
+    "tournament_id": "pauper-league-2025-07-229366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.733431"
+  },
+  "pauper-league-2025-07-029366": {
+    "tournament_id": "pauper-league-2025-07-029366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.800982"
+  },
+  "pauper-league-2025-07-129366": {
+    "tournament_id": "pauper-league-2025-07-129366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.870062"
+  },
+  "pauper-league-2025-07-069366": {
+    "tournament_id": "pauper-league-2025-07-069366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:27.939161"
+  },
+  "pauper-league-2025-07-169366": {
+    "tournament_id": "pauper-league-2025-07-169366",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.007330"
+  },
+  "pioneer-challenge-32-2025-07-1312802833": {
+    "tournament_id": "pioneer-challenge-32-2025-07-1312802833",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.075423"
+  },
+  "pioneer-challenge-32-2025-07-1012802785": {
+    "tournament_id": "pioneer-challenge-32-2025-07-1012802785",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.143788"
+  },
+  "pioneer-challenge-32-2025-07-0512801664": {
+    "tournament_id": "pioneer-challenge-32-2025-07-0512801664",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.211812"
+  },
+  "pioneer-challenge-32-2025-07-2012803711": {
+    "tournament_id": "pioneer-challenge-32-2025-07-2012803711",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.279556"
+  },
+  "pioneer-challenge-32-special-2025-07-1712803668": {
+    "tournament_id": "pioneer-challenge-32-special-2025-07-1712803668",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.347349"
+  },
+  "pioneer-challenge-32-2025-07-2112803725": {
+    "tournament_id": "pioneer-challenge-32-2025-07-2112803725",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.415030"
+  },
+  "pioneer-challenge-32-2025-07-0612801672": {
+    "tournament_id": "pioneer-challenge-32-2025-07-0612801672",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.482970"
+  },
+  "pioneer-challenge-32-2025-07-2012803706": {
+    "tournament_id": "pioneer-challenge-32-2025-07-2012803706",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.550955"
+  },
+  "pioneer-challenge-32-special-2025-07-1412803151": {
+    "tournament_id": "pioneer-challenge-32-special-2025-07-1412803151",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.618916"
+  },
+  "pioneer-challenge-32-2025-07-1912803698": {
+    "tournament_id": "pioneer-challenge-32-2025-07-1912803698",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.687037"
+  },
+  "pioneer-challenge-32-2025-07-1212802823": {
+    "tournament_id": "pioneer-challenge-32-2025-07-1212802823",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.755300"
+  },
+  "pioneer-challenge-32-2025-07-2412804865": {
+    "tournament_id": "pioneer-challenge-32-2025-07-2412804865",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.823665"
+  },
+  "pioneer-challenge-32-2025-07-1312802840": {
+    "tournament_id": "pioneer-challenge-32-2025-07-1312802840",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.891179"
+  },
+  "pioneer-challenge-32-2025-07-0712801690": {
+    "tournament_id": "pioneer-challenge-32-2025-07-0712801690",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:28.959642"
+  },
+  "pioneer-challenge-32-2025-07-1112802795": {
+    "tournament_id": "pioneer-challenge-32-2025-07-1112802795",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.027985"
+  },
+  "pioneer-challenge-32-2025-07-0412801642": {
+    "tournament_id": "pioneer-challenge-32-2025-07-0412801642",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.095957"
+  },
+  "pioneer-challenge-32-2025-07-1112802804": {
+    "tournament_id": "pioneer-challenge-32-2025-07-1112802804",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.164552"
+  },
+  "pioneer-challenge-32-2025-07-0412801649": {
+    "tournament_id": "pioneer-challenge-32-2025-07-0412801649",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.241180"
+  },
+  "pioneer-championship-week-finals-2025-07-1912803650": {
+    "tournament_id": "pioneer-championship-week-finals-2025-07-1912803650",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.310232"
+  },
+  "pioneer-challenge-32-2025-07-0312801634": {
+    "tournament_id": "pioneer-challenge-32-2025-07-0312801634",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.379574"
+  },
+  "pioneer-challenge-32-special-2025-07-1812803676": {
+    "tournament_id": "pioneer-challenge-32-special-2025-07-1812803676",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.449068"
+  },
+  "pioneer-challenge-32-2025-07-0612801676": {
+    "tournament_id": "pioneer-challenge-32-2025-07-0612801676",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.519813"
+  },
+  "pioneer-challenge-32-special-2025-07-1812803683": {
+    "tournament_id": "pioneer-challenge-32-special-2025-07-1812803683",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.593871"
+  },
+  "pioneer-league-2025-07-049374": {
+    "tournament_id": "pioneer-league-2025-07-049374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.662578"
+  },
+  "pioneer-league-2025-07-089374": {
+    "tournament_id": "pioneer-league-2025-07-089374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.730947"
+  },
+  "pioneer-league-2025-07-219374": {
+    "tournament_id": "pioneer-league-2025-07-219374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.799302"
+  },
+  "pioneer-league-2025-07-039374": {
+    "tournament_id": "pioneer-league-2025-07-039374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.867590"
+  },
+  "pioneer-league-2025-07-249374": {
+    "tournament_id": "pioneer-league-2025-07-249374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:29.935601"
+  },
+  "pioneer-league-2025-07-019374": {
+    "tournament_id": "pioneer-league-2025-07-019374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.004458"
+  },
+  "pioneer-league-2025-07-069374": {
+    "tournament_id": "pioneer-league-2025-07-069374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.072910"
+  },
+  "pioneer-league-2025-07-239374": {
+    "tournament_id": "pioneer-league-2025-07-239374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.141749"
+  },
+  "pioneer-league-2025-07-059374": {
+    "tournament_id": "pioneer-league-2025-07-059374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.209753"
+  },
+  "pioneer-league-2025-07-209374": {
+    "tournament_id": "pioneer-league-2025-07-209374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.278189"
+  },
+  "pioneer-league-2025-07-099374": {
+    "tournament_id": "pioneer-league-2025-07-099374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.346745"
+  },
+  "pioneer-league-2025-07-029374": {
+    "tournament_id": "pioneer-league-2025-07-029374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.415252"
+  },
+  "pioneer-league-2025-07-259374": {
+    "tournament_id": "pioneer-league-2025-07-259374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.483958"
+  },
+  "pioneer-league-2025-07-079374": {
+    "tournament_id": "pioneer-league-2025-07-079374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.552400"
+  },
+  "pioneer-league-2025-07-229374": {
+    "tournament_id": "pioneer-league-2025-07-229374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.621692"
+  },
+  "pioneer-league-2025-07-199374": {
+    "tournament_id": "pioneer-league-2025-07-199374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.690746"
+  },
+  "pioneer-league-2025-07-159374": {
+    "tournament_id": "pioneer-league-2025-07-159374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.759626"
+  },
+  "pioneer-league-2025-07-129374": {
+    "tournament_id": "pioneer-league-2025-07-129374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.829179"
+  },
+  "pioneer-league-2025-07-109374": {
+    "tournament_id": "pioneer-league-2025-07-109374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.898844"
+  },
+  "pioneer-league-2025-07-179374": {
+    "tournament_id": "pioneer-league-2025-07-179374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:30.967370"
+  },
+  "pioneer-league-2025-07-189374": {
+    "tournament_id": "pioneer-league-2025-07-189374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.035994"
+  },
+  "pioneer-league-2025-07-149374": {
+    "tournament_id": "pioneer-league-2025-07-149374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.105164"
+  },
+  "pioneer-league-2025-07-139374": {
+    "tournament_id": "pioneer-league-2025-07-139374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.173472"
+  },
+  "pioneer-league-2025-07-119374": {
+    "tournament_id": "pioneer-league-2025-07-119374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.242008"
+  },
+  "pioneer-league-2025-07-169374": {
+    "tournament_id": "pioneer-league-2025-07-169374",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.310067"
+  },
+  "modern-challenge-32-2025-07-1412802845": {
+    "tournament_id": "modern-challenge-32-2025-07-1412802845",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.378408"
+  },
+  "modern-challenge-32-2025-07-1312802826": {
+    "tournament_id": "modern-challenge-32-2025-07-1312802826",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.447325"
+  },
+  "modern-challenge-32-2025-07-2312804943": {
+    "tournament_id": "modern-challenge-32-2025-07-2312804943",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.516959"
+  },
+  "modern-challenge-64-2025-07-0212800051": {
+    "tournament_id": "modern-challenge-64-2025-07-0212800051",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.586378"
+  },
+  "modern-challenge-64-2025-07-2112803719": {
+    "tournament_id": "modern-challenge-64-2025-07-2112803719",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.659687"
+  },
+  "modern-challenge-32-2025-07-1312802831": {
+    "tournament_id": "modern-challenge-32-2025-07-1312802831",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.732023"
+  },
+  "modern-challenge-64-2025-07-0912801710": {
+    "tournament_id": "modern-challenge-64-2025-07-0912801710",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.801091"
+  },
+  "modern-rc-super-qualifier-2025-07-0512801616": {
+    "tournament_id": "modern-rc-super-qualifier-2025-07-0512801616",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.871050"
+  },
+  "modern-challenge-64-2025-07-1412802851": {
+    "tournament_id": "modern-challenge-64-2025-07-1412802851",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:31.940541"
+  },
+  "modern-challenge-32-2025-07-2012803704": {
+    "tournament_id": "modern-challenge-32-2025-07-2012803704",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.009129"
+  },
+  "modern-challenge-32-2025-07-1212802812": {
+    "tournament_id": "modern-challenge-32-2025-07-1212802812",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.078853"
+  },
+  "modern-challenge-64-2025-07-1112802799": {
+    "tournament_id": "modern-challenge-64-2025-07-1112802799",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.148345"
+  },
+  "modern-challenge-32-2025-07-2212803732": {
+    "tournament_id": "modern-challenge-32-2025-07-2212803732",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.217117"
+  },
+  "modern-challenge-32-2025-07-1912803689": {
+    "tournament_id": "modern-challenge-32-2025-07-1912803689",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.286240"
+  },
+  "modern-challenge-32-2025-07-1212802809": {
+    "tournament_id": "modern-challenge-32-2025-07-1212802809",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.355354"
+  },
+  "modern-challenge-32-2025-07-1512802870": {
+    "tournament_id": "modern-challenge-32-2025-07-1512802870",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.425172"
+  },
+  "modern-challenge-64-2025-07-0712801684": {
+    "tournament_id": "modern-challenge-64-2025-07-0712801684",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.494578"
+  },
+  "modern-challenge-64-2025-07-1912803694": {
+    "tournament_id": "modern-challenge-64-2025-07-1912803694",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.563394"
+  },
+  "modern-challenge-64-2025-07-1212802818": {
+    "tournament_id": "modern-challenge-64-2025-07-1212802818",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.633044"
+  },
+  "modern-challenge-32-2025-07-0112800039": {
+    "tournament_id": "modern-challenge-32-2025-07-0112800039",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.701857"
+  },
+  "modern-challenge-32-2025-07-0712801680": {
+    "tournament_id": "modern-challenge-32-2025-07-0712801680",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.770850"
+  },
+  "modern-challenge-64-2025-07-1712803661": {
+    "tournament_id": "modern-challenge-64-2025-07-1712803661",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.838822"
+  },
+  "modern-challenge-32-2025-07-0512801655": {
+    "tournament_id": "modern-challenge-32-2025-07-0512801655",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.907631"
+  },
+  "modern-challenge-32-2025-07-0612801670": {
+    "tournament_id": "modern-challenge-32-2025-07-0612801670",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:32.977153"
+  },
+  "modern-challenge-32-2025-07-0612801666": {
+    "tournament_id": "modern-challenge-32-2025-07-0612801666",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.046333"
+  },
+  "modern-challenge-32-2025-07-1912803687": {
+    "tournament_id": "modern-challenge-32-2025-07-1912803687",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.115694"
+  },
+  "modern-challenge-64-2025-07-1612802886": {
+    "tournament_id": "modern-challenge-64-2025-07-1612802886",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.184555"
+  },
+  "modern-challenge-32-2025-07-2112803715": {
+    "tournament_id": "modern-challenge-32-2025-07-2112803715",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.253609"
+  },
+  "modern-challenge-64-2025-07-1812803679": {
+    "tournament_id": "modern-challenge-64-2025-07-1812803679",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.322337"
+  },
+  "modern-challenge-64-2025-07-0312801627": {
+    "tournament_id": "modern-challenge-64-2025-07-0312801627",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.392402"
+  },
+  "modern-challenge-32-2025-07-2012803700": {
+    "tournament_id": "modern-challenge-32-2025-07-2012803700",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.462308"
+  },
+  "modern-challenge-64-2025-07-2412804858": {
+    "tournament_id": "modern-challenge-64-2025-07-2412804858",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.532098"
+  },
+  "modern-challenge-64-2025-07-0412801645": {
+    "tournament_id": "modern-challenge-64-2025-07-0412801645",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.602461"
+  },
+  "modern-challenge-32-2025-07-0512801653": {
+    "tournament_id": "modern-challenge-32-2025-07-0512801653",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.671752"
+  },
+  "modern-challenge-64-2025-07-1012802776": {
+    "tournament_id": "modern-challenge-64-2025-07-1012802776",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.741140"
+  },
+  "modern-challenge-32-2025-07-0812801698": {
+    "tournament_id": "modern-challenge-32-2025-07-0812801698",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.811508"
+  },
+  "modern-league-2025-07-049358": {
+    "tournament_id": "modern-league-2025-07-049358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.882128"
+  },
+  "modern-league-2025-07-149358": {
+    "tournament_id": "modern-league-2025-07-149358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:33.952080"
+  },
+  "modern-league-2025-07-249358": {
+    "tournament_id": "modern-league-2025-07-249358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.020726"
+  },
+  "modern-league-2025-07-209358": {
+    "tournament_id": "modern-league-2025-07-209358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.089609"
+  },
+  "modern-league-2025-07-109358": {
+    "tournament_id": "modern-league-2025-07-109358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.159012"
+  },
+  "modern-gold-league-2025-07-209350": {
+    "tournament_id": "modern-gold-league-2025-07-209350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.227655"
+  },
+  "modern-gold-league-2025-07-199350": {
+    "tournament_id": "modern-gold-league-2025-07-199350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.296317"
+  },
+  "modern-league-2025-07-089358": {
+    "tournament_id": "modern-league-2025-07-089358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.364986"
+  },
+  "modern-league-2025-07-189358": {
+    "tournament_id": "modern-league-2025-07-189358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.433655"
+  },
+  "modern-gold-league-2025-07-249350": {
+    "tournament_id": "modern-gold-league-2025-07-249350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.502412"
+  },
+  "modern-gold-league-2025-07-079350": {
+    "tournament_id": "modern-gold-league-2025-07-079350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.571926"
+  },
+  "modern-gold-league-2025-07-159350": {
+    "tournament_id": "modern-gold-league-2025-07-159350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.640693"
+  },
+  "modern-gold-league-2025-07-039350": {
+    "tournament_id": "modern-gold-league-2025-07-039350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.711768"
+  },
+  "modern-gold-league-2025-07-119350": {
+    "tournament_id": "modern-gold-league-2025-07-119350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.781025"
+  },
+  "modern-league-2025-07-159358": {
+    "tournament_id": "modern-league-2025-07-159358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.850044"
+  },
+  "modern-league-2025-07-059358": {
+    "tournament_id": "modern-league-2025-07-059358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.919444"
+  },
+  "modern-league-2025-07-259358": {
+    "tournament_id": "modern-league-2025-07-259358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:34.987726"
+  },
+  "modern-league-2025-07-219358": {
+    "tournament_id": "modern-league-2025-07-219358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.057246"
+  },
+  "modern-league-2025-07-119358": {
+    "tournament_id": "modern-league-2025-07-119358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.127437"
+  },
+  "modern-league-2025-07-019358": {
+    "tournament_id": "modern-league-2025-07-019358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.197430"
+  },
+  "modern-gold-league-2025-07-139350": {
+    "tournament_id": "modern-gold-league-2025-07-139350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.276073"
+  },
+  "modern-gold-league-2025-07-019350": {
+    "tournament_id": "modern-gold-league-2025-07-019350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.348066"
+  },
+  "modern-gold-league-2025-07-179350": {
+    "tournament_id": "modern-gold-league-2025-07-179350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.417647"
+  },
+  "modern-league-2025-07-199358": {
+    "tournament_id": "modern-league-2025-07-199358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.486951"
+  },
+  "modern-league-2025-07-099358": {
+    "tournament_id": "modern-league-2025-07-099358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.558407"
+  },
+  "modern-gold-league-2025-07-059350": {
+    "tournament_id": "modern-gold-league-2025-07-059350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.627714"
+  },
+  "modern-gold-league-2025-07-099350": {
+    "tournament_id": "modern-gold-league-2025-07-099350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.696822"
+  },
+  "modern-gold-league-2025-07-229350": {
+    "tournament_id": "modern-gold-league-2025-07-229350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.766055"
+  },
+  "modern-gold-league-2025-07-089350": {
+    "tournament_id": "modern-gold-league-2025-07-089350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.834982"
+  },
+  "modern-league-2025-07-169358": {
+    "tournament_id": "modern-league-2025-07-169358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.903895"
+  },
+  "modern-gold-league-2025-07-239350": {
+    "tournament_id": "modern-gold-league-2025-07-239350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:35.974605"
+  },
+  "modern-league-2025-07-069358": {
+    "tournament_id": "modern-league-2025-07-069358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.045385"
+  },
+  "modern-league-2025-07-129358": {
+    "tournament_id": "modern-league-2025-07-129358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.115167"
+  },
+  "modern-gold-league-2025-07-129350": {
+    "tournament_id": "modern-gold-league-2025-07-129350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.185917"
+  },
+  "modern-league-2025-07-029358": {
+    "tournament_id": "modern-league-2025-07-029358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.256214"
+  },
+  "modern-gold-league-2025-07-049350": {
+    "tournament_id": "modern-gold-league-2025-07-049350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.324886"
+  },
+  "modern-league-2025-07-229358": {
+    "tournament_id": "modern-league-2025-07-229358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.397330"
+  },
+  "modern-gold-league-2025-07-169350": {
+    "tournament_id": "modern-gold-league-2025-07-169350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.468627"
+  },
+  "modern-gold-league-2025-07-149350": {
+    "tournament_id": "modern-gold-league-2025-07-149350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.538267"
+  },
+  "modern-gold-league-2025-07-069350": {
+    "tournament_id": "modern-gold-league-2025-07-069350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.607346"
+  },
+  "modern-gold-league-2025-07-109350": {
+    "tournament_id": "modern-gold-league-2025-07-109350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.676957"
+  },
+  "modern-league-2025-07-079358": {
+    "tournament_id": "modern-league-2025-07-079358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.746216"
+  },
+  "modern-league-2025-07-179358": {
+    "tournament_id": "modern-league-2025-07-179358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.815672"
+  },
+  "modern-gold-league-2025-07-029350": {
+    "tournament_id": "modern-gold-league-2025-07-029350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.885204"
+  },
+  "modern-league-2025-07-039358": {
+    "tournament_id": "modern-league-2025-07-039358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:36.954454"
+  },
+  "modern-gold-league-2025-07-219350": {
+    "tournament_id": "modern-gold-league-2025-07-219350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:37.023536"
+  },
+  "modern-league-2025-07-139358": {
+    "tournament_id": "modern-league-2025-07-139358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:37.092737"
+  },
+  "modern-gold-league-2025-07-259350": {
+    "tournament_id": "modern-gold-league-2025-07-259350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:37.162960"
+  },
+  "modern-league-2025-07-239358": {
+    "tournament_id": "modern-league-2025-07-239358",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:37.233085"
+  },
+  "modern-gold-league-2025-07-189350": {
+    "tournament_id": "modern-gold-league-2025-07-189350",
+    "total_decks": 0,
+    "archetypes": {},
+    "colors": {},
+    "timestamp": "2025-07-25T15:44:37.304150"
+  },
+  "2025-07-05_Gladiator-Proving-Grounds-Week-27-2025": {
+    "tournament_id": "2025-07-05_Gladiator-Proving-Grounds-Week-27-2025",
+    "total_decks": 11,
+    "archetypes": {},
+    "colors": {
+      "C": 11
+    },
+    "timestamp": "2025-07-25T15:44:37.373913"
+  },
+  "2025-07-16_Sword-and-Sandals-Showdown-EMEA-Week-29-2025": {
+    "tournament_id": "2025-07-16_Sword-and-Sandals-Showdown-EMEA-Week-29-2025",
+    "total_decks": 14,
+    "archetypes": {},
+    "colors": {
+      "C": 14
+    },
+    "timestamp": "2025-07-25T15:44:37.443484"
+  },
+  "2025-07-18_Sword-and-Sandals-Showdown-AM-Week-29-2025": {
+    "tournament_id": "2025-07-18_Sword-and-Sandals-Showdown-AM-Week-29-2025",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:37.513494"
+  },
+  "2025-07-19_Gladiator-Proving-Grounds-Week-29-2025": {
+    "tournament_id": "2025-07-19_Gladiator-Proving-Grounds-Week-29-2025",
+    "total_decks": 16,
+    "archetypes": {},
+    "colors": {
+      "C": 16
+    },
+    "timestamp": "2025-07-25T15:44:37.583089"
+  },
+  "2025-07-02_Sword-and-Sandals-Showdown-EMEA-Week-27-2025": {
+    "tournament_id": "2025-07-02_Sword-and-Sandals-Showdown-EMEA-Week-27-2025",
+    "total_decks": 9,
+    "archetypes": {},
+    "colors": {
+      "C": 9
+    },
+    "timestamp": "2025-07-25T15:44:37.652617"
+  },
+  "2025-07-09_Sword-and-Sandals-Showdown-EMEA-Week-28-2025": {
+    "tournament_id": "2025-07-09_Sword-and-Sandals-Showdown-EMEA-Week-28-2025",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:37.722411"
+  },
+  "2025-07-04_Sword-and-Sandals-Showdown-AM-Week-27-2025": {
+    "tournament_id": "2025-07-04_Sword-and-Sandals-Showdown-AM-Week-27-2025",
+    "total_decks": 5,
+    "archetypes": {},
+    "colors": {
+      "C": 5
+    },
+    "timestamp": "2025-07-25T15:44:37.792571"
+  },
+  "2025-07-11_Sword-and-Sandals-Showdown-AM-Week-28-2025": {
+    "tournament_id": "2025-07-11_Sword-and-Sandals-Showdown-AM-Week-28-2025",
+    "total_decks": 7,
+    "archetypes": {},
+    "colors": {
+      "C": 7
+    },
+    "timestamp": "2025-07-25T15:44:37.862608"
+  },
+  "2025-07-12_2526-R1-RCQ": {
+    "tournament_id": "2025-07-12_2526-R1-RCQ",
+    "total_decks": 1,
+    "archetypes": {},
+    "colors": {
+      "C": 1
+    },
+    "timestamp": "2025-07-25T15:44:37.932480"
+  },
+  "2025-07-17_\u041f\u0438\u043e\u043d\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-1707": {
+    "tournament_id": "2025-07-17_\u041f\u0438\u043e\u043d\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-1707",
+    "total_decks": 3,
+    "archetypes": {},
+    "colors": {
+      "C": 3
+    },
+    "timestamp": "2025-07-25T15:44:46.499440"
+  },
+  "2025-07-22_Super-DC-Teams": {
+    "tournament_id": "2025-07-22_Super-DC-Teams",
+    "total_decks": 2,
+    "archetypes": {},
+    "colors": {
+      "C": 2
+    },
+    "timestamp": "2025-07-25T15:44:48.943729"
+  },
+  "2025-07-12_Commandfest-Sat-930-am-cEDH-190000-Tournament": {
+    "tournament_id": "2025-07-12_Commandfest-Sat-930-am-cEDH-190000-Tournament",
+    "total_decks": 69,
+    "archetypes": {},
+    "colors": {
+      "C": 69
+    },
+    "timestamp": "2025-07-25T15:44:38.218757"
+  },
+  "2025-07-12_CEDH-Upgrade-basic-badge-or-VIP-badge-required-to-": {
+    "tournament_id": "2025-07-12_CEDH-Upgrade-basic-badge-or-VIP-badge-required-to-",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:38.289625"
+  },
+  "2025-07-20_Oklahoma-Land-Run-25-Challenge-CEDH-": {
+    "tournament_id": "2025-07-20_Oklahoma-Land-Run-25-Challenge-CEDH-",
+    "total_decks": 4,
+    "archetypes": {},
+    "colors": {
+      "C": 4
+    },
+    "timestamp": "2025-07-25T15:44:38.360335"
+  },
+  "2025-07-11_Rcq-Friday-Final-Fantasy-Sealed-at-DCU-Worcester": {
+    "tournament_id": "2025-07-11_Rcq-Friday-Final-Fantasy-Sealed-at-DCU-Worcester",
+    "total_decks": 18,
+    "archetypes": {},
+    "colors": {
+      "C": 18
+    },
+    "timestamp": "2025-07-25T15:44:38.431751"
+  },
+  "2025-07-12_7pt-Highlander-WAtional-Championship": {
+    "tournament_id": "2025-07-12_7pt-Highlander-WAtional-Championship",
+    "total_decks": 59,
+    "archetypes": {},
+    "colors": {
+      "C": 59
+    },
+    "timestamp": "2025-07-25T15:44:38.504563"
+  },
+  "2025-07-19_Oklahoma-Land-Run-25-ChallengeVintage-": {
+    "tournament_id": "2025-07-19_Oklahoma-Land-Run-25-ChallengeVintage-",
+    "total_decks": 3,
+    "archetypes": {},
+    "colors": {
+      "C": 3
+    },
+    "timestamp": "2025-07-25T15:44:38.575995"
+  },
+  "2025-07-20_Oklahoma-Land-Run-25-Vintage-Open": {
+    "tournament_id": "2025-07-20_Oklahoma-Land-Run-25-Vintage-Open",
+    "total_decks": 101,
+    "archetypes": {},
+    "colors": {
+      "C": 101
+    },
+    "timestamp": "2025-07-25T15:44:38.649271"
+  },
+  "2025-07-19_CCS-Vintage-Proxy-Pot-Tournament": {
+    "tournament_id": "2025-07-19_CCS-Vintage-Proxy-Pot-Tournament",
+    "total_decks": 3,
+    "archetypes": {},
+    "colors": {
+      "C": 3
+    },
+    "timestamp": "2025-07-25T15:44:38.721842"
+  },
+  "2025-07-18_Oklahoma-Land-Run-25-Team-Trios-Open": {
+    "tournament_id": "2025-07-18_Oklahoma-Land-Run-25-Team-Trios-Open",
+    "total_decks": 44,
+    "archetypes": {},
+    "colors": {
+      "C": 44
+    },
+    "timestamp": "2025-07-25T15:44:48.506884"
+  },
+  "2025-07-04_Tappa-6-Lega-MtG-2025-Ads-Sammargheritese-1982": {
+    "tournament_id": "2025-07-04_Tappa-6-Lega-MtG-2025-Ads-Sammargheritese-1982",
+    "total_decks": 2,
+    "archetypes": {},
+    "colors": {
+      "C": 2
+    },
+    "timestamp": "2025-07-25T15:44:38.870290"
+  },
+  "2025-07-24_Pre-Modern-IX": {
+    "tournament_id": "2025-07-24_Pre-Modern-IX",
+    "total_decks": 7,
+    "archetypes": {},
+    "colors": {
+      "C": 7
+    },
+    "timestamp": "2025-07-25T15:44:38.945196"
+  },
+  "2025-07-12_Evansville-Eternal-Open-2025-Charity-Premodern-Tou": {
+    "tournament_id": "2025-07-12_Evansville-Eternal-Open-2025-Charity-Premodern-Tou",
+    "total_decks": 60,
+    "archetypes": {},
+    "colors": {
+      "C": 60
+    },
+    "timestamp": "2025-07-25T15:44:39.021704"
+  },
+  "2025-07-09_Premodern-monthly-2-Mercoled\u00ec-9-Luglio-h-2030-Arca": {
+    "tournament_id": "2025-07-09_Premodern-monthly-2-Mercoled\u00ec-9-Luglio-h-2030-Arca",
+    "total_decks": 9,
+    "archetypes": {},
+    "colors": {
+      "C": 9
+    },
+    "timestamp": "2025-07-25T15:44:39.097412"
+  },
+  "2025-07-10_Biweekly-Premodern": {
+    "tournament_id": "2025-07-10_Biweekly-Premodern",
+    "total_decks": 3,
+    "archetypes": {},
+    "colors": {
+      "C": 3
+    },
+    "timestamp": "2025-07-25T15:44:39.173146"
+  },
+  "2025-07-19_Sacred-Torch-Showdown": {
+    "tournament_id": "2025-07-19_Sacred-Torch-Showdown",
+    "total_decks": 78,
+    "archetypes": {},
+    "colors": {
+      "C": 78
+    },
+    "timestamp": "2025-07-25T15:44:39.251201"
+  },
+  "2025-07-17_Pre-Modern-VIII": {
+    "tournament_id": "2025-07-17_Pre-Modern-VIII",
+    "total_decks": 10,
+    "archetypes": {},
+    "colors": {
+      "C": 10
+    },
+    "timestamp": "2025-07-25T15:44:39.327427"
+  },
+  "2025-07-07_Charlotte-Legacy-League-Season-3-Week-1": {
+    "tournament_id": "2025-07-07_Charlotte-Legacy-League-Season-3-Week-1",
+    "total_decks": 14,
+    "archetypes": {},
+    "colors": {
+      "C": 14
+    },
+    "timestamp": "2025-07-25T15:44:39.401891"
+  },
+  "2025-07-12_6\u00ba-Open-MLL-Mont-Legacy-League-": {
+    "tournament_id": "2025-07-12_6\u00ba-Open-MLL-Mont-Legacy-League-",
+    "total_decks": 12,
+    "archetypes": {},
+    "colors": {
+      "C": 12
+    },
+    "timestamp": "2025-07-25T15:44:39.477350"
+  },
+  "2025-07-10_Weekly-Legacy": {
+    "tournament_id": "2025-07-10_Weekly-Legacy",
+    "total_decks": 27,
+    "archetypes": {},
+    "colors": {
+      "C": 27
+    },
+    "timestamp": "2025-07-25T15:44:39.552770"
+  },
+  "2025-07-21_Charlotte-Legacy-League-Season-3-Week-3": {
+    "tournament_id": "2025-07-21_Charlotte-Legacy-League-Season-3-Week-3",
+    "total_decks": 10,
+    "archetypes": {},
+    "colors": {
+      "C": 10
+    },
+    "timestamp": "2025-07-25T15:44:39.627741"
+  },
+  "2025-07-03_Weekly-Legacy": {
+    "tournament_id": "2025-07-03_Weekly-Legacy",
+    "total_decks": 28,
+    "archetypes": {},
+    "colors": {
+      "C": 28
+    },
+    "timestamp": "2025-07-25T15:44:39.702505"
+  },
+  "2025-07-17_RomagnaLegacyLeague2": {
+    "tournament_id": "2025-07-17_RomagnaLegacyLeague2",
+    "total_decks": 11,
+    "archetypes": {},
+    "colors": {
+      "C": 11
+    },
+    "timestamp": "2025-07-25T15:44:39.777289"
+  },
+  "2025-07-18_Oklahoma-Land-Run-25-Challenge-Legacy-": {
+    "tournament_id": "2025-07-18_Oklahoma-Land-Run-25-Challenge-Legacy-",
+    "total_decks": 3,
+    "archetypes": {},
+    "colors": {
+      "C": 3
+    },
+    "timestamp": "2025-07-25T15:44:39.852430"
+  },
+  "2025-07-12_\u7b2c155\u56de-\u30de\u30c3\u30b5\u30f3\u306e\u306a\u3093\u3067\u3082\u653e\u9001\u5c40-\u304a\u3046\u3061\u3067\u30ec\u30ac\u30b7\u30fc-The-155th-Legacy-at-Ho": {
+    "tournament_id": "2025-07-12_\u7b2c155\u56de-\u30de\u30c3\u30b5\u30f3\u306e\u306a\u3093\u3067\u3082\u653e\u9001\u5c40-\u304a\u3046\u3061\u3067\u30ec\u30ac\u30b7\u30fc-The-155th-Legacy-at-Ho",
+    "total_decks": 12,
+    "archetypes": {},
+    "colors": {
+      "C": 12
+    },
+    "timestamp": "2025-07-25T15:44:39.927558"
+  },
+  "2025-07-13_CLC-2025-Etapa-6": {
+    "tournament_id": "2025-07-13_CLC-2025-Etapa-6",
+    "total_decks": 22,
+    "archetypes": {},
+    "colors": {
+      "C": 22
+    },
+    "timestamp": "2025-07-25T15:44:40.002921"
+  },
+  "2025-07-14_Charlotte-Legacy-League-Season-3-Week-2": {
+    "tournament_id": "2025-07-14_Charlotte-Legacy-League-Season-3-Week-2",
+    "total_decks": 15,
+    "archetypes": {},
+    "colors": {
+      "C": 15
+    },
+    "timestamp": "2025-07-25T15:44:40.078162"
+  },
+  "2025-07-05_Eternal-Challenge-31": {
+    "tournament_id": "2025-07-05_Eternal-Challenge-31",
+    "total_decks": 22,
+    "archetypes": {},
+    "colors": {
+      "C": 22
+    },
+    "timestamp": "2025-07-25T15:44:40.153459"
+  },
+  "2025-07-19_Oklahoma-Land-Run-25-Legacy-Open": {
+    "tournament_id": "2025-07-19_Oklahoma-Land-Run-25-Legacy-Open",
+    "total_decks": 139,
+    "archetypes": {},
+    "colors": {
+      "C": 139
+    },
+    "timestamp": "2025-07-25T15:44:40.237418"
+  },
+  "2025-07-13_7-Blackleague-legacy-": {
+    "tournament_id": "2025-07-13_7-Blackleague-legacy-",
+    "total_decks": 14,
+    "archetypes": {},
+    "colors": {
+      "C": 14
+    },
+    "timestamp": "2025-07-25T15:44:40.316322"
+  },
+  "2025-07-19_7-Etapa-Liga-Sul-Mineira-de-Legacy-Ancestral-Cards": {
+    "tournament_id": "2025-07-19_7-Etapa-Liga-Sul-Mineira-de-Legacy-Ancestral-Cards",
+    "total_decks": 14,
+    "archetypes": {},
+    "colors": {
+      "C": 14
+    },
+    "timestamp": "2025-07-25T15:44:40.393035"
+  },
+  "2025-07-12_0712-Legacy-1K": {
+    "tournament_id": "2025-07-12_0712-Legacy-1K",
+    "total_decks": 9,
+    "archetypes": {},
+    "colors": {
+      "C": 9
+    },
+    "timestamp": "2025-07-25T15:44:40.469654"
+  },
+  "2025-07-13_90s-MTG-Legacy-Open-NYCIS-Qualifier": {
+    "tournament_id": "2025-07-13_90s-MTG-Legacy-Open-NYCIS-Qualifier",
+    "total_decks": 57,
+    "archetypes": {},
+    "colors": {
+      "C": 57
+    },
+    "timestamp": "2025-07-25T15:44:40.548804"
+  },
+  "2025-07-05_\u7b2c154\u56de-\u30de\u30c3\u30b5\u30f3\u306e\u306a\u3093\u3067\u3082\u653e\u9001\u5c40-\u304a\u3046\u3061\u3067\u30ec\u30ac\u30b7\u30fc-The-154th-Legacy-at-Ho": {
+    "tournament_id": "2025-07-05_\u7b2c154\u56de-\u30de\u30c3\u30b5\u30f3\u306e\u306a\u3093\u3067\u3082\u653e\u9001\u5c40-\u304a\u3046\u3061\u3067\u30ec\u30ac\u30b7\u30fc-The-154th-Legacy-at-Ho",
+    "total_decks": 13,
+    "archetypes": {},
+    "colors": {
+      "C": 13
+    },
+    "timestamp": "2025-07-25T15:44:40.627567"
+  },
+  "2025-07-17_Weekly-Legacy": {
+    "tournament_id": "2025-07-17_Weekly-Legacy",
+    "total_decks": 21,
+    "archetypes": {},
+    "colors": {
+      "C": 21
+    },
+    "timestamp": "2025-07-25T15:44:40.705377"
+  },
+  "2025-07-13_6\u00aa-Etapa-4\u00aa-Liga-Legacy-Jundia\u00ed": {
+    "tournament_id": "2025-07-13_6\u00aa-Etapa-4\u00aa-Liga-Legacy-Jundia\u00ed",
+    "total_decks": 11,
+    "archetypes": {},
+    "colors": {
+      "C": 11
+    },
+    "timestamp": "2025-07-25T15:44:40.784725"
+  },
+  "2025-07-24_Weekly-Legacy": {
+    "tournament_id": "2025-07-24_Weekly-Legacy",
+    "total_decks": 25,
+    "archetypes": {},
+    "colors": {
+      "C": 25
+    },
+    "timestamp": "2025-07-25T15:44:40.864966"
+  },
+  "2025-07-19_\u7b2c156\u56de-\u30de\u30c3\u30b5\u30f3\u306e\u306a\u3093\u3067\u3082\u653e\u9001\u5c40-\u304a\u3046\u3061\u3067\u30ec\u30ac\u30b7\u30fc-The-156th-Legacy-at-Ho": {
+    "tournament_id": "2025-07-19_\u7b2c156\u56de-\u30de\u30c3\u30b5\u30f3\u306e\u306a\u3093\u3067\u3082\u653e\u9001\u5c40-\u304a\u3046\u3061\u3067\u30ec\u30ac\u30b7\u30fc-The-156th-Legacy-at-Ho",
+    "total_decks": 11,
+    "archetypes": {},
+    "colors": {
+      "C": 11
+    },
+    "timestamp": "2025-07-25T15:44:40.945337"
+  },
+  "2025-07-20_SP-Legacy-Etapa-6-2025": {
+    "tournament_id": "2025-07-20_SP-Legacy-Etapa-6-2025",
+    "total_decks": 23,
+    "archetypes": {},
+    "colors": {
+      "C": 23
+    },
+    "timestamp": "2025-07-25T15:44:41.025948"
+  },
+  "2025-07-20_Legacy-Cup-Cologne-ELM-Qualifier": {
+    "tournament_id": "2025-07-20_Legacy-Cup-Cologne-ELM-Qualifier",
+    "total_decks": 40,
+    "archetypes": {},
+    "colors": {
+      "C": 40
+    },
+    "timestamp": "2025-07-25T15:44:41.105626"
+  },
+  "2025-07-06_Circuito-Legacy-RS-2025-Etapa-6": {
+    "tournament_id": "2025-07-06_Circuito-Legacy-RS-2025-Etapa-6",
+    "total_decks": 15,
+    "archetypes": {},
+    "colors": {
+      "C": 15
+    },
+    "timestamp": "2025-07-25T15:44:41.185672"
+  },
+  "2025-07-07_Legacy-League-Cologne": {
+    "tournament_id": "2025-07-07_Legacy-League-Cologne",
+    "total_decks": 21,
+    "archetypes": {},
+    "colors": {
+      "C": 21
+    },
+    "timestamp": "2025-07-25T15:44:41.265309"
+  },
+  "2025-07-05_Guardian-Beast-Cup-2025": {
+    "tournament_id": "2025-07-05_Guardian-Beast-Cup-2025",
+    "total_decks": 15,
+    "archetypes": {},
+    "colors": {
+      "C": 15
+    },
+    "timestamp": "2025-07-25T15:44:41.433977"
+  },
+  "2025-07-02_TheGathering.gg Standard Post-BNR Celebration": {
+    "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+    "total_decks": 8,
+    "archetypes": {
+      "Boros Aggro": 1,
+      "Golgari Graveyard": 1,
+      "Dimir Midrange": 1,
+      "Abzan Yuna": 1
+    },
+    "colors": {
+      "WR": 2,
+      "BG": 1,
+      "UR": 1,
+      "BRG": 1,
+      "UB": 1,
+      "WU": 1,
+      "WBG": 1
+    },
+    "timestamp": "2025-07-25T15:44:41.518236"
+  },
+  "2025-07-18_David\u2019s magic time of the month (July)": {
+    "tournament_id": "2025-07-18_David\u2019s magic time of the month (July)",
+    "total_decks": 10,
+    "archetypes": {
+      "Azorius Omniscience": 1,
+      "Izzet Prowess (Cauldron)": 2,
+      "Dimir Midrange": 1
+    },
+    "colors": {
+      "BRG": 1,
+      "WU": 1,
+      "UR": 2,
+      "B": 1,
+      "UG": 1,
+      "G": 1,
+      "UBG": 1,
+      "UB": 2
+    },
+    "timestamp": "2025-07-25T15:44:41.600371"
+  },
+  "2025-07-06_Jaffer's Tarkir Dragonstorm Mosh Pit": {
+    "tournament_id": "2025-07-06_Jaffer's Tarkir Dragonstorm Mosh Pit",
+    "total_decks": 89,
+    "archetypes": {
+      "Mono Black SelfBounce": 3,
+      "Mono Red Aggro": 2,
+      "Azorius Omniscience": 1,
+      "Orzhov Demons": 3,
+      "Jeskai Control": 11,
+      "Jeskai Caretaker": 1,
+      "Dimir Midrange": 3,
+      "Izzet Oculus": 4,
+      "Orzhov SelfBounce": 3,
+      "Dimir SelfBounce": 2,
+      "Domain": 4,
+      "Golgari Midrange": 1,
+      "Mono Red Convoke": 1,
+      "Boros Auras": 1,
+      "Golgari Demons": 2,
+      "Mono Black Demons": 1,
+      "Azorius Control": 1,
+      "Poison": 1,
+      "Mono White Convoke": 1,
+      "Mono White SelfBounce": 1
+    },
+    "colors": {
+      "WUG": 1,
+      "UR": 21,
+      "B": 4,
+      "BG": 6,
+      "WU": 7,
+      "WG": 3,
+      "R": 7,
+      "WB": 7,
+      "WUR": 12,
+      "UB": 7,
+      "W": 3,
+      "WUBG": 4,
+      "G": 2,
+      "WR": 1,
+      "RG": 1,
+      "UBG": 1,
+      "BR": 1,
+      "URG": 1
+    },
+    "timestamp": "2025-07-25T15:44:41.691021"
+  },
+  "2025-07-15_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442. \u041b\u0435\u0442\u043d\u044f\u044f \u041b\u0438\u0433\u0430 (15.07)": {
+    "tournament_id": "2025-07-15_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442. \u041b\u0435\u0442\u043d\u044f\u044f \u041b\u0438\u0433\u0430 (15.07)",
+    "total_decks": 3,
+    "archetypes": {
+      "Dimir Midrange": 1,
+      "Selesnya Auras": 1
+    },
+    "colors": {
+      "C": 1,
+      "UB": 1,
+      "WG": 1
+    },
+    "timestamp": "2025-07-25T15:44:41.779693"
+  },
+  "2025-07-08_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442. \u041b\u0435\u0442\u043d\u044f\u044f \u041b\u0438\u0433\u0430 (08.07.25)": {
+    "tournament_id": "2025-07-08_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442. \u041b\u0435\u0442\u043d\u044f\u044f \u041b\u0438\u0433\u0430 (08.07.25)",
+    "total_decks": 2,
+    "archetypes": {
+      "Reanimator": 1,
+      "Mono Red Aggro": 1
+    },
+    "colors": {
+      "R": 2
+    },
+    "timestamp": "2025-07-25T15:44:41.869310"
+  },
+  "2025-07-22_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442. \u041b\u0435\u0442\u043d\u044f\u044f \u041b\u0438\u0433\u0430 (22.07)": {
+    "tournament_id": "2025-07-22_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442. \u041b\u0435\u0442\u043d\u044f\u044f \u041b\u0438\u0433\u0430 (22.07)",
+    "total_decks": 2,
+    "archetypes": {
+      "Golgari Midrange": 1
+    },
+    "colors": {
+      "BG": 1,
+      "C": 1
+    },
+    "timestamp": "2025-07-25T15:44:41.959507"
+  },
+  "2025-07-20_F2F Tour Toronto - Standard SQ": {
+    "tournament_id": "2025-07-20_F2F Tour Toronto - Standard SQ",
+    "total_decks": 8,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 2,
+      "Orzhov Demons": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 2,
+      "Dimir Midrange": 1,
+      "Azorius Control": 1,
+      "Naya Yuna": 1
+    },
+    "colors": {
+      "UR": 2,
+      "WB": 1,
+      "W": 2,
+      "UB": 1,
+      "WU": 1,
+      "WRG": 1
+    },
+    "timestamp": "2025-07-25T15:44:42.048781"
+  },
+  "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier": {
+    "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+    "total_decks": 8,
+    "archetypes": {
+      "Golgari Graveyard": 2,
+      "Izzet Oculus": 1,
+      "Izzet Prowess": 1,
+      "Jeskai Control": 1,
+      "Mono Red Burn": 1,
+      "Azorius Omniscience": 1
+    },
+    "colors": {
+      "BG": 2,
+      "UR": 2,
+      "WUR": 1,
+      "W": 1,
+      "R": 1,
+      "WU": 1
+    },
+    "timestamp": "2025-07-25T15:44:42.139937"
+  },
+  "2025-07-12_Valley Dasher's Bishkek Classic #1": {
+    "tournament_id": "2025-07-12_Valley Dasher's Bishkek Classic #1",
+    "total_decks": 5,
+    "archetypes": {
+      "Rakdos Lizards": 1,
+      "Golgari Ramp": 1
+    },
+    "colors": {
+      "RG": 1,
+      "BR": 1,
+      "BG": 1,
+      "WR": 1,
+      "WB": 1
+    },
+    "timestamp": "2025-07-25T15:44:42.232715"
+  },
+  "2025-07-19_Boa Qualifier #2 2025 (standard)": {
+    "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+    "total_decks": 16,
+    "archetypes": {
+      "Izzet Prowess (Cauldron)": 6,
+      "Humans": 1,
+      "Dimir Midrange": 1,
+      "Orzhov Caretaker (Mono White Caretaker)": 1,
+      "Azorius Oculus": 1,
+      "Mono Black Demons": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Golgari Demons": 1
+    },
+    "colors": {
+      "URG": 1,
+      "UR": 6,
+      "BR": 1,
+      "C": 1,
+      "UB": 1,
+      "WB": 1,
+      "WR": 1,
+      "WU": 1,
+      "B": 1,
+      "W": 1,
+      "BG": 1
+    },
+    "timestamp": "2025-07-25T15:44:42.329090"
+  },
+  "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2": {
+    "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+    "total_decks": 10,
+    "archetypes": {
+      "Jeskai Oculus": 1,
+      "Golgari Graveyard": 1,
+      "Dimir Midrange": 3,
+      "URG Prowess": 1,
+      "Izzet Artifacts": 1
+    },
+    "colors": {
+      "WUR": 1,
+      "UR": 2,
+      "BG": 1,
+      "UB": 3,
+      "WR": 1,
+      "WUBRG": 1,
+      "URG": 1
+    },
+    "timestamp": "2025-07-25T15:44:42.429007"
+  },
+  "2025-07-01_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442. \u041b\u0435\u0442\u043d\u044f\u044f \u041b\u0438\u0433\u0430 (01.07)": {
+    "tournament_id": "2025-07-01_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442. \u041b\u0435\u0442\u043d\u044f\u044f \u041b\u0438\u0433\u0430 (01.07)",
+    "total_decks": 1,
+    "archetypes": {},
+    "colors": {
+      "C": 1
+    },
+    "timestamp": "2025-07-25T15:44:42.522406"
+  },
+  "2025-07-06_\u7b2c2\u56de\u30b7\u30f3\u30b0\u30eb\u30b9\u30bf\u30fc\u676f\u3000\u30b5\u30d6\u30a4\u30d9\u30f3\u30c8": {
+    "tournament_id": "2025-07-06_\u7b2c2\u56de\u30b7\u30f3\u30b0\u30eb\u30b9\u30bf\u30fc\u676f\u3000\u30b5\u30d6\u30a4\u30d9\u30f3\u30c8",
+    "total_decks": 53,
+    "archetypes": {
+      "Izzet Prowess": 3,
+      "Mono Red Aggro": 1,
+      "Mono Black Demons": 3,
+      "Azorius Omniscience": 1,
+      "Dimir Midrange": 6,
+      "Izzet Prowess (Cauldron)": 7,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Golgari Demons": 1,
+      "Naya Yuna": 1,
+      "Abzan Midrange": 1,
+      "Rakdos Demons": 2,
+      "Mono Green Landfall": 1,
+      "Izzet Oculus": 2,
+      "Rakdos Lizards": 1,
+      "URG Prowess": 1,
+      "Mardu Convoke": 1,
+      "Boros Aggro": 1,
+      "Colorless Convoke": 1,
+      "Azorius Control": 1,
+      "Golgari Ramp": 1,
+      "Mono Black Yuna": 1,
+      "Bant Omniscience": 1,
+      "Sultai Ramp": 1
+    },
+    "colors": {
+      "RG": 4,
+      "UR": 12,
+      "R": 1,
+      "WU": 3,
+      "WG": 2,
+      "B": 4,
+      "UB": 6,
+      "WUR": 1,
+      "W": 1,
+      "BG": 2,
+      "WRG": 2,
+      "WBG": 2,
+      "BR": 3,
+      "G": 1,
+      "WB": 3,
+      "URG": 1,
+      "WBR": 1,
+      "WR": 1,
+      "C": 1,
+      "WUG": 1,
+      "UBG": 1
+    },
+    "timestamp": "2025-07-25T15:44:42.620262"
+  },
+  "2025-07-13_Jaffer's Final Fantasy Mosh Pit": {
+    "tournament_id": "2025-07-13_Jaffer's Final Fantasy Mosh Pit",
+    "total_decks": 29,
+    "archetypes": {
+      "4c Tempo": 1,
+      "Mono White Caretaker (Mono White Caretaker)": 1,
+      "Azorius Omniscience": 1,
+      "Mono Green Ramp": 1,
+      "Mono Red Burn": 1,
+      "Izzet Oculus": 1,
+      "Sultai Oculus": 1,
+      "Izzet Prowess (Cauldron)": 3,
+      "Selesnya Auras": 1,
+      "Simic Omniscience": 1,
+      "Naya Yuna": 1,
+      "Dimir Midrange": 2,
+      "Azorius Control": 1,
+      "Mardu Convoke": 1,
+      "Mono Black Demons": 1
+    },
+    "colors": {
+      "URG": 1,
+      "WU": 4,
+      "UR": 5,
+      "WBRG": 1,
+      "W": 1,
+      "G": 1,
+      "WUBRG": 2,
+      "R": 2,
+      "UBG": 1,
+      "WG": 1,
+      "UG": 1,
+      "RG": 1,
+      "WRG": 1,
+      "UB": 2,
+      "WR": 1,
+      "WB": 1,
+      "WBR": 1,
+      "BR": 1,
+      "B": 1
+    },
+    "timestamp": "2025-07-25T15:44:42.722216"
+  },
+  "2025-07-03_Pauperonni-Pizza": {
+    "tournament_id": "2025-07-03_Pauperonni-Pizza",
+    "total_decks": 6,
+    "archetypes": {},
+    "colors": {
+      "C": 6
+    },
+    "timestamp": "2025-07-25T15:44:43.021818"
+  },
+  "2025-07-15_Weekly-Pauper": {
+    "tournament_id": "2025-07-15_Weekly-Pauper",
+    "total_decks": 43,
+    "archetypes": {},
+    "colors": {
+      "C": 43
+    },
+    "timestamp": "2025-07-25T15:44:43.122315"
+  },
+  "2025-07-16_SPL-3-Tappa-Road-to-Autumn-Edition-2025": {
+    "tournament_id": "2025-07-16_SPL-3-Tappa-Road-to-Autumn-Edition-2025",
+    "total_decks": 15,
+    "archetypes": {},
+    "colors": {
+      "C": 15
+    },
+    "timestamp": "2025-07-25T15:44:43.223790"
+  },
+  "2025-07-08_Weekly-Pauper": {
+    "tournament_id": "2025-07-08_Weekly-Pauper",
+    "total_decks": 39,
+    "archetypes": {},
+    "colors": {
+      "C": 39
+    },
+    "timestamp": "2025-07-25T15:44:43.324674"
+  },
+  "2025-07-19_6\u00ba-Open-MPL-Mont-Pauper-League-": {
+    "tournament_id": "2025-07-19_6\u00ba-Open-MPL-Mont-Pauper-League-",
+    "total_decks": 30,
+    "archetypes": {},
+    "colors": {
+      "C": 30
+    },
+    "timestamp": "2025-07-25T15:44:43.423288"
+  },
+  "2025-07-10_Pauper-League-Spring-LEG-10": {
+    "tournament_id": "2025-07-10_Pauper-League-Spring-LEG-10",
+    "total_decks": 15,
+    "archetypes": {},
+    "colors": {
+      "C": 15
+    },
+    "timestamp": "2025-07-25T15:44:43.522221"
+  },
+  "2025-07-16_\u041f\u0430\u0443\u043f\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-160725": {
+    "tournament_id": "2025-07-16_\u041f\u0430\u0443\u043f\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-160725",
+    "total_decks": 5,
+    "archetypes": {},
+    "colors": {
+      "C": 5
+    },
+    "timestamp": "2025-07-25T15:44:43.622649"
+  },
+  "2025-07-18_Pauper-Semanal-": {
+    "tournament_id": "2025-07-18_Pauper-Semanal-",
+    "total_decks": 3,
+    "archetypes": {},
+    "colors": {
+      "C": 3
+    },
+    "timestamp": "2025-07-25T15:44:43.721149"
+  },
+  "2025-07-24_Bristol-Brew-Off-Summer-2025": {
+    "tournament_id": "2025-07-24_Bristol-Brew-Off-Summer-2025",
+    "total_decks": 19,
+    "archetypes": {},
+    "colors": {
+      "C": 19
+    },
+    "timestamp": "2025-07-25T15:44:43.820713"
+  },
+  "2025-07-20_Cambridge-Pauper-League-Season-2-Day-6": {
+    "tournament_id": "2025-07-20_Cambridge-Pauper-League-Season-2-Day-6",
+    "total_decks": 4,
+    "archetypes": {},
+    "colors": {
+      "C": 4
+    },
+    "timestamp": "2025-07-25T15:44:43.920376"
+  },
+  "2025-07-13_Liga-Gaucha-de-Pauper-2025-Etapa-6": {
+    "tournament_id": "2025-07-13_Liga-Gaucha-de-Pauper-2025-Etapa-6",
+    "total_decks": 89,
+    "archetypes": {},
+    "colors": {
+      "C": 89
+    },
+    "timestamp": "2025-07-25T15:44:44.024504"
+  },
+  "2025-07-17_Pauper-League-Spring-25-REBOUND": {
+    "tournament_id": "2025-07-17_Pauper-League-Spring-25-REBOUND",
+    "total_decks": 7,
+    "archetypes": {},
+    "colors": {
+      "C": 7
+    },
+    "timestamp": "2025-07-25T15:44:44.124380"
+  },
+  "2025-07-14_Lega-Pauper-Genova-Summer-Season-Lunedi-14-Luglio-": {
+    "tournament_id": "2025-07-14_Lega-Pauper-Genova-Summer-Season-Lunedi-14-Luglio-",
+    "total_decks": 29,
+    "archetypes": {},
+    "colors": {
+      "C": 29
+    },
+    "timestamp": "2025-07-25T15:44:44.225539"
+  },
+  "2025-07-18_Tappa-7-Lega-MtG-2025-Ads-Sammargheritese-1982": {
+    "tournament_id": "2025-07-18_Tappa-7-Lega-MtG-2025-Ads-Sammargheritese-1982",
+    "total_decks": 10,
+    "archetypes": {},
+    "colors": {
+      "C": 10
+    },
+    "timestamp": "2025-07-25T15:44:44.327035"
+  },
+  "2025-07-24_Play-Points-Event-Geddon-Series-1-tappa-AUTUMN-Ed-": {
+    "tournament_id": "2025-07-24_Play-Points-Event-Geddon-Series-1-tappa-AUTUMN-Ed-",
+    "total_decks": 24,
+    "archetypes": {},
+    "colors": {
+      "C": 24
+    },
+    "timestamp": "2025-07-25T15:44:44.428194"
+  },
+  "2025-07-22_Mont-Weekly-Pauper": {
+    "tournament_id": "2025-07-22_Mont-Weekly-Pauper",
+    "total_decks": 49,
+    "archetypes": {},
+    "colors": {
+      "C": 49
+    },
+    "timestamp": "2025-07-25T15:44:44.532472"
+  },
+  "2025-07-06_Cambridge-Pauper-League-Season-2-Day-5": {
+    "tournament_id": "2025-07-06_Cambridge-Pauper-League-Season-2-Day-5",
+    "total_decks": 2,
+    "archetypes": {},
+    "colors": {
+      "C": 2
+    },
+    "timestamp": "2025-07-25T15:44:44.635842"
+  },
+  "2025-07-11_Pauper-Semanal-": {
+    "tournament_id": "2025-07-11_Pauper-Semanal-",
+    "total_decks": 7,
+    "archetypes": {},
+    "colors": {
+      "C": 7
+    },
+    "timestamp": "2025-07-25T15:44:44.738285"
+  },
+  "2025-07-21_Lega-Pauper-Genova-Summer-Season-Lunedi-21-Luglio-": {
+    "tournament_id": "2025-07-21_Lega-Pauper-Genova-Summer-Season-Lunedi-21-Luglio-",
+    "total_decks": 24,
+    "archetypes": {},
+    "colors": {
+      "C": 24
+    },
+    "timestamp": "2025-07-25T15:44:44.840408"
+  },
+  "2025-07-09_\u041f\u0430\u0443\u043f\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-090725": {
+    "tournament_id": "2025-07-09_\u041f\u0430\u0443\u043f\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-090725",
+    "total_decks": 1,
+    "archetypes": {},
+    "colors": {
+      "C": 1
+    },
+    "timestamp": "2025-07-25T15:44:44.943256"
+  },
+  "2025-07-01_Weekly-Pauper": {
+    "tournament_id": "2025-07-01_Weekly-Pauper",
+    "total_decks": 37,
+    "archetypes": {},
+    "colors": {
+      "C": 37
+    },
+    "timestamp": "2025-07-25T15:44:45.046726"
+  },
+  "2025-07-03_Pauper-League-Spring-LEG-9": {
+    "tournament_id": "2025-07-03_Pauper-League-Spring-LEG-9",
+    "total_decks": 14,
+    "archetypes": {},
+    "colors": {
+      "C": 14
+    },
+    "timestamp": "2025-07-25T15:44:45.149903"
+  },
+  "2025-07-17_Pauper-League-Spring-25-TOP-8": {
+    "tournament_id": "2025-07-17_Pauper-League-Spring-25-TOP-8",
+    "total_decks": 7,
+    "archetypes": {},
+    "colors": {
+      "C": 7
+    },
+    "timestamp": "2025-07-25T15:44:45.252020"
+  },
+  "2025-07-01_Sprint-Wheel-Event-Geddon-Series-1-tappa-AUTUMN-Ed": {
+    "tournament_id": "2025-07-01_Sprint-Wheel-Event-Geddon-Series-1-tappa-AUTUMN-Ed",
+    "total_decks": 35,
+    "archetypes": {},
+    "colors": {
+      "C": 35
+    },
+    "timestamp": "2025-07-25T15:44:45.355489"
+  },
+  "2025-07-02_SPL-2-Tappa-Road-to-Autumn-Edition-2025-": {
+    "tournament_id": "2025-07-02_SPL-2-Tappa-Road-to-Autumn-Edition-2025-",
+    "total_decks": 11,
+    "archetypes": {},
+    "colors": {
+      "C": 11
+    },
+    "timestamp": "2025-07-25T15:44:45.459787"
+  },
+  "2025-07-02_\u041f\u0430\u0443\u043f\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-020725": {
+    "tournament_id": "2025-07-02_\u041f\u0430\u0443\u043f\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-020725",
+    "total_decks": 2,
+    "archetypes": {},
+    "colors": {
+      "C": 2
+    },
+    "timestamp": "2025-07-25T15:44:45.564377"
+  },
+  "2025-07-13_Super-Pioneer-4-Torneio-da-Liga-de-Volta-Redonda-C": {
+    "tournament_id": "2025-07-13_Super-Pioneer-4-Torneio-da-Liga-de-Volta-Redonda-C",
+    "total_decks": 10,
+    "archetypes": {},
+    "colors": {
+      "C": 10
+    },
+    "timestamp": "2025-07-25T15:44:45.666529"
+  },
+  "2025-07-13_\u7b2c3\u56de-Pioneer-GOLDRUSH": {
+    "tournament_id": "2025-07-13_\u7b2c3\u56de-Pioneer-GOLDRUSH",
+    "total_decks": 33,
+    "archetypes": {},
+    "colors": {
+      "C": 33
+    },
+    "timestamp": "2025-07-25T15:44:45.769684"
+  },
+  "2025-07-03_\u041f\u0438\u043e\u043d\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-030725": {
+    "tournament_id": "2025-07-03_\u041f\u0438\u043e\u043d\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-030725",
+    "total_decks": 2,
+    "archetypes": {},
+    "colors": {
+      "C": 2
+    },
+    "timestamp": "2025-07-25T15:44:45.873169"
+  },
+  "2025-07-12_Holiday-Night-Magic": {
+    "tournament_id": "2025-07-12_Holiday-Night-Magic",
+    "total_decks": 18,
+    "archetypes": {},
+    "colors": {
+      "C": 18
+    },
+    "timestamp": "2025-07-25T15:44:45.977417"
+  },
+  "2025-07-04_Pioneer-Spark-ONLINE-Remote-1st": {
+    "tournament_id": "2025-07-04_Pioneer-Spark-ONLINE-Remote-1st",
+    "total_decks": 10,
+    "archetypes": {},
+    "colors": {
+      "C": 10
+    },
+    "timestamp": "2025-07-25T15:44:46.081087"
+  },
+  "2025-07-20_Crew3-Online-Showdown-6": {
+    "tournament_id": "2025-07-20_Crew3-Online-Showdown-6",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:46.185027"
+  },
+  "2025-07-05_Pioneer-Spark-ONLINE-MTGArena-2nd": {
+    "tournament_id": "2025-07-05_Pioneer-Spark-ONLINE-MTGArena-2nd",
+    "total_decks": 29,
+    "archetypes": {},
+    "colors": {
+      "C": 29
+    },
+    "timestamp": "2025-07-25T15:44:46.289938"
+  },
+  "2025-07-10_\u041f\u0438\u043e\u043d\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-100725": {
+    "tournament_id": "2025-07-10_\u041f\u0438\u043e\u043d\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-100725",
+    "total_decks": 5,
+    "archetypes": {},
+    "colors": {
+      "C": 5
+    },
+    "timestamp": "2025-07-25T15:44:46.394726"
+  },
+  "2025-07-24_\u041f\u0438\u043e\u043d\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-2407": {
+    "tournament_id": "2025-07-24_\u041f\u0438\u043e\u043d\u0435\u0440-\u041b\u0435\u0442\u043d\u044f\u044f-\u041b\u0438\u0433\u0430-2407",
+    "total_decks": 3,
+    "archetypes": {},
+    "colors": {
+      "C": 3
+    },
+    "timestamp": "2025-07-25T15:44:46.603981"
+  },
+  "2025-07-12_Rcq-Saturday-Modern-at-DCU-Worcester-1030-Start": {
+    "tournament_id": "2025-07-12_Rcq-Saturday-Modern-at-DCU-Worcester-1030-Start",
+    "total_decks": 6,
+    "archetypes": {},
+    "colors": {
+      "C": 6
+    },
+    "timestamp": "2025-07-25T15:44:46.710849"
+  },
+  "2025-07-05_Rcq-qualifier": {
+    "tournament_id": "2025-07-05_Rcq-qualifier",
+    "total_decks": 9,
+    "archetypes": {},
+    "colors": {
+      "C": 9
+    },
+    "timestamp": "2025-07-25T15:44:46.816042"
+  },
+  "2025-07-13_Wolf-Den-RCQ-Modern": {
+    "tournament_id": "2025-07-13_Wolf-Den-RCQ-Modern",
+    "total_decks": 1,
+    "archetypes": {},
+    "colors": {
+      "C": 1
+    },
+    "timestamp": "2025-07-25T15:44:46.919786"
+  },
+  "2025-07-20_Wolf-Den-RCQ-Modern": {
+    "tournament_id": "2025-07-20_Wolf-Den-RCQ-Modern",
+    "total_decks": 3,
+    "archetypes": {},
+    "colors": {
+      "C": 3
+    },
+    "timestamp": "2025-07-25T15:44:47.022207"
+  },
+  "2025-07-19_South-America-Magic-Series-Premium-RCQ-Mont": {
+    "tournament_id": "2025-07-19_South-America-Magic-Series-Premium-RCQ-Mont",
+    "total_decks": 60,
+    "archetypes": {},
+    "colors": {
+      "C": 60
+    },
+    "timestamp": "2025-07-25T15:44:47.131304"
+  },
+  "2025-07-19_F2F-Tour-Toronto-Modern-SQ": {
+    "tournament_id": "2025-07-19_F2F-Tour-Toronto-Modern-SQ",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:47.235729"
+  },
+  "2025-07-12_F2F-Truro-Modern-SQ": {
+    "tournament_id": "2025-07-12_F2F-Truro-Modern-SQ",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:47.342672"
+  },
+  "2025-07-05_F2F-Tour-Red-Deer-Saturday-Super-Qualifier": {
+    "tournament_id": "2025-07-05_F2F-Tour-Red-Deer-Saturday-Super-Qualifier",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:47.448737"
+  },
+  "2025-07-19_The-Dark-Side-Modern-RCQ-2-Slot": {
+    "tournament_id": "2025-07-19_The-Dark-Side-Modern-RCQ-2-Slot",
+    "total_decks": 4,
+    "archetypes": {},
+    "colors": {
+      "C": 4
+    },
+    "timestamp": "2025-07-25T15:44:47.560652"
+  },
+  "2025-07-05_Star-City-Games-Regional-Championship-Qualifier-at": {
+    "tournament_id": "2025-07-05_Star-City-Games-Regional-Championship-Qualifier-at",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:47.664848"
+  },
+  "2025-07-13_Rcq-Sunday-Modern-at-DCU-Worcester-1030-Start": {
+    "tournament_id": "2025-07-13_Rcq-Sunday-Modern-at-DCU-Worcester-1030-Start",
+    "total_decks": 12,
+    "archetypes": {},
+    "colors": {
+      "C": 12
+    },
+    "timestamp": "2025-07-25T15:44:47.769114"
+  },
+  "2025-07-12_Rcq-qualifier": {
+    "tournament_id": "2025-07-12_Rcq-qualifier",
+    "total_decks": 8,
+    "archetypes": {},
+    "colors": {
+      "C": 8
+    },
+    "timestamp": "2025-07-25T15:44:47.873827"
+  },
+  "2025-07-06_Spilltinget-RCQ": {
+    "tournament_id": "2025-07-06_Spilltinget-RCQ",
+    "total_decks": 16,
+    "archetypes": {},
+    "colors": {
+      "C": 16
+    },
+    "timestamp": "2025-07-25T15:44:47.978529"
+  },
+  "2025-07-19_Double-Qualifier-LAST-CHANCE-RCQ": {
+    "tournament_id": "2025-07-19_Double-Qualifier-LAST-CHANCE-RCQ",
+    "total_decks": 4,
+    "archetypes": {},
+    "colors": {
+      "C": 4
+    },
+    "timestamp": "2025-07-25T15:44:48.084207"
+  },
+  "2025-07-11_MTG-US-RCQ-2025-26-Round-1-at-Lake-Hartwell-Collec": {
+    "tournament_id": "2025-07-11_MTG-US-RCQ-2025-26-Round-1-at-Lake-Hartwell-Collec",
+    "total_decks": 5,
+    "archetypes": {},
+    "colors": {
+      "C": 5
+    },
+    "timestamp": "2025-07-25T15:44:48.188978"
+  },
+  "2025-07-08_US-RCQ-2025-26-Round-1-Modern-RCQ-at-the-Den": {
+    "tournament_id": "2025-07-08_US-RCQ-2025-26-Round-1-Modern-RCQ-at-the-Den",
+    "total_decks": 4,
+    "archetypes": {},
+    "colors": {
+      "C": 4
+    },
+    "timestamp": "2025-07-25T15:44:48.293364"
+  },
+  "2025-07-14_2\u00ba-Torneio-13\u00aa-Liga-Arena-Guardians": {
+    "tournament_id": "2025-07-14_2\u00ba-Torneio-13\u00aa-Liga-Arena-Guardians",
+    "total_decks": 28,
+    "archetypes": {},
+    "colors": {
+      "C": 28
+    },
+    "timestamp": "2025-07-25T15:44:48.399807"
+  },
+  "2025-07-15_Timeless-Artisan-Cup-July-2025": {
+    "tournament_id": "2025-07-15_Timeless-Artisan-Cup-July-2025",
+    "total_decks": 19,
+    "archetypes": {},
+    "colors": {
+      "C": 19
+    },
+    "timestamp": "2025-07-25T15:44:48.613748"
+  },
+  "2025-07-09_Auction-Arena-Qualifier-4": {
+    "tournament_id": "2025-07-09_Auction-Arena-Qualifier-4",
+    "total_decks": 76,
+    "archetypes": {},
+    "colors": {
+      "C": 76
+    },
+    "timestamp": "2025-07-25T15:44:48.723732"
+  },
+  "2025-07-08_Auction-Arena-Qualifier-3": {
+    "tournament_id": "2025-07-08_Auction-Arena-Qualifier-3",
+    "total_decks": 72,
+    "archetypes": {},
+    "colors": {
+      "C": 72
+    },
+    "timestamp": "2025-07-25T15:44:48.835884"
   }
 }
