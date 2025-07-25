@@ -63,7 +63,7 @@ Parser → Détection d'archétypes → Validation des decks
    ↓
 3. STOCKAGE
    ↓
-PostgreSQL Database
+Fichiers JSON (données complètes)
    ↓
 4. ANALYSE
    ↓
@@ -91,10 +91,10 @@ FastAPI → Frontend/Rapports
 - **Matchup Calculator** : Calcule les taux de victoire entre archétypes
 - **Tournament Analyzer** : Analyse les performances
 
-### 4. **Database** (`database/`)
-- PostgreSQL avec schéma complet
-- Tables : tournaments, decklists, cards, matchups, etc.
-- Support des migrations Alembic
+### 4. **Cache System** (`data/cache/`)
+- SQLite légère pour metadata des tournois
+- Fichiers JSON pour les données complètes des decklists
+- Pas de base de données lourde nécessaire
 
 ### 5. **API** (`src/api/`)
 - FastAPI avec authentification JWT
@@ -153,6 +153,8 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - ✅ **Analyse sans leagues** : `data/cache/standard_analysis_no_leagues.html` - Focus sur les tournois compétitifs uniquement
 - ✅ **Règles d'archétypes customisées** : "Izzet Prowess (Cauldron)" → "Izzet Cauldron" (fichier créé : `IzzetCauldron.json`)
 - ✅ **Visualisation interactive** : Charts.js avec pie chart, bar charts et tableaux détaillés
+- ✅ **Pie chart amélioré** : Noms des archétypes DANS les parts du camembert + pourcentages partout
+- ✅ **Scripts de visualisation** : `create_archetype_visualization.py` (version améliorée avec labels)
 - ✅ **Comparaison avec/sans leagues** : Statistiques comparatives intégrées
 
 **En développement (autonomie créative) :**

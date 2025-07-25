@@ -32,7 +32,8 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 ### ✅ Phase 2: Cache System & Analysis (NEW!)
 - **Archetype Detection** : 44 Standard rules from MTGOFormatData integrated
 - **Color Detection** : 28,000+ cards database for accurate color identification
-- **Performance** : <500ms per tournament processing with SQLite cache
+- **Performance** : <500ms per tournament processing
+- **Cache System** : Lightweight SQLite for tournament metadata only (JSON files contain actual data)
 - **Guild Names** : Full support (Izzet, Dimir, Naya, Jeskai, etc.)
 - **Interactive Visualization** : HTML charts with pie chart labels & percentages
 - **Meta Snapshot** : Real-time metagame breakdown
@@ -64,8 +65,7 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 ### Prerequisites
 
 - Python 3.9+
-- PostgreSQL 13+
-- Redis (optional, for caching)
+- No database required - works directly with JSON files
 - Docker & Docker Compose (optional)
 
 ### Installation
@@ -87,12 +87,7 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
    make install-dev
    ```
 
-4. **Run migrations**
-   ```bash
-   make migrate
-   ```
-
-5. **Start the application**
+4. **Start the application**
    ```bash
    make run
    ```
@@ -167,14 +162,11 @@ manalytics/
 Key environment variables:
 
 ```bash
-# Database
-DATABASE_URL=postgresql://user:pass@localhost/manalytics
-
 # Melee.gg credentials
 MELEE_EMAIL=your_email@example.com
 MELEE_PASSWORD=your_password
 
-# API settings
+# API settings (optional)
 SECRET_KEY=your-secret-key
 API_KEY=your-api-key
 ```
