@@ -131,15 +131,34 @@ FastAPI → Frontend/Rapports
 C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The Gathering !
 
 ## **🚀 État Actuel (25/07/2025)**
-- ✅ **Scrapers 100% fonctionnels** - 493 tournois collectés (363 MTGO + 130 Melee)
-- ✅ **Validation communautaire** - 386 tournois correspondent avec fbettega/MTG_decklistcache
-- ✅ **Documentation complète** - Guides MTGO + Melee créés
-- ✅ **Scripts standalone** - `scrape_mtgo_standalone.py` et `scrape_melee_from_commit.py`
-- ✅ **Organisation propre** - Leagues MTGO séparées, tous formats supportés
-- ✅ **Script de validation** - Compare nos données avec le cache communautaire
-- ⏳ Analyseur hybride MTGO+Melee à créer
-- ⏳ Base de données PostgreSQL à connecter
-- ⏳ Métriques avancées (Top 8 rate, Trophy rate)
+
+### ✅ Phase 1 COMPLÈTE : Collection de Données
+- **Scrapers avec decklists complètes** - MTGO (enhanced) + Melee (Records field)
+- **Juillet 2025 scrapé** - 53 tournois MTGO + 14 Melee = ~1346 decklists
+- **Correction du problème initial** : Les scrapers récupèrent maintenant les decklists complètes (mainboard + sideboard)
+- **Documentation Phase 3** :
+  - `docs/PHASE3_VISUALIZATIONS_ROADMAP.md` - 30+ visualisations planifiées
+  - `docs/CONSENSUS_DECK_GENERATOR.md` - Feature unique : génération automatique de LA liste optimale
+  - `docs/INNOVATION_DETECTOR_CONCEPT.md` - Détection des tech choices émergentes
+  - `docs/DECK_COMPARISON_FEATURE.md` - Comparaison visuelle multi-listes
+  - `docs/SIDEBOARD_GUIDE_MATRIX_EXAMPLE.md` - Guide sideboard interactif
+  - `docs/PROJECT_SUMMARY_DIFFERENTIATORS.md` - Nos avantages concurrentiels
+
+### 🎯 Phase 2 EN ATTENTE : Pipeline de Traitement
+- Parser d'archétypes (basé sur MTGOArchetypeParser)
+- Base de données PostgreSQL
+- API FastAPI
+
+### 🚀 Phase 3 PLANIFIÉE : Visualisations Uniques
+**Priorité HAUTE (toutes avec Plotly) :**
+1. **Heatmap des Archétypes** - Distribution du métagame
+2. **Top 10 Cartes** - Les plus jouées par format
+3. **Générateur Deck Consensus** - LA liste optimale auto-générée (UNIQUE)
+4. **Comparaison de Listes** - Différences visuelles entre decks
+5. **Innovation Detector** - Tech choices émergentes (UNIQUE)
+
+**Section Experimental :**
+- Sideboard Guide Matrix - Guides IN/OUT déduits statistiquement
 
 ## **📁 Structure des Données**
 ```

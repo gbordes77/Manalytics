@@ -5,18 +5,25 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Version**: 1.0.0  
-**Status**: ✅ Scrapers Fonctionnels - Pipeline en développement  
+**Status**: ✅ Phase 1 Complete (Data Collection) | 🚧 Phase 2 (Pipeline) | 📋 Phase 3 (Visualizations)  
 **Last Update**: July 25, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
 
-## 🎉 Achievements (25/07/2025)
+## 🎯 What Makes Us Different
 
-- ✅ **Scrapers 100% fonctionnels** : MTGO + Melee avec toutes les données de juillet 2025
-- ✅ **493 tournois collectés** : 363 MTGO + 130 Melee avec organisation par format
-- ✅ **Validation communautaire** : 386 tournois correspondent avec fbettega/MTG_decklistcache
-- ✅ **Documentation complète** : Guides détaillés pour MTGO et Melee dans `docs/`
-- ✅ **Scripts standalone** : Scrapers indépendants sans dépendances complexes
+### Unique Features (Nobody Else Has):
+- **🤖 Consensus Deck Generator** - Automatically generates THE optimal decklist from 20+ tournament results
+- **🔍 Innovation Detector** - Real-time detection of emerging tech choices before they go mainstream
+- **📊 Multi-Deck Visual Comparison** - See exactly why some decks win and others don't
+- **🎯 Unified MTGO + Melee Analysis** - Most sites do one OR the other, we do both
+
+## 🎉 Current Status (Phase 1 Complete)
+
+- ✅ **Full decklists collection** : MTGO (enhanced scraper) + Melee (Records field parsing)
+- ✅ **July 2025 scraped** : 53 MTGO + 14 Melee tournaments = ~1346 complete decklists
+- ✅ **Fixed initial issue** : Now retrieving complete mainboard + sideboard data
+- ✅ **Phase 3 documentation ready** : 30+ planned visualizations in `docs/`
 
 ## 📋 Features
 
@@ -183,11 +190,17 @@ Full documentation at `/api/docs` when running.
 
 ## 📚 Documentation
 
-- [MTGO Scraping Guide](docs/MTGO_SCRAPING_GUIDE.md) - Guide complet du scraping MTGO
-- [Melee Scraping Guide](docs/MELEE_SCRAPING_GUIDE.md) - Guide complet du scraping Melee
-- [Scraping Best Practices](docs/SCRAPING_BEST_PRACTICES.md) - Leçons critiques apprises
-- [Architecture Overview](docs/architecture/README.md)
-- [Development Guide](docs/guides/development.md)
+### Core Guides
+- [MTGO Scraping Guide](docs/MTGO_SCRAPING_GUIDE.md) - Complete MTGO scraping guide
+- [Melee Scraping Guide](docs/MELEE_SCRAPING_GUIDE.md) - Complete Melee scraping guide  
+- [Scraping Best Practices](docs/SCRAPING_BEST_PRACTICES.md) - Critical lessons learned
+
+### Phase 3 Visualizations (Coming Soon)
+- [Phase 3 Roadmap](docs/PHASE3_VISUALIZATIONS_ROADMAP.md) - 30+ planned visualizations
+- [Consensus Deck Generator](docs/CONSENSUS_DECK_GENERATOR.md) - Auto-generate optimal lists
+- [Innovation Detector](docs/INNOVATION_DETECTOR_CONCEPT.md) - Detect emerging tech
+- [Deck Comparison](docs/DECK_COMPARISON_FEATURE.md) - Visual deck differences
+- [Project Differentiators](docs/PROJECT_SUMMARY_DIFFERENTIATORS.md) - What makes us unique
 
 ## 🔒 Security
 
