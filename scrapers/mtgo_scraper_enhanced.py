@@ -802,7 +802,23 @@ class TournamentTracker:
 
 
 class MTGOEnhancedScraper:
-    """Enhanced MTGO scraper with maximum data extraction"""
+    """Enhanced MTGO scraper with maximum data extraction
+    
+    IMPORTANT: Tournament ID Handling
+    =================================
+    MTGO tournament IDs are NOT sequential or predictable. Never try to guess IDs.
+    
+    Example of wrong approach:
+    - Found: 12803688, assumed next would be 12803689 ❌
+    - Reality: Next was 12803671 (different by 17!)
+    
+    Correct approach:
+    - Always parse the official listing page: https://www.mtgo.com/decklists
+    - Extract ALL tournament URLs from the HTML
+    - The scraper handles duplicates by using unique IDs in filenames
+    
+    This is why we parse the listing page first, then fetch individual tournaments.
+    """
     
     def __init__(self):
         self.tracker = TournamentTracker()

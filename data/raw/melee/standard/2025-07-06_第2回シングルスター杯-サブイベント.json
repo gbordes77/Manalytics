@@ -1,0 +1,433 @@
+{
+  "TournamentId": 312385,
+  "TournamentName": "第2回シングルスター杯　サブイベント",
+  "TournamentStartDate": "2025-07-06T06:00:00Z",
+  "OrganizationName": "Single Star",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "ff3a89bb-b3da-4636-bd28-b3120001e8f4",
+      "PlayerName": "Takuma Yokota",
+      "DeckName": "Gruul",
+      "Rank": 41,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ff028640-656b-4dac-9c76-b31100c31121",
+      "PlayerName": "zyagakky",
+      "DeckName": "Izzet Aggro",
+      "Rank": 31,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f8fa33ec-22e7-4b58-969d-b3110111db30",
+      "PlayerName": "Yukio Kozakai",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 9,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "edbfbf4d-2462-4655-a712-b3110084c729",
+      "PlayerName": "Seito89",
+      "DeckName": "Azorius Artifacts",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ea94fb73-4216-49af-a1b1-b312004000c8",
+      "PlayerName": "KazukiYada",
+      "DeckName": "Selesnya Tokens",
+      "Rank": 3,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e43a3d5f-b27b-4c15-9cec-b311011215cd",
+      "PlayerName": "Keita Yoshida",
+      "DeckName": "Orzhov Demons",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e2832d9f-a200-45ee-b5a8-b3120055cb99",
+      "PlayerName": "taiyo ishii",
+      "DeckName": "Izzet",
+      "Rank": 38,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "dffc02ed-3edd-4450-a333-b31100a4937d",
+      "PlayerName": "44die",
+      "DeckName": "Mono-Black",
+      "Rank": 27,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d87a6d7b-121e-47db-9f4c-b31200560d91",
+      "PlayerName": "bushido469ma",
+      "DeckName": "Azorius Combo",
+      "Rank": 25,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d62e2a5d-d2da-4e17-9024-b31101836a40",
+      "PlayerName": "Ran_Error_YiCheng",
+      "DeckName": "Dimir",
+      "Rank": 23,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d498023e-985c-48a9-8e5b-b31200497298",
+      "PlayerName": "Taishi_Tokairin",
+      "DeckName": "Gruul Aggro",
+      "Rank": 42,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d39655a5-c0c5-488f-a12d-b3120055d0bd",
+      "PlayerName": "YUTA IWAMOTO",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 2,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ca5c7af5-163c-41fb-ab43-b311018b2e58",
+      "PlayerName": "RyosukeOshimi",
+      "DeckName": "Jeskai Control",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c6f5a4b1-920d-4ba5-aa94-b31100f083a6",
+      "PlayerName": "Satoshi Tsukahara",
+      "DeckName": "Mono-White Tokens",
+      "Rank": 8,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c6c9ebaa-f467-4b68-b5ae-b31200412031",
+      "PlayerName": "hirokawa",
+      "DeckName": "Golgari Midrange",
+      "Rank": 43,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "aeec7b93-486a-48d7-be4e-b312002eea70",
+      "PlayerName": "JUNKI WATANABE",
+      "DeckName": "Naya",
+      "Rank": 39,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ad03bec3-508d-4752-a3f7-b312003cf04a",
+      "PlayerName": "SAYAMA TATSUNOSUKE",
+      "DeckName": "Dimir",
+      "Rank": 5,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ac22c573-e4f1-45b8-b7e5-b31100d92fa4",
+      "PlayerName": "Kevin Stevanus",
+      "DeckName": "Dimir Midrange",
+      "Rank": 28,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a47f581a-2484-44b6-b65b-b312000c3b8f",
+      "PlayerName": "恭維 上田",
+      "DeckName": "Abzan Midrange",
+      "Rank": 30,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9e6916bb-623d-48fc-b33d-b311013734f4",
+      "PlayerName": "RYOUJI UEMATSU",
+      "DeckName": "Rakdos",
+      "Rank": 13,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9734f991-eb20-4ce7-b4b8-b31100f4fa84",
+      "PlayerName": "Hiromochi Kimura",
+      "DeckName": "Dimir Midrange",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "97096b86-7941-416a-8fe7-b312000d6f77",
+      "PlayerName": "GEN YOSHIZAWA",
+      "DeckName": "Mono-Green Aggro",
+      "Rank": 16,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "966f7d6d-d144-4317-b9f7-b312005fd0a0",
+      "PlayerName": "ゆい 常盤",
+      "DeckName": "Mono-Black Demons",
+      "Rank": 33,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "93e9f4ed-f2cd-442d-8093-b31100d720e7",
+      "PlayerName": "Yuuki Fukuda",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 32,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "93d3817d-090c-4c68-a327-b31100f4c63e",
+      "PlayerName": "YAYU",
+      "DeckName": "W-U-B-G Reanimator",
+      "Rank": 40,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "916139fc-bbe1-4116-b6db-b312005931e0",
+      "PlayerName": "Yuuhei Komatsu",
+      "DeckName": "Naya Delirium",
+      "Rank": 36,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8b3df2d4-3d37-4380-8466-b312000dc043",
+      "PlayerName": "azrael708",
+      "DeckName": "Jeskai Oculus",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7cd1996c-7067-4d82-b36f-b31200597775",
+      "PlayerName": "RUKI",
+      "DeckName": "Dimir Aggro",
+      "Rank": 17,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7a48e12c-2a50-444d-b392-b312005777da",
+      "PlayerName": "kawasaki",
+      "DeckName": "Rakdos Aggro",
+      "Rank": 24,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6c8894db-ab06-4898-8b3f-b31101220568",
+      "PlayerName": "Ayase",
+      "DeckName": "W-U-R-G Otters",
+      "Rank": 45,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6ade1d3c-8fc0-4970-901c-b311011edeaa",
+      "PlayerName": "大貴 伊東",
+      "DeckName": "Naya",
+      "Rank": 15,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "651248f2-531d-452d-8918-b31200621131",
+      "PlayerName": "Kotaro Takahashi",
+      "DeckName": "Orzhov Sacrifice",
+      "Rank": 29,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "62b979fe-1576-4736-95e1-b312001285cf",
+      "PlayerName": "teruki0927",
+      "DeckName": "Mardu Aggro",
+      "Rank": 22,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6064a972-9583-4c9a-9f69-b3120019c876",
+      "PlayerName": "Yusuke Arai",
+      "DeckName": "Boros Aggro",
+      "Rank": 20,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5ee01e46-6a54-4753-96fb-b3120055d978",
+      "PlayerName": "shoichishimpuku",
+      "DeckName": "Dimir Tempo",
+      "Rank": 11,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "59902b9c-ad8f-4de4-aff3-b3120035a82c",
+      "PlayerName": "shimon sasaki",
+      "DeckName": "Izzet",
+      "Rank": 26,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "58391bb8-9d9a-4c34-98af-b31100d6d6ea",
+      "PlayerName": "hifumin777",
+      "DeckName": "W-U-B-R-G Legends",
+      "Rank": 1,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4f991bfc-f470-48b5-9df7-b311008324ac",
+      "PlayerName": "hirasou",
+      "DeckName": "Esper Midrange",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "46350126-fb5c-44e3-8409-b31000f70401",
+      "PlayerName": "Ryo Maeda",
+      "DeckName": "Jeskai Convoke",
+      "Rank": 12,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "414ba40d-a8cf-4b14-a9c8-b3110062b76d",
+      "PlayerName": "Kazuhisa Hamasaki",
+      "DeckName": "Jeskai Oculus",
+      "Rank": 10,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "407a8a5c-d5ed-4ae2-bb83-b31100f89bd7",
+      "PlayerName": "april418",
+      "DeckName": "Jeskai Control",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "397ce20a-290c-497f-81a7-b3110126d9e2",
+      "PlayerName": "Chapter44",
+      "DeckName": "Golgari Combo",
+      "Rank": 44,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2f20198c-c5e3-4428-9cef-b31100e5ac97",
+      "PlayerName": "Satoki Sano",
+      "DeckName": "Golgari",
+      "Rank": 37,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2ee7fe28-feba-4478-b97d-b31100f2441f",
+      "PlayerName": "Junichi Yoshihashi",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 18,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2e07c5f8-88c8-4a05-ae19-b3110099d670",
+      "PlayerName": "gehigasi",
+      "DeckName": "Gruul Aggro",
+      "Rank": 7,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2d8449f0-bf55-49dd-b606-b3110171b865",
+      "PlayerName": "Uzuhara",
+      "DeckName": "Izzet Prowess",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2b3ae2ca-a766-415c-873b-b312005d8d3e",
+      "PlayerName": "GO FUKUDA",
+      "DeckName": "W-U-B-R-G",
+      "Rank": 35,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "24cbe1bb-0e6b-41b0-a5d1-b3120049a159",
+      "PlayerName": "rumraisin",
+      "DeckName": "Izzet",
+      "Rank": 21,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "16e07a2d-52f7-407a-ab99-b31100f9630d",
+      "PlayerName": "Ryota Motegi",
+      "DeckName": "Bant Omniscience",
+      "Rank": 19,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "13e91b62-8534-4652-92e1-b312004a06a8",
+      "PlayerName": "ryunosuke iida",
+      "DeckName": "Rakdos Combo",
+      "Rank": 14,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0af474f5-5511-4fed-81f4-b31100dcbf0a",
+      "PlayerName": "Tetsuya Fukuyama",
+      "DeckName": "Izzet Midrange",
+      "Rank": 34,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "07035555-9303-4ece-af9f-b3110076d680",
+      "PlayerName": "Ryo Ito",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 4,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0440f941-be8f-4b87-a5c6-b312005a7e6d",
+      "PlayerName": "fukusuke",
+      "DeckName": "Sultai Omniscience",
+      "Rank": 6,
+      "Wins": 4,
+      "IsValid": true
+    }
+  ]
+}

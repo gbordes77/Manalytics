@@ -1,132 +1,90 @@
-#!/usr/bin/env python3
-"""Test simple pour Melee comme fbettega le fait."""
-import json
+#\!/usr/bin/env python3
 import requests
-from datetime import datetime, timedelta
+import json
+import time
+from datetime import datetime, timezone
+from bs4 import BeautifulSoup
 
-# Credentials
-MELEE_EMAIL = "gbordes64@gmail.com"
-MELEE_PASSWORD = "Ctr0Dur!"
+# Test direct authentication
+print("Testing Melee authentication...")
 
-def test_melee():
-    """Test Melee authentication and search."""
-    
-    print("🔐 Testing Melee.gg authentication...")
-    
-    # Create session
-    session = requests.Session()
-    
-    # Headers like a real browser
-    session.headers.update({
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': 'application/json, text/javascript, */*; q=0.01',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'X-Requested-With': 'XMLHttpRequest'
-    })
-    
-    # Step 1: Login
-    login_url = "https://melee.gg/Auth/Login"
-    login_data = {
-        "Email": MELEE_EMAIL,
-        "Password": MELEE_PASSWORD,
-        "RememberMe": "false"
-    }
-    
-    print("📤 Sending login request...")
-    response = session.post(login_url, data=login_data)
-    print(f"Login response: {response.status_code}")
-    
-    # Check cookies
-    print("\n🍪 Cookies after login:")
-    for cookie in session.cookies:
-        print(f"  - {cookie.name}: {cookie.value[:20]}...")
-    
-    # Step 2: Test tournament search
-    print("\n🔍 Testing tournament search...")
-    
-    # Search payload (comme fbettega)
-    search_url = "https://melee.gg/Tournament/SearchTournaments"
-    search_data = {
-        "draw": "1",
-        "columns[0][data]": "ID",
-        "columns[0][name]": "",
-        "columns[0][searchable]": "true",
-        "columns[0][orderable]": "true",
-        "columns[0][search][value]": "",
-        "columns[0][search][regex]": "false",
-        "columns[1][data]": "Name",
-        "columns[1][name]": "",
-        "columns[1][searchable]": "true",
-        "columns[1][orderable]": "true",
-        "columns[1][search][value]": "",
-        "columns[1][search][regex]": "false",
-        "columns[2][data]": "StartDate",
-        "columns[2][name]": "",
-        "columns[2][searchable]": "true",
-        "columns[2][orderable]": "true",
-        "columns[2][search][value]": "",
-        "columns[2][search][regex]": "false",
-        "columns[3][data]": "Status",
-        "columns[3][name]": "",
-        "columns[3][searchable]": "true",
-        "columns[3][orderable]": "true",
-        "columns[3][search][value]": "",
-        "columns[3][search][regex]": "false",
-        "columns[4][data]": "Format",
-        "columns[4][name]": "",
-        "columns[4][searchable]": "true",
-        "columns[4][orderable]": "true",
-        "columns[4][search][value]": "",
-        "columns[4][search][regex]": "false",
-        "columns[5][data]": "OrganizationName",
-        "columns[5][name]": "",
-        "columns[5][searchable]": "true",
-        "columns[5][orderable]": "true",
-        "columns[5][search][value]": "",
-        "columns[5][search][regex]": "false",
-        "columns[6][data]": "Decklists",
-        "columns[6][name]": "",
-        "columns[6][searchable]": "false",
-        "columns[6][orderable]": "false",
-        "columns[6][search][value]": "",
-        "columns[6][search][regex]": "false",
-        "columns[7][data]": "Description",
-        "columns[7][name]": "",
-        "columns[7][searchable]": "false",
-        "columns[7][orderable]": "false",
-        "columns[7][search][value]": "",
-        "columns[7][search][regex]": "false",
-        "order[0][column]": "2",
-        "order[0][dir]": "desc",
-        "start": "0",
-        "length": "25",
-        "search[value]": "",
-        "search[regex]": "false",
-        "startDate": (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%dT00:00:00.000Z"),
-        "endDate": datetime.now().strftime("%Y-%m-%dT23:59:59.999Z")
-    }
-    
-    response = session.post(search_url, data=search_data)
-    print(f"Search response: {response.status_code}")
-    print(f"Content-Type: {response.headers.get('content-type')}")
-    
-    if response.status_code == 200:
-        try:
-            data = response.json()
-            print(f"\n✅ Success! Found {len(data.get('data', []))} tournaments")
+session = requests.Session()
+session.headers.update({
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+})
+
+# Get login page
+print("1. Getting login page...")
+login_page = session.get("https://melee.gg/Account/SignIn")
+print(f"   Status: {login_page.status_code}")
+
+if login_page.status_code == 200:
+    soup = BeautifulSoup(login_page.text, "html.parser")
+    token = soup.find("input", {"name": "__RequestVerificationToken"})
+    if token:
+        token_value = token["value"]
+        print(f"   Token found: {token_value[:20]}...")
+        
+        # Try login
+        print("\n2. Attempting login...")
+        ajax_headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "*/*",
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "X-Requested-With": "XMLHttpRequest",
+            "Origin": "https://melee.gg",
+            "Referer": "https://melee.gg/Account/SignIn"
+        }
+        
+        login_data = {
+            "email": "gbordes64@gmail.com",
+            "password": "Ctr0Dur\!",
+            "__RequestVerificationToken": token_value
+        }
+        
+        login_resp = session.post(
+            "https://melee.gg/Account/SignInPassword",
+            headers=ajax_headers,
+            data=login_data
+        )
+        
+        print(f"   Login status: {login_resp.status_code}")
+        print(f"   Response: {login_resp.text[:200]}")
+        print(f"   Cookies: {session.cookies.get_dict()}")
+        
+        if ".AspNet.ApplicationCookie" in session.cookies.get_dict():
+            print("   ✓ Auth cookie received\!")
             
-            # Show first tournament
-            if data.get('data'):
-                first = data['data'][0]
-                print(f"\nFirst tournament:")
-                print(f"  - ID: {first.get('ID')}")
-                print(f"  - Name: {first.get('Name')}")
-                print(f"  - Format: {first.get('Format')}")
-                print(f"  - Date: {first.get('StartDate')}")
-        except json.JSONDecodeError:
-            print(f"\n❌ Not JSON. Response: {response.text[:500]}")
-    else:
-        print(f"\n❌ Error {response.status_code}: {response.text[:500]}")
-
-if __name__ == "__main__":
-    test_melee()
+            # Test API
+            print("\n3. Testing API...")
+            payload = {
+                "draw": "1",
+                "columns[0][data]": "TournamentStartDate",
+                "columns[0][searchable]": "false",
+                "columns[0][orderable]": "true",
+                "order[0][column]": "0",
+                "order[0][dir]": "desc",
+                "start": "0",
+                "length": "10",
+                "search[value]": "",
+                "search[regex]": "false",
+                "showOnlyMyDecklists": "false",
+                "gameId": "1",
+                "dateMin": "2025-07-01",
+                "dateMax": "2025-07-02"
+            }
+            
+            api_resp = session.post(
+                'https://melee.gg/Decklist/SearchDecklists',
+                data=payload,
+                headers={'X-Requested-With': 'XMLHttpRequest'},
+                timeout=30
+            )
+            
+            print(f"   API status: {api_resp.status_code}")
+            if api_resp.text:
+                data = api_resp.json()
+                print(f"   Records: {data.get('recordsTotal', 0)}")
+            else:
+                print("   Empty response")

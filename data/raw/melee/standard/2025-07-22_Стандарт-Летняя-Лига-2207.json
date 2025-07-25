@@ -1,0 +1,41 @@
+{
+  "TournamentId": 342694,
+  "TournamentName": "Стандарт. Летняя Лига (22.07)",
+  "TournamentStartDate": "2025-07-22T16:00:00Z",
+  "OrganizationName": "Club \"Another World\"",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "676f5179-0030-48a5-b70a-b322009a9f42",
+      "PlayerName": "K1ppy",
+      "DeckName": "Golgari Midrange",
+      "Rank": 2,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4f0f2804-8008-431f-936c-b3220107e805",
+      "PlayerName": "Valery Zubovich",
+      "DeckName": "Colorless",
+      "Rank": 5,
+      "Wins": 3,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "37809b69-fc44-41b3-a655-b3220102ad52",
+      "PlayerName": "Hogar",
+      "DeckName": "Mardu Graveyard",
+      "Rank": 13,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "252adfac-ecf5-4168-811f-b32200febccb",
+      "PlayerName": "[OMG]Summie",
+      "DeckName": "Decklist",
+      "Rank": 4,
+      "Wins": 3,
+      "IsValid": false
+    }
+  ]
+}

@@ -7,1059 +7,919 @@
   "decklists": [
     {
       "player": "TrashBoat100",
+      "result": "5-0",
       "mainboard": [
         {
-          "quantity": 2,
-          "name": "arabella abandoned doll"
+          "name": "Arabella, Abandoned Doll",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "battlefield forge"
+          "name": "Battlefield Forge",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "case of the gateway express"
+          "name": "Case of the Gateway Express",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "dragoons lance"
+          "name": "Dragoon's Lance",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "gleeful demolition"
+          "name": "Elegant Parlor",
+          "quantity": 1
         },
         {
-          "quantity": 4,
-          "name": "imodanes recruiter"
+          "name": "Gleeful Demolition",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "inspiring vantage"
+          "name": "Imodane's Recruiter",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "mirrex"
+          "name": "Inspiring Vantage",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "resolute reinforcements"
+          "name": "Knight-Errant of Eos",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "nesting bot"
+          "name": "Mirrex",
+          "quantity": 1
         },
         {
-          "quantity": 4,
-          "name": "novice inspector"
+          "name": "Mountain",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "painters studio"
+          "name": "Nesting Bot",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "plains"
+          "name": "Novice Inspector",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "mountain"
+          "name": "Painter's Studio // Defaced Gallery",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "sunbillow verge"
+          "name": "Plains",
+          "quantity": 5
         },
         {
-          "quantity": 1,
-          "name": "sanguine evangelist"
+          "name": "Resolute Reinforcements",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "knight-errant of eos"
+          "name": "Sanguine Evangelist",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "elegant parlor"
+          "name": "Starting Town",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "starting town"
+          "name": "Sunbillow Verge",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "plains"
-        },
-        {
-          "quantity": 1,
-          "name": "plains"
-        },
-        {
-          "quantity": 1,
-          "name": "plains"
-        },
-        {
-          "quantity": 1,
-          "name": "plains"
-        },
-        {
-          "quantity": 4,
-          "name": "warden of the inner sky"
+          "name": "Warden of the Inner Sky",
+          "quantity": 4
         }
       ],
       "sideboard": [
         {
-          "quantity": 2,
-          "name": "destroy evil"
+          "name": "Aven Interrupter",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "torch the tower"
+          "name": "Destroy Evil",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "aven interrupter"
+          "name": "Rest in Peace",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "sheltered by ghosts"
+          "name": "Sheltered by Ghosts",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "rest in peace"
+          "name": "Torch the Tower",
+          "quantity": 4
         }
-      ],
-      "wins": 5,
-      "losses": 0
+      ]
     },
     {
       "player": "Atagomax",
+      "result": "5-0",
       "mainboard": [
         {
-          "quantity": 14,
-          "name": "forest"
+          "name": "Bristly Bill, Spine Sower",
+          "quantity": 3
         },
         {
-          "quantity": 3,
-          "name": "bushwhack"
+          "name": "Bushwhack",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "escape tunnel"
+          "name": "Escape Tunnel",
+          "quantity": 3
         },
         {
-          "quantity": 3,
-          "name": "fabled passage"
+          "name": "Fabled Passage",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "forest"
+          "name": "Forest",
+          "quantity": 16
         },
         {
-          "quantity": 2,
-          "name": "llanowar elves"
+          "name": "Llanowar Elves",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "mossborn hydra"
+          "name": "Mossborn Hydra",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "royal treatment"
+          "name": "Royal Treatment",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "sazh katzroy"
+          "name": "Sazh Katzroy",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "sazhs chocobo"
+          "name": "Sazh's Chocobo",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "snakeskin veil"
+          "name": "Snakeskin Veil",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "springbloom druid"
+          "name": "Springbloom Druid",
+          "quantity": 3
         },
         {
-          "quantity": 1,
-          "name": "fabled passage"
+          "name": "Tifa Lockhart",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "tifa lockhart"
-        },
-        {
-          "quantity": 2,
-          "name": "llanowar elves"
-        },
-        {
-          "quantity": 2,
-          "name": "snakeskin veil"
-        },
-        {
-          "quantity": 1,
-          "name": "springbloom druid"
-        },
-        {
-          "quantity": 1,
-          "name": "traveling chocobo"
-        },
-        {
-          "quantity": 1,
-          "name": "traveling chocobo"
-        },
-        {
-          "quantity": 1,
-          "name": "traveling chocobo"
-        },
-        {
-          "quantity": 1,
-          "name": "traveling chocobo"
-        },
-        {
-          "quantity": 3,
-          "name": "bristly bill spine sower"
-        },
-        {
-          "quantity": 1,
-          "name": "bushwhack"
+          "name": "Traveling Chocobo",
+          "quantity": 4
         }
       ],
       "sideboard": [
         {
-          "quantity": 1,
-          "name": "insidious fungus"
+          "name": "Bartz and Boko",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "pawpatch recruit"
+          "name": "Insidious Fungus",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "wrenn and realmbreaker"
+          "name": "Nissa, Ascended Animist",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "pick your poison"
+          "name": "Pawpatch Recruit",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "sazh katzroy"
+          "name": "Pick Your Poison",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "scavenging ooze"
+          "name": "Sazh Katzroy",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "soul-guide lantern"
+          "name": "Scavenging Ooze",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "nissa ascended animist"
+          "name": "Soul-Guide Lantern",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "bartz and boko"
+          "name": "Wrenn and Realmbreaker",
+          "quantity": 2
         }
-      ],
-      "wins": 5,
-      "losses": 0
+      ]
     },
     {
       "player": "pcpalhares",
+      "result": "5-0",
       "mainboard": [
         {
-          "quantity": 4,
-          "name": "bushwhack"
+          "name": "Bristly Bill, Spine Sower",
+          "quantity": 3
         },
         {
-          "quantity": 4,
-          "name": "snakeskin veil"
+          "name": "Bushwhack",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "fabled passage"
+          "name": "Escape Tunnel",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "springbloom druid"
+          "name": "Fabled Passage",
+          "quantity": 4
         },
         {
-          "quantity": 13,
-          "name": "forest"
+          "name": "Forest",
+          "quantity": 15
         },
         {
-          "quantity": 1,
-          "name": "forest"
+          "name": "Hunter's Talent",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "royal treatment"
+          "name": "Llanowar Elves",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "escape tunnel"
+          "name": "Mossborn Hydra",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "forest"
+          "name": "Royal Treatment",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "hunters talent"
+          "name": "Sazh Katzroy",
+          "quantity": 1
         },
         {
-          "quantity": 4,
-          "name": "llanowar elves"
+          "name": "Sazh's Chocobo",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "sazh katzroy"
+          "name": "Snakeskin Veil",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "sazhs chocobo"
+          "name": "Springbloom Druid",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "tifa lockhart"
+          "name": "Tifa Lockhart",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "traveling chocobo"
-        },
-        {
-          "quantity": 3,
-          "name": "bristly bill spine sower"
-        },
-        {
-          "quantity": 4,
-          "name": "mossborn hydra"
+          "name": "Traveling Chocobo",
+          "quantity": 4
         }
       ],
       "sideboard": [
         {
-          "quantity": 2,
-          "name": "nissa ascended animist"
+          "name": "Insidious Fungus",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "soul-guide lantern"
+          "name": "Nissa, Ascended Animist",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "scavenging ooze"
+          "name": "Pawpatch Recruit",
+          "quantity": 3
         },
         {
-          "quantity": 1,
-          "name": "thrun breaker of silence"
+          "name": "Predator Ooze",
+          "quantity": 3
         },
         {
-          "quantity": 3,
-          "name": "predator ooze"
+          "name": "Scavenging Ooze",
+          "quantity": 1
         },
         {
-          "quantity": 3,
-          "name": "pawpatch recruit"
+          "name": "Soul-Guide Lantern",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "insidious fungus"
+          "name": "Thrun, Breaker of Silence",
+          "quantity": 1
         }
-      ],
-      "wins": 5,
-      "losses": 0
+      ]
     },
     {
       "player": "NoamBrunel",
+      "result": "5-0",
       "mainboard": [
         {
-          "quantity": 1,
-          "name": "go for the throat"
+          "name": "Cavern of Souls",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "go for the throat"
+          "name": "Cut Down",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "jace the perfected mind"
+          "name": "Darkslick Shores",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "cavern of souls"
+          "name": "Deduce",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "cut down"
+          "name": "Doomsday Excruciator",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "restless reef"
+          "name": "Dreams of Laguna",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "the end"
+          "name": "Gloomlake Verge",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "deduce"
+          "name": "Go for the Throat",
+          "quantity": 3
         },
         {
-          "quantity": 3,
-          "name": "undercity sewers"
+          "name": "Intimidation Tactics",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "dreams of laguna"
+          "name": "Jace, the Perfected Mind",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "gloomlake verge"
+          "name": "Oildeep Gearhulk",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "phantom interference"
+          "name": "Phantom Interference",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "three steps ahead"
+          "name": "Restless Reef",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "doomsday excruciator"
+          "name": "Stock Up",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "stock up"
+          "name": "Swamp",
+          "quantity": 5
         },
         {
-          "quantity": 3,
-          "name": "intimidation tactics"
+          "name": "The End",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "oildeep gearhulk"
+          "name": "Three Steps Ahead",
+          "quantity": 2
         },
         {
-          "quantity": 5,
-          "name": "swamp"
+          "name": "Undercity Sewers",
+          "quantity": 3
         },
         {
-          "quantity": 4,
-          "name": "underground river"
-        },
-        {
-          "quantity": 4,
-          "name": "darkslick shores"
+          "name": "Underground River",
+          "quantity": 4
         }
       ],
       "sideboard": [
         {
-          "quantity": 2,
-          "name": "negate"
+          "name": "Blot Out",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "disdainful stroke"
+          "name": "Deadly Cover-Up",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "dreams of steel and oil"
+          "name": "Disdainful Stroke",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "deadly cover-up"
+          "name": "Dreams of Steel and Oil",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "blot out"
+          "name": "Ghost Vacuum",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "ghost vacuum"
+          "name": "Negate",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "preacher of the schism"
+          "name": "Preacher of the Schism",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "tishanas tidebinder"
+          "name": "Tishana's Tidebinder",
+          "quantity": 2
         }
-      ],
-      "wins": 5,
-      "losses": 0
+      ]
     },
     {
       "player": "Predrag133",
+      "result": "5-0",
       "mainboard": [
         {
-          "quantity": 1,
-          "name": "haywire mite"
+          "name": "Brightglass Gearhulk",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "plains"
+          "name": "Brushland",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "nurturing pixie"
+          "name": "Collector's Cage",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "forest"
+          "name": "Dion, Bahamut's Dominant",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "voice of victory"
+          "name": "Dusk Rose Reliquary",
+          "quantity": 1
         },
         {
-          "quantity": 3,
-          "name": "forest"
+          "name": "Elspeth, Storm Slayer",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "elspeth storm slayer"
+          "name": "Enduring Innocence",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "elspeth storm slayer"
+          "name": "Forest",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "get lost"
+          "name": "Get Lost",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "collectors cage"
+          "name": "Haywire Mite",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "dusk rose reliquary"
+          "name": "Hushwood Verge",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "overlord of the mistmoors"
+          "name": "Llanowar Elves",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "dion bahamuts dominant"
+          "name": "Mirrex",
+          "quantity": 3
         },
         {
-          "quantity": 4,
-          "name": "brightglass gearhulk"
+          "name": "Nurturing Pixie",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "sandstorm salvager"
+          "name": "Overlord of the Mistmoors",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "enduring innocence"
+          "name": "Pawpatch Recruit",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "brushland"
+          "name": "Plains",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "pawpatch recruit"
+          "name": "Razorverge Thicket",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "mirrex"
+          "name": "Restless Prairie",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "llanowar elves"
+          "name": "Sandstorm Salvager",
+          "quantity": 1
         },
         {
-          "quantity": 4,
-          "name": "hushwood verge"
+          "name": "Soul-Guide Lantern",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "plains"
-        },
-        {
-          "quantity": 4,
-          "name": "razorverge thicket"
-        },
-        {
-          "quantity": 2,
-          "name": "restless prairie"
-        },
-        {
-          "quantity": 1,
-          "name": "soul-guide lantern"
+          "name": "Voice of Victory",
+          "quantity": 3
         }
       ],
       "sideboard": [
         {
-          "quantity": 1,
-          "name": "elesh norn mother of machines"
+          "name": "Authority of the Consuls",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "ghost vacuum"
+          "name": "Aven Interrupter",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "dusk rose reliquary"
+          "name": "Beza, the Bounding Spring",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "beza the bounding spring"
+          "name": "Cease // Desist",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "voice of victory"
+          "name": "Dusk Rose Reliquary",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "loran of the third path"
+          "name": "Elesh Norn, Mother of Machines",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "scavenging ooze"
+          "name": "Ghost Vacuum",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "authority of the consuls"
+          "name": "Loran of the Third Path",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "cease/desist"
+          "name": "Scavenging Ooze",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "aven interrupter"
+          "name": "Soul-Guide Lantern",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "soul-guide lantern"
+          "name": "Voice of Victory",
+          "quantity": 1
         }
-      ],
-      "wins": 5,
-      "losses": 0
+      ]
     },
     {
       "player": "Supercazzola",
+      "result": "5-0",
       "mainboard": [
         {
-          "quantity": 2,
-          "name": "blast zone"
+          "name": "Blast Zone",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "dispelling exhale"
+          "name": "Caustic Exhale",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "go for the throat"
+          "name": "Cut Down",
+          "quantity": 3
         },
         {
-          "quantity": 4,
-          "name": "sheoldreds edict"
+          "name": "Darkslick Shores",
+          "quantity": 3
         },
         {
-          "quantity": 3,
-          "name": "cut down"
+          "name": "Deadly Cover-Up",
+          "quantity": 3
         },
         {
-          "quantity": 3,
-          "name": "darkslick shores"
+          "name": "Demolition Field",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "stock up"
+          "name": "Dispelling Exhale",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "undercity sewers"
+          "name": "Gloomlake Verge",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "sunken citadel"
+          "name": "Go for the Throat",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "island"
+          "name": "Island",
+          "quantity": 2
         },
         {
-          "quantity": 6,
-          "name": "swamp"
+          "name": "Marang River Regent",
+          "quantity": 3
         },
         {
-          "quantity": 4,
-          "name": "three steps ahead"
+          "name": "Oildeep Gearhulk",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "restless reef"
+          "name": "Restless Reef",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "demolition field"
+          "name": "Scavenger Regent",
+          "quantity": 1
         },
         {
-          "quantity": 4,
-          "name": "gloomlake verge"
+          "name": "Sheoldred's Edict",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "caustic exhale"
+          "name": "Stock Up",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "oildeep gearhulk"
+          "name": "Sunken Citadel",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "scavenger regent"
+          "name": "Swamp",
+          "quantity": 6
         },
         {
-          "quantity": 1,
-          "name": "stock up"
+          "name": "Three Steps Ahead",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "marang river regent"
-        },
-        {
-          "quantity": 3,
-          "name": "deadly cover-up"
+          "name": "Undercity Sewers",
+          "quantity": 2
         }
       ],
       "sideboard": [
         {
-          "quantity": 2,
-          "name": "tishanas tidebinder"
+          "name": "Doomsday Excruciator",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "negate"
+          "name": "Duress",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "sheoldred the apocalypse"
+          "name": "Leyline of the Void",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "doomsday excruciator"
+          "name": "Negate",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "outrageous robbery"
+          "name": "Outrageous Robbery",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "duress"
+          "name": "Sheoldred, the Apocalypse",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "outrageous robbery"
-        },
-        {
-          "quantity": 1,
-          "name": "duress"
-        },
-        {
-          "quantity": 4,
-          "name": "leyline of the void"
+          "name": "Tishana's Tidebinder",
+          "quantity": 2
         }
-      ],
-      "wins": 5,
-      "losses": 0
+      ]
     },
     {
       "player": "tarkanmag",
+      "result": "5-0",
       "mainboard": [
         {
-          "quantity": 2,
-          "name": "sheoldred the apocalypse"
+          "name": "Agonasaur Rex",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "restless cottage"
+          "name": "Anoint with Affliction",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "go for the throat"
+          "name": "Blooming Marsh",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "unholy annex"
+          "name": "Cut Down",
+          "quantity": 3
         },
         {
-          "quantity": 4,
-          "name": "swamp"
+          "name": "Demon Wall",
+          "quantity": 3
         },
         {
-          "quantity": 4,
-          "name": "forest"
+          "name": "Forest",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "cut down"
+          "name": "Gix's Command",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "llanowar wastes"
+          "name": "Go for the Throat",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "gixs command"
+          "name": "Llanowar Elves",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "shoot the sheriff"
+          "name": "Llanowar Wastes",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "demon wall"
+          "name": "Lord Skitter, Sewer King",
+          "quantity": 1
         },
         {
-          "quantity": 4,
-          "name": "wastewood verge"
+          "name": "Lumbering Worldwagon",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "tear asunder"
+          "name": "Restless Cottage",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "blooming marsh"
+          "name": "Scavenger Regent",
+          "quantity": 1
         },
         {
-          "quantity": 4,
-          "name": "llanowar elves"
+          "name": "Sentinel of the Nameless City",
+          "quantity": 2
         },
         {
-          "quantity": 4,
-          "name": "lumbering worldwagon"
+          "name": "Sheoldred, the Apocalypse",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "sentinel of the nameless city"
+          "name": "Shoot the Sheriff",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "underground mortuary"
+          "name": "Soulstone Sanctuary",
+          "quantity": 3
         },
         {
-          "quantity": 3,
-          "name": "soulstone sanctuary"
+          "name": "Surrak, Elusive Hunter",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "scavenger regent"
+          "name": "Swamp",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "surrak elusive hunter"
+          "name": "Tear Asunder",
+          "quantity": 3
         },
         {
-          "quantity": 1,
-          "name": "lord skitter sewer king"
+          "name": "Underground Mortuary",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "anoint with affliction"
+          "name": "Unholy Annex // Ritual Chamber",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "agonasaur rex"
+          "name": "Wastewood Verge",
+          "quantity": 4
         }
       ],
       "sideboard": [
         {
-          "quantity": 1,
-          "name": "vivien reid"
+          "name": "Blot Out",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "choking miasma"
+          "name": "Choking Miasma",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "blot out"
+          "name": "Deadly Cover-Up",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "nissa ascended animist"
+          "name": "Duress",
+          "quantity": 3
         },
         {
-          "quantity": 2,
-          "name": "liliana of the veil"
+          "name": "Ghost Vacuum",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "duress"
+          "name": "Liliana of the Veil",
+          "quantity": 2
         },
         {
-          "quantity": 1,
-          "name": "deadly cover-up"
+          "name": "Nissa, Ascended Animist",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "poison the waters"
+          "name": "Poison the Waters",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "strategic betrayal"
+          "name": "Strategic Betrayal",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "ghost vacuum"
+          "name": "Tranquil Frillback",
+          "quantity": 1
         },
         {
-          "quantity": 1,
-          "name": "tranquil frillback"
+          "name": "Vivien Reid",
+          "quantity": 1
         }
-      ],
-      "wins": 5,
-      "losses": 0
+      ]
     },
     {
       "player": "Wizard_2002",
+      "result": "5-0",
       "mainboard": [
         {
-          "quantity": 1,
-          "name": "mountain"
+          "name": "Burst Lightning",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "emberheart challenger"
+          "name": "Emberheart Challenger",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "fugitive codebreaker"
+          "name": "Fugitive Codebreaker",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "mountain"
+          "name": "Hired Claw",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "mountain"
+          "name": "Lightning Strike",
+          "quantity": 3
         },
         {
-          "quantity": 4,
-          "name": "monastery swiftspear"
+          "name": "Monastery Swiftspear",
+          "quantity": 4
         },
         {
-          "quantity": 3,
-          "name": "lightning strike"
+          "name": "Mountain",
+          "quantity": 16
         },
         {
-          "quantity": 4,
-          "name": "hired claw"
+          "name": "Obliterating Bolt",
+          "quantity": 1
         },
         {
-          "quantity": 4,
-          "name": "opera love song"
+          "name": "Opera Love Song",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "rockface village"
+          "name": "Rockface Village",
+          "quantity": 4
         },
         {
-          "quantity": 4,
-          "name": "burst lightning"
+          "name": "Screaming Nemesis",
+          "quantity": 4
         },
         {
-          "quantity": 1,
-          "name": "shock"
+          "name": "Shock",
+          "quantity": 4
         },
         {
-          "quantity": 2,
-          "name": "soulstone sanctuary"
+          "name": "Soulstone Sanctuary",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "witchstalker frenzy"
-        },
-        {
-          "quantity": 1,
-          "name": "mountain"
-        },
-        {
-          "quantity": 2,
-          "name": "mountain"
-        },
-        {
-          "quantity": 2,
-          "name": "mountain"
-        },
-        {
-          "quantity": 2,
-          "name": "mountain"
-        },
-        {
-          "quantity": 1,
-          "name": "mountain"
-        },
-        {
-          "quantity": 3,
-          "name": "mountain"
-        },
-        {
-          "quantity": 1,
-          "name": "obliterating bolt"
-        },
-        {
-          "quantity": 4,
-          "name": "screaming nemesis"
-        },
-        {
-          "quantity": 1,
-          "name": "shock"
-        },
-        {
-          "quantity": 1,
-          "name": "shock"
-        },
-        {
-          "quantity": 1,
-          "name": "shock"
+          "name": "Witchstalker Frenzy",
+          "quantity": 2
         }
       ],
       "sideboard": [
         {
-          "quantity": 3,
-          "name": "urabrasks forge"
+          "name": "Abrade",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "ghost vacuum"
+          "name": "Ghost Vacuum",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "koth fire of resistance"
+          "name": "Koth, Fire of Resistance",
+          "quantity": 2
         },
         {
-          "quantity": 2,
-          "name": "lithomantic barrage"
+          "name": "Lithomantic Barrage",
+          "quantity": 2
         },
         {
-          "quantity": 3,
-          "name": "magebane lizard"
+          "name": "Magebane Lizard",
+          "quantity": 3
         },
         {
-          "quantity": 1,
-          "name": "obliterating bolt"
+          "name": "Obliterating Bolt",
+          "quantity": 1
         },
         {
-          "quantity": 2,
-          "name": "abrade"
+          "name": "Urabrask's Forge",
+          "quantity": 3
         }
-      ],
-      "wins": 5,
-      "losses": 0
+      ]
     }
   ]
 }

@@ -53,11 +53,18 @@ class MTGODataSaver:
             
             format_path.mkdir(parents=True, exist_ok=True)
             
-            # Create filename
+            # Create filename with ID to handle duplicates
             date_str = tournament.date.strftime("%Y%m%d")
             safe_name = "".join(c for c in tournament.name if c.isalnum() or c in " -_").strip()
             safe_name = safe_name.replace(" ", "_")[:100]
-            filename = f"{date_str}_{safe_name}.json"
+            
+            # Extract ID from URL for uniqueness
+            tournament_id = tournament.uri.split('/')[-1].split('-')[-1] if '/' in tournament.uri else ""
+            if tournament_id and tournament_id.isdigit():
+                filename = f"{date_str}_{safe_name}_{tournament_id}.json"
+            else:
+                filename = f"{date_str}_{safe_name}.json"
+            
             filepath = format_path / filename
             
             # Check if exists

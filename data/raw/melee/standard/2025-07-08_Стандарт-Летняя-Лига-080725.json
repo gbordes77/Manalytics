@@ -1,0 +1,33 @@
+{
+  "TournamentId": 337405,
+  "TournamentName": "Стандарт. Летняя Лига (08.07.25)",
+  "TournamentStartDate": "2025-07-08T16:00:00Z",
+  "OrganizationName": "Club \"Another World\"",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "d46ee14c-385a-444a-b0d9-b31400fb4122",
+      "PlayerName": "NickLatkovich",
+      "DeckName": "Grixis Combo",
+      "Rank": 9,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7e7f96a9-4c27-42ca-a228-b314010547da",
+      "PlayerName": "Alexander Buslavsky",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 7,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "61a0a1b6-4a96-4b86-a875-b31400ff2260",
+      "PlayerName": "ykcyc",
+      "DeckName": "Decklist",
+      "Rank": 14,
+      "Wins": 0,
+      "IsValid": false
+    }
+  ]
+}
