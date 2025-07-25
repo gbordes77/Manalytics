@@ -11,22 +11,10 @@
     {
       "Type": "DoesNotContainMainboard",
       "Cards": [
-        "Abhorrent Oculus"
+        "Abhorrent Oculus",
+        "Agatha's Soul Cauldron"
       ]
     }
   ],
-  "Variants": [
-    {
-      "Name": "Cauldron",
-      "IncludeColorInName": true,
-      "Conditions": [
-        {
-          "Type": "InMainboard",
-          "Cards": [
-            "Agatha's Soul Cauldron"
-          ]
-        }
-      ]
-    }
-  ]
+  "Variants": []
 }

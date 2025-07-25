@@ -1,0 +1,25 @@
+{
+  "total_tournaments": 41,
+  "total_decks": 624,
+  "unique_archetypes": 47,
+  "archetypes": [
+    {"name": "Izzet Cauldron", "decks": 125, "percentage": 20.03},
+    {"name": "Dimir Midrange", "decks": 121, "percentage": 19.39},
+    {"name": "Golgari Midrange", "decks": 29, "percentage": 4.65},
+    {"name": "Mono White Caretaker", "decks": 27, "percentage": 4.33},
+    {"name": "Boros Convoke", "decks": 22, "percentage": 3.53},
+    {"name": "Mono Green Landfall", "decks": 21, "percentage": 3.37},
+    {"name": "Gruul Aggro", "decks": 11, "percentage": 1.76},
+    {"name": "Izzet Prowess", "decks": 11, "percentage": 1.76},
+    {"name": "Naya Yuna", "decks": 10, "percentage": 1.60},
+    {"name": "Colorless Convoke", "decks": 8, "percentage": 1.28},
+    {"name": "Azorius Control", "decks": 8, "percentage": 1.28},
+    {"name": "Jeskai Control", "decks": 7, "percentage": 1.12},
+    {"name": "Izzet Oculus", "decks": 7, "percentage": 1.12},
+    {"name": "Golgari Graveyard", "decks": 7, "percentage": 1.12},
+    {"name": "Azorius Omniscience", "decks": 6, "percentage": 0.96},
+    {"name": "Mono Red Aggro", "decks": 6, "percentage": 0.96},
+    {"name": "4c Yuna", "decks": 5, "percentage": 0.80},
+    {"name": "Others", "decks": 193, "percentage": 30.93}
+  ]
+}

@@ -1,11 +1,15 @@
 # 🎯 Manalytics - MTG Tournament Analysis Platform
 
+> **"Chaque visualisation doit raconter une histoire. Pas de graphs pour faire joli - uniquement des insights actionnables pour gagner des tournois."**
+> 
+> **Chaque visualisation doit apporter de la valeur compétitive réelle.**
+
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Version**: 2.0.0  
-**Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | 📋 Phase 3 (Advanced Visualizations)  
+**Version**: 3.0.0  
+**Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | 🚀 Phase 3 In Progress (Advanced Visualizations)  
 **Last Update**: July 25, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
@@ -40,8 +44,11 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 4. **Golgari Midrange** - 4.4%
 5. **Boros Convoke** - 3.6%
 
-### 📋 Phase 3: Ready to Start
-- **Phase 3 documentation ready** : 30+ planned visualizations in `docs/`
+### 🚀 Phase 3: In Progress! 
+- **First visualization delivered** : `data/cache/standard_analysis_no_leagues.html`
+- **Archetype naming improved** : "Izzet Prowess (Cauldron)" → "Izzet Cauldron"
+- **Next steps** : Enhanced interactive visualizations with competitive insights
+- **Focus** : Tournament-only data (excluding leagues) for higher quality analysis
 
 ## 📋 Features
 

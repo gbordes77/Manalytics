@@ -1,5 +1,9 @@
 # 🎯 **Manalytics - Analyseur de Métagame Magic: The Gathering**
 
+> **"Chaque visualisation doit raconter une histoire. Pas de graphs pour faire joli - uniquement des insights actionnables pour gagner des tournois."**
+> 
+> **Chaque visualisation doit apporter de la valeur compétitive réelle.**
+
 ## **⚠️ IMPORTANT : Origine du Projet**
 
 Ce projet est un dérivé du pipeline communautaire MTG suivant :
@@ -136,13 +140,6 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - **Scrapers avec decklists complètes** - MTGO (enhanced) + Melee (Records field)
 - **Juillet 2025 scrapé** - 53 tournois MTGO + 14 Melee = ~1346 decklists
 - **Correction du problème initial** : Les scrapers récupèrent maintenant les decklists complètes (mainboard + sideboard)
-- **Documentation Phase 3** :
-  - `docs/PHASE3_VISUALIZATIONS_ROADMAP.md` - 30+ visualisations planifiées
-  - `docs/CONSENSUS_DECK_GENERATOR.md` - Feature unique : génération automatique de LA liste optimale
-  - `docs/INNOVATION_DETECTOR_CONCEPT.md` - Détection des tech choices émergentes
-  - `docs/DECK_COMPARISON_FEATURE.md` - Comparaison visuelle multi-listes
-  - `docs/SIDEBOARD_GUIDE_MATRIX_EXAMPLE.md` - Guide sideboard interactif
-  - `docs/PROJECT_SUMMARY_DIFFERENTIATORS.md` - Nos avantages concurrentiels
 
 ### ✅ Phase 2 COMPLÈTE : Pipeline de Traitement
 - **Cache SQLite** : Metadata + JSON decklists storage
@@ -151,16 +148,27 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - **Performance** : <500ms par tournoi
 - **Visualisations** : Charts interactifs avec noms complets (Izzet, Naya, etc.)
 
-### 🚀 Phase 3 PLANIFIÉE : Visualisations Uniques
-**Priorité HAUTE (toutes avec Plotly) :**
-1. **Heatmap des Archétypes** - Distribution du métagame
-2. **Top 10 Cartes** - Les plus jouées par format
-3. **Générateur Deck Consensus** - LA liste optimale auto-générée (UNIQUE)
-4. **Comparaison de Listes** - Différences visuelles entre decks
-5. **Innovation Detector** - Tech choices émergentes (UNIQUE)
+### 🚀 Phase 3 EN COURS : Visualisations Avancées & Insights Compétitifs
+**Réalisations Phase 3 :**
+- ✅ **Analyse sans leagues** : `data/cache/standard_analysis_no_leagues.html` - Focus sur les tournois compétitifs uniquement
+- ✅ **Règles d'archétypes customisées** : "Izzet Prowess (Cauldron)" → "Izzet Cauldron" (fichier créé : `IzzetCauldron.json`)
+- ✅ **Visualisation interactive** : Charts.js avec pie chart, bar charts et tableaux détaillés
+- ✅ **Comparaison avec/sans leagues** : Statistiques comparatives intégrées
 
-**Section Experimental :**
-- Sideboard Guide Matrix - Guides IN/OUT déduits statistiquement
+**En développement (autonomie créative) :**
+1. **Dashboard temps réel** - Métagame evolution avec WebSockets
+2. **Heatmap de matchups** - Win rates entre archétypes  
+3. **Innovation Detector** - Détection automatique des tech choices émergentes
+4. **Consensus Deck Generator** - LA liste optimale générée par ML
+5. **Sideboard Intelligence** - Patterns et suggestions automatiques
+
+**Documentation Phase 3** :
+  - `docs/PHASE3_VISUALIZATIONS_ROADMAP.md` - 30+ visualisations planifiées
+  - `docs/CONSENSUS_DECK_GENERATOR.md` - Feature unique : génération automatique de LA liste optimale
+  - `docs/INNOVATION_DETECTOR_CONCEPT.md` - Détection des tech choices émergentes
+  - `docs/DECK_COMPARISON_FEATURE.md` - Comparaison visuelle multi-listes
+  - `docs/SIDEBOARD_GUIDE_MATRIX_EXAMPLE.md` - Guide sideboard interactif
+  - `docs/PROJECT_SUMMARY_DIFFERENTIATORS.md` - Nos avantages concurrentiels
 
 ## **📁 Structure des Données**
 ```
@@ -184,13 +192,15 @@ data/
 - **Configuration** : `.env` + `src/manalytics/config.py`
 - **Structure** : 100% professionnelle dans `src/manalytics/`
 
-## **📊 État Actuel du Métagame Standard (25/07/2025)**
+## **📊 État Actuel du Métagame Standard (25/07/2025) - Sans Leagues**
 ```
-1. Izzet Prowess (Cauldron) - 19.6%
-2. Dimir Midrange - 19.4%  
-3. Mono White Caretaker - 4.6%
-4. Golgari Midrange - 4.4%
-5. Boros Convoke - 3.6%
+1. Izzet Cauldron - 20.0% (125 decks)
+2. Dimir Midrange - 19.4% (121 decks)  
+3. Golgari Midrange - 4.7% (29 decks)
+4. Mono White Caretaker - 4.3% (27 decks)
+5. Boros Convoke - 3.5% (22 decks)
+
+Total: 41 tournois compétitifs, 624 decks analysés
 ```
 
 ## **⚡ Commandes Utiles (NOUVEAU SYSTÈME)**
@@ -269,3 +279,9 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
 1. **TOUJOURS DEMANDER LA PÉRIODE** : Ne JAMAIS utiliser "7 jours" par défaut. Toujours demander à l'utilisateur quelle période scraper.
 2. **FORMAT PAR DÉFAUT = STANDARD** : Sauf contre-ordre explicite, toujours scraper le format Standard uniquement.
 3. **CONFIRMATION AVANT LANCEMENT** : Toujours confirmer la période et le format avant de lancer un scraping.
+
+## ⚠️ RÈGLE ABSOLUE : EXCLUSION DES LEAGUES
+
+**LES LEAGUES (5-0) SONT STOCKÉES DANS UN DOSSIER `leagues/` SÉPARÉ ET NE DOIVENT JAMAIS ÊTRE UTILISÉES DANS LES ANALYSES OU VISUALISATIONS.**
+
+Raison : Les leagues ne représentent pas des tournois compétitifs mais des résultats de ladder filtrés. Seuls les vrais tournois (challenges, qualifiers, etc.) doivent être analysés.
