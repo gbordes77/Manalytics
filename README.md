@@ -5,10 +5,18 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Version**: 1.0.0  
-**Status**: 🚧 Professional Migration in Progress  
+**Status**: ✅ Scrapers Fonctionnels - Pipeline en développement  
 **Last Update**: July 25, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
+
+## 🎉 Achievements (25/07/2025)
+
+- ✅ **Scrapers 100% fonctionnels** : MTGO + Melee avec toutes les données de juillet 2025
+- ✅ **493 tournois collectés** : 363 MTGO + 130 Melee avec organisation par format
+- ✅ **Validation communautaire** : 386 tournois correspondent avec fbettega/MTG_decklistcache
+- ✅ **Documentation complète** : Guides détaillés pour MTGO et Melee dans `docs/`
+- ✅ **Scripts standalone** : Scrapers indépendants sans dépendances complexes
 
 ## 📋 Features
 
@@ -64,14 +72,17 @@ Visit http://localhost:8000/docs for API documentation.
 ### Scraping Tournaments
 
 ```bash
-# Scrape MTGO tournaments
-make scrape-mtgo format=standard days=7
+# Scraper MTGO (standalone)
+python3 scrape_mtgo_standalone.py
 
-# Scrape Melee.gg tournaments  
-make scrape-melee format=standard days=7
+# Scraper Melee (standalone)  
+python3 scrape_melee_from_commit.py
 
-# Scrape all platforms
-make scrape-all
+# Valider contre le cache communautaire
+python3 scripts/validate_against_decklistcache.py --platform all
+
+# Ancienne méthode (si besoin)
+python3 scripts/scrape_all_platforms.py --format standard --days 7
 ```
 
 ### Running Tests
@@ -172,9 +183,10 @@ Full documentation at `/api/docs` when running.
 
 ## 📚 Documentation
 
+- [MTGO Scraping Guide](docs/MTGO_SCRAPING_GUIDE.md) - Guide complet du scraping MTGO
+- [Melee Scraping Guide](docs/MELEE_SCRAPING_GUIDE.md) - Guide complet du scraping Melee
+- [Scraping Best Practices](docs/SCRAPING_BEST_PRACTICES.md) - Leçons critiques apprises
 - [Architecture Overview](docs/architecture/README.md)
-- [API Reference](docs/api/README.md)
-- [Scraper Guide](docs/scrapers/README.md)
 - [Development Guide](docs/guides/development.md)
 
 ## 🔒 Security

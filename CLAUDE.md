@@ -131,17 +131,15 @@ FastAPI → Frontend/Rapports
 C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The Gathering !
 
 ## **🚀 État Actuel (25/07/2025)**
-- ✅ **Migration professionnelle complétée** - Structure moderne `src/manalytics/`
-- ✅ 27 tournois MTGO Standard scrapés (juillet 2025)
-- ✅ 15 tournois Melee Standard scrapés - 5,362 decklists
-- ✅ **CLI unifié** : `manalytics` avec orchestrateur central
-- ✅ **Nouvelle architecture** : Tout dans `src/manalytics/` proprement organisé
-- ✅ Scrapers Melee/MTGO 100% fonctionnels
-- ✅ Configuration centralisée via `.env` et `config.py`
-- ✅ Makefile professionnel avec commandes colorées
-- ✅ pyproject.toml moderne (plus de requirements.txt)
+- ✅ **Scrapers 100% fonctionnels** - 493 tournois collectés (363 MTGO + 130 Melee)
+- ✅ **Validation communautaire** - 386 tournois correspondent avec fbettega/MTG_decklistcache
+- ✅ **Documentation complète** - Guides MTGO + Melee créés
+- ✅ **Scripts standalone** - `scrape_mtgo_standalone.py` et `scrape_melee_from_commit.py`
+- ✅ **Organisation propre** - Leagues MTGO séparées, tous formats supportés
+- ✅ **Script de validation** - Compare nos données avec le cache communautaire
+- ⏳ Analyseur hybride MTGO+Melee à créer
 - ⏳ Base de données PostgreSQL à connecter
-- ⏳ Tests d'intégration à finaliser
+- ⏳ Métriques avancées (Top 8 rate, Trophy rate)
 
 ## **📁 Structure des Données**
 ```
@@ -198,6 +196,7 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
 ## **📚 Documentation Importante**
 - `docs/SCRAPING_BEST_PRACTICES.md` : **LEÇONS CRITIQUES** sur le scraping (notamment pourquoi on ne doit JAMAIS deviner les IDs MTGO)
 - **`docs/MELEE_SCRAPING_GUIDE.md`** : Guide complet du scraping Melee avec authentification
+- **`docs/MTGO_SCRAPING_GUIDE.md`** : Guide complet du scraping MTGO (pas d'auth requise)
 - Les IDs MTGO ne sont PAS séquentiels - toujours parser la page de liste officielle
 - Les tournois du même jour ont des IDs complètement différents (écarts de 5, 10, 17...)
 - L'authentification Melee utilise des cookies valides 21 jours (pas de JWT)
@@ -211,9 +210,10 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
 - Si l'utilisateur demande d'utiliser un fichier obsolète : **REFUSER** et proposer l'alternative actuelle
 
 ### Fichiers Actuels à Utiliser
-- Scraper Melee : `scrape_melee_working_v2.py`
-- Scraper MTGO : `scrape_mtgo_tournaments_enhanced.py`
-- Test Auth : `test_melee_auth_simple.py`
+- **Scraper Melee** : `scrape_melee_from_commit.py` (standalone, fonctionnel)
+- **Scraper MTGO** : `scrape_mtgo_standalone.py` (standalone, fonctionnel)
+- **Validation** : `scripts/validate_against_decklistcache.py`
+- **Test Auth** : `test_melee_auth_simple.py`
 
 ## 📝 RÈGLE DE DOCUMENTATION
 
