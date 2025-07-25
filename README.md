@@ -1,197 +1,199 @@
-# 🎯 Manalytics - MTG Meta Analysis Platform
+# 🎯 Manalytics - MTG Tournament Analysis Platform
+
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Version**: 1.0.0  
-**État**: ✅ Production Ready (85.2% tests passing)  
-**Dernière mise à jour**: 24 Juillet 2025
+**Status**: 🚧 Professional Migration in Progress  
+**Last Update**: July 25, 2025
 
-## 📋 Table des Matières
+A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
 
-1. [Vue d'ensemble](#vue-densemble)
-2. [Architecture](#architecture)
-3. [Installation rapide](#installation-rapide)
-4. [Structure du projet](#structure-du-projet)
-5. [État actuel](#état-actuel)
-6. [Documentation](#documentation)
+## 📋 Features
 
-## 🎮 Vue d'ensemble
+- **🔍 Tournament Scraping**: Automated collection from MTGO and Melee.gg
+- **📊 Metagame Analysis**: Track deck performance and meta share
+- **🎨 Archetype Detection**: Automatic deck categorization
+- **📈 Visualizations**: Heatmaps, charts, and trend analysis
+- **🚀 REST API**: Full-featured API for data access
+- **🐳 Docker Support**: Easy deployment with Docker Compose
 
-Manalytics est une plateforme d'analyse de méta pour Magic: The Gathering qui :
-- 📊 Collecte automatiquement les données de tournois (MTGO, Melee.gg)
-- 🏷️ Détecte les archétypes avec des règles personnalisables
-- 📈 Génère des analyses de méta et matchups
-- 🔐 Expose une API REST sécurisée (JWT)
-- 📉 Visualise les tendances du méta
+## 🚀 Quick Start
 
-### Formats supportés
-- ✅ Standard
-- ✅ Modern  
-- ✅ Pioneer
-- ✅ Legacy
-- ✅ Vintage
-- ✅ Pauper
+### Prerequisites
 
-## 🏗️ Architecture
+- Python 3.9+
+- PostgreSQL 13+
+- Redis (optional, for caching)
+- Docker & Docker Compose (optional)
 
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   Scrapers      │────▶│   PostgreSQL    │◀────│   FastAPI       │
-│  MTGO/Melee     │     │   + Redis       │     │   REST API      │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-         │                       │                        │
-         └───────────────────────┴────────────────────────┘
-                             Docker Network
-```
+### Installation
 
-### Stack Technique
-- **Backend**: Python 3.11, FastAPI, SQLAlchemy
-- **Base de données**: PostgreSQL 16 + Redis
-- **Scraping**: BeautifulSoup4, Selenium, httpx
-- **Analyse**: Pandas, NumPy
-- **Auth**: JWT (python-jose)
-- **Infra**: Docker Compose
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/manalytics.git
+   cd manalytics
+   ```
 
-## 🚀 Installation Rapide
+2. **Set up environment**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your credentials
+   ```
 
-### Prérequis
-- Docker & Docker Compose
-- Python 3.11+ (optionnel, pour dev local)
-- 4GB RAM minimum
+3. **Install dependencies**
+   ```bash
+   make install-dev
+   ```
 
-### 1. Cloner et configurer
+4. **Run migrations**
+   ```bash
+   make migrate
+   ```
 
-```bash
-# Cloner le projet
-git clone <repo-url>
-cd Manalytics
+5. **Start the application**
+   ```bash
+   make run
+   ```
 
-# Copier l'environnement
-cp .env.example .env
+Visit http://localhost:8000/docs for API documentation.
 
-# Éditer .env avec vos credentials Melee.gg
-nano .env
-```
+## 🎮 Usage
 
-### 2. Lancer le système
+### Scraping Tournaments
 
 ```bash
-# Construire et démarrer
+# Scrape MTGO tournaments
+make scrape-mtgo format=standard days=7
+
+# Scrape Melee.gg tournaments  
+make scrape-melee format=standard days=7
+
+# Scrape all platforms
+make scrape-all
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+make test
+
+# Run with coverage
+make test-coverage
+
+# Run only unit tests
+make test-unit
+```
+
+### Code Quality
+
+```bash
+# Run linters
+make lint
+
+# Format code
+make format
+
+# Full check
+make check
+```
+
+## 📁 Project Structure
+
+```
+manalytics/
+├── src/manalytics/     # Main package
+│   ├── scrapers/       # Tournament scrapers
+│   ├── parsers/        # Deck parsers
+│   ├── analyzers/      # Data analysis
+│   ├── api/            # REST API
+│   └── models/         # Data models
+├── tests/              # Test suite
+├── docs/               # Documentation
+├── scripts/            # Utility scripts
+└── data/               # Data storage
+    ├── raw/            # Raw scraped data
+    └── processed/      # Processed data
+```
+
+## 🔧 Configuration
+
+Key environment variables:
+
+```bash
+# Database
+DATABASE_URL=postgresql://user:pass@localhost/manalytics
+
+# Melee.gg credentials
+MELEE_EMAIL=your_email@example.com
+MELEE_PASSWORD=your_password
+
+# API settings
+SECRET_KEY=your-secret-key
+API_KEY=your-api-key
+```
+
+See `.env.example` for all options.
+
+## 🐳 Docker Deployment
+
+```bash
+# Build and start all services
 docker-compose up -d
 
-# Vérifier les logs
+# View logs
 docker-compose logs -f
 
-# Attendre que tout soit prêt (30-60s)
-docker-compose ps
-```
-
-### 3. Initialiser les données
-
-```bash
-# Charger les règles d'archétypes
-docker exec manalytics-api-1 python scripts/fetch_archetype_rules.py
-docker exec manalytics-api-1 python scripts/migrate_rules.py
-
-# Vérifier
-curl http://localhost:8000/health
-```
-
-### 4. Premier scraping
-
-```bash
-# Scraper Modern sur 1 jour
-docker exec manalytics-worker-1 python scripts/run_pipeline.py --format modern --days 1
-```
-
-## 📁 Structure du Projet
-
-```
-Manalytics/
-├── src/
-│   ├── api/              # API REST FastAPI
-│   │   ├── routes/       # Endpoints (auth, decks, analysis)
-│   │   ├── models.py     # Modèles Pydantic
-│   │   └── auth.py       # JWT authentication
-│   ├── scrapers/         # Collecte de données
-│   │   ├── mtgo_scraper.py
-│   │   └── melee_scraper.py
-│   ├── parsers/          # Parsing des decks
-│   ├── analyzers/        # Analyse de méta
-│   └── visualizations/   # Génération de graphiques
-├── database/
-│   ├── schema.sql        # Schema PostgreSQL
-│   ├── migrations/       # Migrations SQL
-│   └── db_pool.py        # Connection pooling
-├── scripts/
-│   ├── run_pipeline.py   # Pipeline principal
-│   ├── final_integration_test.py  # Tests complets
-│   └── migrate_rules.py  # Import des règles
-├── docker-compose.yml    # Orchestration
-├── Dockerfile           # Image API/Worker
-└── .env                 # Configuration
-```
-
-## 📊 État Actuel du Système
-
-### ✅ Ce qui fonctionne
-- Infrastructure Docker complète
-- API REST avec JWT authentication
-- Base de données avec 60 règles d'archétypes
-- Health checks et monitoring
-- Tests d'intégration (85.2% passing)
-
-### ⚠️ Points d'attention
-- MTGO URLs changent quotidiennement (404 normaux)
-- Pas encore de données de tournois (système vide)
-- Melee.gg nécessite des credentials valides
-
-### 🔧 Corrections appliquées
-1. Fixed environment variables handling
-2. Fixed SQL schema mismatches  
-3. Added health check endpoint
-4. Fixed pandas/psycopg2 compatibility
-5. Fixed archetype rules migration
-6. Fixed API pagination
-
-## 📚 Documentation Complète
-
-| Document | Description |
-|----------|-------------|
-| [OPERATIONS.md](./OPERATIONS.md) | Guide des opérations quotidiennes |
-| [API_GUIDE.md](./API_GUIDE.md) | Documentation API avec exemples |
-| [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) | Résolution des problèmes courants |
-| [DEVELOPMENT.md](./DEVELOPMENT.md) | Guide de développement |
-
-## 🎯 Quick Commands
-
-```bash
-# Statut système
-docker-compose ps
-docker exec manalytics-api-1 python scripts/final_integration_test.py
-
-# Logs
-docker-compose logs -f api
-docker-compose logs -f worker
-
-# Base de données
-docker exec manalytics-db-1 psql -U manalytics
-
-# Rebuild
+# Stop services
 docker-compose down
-docker-compose build --no-cache
-docker-compose up -d
 ```
 
-## 🔒 Sécurité
+## 📊 API Endpoints
 
-- JWT tokens avec expiration 30 min
-- Passwords hashés avec bcrypt
-- API keys pour les scrapers
-- Network isolation Docker
-- Pas de secrets dans le code
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/meta` | Current metagame breakdown |
+| `GET /api/decks` | Browse decklists |
+| `GET /api/tournaments` | Tournament results |
+| `GET /api/matchups` | Matchup analysis |
+| `GET /api/trends` | Historical trends |
 
-## 📞 Support
+Full documentation at `/api/docs` when running.
 
-Pour toute question, consulter d'abord [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📚 Documentation
+
+- [Architecture Overview](docs/architecture/README.md)
+- [API Reference](docs/api/README.md)
+- [Scraper Guide](docs/scrapers/README.md)
+- [Development Guide](docs/guides/development.md)
+
+## 🔒 Security
+
+- Credentials stored in environment variables
+- JWT authentication for API
+- Rate limiting on all endpoints
+- Input validation and sanitization
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- MTG community for archetype definitions
+- Original scrapers from mtg_decklist_scrapper
+- All contributors and testers
 
 ---
-*Projet développé avec l'assistance de Claude AI - Juillet 2025*
+
+Built with ❤️ for the Magic: The Gathering community

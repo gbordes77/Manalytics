@@ -1,0 +1,12 @@
+# Fichiers et dossiers à ignorer pour Claude Code
+
+# IMPORTANT : Ne jamais exécuter ou utiliser ces fichiers
+obsolete/
+obsolete/**/*
+
+# Autres fichiers à ignorer
+*.pyc
+__pycache__/
+.git/
+*.log
+.DS_Store

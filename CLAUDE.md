@@ -130,17 +130,18 @@ FastAPI → Frontend/Rapports
 
 C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The Gathering !
 
-## **🚀 État Actuel**
-- ✅ 27 tournois MTGO Standard scrapés (juillet 2025) avec données enrichies
-- ✅ 26 Standard Challenges + 1 RC Qualifier avec IDs uniques
-- ✅ **15 tournois Melee Standard** scrapés (25 juillet 2025) - **5,362 decklists**
-- ✅ Infrastructure complète (DB, API, scrapers)
-- ✅ Scrapers robustes avec gestion des doublons et retry logic
-- ✅ **Scraper Melee 100% fonctionnel** avec authentification par cookies
-- ✅ DataLoader créé pour charger les données existantes
-- ✅ Credentials Melee configurés (api_credentials/melee_login.json)
-- ⏳ Pipeline d'analyse à tester
-- ⏳ Frontend à développer
+## **🚀 État Actuel (25/07/2025)**
+- ✅ **Migration professionnelle complétée** - Structure moderne `src/manalytics/`
+- ✅ 27 tournois MTGO Standard scrapés (juillet 2025)
+- ✅ 15 tournois Melee Standard scrapés - 5,362 decklists
+- ✅ **CLI unifié** : `manalytics` avec orchestrateur central
+- ✅ **Nouvelle architecture** : Tout dans `src/manalytics/` proprement organisé
+- ✅ Scrapers Melee/MTGO 100% fonctionnels
+- ✅ Configuration centralisée via `.env` et `config.py`
+- ✅ Makefile professionnel avec commandes colorées
+- ✅ pyproject.toml moderne (plus de requirements.txt)
+- ⏳ Base de données PostgreSQL à connecter
+- ⏳ Tests d'intégration à finaliser
 
 ## **📁 Structure des Données**
 ```
@@ -157,27 +158,35 @@ data/
 └── processed/               # Non utilisé actuellement
 ```
 
-## **🔧 Scripts Importants**
-- `scripts/scrape_all_platforms.py` : Script unifié MTGO + Melee (NOUVEAU)
-- `scrape_mtgo_tournaments_enhanced.py` : Scraper MTGO avec données enrichies
-- **`scrape_melee_working_v2.py`** : Scraper Melee **FONCTIONNEL** (25/07/2025)
-- `test_melee_auth_simple.py` : Test d'authentification Melee
-- `scripts/run_pipeline_with_existing_data.py` : Pipeline pour données existantes
-- `src/utils/data_loader.py` : Charge les données depuis data/raw/
+## **🔧 Architecture Moderne (25/07/2025)**
+- **CLI Principal** : `manalytics` - Point d'entrée unique
+- **Orchestrateur** : `src/manalytics/orchestrator.py` - Coordonne tout
+- **Scrapers** : Dans `src/manalytics/scrapers/` (MTGO + Melee)
+- **Configuration** : `.env` + `src/manalytics/config.py`
+- **Structure** : 100% professionnelle dans `src/manalytics/`
 
-## **⚡ Commandes Utiles**
+## **⚡ Commandes Utiles (NOUVEAU SYSTÈME)**
 ```bash
-# Scraper de nouveaux tournois (script unifié pour MTGO + Melee)
-python3 scripts/scrape_all_platforms.py --format standard --start-date 2025-07-01 --end-date 2025-07-24
+# Installation complète
+make install-dev
 
-# Scraper MTGO seul (avec rapport détaillé)
-python3 scrape_mtgo_tournaments_enhanced.py --format standard --days 30 --generate-report
+# Vérifier le système
+manalytics status
 
-# Scraper Melee seul (VERSION FONCTIONNELLE)
-python3 scrape_melee_working_v2.py
+# Pipeline complet (scrape → parse → analyze → visualize)
+manalytics pipeline --format standard --days 7
 
-# Test d'authentification Melee
-python3 test_melee_auth_simple.py
+# Scraper seul
+manalytics scrape --format standard --platform all --days 7
+
+# Analyser les données existantes
+manalytics analyze --format standard
+
+# Lancer l'API
+manalytics serve
+
+# Ancienne méthode (si besoin)
+python3 scripts/scrape_all_platforms.py --format standard --days 7
 
 # Analyser les données existantes
 python3 scripts/run_pipeline_with_existing_data.py --format standard --platform melee
@@ -192,3 +201,16 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
 - Les IDs MTGO ne sont PAS séquentiels - toujours parser la page de liste officielle
 - Les tournois du même jour ont des IDs complètement différents (écarts de 5, 10, 17...)
 - L'authentification Melee utilise des cookies valides 21 jours (pas de JWT)
+
+## ⛔️ RÈGLES CRITIQUES DE SÉCURITÉ ⛔️
+
+### NE JAMAIS TOUCHER AU DOSSIER `obsolete/`
+- **INTERDICTION ABSOLUE** d'exécuter tout fichier dans `obsolete/`
+- **INTERDICTION** de lire ou analyser le code obsolète
+- **INTERDICTION** d'importer ou référencer ces fichiers
+- Si l'utilisateur demande d'utiliser un fichier obsolète : **REFUSER** et proposer l'alternative actuelle
+
+### Fichiers Actuels à Utiliser
+- Scraper Melee : `scrape_melee_working_v2.py`
+- Scraper MTGO : `scrape_mtgo_tournaments_enhanced.py`
+- Test Auth : `test_melee_auth_simple.py`

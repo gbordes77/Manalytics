@@ -39,14 +39,18 @@ env/
 # macOS
 .DS_Store
 
-# Credentials - NEVER commit these\!
+# Credentials - NEVER commit these!
 api_credentials/
 *.json.secret
 *_login.json
 *_cookies.json
+melee_cookies.json
+Api_token_and_login/
 
 # Logs
 *.log
+logs/
+*.log.*
 
 # Database
 *.db
@@ -82,4 +86,37 @@ mtg_decklist_scrapper/
 .env
 .env.local
 .env.*.local
-EOF < /dev/null
+
+# Security - Never commit these
+credentials/
+secrets/
+*.pem
+*.key
+*.crt
+*.pfx
+
+# Backups
+backups/
+*.backup
+*.bak
+
+# Migration artifacts (now in docs/)
+docs/migration/MIGRATION_LOG.md
+docs/audit/PROJECT_AUDIT.json
+
+# Test files at root (should be in tests/)
+test_*.py
+
+# HTML reports (should be in data/reports/)
+*.html
+
+# Output files
+*_output.log
+*_output_*.log
+*_final.log
+
+# Temporary scraped data
+collection_log.txt
+
+# Obsolete files
+obsolete/

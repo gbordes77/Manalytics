@@ -1,153 +1,153 @@
-# Makefile for Manalytics Project
+# Manalytics Professional Makefile
+# ================================
 
-.PHONY: help setup install dev prod test clean logs shell db-shell check-env
+# Variables
+PYTHON := python3
+PIP := $(PYTHON) -m pip
+PROJECT := manalytics
+SRC_DIR := src
+TEST_DIR := tests
+DOCS_DIR := docs
+
+# Colors for output
+RED := \033[0;31m
+GREEN := \033[0;32m
+YELLOW := \033[0;33m
+BLUE := \033[0;34m
+NC := \033[0m # No Color
 
 # Default target
-help:
-	@echo "Manalytics - MTG Meta Analysis Platform"
+.DEFAULT_GOAL := help
+
+# Phony targets
+.PHONY: help install install-dev test lint format clean docker run migrate docs
+
+# Help target
+help: ## Show this help message
+	@echo "$(BLUE)Manalytics - Professional MTG Analysis Platform$(NC)"
+	@echo "=============================================="
 	@echo ""
 	@echo "Available commands:"
-	@echo "  make setup      - Complete initial setup (fetch rules, build, migrate)"
-	@echo "  make dev        - Start development environment"
-	@echo "  make prod       - Start production environment"
-	@echo "  make test       - Run test suite"
-	@echo "  make clean      - Clean up containers and volumes"
-	@echo "  make logs       - Show logs for all services"
-	@echo "  make shell      - Open shell in API container"
-	@echo "  make db-shell   - Open PostgreSQL shell"
-	@echo "  make pipeline   - Run the scraping pipeline manually"
-
-# Check if .env exists
-check-env:
-	@if [ ! -f .env ]; then \
-		echo "Creating .env from .env.example..."; \
-		cp .env.example .env; \
-		echo "⚠️  Please edit .env with your credentials before continuing!"; \
-		exit 1; \
-	fi
-
-# Complete setup from scratch
-setup: check-env
-	@echo "🚀 Starting Manalytics setup..."
-	
-	# Step 1: Fetch archetype rules
-	@echo "📥 Fetching latest archetype rules..."
-	@python scripts/fetch_archetype_rules.py
-	
-	# Step 2: Build Docker images
-	@echo "🏗️  Building Docker images..."
-	@docker-compose build
-	
-	# Step 3: Start database
-	@echo "🗄️  Starting database..."
-	@docker-compose up -d db
-	@echo "⏳ Waiting for database to be ready..."
-	@sleep 10
-	
-	# Step 4: Run migrations
-	@echo "📊 Running database migrations..."
-	@docker-compose run --rm api python scripts/migrate_rules.py
-	
-	# Step 5: Start all services
-	@echo "🎯 Starting all services..."
-	@docker-compose up -d
-	
-	@echo "✅ Setup complete! Services are running."
-	@echo "📱 API: http://localhost:8000"
-	@echo "📚 API Docs: http://localhost:8000/api/docs"
-
-# Development environment
-dev: check-env
-	docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
-
-# Production environment (detached)
-prod: check-env
-	docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-
-# Run tests
-test:
-	docker-compose run --rm api pytest tests/ -v
-
-# Run the pipeline manually
-pipeline: check-env
-	@read -p "Enter format (standard/modern/legacy/pioneer/pauper/vintage): " format; \
-	read -p "Enter days to scrape (default 7): " days; \
-	days=$${days:-7}; \
-	docker-compose run --rm worker python scripts/run_pipeline.py --format $$format --days $$days
-
-# View logs
-logs:
-	docker-compose logs -f
-
-# Specific service logs
-logs-api:
-	docker-compose logs -f api
-
-logs-worker:
-	docker-compose logs -f worker
-
-logs-db:
-	docker-compose logs -f db
-
-# Shell access
-shell:
-	docker-compose exec api /bin/bash
-
-db-shell:
-	docker-compose exec db psql -U manalytics -d manalytics
-
-# Cleanup
-clean:
-	docker-compose down -v
-	rm -rf data/raw/*
-	rm -rf data/processed/*
-	rm -rf data/cache/*
-	rm -rf data/output/*
-
-# Restart services
-restart:
-	docker-compose restart
-
-# Check service health
-health:
-	@echo "🏥 Checking service health..."
-	@docker-compose ps
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  $(GREEN)%-15s$(NC) %s\n", $$1, $$2}'
 	@echo ""
-	@echo "🔍 Database status:"
-	@docker-compose exec db pg_isready -U manalytics || echo "Database not ready"
-	@echo ""
-	@echo "🔍 Redis status:"
-	@docker-compose exec redis redis-cli ping || echo "Redis not ready"
-	@echo ""
-	@echo "🔍 API status:"
-	@curl -s http://localhost:8000/api/health | jq . || echo "API not ready"
+	@echo "Quick start: make install && make test"
 
-# Run comprehensive health check
-health-check:
-	@python scripts/healthcheck.py
+# Installation
+install: ## Install production dependencies
+	@echo "$(BLUE)Installing production dependencies...$(NC)"
+	$(PIP) install --upgrade pip setuptools wheel
+	$(PIP) install -e .
+	@echo "$(GREEN)✓ Installation complete!$(NC)"
 
-# Run continuous health monitoring
-health-monitor:
-	@python scripts/healthcheck.py --continuous
+install-dev: ## Install development dependencies
+	@echo "$(BLUE)Installing development dependencies...$(NC)"
+	$(PIP) install --upgrade pip setuptools wheel
+	$(PIP) install -e ".[dev,test,docs]"
+	pre-commit install
+	@echo "$(GREEN)✓ Development setup complete!$(NC)"
 
-# Health check with JSON output (for CI/CD)
-health-json:
-	@python scripts/healthcheck.py --json
+# Testing
+test: ## Run all tests with coverage
+	@echo "$(BLUE)Running tests...$(NC)"
+	$(PYTHON) -m pytest -v --cov=$(PROJECT) --cov-report=html --cov-report=term
+	@echo "$(GREEN)✓ Tests complete! Coverage report: htmlcov/index.html$(NC)"
 
-# Update dependencies
-update-deps:
-	@echo "📦 Updating dependencies..."
-	pip-compile requirements.in -o requirements.txt --upgrade
+test-unit: ## Run unit tests only
+	@echo "$(BLUE)Running unit tests...$(NC)"
+	$(PYTHON) -m pytest tests/unit -v -m "unit"
 
-# Database backup
-backup-db:
-	@mkdir -p backups
-	@timestamp=$$(date +%Y%m%d_%H%M%S); \
-	docker-compose exec db pg_dump -U manalytics manalytics > backups/manalytics_$$timestamp.sql; \
-	echo "✅ Database backed up to backups/manalytics_$$timestamp.sql"
+test-integration: ## Run integration tests only
+	@echo "$(BLUE)Running integration tests...$(NC)"
+	$(PYTHON) -m pytest tests/integration -v -m "integration"
 
-# Restore database from backup
-restore-db:
-	@read -p "Enter backup filename (in backups/ directory): " filename; \
-	docker-compose exec -T db psql -U manalytics manalytics < backups/$$filename; \
-	echo "✅ Database restored from backups/$$filename"
+# Code quality
+lint: ## Run all linters
+	@echo "$(BLUE)Running linters...$(NC)"
+	@echo "→ Black (formatter check)..."
+	$(PYTHON) -m black --check $(SRC_DIR) $(TEST_DIR)
+	@echo "→ isort (import sort check)..."
+	$(PYTHON) -m isort --check-only $(SRC_DIR) $(TEST_DIR)
+	@echo "→ Flake8 (style guide)..."
+	$(PYTHON) -m flake8 $(SRC_DIR) $(TEST_DIR)
+	@echo "→ MyPy (type checking)..."
+	$(PYTHON) -m mypy $(SRC_DIR)
+	@echo "$(GREEN)✓ All linters passed!$(NC)"
+
+format: ## Format code with black and isort
+	@echo "$(BLUE)Formatting code...$(NC)"
+	$(PYTHON) -m black $(SRC_DIR) $(TEST_DIR) scripts/
+	$(PYTHON) -m isort $(SRC_DIR) $(TEST_DIR) scripts/
+	@echo "$(GREEN)✓ Code formatted!$(NC)"
+
+# Database
+migrate: ## Run database migrations
+	@echo "$(BLUE)Running database migrations...$(NC)"
+	$(PYTHON) -m alembic upgrade head
+	@echo "$(GREEN)✓ Migrations complete!$(NC)"
+
+# Scrapers
+scrape-mtgo: ## Run MTGO scraper (usage: make scrape-mtgo format=standard days=7)
+	@echo "$(BLUE)Running MTGO scraper...$(NC)"
+	$(PYTHON) -m manalytics.scrapers.mtgo.scraper --format $(format) --days $(days)
+
+scrape-melee: ## Run Melee scraper (usage: make scrape-melee format=standard days=7)
+	@echo "$(BLUE)Running Melee scraper...$(NC)"
+	$(PYTHON) -m manalytics.scrapers.melee.scraper --format $(format) --days $(days)
+
+scrape-all: ## Run all scrapers
+	@echo "$(BLUE)Running all scrapers...$(NC)"
+	$(PYTHON) scripts/scrape_all_platforms.py --format standard --days 7
+
+# API
+run: ## Run the API server
+	@echo "$(BLUE)Starting Manalytics API...$(NC)"
+	$(PYTHON) -m uvicorn manalytics.api.app:app --reload --host 0.0.0.0 --port 8000
+
+# Docker
+docker-build: ## Build Docker images
+	@echo "$(BLUE)Building Docker images...$(NC)"
+	docker-compose build
+	@echo "$(GREEN)✓ Docker build complete!$(NC)"
+
+docker-up: ## Start Docker containers
+	@echo "$(BLUE)Starting Docker containers...$(NC)"
+	docker-compose up -d
+	@echo "$(GREEN)✓ Services started!$(NC)"
+
+docker-down: ## Stop Docker containers
+	@echo "$(BLUE)Stopping Docker containers...$(NC)"
+	docker-compose down
+	@echo "$(GREEN)✓ Services stopped!$(NC)"
+
+# Documentation
+docs: ## Build documentation
+	@echo "$(BLUE)Building documentation...$(NC)"
+	cd $(DOCS_DIR) && $(MAKE) clean html
+	@echo "$(GREEN)✓ Documentation built! Open docs/_build/html/index.html$(NC)"
+
+# Maintenance
+clean: ## Clean build artifacts
+	@echo "$(BLUE)Cleaning build artifacts...$(NC)"
+	rm -rf build/ dist/ *.egg-info .coverage htmlcov/ .pytest_cache/
+	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+	find . -type f -name "*.pyc" -delete
+	find . -type f -name "*.pyo" -delete
+	find . -type f -name "*.coverage" -delete
+	find . -type f -name ".DS_Store" -delete
+	@echo "$(GREEN)✓ Cleanup complete!$(NC)"
+
+# Development shortcuts
+dev: install-dev ## Full development setup
+	@echo "$(GREEN)✓ Development environment ready!$(NC)"
+
+check: lint test ## Run all checks (lint + test)
+	@echo "$(GREEN)✓ All checks passed!$(NC)"
+
+# Utilities
+shell: ## Open Python shell with project context
+	@echo "$(BLUE)Opening Python shell...$(NC)"
+	$(PYTHON) -i -c "from manalytics import *; print('Manalytics shell ready!')"
+
+version: ## Show version
+	@echo "$(BLUE)Manalytics version:$(NC)"
+	@$(PYTHON) -c "import manalytics; print(f'  v{manalytics.__version__}')"
