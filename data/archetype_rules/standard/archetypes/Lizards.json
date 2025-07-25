@@ -1,0 +1,18 @@
+{
+  "Name": "Lizards",
+  "IncludeColorInName": true,
+  "Conditions": [
+    {
+      "Type": "InMainboard",
+      "Cards": [
+        "Iridescent Vinelasher"
+      ]
+    },
+    {
+      "Type": "InMainboard",
+      "Cards": [
+        "Hired Claw"
+      ]
+    }
+  ]
+}

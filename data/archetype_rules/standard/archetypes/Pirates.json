@@ -1,0 +1,18 @@
+{
+  "Name": "Pirates",
+  "IncludeColorInName": true,
+  "Conditions": [
+    {
+      "Type": "InMainboard",
+      "Cards": [
+        "Goblin Tomb Raider"
+      ]
+    },
+    {
+      "Type": "InMainboard",
+      "Cards": [
+        "Staunch Crewmate"
+      ]
+    }
+  ]
+}
