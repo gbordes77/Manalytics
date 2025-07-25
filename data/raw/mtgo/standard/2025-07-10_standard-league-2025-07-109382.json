@@ -1,0 +1,2249 @@
+{
+  "source": "mtgo",
+  "format": "standard",
+  "name": "Standard League",
+  "date": "2025-07-10",
+  "url": "https://www.mtgo.com/decklist/standard-league-2025-07-109382",
+  "tournament_id": "standard-league-2025-07-109382",
+  "tournament_type": "league",
+  "scraped_at": "2025-07-25T10:36:47.873896+00:00",
+  "total_players": 16,
+  "decks": [
+    {
+      "player": "absoluteragez",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Dredger's Insight"
+        },
+        {
+          "count": 3,
+          "card_name": "Elegant Parlor"
+        },
+        {
+          "count": 3,
+          "card_name": "Terra, Magical Adept"
+        },
+        {
+          "count": 4,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 1,
+          "card_name": "Plains"
+        },
+        {
+          "count": 4,
+          "card_name": "Hushwood Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Sunbillow Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Joshua, Phoenix's Dominant"
+        },
+        {
+          "count": 2,
+          "card_name": "Cavern of Souls"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Overlord of the Boilerbilges"
+        },
+        {
+          "count": 2,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 3,
+          "card_name": "Starting Town"
+        },
+        {
+          "count": 4,
+          "card_name": "Thornspire Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Yuna, Hope of Spira"
+        },
+        {
+          "count": 3,
+          "card_name": "Lush Portico"
+        },
+        {
+          "count": 1,
+          "card_name": "Karplusan Forest"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 1,
+          "card_name": "Summon: Knights of Round"
+        },
+        {
+          "count": 3,
+          "card_name": "Esper Origins"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 3,
+          "card_name": "Exorcise"
+        },
+        {
+          "count": 2,
+          "card_name": "Fire Magic"
+        },
+        {
+          "count": 3,
+          "card_name": "Clarion Conqueror"
+        },
+        {
+          "count": 1,
+          "card_name": "Summon: Knights of Round"
+        },
+        {
+          "count": 2,
+          "card_name": "High Noon"
+        },
+        {
+          "count": 2,
+          "card_name": "Day of Judgment"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 22,
+        "color_identity": [
+          "G",
+          "R",
+          "W"
+        ],
+        "card_types": {
+          "Land": 3,
+          "Creature": 1
+        }
+      }
+    },
+    {
+      "player": "Junkmener",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 1,
+          "card_name": "Abrade"
+        },
+        {
+          "count": 4,
+          "card_name": "Astrologian's Planisphere"
+        },
+        {
+          "count": 1,
+          "card_name": "Get Out"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 1,
+          "card_name": "Magic Damper"
+        },
+        {
+          "count": 1,
+          "card_name": "Marang River Regent"
+        },
+        {
+          "count": 4,
+          "card_name": "Sleight of Hand"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Roaring Furnace // Steaming Sauna"
+        },
+        {
+          "count": 4,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 1,
+          "card_name": "Ral, Crackling Wit"
+        },
+        {
+          "count": 4,
+          "card_name": "Opt"
+        },
+        {
+          "count": 2,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 7,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Stock Up"
+        },
+        {
+          "count": 4,
+          "card_name": "Stormchaser's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        },
+        {
+          "count": 1,
+          "card_name": "Wild Ride"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 1,
+          "card_name": "Marang River Regent"
+        },
+        {
+          "count": 2,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 2,
+          "card_name": "Fire Magic"
+        },
+        {
+          "count": 2,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 1,
+          "card_name": "Twinmaw Stormbrood"
+        },
+        {
+          "count": 1,
+          "card_name": "Unable to Scream"
+        },
+        {
+          "count": 1,
+          "card_name": "Ral, Crackling Wit"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 20,
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 9
+        }
+      }
+    },
+    {
+      "player": "nabenabetk",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 3,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 3,
+          "card_name": "Tersa Lightshatter"
+        },
+        {
+          "count": 1,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        },
+        {
+          "count": 3,
+          "card_name": "Voldaren Thrillseeker"
+        },
+        {
+          "count": 4,
+          "card_name": "Winternight Stories"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 4,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 2,
+          "card_name": "Glacial Dragonhunt"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Fire Magic"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 2,
+          "card_name": "Unable to Scream"
+        },
+        {
+          "count": 2,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 1,
+          "card_name": "Scorching Shot"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 19,
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 8
+        }
+      }
+    },
+    {
+      "player": "Ale_Mtg",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 2,
+          "card_name": "Glacial Dragonhunt"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        },
+        {
+          "count": 4,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 3,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 3,
+          "card_name": "Tersa Lightshatter"
+        },
+        {
+          "count": 3,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 2,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Winternight Stories"
+        },
+        {
+          "count": 2,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 3,
+          "card_name": "Voldaren Thrillseeker"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 2,
+          "card_name": "Draconautics Engineer"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Scorching Shot"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Unable to Scream"
+        },
+        {
+          "count": 2,
+          "card_name": "Negate"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 19,
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 5
+        }
+      }
+    },
+    {
+      "player": "Kampo",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 4,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 1,
+          "card_name": "Lord Skitter, Sewer King"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 2,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 2,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        },
+        {
+          "count": 3,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 1,
+          "card_name": "Shoot the Sheriff"
+        },
+        {
+          "count": 2,
+          "card_name": "Saiba Cryptomancer"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 2,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 1,
+          "card_name": "Intimidation Tactics"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 1,
+          "card_name": "Lord Skitter, Sewer King"
+        },
+        {
+          "count": 2,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Qarsi Revenant"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 21,
+        "color_identity": [
+          "B",
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 8
+        }
+      }
+    },
+    {
+      "player": "tarkanmag",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Llanowar Wastes"
+        },
+        {
+          "count": 1,
+          "card_name": "Restless Cottage"
+        },
+        {
+          "count": 2,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 2,
+          "card_name": "Underground Mortuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 4,
+          "card_name": "Forest"
+        },
+        {
+          "count": 3,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 2,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 4,
+          "card_name": "Unholy Annex // Ritual Chamber"
+        },
+        {
+          "count": 1,
+          "card_name": "Shoot the Sheriff"
+        },
+        {
+          "count": 4,
+          "card_name": "Lumbering Worldwagon"
+        },
+        {
+          "count": 3,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Wastewood Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Tranquil Frillback"
+        },
+        {
+          "count": 2,
+          "card_name": "Qarsi Revenant"
+        },
+        {
+          "count": 4,
+          "card_name": "Demon Wall"
+        },
+        {
+          "count": 1,
+          "card_name": "Jenova, Ancient Calamity"
+        },
+        {
+          "count": 2,
+          "card_name": "Intrepid Paleontologist"
+        },
+        {
+          "count": 4,
+          "card_name": "Blooming Marsh"
+        },
+        {
+          "count": 4,
+          "card_name": "Llanowar Elves"
+        },
+        {
+          "count": 3,
+          "card_name": "Agonasaur Rex"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Vivien Reid"
+        },
+        {
+          "count": 1,
+          "card_name": "Tear Asunder"
+        },
+        {
+          "count": 1,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 1,
+          "card_name": "Blot Out"
+        },
+        {
+          "count": 1,
+          "card_name": "Nissa, Ascended Animist"
+        },
+        {
+          "count": 2,
+          "card_name": "Liliana of the Veil"
+        },
+        {
+          "count": 2,
+          "card_name": "Deadly Cover-Up"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Tranquil Frillback"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 23,
+        "color_identity": [
+          "B",
+          "G",
+          "R"
+        ],
+        "card_types": {
+          "Land": 8
+        }
+      }
+    },
+    {
+      "player": "LeandroKopke",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 2,
+          "card_name": "Glacial Dragonhunt"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 4,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 3,
+          "card_name": "Tersa Lightshatter"
+        },
+        {
+          "count": 3,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 1,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        },
+        {
+          "count": 1,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Winternight Stories"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 2,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 3,
+          "card_name": "Voldaren Thrillseeker"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Draconautics Engineer"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 1,
+          "card_name": "Scorching Shot"
+        },
+        {
+          "count": 2,
+          "card_name": "Negate"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 2,
+          "card_name": "Unable to Scream"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 22,
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 5
+        }
+      }
+    },
+    {
+      "player": "taldoitalo",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Boltwave"
+        },
+        {
+          "count": 7,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 2,
+          "card_name": "Burst Lightning"
+        },
+        {
+          "count": 1,
+          "card_name": "Case of the Crimson Pulse"
+        },
+        {
+          "count": 4,
+          "card_name": "Monastery Swiftspear"
+        },
+        {
+          "count": 4,
+          "card_name": "Lightning Helix"
+        },
+        {
+          "count": 4,
+          "card_name": "Inspiring Vantage"
+        },
+        {
+          "count": 4,
+          "card_name": "Hired Claw"
+        },
+        {
+          "count": 2,
+          "card_name": "Burst Lightning"
+        },
+        {
+          "count": 4,
+          "card_name": "Opera Love Song"
+        },
+        {
+          "count": 4,
+          "card_name": "Boros Charm"
+        },
+        {
+          "count": 4,
+          "card_name": "Battlefield Forge"
+        },
+        {
+          "count": 4,
+          "card_name": "Slickshot Show-Off"
+        },
+        {
+          "count": 4,
+          "card_name": "Starting Town"
+        },
+        {
+          "count": 2,
+          "card_name": "Sunbillow Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Screaming Nemesis"
+        },
+        {
+          "count": 2,
+          "card_name": "Shock"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Case of the Crimson Pulse"
+        },
+        {
+          "count": 2,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 2,
+          "card_name": "Fire Magic"
+        },
+        {
+          "count": 2,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 2,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 2,
+          "card_name": "Shardmage's Rescue"
+        },
+        {
+          "count": 2,
+          "card_name": "Sheltered by Ghosts"
+        },
+        {
+          "count": 1,
+          "card_name": "Urabrask's Forge"
+        },
+        {
+          "count": 1,
+          "card_name": "Urabrask's Forge"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 17,
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "card_types": {
+          "Land": 7
+        }
+      }
+    },
+    {
+      "player": "LaNewbie",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 3,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 3,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 2,
+          "card_name": "Cecil, Dark Knight"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 5,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 1,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 2,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 2,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 2,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 19,
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "card_types": {
+          "Creature": 2,
+          "Land": 9
+        }
+      }
+    },
+    {
+      "player": "ChuChuMTFKR",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 3,
+          "card_name": "Voldaren Thrillseeker"
+        },
+        {
+          "count": 2,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 3,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 4,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Winternight Stories"
+        },
+        {
+          "count": 2,
+          "card_name": "Glacial Dragonhunt"
+        },
+        {
+          "count": 3,
+          "card_name": "Tersa Lightshatter"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Negate"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 1,
+          "card_name": "Scorching Shot"
+        },
+        {
+          "count": 2,
+          "card_name": "Unable to Scream"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Draconautics Engineer"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 19,
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 5
+        }
+      }
+    },
+    {
+      "player": "Rauliox",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Monastery Swiftspear"
+        },
+        {
+          "count": 4,
+          "card_name": "Burst Lightning"
+        },
+        {
+          "count": 4,
+          "card_name": "Slickshot Show-Off"
+        },
+        {
+          "count": 3,
+          "card_name": "Screaming Nemesis"
+        },
+        {
+          "count": 4,
+          "card_name": "Lightning Helix"
+        },
+        {
+          "count": 4,
+          "card_name": "Boros Charm"
+        },
+        {
+          "count": 4,
+          "card_name": "Opera Love Song"
+        },
+        {
+          "count": 4,
+          "card_name": "Inspiring Vantage"
+        },
+        {
+          "count": 2,
+          "card_name": "Shock"
+        },
+        {
+          "count": 4,
+          "card_name": "Boltwave"
+        },
+        {
+          "count": 1,
+          "card_name": "Case of the Crimson Pulse"
+        },
+        {
+          "count": 1,
+          "card_name": "Screaming Nemesis"
+        },
+        {
+          "count": 4,
+          "card_name": "Battlefield Forge"
+        },
+        {
+          "count": 4,
+          "card_name": "Starting Town"
+        },
+        {
+          "count": 2,
+          "card_name": "Sunbillow Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Hired Claw"
+        },
+        {
+          "count": 7,
+          "card_name": "Mountain"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Case of the Crimson Pulse"
+        },
+        {
+          "count": 2,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 2,
+          "card_name": "Fire Magic"
+        },
+        {
+          "count": 2,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 2,
+          "card_name": "Shardmage's Rescue"
+        },
+        {
+          "count": 2,
+          "card_name": "Sheltered by Ghosts"
+        },
+        {
+          "count": 2,
+          "card_name": "Urabrask's Forge"
+        },
+        {
+          "count": 2,
+          "card_name": "Get Lost"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 17,
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "card_types": {
+          "Land": 7
+        }
+      }
+    },
+    {
+      "player": "Kritik",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Blooming Marsh"
+        },
+        {
+          "count": 3,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Demon Wall"
+        },
+        {
+          "count": 1,
+          "card_name": "Disruptive Stormbrood"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 2,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 1,
+          "card_name": "Llanowar Wastes"
+        },
+        {
+          "count": 4,
+          "card_name": "Lumbering Worldwagon"
+        },
+        {
+          "count": 1,
+          "card_name": "Restless Cottage"
+        },
+        {
+          "count": 1,
+          "card_name": "Rot-Curse Rakshasa"
+        },
+        {
+          "count": 4,
+          "card_name": "Sentinel of the Nameless City"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 3,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 1,
+          "card_name": "Shoot the Sheriff"
+        },
+        {
+          "count": 3,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 3,
+          "card_name": "Tear Asunder"
+        },
+        {
+          "count": 2,
+          "card_name": "Underground Mortuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Unholy Annex // Ritual Chamber"
+        },
+        {
+          "count": 4,
+          "card_name": "Wastewood Verge"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 4,
+          "card_name": "Llanowar Elves"
+        },
+        {
+          "count": 1,
+          "card_name": "Llanowar Wastes"
+        },
+        {
+          "count": 1,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Swamp"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 1,
+          "card_name": "Blot Out"
+        },
+        {
+          "count": 2,
+          "card_name": "Choking Miasma"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 2,
+          "card_name": "Liliana of the Veil"
+        },
+        {
+          "count": 1,
+          "card_name": "Nissa, Ascended Animist"
+        },
+        {
+          "count": 1,
+          "card_name": "Outrageous Robbery"
+        },
+        {
+          "count": 1,
+          "card_name": "Scavenger Regent"
+        },
+        {
+          "count": 1,
+          "card_name": "Tear Asunder"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 29,
+        "color_identity": [
+          "B",
+          "G",
+          "R"
+        ],
+        "card_types": {
+          "Land": 8
+        }
+      }
+    },
+    {
+      "player": "RCMerriam",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 1,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 4,
+          "card_name": "Molt Tender"
+        },
+        {
+          "count": 2,
+          "card_name": "Llanowar Elves"
+        },
+        {
+          "count": 2,
+          "card_name": "Scavenging Ooze"
+        },
+        {
+          "count": 1,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Coati Scavenger"
+        },
+        {
+          "count": 2,
+          "card_name": "Osteomancer Adept"
+        },
+        {
+          "count": 4,
+          "card_name": "Blooming Marsh"
+        },
+        {
+          "count": 4,
+          "card_name": "Wastewood Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Tyvar, Jubilant Brawler"
+        },
+        {
+          "count": 4,
+          "card_name": "Insidious Roots"
+        },
+        {
+          "count": 1,
+          "card_name": "Dragon Sniper"
+        },
+        {
+          "count": 4,
+          "card_name": "Rubblebelt Maverick"
+        },
+        {
+          "count": 3,
+          "card_name": "Disruptive Stormbrood"
+        },
+        {
+          "count": 1,
+          "card_name": "Great Arashin City"
+        },
+        {
+          "count": 2,
+          "card_name": "Cache Grab"
+        },
+        {
+          "count": 2,
+          "card_name": "Haywire Mite"
+        },
+        {
+          "count": 4,
+          "card_name": "Overlord of the Balemurk"
+        },
+        {
+          "count": 2,
+          "card_name": "Dredger's Insight"
+        },
+        {
+          "count": 7,
+          "card_name": "Forest"
+        },
+        {
+          "count": 1,
+          "card_name": "Cecil, Dark Knight"
+        },
+        {
+          "count": 4,
+          "card_name": "Llanowar Wastes"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 1,
+          "card_name": "Skyfisher Spider"
+        },
+        {
+          "count": 1,
+          "card_name": "Haywire Mite"
+        },
+        {
+          "count": 1,
+          "card_name": "Coati Scavenger"
+        },
+        {
+          "count": 1,
+          "card_name": "Cecil, Dark Knight"
+        },
+        {
+          "count": 1,
+          "card_name": "Cankerbloom"
+        },
+        {
+          "count": 1,
+          "card_name": "Voldaren Thrillseeker"
+        },
+        {
+          "count": 1,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 1,
+          "card_name": "Herbology Instructor"
+        },
+        {
+          "count": 2,
+          "card_name": "The Filigree Sylex"
+        },
+        {
+          "count": 3,
+          "card_name": "Dark Confidant"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 22,
+        "color_identity": [
+          "B",
+          "G",
+          "R"
+        ],
+        "card_types": {
+          "Land": 8,
+          "Creature": 1
+        }
+      }
+    },
+    {
+      "player": "LeandroKopke",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 2,
+          "card_name": "Glacial Dragonhunt"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 4,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 3,
+          "card_name": "Tersa Lightshatter"
+        },
+        {
+          "count": 3,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 1,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        },
+        {
+          "count": 1,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Winternight Stories"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 2,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 3,
+          "card_name": "Voldaren Thrillseeker"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Draconautics Engineer"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 1,
+          "card_name": "Scorching Shot"
+        },
+        {
+          "count": 2,
+          "card_name": "Negate"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 2,
+          "card_name": "Unable to Scream"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 22,
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 5
+        }
+      }
+    },
+    {
+      "player": "Waidelai",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 4,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 3,
+          "card_name": "Tersa Lightshatter"
+        },
+        {
+          "count": 3,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 1,
+          "card_name": "Island"
+        },
+        {
+          "count": 1,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Voldaren Thrillseeker"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 4,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Glacial Dragonhunt"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 2,
+          "card_name": "Abrade"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        },
+        {
+          "count": 4,
+          "card_name": "Winternight Stories"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Scorching Shot"
+        },
+        {
+          "count": 2,
+          "card_name": "Draconautics Engineer"
+        },
+        {
+          "count": 3,
+          "card_name": "Unable to Scream"
+        },
+        {
+          "count": 1,
+          "card_name": "Abrade"
+        },
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 2,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Curiosity"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 20,
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 5
+        }
+      }
+    },
+    {
+      "player": "AgrusKos93",
+      "result": "5-0",
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 2,
+          "card_name": "Glacial Dragonhunt"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 2,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 4,
+          "card_name": "Winternight Stories"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 4,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 1,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 3,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 3,
+          "card_name": "Tersa Lightshatter"
+        },
+        {
+          "count": 3,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 2,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        },
+        {
+          "count": 3,
+          "card_name": "Voldaren Thrillseeker"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 1,
+          "card_name": "Scorching Shot"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Unable to Scream"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 2,
+          "card_name": "Draconautics Engineer"
+        }
+      ],
+      "metrics": {
+        "total_cards": 60,
+        "unique_cards": 20,
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "card_types": {
+          "Land": 5
+        }
+      }
+    }
+  ],
+  "metagame_breakdown": {
+    "Unknown": 87.5,
+    "Aggro": 12.5
+  }
+}

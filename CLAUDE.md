@@ -227,3 +227,9 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
    - Points techniques importants
    - Leçons apprises
 4. **Exemples créés** : `MELEE_SCRAPING_GUIDE.md`, `MTGO_SCRAPING_GUIDE.md`
+
+## 🚨 RÈGLES DE SCRAPING OBLIGATOIRES
+
+1. **TOUJOURS DEMANDER LA PÉRIODE** : Ne JAMAIS utiliser "7 jours" par défaut. Toujours demander à l'utilisateur quelle période scraper.
+2. **FORMAT PAR DÉFAUT = STANDARD** : Sauf contre-ordre explicite, toujours scraper le format Standard uniquement.
+3. **CONFIRMATION AVANT LANCEMENT** : Toujours confirmer la période et le format avant de lancer un scraping.

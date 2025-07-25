@@ -1,0 +1,318 @@
+{
+  "TournamentId": 342694,
+  "TournamentName": "Стандарт. Летняя Лига (22.07)",
+  "TournamentStartDate": "2025-07-22T16:00:00Z",
+  "FormatDescription": "Standard",
+  "OrganizationName": "Club \"Another World\"",
+  "TotalPlayers": 4,
+  "Decks": [
+    {
+      "DeckId": "676f5179-0030-48a5-b70a-b322009a9f42",
+      "PlayerName": "K1ppy",
+      "DeckName": "Golgari Midrange",
+      "Rank": 2,
+      "Wins": 3,
+      "Losses": 1,
+      "Mainboard": [
+        {
+          "Count": 2,
+          "CardName": "Thrun, Breaker of Silence"
+        },
+        {
+          "Count": 2,
+          "CardName": "Surrak, Elusive Hunter"
+        },
+        {
+          "Count": 3,
+          "CardName": "Swamp"
+        },
+        {
+          "Count": 2,
+          "CardName": "Cut Down"
+        },
+        {
+          "Count": 2,
+          "CardName": "Sentinel of the Nameless City"
+        },
+        {
+          "Count": 3,
+          "CardName": "Forest"
+        },
+        {
+          "Count": 3,
+          "CardName": "Mishra's Foundry"
+        },
+        {
+          "Count": 1,
+          "CardName": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 4,
+          "CardName": "Restless Cottage"
+        },
+        {
+          "Count": 2,
+          "CardName": "Tear Asunder"
+        },
+        {
+          "Count": 4,
+          "CardName": "Go for the Throat"
+        },
+        {
+          "Count": 4,
+          "CardName": "Llanowar Elves"
+        },
+        {
+          "Count": 4,
+          "CardName": "Llanowar Wastes"
+        },
+        {
+          "Count": 4,
+          "CardName": "Mosswood Dreadknight // Dread Whispers"
+        },
+        {
+          "Count": 1,
+          "CardName": "Tranquil Frillback"
+        },
+        {
+          "Count": 4,
+          "CardName": "Blooming Marsh"
+        },
+        {
+          "Count": 4,
+          "CardName": "Wastewood Verge"
+        },
+        {
+          "Count": 2,
+          "CardName": "Maelstrom Pulse"
+        },
+        {
+          "Count": 1,
+          "CardName": "Glissa Sunslayer"
+        },
+        {
+          "Count": 1,
+          "CardName": "The End"
+        },
+        {
+          "Count": 2,
+          "CardName": "Anoint with Affliction"
+        },
+        {
+          "Count": 3,
+          "CardName": "Preacher of the Schism"
+        },
+        {
+          "Count": 2,
+          "CardName": "Gix's Command"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "CardName": "Liliana of the Veil"
+        },
+        {
+          "Count": 2,
+          "CardName": "Choking Miasma"
+        },
+        {
+          "Count": 1,
+          "CardName": "Nissa, Ascended Animist"
+        },
+        {
+          "Count": 2,
+          "CardName": "Harvester of Misery"
+        },
+        {
+          "Count": 2,
+          "CardName": "Keen-Eyed Curator"
+        },
+        {
+          "Count": 1,
+          "CardName": "Tranquil Frillback"
+        },
+        {
+          "Count": 3,
+          "CardName": "Duress"
+        },
+        {
+          "Count": 1,
+          "CardName": "Maelstrom Pulse"
+        },
+        {
+          "Count": 1,
+          "CardName": "Anoint with Affliction"
+        }
+      ],
+      "Attributes": [
+        {
+          "k": "TOURNAMENT",
+          "v": "MagicTheGathering",
+          "p": null
+        },
+        {
+          "k": "TOURNAMENT",
+          "v": "Standard",
+          "p": null
+        },
+        {
+          "k": "COLOR_GREEN",
+          "v": "True",
+          "p": null
+        },
+        {
+          "k": "TOURNAMENT",
+          "v": "Paper",
+          "p": null
+        },
+        {
+          "k": "COLOR_BLACK",
+          "v": "True",
+          "p": null
+        },
+        {
+          "k": "ARCHETYPE",
+          "v": "Midrange",
+          "p": 0
+        }
+      ]
+    },
+    {
+      "DeckId": "37809b69-fc44-41b3-a655-b3220102ad52",
+      "PlayerName": "Hogar",
+      "DeckName": "Mardu Graveyard",
+      "Rank": 13,
+      "Wins": 1,
+      "Losses": 3,
+      "Mainboard": [
+        {
+          "Count": 4,
+          "CardName": "Conduit Pylons"
+        },
+        {
+          "Count": 16,
+          "CardName": "Hare Apparent"
+        },
+        {
+          "Count": 4,
+          "CardName": "Elegant Parlor"
+        },
+        {
+          "Count": 1,
+          "CardName": "Cathar Commando"
+        },
+        {
+          "Count": 4,
+          "CardName": "Concealed Courtyard"
+        },
+        {
+          "Count": 4,
+          "CardName": "Snarling Gorehound"
+        },
+        {
+          "Count": 4,
+          "CardName": "Raise the Past"
+        },
+        {
+          "Count": 3,
+          "CardName": "Brass's Tunnel-Grinder // Tecutlan, the Searing Rift"
+        },
+        {
+          "Count": 3,
+          "CardName": "Dewdrop Cure"
+        },
+        {
+          "Count": 4,
+          "CardName": "Hidden Grotto"
+        },
+        {
+          "Count": 4,
+          "CardName": "Sulfurous Springs"
+        },
+        {
+          "Count": 1,
+          "CardName": "Hinterland Sanctifier"
+        },
+        {
+          "Count": 4,
+          "CardName": "Shocking Sharpshooter"
+        },
+        {
+          "Count": 4,
+          "CardName": "Caves of Koilos"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "CardName": "Coordinated Maneuver"
+        },
+        {
+          "Count": 4,
+          "CardName": "Surge of Salvation"
+        },
+        {
+          "Count": 4,
+          "CardName": "Aven Interrupter"
+        },
+        {
+          "Count": 4,
+          "CardName": "Authority of the Consuls"
+        },
+        {
+          "Count": 1,
+          "CardName": "Song of Totentanz"
+        }
+      ],
+      "Attributes": [
+        {
+          "k": "COLOR_RED",
+          "v": "True",
+          "p": null
+        },
+        {
+          "k": "TOURNAMENT",
+          "v": "MagicTheGathering",
+          "p": null
+        },
+        {
+          "k": "TOURNAMENT",
+          "v": "Standard",
+          "p": null
+        },
+        {
+          "k": "COLOR_WHITE",
+          "v": "True",
+          "p": null
+        },
+        {
+          "k": "TOURNAMENT",
+          "v": "Paper",
+          "p": null
+        },
+        {
+          "k": "COLOR_BLACK",
+          "v": "True",
+          "p": null
+        },
+        {
+          "k": "ARCHETYPE",
+          "v": "Graveyard",
+          "p": 0
+        },
+        {
+          "k": "ARCHETYPE",
+          "v": "Reanimator",
+          "p": 0
+        },
+        {
+          "k": "ARCHETYPE",
+          "v": "Tokens",
+          "p": 1
+        }
+      ]
+    }
+  ],
+  "ScrapedAt": "2025-07-25T12:37:36.371962"
+}
