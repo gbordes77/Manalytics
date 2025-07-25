@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-07-25T08:53:54.013868+00:00",
+  "arguments": {
+    "platforms": "mtgo,melee",
+    "format": "standard",
+    "days": 7,
+    "start_date": null,
+    "end_date": null,
+    "limit": null,
+    "force_redownload": false,
+    "generate_report": false,
+    "dry_run": false,
+    "verbose": false,
+    "include_leagues": false,
+    "mtgo_types": null,
+    "melee_exclude_types": null
+  },
+  "summary": {
+    "total_time": 0.018514156341552734,
+    "platforms_scraped": 2,
+    "successful": 0,
+    "failed": 2,
+    "results": {
+      "melee": {
+        "status": "failed",
+        "platform": "melee",
+        "elapsed_time": 0.01626896858215332,
+        "return_code": 2,
+        "stdout": "",
+        "stderr": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Volumes/DataDisk/_Projects/Manalytics/scrape_melee_tournaments_complete_v2.py': [Errno 2] No such file or directory\n"
+      },
+      "mtgo": {
+        "status": "failed",
+        "platform": "mtgo",
+        "elapsed_time": 0.016494035720825195,
+        "return_code": 2,
+        "stdout": "",
+        "stderr": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Volumes/DataDisk/_Projects/Manalytics/scrape_mtgo_tournaments_enhanced.py': [Errno 2] No such file or directory\n"
+      }
+    }
+  },
+  "platforms": [
+    "melee",
+    "mtgo"
+  ]
+}

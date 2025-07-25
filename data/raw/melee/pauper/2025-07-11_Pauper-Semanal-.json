@@ -1,0 +1,65 @@
+{
+  "TournamentId": 339193,
+  "TournamentName": "Pauper Semanal ",
+  "TournamentStartDate": "2025-07-11T23:20:00Z",
+  "OrganizationName": "Barao Geek",
+  "FormatDescription": "Pauper",
+  "Decks": [
+    {
+      "DecklistId": "cca732ea-459e-4136-9369-b3170179bb95",
+      "PlayerName": "pedrocaceres",
+      "DeckName": "Boros Aggro",
+      "Rank": 10,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b8cc645d-6cb4-4888-9e15-b3170177f770",
+      "PlayerName": "RodrigoRO",
+      "DeckName": "U-B-R-G Familiars",
+      "Rank": 8,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7edcbf71-9044-4a3f-ae77-b317017d257f",
+      "PlayerName": "LuisMiguelAntonio",
+      "DeckName": "Mono-Blue Control",
+      "Rank": 3,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "67b9b592-8584-4e25-afd5-b31701755814",
+      "PlayerName": "PrimoShow",
+      "DeckName": "Gruul Aggro",
+      "Rank": 9,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3c4e2a96-6619-4538-b922-b317017b107e",
+      "PlayerName": "GustavoAntonio",
+      "DeckName": "Golgari Control",
+      "Rank": 5,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2b94aa41-11f6-4463-a0f4-b317017ae47f",
+      "PlayerName": "LunaSophy",
+      "DeckName": "Jund Dredge",
+      "Rank": 11,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "22f08c81-0851-4c73-925c-b3170127d84b",
+      "PlayerName": "peladohh",
+      "DeckName": "Colorless",
+      "Rank": 6,
+      "Wins": 2,
+      "IsValid": false
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "TournamentId": 337358,
+  "TournamentName": "Charlotte Legacy League Season 3 Week 3",
+  "TournamentStartDate": "2025-07-21T23:00:00Z",
+  "OrganizationName": "CharlotteLegacyLeague",
+  "FormatDescription": "Legacy",
+  "Decks": [
+    {
+      "DecklistId": "ef908c33-e366-442e-b2d6-b3220015b36b",
+      "PlayerName": "Corin Skinnon",
+      "DeckName": "Dimir Tempo",
+      "Rank": 2,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ef438831-e10c-4d77-bb57-b321016844ca",
+      "PlayerName": "Zack  Shue",
+      "DeckName": "Azorius Stiflenought",
+      "Rank": 4,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e33020f4-4e08-4b15-b0d3-b32200332370",
+      "PlayerName": "Lauren Kelly",
+      "DeckName": "Mono-Blue Painter",
+      "Rank": 6,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "cadd6565-979e-423a-b6a0-b3210175260b",
+      "PlayerName": "Aj Graziano",
+      "DeckName": "Sultai Aluren",
+      "Rank": 7,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "bf4b33e5-1b78-49d6-b8a6-b3210172ba25",
+      "PlayerName": "David Womick",
+      "DeckName": "Colorless Mystic Forge Combo",
+      "Rank": 9,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8ad09a16-1414-4269-a311-b3210177380f",
+      "PlayerName": "Ben Brill",
+      "DeckName": "Orzhov Stompy",
+      "Rank": 5,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8333f76d-c61e-4671-bce0-b3210176a468",
+      "PlayerName": "HayleyG",
+      "DeckName": "Mono-Red Eldrazi",
+      "Rank": 8,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "803472c7-bec2-4fe4-ba44-b32101746a4e",
+      "PlayerName": "Owen Sull",
+      "DeckName": "Mono-Red",
+      "Rank": 3,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "17f51be8-e150-4100-9c7e-b321015daf51",
+      "PlayerName": "Acererak",
+      "DeckName": "Azorius Control",
+      "Rank": 10,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0f63cfca-d823-4365-a00f-b3220032d918",
+      "PlayerName": "Evan Johnson",
+      "DeckName": "Sultai Doomsday",
+      "Rank": 1,
+      "Wins": 3,
+      "IsValid": true
+    }
+  ]
+}

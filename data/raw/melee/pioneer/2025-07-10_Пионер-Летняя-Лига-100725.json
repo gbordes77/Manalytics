@@ -1,0 +1,49 @@
+{
+  "TournamentId": 337409,
+  "TournamentName": "Пионер. Летняя Лига (10.07.25)",
+  "TournamentStartDate": "2025-07-10T16:00:00Z",
+  "OrganizationName": "Club \"Another World\"",
+  "FormatDescription": "Pioneer",
+  "Decks": [
+    {
+      "DecklistId": "ad8381b6-e95c-4ed7-9f7b-b3160085cc37",
+      "PlayerName": "K1ppy",
+      "DeckName": "W-U-B-R-G Niv to Light (Yorion)",
+      "Rank": 4,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8e4af2bd-1c62-4812-9a7d-b31600fea2e5",
+      "PlayerName": "MiFlyer",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 20,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "82063093-4487-44cb-a601-b31600fe6701",
+      "PlayerName": "MishaBukach",
+      "DeckName": "Decklist",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "742c1a44-977f-48d0-bff5-b31600fd0706",
+      "PlayerName": "NickLatkovich",
+      "DeckName": "Orzhov Greasefang",
+      "Rank": 12,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "613f7f47-f478-4aea-93dd-b31601090cdb",
+      "PlayerName": "Alex Khan",
+      "DeckName": "Decklist",
+      "Rank": 6,
+      "Wins": 3,
+      "IsValid": false
+    }
+  ]
+}

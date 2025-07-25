@@ -1,0 +1,41 @@
+{
+  "TournamentId": 327176,
+  "TournamentName": "Double Qualifier LAST CHANCE RCQ",
+  "TournamentStartDate": "2025-07-19T17:00:00Z",
+  "OrganizationName": "Wild West Wizards",
+  "FormatDescription": "Modern",
+  "Decks": [
+    {
+      "DecklistId": "b1c6bead-2c24-4236-980b-b31f010683b1",
+      "PlayerName": "Wildwestwizards",
+      "DeckName": "Decklist",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "a82c876d-4308-48f0-9693-b31f010df19c",
+      "PlayerName": "wolfsrain5",
+      "DeckName": "Colorless Eldrazi",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2e8c9086-7db5-4194-850f-b31f010704e6",
+      "PlayerName": "Riley Scott",
+      "DeckName": "Jund Creativity",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0c0b4e84-ef69-44ea-8f6d-b31f0114cee0",
+      "PlayerName": "Timothy Greenberg",
+      "DeckName": "Mono-Green",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    }
+  ]
+}

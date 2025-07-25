@@ -1,0 +1,33 @@
+{
+  "TournamentId": 342697,
+  "TournamentName": "Пионер. Летняя Лига (24.07)",
+  "TournamentStartDate": "2025-07-24T16:00:00Z",
+  "OrganizationName": "Club \"Another World\"",
+  "FormatDescription": "Pioneer",
+  "Decks": [
+    {
+      "DecklistId": "6cd389ad-31fd-4f3d-8a16-b32400e45fe9",
+      "PlayerName": "K1ppy",
+      "DeckName": "Mono-Green Nykthos Ramp",
+      "Rank": 7,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "14fbea38-f8b4-4c42-b2ac-b32400d7cf67",
+      "PlayerName": "Raynold",
+      "DeckName": "Orzhov",
+      "Rank": 5,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "1116e0ef-064d-48f6-bcc6-b3240100165e",
+      "PlayerName": "MiFlyer",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 8,
+      "Wins": 2,
+      "IsValid": true
+    }
+  ]
+}

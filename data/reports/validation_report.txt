@@ -1,0 +1,27 @@
+
+================================================================================
+VALIDATION REPORT - Comparison with fbettega/MTG_decklistcache
+================================================================================
+
+📊 OVERALL SUMMARY:
+  Total matched tournaments: 386
+  Total missing tournaments: 0
+  Total extra tournaments: 69
+
+🎯 RECOMMENDATIONS:
+
+  ➕ We have 69 extra tournaments
+     → These might be newer or from different sources
+
+  ✅ 386 tournaments match!
+     → We can potentially skip re-processing these
+
+🔄 DATA TRANSFORMATION ANALYSIS:
+  - MTGO: Currently only storing metadata (no decklists)
+  - Melee: Has full tournament data with decklists
+  - Cache format: Standardized structure with Tournament wrapper
+
+💡 CONCLUSION:
+  ✅ Good overlap with community cache!
+  → We can use cache data for 386 tournaments
+  → Only need to scrape 0 missing tournaments

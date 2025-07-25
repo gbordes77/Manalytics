@@ -1,0 +1,25 @@
+{
+  "TournamentId": 340429,
+  "TournamentName": "Super DC Teams",
+  "TournamentStartDate": "2025-07-22T14:00:00Z",
+  "OrganizationName": "Manila-Gather-BU",
+  "FormatDescription": "Draft",
+  "Decks": [
+    {
+      "DecklistId": "c4986f84-ba01-4761-b640-b322004d409c",
+      "PlayerName": "Kazuya Kotani",
+      "DeckName": "Gilgamesh, Master-at-Arms",
+      "Rank": 1,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a13f859c-1a1c-451a-9194-b322005ec80f",
+      "PlayerName": "Kanivulcanshintaro",
+      "DeckName": "Ugin, Eye of the Storms",
+      "Rank": 2,
+      "Wins": 1,
+      "IsValid": true
+    }
+  ]
+}

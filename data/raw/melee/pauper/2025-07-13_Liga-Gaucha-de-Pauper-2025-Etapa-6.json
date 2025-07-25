@@ -1,0 +1,721 @@
+{
+  "TournamentId": 339104,
+  "TournamentName": "Liga Gaucha de Pauper 2025 - Etapa 6",
+  "TournamentStartDate": "2025-07-13T13:00:00Z",
+  "OrganizationName": "KOGi Entertainment",
+  "FormatDescription": "Pauper",
+  "Decks": [
+    {
+      "DecklistId": "f8effa79-b39c-4276-9c05-b31900260034",
+      "PlayerName": "lucasneveess",
+      "DeckName": "Mono-Blue Faeries",
+      "Rank": 31,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f787ab8b-753b-42de-b0ee-b3180138606a",
+      "PlayerName": "Renato Santos ",
+      "DeckName": "Golgari Reanimator",
+      "Rank": 44,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f741fbd1-3a21-486b-b55f-b3190084594b",
+      "PlayerName": "Vinicius Perroni X",
+      "DeckName": "Mono-Red",
+      "Rank": 23,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f31371ed-8a9c-4893-9afb-b3180173dbc2",
+      "PlayerName": "elfoman_br",
+      "DeckName": "Rakdos Madness Burn",
+      "Rank": 28,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f2e1ca37-7315-4a70-806e-b3180189ce39",
+      "PlayerName": "Felipe Weber",
+      "DeckName": "Mono-Green Elves",
+      "Rank": 12,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f18906d7-4127-4a0b-9d5a-b318010d80c9",
+      "PlayerName": "Juliano Siqueira",
+      "DeckName": "W-U-R-G Slivers",
+      "Rank": 73,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "efce7d8e-de20-48a6-b314-b31801079c15",
+      "PlayerName": "Michel Mossmann",
+      "DeckName": "Azorius Familiars",
+      "Rank": 88,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ec7d73c8-125d-4fbe-8425-b319001442be",
+      "PlayerName": "Trivo06",
+      "DeckName": "Dimir Blue Terror",
+      "Rank": 53,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ea9fad56-ba29-43b5-a861-b319003a6539",
+      "PlayerName": "DecoPontin",
+      "DeckName": "Mono-White Aggro",
+      "Rank": 101,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e87190d4-7d61-4a98-a3d0-b31701701eeb",
+      "PlayerName": "Wagner Lucas",
+      "DeckName": "Esper Caw-Gates",
+      "Rank": 30,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e6c384d6-992c-4272-8e4b-b3180183e1d3",
+      "PlayerName": "PRIMOBRUSTOLIN",
+      "DeckName": "Mono-Blue Blue Terror",
+      "Rank": 3,
+      "Wins": 6,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e6142166-95d0-474c-af4d-b318010f87e4",
+      "PlayerName": "Eduardo_Veiga",
+      "DeckName": "Selesnya Aggro",
+      "Rank": 55,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e14025ec-e1b3-4be1-9ae6-b319003d4a1c",
+      "PlayerName": "Patrick Pereira Luz",
+      "DeckName": "Abzan Dredge",
+      "Rank": 75,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e10da6bf-be44-4b3d-86f6-b319002b92ce",
+      "PlayerName": "DaniAntunes",
+      "DeckName": "Dimir Terror",
+      "Rank": 68,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "dd749038-b7c1-4c28-a03e-b3190004f274",
+      "PlayerName": "Chollet",
+      "DeckName": "Izzet Control",
+      "Rank": 41,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "dd6be1b5-06df-4d0d-bd5b-b3180164497e",
+      "PlayerName": "amoxxiu",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 61,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d92132de-17dd-483e-a902-b3170182c109",
+      "PlayerName": "Carlos Eduardo Leitão Fagundes",
+      "DeckName": "Grixis Affinity",
+      "Rank": 29,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d542f083-a07a-42a3-9571-b31801337e13",
+      "PlayerName": "FabioFraga",
+      "DeckName": "Jund Wildfire",
+      "Rank": 63,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d41e114f-6433-4d61-913d-b319003ca42a",
+      "PlayerName": "josehemkemaier",
+      "DeckName": "Mono-Green Elves",
+      "Rank": 35,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d01c21c1-1048-4f11-b3bc-b318016952b2",
+      "PlayerName": "ertonteixeira",
+      "DeckName": "Jund Dredge",
+      "Rank": 54,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ce5be1d3-17fa-4353-a740-b3180166781c",
+      "PlayerName": "Julio1983",
+      "DeckName": "Jund Wildfire",
+      "Rank": 5,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ce4b3924-d809-4956-ab77-b31900b39b02",
+      "PlayerName": "RobertoLehmen",
+      "DeckName": "Mono-Red Burn",
+      "Rank": 86,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ce3b7118-66b3-48fc-94f4-b31900445de7",
+      "PlayerName": "BuBaFeeT",
+      "DeckName": "Golgari Broodscale Combo",
+      "Rank": 16,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ccf76aec-4e03-4729-9f0e-b319001c78cb",
+      "PlayerName": "PedroZ1",
+      "DeckName": "Boros Synthesizer",
+      "Rank": 70,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c9e0d0f7-6101-4e9e-8520-b31801814587",
+      "PlayerName": "CHRISTIANO KILLMANN",
+      "DeckName": "Grixis Control",
+      "Rank": 6,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c7abbf62-64c0-4cae-808d-b319003caf98",
+      "PlayerName": "Rovani_ORM",
+      "DeckName": "Sultai Turbo Fog",
+      "Rank": 58,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c6418526-764b-4f0f-b4bc-b319000d35cf",
+      "PlayerName": "CarrodaPolicia",
+      "DeckName": "Jund Wildfire",
+      "Rank": 4,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c0e2a841-c515-40c6-8522-b319001f0713",
+      "PlayerName": "BrenoAtti",
+      "DeckName": "Boros Broodscale Combo",
+      "Rank": 59,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "bb878846-8be1-48bf-981b-b31801758493",
+      "PlayerName": "Heco_ORM",
+      "DeckName": "Mono-White Aggro",
+      "Rank": 39,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ba3ac422-a8e2-4017-bbf2-b3180185cad7",
+      "PlayerName": "JeanBgs",
+      "DeckName": "Mono-Blue Blue Terror",
+      "Rank": 46,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b7d5a512-a953-4b1c-8d6f-b319002d6426",
+      "PlayerName": "Cris Santos",
+      "DeckName": "Rakdos Goblins",
+      "Rank": 62,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b763bb5c-fd8e-4b04-b7f2-b31900c34a61",
+      "PlayerName": "Leojackiller",
+      "DeckName": "Mono-Black Black Burn",
+      "Rank": 92,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b260c5bd-4ade-489a-9d14-b31900333ef0",
+      "PlayerName": "GabrieelMaiaa",
+      "DeckName": "Mono-Blue",
+      "Rank": 27,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b1da676a-7631-4079-8d52-b31900420bb4",
+      "PlayerName": "Julio_Thibes",
+      "DeckName": "Jund Wildfire",
+      "Rank": 26,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b043599d-f689-4621-91be-b31900d8606d",
+      "PlayerName": "parra",
+      "DeckName": "Gruul Aggro",
+      "Rank": 80,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ace6a892-bb97-4ab4-a5b0-b3180120d5dd",
+      "PlayerName": "GabrielRibeiro",
+      "DeckName": "Azorius Caw-Gates",
+      "Rank": 42,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a8298dad-9850-4aef-aa5f-b319001e95ba",
+      "PlayerName": "Urinhos",
+      "DeckName": "Mono-White Bully",
+      "Rank": 72,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9cbbca1b-ce11-4cbf-8124-b3190018af05",
+      "PlayerName": "Mauro Lages",
+      "DeckName": "Mono-Red Madness Burn",
+      "Rank": 13,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "955fb2e5-4ec5-48ac-8dd8-b3190034e570",
+      "PlayerName": "LuanP",
+      "DeckName": "Jund Bogles",
+      "Rank": 21,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "93fa23ff-6a12-4192-9449-b3190033072b",
+      "PlayerName": "Carteira De Trabalho",
+      "DeckName": "Jund Wildfire",
+      "Rank": 33,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "93647f83-efef-41ab-a52b-b3180150fac3",
+      "PlayerName": "martinpetry",
+      "DeckName": "Mono-White Aggro",
+      "Rank": 77,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "90377e67-f5c7-44c8-9f1a-b31900003f75",
+      "PlayerName": "digao",
+      "DeckName": "Izzet Control",
+      "Rank": 22,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8eff8d6b-2a66-4b15-9e7e-b3190005e6e3",
+      "PlayerName": "Rafa Mattos",
+      "DeckName": "Mono-Blue Blue Terror",
+      "Rank": 2,
+      "Wins": 6,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8b1dc92e-a153-4419-8858-b31801438e9f",
+      "PlayerName": "Angel Araujo",
+      "DeckName": "Mono-Blue Faeries",
+      "Rank": 71,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "897b4aa4-4420-4c42-932f-b3190032fab8",
+      "PlayerName": "JenkinsPendragon",
+      "DeckName": "W-U-B-R-G Walls Combo",
+      "Rank": 48,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8917cd48-b297-44af-89d4-b31800fda823",
+      "PlayerName": "Dias Mamute",
+      "DeckName": "Golgari Black Burn",
+      "Rank": 83,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "859a7b86-5bad-491d-961c-b318012f7c30",
+      "PlayerName": "Gabriel Rocha",
+      "DeckName": "Azorius Caw-Gates",
+      "Rank": 19,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "83090bde-45ed-4a39-afd7-b31900528ae5",
+      "PlayerName": "Clinton Rogério Kieling Neto",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 11,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8286ea66-9f4f-434c-9cf4-b31800d7f2d5",
+      "PlayerName": "Felipe Hartmann",
+      "DeckName": "Mono-White Heroic",
+      "Rank": 17,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "794a2774-5090-4676-a3c3-b319001a303e",
+      "PlayerName": "DOUGLAS FEIJO BORGES Doug Burdz",
+      "DeckName": "Gruul Ponza",
+      "Rank": 64,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "750b99d9-4dab-4f03-baca-b318017bfafc",
+      "PlayerName": "Gabriel Zanchin",
+      "DeckName": "Rakdos Aggro",
+      "Rank": 50,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6eeb8e9c-a3b8-47cb-925a-b318013e49b7",
+      "PlayerName": "wagner iankowski",
+      "DeckName": "Mono-Blue Faeries",
+      "Rank": 7,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6dfefab4-c70c-4103-b8c4-b3190004b254",
+      "PlayerName": "Miaycle",
+      "DeckName": "Jund Wildfire",
+      "Rank": 43,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6de4b711-1eb9-4c8f-b9b4-b31900161b03",
+      "PlayerName": "Bruno Fernando",
+      "DeckName": "Gruul Ponza",
+      "Rank": 36,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6451083f-5a13-4c62-b720-b31801201cd7",
+      "PlayerName": "maaahoe",
+      "DeckName": "Mono-Red Burn",
+      "Rank": 57,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "62ce5220-b615-4dd1-9402-b318016ccd7b",
+      "PlayerName": "Campones",
+      "DeckName": "Golgari Dredge",
+      "Rank": 18,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6217ea6b-e3de-48d5-a2fd-b3180146386b",
+      "PlayerName": "PietroPilzdeLorenzo",
+      "DeckName": "Rakdos Madness Burn",
+      "Rank": 85,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "619002af-c482-4eb5-a21c-b3190039ca94",
+      "PlayerName": "Wellington Sampaio",
+      "DeckName": "Jund",
+      "Rank": 20,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "600f446f-53e4-454a-bb1c-b318018afa75",
+      "PlayerName": "penguinlgx",
+      "DeckName": "Golgari Control",
+      "Rank": 79,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5a6c0cae-41a5-4db1-ab38-b3180170d35f",
+      "PlayerName": "Evandro Brum",
+      "DeckName": "Jund Wildfire",
+      "Rank": 8,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "57184872-4c93-41b3-bc8a-b319002400f5",
+      "PlayerName": "Marcio Vetter",
+      "DeckName": "Gruul Ponza",
+      "Rank": 51,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "56a277ff-df01-462d-9951-b318011f8b5f",
+      "PlayerName": "FelipeR",
+      "DeckName": "Boros Synthesizer",
+      "Rank": 67,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "55988da3-2080-42af-b2d2-b31801781b39",
+      "PlayerName": "Fabinho",
+      "DeckName": "Jund Wildfire",
+      "Rank": 34,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "549b0645-1ec0-47d4-bdd1-b3190027eb4a",
+      "PlayerName": "MarA71",
+      "DeckName": "Jund",
+      "Rank": 56,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5419126d-ce91-4543-9ecf-b31900b5bf3c",
+      "PlayerName": "Jeronimo Pereira",
+      "DeckName": "Mono-Blue",
+      "Rank": 37,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4c97b532-58af-4e6f-b715-b3190026138e",
+      "PlayerName": "israeltelles0212",
+      "DeckName": "Golgari Tron",
+      "Rank": 45,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4c79e879-8336-48d6-8462-b319000d05a8",
+      "PlayerName": "Augusto",
+      "DeckName": "Mono-Green Aggro",
+      "Rank": 25,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4bd5086c-f944-4e81-bd82-b318014a39ad",
+      "PlayerName": "Rosane Ludwig",
+      "DeckName": "Golgari Tron",
+      "Rank": 82,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4ba94f76-c08d-4649-a409-b318016f00a6",
+      "PlayerName": "Robincanuto",
+      "DeckName": "Mono-White Aggro",
+      "Rank": 1,
+      "Wins": 6,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4b5558cb-dbd1-4596-8b48-b319003258d1",
+      "PlayerName": "Matheus Oliveira",
+      "DeckName": "Selesnya Bogles",
+      "Rank": 69,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4968d40b-ddd7-4c19-9f9a-b319007edd2b",
+      "PlayerName": "Jonhy_ZO",
+      "DeckName": "Mono-Red Burn",
+      "Rank": 76,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "43c9b9a9-097d-4027-a372-b31800367e48",
+      "PlayerName": "leoauei",
+      "DeckName": "Mono-Blue",
+      "Rank": 24,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "427d1239-1375-4e53-99d0-b318015af8fb",
+      "PlayerName": "Viniheduardu",
+      "DeckName": "Abzan Bogles",
+      "Rank": 81,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3d494e67-7cfb-4d5d-96cc-b31801605de8",
+      "PlayerName": "CriP1",
+      "DeckName": "Rakdos Madness",
+      "Rank": 52,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "33a6c4e5-1bea-4652-b481-b3190013f537",
+      "PlayerName": "DanielAbrahao",
+      "DeckName": "Rakdos Goblins",
+      "Rank": 87,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "336f45e4-697f-4e8e-a9f2-b31800e94730",
+      "PlayerName": "Daniel Krug",
+      "DeckName": "Grixis Affinity",
+      "Rank": 74,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2b4c3562-9786-41fb-b6dc-b318018531dc",
+      "PlayerName": "Especula",
+      "DeckName": "Grixis Affinity",
+      "Rank": 10,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "27ae9c5e-edee-4527-b63b-b318017b884d",
+      "PlayerName": "fernandojardim",
+      "DeckName": "Mono-Blue Terror",
+      "Rank": 65,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "27126b39-a3f7-465f-bad4-b31801276e20",
+      "PlayerName": "LoOU",
+      "DeckName": "Gruul Aggro",
+      "Rank": 60,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "256aa5dc-5c65-4aa4-9fc0-b319001329ce",
+      "PlayerName": "dfabretti87",
+      "DeckName": "Mono-Red Madness Burn",
+      "Rank": 40,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "190176cf-4dd2-46a7-b141-b31801369ec9",
+      "PlayerName": "xandy_86",
+      "DeckName": "Mono-Blue Control",
+      "Rank": 9,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "188015ab-f2a0-4935-99a7-b319003afd43",
+      "PlayerName": "MarceloAndreS",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 47,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "141374ae-fb71-469f-afc6-b319004bbc66",
+      "PlayerName": "Mateus Sadosiuk",
+      "DeckName": "Boros Synthesizer",
+      "Rank": 66,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0f753472-c6f9-4161-b3ef-b31801877b7d",
+      "PlayerName": "Carem",
+      "DeckName": "Gruul Ramp",
+      "Rank": 38,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0c8231fc-12b6-4528-9657-b319000a8ebd",
+      "PlayerName": "Alencar Ercego",
+      "DeckName": "Izzet Aggro",
+      "Rank": 32,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0bc89587-b834-4a02-a829-b31900c32783",
+      "PlayerName": "Robertinho",
+      "DeckName": "Mono-Blue Faeries",
+      "Rank": 15,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0bbc8954-c8c3-4d07-ad63-b3190004b26d",
+      "PlayerName": "k4p3t4",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 14,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "06e153ee-5993-45d0-934e-b31801042e51",
+      "PlayerName": "FabioAugusto",
+      "DeckName": "Mono-White Aggro",
+      "Rank": 49,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "05cfa885-a047-448a-af9c-b3190030ed9f",
+      "PlayerName": "Lucas Caetano",
+      "DeckName": "Izzet Terror",
+      "Rank": 84,
+      "Wins": 1,
+      "IsValid": true
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "TournamentId": 340429,
+  "TournamentName": "Super DC Teams",
+  "TournamentStartDate": "2025-07-22T14:00:00Z",
+  "OrganizationName": "Manila-Gather-BU",
+  "FormatDescription": "Free-form",
+  "Decks": [
+    {
+      "DecklistId": "a90465da-71ba-4680-969b-b322004bd74d",
+      "PlayerName": "Kazuya Kotani",
+      "DeckName": "Sin, Spira's Punishment",
+      "Rank": 1,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "09deaf67-38fc-4b20-bfe0-b322005a7a2b",
+      "PlayerName": "Kanivulcanshintaro",
+      "DeckName": "Lightning, Army of One",
+      "Rank": 2,
+      "Wins": 1,
+      "IsValid": true
+    }
+  ]
+}

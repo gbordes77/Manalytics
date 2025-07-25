@@ -185,9 +185,12 @@ class MeleeScraper(BaseScraper):
                 decklists = await self._get_tournament_decklists(tournament_id)
                 tournament_info['decklists'] = decklists
                 
-                if decklists:  # Only add tournaments with decklists
-                    tournaments.append(tournament_info)
+                # Add tournament even if no decklists (they might be private)
+                tournaments.append(tournament_info)
+                if decklists:
                     logger.info(f"Added tournament: {tournament_info['name']} with {len(decklists)} decks")
+                else:
+                    logger.info(f"Added tournament: {tournament_info['name']} (no accessible decklists)")
             
             return tournaments
             
@@ -196,10 +199,198 @@ class MeleeScraper(BaseScraper):
             return []
 
     async def _get_tournament_decklists(self, tournament_id: str) -> List[Dict[str, Any]]:
-        """Get tournament decklists by scraping the tournament page."""
-        # For now, return empty list - this would need to be implemented
-        # to scrape the actual tournament standings and decklists
-        return []
+        """Get tournament decklists using the GetTournamentDetails API."""
+        try:
+            # Use the API endpoint for tournament details
+            details_url = f"{self.base_url}/Tournament/GetTournamentDetails"
+            
+            # Build payload
+            payload = {
+                "tournamentId": str(tournament_id),
+                "__RequestVerificationToken": self._get_csrf_token()
+            }
+            
+            details_response = await self.client.post(
+                details_url,
+                data=payload,
+                headers={
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Referer': f'{self.base_url}/Tournament/View/{tournament_id}'
+                }
+            )
+            
+            if details_response.status_code != 200:
+                logger.debug(f"API failed for tournament {tournament_id}, trying HTML parsing")
+                # Fallback to HTML parsing
+                return await self._get_tournament_decklists_html(tournament_id)
+            
+            try:
+                data = details_response.json()
+                decks_data = data.get('Decks', [])
+                
+                if not decks_data:
+                    logger.info(f"No decks in API response for tournament {tournament_id}")
+                    return []
+                    
+                logger.info(f"Found {len(decks_data)} decks via API for tournament {tournament_id}")
+                
+            except Exception as e:
+                logger.debug(f"Failed to parse API response: {e}")
+                # Fallback to HTML parsing
+                return await self._get_tournament_decklists_html(tournament_id)
+                
+            # Process decks data
+            decklists = []
+            deck_count = min(len(decks_data), 20)  # Limit to 20 decks max per tournament
+            
+            for i, deck_info in enumerate(decks_data[:deck_count]):
+                if not deck_info.get('IsValid', True):  # Default to valid if not specified
+                    continue
+                    
+                deck_id = deck_info.get('DecklistId')
+                if not deck_id:
+                    continue
+                
+                # Extract basic info from API response
+                decklist = {
+                    "player": deck_info.get('PlayerName', 'Unknown'),
+                    "result": f"{deck_info.get('Wins', 0)}-{deck_info.get('Losses', 0)}" if 'Losses' in deck_info else str(deck_info.get('Wins', 0)),
+                    "deck_name": deck_info.get('DeckName', 'Unknown Deck'),
+                    "rank": deck_info.get('Rank', 999),
+                    "mainboard": [],
+                    "sideboard": []
+                }
+                
+                # Try to get full deck details
+                if self.authenticated:  # Only fetch details if authenticated
+                    deck_details = await self._get_deck_details(deck_id)
+                    if deck_details:
+                        decklist["mainboard"] = deck_details.get('mainboard', [])
+                        decklist["sideboard"] = deck_details.get('sideboard', [])
+                
+                decklists.append(decklist)
+                    
+                # Rate limiting between deck fetches
+                if i < deck_count - 1 and self.authenticated:
+                    await asyncio.sleep(0.3)  # 300ms between requests
+                    
+            return decklists
+            
+        except Exception as e:
+            logger.error(f"Error getting tournament decklists: {e}")
+            return []
+    
+    async def _get_tournament_decklists_html(self, tournament_id: str) -> List[Dict[str, Any]]:
+        """Fallback method to get tournament decklists by parsing HTML."""
+        try:
+            # Get tournament page
+            tournament_url = f"{self.base_url}/Tournament/View/{tournament_id}"
+            response = await self.client.get(tournament_url)
+            
+            if response.status_code != 200:
+                logger.warning(f"Failed to get tournament page for {tournament_id}")
+                return []
+            
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Look for deck links
+            deck_links = soup.select('a[href*="/Decklist/View/"]')
+            
+            if not deck_links:
+                logger.debug(f"No deck links found in HTML for tournament {tournament_id}")
+                return []
+            
+            decklists = []
+            
+            # Extract basic info from links (limit to 10)
+            for link in deck_links[:10]:
+                deck_id = link['href'].split('/')[-1]
+                player_name = link.text.strip() if link.text else "Unknown"
+                
+                decklist = {
+                    "player": player_name,
+                    "result": "Unknown",
+                    "deck_name": "Unknown Deck",
+                    "rank": 999,
+                    "mainboard": [],
+                    "sideboard": []
+                }
+                
+                # Try to get deck details if authenticated
+                if self.authenticated and deck_id:
+                    deck_details = await self._get_deck_details(deck_id)
+                    if deck_details:
+                        decklist["mainboard"] = deck_details.get('mainboard', [])
+                        decklist["sideboard"] = deck_details.get('sideboard', [])
+                
+                decklists.append(decklist)
+                
+                # Rate limiting
+                await asyncio.sleep(0.3)
+            
+            return decklists
+            
+        except Exception as e:
+            logger.debug(f"Error parsing tournament HTML: {e}")
+            return []
+    
+    def _get_csrf_token(self) -> str:
+        """Get CSRF token from cookies."""
+        return self.auth_cookies.get('__RequestVerificationToken', '')
+    
+    async def _get_deck_details(self, deck_id: str) -> Optional[Dict[str, Any]]:
+        """Get detailed deck information."""
+        try:
+            url = f"{self.base_url}/Decklist/View/{deck_id}"
+            response = await self.client.get(url)
+            
+            if response.status_code != 200:
+                return None
+                
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Find deck text
+            deck_text = soup.select_one("pre#decklist-text")
+            if not deck_text:
+                return None
+                
+            # Parse deck
+            lines = deck_text.text.strip().split("\n")
+            mainboard = []
+            sideboard = []
+            current_section = mainboard
+            
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+                    
+                if line.lower() in ["sideboard", "companion"]:
+                    current_section = sideboard
+                    continue
+                elif line.lower() in ["maindeck", "deck", "commander"]:
+                    current_section = mainboard
+                    continue
+                    
+                # Parse "X Card Name"
+                parts = line.split(" ", 1)
+                if len(parts) == 2 and parts[0].isdigit():
+                    count = int(parts[0])
+                    card_name = parts[1]
+                    current_section.append({
+                        "name": card_name,
+                        "quantity": count
+                    })
+                    
+            return {
+                "mainboard": mainboard,
+                "sideboard": sideboard
+            }
+            
+        except Exception as e:
+            logger.debug(f"Error getting deck details for {deck_id}: {e}")
+            return None
 
     def _parse_date(self, date_str: str) -> str:
         """Parse Melee date format."""

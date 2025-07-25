@@ -1,0 +1,81 @@
+{
+  "TournamentId": 329135,
+  "TournamentName": "Premodern \"monthly\" #2 - Mercoledì 9 Luglio h 20:30 @ Arcadia Genova",
+  "TournamentStartDate": "2025-07-09T18:30:00Z",
+  "OrganizationName": "Fanatici Premoderni",
+  "FormatDescription": "Premodern",
+  "Decks": [
+    {
+      "DecklistId": "e0fca291-832e-437a-a229-b313008de72b",
+      "PlayerName": "Giovanni Favetta",
+      "DeckName": "Jeskai",
+      "Rank": 1,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c9829880-aea7-43bc-89ed-b315012808a4",
+      "PlayerName": "Takafumi Chiba",
+      "DeckName": "Selesnya",
+      "Rank": 4,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c7d68c91-3a25-4a36-9b34-b30e0092376a",
+      "PlayerName": "FrancescoVinci",
+      "DeckName": "Mono-Black",
+      "Rank": 3,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ab123020-d889-449f-ad0d-b31400885ce9",
+      "PlayerName": "Giovanni Compiano",
+      "DeckName": "Mono-Green",
+      "Rank": 2,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7983cbee-6aee-4d0f-b6bf-b31500f436bb",
+      "PlayerName": "AntonioV",
+      "DeckName": "Gruul",
+      "Rank": 5,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "76cd43fb-8c83-43f8-ac80-b3070130c510",
+      "PlayerName": "DrCalla",
+      "DeckName": "Simic",
+      "Rank": 9,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "71ff30c2-f87f-46a3-889e-b31501223e8f",
+      "PlayerName": "Enrico Barelli",
+      "DeckName": "Mono-Blue",
+      "Rank": 6,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "29f68f35-c86c-4b7a-a199-b30b008dcbbe",
+      "PlayerName": "alepepe",
+      "DeckName": "Mono-Red",
+      "Rank": 8,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "00b597b3-f94c-46b4-8f7c-b303008e1bc4",
+      "PlayerName": "Mauro Prete",
+      "DeckName": "Azorius",
+      "Rank": 7,
+      "Wins": 1,
+      "IsValid": true
+    }
+  ]
+}

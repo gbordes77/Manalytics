@@ -1,0 +1,81 @@
+{
+  "TournamentId": 333857,
+  "TournamentName": "Sword and Sandals Showdown: EMEA Week 27 2025",
+  "TournamentStartDate": "2025-07-02T17:00:00Z",
+  "OrganizationName": "GladiatorMTGA",
+  "FormatDescription": "Gladiator",
+  "Decks": [
+    {
+      "DecklistId": "eaa8ec26-f23a-4e27-a90c-b30e0112ecf0",
+      "PlayerName": "Coldramen808",
+      "DeckName": "Naya Aggro",
+      "Rank": 3,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "dbe67bed-e330-48c5-8d7f-b30e0107a539",
+      "PlayerName": "Bagyilisk",
+      "DeckName": "Mono-Red",
+      "Rank": 4,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a988f2cc-695b-4b09-b3d9-b30e007438ce",
+      "PlayerName": "iam3dhomer",
+      "DeckName": "W-U-B-G Flicker",
+      "Rank": 7,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "59a01003-08df-4ef3-b044-b30e010cee6b",
+      "PlayerName": "TheFriendlyEldrazi",
+      "DeckName": "Azorius Tempo",
+      "Rank": 5,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4e389812-b69b-49fb-89e1-b30e0110fec8",
+      "PlayerName": "incidentall",
+      "DeckName": "Esper",
+      "Rank": 8,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4443594c-8470-43e7-9f43-b30e010c6719",
+      "PlayerName": "Bob (lindonmichael)",
+      "DeckName": "Mono-Red",
+      "Rank": 1,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "217c7d1e-1014-4b65-a8f3-b30e01137feb",
+      "PlayerName": "Joeks0303",
+      "DeckName": "Naya Equipment",
+      "Rank": 9,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0e888fa4-8f19-4d16-8265-b30e00da8b34",
+      "PlayerName": "bogalizard",
+      "DeckName": "Orzhov",
+      "Rank": 6,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "09458b98-4bf0-4b5e-ba03-b30e0101ce1e",
+      "PlayerName": "Tabrys",
+      "DeckName": "W-U-B-R-G Reanimator",
+      "Rank": 2,
+      "Wins": 2,
+      "IsValid": true
+    }
+  ]
+}

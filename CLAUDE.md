@@ -214,3 +214,16 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
 - Scraper Melee : `scrape_melee_working_v2.py`
 - Scraper MTGO : `scrape_mtgo_tournaments_enhanced.py`
 - Test Auth : `test_melee_auth_simple.py`
+
+## 📝 RÈGLE DE DOCUMENTATION
+
+**Quand l'utilisateur confirme qu'un module fonctionne** ("c'est ok", "ça fonctionne", etc.) :
+1. **CRÉER IMMÉDIATEMENT** un guide complet dans `docs/`
+2. **Format** : `{MODULE}_SCRAPING_GUIDE.md` ou `{MODULE}_GUIDE.md`
+3. **Contenu obligatoire** :
+   - Vue d'ensemble avec résultats obtenus
+   - Architecture détaillée du code
+   - Guide d'utilisation complet
+   - Points techniques importants
+   - Leçons apprises
+4. **Exemples créés** : `MELEE_SCRAPING_GUIDE.md`, `MTGO_SCRAPING_GUIDE.md`

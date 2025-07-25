@@ -1,0 +1,25 @@
+{
+  "TournamentId": 335125,
+  "TournamentName": "Пионер. Летняя Лига (03.07.25)",
+  "TournamentStartDate": "2025-07-03T16:00:00Z",
+  "OrganizationName": "Club \"Another World\"",
+  "FormatDescription": "Pioneer",
+  "Decks": [
+    {
+      "DecklistId": "f621b317-8608-4e47-b083-b30f00f5056a",
+      "PlayerName": "MiFlyer",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 12,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "755c8a77-f75d-4e94-8ea0-b30f010632f5",
+      "PlayerName": "NickLatkovich",
+      "DeckName": "W-U-B-G Lotus Field",
+      "Rank": 1,
+      "Wins": 4,
+      "IsValid": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "TournamentId": 325753,
+  "TournamentName": "The Dark Side Modern RCQ 2-Slot",
+  "TournamentStartDate": "2025-07-19T16:00:00Z",
+  "OrganizationName": "The Dark Side",
+  "FormatDescription": "Modern",
+  "Decks": [
+    {
+      "DecklistId": "ee58b488-94cc-465f-b94b-b31f00d9f9ae",
+      "PlayerName": "LeightonLee288",
+      "DeckName": "Dimir Murktide",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b365852f-aa0d-46fa-98b9-b31f00e64eca",
+      "PlayerName": "Steven Ringer",
+      "DeckName": "Boros Aggro",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "41e6de40-7bbf-42cb-bd34-b31f00dc5d25",
+      "PlayerName": "Splatypus",
+      "DeckName": "Decklist",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "29cb345d-dc82-485c-a98c-b31d0154b9cb",
+      "PlayerName": "christopher perkins",
+      "DeckName": "Orzhov Midrange",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    }
+  ]
+}

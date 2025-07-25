@@ -1,0 +1,41 @@
+{
+  "TournamentId": 213108,
+  "TournamentName": "Oklahoma Land Run '25 Challenge: CEDH ",
+  "TournamentStartDate": "2025-07-20T16:30:00Z",
+  "OrganizationName": "Game HQ",
+  "FormatDescription": "Commander",
+  "Decks": [
+    {
+      "DecklistId": "d9f4034f-be65-4bc2-8e4c-b320000abbbc",
+      "PlayerName": "Tryzec",
+      "DeckName": "Colorless",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "6c086973-50b9-42a0-8815-b320010781b9",
+      "PlayerName": "ManoBrink",
+      "DeckName": "Magda, Brazen Outlaw",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6b40ead3-7ebb-4f58-ab9f-b3200022a5ae",
+      "PlayerName": "joshua cook",
+      "DeckName": "Lumra, Bellow of the Woods",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3637ba32-395e-4394-aaa8-b31f018a7347",
+      "PlayerName": "Riley Powell",
+      "DeckName": "Yuriko, the Tiger's Shadow",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    }
+  ]
+}

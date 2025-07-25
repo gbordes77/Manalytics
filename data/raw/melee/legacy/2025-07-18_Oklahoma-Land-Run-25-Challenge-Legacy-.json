@@ -1,0 +1,33 @@
+{
+  "TournamentId": 212855,
+  "TournamentName": "Oklahoma Land Run '25 Challenge: Legacy ",
+  "TournamentStartDate": "2025-07-18T19:00:00Z",
+  "OrganizationName": "Game HQ",
+  "FormatDescription": "Legacy",
+  "Decks": [
+    {
+      "DecklistId": "fb6e41f7-45ef-4c98-9a6c-b31e012d8138",
+      "PlayerName": "Luke Powell",
+      "DeckName": "Dimir",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ba59d4d2-76ad-497d-a90c-b31e012c0676",
+      "PlayerName": "Jack Reed",
+      "DeckName": "Decklist",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "4590f7fc-c181-48ef-8b35-b31e00f0443b",
+      "PlayerName": "kellconn6",
+      "DeckName": "Izzet Delver",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    }
+  ]
+}

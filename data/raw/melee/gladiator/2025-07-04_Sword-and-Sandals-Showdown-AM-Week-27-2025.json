@@ -1,0 +1,49 @@
+{
+  "TournamentId": 333858,
+  "TournamentName": "Sword and Sandals Showdown: AM Week 27 2025",
+  "TournamentStartDate": "2025-07-04T00:00:00Z",
+  "OrganizationName": "GladiatorMTGA",
+  "FormatDescription": "Gladiator",
+  "Decks": [
+    {
+      "DecklistId": "fd06c101-1b62-4977-8cf7-b30f01738734",
+      "PlayerName": "Neisan2112",
+      "DeckName": "Mono-Black Midrange",
+      "Rank": 3,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "80898e36-604f-4d6c-8b70-b30f0184a62c",
+      "PlayerName": "Joeks0303",
+      "DeckName": "W-U-B-R-G",
+      "Rank": 4,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6b00522e-73cb-4b7a-b022-b30f015a7c62",
+      "PlayerName": "bogalizard",
+      "DeckName": "Orzhov",
+      "Rank": 1,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5c25f4d0-768d-44f5-8a39-b30f017f378a",
+      "PlayerName": "dabudder",
+      "DeckName": "Temur",
+      "Rank": 5,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3cae938a-4c25-40e7-916e-b30f0153fa9e",
+      "PlayerName": "iam3dhomer",
+      "DeckName": "Izzet",
+      "Rank": 2,
+      "Wins": 2,
+      "IsValid": true
+    }
+  ]
+}

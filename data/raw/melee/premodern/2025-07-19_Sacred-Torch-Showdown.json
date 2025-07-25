@@ -1,0 +1,633 @@
+{
+  "TournamentId": 334105,
+  "TournamentName": "Sacred Torch Showdown",
+  "TournamentStartDate": "2025-07-19T15:00:00Z",
+  "OrganizationName": "Order of the Sacred Torch",
+  "FormatDescription": "Premodern",
+  "Decks": [
+    {
+      "DecklistId": "fa69784e-cca2-4a7e-b12b-b31f00621cdf",
+      "PlayerName": "Michael Flores",
+      "DeckName": "Devourer",
+      "Rank": 71,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "eee9e8e8-087b-41e0-9f37-b31f0061382b",
+      "PlayerName": "RichBucey",
+      "DeckName": "GR Terra Oath",
+      "Rank": 68,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ec7a2f55-9ac0-409b-afcc-b31e016f1b83",
+      "PlayerName": "DEL .",
+      "DeckName": "Wildfire",
+      "Rank": 77,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e9e6e3ee-6679-4701-9de6-b31f0002050c",
+      "PlayerName": "mtgbanding",
+      "DeckName": "Zombie Blast",
+      "Rank": 55,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e861307d-cda9-4efe-a3cb-b31e00bebc1b",
+      "PlayerName": "Ashok Chitturi",
+      "DeckName": "Mono Blue Tide",
+      "Rank": 11,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "de2c539f-a0ed-47c6-a80f-b31f00f1b28c",
+      "PlayerName": "Ryan Marvin",
+      "DeckName": "Mono Blue Stiflenought",
+      "Rank": 16,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d49ec901-b6a4-49d7-808c-b31f00d52de2",
+      "PlayerName": "bryce",
+      "DeckName": "Burn",
+      "Rank": 56,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d2eaaf85-fe4f-44be-8c3b-b31e015f09ef",
+      "PlayerName": "Lanny Huang",
+      "DeckName": "Replenish",
+      "Rank": 15,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d2b96146-b3df-48a6-8421-b31f00e79db7",
+      "PlayerName": "SF45",
+      "DeckName": "UW Midrange",
+      "Rank": 30,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "cc71ebab-428e-4ea5-ad56-b31e0167cf7c",
+      "PlayerName": "SerafinoSerrati",
+      "DeckName": "GR Terra Oath",
+      "Rank": 33,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c99f4597-dbcd-4460-8139-b31e0156d9e0",
+      "PlayerName": "Brad Hanley",
+      "DeckName": "Mono Black Midrange",
+      "Rank": 43,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c4a8698e-88cf-4ada-858c-b31f00e1ddde",
+      "PlayerName": "Jay McCowan",
+      "DeckName": "GR Terra Oath",
+      "Rank": 47,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c3ad82c1-2547-4a7d-9f34-b31f00e93d1a",
+      "PlayerName": "trashdogadam",
+      "DeckName": "Quiet Oath",
+      "Rank": 13,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c16460df-1ff9-48f4-9898-b31e00d0cf40",
+      "PlayerName": "SydI",
+      "DeckName": "Jund",
+      "Rank": 74,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "bb27a2a1-9148-43a2-aaa0-b31f00068331",
+      "PlayerName": "pplstuff",
+      "DeckName": "Devourer",
+      "Rank": 34,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b86dcb10-7dfe-44b6-8343-b31f00f262dd",
+      "PlayerName": "drakedrakedrake",
+      "DeckName": "UW Midrange",
+      "Rank": 42,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b7c9caef-fd85-436c-bd62-b31f0005ef54",
+      "PlayerName": "Y2Kiwi",
+      "DeckName": "Mono Black Clerics",
+      "Rank": 79,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b4eb30cd-7a7d-4711-afff-b31c00de5aaf",
+      "PlayerName": "Nick Mayo",
+      "DeckName": "Elves",
+      "Rank": 20,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b08b196b-b8ae-487d-be82-b31e00c3390d",
+      "PlayerName": "Alex Von Bergen",
+      "DeckName": "White Weenie",
+      "Rank": 80,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ae0d1967-f823-4dee-8a49-b31f003792da",
+      "PlayerName": "Benjamin Landers",
+      "DeckName": "UW Control",
+      "Rank": 58,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "adf94869-98bf-4756-9637-b31f00496ae8",
+      "PlayerName": "Brendan O’Dowd",
+      "DeckName": "Enchantress",
+      "Rank": 53,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ad629f7d-4fb5-4254-833c-b31a0147b94e",
+      "PlayerName": "GregFenton",
+      "DeckName": "Survival Opposition",
+      "Rank": 19,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ab20d3d3-f2c1-4de4-a342-b31f00425d85",
+      "PlayerName": "Bill Ellis!!",
+      "DeckName": "GR Terra Oath",
+      "Rank": 62,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ab13210a-f985-403d-8dc6-b31f0002da5d",
+      "PlayerName": "BrandonEcon",
+      "DeckName": "RG Goblins",
+      "Rank": 48,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "aa7ec68f-fd58-4be5-862f-b31f0009d193",
+      "PlayerName": "tywilson",
+      "DeckName": "WB Control",
+      "Rank": 40,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a84bd508-100a-4c33-a8f8-b31f005f5910",
+      "PlayerName": "John Portnoy",
+      "DeckName": "Wildfire",
+      "Rank": 51,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a2becad8-0e85-45f6-b38c-b31f00a3b2e1",
+      "PlayerName": "pcocozza",
+      "DeckName": "Mono Red Goblins",
+      "Rank": 50,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9edd085e-44c8-43d4-a5ac-b31f0036eae6",
+      "PlayerName": "Zac Clark",
+      "DeckName": "UR Control",
+      "Rank": 24,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9d926ff6-3943-4045-bdcd-b31f00de7bab",
+      "PlayerName": "Chris Cruz",
+      "DeckName": "GR Terra Oath",
+      "Rank": 12,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9acfb2f9-6f65-4836-a462-b31f0041c5c7",
+      "PlayerName": "sylvanisator",
+      "DeckName": "Cogni Oath",
+      "Rank": 46,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "99f31d26-7d92-4483-ad8b-b31800ee4dc0",
+      "PlayerName": "AndrewLevine",
+      "DeckName": "4C Terrageddon",
+      "Rank": 4,
+      "Wins": 6,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "95b3bc6a-1cc0-4d58-b649-b3120121ccb9",
+      "PlayerName": "ecianfanelli",
+      "DeckName": "UW Control",
+      "Rank": 22,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8db3a606-8a09-4ea9-b236-b31e00ca9cd1",
+      "PlayerName": "crazycarlwinter",
+      "DeckName": "Treva Aluren",
+      "Rank": 63,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8d687660-4277-4eef-b65b-b31901555dfa",
+      "PlayerName": "Jeff Jao",
+      "DeckName": "RG Threshold",
+      "Rank": 28,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "880ca549-0185-4876-ad02-b31f00eac547",
+      "PlayerName": "Phil Quinn",
+      "DeckName": "RB Goblins",
+      "Rank": 31,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8034fb35-b376-4908-a21b-b31f00d3d921",
+      "PlayerName": "AnaK3",
+      "DeckName": "Mono Blue Stiflenought",
+      "Rank": 21,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7fee98c1-307d-4c7d-853e-b31f00436d2a",
+      "PlayerName": "BryanGulotta",
+      "DeckName": "Lan D Hoath",
+      "Rank": 59,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7f5b89f8-6ceb-4af4-9030-b31f00426208",
+      "PlayerName": "Richard Tyagi",
+      "DeckName": "Burn",
+      "Rank": 69,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7e4e9a68-5dff-433c-9843-b31e0147ad12",
+      "PlayerName": "Alex Profaci",
+      "DeckName": "UBW Midrange",
+      "Rank": 73,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7db56241-1c05-463d-aa19-b31a01402950",
+      "PlayerName": "Matthew Melachrinos",
+      "DeckName": "RG Goblins",
+      "Rank": 66,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7ca7247d-d838-4ee0-a4c4-b31f001e13e2",
+      "PlayerName": "FTDave",
+      "DeckName": "Replenish",
+      "Rank": 44,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "795b3117-28c1-4914-be5a-b31d013026f0",
+      "PlayerName": "rmcf",
+      "DeckName": "Machine Head",
+      "Rank": 32,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7673d0ab-5126-49f1-ac7e-b31e017007fb",
+      "PlayerName": "OsyL",
+      "DeckName": "Replenish",
+      "Rank": 17,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6f865cdc-2f26-40fe-8bed-b31f00f1074d",
+      "PlayerName": "MarineBiomancer",
+      "DeckName": "Replenish",
+      "Rank": 10,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6f7f3b0a-fe61-48fd-ab4f-b31f00c28e35",
+      "PlayerName": "ByerBeware",
+      "DeckName": "Cephalid Breakfast",
+      "Rank": 35,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "67b7aa8e-7928-4e02-854d-b31f00c72157",
+      "PlayerName": "AlexRitz",
+      "DeckName": "Mono Blue Stiflenought",
+      "Rank": 29,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "62c7705b-c966-47ba-91a1-b31f00262355",
+      "PlayerName": "Jay Lansdaal",
+      "DeckName": "Elves",
+      "Rank": 41,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6285f3e8-c94c-4bda-8053-b31f00d65d7b",
+      "PlayerName": "Ari Cheslow",
+      "DeckName": "UWG Threshold",
+      "Rank": 49,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "61a2d086-5a8a-47af-bbe4-b31e013beb88",
+      "PlayerName": "LuisN5",
+      "DeckName": "Quiet Oath",
+      "Rank": 38,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "613b0b54-e55d-42ce-a48e-b31e01444f5f",
+      "PlayerName": "Christopher Baviello",
+      "DeckName": "4C Terra Oath",
+      "Rank": 8,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5cb4a8f9-3ab0-4f69-85ee-b31f00d34b2a",
+      "PlayerName": "WillReddy",
+      "DeckName": "GR Terra Oath",
+      "Rank": 26,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "58f13378-cb93-4f00-afa0-b31e014107ea",
+      "PlayerName": "John Grudzina",
+      "DeckName": "Elves",
+      "Rank": 67,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "57226332-8fd7-4909-9323-b31e014e99be",
+      "PlayerName": "zjr",
+      "DeckName": "Elves",
+      "Rank": 70,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "53ff9aae-45b5-4905-baa4-b31f00ed6a1a",
+      "PlayerName": "Tencteri",
+      "DeckName": "Enchantress",
+      "Rank": 81,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4d4dd5a0-7154-4033-a630-b31f00d79b10",
+      "PlayerName": "Brian Lonergan",
+      "DeckName": "White Lightning",
+      "Rank": 25,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3cd10629-293c-4bcc-9739-b31f00349939",
+      "PlayerName": "swb 👋",
+      "DeckName": "Enchantress",
+      "Rank": 9,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3b27416f-df63-44f6-bc5f-b31f00e261fa",
+      "PlayerName": "brad stone",
+      "DeckName": "Quiet Oath",
+      "Rank": 2,
+      "Wins": 7,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "39905e91-8ac0-49de-8f4f-b31f00432156",
+      "PlayerName": "ForceofPhil",
+      "DeckName": "UG Control",
+      "Rank": 45,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "350aa3a8-3faf-4abf-90cf-b31f00cb214d",
+      "PlayerName": "Brandon Phan",
+      "DeckName": "RB Goblins",
+      "Rank": 52,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "315101d9-028c-420f-90f1-b31f004c63cc",
+      "PlayerName": "Mario Longobardi",
+      "DeckName": "Mono Blue Stiflenought",
+      "Rank": 37,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2f1cbbcc-806e-4f40-9879-b31e008324d5",
+      "PlayerName": "avoellmer",
+      "DeckName": "UW Control",
+      "Rank": 7,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2763eecd-9337-4cf6-8009-b31f000e0181",
+      "PlayerName": "Adam Najman",
+      "DeckName": "Psychatog",
+      "Rank": 14,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "241ddc5c-eb89-40b3-99b5-b31f00dc2f81",
+      "PlayerName": "camfulton",
+      "DeckName": "Lan D Hoath",
+      "Rank": 60,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2074d584-5abc-4ce3-8771-b31f00db11aa",
+      "PlayerName": "David Tao",
+      "DeckName": "4C Terrageddon",
+      "Rank": 3,
+      "Wins": 6,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "1f7f8da2-2cf3-479e-bdd5-b31f00f1bf9d",
+      "PlayerName": "Sunny Seelamsetty",
+      "DeckName": "Burn",
+      "Rank": 61,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "1e4ec577-d49e-4e7d-ba67-b31f002042b8",
+      "PlayerName": "Jeff Farris",
+      "DeckName": "Mono Black Clerics",
+      "Rank": 23,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "1c928337-fff1-4647-b1c9-b31f00e272d6",
+      "PlayerName": "DomD13",
+      "DeckName": "Devourer",
+      "Rank": 64,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "18f7817c-617d-4124-ac6b-b31900fed8fb",
+      "PlayerName": "Michael Eisenhauer",
+      "DeckName": "WG Slide",
+      "Rank": 65,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "12364b0d-e12b-4982-8e50-b31e010e64a3",
+      "PlayerName": "Gregory Berlinrut",
+      "DeckName": "Mono-Red",
+      "Rank": 27,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0ea94c37-14a9-4f91-87d2-b31f00f42170",
+      "PlayerName": "Ryan Fisher",
+      "DeckName": "Elves",
+      "Rank": 39,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0e1eae5c-88d2-44fa-a91e-b31d012ef900",
+      "PlayerName": "Dave Kaplan",
+      "DeckName": "Mono Blue Stiflenought",
+      "Rank": 1,
+      "Wins": 8,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0d29b438-6711-43c6-b6c9-b31a01870a1b",
+      "PlayerName": "Someasianguy",
+      "DeckName": "Madness",
+      "Rank": 78,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0cd83bdd-f1be-44fb-af60-b31b0009e3ce",
+      "PlayerName": "MBPerlman",
+      "DeckName": "Slivers",
+      "Rank": 54,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0bbe6266-d2cb-4622-a019-b31f00f4679d",
+      "PlayerName": "BillyDxC",
+      "DeckName": "Mono Blue Tide",
+      "Rank": 76,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "092b22e4-97a9-4872-9592-b31f00558042",
+      "PlayerName": "NicD52",
+      "DeckName": "Mono Blue Stiflenought",
+      "Rank": 36,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "08d3b2ac-0114-4acf-bb61-b31f0061788a",
+      "PlayerName": "Roland Chang",
+      "DeckName": "GAME",
+      "Rank": 72,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "064ebe86-ddcc-4d21-b62b-b31e0151c2e7",
+      "PlayerName": "Scott Blumenthal",
+      "DeckName": "Enchantress",
+      "Rank": 75,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0050cedb-0d58-4daa-bc73-b31f00df54f3",
+      "PlayerName": "SimP15",
+      "DeckName": "Mono Green Stompy",
+      "Rank": 18,
+      "Wins": 4,
+      "IsValid": true
+    }
+  ]
+}

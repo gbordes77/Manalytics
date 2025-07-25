@@ -1,0 +1,25 @@
+{
+  "TournamentId": 334536,
+  "TournamentName": "Паупер. Летняя Лига (02.07.25)",
+  "TournamentStartDate": "2025-07-02T16:00:00Z",
+  "OrganizationName": "Club \"Another World\"",
+  "FormatDescription": "Pauper",
+  "Decks": [
+    {
+      "DecklistId": "607b0072-b6b8-4293-96fc-b30e0104f2be",
+      "PlayerName": "Hogar",
+      "DeckName": "Golgari Control",
+      "Rank": 11,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0e6f3741-10b5-4f5e-96a1-b30e010074c2",
+      "PlayerName": "AndreyG",
+      "DeckName": "Orzhov Caw-Gates",
+      "Rank": 9,
+      "Wins": 1,
+      "IsValid": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "TournamentId": 330346,
+  "TournamentName": "CCS Vintage Proxy Pot Tournament",
+  "TournamentStartDate": "2025-07-19T14:00:00Z",
+  "OrganizationName": "CharliesCollectibleShow",
+  "FormatDescription": "Vintage",
+  "Decks": [
+    {
+      "DecklistId": "f84804af-ddca-4ce8-b635-b31e006ce6c7",
+      "PlayerName": "AssassinJJ",
+      "DeckName": "Jeskai Paradoxical Outcome",
+      "Rank": 1,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b75a241d-8f76-4007-945a-b31f00de0667",
+      "PlayerName": "Weston Baker",
+      "DeckName": "Mono-Blue",
+      "Rank": 4,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7888b7b6-776b-4e97-9d81-b31e006cebc5",
+      "PlayerName": "Joseph Brockwell",
+      "DeckName": "Esper Merfolk",
+      "Rank": 3,
+      "Wins": 1,
+      "IsValid": true
+    }
+  ]
+}
