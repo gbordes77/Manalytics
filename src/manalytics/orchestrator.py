@@ -9,7 +9,14 @@ import json
 import asyncio
 import concurrent.futures
 
-from .scrapers import MeleeScraper, MTGOScraper
+try:
+    from .scrapers import MeleeScraper, MTGOScraper
+except ImportError:
+    # Si les scrapers ne sont pas disponibles, utiliser les standalone
+    from .scrapers.standalone_wrapper import get_standalone_scrapers
+    scrapers_dict = get_standalone_scrapers()
+    MeleeScraper = lambda: scrapers_dict['melee']
+    MTGOScraper = lambda: scrapers_dict['mtgo']
 from .parsers.archetype_engine import ArchetypeEngine
 from .parsers.decklist_parser import DecklistParser
 from .analyzers.meta_analyzer import MetaAnalyzer
@@ -38,6 +45,8 @@ class Orchestrator:
         self.visualizer = MatchupMatrixVisualizer()
         
         # Scraper instances
+        # NOTE: Si les scrapers principaux ne sont pas disponibles,
+        # utilise automatiquement les scripts standalone via le wrapper
         self.scrapers = {
             'mtgo': MTGOScraper(),
             'melee': MeleeScraper()
