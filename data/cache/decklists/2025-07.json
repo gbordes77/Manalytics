@@ -1,0 +1,969 @@
+{
+  "standard-league-2025-07-099382": {
+    "tournament_id": "standard-league-2025-07-099382",
+    "date": "2025-07-09T00:00:00",
+    "format": "standard",
+    "platform": "mtgo",
+    "decklists": [
+      {
+        "deck_id": "standard-league-2025-07-099382_LBBL",
+        "tournament_id": "standard-league-2025-07-099382",
+        "player": "LBBL",
+        "rank": 0,
+        "wins": 5,
+        "losses": 0,
+        "deck_name": null,
+        "archetype": "WU Omniscience",
+        "colors": "WU",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Floodfarm Verge",
+            "count": 4
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 1
+          },
+          {
+            "name": "Adarkar Wastes",
+            "count": 3
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 1
+          },
+          {
+            "name": "Ephara's Dispersal",
+            "count": 3
+          },
+          {
+            "name": "Fabled Passage",
+            "count": 1
+          },
+          {
+            "name": "Fallaji Archaeologist",
+            "count": 4
+          },
+          {
+            "name": "Omniscience",
+            "count": 4
+          },
+          {
+            "name": "Fountainport",
+            "count": 1
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Marang River Regent",
+            "count": 4
+          },
+          {
+            "name": "Meticulous Archive",
+            "count": 4
+          },
+          {
+            "name": "Mistrise Village",
+            "count": 1
+          },
+          {
+            "name": "No More Lies",
+            "count": 3
+          },
+          {
+            "name": "Seachrome Coast",
+            "count": 3
+          },
+          {
+            "name": "Oracle of Tragedy",
+            "count": 1
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 1
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Repair and Recharge",
+            "count": 4
+          },
+          {
+            "name": "Roiling Dragonstorm",
+            "count": 4
+          },
+          {
+            "name": "Scrollshift",
+            "count": 3
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Plains",
+            "count": 1
+          },
+          {
+            "name": "Plains",
+            "count": 1
+          },
+          {
+            "name": "Plains",
+            "count": 1
+          },
+          {
+            "name": "Collector's Vault",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Negate",
+            "count": 2
+          },
+          {
+            "name": "Kutzil's Flanker",
+            "count": 1
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 3
+          },
+          {
+            "name": "Get Lost",
+            "count": 2
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 4
+          },
+          {
+            "name": "Voice of Victory",
+            "count": 3
+          }
+        ],
+        "cached_at": "2025-07-25T15:09:45.500008"
+      },
+      {
+        "deck_id": "standard-league-2025-07-099382_MeowAlpha",
+        "tournament_id": "standard-league-2025-07-099382",
+        "player": "MeowAlpha",
+        "rank": 0,
+        "wins": 5,
+        "losses": 0,
+        "deck_name": null,
+        "archetype": "WR Convoke",
+        "colors": "WR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Arabella, Abandoned Doll",
+            "count": 2
+          },
+          {
+            "name": "Mirrex",
+            "count": 1
+          },
+          {
+            "name": "Case of the Gateway Express",
+            "count": 4
+          },
+          {
+            "name": "Dragoon's Lance",
+            "count": 2
+          },
+          {
+            "name": "Gleeful Demolition",
+            "count": 4
+          },
+          {
+            "name": "Imodane's Recruiter",
+            "count": 4
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 4
+          },
+          {
+            "name": "Knight-Errant of Eos",
+            "count": 4
+          },
+          {
+            "name": "Resolute Reinforcements",
+            "count": 4
+          },
+          {
+            "name": "Nesting Bot",
+            "count": 4
+          },
+          {
+            "name": "Novice Inspector",
+            "count": 4
+          },
+          {
+            "name": "Painter's Studio // Defaced Gallery",
+            "count": 2
+          },
+          {
+            "name": "Plains",
+            "count": 5
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 1
+          },
+          {
+            "name": "Warden of the Inner Sky",
+            "count": 4
+          },
+          {
+            "name": "Sunbillow Verge",
+            "count": 4
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Rest in Peace",
+            "count": 2
+          },
+          {
+            "name": "Destroy Evil",
+            "count": 3
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 1
+          },
+          {
+            "name": "Aven Interrupter",
+            "count": 3
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 2
+          },
+          {
+            "name": "Witchstalker Frenzy",
+            "count": 1
+          },
+          {
+            "name": "Chandra, Spark Hunter",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-25T15:09:45.500041"
+      },
+      {
+        "deck_id": "standard-league-2025-07-099382_doctor-x",
+        "tournament_id": "standard-league-2025-07-099382",
+        "player": "doctor-x",
+        "rank": 0,
+        "wins": 5,
+        "losses": 0,
+        "deck_name": null,
+        "archetype": "WRG Yuna",
+        "colors": "WRG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Yuna, Hope of Spira",
+            "count": 4
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 2
+          },
+          {
+            "name": "Chandra, Spark Hunter",
+            "count": 1
+          },
+          {
+            "name": "Dredger's Insight",
+            "count": 4
+          },
+          {
+            "name": "Elegant Parlor",
+            "count": 3
+          },
+          {
+            "name": "Esper Origins",
+            "count": 4
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Plains",
+            "count": 1
+          },
+          {
+            "name": "Get Lost",
+            "count": 1
+          },
+          {
+            "name": "Hushwood Verge",
+            "count": 3
+          },
+          {
+            "name": "Joshua, Phoenix's Dominant",
+            "count": 2
+          },
+          {
+            "name": "Lush Portico",
+            "count": 3
+          },
+          {
+            "name": "Mountain",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Boilerbilges",
+            "count": 4
+          },
+          {
+            "name": "Forest",
+            "count": 2
+          },
+          {
+            "name": "Starting Town",
+            "count": 4
+          },
+          {
+            "name": "Summon: Bahamut",
+            "count": 1
+          },
+          {
+            "name": "Summon: Fenrir",
+            "count": 2
+          },
+          {
+            "name": "Summon: Knights of Round",
+            "count": 1
+          },
+          {
+            "name": "Sunbillow Verge",
+            "count": 1
+          },
+          {
+            "name": "Terra, Magical Adept",
+            "count": 2
+          },
+          {
+            "name": "Thornspire Verge",
+            "count": 4
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 4
+          },
+          {
+            "name": "Abrade",
+            "count": 1
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Chandra, Spark Hunter",
+            "count": 1
+          },
+          {
+            "name": "Clarion Conqueror",
+            "count": 2
+          },
+          {
+            "name": "Day of Judgment",
+            "count": 1
+          },
+          {
+            "name": "Elspeth, Storm Slayer",
+            "count": 1
+          },
+          {
+            "name": "Exorcise",
+            "count": 2
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          },
+          {
+            "name": "Get Lost",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Nissa, Ascended Animist",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-25T15:09:45.500072"
+      },
+      {
+        "deck_id": "standard-league-2025-07-099382_dragobarbut097",
+        "tournament_id": "standard-league-2025-07-099382",
+        "player": "dragobarbut097",
+        "rank": 0,
+        "wins": 5,
+        "losses": 0,
+        "deck_name": null,
+        "archetype": null,
+        "colors": "RG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Violent Urge",
+            "count": 3
+          },
+          {
+            "name": "Wildfire Wickerfolk",
+            "count": 4
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Patchwork Beastie",
+            "count": 4
+          },
+          {
+            "name": "Omnivorous Flytrap",
+            "count": 3
+          },
+          {
+            "name": "Karplusan Forest",
+            "count": 4
+          },
+          {
+            "name": "Summon: Brynhildr",
+            "count": 4
+          },
+          {
+            "name": "Cenote Scout",
+            "count": 4
+          },
+          {
+            "name": "Pawpatch Recruit",
+            "count": 2
+          },
+          {
+            "name": "Break Out",
+            "count": 4
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 2
+          },
+          {
+            "name": "Beastie Beatdown",
+            "count": 1
+          },
+          {
+            "name": "Thornspire Verge",
+            "count": 4
+          },
+          {
+            "name": "Copperline Gorge",
+            "count": 4
+          },
+          {
+            "name": "Keen-Eyed Curator",
+            "count": 1
+          },
+          {
+            "name": "Keen-Eyed Curator",
+            "count": 3
+          },
+          {
+            "name": "Mountain",
+            "count": 1
+          },
+          {
+            "name": "Forest",
+            "count": 4
+          },
+          {
+            "name": "Forest",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Pyroclasm",
+            "count": 3
+          },
+          {
+            "name": "Heritage Reclamation",
+            "count": 4
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 3
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Wrenn and Realmbreaker",
+            "count": 3
+          }
+        ],
+        "cached_at": "2025-07-25T15:09:45.500095"
+      },
+      {
+        "deck_id": "standard-league-2025-07-099382_YeffPog",
+        "tournament_id": "standard-league-2025-07-099382",
+        "player": "YeffPog",
+        "rank": 0,
+        "wins": 5,
+        "losses": 0,
+        "deck_name": null,
+        "archetype": null,
+        "colors": "BG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Sentinel of the Nameless City",
+            "count": 2
+          },
+          {
+            "name": "Restless Cottage",
+            "count": 1
+          },
+          {
+            "name": "Blooming Marsh",
+            "count": 4
+          },
+          {
+            "name": "Llanowar Wastes",
+            "count": 2
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 2
+          },
+          {
+            "name": "Swamp",
+            "count": 2
+          },
+          {
+            "name": "Cut Down",
+            "count": 3
+          },
+          {
+            "name": "Sheoldred, the Apocalypse",
+            "count": 2
+          },
+          {
+            "name": "Tear Asunder",
+            "count": 2
+          },
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Sheoldred's Edict",
+            "count": 1
+          },
+          {
+            "name": "Swamp",
+            "count": 2
+          },
+          {
+            "name": "Forest",
+            "count": 2
+          },
+          {
+            "name": "Underground Mortuary",
+            "count": 2
+          },
+          {
+            "name": "Shoot the Sheriff",
+            "count": 1
+          },
+          {
+            "name": "Unholy Annex // Ritual Chamber",
+            "count": 4
+          },
+          {
+            "name": "Forest",
+            "count": 2
+          },
+          {
+            "name": "Lumbering Worldwagon",
+            "count": 4
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 4
+          },
+          {
+            "name": "Disruptive Stormbrood",
+            "count": 1
+          },
+          {
+            "name": "Llanowar Elves",
+            "count": 4
+          },
+          {
+            "name": "Qarsi Revenant",
+            "count": 2
+          },
+          {
+            "name": "Demon Wall",
+            "count": 4
+          },
+          {
+            "name": "Jenova, Ancient Calamity",
+            "count": 1
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 3
+          },
+          {
+            "name": "Rot-Curse Rakshasa",
+            "count": 2
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Nissa, Ascended Animist",
+            "count": 1
+          },
+          {
+            "name": "Choking Miasma",
+            "count": 2
+          },
+          {
+            "name": "Tear Asunder",
+            "count": 1
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "Blot Out",
+            "count": 1
+          },
+          {
+            "name": "Outrageous Robbery",
+            "count": 1
+          },
+          {
+            "name": "Liliana of the Veil",
+            "count": 2
+          },
+          {
+            "name": "Scavenger Regent",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-25T15:09:45.500122"
+      },
+      {
+        "deck_id": "standard-league-2025-07-099382_Evariel",
+        "tournament_id": "standard-league-2025-07-099382",
+        "player": "Evariel",
+        "rank": 0,
+        "wins": 5,
+        "losses": 0,
+        "deck_name": null,
+        "archetype": "WU Omniscience",
+        "colors": "WU",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Island",
+            "count": 4
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 1
+          },
+          {
+            "name": "Overlord of the Floodpits",
+            "count": 1
+          },
+          {
+            "name": "Omniscience",
+            "count": 4
+          },
+          {
+            "name": "Ephara's Dispersal",
+            "count": 3
+          },
+          {
+            "name": "Plains",
+            "count": 3
+          },
+          {
+            "name": "Marang River Regent",
+            "count": 4
+          },
+          {
+            "name": "Meticulous Archive",
+            "count": 4
+          },
+          {
+            "name": "No More Lies",
+            "count": 2
+          },
+          {
+            "name": "Get Lost",
+            "count": 2
+          },
+          {
+            "name": "Floodfarm Verge",
+            "count": 4
+          },
+          {
+            "name": "Demolition Field",
+            "count": 2
+          },
+          {
+            "name": "Day of Judgment",
+            "count": 1
+          },
+          {
+            "name": "Repair and Recharge",
+            "count": 4
+          },
+          {
+            "name": "Roiling Dragonstorm",
+            "count": 4
+          },
+          {
+            "name": "Scrollshift",
+            "count": 2
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 2
+          },
+          {
+            "name": "Stock Up",
+            "count": 4
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 2
+          },
+          {
+            "name": "Adarkar Wastes",
+            "count": 2
+          },
+          {
+            "name": "Seachrome Coast",
+            "count": 3
+          },
+          {
+            "name": "Three Steps Ahead",
+            "count": 2
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Voice of Victory",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 3
+          },
+          {
+            "name": "Negate",
+            "count": 1
+          },
+          {
+            "name": "Elspeth's Smite",
+            "count": 2
+          },
+          {
+            "name": "Clarion Conqueror",
+            "count": 2
+          },
+          {
+            "name": "Scrollshift",
+            "count": 1
+          },
+          {
+            "name": "Ultima",
+            "count": 2
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-25T15:09:45.500148"
+      },
+      {
+        "deck_id": "standard-league-2025-07-099382_ameliakozlowska",
+        "tournament_id": "standard-league-2025-07-099382",
+        "player": "ameliakozlowska",
+        "rank": 0,
+        "wins": 5,
+        "losses": 0,
+        "deck_name": null,
+        "archetype": "UR Prowess (Cauldron)",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 4
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          },
+          {
+            "name": "Glacial Dragonhunt",
+            "count": 1
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 2
+          },
+          {
+            "name": "Marauding Mako",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Proft's Eidetic Memory",
+            "count": 4
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Steamcore Scholar",
+            "count": 1
+          },
+          {
+            "name": "Tersa Lightshatter",
+            "count": 3
+          },
+          {
+            "name": "Thundering Falls",
+            "count": 3
+          },
+          {
+            "name": "Vivi Ornitier",
+            "count": 4
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 3
+          },
+          {
+            "name": "Winternight Stories",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Negate",
+            "count": 2
+          },
+          {
+            "name": "Scorching Shot",
+            "count": 1
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 1
+          },
+          {
+            "name": "Draconautics Engineer",
+            "count": 2
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 2
+          },
+          {
+            "name": "Fire Magic",
+            "count": 1
+          },
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "The Filigree Sylex",
+            "count": 2
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-25T15:09:45.500174"
+      }
+    ]
+  }
+}
