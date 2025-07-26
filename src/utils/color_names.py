@@ -121,6 +121,19 @@ def format_archetype_name(archetype: str, color_code: str = None) -> str:
     if not archetype:
         return "Unknown"
     
+    # Fix duplicate names in parentheses pattern
+    # e.g. "Mono White Caretaker (Mono White Caretaker)" -> "Mono White Caretaker"
+    # Also handle "Orzhov Caretaker (Mono White Caretaker)" -> keep as is but clean display
+    import re
+    pattern = r'^(.+?)\s*\(\1\)$'
+    match = re.match(pattern, archetype)
+    if match:
+        archetype = match.group(1)
+    
+    # For now, remove all parenthetical content for cleaner display
+    # This handles cases like "Orzhov Caretaker (Mono White Caretaker)"
+    archetype = re.sub(r'\s*\([^)]+\)', '', archetype)
+    
     # Check all possible color codes in the name
     all_color_codes = list(MONO_COLORS.keys()) + list(GUILDS.keys()) + list(THREE_COLOR.keys()) + list(MULTI_COLOR.keys())
     
