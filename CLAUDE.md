@@ -120,7 +120,7 @@ FastAPI → Frontend/Rapports
 
 ## **📊 Ce que le projet analyse**
 1. **Distribution du Métagame** : Quel % joue chaque deck
-2. **Matchups** : Quel deck bat quel deck
+2. **Matchups** : Quel deck bat quel deck (⚠️ LIMITÉ SANS LISTENER)
 3. **Tendances** : Évolution dans le temps
 4. **Performance** : Top 8, win rates
 5. **Innovation** : Nouveaux decks émergents
@@ -136,6 +136,14 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 
 ## **🚀 État Actuel (26/07/2025)**
 
+### 🎮 PHASE 4 PLANIFIÉE : MTGO Listener
+**Objectif** : Capturer les données de matchups round-par-round en temps réel
+- Basé sur [MTGO-listener](https://github.com/Jiliac/MTGO-listener)
+- Utilise [MTGOSDK](https://github.com/videre-project/MTGOSDK)
+- Capture : qui joue contre qui, résultats de chaque round
+- Permettra ENFIN de créer une vraie matrice de matchups statistique
+- Sans ça, "ce projet ne sert plus à grand chose" - ON VA LE FAIRE!
+
 ### ✅ Phase 1 COMPLÈTE : Collection de Données
 - **Scrapers avec decklists complètes** - MTGO (enhanced) + Melee (Records field)
 - **Juillet 2025 scrapé** - 53 tournois MTGO + 14 Melee = ~1346 decklists
@@ -149,6 +157,11 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - **Visualisations** : Charts interactifs avec noms complets (Izzet, Naya, etc.)
 
 ### 🚀 Phase 3 EN COURS : Visualisations Avancées & Insights Compétitifs
+
+**⚠️ LIMITATION CRITIQUE DÉCOUVERTE (26/07/2025)** :
+- Nous n'avons que les données Top 8 (brackets) - PAS les matchups round-par-round
+- Sans matrice de matchups, le projet perd son avantage compétitif principal
+- Solution : Implémenter notre propre MTGO Listener
 **Réalisations Phase 3 :**
 - ✅ **Visualisation Plotly** : `data/cache/standard_analysis_no_leagues.html` - Graphiques interactifs complets
 - ✅ **Pourcentages précis** : Calcul des VRAIS pourcentages sur le total (pas juste le top 10)
@@ -162,11 +175,12 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - ✅ **Exclusion Tournois Fun** : Filtrage automatique des tournois casual (Mosh Pit, Creative, etc.)
 
 **En développement (autonomie créative) :**
-1. **Dashboard temps réel** - Métagame evolution avec WebSockets
-2. **Heatmap de matchups** - Win rates entre archétypes  
-3. **Innovation Detector** - Détection automatique des tech choices émergentes
-4. **Consensus Deck Generator** - LA liste optimale générée par ML
-5. **Sideboard Intelligence** - Patterns et suggestions automatiques
+1. **MTGO LISTENER (PRIORITÉ ABSOLUE)** - Capture temps réel des matchups round-par-round
+2. **Dashboard temps réel** - Métagame evolution avec WebSockets
+3. **Heatmap de matchups** - Win rates entre archétypes (DÉPEND DU LISTENER)
+4. **Innovation Detector** - Détection automatique des tech choices émergentes
+5. **Consensus Deck Generator** - LA liste optimale générée par ML
+6. **Sideboard Intelligence** - Patterns et suggestions automatiques
 
 **Documentation Phase 3** :
   - `docs/PHASE3_VISUALIZATIONS_ROADMAP.md` - 30+ visualisations planifiées

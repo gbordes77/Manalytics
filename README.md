@@ -9,12 +9,19 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Version**: 3.0.0  
-**Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | 🚀 Phase 3 In Progress (Advanced Visualizations)  
+**Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | 🚀 Phase 3 In Progress (Advanced Visualizations) | 📋 Phase 4 Planned (MTGO Listener)  
 **Last Update**: July 26, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
 
 ## 🎯 What Makes Us Different
+
+### 🎮 Phase 4 PLANIFIÉE : MTGO Listener
+Pour obtenir les vraies données de matchups et créer une matrice statistique :
+- Implementation basée sur [MTGO-listener](https://github.com/Jiliac/MTGO-listener)
+- Utilisation de [MTGOSDK](https://github.com/videre-project/MTGOSDK)
+- Capture temps réel : qui joue contre qui, résultats round-par-round
+- Permettra ENFIN la création d'une vraie matrice de matchups
 
 ### Unique Features (Nobody Else Has):
 - **🤖 Consensus Deck Generator** - Automatically generates THE optimal decklist from 20+ tournament results
@@ -51,13 +58,18 @@ Based on competitive tournaments only (excluding casual/fun events):
 *Note: Percentages based on match count following community standards (Jiliac methodology)*
 
 ### 🚀 Phase 3: In Progress - Advanced Visualizations
+
+**⚠️ LIMITATION CRITIQUE DÉCOUVERTE (26/07/2025)** :
+- Nous n'avons accès qu'aux données **Top 8 (brackets)** - PAS aux matchups round-par-round
+- Sans ces données, impossible de créer une vraie matrice de matchups statistique
+- C'est LA fonctionnalité qui différencie les outils compétitifs
 - **Plotly visualization delivered** : `data/cache/standard_analysis_no_leagues.html` - Full interactive charts
 - **Accurate percentages** : Real meta share calculations (not just top 10)
 - **Timeline evolution** : 30-day meta evolution tracking
 - **Export functionality** : CSV export for further analysis
 - **Complete archetype table** : All 70 archetypes with trend indicators
 - **Mobile responsive** : Works perfectly on tournament phones
-- **Next steps** : Matchup matrix, consensus deck generator, and more competitive insights
+- **Next steps** : MTGO Listener implementation (PRIORITÉ ABSOLUE), consensus deck generator
 
 ## 📋 Features
 
