@@ -97,6 +97,8 @@ scrape-melee: ## Run Melee scraper (usage: make scrape-melee format=standard day
 scrape-all: ## Run all scrapers
 	@echo "$(BLUE)Running all scrapers...$(NC)"
 	$(PYTHON) scripts/scrape_all_platforms.py --format standard --days 7
+	@echo "$(YELLOW)🛡️  Running league protection...$(NC)"
+	@$(PYTHON) scripts/league_protection.py
 
 # API
 run: ## Run the API server
@@ -126,6 +128,11 @@ docs: ## Build documentation
 	@echo "$(GREEN)✓ Documentation built! Open docs/_build/html/index.html$(NC)"
 
 # Maintenance
+protect: ## Run league protection system
+	@echo "$(YELLOW)🛡️  Running league protection system...$(NC)"
+	@$(PYTHON) scripts/league_protection.py
+	@echo "$(GREEN)✓ Protection complete!$(NC)"
+
 clean: ## Clean build artifacts
 	@echo "$(BLUE)Cleaning build artifacts...$(NC)"
 	rm -rf build/ dist/ *.egg-info .coverage htmlcov/ .pytest_cache/
@@ -151,3 +158,17 @@ shell: ## Open Python shell with project context
 version: ## Show version
 	@echo "$(BLUE)Manalytics version:$(NC)"
 	@$(PYTHON) -c "import manalytics; print(f'  v{manalytics.__version__}')"
+
+# Visualization commands
+viz-meta: ## Generate interactive metagame visualization
+	@echo "$(BLUE)🎯 Generating interactive metagame visualization...$(NC)"
+	@$(PYTHON) scripts/generate_interactive_viz.py --type meta --format standard --days 30
+	@echo "$(GREEN)✅ Visualization saved to: data/cache/interactive_meta_timeline.html$(NC)"
+
+viz-serve: ## Start local server for visualizations
+	@echo "$(BLUE)🌐 Starting local server for visualizations on http://localhost:8080$(NC)"
+	@cd data/cache && $(PYTHON) -m http.server 8080
+
+viz-open: ## Open visualization in browser
+	@echo "$(BLUE)🔓 Opening visualization in browser...$(NC)"
+	@open data/cache/interactive_meta_timeline.html 2>/dev/null || xdg-open data/cache/interactive_meta_timeline.html 2>/dev/null || echo "Please open: data/cache/interactive_meta_timeline.html"
