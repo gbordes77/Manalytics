@@ -616,6 +616,48 @@ def create_plotly_visualization():
         
         Plotly.newPlot('tableChart', tableFig.data, tableFig.layout, {{responsive: true}});
         
+        // Apply gradient styles to table rows
+        setTimeout(function() {{
+            var tableRows = document.querySelectorAll('#tableChart .trace.table tbody tr');
+            var archetypeNames = {json.dumps([d['Archetype'] for d in table_data])};
+            
+            // Helper function to get archetype colors from name
+            function getArchetypeColors(archName) {{
+                // Map archetype names to their MTG colors
+                var colorMap = {{
+                    'Izzet Cauldron': ['U', 'R'],
+                    'Dimir Midrange': ['U', 'B'],
+                    'Mono White Caretaker': ['W'],
+                    'Golgari Midrange': ['B', 'G'],
+                    'Boros Convoke': ['R', 'W'],
+                    'Mono Green Landfall': ['G'],
+                    'Gruul Aggro': ['R', 'G'],
+                    'Izzet Prowess': ['U', 'R'],
+                    'Naya Yuna': ['R', 'G', 'W']
+                }};
+                
+                return colorMap[archName] || ['C'];
+            }}
+            
+            tableRows.forEach(function(row, index) {{
+                if (index < archetypeNames.length) {{
+                    var archName = archetypeNames[index];
+                    var colors = getArchetypeColors(archName);
+                    
+                    if (colors.length === 1) {{
+                        // Single color - light background
+                        row.style.backgroundColor = mtgColors[colors[0]] + '22';
+                    }} else if (colors.length > 1) {{
+                        // Multi-color gradient
+                        var colorStops = colors.map(c => mtgColors[c]).join(', ');
+                        row.style.background = 'linear-gradient(to right, ' + colorStops + ')';
+                        row.style.color = '#ffffff';  // White text on gradient
+                        row.style.fontWeight = 'bold';
+                    }}
+                }}
+            }});
+        }}, 300);
+        
         // Store original data for reset
         var originalMainFig = JSON.parse(JSON.stringify(mainFig));
         
