@@ -397,11 +397,10 @@ def create_plotly_visualization():
 <body>
     <div class="header">
         <h1>🎯 Manalytics - Interactive Metagame Analysis</h1>
-        <p>Click on charts to filter • Hover for details • Export to PNG/SVG</p>
+        <p>Hover for details • Export to PNG/SVG • MTG Color Gradients Preserved</p>
         
         <div class="controls">
             <button onclick="downloadCSV()">📊 Download CSV</button>
-            <button onclick="resetFilters()">🔄 Reset Filters</button>
         </div>
     </div>
     
@@ -460,7 +459,15 @@ def create_plotly_visualization():
             'C': '#9E9E9E'
         }};
         
-        Plotly.newPlot('mainChart', mainFig.data, mainFig.layout, {{responsive: true}}).then(function(gd) {{
+        // Configuration pour désactiver les interactions qui cassent les gradients
+        var config = {{
+            responsive: true,
+            displayModeBar: true,
+            modeBarButtonsToRemove: ['select2d', 'lasso2d', 'toggleSpikelines'],
+            displaylogo: false
+        }};
+        
+        Plotly.newPlot('mainChart', mainFig.data, mainFig.layout, config).then(function(gd) {{
             // Apply gradients to pie and bar charts
             setTimeout(function() {{
                 var svg = gd.querySelector('.main-svg');
@@ -584,8 +591,6 @@ def create_plotly_visualization():
             }}, 200);
         }});
         
-        // Store original data
-        var originalMainFig = JSON.parse(JSON.stringify(mainFig));
         
         function downloadCSV() {{
             let csv = 'Rank,Archetype,Decks,Percentage,Per Tournament\\n';
@@ -608,9 +613,6 @@ def create_plotly_visualization():
             a.click();
         }}
         
-        function resetFilters() {{
-            Plotly.react('mainChart', originalMainFig.data, originalMainFig.layout);
-        }}
     </script>
 </body>
 </html>
