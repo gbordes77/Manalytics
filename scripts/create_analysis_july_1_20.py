@@ -57,9 +57,11 @@ def calculate_meta_snapshot_july(tournaments):
             if tournament.id in all_decklists:
                 decklists = all_decklists[tournament.id].get('decklists', [])
                 for deck in decklists:
-                    archetype = deck.get('archetype', 'Unknown')
-                    archetype_counts[archetype] += 1
-                    total_decks += 1
+                    archetype = deck.get('archetype')
+                    # IGNORER les decks sans archétype détecté (comme le fait CacheReader)
+                    if archetype:
+                        archetype_counts[archetype] += 1
+                        total_decks += 1
     
     return dict(archetype_counts), total_decks
 
@@ -82,8 +84,10 @@ def calculate_temporal_data(tournaments):
             if tournament.id in all_decklists:
                 decklists = all_decklists[tournament.id].get('decklists', [])
                 for deck in decklists:
-                    archetype = deck.get('archetype', 'Unknown')
-                    temporal_data[date][archetype] += 1
+                    archetype = deck.get('archetype')
+                    # IGNORER les decks sans archétype détecté
+                    if archetype:
+                        temporal_data[date][archetype] += 1
     
     return dict(temporal_data)
 
