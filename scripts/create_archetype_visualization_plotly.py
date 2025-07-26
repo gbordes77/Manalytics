@@ -115,7 +115,7 @@ def create_plotly_visualization():
         row_heights=[0.5, 0.5],
         specs=[[{"type": "domain"}, {"type": "bar"}],
                [{"type": "scatter", "colspan": 2}, None]],
-        subplot_titles=("📊 Meta Distribution (Click to Filter)", 
+        subplot_titles=("📊 Meta Distribution", 
                        "📈 Top Archetypes",
                        "📉 Meta Evolution Timeline (Last 30 Days)"),
         vertical_spacing=0.25,  # Increased from 0.15
@@ -126,7 +126,8 @@ def create_plotly_visualization():
     # On va utiliser les couleurs de base et appliquer les gradients après le rendu
     pie_colors = []
     
-    for i in range(min(10, len(labels))):
+    # Process ALL labels, not just first 10
+    for i in range(len(labels)):
         arch_colors = get_archetype_colors(labels[i])
         if len(arch_colors) == 1:
             pie_colors.append(MTG_COLORS[arch_colors[0]])
@@ -137,8 +138,8 @@ def create_plotly_visualization():
     
     fig.add_trace(
         go.Pie(
-            labels=labels[:10],
-            values=values[:10],
+            labels=labels,
+            values=values,
             hole=0,
             marker=dict(
                 colors=pie_colors,
@@ -146,8 +147,8 @@ def create_plotly_visualization():
             ),
             textposition='outside',
             textinfo='label+text',
-            text=[f'{p}%' for p in percentages[:10]],
-            customdata=percentages[:10],
+            text=[f'{p}%' for p in percentages],
+            customdata=percentages,
             hovertemplate='<b>%{label}</b><br>' +
                          'Decks: %{value}<br>' +
                          'Meta Share: %{customdata}%<br>' +
@@ -159,7 +160,7 @@ def create_plotly_visualization():
     
     # 2. Bar Chart with gradient effect
     # We need to create a single trace with all bars for proper display
-    num_bars = min(10, len(labels))
+    num_bars = len(labels)  # Show all filtered archetypes
     
     # Prepare data for grouped bars
     bar_x = []
@@ -329,7 +330,7 @@ def create_plotly_visualization():
     gradient_defs = []
     gradient_info = []  # Pour stocker les infos sur chaque gradient
     
-    for i, label in enumerate(labels[:10]):
+    for i, label in enumerate(labels):  # Process ALL labels
         arch_colors = get_archetype_colors(label)
         if len(arch_colors) > 1:
             gradient_id = f"gradient_{i}"
@@ -568,12 +569,44 @@ def create_plotly_visualization():
                 }});
                 
                 // Apply gradients to bars
+                // Also add radial gradients for bars to match pie chart style
+                barGradientInfo.forEach(function(info, idx) {{
+                    var barRadialId = 'bar_radial_' + idx;
+                    var colors = info.colors;
+                    
+                    if (colors.length >= 2) {{
+                        // Create radial gradient for bars
+                        if (colors.length === 2) {{
+                            gradientDefs += `
+                                <radialGradient id="${{barRadialId}}" cx="50%" cy="50%" r="100%">
+                                    <stop offset="0%" style="stop-color:${{mtgColors[colors[0]]}};stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:${{mtgColors[colors[1]]}};stop-opacity:1" />
+                                </radialGradient>
+                            `;
+                        }} else {{
+                            var stops = '';
+                            colors.forEach(function(color, i) {{
+                                var offset = (i / (colors.length - 1)) * 100;
+                                stops += `<stop offset="${{offset}}%" style="stop-color:${{mtgColors[color]}};stop-opacity:1" />`;
+                            }});
+                            gradientDefs += `
+                                <radialGradient id="${{barRadialId}}" cx="50%" cy="50%" r="100%">
+                                    ${{stops}}
+                                </radialGradient>
+                            `;
+                        }}
+                    }}
+                }});
+                
+                // Update defs with new gradients
+                defs.innerHTML = gradientDefs;
+                
                 var barRects = svg.querySelectorAll('.barlayer .bars rect');
                 barGradientInfo.forEach(function(info, idx) {{
                     var barIndex = info.index;
                     if (barIndex < barRects.length) {{
-                        barRects[barIndex].style.fill = 'url(#bar_gradient_' + idx + ')';
-                        barRects[barIndex].setAttribute('fill', 'url(#bar_gradient_' + idx + ')');
+                        barRects[barIndex].style.fill = 'url(#bar_radial_' + idx + ')';
+                        barRects[barIndex].setAttribute('fill', 'url(#bar_radial_' + idx + ')');
                     }}
                 }});
                 
