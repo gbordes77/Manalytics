@@ -76,6 +76,13 @@ def create_visualization_html():
         '#808080'  # Gray for "Others"
     ]
     
+    # Calculate date range
+    if tournaments:
+        dates = [t.date if isinstance(t.date, str) else t.date.strftime('%Y-%m-%d') for t in tournaments]
+        date_range = f"{min(dates)} to {max(dates)}"
+    else:
+        date_range = "No data"
+    
     # Create HTML with enhanced styling
     html_content = f"""
 <!DOCTYPE html>
@@ -83,90 +90,102 @@ def create_visualization_html():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manalytics - Enhanced Standard Metagame Analysis</title>
+    <title>Manalytics - Interactive Standard Metagame Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <style>
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 0;
+            background: #f5f7fa;
             min-height: 100vh;
+        }}
+        .header {{
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }}
         .container {{
             max-width: 1600px;
             margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            padding: 20px;
         }}
         h1 {{
-            color: #2c3e50;
-            text-align: center;
+            color: white;
             font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin: 0 0 10px 0;
+            font-weight: 600;
         }}
         .subtitle {{
-            text-align: center;
-            color: #7f8c8d;
+            color: rgba(255,255,255,0.9);
             font-size: 1.1em;
-            margin-bottom: 30px;
+            margin: 0;
         }}
         .stats {{
-            display: flex;
-            justify-content: space-around;
-            margin: 30px 0;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
+            margin: 30px 0;
         }}
         .stat-box {{
-            padding: 20px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: white;
             border-radius: 15px;
-            min-width: 200px;
+            padding: 25px;
             text-align: center;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
         }}
         .stat-box:hover {{
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #667eea;
         }}
         .stat-value {{
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: bold;
+            color: #667eea;
             margin-bottom: 5px;
         }}
         .stat-label {{
-            font-size: 1.1em;
-            opacity: 0.9;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }}
         .charts {{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px;
+            margin-top: 50px;
+            padding: 0 20px;
         }}
         .chart-container {{
-            background-color: #f8f9fa;
-            padding: 25px;
+            background: white;
+            padding: 35px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            min-height: 450px;
         }}
         .chart-container h2 {{
             color: #34495e;
-            margin-bottom: 20px;
-            font-size: 1.4em;
+            margin-bottom: 30px;
+            font-size: 1.3em;
             text-align: center;
+            font-weight: 600;
         }}
         .full-width {{
             grid-column: 1 / -1;
         }}
         canvas {{
-            max-height: 400px;
+            max-height: 380px;
+            margin: 10px 0;
         }}
         table {{
             width: 100%;
@@ -220,14 +239,17 @@ def create_visualization_html():
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>🎯 Manalytics - Interactive Metagame Analysis</h1>
+        <p class="subtitle">Click on charts to filter • Hover for details • Tournaments Only (Leagues Excluded)</p>
+    </div>
+    
     <div class="container">
-        <h1>🎯 Manalytics - Enhanced Standard Metagame Analysis</h1>
-        <p class="subtitle">Tournaments Only (Leagues Excluded) - {datetime.now().strftime('%B %d, %Y')}</p>
         
         <div class="stats">
             <div class="stat-box">
                 <div class="stat-value">{len(tournaments)}</div>
-                <div class="stat-label">Tournaments Analyzed</div>
+                <div class="stat-label">Total Tournaments</div>
             </div>
             <div class="stat-box">
                 <div class="stat-value">{total_decks}</div>
@@ -238,8 +260,16 @@ def create_visualization_html():
                 <div class="stat-label">Unique Archetypes</div>
             </div>
             <div class="stat-box">
-                <div class="stat-value">{sorted_archetypes[0][1] if sorted_archetypes else 0}</div>
-                <div class="stat-label">Top Deck Count</div>
+                <div class="stat-value" style="font-size: 1.5em;">{format_archetype_name(sorted_archetypes[0][0]) if sorted_archetypes else 'N/A'}</div>
+                <div class="stat-label">Top Archetype</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">Standard</div>
+                <div class="stat-label">Format</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" style="font-size: 1.2em;">{date_range}</div>
+                <div class="stat-label">Date Range</div>
             </div>
         </div>
         
@@ -333,6 +363,12 @@ def create_visualization_html():
             options: {{
                 responsive: true,
                 maintainAspectRatio: true,
+                layout: {{
+                    padding: {{
+                        top: 20,
+                        bottom: 20
+                    }}
+                }},
                 plugins: {{
                     legend: {{
                         position: 'right',
@@ -420,6 +456,14 @@ def create_visualization_html():
             }},
             options: {{
                 responsive: true,
+                layout: {{
+                    padding: {{
+                        top: 40,
+                        bottom: 10,
+                        left: 10,
+                        right: 10
+                    }}
+                }},
                 scales: {{
                     y: {{
                         beginAtZero: true,
@@ -491,6 +535,14 @@ def create_visualization_html():
             options: {{
                 indexAxis: 'y',
                 responsive: true,
+                layout: {{
+                    padding: {{
+                        top: 20,
+                        bottom: 10,
+                        left: 10,
+                        right: 10
+                    }}
+                }},
                 scales: {{
                     x: {{
                         beginAtZero: true,

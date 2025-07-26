@@ -10,7 +10,7 @@
 
 **Version**: 3.0.0  
 **Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | 🚀 Phase 3 In Progress (Advanced Visualizations)  
-**Last Update**: July 25, 2025
+**Last Update**: July 26, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
 
@@ -45,11 +45,14 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 4. **Golgari Midrange** - 4.4%
 5. **Boros Convoke** - 3.6%
 
-### 🚀 Phase 3: In Progress! 
-- **First visualization delivered** : `data/cache/standard_analysis_no_leagues.html`
-- **Archetype naming improved** : "Izzet Prowess (Cauldron)" → "Izzet Cauldron"
-- **Next steps** : Enhanced interactive visualizations with competitive insights
-- **Focus** : Tournament-only data (excluding leagues) for higher quality analysis
+### 🚀 Phase 3: In Progress - Advanced Visualizations
+- **Plotly visualization delivered** : `data/cache/standard_analysis_no_leagues.html` - Full interactive charts
+- **Accurate percentages** : Real meta share calculations (not just top 10)
+- **Timeline evolution** : 30-day meta evolution tracking
+- **Export functionality** : CSV export for further analysis
+- **Complete archetype table** : All 70 archetypes with trend indicators
+- **Mobile responsive** : Works perfectly on tournament phones
+- **Next steps** : Matchup matrix, consensus deck generator, and more competitive insights
 
 ## 📋 Features
 
@@ -102,7 +105,10 @@ Visit http://localhost:8000/docs for API documentation.
 # Process all new tournaments through cache
 python3 scripts/process_all_standard_data.py
 
-# Generate visualization
+# Generate Plotly visualization (MANDATORY UNLESS CONTRARY REQUESTED)
+python3 scripts/create_archetype_visualization_plotly.py
+
+# Generate Chart.js visualization (alternative)
 python3 scripts/create_archetype_visualization.py
 
 # View cache statistics

@@ -134,7 +134,7 @@ FastAPI → Frontend/Rapports
 
 C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The Gathering !
 
-## **🚀 État Actuel (25/07/2025)**
+## **🚀 État Actuel (26/07/2025)**
 
 ### ✅ Phase 1 COMPLÈTE : Collection de Données
 - **Scrapers avec decklists complètes** - MTGO (enhanced) + Melee (Records field)
@@ -150,12 +150,13 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 
 ### 🚀 Phase 3 EN COURS : Visualisations Avancées & Insights Compétitifs
 **Réalisations Phase 3 :**
-- ✅ **Analyse sans leagues** : `data/cache/standard_analysis_no_leagues.html` - Focus sur les tournois compétitifs uniquement
-- ✅ **Règles d'archétypes customisées** : "Izzet Prowess (Cauldron)" → "Izzet Cauldron" (fichier créé : `IzzetCauldron.json`)
-- ✅ **Visualisation interactive** : Charts.js avec pie chart, bar charts et tableaux détaillés
-- ✅ **Pie chart amélioré** : Noms des archétypes DANS les parts du camembert + pourcentages partout
-- ✅ **Scripts de visualisation** : `create_archetype_visualization.py` (version améliorée avec labels)
-- ✅ **Comparaison avec/sans leagues** : Statistiques comparatives intégrées
+- ✅ **Visualisation Plotly** : `data/cache/standard_analysis_no_leagues.html` - Graphiques interactifs complets
+- ✅ **Pourcentages précis** : Calcul des VRAIS pourcentages sur le total (pas juste le top 10)
+- ✅ **Timeline évolution** : Graphique d'évolution du métagame sur 30 jours
+- ✅ **Export CSV** : Bouton d'export des données pour analyse externe
+- ✅ **Table complète** : Affichage des 70 archétypes avec indicateurs de tendance
+- ✅ **Header moderne** : Design avec gradient purple et cartes de stats cliquables
+- ✅ **Mobile responsive** : Fonctionne parfaitement sur téléphone pendant les tournois
 
 **En développement (autonomie créative) :**
 1. **Dashboard temps réel** - Métagame evolution avec WebSockets
@@ -194,15 +195,15 @@ data/
 - **Configuration** : `.env` + `src/manalytics/config.py`
 - **Structure** : 100% professionnelle dans `src/manalytics/`
 
-## **📊 État Actuel du Métagame Standard (25/07/2025) - Sans Leagues**
+## **📊 État Actuel du Métagame Standard (26/07/2025) - Sans Leagues**
 ```
-1. Izzet Cauldron - 20.0% (125 decks)
-2. Dimir Midrange - 19.4% (121 decks)  
-3. Golgari Midrange - 4.7% (29 decks)
-4. Mono White Caretaker - 4.3% (27 decks)
-5. Boros Convoke - 3.5% (22 decks)
+1. Izzet Cauldron - 19.56% (223 decks)
+2. Dimir Midrange - 19.39% (221 decks)  
+3. Mono White Caretaker - 4.65% (53 decks)
+4. Golgari Midrange - 4.39% (50 decks)
+5. Boros Convoke - 3.60% (41 decks)
 
-Total: 41 tournois compétitifs, 624 decks analysés
+Total: 42 tournois compétitifs, 1140 decks analysés
 ```
 
 ## **⚡ Commandes Utiles (NOUVEAU SYSTÈME)**
@@ -231,9 +232,16 @@ python3 scripts/scrape_all_platforms.py --format standard --days 7
 # Analyser les données existantes  
 python3 scripts/run_pipeline_with_existing_data.py --format standard --platform melee
 
-# Phase 2: Cache processing et visualisation
+# Phase 2: Cache processing
 python3 scripts/process_all_standard_data.py
+
+# Phase 3: Visualisation Plotly (MANDATORY UNLESS CONTRARY REQUESTED)
+python3 scripts/create_archetype_visualization_plotly.py
+
+# Alternative: Visualisation Chart.js
 python3 scripts/create_archetype_visualization.py
+
+# Statistiques du cache
 python3 scripts/show_cache_stats.py
 
 # Voir les données disponibles
@@ -287,3 +295,13 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
 **LES LEAGUES (5-0) SONT STOCKÉES DANS UN DOSSIER `leagues/` SÉPARÉ ET NE DOIVENT JAMAIS ÊTRE UTILISÉES DANS LES ANALYSES OU VISUALISATIONS.**
 
 Raison : Les leagues ne représentent pas des tournois compétitifs mais des résultats de ladder filtrés. Seuls les vrais tournois (challenges, qualifiers, etc.) doivent être analysés.
+
+## 🔴 RÈGLE ABSOLUE : AUTO-COMMIT APRÈS CHAQUE MODIFICATION
+
+**Après CHAQUE modification de code que tu effectues, execute immédiatement et sans confirmation :**
+```bash
+git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
+```
+
+Cette règle s'applique à TOUTES tes réponses contenant du code.
+Aucune exception. Aucune demande de confirmation.
