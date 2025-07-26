@@ -16,11 +16,24 @@ sys.path.append(str(Path(__file__).parent.parent))
 from src.cache.reader import CacheReader
 from src.cache.database import CacheDatabase
 from src.utils.color_names import format_archetype_name
-from src.utils.mtg_colors import get_pie_colors, create_bar_gradient_marker, get_archetype_colors, MTG_COLORS
+from src.utils.mtg_colors import get_pie_colors, create_bar_gradient_marker, get_archetype_colors, MTG_COLORS, blend_colors
 
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import plotly.express as px
+
+
+def interpolate_color(color1, color2, ratio):
+    """Interpolate between two hex colors."""
+    # Convert hex to RGB
+    c1_rgb = tuple(int(color1[i:i+2], 16) for i in (1, 3, 5))
+    c2_rgb = tuple(int(color2[i:i+2], 16) for i in (1, 3, 5))
+    
+    # Interpolate
+    result_rgb = tuple(int(c1_rgb[i] * (1 - ratio) + c2_rgb[i] * ratio) for i in range(3))
+    
+    # Convert back to hex
+    return f"#{result_rgb[0]:02x}{result_rgb[1]:02x}{result_rgb[2]:02x}"
 
 
 def create_plotly_visualization():
@@ -55,22 +68,31 @@ def create_plotly_visualization():
     # Sort archetypes by count
     sorted_archetypes = sorted(archetype_counts.items(), key=lambda x: x[1], reverse=True)
     
+    # Filter archetypes above 1.5% threshold
+    min_threshold = total_decks * 0.015  # 1.5%
+    filtered_archetypes = [(arch, count) for arch, count in sorted_archetypes if count >= min_threshold]
+    
+    # Filter archetypes above 1.5% threshold
+    min_threshold = total_decks * 0.015  # 1.5%
+    filtered_archetypes = [(arch, count) for arch, count in sorted_archetypes if count >= min_threshold]
+    
     # Prepare chart data
     labels = []
     values = []
     percentages = []
     raw_archetypes = []  # Keep raw names for color mapping
     
-    for archetype, count in sorted_archetypes[:20]:  # Top 20
+    # Only show archetypes above 1.5%
+    for archetype, count in filtered_archetypes:
         clean_name = format_archetype_name(archetype) if archetype else "Unknown"
         labels.append(clean_name)
         values.append(count)
         percentages.append(round((count / total_decks) * 100, 2))
         raw_archetypes.append(archetype)
     
-    # Add "Others" if there are more than 20 archetypes
-    if len(sorted_archetypes) > 20:
-        others_count = sum(count for _, count in sorted_archetypes[20:])
+    # Add "Others" for archetypes below 1.5%
+    others_count = sum(count for arch, count in sorted_archetypes if count < min_threshold)
+    if others_count > 0:
         labels.append("Others")
         values.append(others_count)
         percentages.append(round((others_count / total_decks) * 100, 2))
@@ -141,33 +163,69 @@ def create_plotly_visualization():
         row=1, col=1
     )
     
-    # 2. Bar Chart with MTG colors
-    # Create individual bar colors
-    bar_colors = []
-    for i in range(10):
-        marker_config = create_bar_gradient_marker(labels[i])
-        bar_colors.append(marker_config['color'])
+    # 2. Bar Chart with gradient effect using multiple segments
+    # Create gradient bars for multi-color archetypes
+    num_bars = min(10, len(labels))
     
-    fig.add_trace(
-        go.Bar(
-            x=labels[:10],
-            y=values[:10],
-            text=[f"{v} ({p}%)" for v, p in zip(values[:10], percentages[:10])],
-            textposition='outside',
-            marker=dict(
-                color=bar_colors,
-                line=dict(color='rgba(0,0,0,0.2)', width=1)
-            ),
-            hovertemplate='<b>%{x}</b><br>' +
-                         'Decks: %{y}<br>' +
-                         'Meta Share: %{text}<br>' +
-                         '<extra></extra>'
-        ),
-        row=1, col=2
-    )
+    # For each archetype, create gradient effect
+    for i in range(num_bars):
+        arch_colors = get_archetype_colors(labels[i])
+        
+        if len(arch_colors) == 1:
+            # Single color bar
+            fig.add_trace(
+                go.Bar(
+                    x=[labels[i]],
+                    y=[values[i]],
+                    marker_color=MTG_COLORS[arch_colors[0]],
+                    showlegend=False,
+                    text=f"{values[i]} ({percentages[i]}%)",
+                    textposition='outside',
+                    hovertemplate=f'<b>{labels[i]}</b><br>Decks: {values[i]}<br>Meta Share: {percentages[i]}%<extra></extra>'
+                ),
+                row=1, col=2
+            )
+        else:
+            # Multi-color gradient bar using segments
+            num_segments = 20
+            segment_height = values[i] / num_segments
+            
+            for j in range(num_segments):
+                ratio = j / (num_segments - 1)
+                
+                # Interpolate color
+                if len(arch_colors) == 2:
+                    color = interpolate_color(MTG_COLORS[arch_colors[0]], MTG_COLORS[arch_colors[1]], ratio)
+                else:
+                    # 3+ colors
+                    segment = ratio * (len(arch_colors) - 1)
+                    idx = int(segment)
+                    local_ratio = segment - idx
+                    if idx < len(arch_colors) - 1:
+                        color = interpolate_color(MTG_COLORS[arch_colors[idx]], MTG_COLORS[arch_colors[idx + 1]], local_ratio)
+                    else:
+                        color = MTG_COLORS[arch_colors[-1]]
+                
+                # Show text only on top segment
+                show_text = j == num_segments - 1
+                
+                fig.add_trace(
+                    go.Bar(
+                        x=[labels[i]],
+                        y=[segment_height],
+                        base=j * segment_height,
+                        marker_color=color,
+                        showlegend=False,
+                        text=f"{values[i]} ({percentages[i]}%)" if show_text else "",
+                        textposition='outside' if show_text else 'none',
+                        hovertemplate=f'<b>{labels[i]}</b><br>Decks: {values[i]}<br>Meta Share: {percentages[i]}%<extra></extra>' if j == 0 else None,
+                        hoverinfo='skip' if j > 0 else 'all'
+                    ),
+                    row=1, col=2
+                )
     
-    # 3. Timeline Chart
-    timeline_data = prepare_timeline_data(temporal_data, sorted_archetypes[:5])
+    # 3. Timeline Chart - use filtered archetypes
+    timeline_data = prepare_timeline_data(temporal_data, filtered_archetypes[:5])
     
     # Group data by archetype
     archetype_lines = {}
@@ -221,14 +279,14 @@ def create_plotly_visualization():
     )
     
     # Update axes
-    fig.update_xaxes(tickangle=-45, row=1, col=2)
+    fig.update_xaxes(tickangle=-45, row=1, col=2, showgrid=False)
     fig.update_yaxes(title_text="Number of Decks", row=1, col=2)
     fig.update_xaxes(title_text="Date", row=2, col=1)
     fig.update_yaxes(title_text="Meta Share %", row=2, col=1)
     
-    # Create table data
+    # Create table data - only show archetypes above 1.5%
     table_data = []
-    for i, (archetype, count) in enumerate(sorted_archetypes, 1):
+    for i, (archetype, count) in enumerate(filtered_archetypes, 1):
         percentage = (count / total_decks) * 100
         clean_name = format_archetype_name(archetype) if archetype else "Unknown"
         per_tournament = round(count / len(tournaments), 1) if tournaments else 0

@@ -53,26 +53,37 @@ def get_archetype_colors(archetype_name: str) -> list:
     Returns:
         List of color codes like ["U", "R"] for Izzet
     """
-    # Check for mono colors
-    if archetype_name.startswith("Mono "):
-        color_map = {
-            "Mono White": ["W"],
-            "Mono Blue": ["U"],
-            "Mono Black": ["B"],
-            "Mono Red": ["R"],
-            "Mono Green": ["G"],
-        }
-        for mono, colors in color_map.items():
-            if archetype_name.startswith(mono):
-                return colors
+    # Check for mono colors first - be more specific
+    mono_patterns = [
+        ("Mono White", ["W"]),
+        ("Mono Blue", ["U"]),
+        ("Mono Black", ["B"]),
+        ("Mono Red", ["R"]),
+        ("Mono Green", ["G"]),
+    ]
+    
+    for pattern, colors in mono_patterns:
+        if pattern in archetype_name:
+            return colors
     
     # Check for colorless
     if "Colorless" in archetype_name:
         return ["C"]
     
-    # Check for known combinations
+    # Check for known combinations - check these BEFORE generic patterns
     for combo_name, colors in COLOR_COMBINATIONS.items():
         if combo_name in archetype_name:
+            return colors
+    
+    # Additional specific patterns that might not match guild names
+    specific_patterns = {
+        "Izzet Prowess": ["U", "R"],  # Explicitly handle Izzet Prowess
+        "Gruul Aggro": ["R", "G"],    # Explicitly handle Gruul Aggro
+        "Naya Yuna": ["R", "G", "W"], # Explicitly handle Naya Yuna
+    }
+    
+    for pattern, colors in specific_patterns.items():
+        if pattern in archetype_name:
             return colors
     
     # Check for 4c/5c
