@@ -16,6 +16,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 from src.cache.reader import CacheReader
 from src.cache.database import CacheDatabase
 from src.utils.color_names import format_archetype_name
+from src.utils.mtg_colors import get_pie_colors, create_bar_gradient_marker, get_archetype_colors, MTG_COLORS
 
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
@@ -58,12 +59,14 @@ def create_plotly_visualization():
     labels = []
     values = []
     percentages = []
+    raw_archetypes = []  # Keep raw names for color mapping
     
     for archetype, count in sorted_archetypes[:20]:  # Top 20
         clean_name = format_archetype_name(archetype) if archetype else "Unknown"
         labels.append(clean_name)
         values.append(count)
         percentages.append(round((count / total_decks) * 100, 2))
+        raw_archetypes.append(archetype)
     
     # Add "Others" if there are more than 20 archetypes
     if len(sorted_archetypes) > 20:
@@ -71,15 +74,10 @@ def create_plotly_visualization():
         labels.append("Others")
         values.append(others_count)
         percentages.append(round((others_count / total_decks) * 100, 2))
+        raw_archetypes.append("Others")
     
-    # Enhanced color palette
-    colors = [
-        '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
-        '#FF9F40', '#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A',
-        '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1F2', '#F8B195',
-        '#C7CEEA', '#FFDAB9', '#E8DAEF', '#D5DBDB', '#FADBD8',
-        '#808080'  # Gray for "Others"
-    ]
+    # Get MTG-based colors for pie chart
+    colors = get_pie_colors(labels)
     
     # Calculate date range
     if tournaments:
@@ -121,14 +119,23 @@ def create_plotly_visualization():
         row=1, col=1
     )
     
-    # 2. Bar Chart
+    # 2. Bar Chart with MTG colors
+    # Create individual bar colors
+    bar_colors = []
+    for i in range(10):
+        marker_config = create_bar_gradient_marker(labels[i])
+        bar_colors.append(marker_config['color'])
+    
     fig.add_trace(
         go.Bar(
             x=labels[:10],
             y=values[:10],
             text=[f"{v} ({p}%)" for v, p in zip(values[:10], percentages[:10])],
             textposition='outside',
-            marker_color='rgba(102, 126, 234, 0.8)',
+            marker=dict(
+                color=bar_colors,
+                line=dict(color='rgba(0,0,0,0.2)', width=1)
+            ),
             hovertemplate='<b>%{x}</b><br>' +
                          'Decks: %{y}<br>' +
                          'Meta Share: %{text}<br>' +
@@ -149,16 +156,24 @@ def create_plotly_visualization():
         archetype_lines[arch]['dates'].append(record['date'])
         archetype_lines[arch]['percentages'].append(record['percentage'])
     
-    # Add timeline traces
+    # Add timeline traces with MTG colors
     for i, (arch, data) in enumerate(archetype_lines.items()):
+        # Get colors for this archetype
+        arch_colors = get_archetype_colors(arch)
+        if len(arch_colors) == 1:
+            line_color = MTG_COLORS[arch_colors[0]]
+        else:
+            # For multi-color, use the primary color
+            line_color = MTG_COLORS[arch_colors[0]]
+        
         fig.add_trace(
             go.Scatter(
                 x=data['dates'],
                 y=data['percentages'],
                 mode='lines+markers',
                 name=arch,
-                line=dict(width=3),
-                marker=dict(size=6),
+                line=dict(width=3, color=line_color),
+                marker=dict(size=6, color=line_color),
                 hovertemplate='<b>%{fullData.name}</b><br>' +
                              'Date: %{x}<br>' +
                              'Meta Share: %{y:.1f}%<br>' +
