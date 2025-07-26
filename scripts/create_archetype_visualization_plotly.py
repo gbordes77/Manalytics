@@ -180,7 +180,14 @@ def create_plotly_visualization():
         height=1100,  # Increased from 900
         template='plotly_white',
         hovermode='closest',
-        margin=dict(t=140, b=80, l=80, r=120)  # Increased margins
+        margin=dict(t=140, b=80, l=80, r=120),  # Increased margins
+        legend=dict(
+            orientation="h",
+            yanchor="top",
+            y=0.48,  # Position juste au-dessus du timeline chart
+            xanchor="center",
+            x=0.5
+        )
     )
     
     # Update axes
