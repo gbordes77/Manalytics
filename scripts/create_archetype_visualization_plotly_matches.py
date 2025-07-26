@@ -40,19 +40,21 @@ def calculate_match_based_data(tournaments):
         if tournament.id in all_decklists:
             decklists = all_decklists[tournament.id].get('decklists', [])
             for deck in decklists:
-                archetype = deck.get('archetype', 'Unknown')
+                archetype = deck.get('archetype')
                 wins = deck.get('wins', 0) or 0
                 losses = deck.get('losses', 0) or 0
                 matches = wins + losses
                 
+                # Skip Unknown archetypes
+                if not archetype:
+                    continue
+                    
                 total_decks += 1
                 
                 if matches > 0:
                     archetype_matches[archetype] += matches
                     archetype_decks[archetype] += 1
                     total_matches += matches
-                    if archetype == 'Unknown':
-                        unknown_matches += matches
     
     return {
         'archetype_matches': dict(archetype_matches),
@@ -93,11 +95,15 @@ def calculate_temporal_data(tournaments):
         if tournament.id in all_decklists:
             decklists = all_decklists[tournament.id].get('decklists', [])
             for deck in decklists:
-                archetype = deck.get('archetype', 'Unknown')
+                archetype = deck.get('archetype')
                 wins = deck.get('wins', 0) or 0
                 losses = deck.get('losses', 0) or 0
                 matches = wins + losses
                 
+                # Skip Unknown archetypes
+                if not archetype:
+                    continue
+                    
                 if matches > 0:
                     daily_data[date_str][archetype] += matches
                     daily_totals[date_str] += matches
