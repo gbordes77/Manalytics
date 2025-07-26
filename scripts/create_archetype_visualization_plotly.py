@@ -88,7 +88,7 @@ def create_plotly_visualization():
     else:
         date_range = "No data"
     
-    # Create subplots
+    # Create subplots with better spacing
     fig = make_subplots(
         rows=2, cols=2,
         row_heights=[0.5, 0.5],
@@ -97,8 +97,8 @@ def create_plotly_visualization():
         subplot_titles=("📊 Meta Distribution (Click to Filter)", 
                        "📈 Top Archetypes",
                        "📉 Meta Evolution Timeline (Last 30 Days)"),
-        vertical_spacing=0.15,
-        horizontal_spacing=0.1
+        vertical_spacing=0.25,  # Increased from 0.15
+        horizontal_spacing=0.20  # Increased from 0.1
     )
     
     # 1. Pie Chart - avec les vrais pourcentages du total
@@ -108,14 +108,15 @@ def create_plotly_visualization():
             values=values[:10],
             hole=0,
             marker=dict(colors=colors[:10]),
-            textposition='auto',
+            textposition='outside',  # Changed from 'auto' to avoid overlapping
             textinfo='label+text',
             text=[f'{p}%' for p in percentages[:10]],
             customdata=percentages[:10],
             hovertemplate='<b>%{label}</b><br>' +
                          'Decks: %{value}<br>' +
                          'Meta Share: %{customdata}%<br>' +
-                         '<extra></extra>'
+                         '<extra></extra>',
+            insidetextorientation='radial'  # Better text orientation
         ),
         row=1, col=1
     )
@@ -166,7 +167,7 @@ def create_plotly_visualization():
             row=2, col=1
         )
     
-    # Update layout
+    # Update layout with better margins and height
     fig.update_layout(
         title={
             'text': f'🎯 Manalytics - Interactive Standard Metagame Analysis<br>' +
@@ -176,10 +177,10 @@ def create_plotly_visualization():
             'font': {'size': 24}
         },
         showlegend=True,
-        height=900,
+        height=1100,  # Increased from 900
         template='plotly_white',
         hovermode='closest',
-        margin=dict(t=120, b=60, l=60, r=60)
+        margin=dict(t=140, b=80, l=80, r=120)  # Increased margins
     )
     
     # Update axes
