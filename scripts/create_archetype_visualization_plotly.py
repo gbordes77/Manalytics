@@ -384,6 +384,9 @@ def create_plotly_visualization():
         Plotly.newPlot('mainChart', mainFig.data, mainFig.layout, {{responsive: true}});
         Plotly.newPlot('tableChart', tableFig.data, tableFig.layout, {{responsive: true}});
         
+        // Store original data for reset
+        var originalMainFig = JSON.parse(JSON.stringify(mainFig));
+        
         function downloadCSV() {{
             let csv = 'Rank,Archetype,Decks,Percentage,Per Tournament\\n';
             {json.dumps([{
@@ -406,8 +409,53 @@ def create_plotly_visualization():
         }}
         
         function resetFilters() {{
-            Plotly.restyle('mainChart', {{}});
+            // Reset to original data
+            Plotly.react('mainChart', originalMainFig.data, originalMainFig.layout);
         }}
+        
+        // Add click handler for pie chart filtering
+        document.getElementById('mainChart').on('plotly_click', function(data) {{
+            if (data.points[0].curveNumber === 0) {{ // Pie chart
+                var clickedLabel = data.points[0].label;
+                
+                // Filter bar chart and timeline
+                var newBarData = mainFig.data[1];
+                var barIndices = [];
+                newBarData.x.forEach((label, i) => {{
+                    if (label === clickedLabel) {{
+                        barIndices.push(i);
+                    }}
+                }});
+                
+                if (barIndices.length > 0) {{
+                    // Highlight selected in bar chart
+                    var colors = new Array(newBarData.x.length).fill('rgba(102, 126, 234, 0.3)');
+                    barIndices.forEach(i => {{
+                        colors[i] = 'rgba(102, 126, 234, 1)';
+                    }});
+                    
+                    Plotly.restyle('mainChart', {{
+                        'marker.color': [colors]
+                    }}, [1]);
+                    
+                    // Filter timeline to show only selected archetype
+                    var timelineTraces = [];
+                    for (var i = 2; i < mainFig.data.length; i++) {{
+                        if (mainFig.data[i].name === clickedLabel) {{
+                            timelineTraces.push(i);
+                        }}
+                    }}
+                    
+                    // Update visibility
+                    var visible = new Array(mainFig.data.length).fill(true);
+                    for (var i = 2; i < mainFig.data.length; i++) {{
+                        visible[i] = timelineTraces.includes(i);
+                    }}
+                    
+                    Plotly.restyle('mainChart', 'visible', visible);
+                }}
+            }}
+        }})
     </script>
 </body>
 </html>
