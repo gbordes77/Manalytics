@@ -99,14 +99,30 @@ def create_plotly_visualization():
         horizontal_spacing=0.20  # Increased from 0.1
     )
     
-    # 1. Pie Chart - avec les vrais pourcentages du total
+    # 1. Pie Chart - avec gradients MTG
+    # Pour le pie chart, on va utiliser des patterns simulés avec des couleurs
+    pie_colors = []
+    for i in range(min(10, len(labels))):
+        arch_colors = get_archetype_colors(labels[i])
+        if len(arch_colors) == 1:
+            pie_colors.append(MTG_COLORS[arch_colors[0]])
+        elif len(arch_colors) == 2:
+            # Pour simuler un gradient dans le pie, on prend la première couleur
+            # (Plotly pie ne supporte pas les vrais gradients)
+            pie_colors.append(MTG_COLORS[arch_colors[0]])
+        else:
+            pie_colors.append(MTG_COLORS[arch_colors[0]])
+    
     fig.add_trace(
         go.Pie(
             labels=labels[:10],
             values=values[:10],
             hole=0,
-            marker=dict(colors=colors[:10]),
-            textposition='outside',  # Changed from 'auto' to avoid overlapping
+            marker=dict(
+                colors=pie_colors,
+                line=dict(color='white', width=2)
+            ),
+            textposition='outside',
             textinfo='label+text',
             text=[f'{p}%' for p in percentages[:10]],
             customdata=percentages[:10],
@@ -114,7 +130,7 @@ def create_plotly_visualization():
                          'Decks: %{value}<br>' +
                          'Meta Share: %{customdata}%<br>' +
                          '<extra></extra>',
-            insidetextorientation='radial'  # Better text orientation
+            insidetextorientation='radial'
         ),
         row=1, col=1
     )
