@@ -51,6 +51,12 @@ class CacheProcessor:
     
     def process_tournament(self, tournament_file: Path):
         """Process a single tournament file"""
+        
+        # PERMANENT LEAGUE FILTER - Skip ANY file with "league" in the name
+        if "league" in str(tournament_file).lower():
+            logger.warning(f"⚠️ SKIPPING LEAGUE: {tournament_file.name} - Leagues are permanently excluded")
+            return
+        
         logger.info(f"Processing tournament: {tournament_file}")
         
         try:
@@ -92,13 +98,22 @@ class CacheProcessor:
                 if format_dir.is_dir():
                     # Check main directory
                     for json_file in format_dir.glob("*.json"):
+                        # PERMANENT FILTER: Skip leagues
+                        if "league" in json_file.name.lower():
+                            continue
                         if not self._is_processed(json_file):
                             new_files.append(json_file)
                     
                     # Check subdirectories
                     for subdir in format_dir.iterdir():
                         if subdir.is_dir():
+                            # Skip 'leagues' subdirectories entirely
+                            if subdir.name.lower() == "leagues":
+                                continue
                             for json_file in subdir.glob("*.json"):
+                                # PERMANENT FILTER: Skip leagues
+                                if "league" in json_file.name.lower():
+                                    continue
                                 if not self._is_processed(json_file):
                                     new_files.append(json_file)
         

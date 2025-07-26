@@ -375,8 +375,8 @@ Examples:
                        help="Start date (YYYY-MM-DD)")
     parser.add_argument("--end-date", type=str,
                        help="End date (YYYY-MM-DD)")
-    parser.add_argument("--include-leagues", action="store_true",
-                       help="Include league tournaments")
+    # REMOVED: --include-leagues option
+    # Leagues are PERMANENTLY excluded from Manalytics per project requirements
     parser.add_argument("--force-redownload", action="store_true",
                        help="Force redownload even if already processed")
     parser.add_argument("--generate-report", action="store_true",
@@ -405,8 +405,12 @@ Examples:
     tournament_types = None
     if args.tournament_types:
         tournament_types = [t.strip() for t in args.tournament_types.split(',')]
-    elif not args.include_leagues:
-        # Exclude leagues by default
+        # ALWAYS remove leagues from the list, even if explicitly requested
+        if "league" in tournament_types:
+            logger.warning("⚠️ Leagues are ALWAYS excluded from Manalytics analysis - removing from types")
+            tournament_types.remove("league")
+    else:
+        # NEVER include leagues - this is the default list WITHOUT leagues
         tournament_types = ["challenge", "showcase", "championship", "qualifier", "prelim", "special", "other"]
     
     logger.info(f"Scraping MTGO tournaments from {start_date.date()} to {end_date.date()}")
