@@ -157,6 +157,9 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - ✅ **Table complète** : Affichage des 70 archétypes avec indicateurs de tendance
 - ✅ **Header moderne** : Design avec gradient purple et cartes de stats cliquables
 - ✅ **Mobile responsive** : Fonctionne parfaitement sur téléphone pendant les tournois
+- ✅ **MTG Color Gradients** : Gradients respectant l'identité des couleurs MTG (mono et multi-couleurs)
+- ✅ **Analyse par Matches** : Méthodologie alignée avec les standards communautaires (Jiliac)
+- ✅ **Exclusion Tournois Fun** : Filtrage automatique des tournois casual (Mosh Pit, Creative, etc.)
 
 **En développement (autonomie créative) :**
 1. **Dashboard temps réel** - Métagame evolution avec WebSockets
@@ -195,15 +198,17 @@ data/
 - **Configuration** : `.env` + `src/manalytics/config.py`
 - **Structure** : 100% professionnelle dans `src/manalytics/`
 
-## **📊 État Actuel du Métagame Standard (26/07/2025) - Sans Leagues**
+## **📊 État Actuel du Métagame Standard (July 1-20, 2025) - Tournois Compétitifs**
 ```
-1. Izzet Cauldron - 19.56% (223 decks)
-2. Dimir Midrange - 19.39% (221 decks)  
-3. Mono White Caretaker - 4.65% (53 decks)
-4. Golgari Midrange - 4.39% (50 decks)
-5. Boros Convoke - 3.60% (41 decks)
+Méthodologie: Basée sur le nombre de MATCHES (pas de decks), excluant les tournois fun/casual
+1. Dimir Midrange - 22.4% (1,197 matches)
+2. Izzet Cauldron - 21.9% (1,172 matches)  
+3. Mono White Caretaker - 6.1% (326 matches)
+4. Boros Convoke - 4.9% (260 matches)
+5. Golgari Midrange - 4.6% (247 matches)
 
-Total: 42 tournois compétitifs, 1140 decks analysés
+Total: 31 tournois compétitifs (6 exclus), 5,345 matches analysés
+Note: Aligné avec la méthodologie communautaire (Jiliac) - différence moyenne de 1.6%
 ```
 
 ## **⚡ Commandes Utiles (NOUVEAU SYSTÈME)**
@@ -240,6 +245,15 @@ python3 scripts/create_archetype_visualization_plotly.py
 
 # Alternative: Visualisation Chart.js
 python3 scripts/create_archetype_visualization.py
+
+# Analyse style Jiliac (matches-based, competitive only)
+python3 scripts/analyze_competitive_only.py
+
+# Comparaison avec données Jiliac
+python3 scripts/analyze_like_jiliac.py
+
+# Investigation des différences
+python3 scripts/investigate_jiliac_differences.py
 
 # Statistiques du cache
 python3 scripts/show_cache_stats.py

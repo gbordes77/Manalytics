@@ -21,6 +21,8 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 - **🔍 Innovation Detector** - Real-time detection of emerging tech choices before they go mainstream
 - **📊 Multi-Deck Visual Comparison** - See exactly why some decks win and others don't
 - **🎯 Unified MTGO + Melee Analysis** - Most sites do one OR the other, we do both
+- **🎨 MTG Color Gradients** - Beautiful gradient visualizations respecting MTG color identity
+- **📈 Match-Based Analysis** - Following community standards (Jiliac methodology) for accurate meta %
 
 ## 🎉 Current Status (Phase 1 & 2 Complete!)
 
@@ -38,12 +40,15 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 - **Interactive Visualization** : HTML charts with pie chart labels & percentages
 - **Meta Snapshot** : Real-time metagame breakdown
 
-### 📊 Current Standard Metagame (July 2025)
-1. **Izzet Prowess (Cauldron)** - 19.6%
-2. **Dimir Midrange** - 19.4%
-3. **Mono White Caretaker** - 4.6%
-4. **Golgari Midrange** - 4.4%
-5. **Boros Convoke** - 3.6%
+### 📊 Current Standard Metagame (July 1-20, 2025)
+Based on competitive tournaments only (excluding casual/fun events):
+1. **Dimir Midrange** - 22.4% (1,197 matches)
+2. **Izzet Cauldron** - 21.9% (1,172 matches)
+3. **Mono White Caretaker** - 6.1% (326 matches)
+4. **Boros Convoke** - 4.9% (260 matches)
+5. **Golgari Midrange** - 4.6% (247 matches)
+
+*Note: Percentages based on match count following community standards (Jiliac methodology)*
 
 ### 🚀 Phase 3: In Progress - Advanced Visualizations
 - **Plotly visualization delivered** : `data/cache/standard_analysis_no_leagues.html` - Full interactive charts
@@ -218,6 +223,7 @@ Full documentation at `/api/docs` when running.
 - [MTGO Scraping Guide](docs/MTGO_SCRAPING_GUIDE.md) - Complete MTGO scraping guide
 - [Melee Scraping Guide](docs/MELEE_SCRAPING_GUIDE.md) - Complete Melee scraping guide  
 - [Scraping Best Practices](docs/SCRAPING_BEST_PRACTICES.md) - Critical lessons learned
+- [Jiliac Comparison Analysis](docs/JILIAC_COMPARISON_FINDINGS.md) - Why our data differs & how to match
 
 ### Phase 2 Implementation
 - [Cache System Implementation](docs/CACHE_SYSTEM_IMPLEMENTATION.md) - Complete cache architecture
