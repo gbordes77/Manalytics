@@ -77,7 +77,14 @@ def create_plotly_visualization():
         raw_archetypes.append("Others")
     
     # Get MTG-based colors for pie chart
-    colors = get_pie_colors(labels)
+    # For gradients, we'll use the primary color for now
+    colors = []
+    for label in labels:
+        arch_colors = get_archetype_colors(label)
+        if arch_colors:
+            colors.append(MTG_COLORS[arch_colors[0]])
+        else:
+            colors.append("#808080")  # Gray fallback
     
     # Calculate date range
     if tournaments:
@@ -99,19 +106,27 @@ def create_plotly_visualization():
         horizontal_spacing=0.20  # Increased from 0.1
     )
     
-    # 1. Pie Chart - avec gradients MTG
-    # Pour le pie chart, on va utiliser des patterns simulés avec des couleurs
+    # 1. Pie Chart - avec simulation de gradients via pattern
+    # Plotly pie charts ne supportent pas les vrais gradients, donc on va créer un effet visuel
     pie_colors = []
+    patterns = []
+    
     for i in range(min(10, len(labels))):
         arch_colors = get_archetype_colors(labels[i])
         if len(arch_colors) == 1:
+            # Couleur unie
             pie_colors.append(MTG_COLORS[arch_colors[0]])
-        elif len(arch_colors) == 2:
-            # Pour simuler un gradient dans le pie, on prend la première couleur
-            # (Plotly pie ne supporte pas les vrais gradients)
-            pie_colors.append(MTG_COLORS[arch_colors[0]])
+            patterns.append(dict(shape=""))
         else:
+            # Pour multi-couleurs, on utilise la première couleur
+            # et on va ajouter un pattern effect dans le HTML après
             pie_colors.append(MTG_COLORS[arch_colors[0]])
+            patterns.append(dict(
+                shape=".",
+                bgcolor=MTG_COLORS[arch_colors[1]] if len(arch_colors) > 1 else MTG_COLORS[arch_colors[0]],
+                size=8,
+                solidity=0.5
+            ))
     
     fig.add_trace(
         go.Pie(
@@ -120,7 +135,13 @@ def create_plotly_visualization():
             hole=0,
             marker=dict(
                 colors=pie_colors,
-                line=dict(color='white', width=2)
+                line=dict(color='white', width=2),
+                pattern=dict(
+                    shape=[p['shape'] for p in patterns],
+                    bgcolor=[p.get('bgcolor', '') for p in patterns],
+                    size=[p.get('size', 1) for p in patterns],
+                    solidity=[p.get('solidity', 1) for p in patterns]
+                )
             ),
             textposition='outside',
             textinfo='label+text',
@@ -268,6 +289,31 @@ def create_plotly_visualization():
         margin=dict(t=60, b=20, l=20, r=20)
     )
     
+    # Prepare gradient definitions for SVG injection
+    gradient_defs = []
+    for i, label in enumerate(labels[:10]):
+        arch_colors = get_archetype_colors(label)
+        if len(arch_colors) > 1:
+            gradient_id = f"gradient_{i}"
+            if len(arch_colors) == 2:
+                gradient_defs.append(f"""
+                    <linearGradient id="{gradient_id}" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:{MTG_COLORS[arch_colors[0]]};stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:{MTG_COLORS[arch_colors[1]]};stop-opacity:1" />
+                    </linearGradient>
+                """)
+            else:
+                # 3+ colors
+                stops = []
+                for j, color in enumerate(arch_colors):
+                    offset = (j / (len(arch_colors) - 1)) * 100
+                    stops.append(f'<stop offset="{offset}%" style="stop-color:{MTG_COLORS[color]};stop-opacity:1" />')
+                gradient_defs.append(f"""
+                    <linearGradient id="{gradient_id}" x1="0%" y1="0%" x2="100%" y2="100%">
+                        {''.join(stops)}
+                    </linearGradient>
+                """)
+    
     # Create HTML with both figures
     html_content = f"""
 <!DOCTYPE html>
@@ -412,7 +458,33 @@ def create_plotly_visualization():
         var mainFig = {fig.to_json()};
         var tableFig = {table_fig.to_json()};
         
-        Plotly.newPlot('mainChart', mainFig.data, mainFig.layout, {{responsive: true}});
+        Plotly.newPlot('mainChart', mainFig.data, mainFig.layout, {{responsive: true}}).then(function() {{
+            // Apply gradients to pie slices after rendering
+            setTimeout(function() {{
+                var pieSlices = document.querySelectorAll('#mainChart .pie .slice path');
+                var gradientData = {json.dumps([{
+                    'index': i,
+                    'label': label,
+                    'colors': get_archetype_colors(label),
+                    'hasGradient': len(get_archetype_colors(label)) > 1
+                } for i, label in enumerate(labels[:10])])};
+                
+                // Add gradient definitions to SVG
+                var svg = document.querySelector('#mainChart svg');
+                if (svg) {{
+                    var defs = svg.querySelector('defs') || svg.insertBefore(document.createElementNS('http://www.w3.org/2000/svg', 'defs'), svg.firstChild);
+                    defs.innerHTML += `{''.join(gradient_defs)}`;
+                    
+                    // Apply gradients to slices
+                    pieSlices.forEach(function(slice, index) {{
+                        if (index < gradientData.length && gradientData[index].hasGradient) {{
+                            slice.style.fill = `url(#gradient_${{index}})`;
+                        }}
+                    }});
+                }}
+            }}, 100);
+        }});
+        
         Plotly.newPlot('tableChart', tableFig.data, tableFig.layout, {{responsive: true}});
         
         // Store original data for reset
