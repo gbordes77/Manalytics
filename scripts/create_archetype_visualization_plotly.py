@@ -90,13 +90,7 @@ def create_plotly_visualization():
         percentages.append(round((count / total_decks) * 100, 2))
         raw_archetypes.append(archetype)
     
-    # Add "Others" for archetypes below 1.5%
-    others_count = sum(count for arch, count in sorted_archetypes if count < min_threshold)
-    if others_count > 0:
-        labels.append("Others")
-        values.append(others_count)
-        percentages.append(round((others_count / total_decks) * 100, 2))
-        raw_archetypes.append("Others")
+    # NO "Others" category - we only show archetypes above 1.5%
     
     # Get MTG-based colors for pie chart
     # For gradients, we'll use the primary color for now
@@ -163,66 +157,65 @@ def create_plotly_visualization():
         row=1, col=1
     )
     
-    # 2. Bar Chart with gradient effect using multiple segments
-    # Create gradient bars for multi-color archetypes
+    # 2. Bar Chart with gradient effect
+    # We need to create a single trace with all bars for proper display
     num_bars = min(10, len(labels))
     
-    # For each archetype, create gradient effect
+    # Prepare data for grouped bars
+    bar_x = []
+    bar_y = []
+    bar_colors = []
+    bar_texts = []
+    
+    # First pass: create base bars
     for i in range(num_bars):
         arch_colors = get_archetype_colors(labels[i])
         
         if len(arch_colors) == 1:
-            # Single color bar
-            fig.add_trace(
-                go.Bar(
-                    x=[labels[i]],
-                    y=[values[i]],
-                    marker_color=MTG_COLORS[arch_colors[0]],
-                    showlegend=False,
-                    text=f"{values[i]} ({percentages[i]}%)",
-                    textposition='outside',
-                    hovertemplate=f'<b>{labels[i]}</b><br>Decks: {values[i]}<br>Meta Share: {percentages[i]}%<extra></extra>'
-                ),
-                row=1, col=2
-            )
+            # Single color
+            bar_x.append(labels[i])
+            bar_y.append(values[i])
+            bar_colors.append(MTG_COLORS[arch_colors[0]])
+            bar_texts.append(f"{values[i]} ({percentages[i]}%)")
         else:
-            # Multi-color gradient bar using segments
-            num_segments = 20
-            segment_height = values[i] / num_segments
+            # For multi-color, we'll use a blended color for now
+            # True gradients will be applied via post-processing
+            primary_color = MTG_COLORS[arch_colors[0]]
+            secondary_color = MTG_COLORS[arch_colors[1]] if len(arch_colors) > 1 else primary_color
+            blended = blend_colors(primary_color, secondary_color, 0.5)
             
-            for j in range(num_segments):
-                ratio = j / (num_segments - 1)
-                
-                # Interpolate color
-                if len(arch_colors) == 2:
-                    color = interpolate_color(MTG_COLORS[arch_colors[0]], MTG_COLORS[arch_colors[1]], ratio)
-                else:
-                    # 3+ colors
-                    segment = ratio * (len(arch_colors) - 1)
-                    idx = int(segment)
-                    local_ratio = segment - idx
-                    if idx < len(arch_colors) - 1:
-                        color = interpolate_color(MTG_COLORS[arch_colors[idx]], MTG_COLORS[arch_colors[idx + 1]], local_ratio)
-                    else:
-                        color = MTG_COLORS[arch_colors[-1]]
-                
-                # Show text only on top segment
-                show_text = j == num_segments - 1
-                
-                fig.add_trace(
-                    go.Bar(
-                        x=[labels[i]],
-                        y=[segment_height],
-                        base=j * segment_height,
-                        marker_color=color,
-                        showlegend=False,
-                        text=f"{values[i]} ({percentages[i]}%)" if show_text else "",
-                        textposition='outside' if show_text else 'none',
-                        hovertemplate=f'<b>{labels[i]}</b><br>Decks: {values[i]}<br>Meta Share: {percentages[i]}%<extra></extra>' if j == 0 else None,
-                        hoverinfo='skip' if j > 0 else 'all'
-                    ),
-                    row=1, col=2
-                )
+            bar_x.append(labels[i])
+            bar_y.append(values[i])
+            bar_colors.append(blended)
+            bar_texts.append(f"{values[i]} ({percentages[i]}%)")
+    
+    # Add the main bar trace
+    fig.add_trace(
+        go.Bar(
+            x=bar_x,
+            y=bar_y,
+            marker=dict(
+                color=bar_colors,
+                line=dict(color='rgba(0,0,0,0.2)', width=1)
+            ),
+            text=bar_texts,
+            textposition='outside',
+            showlegend=False,
+            hovertemplate='<b>%{x}</b><br>Decks: %{y}<br>Meta Share: %{text}<extra></extra>'
+        ),
+        row=1, col=2
+    )
+    
+    # Store gradient info for bar chart post-processing
+    bar_gradient_info = []
+    for i in range(num_bars):
+        arch_colors = get_archetype_colors(labels[i])
+        if len(arch_colors) > 1:
+            bar_gradient_info.append({
+                'index': i,
+                'label': labels[i],
+                'colors': arch_colors
+            })
     
     # 3. Timeline Chart - use filtered archetypes
     timeline_data = prepare_timeline_data(temporal_data, filtered_archetypes[:5])
@@ -485,8 +478,8 @@ def create_plotly_visualization():
                 <div class="stat-label">Total Decks</div>
             </div>
             <div class="stat-box">
-                <div class="stat-value">{len(archetype_counts)}</div>
-                <div class="stat-label">Unique Archetypes</div>
+                <div class="stat-value">{len(filtered_archetypes)}</div>
+                <div class="stat-label">Archetypes > 1.5%</div>
             </div>
             <div class="stat-box">
                 <div class="stat-value" style="font-size: 1.5em;">{format_archetype_name(sorted_archetypes[0][0]) if sorted_archetypes else 'N/A'}</div>
@@ -510,8 +503,11 @@ def create_plotly_visualization():
         var mainFig = {fig.to_json()};
         var tableFig = {table_fig.to_json()};
         
+        // Store bar gradient info
+        var barGradientInfo = {json.dumps(bar_gradient_info)};
+        
         Plotly.newPlot('mainChart', mainFig.data, mainFig.layout, {{responsive: true}}).then(function() {{
-            // Apply gradients to pie slices after rendering
+            // Apply gradients to pie slices and bars after rendering
             setTimeout(function() {{
                 var svg = document.querySelector('#mainChart svg.main-svg');
                 if (!svg) return;
@@ -519,15 +515,51 @@ def create_plotly_visualization():
                 // Create or get defs element
                 var defs = svg.querySelector('defs') || svg.insertBefore(document.createElementNS('http://www.w3.org/2000/svg', 'defs'), svg.firstChild);
                 
-                // Add gradient definitions
+                // Add gradient definitions for pie
                 var gradientDefs = `{''.join(gradient_defs)}`;
+                
+                // Define MTG colors in JavaScript
+                var mtgColors = {{
+                    'W': '#FFFBD5',
+                    'U': '#0E68AB',
+                    'B': '#1C1C1C',
+                    'R': '#F44336',
+                    'G': '#4CAF50',
+                    'C': '#9E9E9E'
+                }};
+                
+                // Add linear gradients for bars
+                barGradientInfo.forEach(function(info, idx) {{
+                    var barGradientId = 'bar_gradient_' + idx;
+                    var colors = info.colors;
+                    
+                    if (colors.length === 2) {{
+                        gradientDefs += `
+                            <linearGradient id="${{barGradientId}}" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" style="stop-color:${{mtgColors[colors[0]]}};stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:${{mtgColors[colors[1]]}};stop-opacity:1" />
+                            </linearGradient>
+                        `;
+                    }} else if (colors.length > 2) {{
+                        var stops = '';
+                        colors.forEach(function(color, i) {{
+                            var offset = (i / (colors.length - 1)) * 100;
+                            stops += `<stop offset="${{offset}}%" style="stop-color:${{mtgColors[color]}};stop-opacity:1" />`;
+                        }});
+                        gradientDefs += `
+                            <linearGradient id="${{barGradientId}}" x1="0%" y1="100%" x2="0%" y2="0%">
+                                ${{stops}}
+                            </linearGradient>
+                        `;
+                    }}
+                }});
+                
                 defs.innerHTML += gradientDefs;
                 
-                // Find all pie slices
+                // Apply gradients to pie slices
                 var pieSlices = svg.querySelectorAll('.slice path');
                 var gradientInfo = {json.dumps(gradient_info)};
                 
-                // Apply gradients to appropriate slices
                 gradientInfo.forEach(function(info) {{
                     if (info.index < pieSlices.length) {{
                         pieSlices[info.index].style.fill = 'url(#' + info.id + ')';
@@ -535,7 +567,17 @@ def create_plotly_visualization():
                     }}
                 }});
                 
-                console.log('Applied ' + gradientInfo.length + ' gradients to pie slices');
+                // Apply gradients to bars
+                var barRects = svg.querySelectorAll('.barlayer .bars rect');
+                barGradientInfo.forEach(function(info, idx) {{
+                    var barIndex = info.index;
+                    if (barIndex < barRects.length) {{
+                        barRects[barIndex].style.fill = 'url(#bar_gradient_' + idx + ')';
+                        barRects[barIndex].setAttribute('fill', 'url(#bar_gradient_' + idx + ')');
+                    }}
+                }});
+                
+                console.log('Applied ' + gradientInfo.length + ' pie gradients and ' + barGradientInfo.length + ' bar gradients');
             }}, 200);
         }});
         
