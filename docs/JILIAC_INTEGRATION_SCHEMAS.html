@@ -164,43 +164,43 @@ flowchart TB
 flowchart TB
     subgraph "Couche Données"
         subgraph "Fichiers Source"
-            F1[data/raw/mtgo/<br/>📁 JSON Scrapers]
-            F2[jiliaclistener/<br/>📁 JSON Matchups]
-            F3[data/raw/melee/<br/>📁 JSON Melee]
+            F1["data/raw/mtgo/<br/>📁 JSON Scrapers"]
+            F2["jiliaclistener/<br/>📁 JSON Matchups"]
+            F3["data/raw/melee/<br/>📁 JSON Melee"]
         end
         
         subgraph "Cache SQLite"
-            DB1[(tournaments.db<br/>Metadata)]
-            DB2[📄 JSON Storage<br/>Decklists complètes]
+            DB1[("tournaments.db<br/>Metadata")]
+            DB2["📄 JSON Storage<br/>Decklists complètes"]
         end
     end
     
     subgraph "Couche Processing"
         subgraph "Parsers Python"
-            P1[tournament_matcher.py<br/>Match by ID: 12801654]
-            P2[archetype_detector.py<br/>44 règles Standard]
-            P3[matchup_enricher.py<br/>Fusion données]
+            P1["tournament_matcher.py<br/>Match by ID: 12801654"]
+            P2["archetype_detector.py<br/>44 règles Standard"]
+            P3["matchup_enricher.py<br/>Fusion données"]
         end
         
         subgraph "Analyzers"
-            A1[matchup_calculator.py<br/>Win % par archétype]
-            A2[meta_analyzer.py<br/>Distribution %]
-            A3[trend_detector.py<br/>Évolution temporelle]
+            A1["matchup_calculator.py<br/>Win % par archétype"]
+            A2["meta_analyzer.py<br/>Distribution %"]
+            A3["trend_detector.py<br/>Évolution temporelle"]
         end
     end
     
     subgraph "Couche API"
-        API1[FastAPI Server<br/>📡 REST Endpoints]
-        API2[/api/matchups<br/>GET Matrix]
-        API3[/api/meta<br/>GET Distribution]
-        API4[/api/insights<br/>GET Recommendations]
+        API1["FastAPI Server<br/>📡 REST Endpoints"]
+        API2["/api/matchups<br/>GET Matrix"]
+        API3["/api/meta<br/>GET Distribution"]
+        API4["/api/insights<br/>GET Recommendations"]
     end
     
     subgraph "Couche Visualisation"
-        V1[Plotly Engine<br/>🎨 Interactive Charts]
-        V2[Heatmap<br/>Matchup Matrix]
-        V3[Sunburst<br/>Meta Distribution]
-        V4[Timeline<br/>Evolution]
+        V1["Plotly Engine<br/>🎨 Interactive Charts"]
+        V2["Heatmap<br/>Matchup Matrix"]
+        V3["Sunburst<br/>Meta Distribution"]
+        V4["Timeline<br/>Evolution"]
     end
     
     F1 --> P1
