@@ -1,0 +1,555 @@
+{
+  "Tournament": {
+    "Id": 12802882,
+    "Date": "2025-07-16T15:00:00",
+    "Name": "Duel Commander Trial 16",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "BERNASTORRES",
+          "Player2": "takeInitiative",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "SireOfMana",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "NicolasP",
+          "Player2": "Adam-Bazika",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Saltoche",
+          "Player2": "neijuge",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "medvedev",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "dolly_d84",
+          "Player2": "wcl",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "Gatss",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "kasa",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "fireshoes",
+          "Player2": "Dudarudi",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "ambroiseb1",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "Selfeisek",
+          "Player2": "NicolasP",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "dolly_d84",
+          "Player2": "Gatss",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ambroiseb1",
+          "Player2": "Dudarudi",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "SireOfMana",
+          "Player2": "Adam-Bazika",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "wcl",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "medvedev",
+          "Player2": "kasa",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "neijuge",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "fireshoes",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "BERNASTORRES",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Saltoche",
+          "Player2": "takeInitiative",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "Selfeisek",
+          "Player2": "Beicodegeia",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "Dudarudi",
+          "Player2": "SireOfMana",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "neijuge",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Saltoche",
+          "Player2": "Gatss",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "dolly_d84",
+          "Player2": "Adam-Bazika",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "medvedev",
+          "Player2": "fireshoes",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "BERNASTORRES",
+          "Player2": "kasa",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "takeInitiative",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ambroiseb1",
+          "Player2": "NicolasP",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 4",
+      "Matches": [
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "ambroiseb1",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "takeInitiative",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "dolly_d84",
+          "Player2": "BERNASTORRES",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "medvedev",
+          "Player2": "SireOfMana",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "neijuge",
+          "Player2": "Adam-Bazika",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "NicolasP",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "Dudarudi",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "fireshoes",
+          "Player2": "Saltoche",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "kasa",
+          "Player2": "Gatss",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 5",
+      "Matches": [
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "takeInitiative",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "medvedev",
+          "Player2": "Saltoche",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "BERNASTORRES",
+          "Player2": "Selfeisek",
+          "Result": "1-2-0"
+        },
+        {
+          "Player1": "dolly_d84",
+          "Player2": "SireOfMana",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "NicolasP",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "neijuge",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "kasa",
+          "Player2": "Dudarudi",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "wcl",
+          "Player2": "Adam-Bazika",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "ambroiseb1",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 6",
+      "Matches": [
+        {
+          "Player1": "BERNASTORRES",
+          "Player2": "takeInitiative",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "Beicodegeia",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "SireOfMana",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "kasa",
+          "Player2": "ambroiseb1",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 7",
+      "Matches": [
+        {
+          "Player1": "BERNASTORRES",
+          "Player2": "SireOfMana",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ambroiseb1",
+          "Player2": "Selfeisek",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 8",
+      "Matches": [
+        {
+          "Player1": "ambroiseb1",
+          "Player2": "SireOfMana",
+          "Result": "2-0-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 20,
+      "Player": "fireshoes",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.3833,
+      "GWP": 0.2,
+      "OGWP": 0.4215
+    },
+    {
+      "Rank": 19,
+      "Player": "medvedev",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.3846,
+      "OGWP": 0.5246999999999999
+    },
+    {
+      "Rank": 18,
+      "Player": "neijuge",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.3077,
+      "OGWP": 0.5747
+    },
+    {
+      "Rank": 17,
+      "Player": "Saltoche",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4,
+      "GWP": 0.5,
+      "OGWP": 0.38299999999999995
+    },
+    {
+      "Rank": 16,
+      "Player": "albertoSD",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.49329999999999996,
+      "GWP": 0.3846,
+      "OGWP": 0.431
+    },
+    {
+      "Rank": 15,
+      "Player": "Gatss",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5,
+      "GWP": 0.3636,
+      "OGWP": 0.5054
+    },
+    {
+      "Rank": 14,
+      "Player": "dolly_d84",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.52,
+      "GWP": 0.4,
+      "OGWP": 0.5307
+    },
+    {
+      "Rank": 13,
+      "Player": "Dudarudi",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5467,
+      "GWP": 0.4167,
+      "OGWP": 0.4886
+    },
+    {
+      "Rank": 12,
+      "Player": "wcl",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.68,
+      "GWP": 0.4545,
+      "OGWP": 0.6111
+    },
+    {
+      "Rank": 11,
+      "Player": "NicolasP",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.68,
+      "GWP": 0.46149999999999997,
+      "OGWP": 0.6082
+    },
+    {
+      "Rank": 10,
+      "Player": "Adam-Bazika",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4267,
+      "GWP": 0.5832999999999999,
+      "OGWP": 0.45299999999999996
+    },
+    {
+      "Rank": 9,
+      "Player": "Jose Guillermo",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4533,
+      "GWP": 0.6364,
+      "OGWP": 0.4411
+    },
+    {
+      "Rank": 8,
+      "Player": "kasa",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5467,
+      "GWP": 0.5385,
+      "OGWP": 0.5141
+    },
+    {
+      "Rank": 7,
+      "Player": "Beicodegeia",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.56,
+      "GWP": 0.5832999999999999,
+      "OGWP": 0.5256000000000001
+    },
+    {
+      "Rank": 6,
+      "Player": "takeInitiative",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.5,
+      "OGWP": 0.5747
+    },
+    {
+      "Rank": 5,
+      "Player": "ZacharyHaleComstock",
+      "Points": 15,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5467,
+      "GWP": 0.7692,
+      "OGWP": 0.4796
+    },
+    {
+      "Rank": 4,
+      "Player": "BERNASTORRES",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.6364,
+      "OGWP": 0.5377000000000001
+    },
+    {
+      "Rank": 3,
+      "Player": "Selfeisek",
+      "Points": 15,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.52,
+      "GWP": 0.6667000000000001,
+      "OGWP": 0.5502
+    },
+    {
+      "Rank": 2,
+      "Player": "SireOfMana",
+      "Points": 15,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.6154,
+      "OGWP": 0.4903
+    },
+    {
+      "Rank": 1,
+      "Player": "ambroiseb1",
+      "Points": 21,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.56,
+      "GWP": 0.5714,
+      "OGWP": 0.5337
+    }
+  ]
+}

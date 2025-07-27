@@ -1,0 +1,153 @@
+{
+  "Tournament": {
+    "Id": 12801759,
+    "Date": "2025-07-02T19:00:00",
+    "Name": "Vintage Cube Elimination Draft",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "Delta_Sanku",
+          "Player2": "BubbaFireFox",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Lord.NazguL",
+          "Player2": "Fuzzy_Meow",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "frankiepeanuts543",
+          "Player2": "DB_MrSeri",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "MK89",
+          "Player2": "Josh12597",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "BubbaFireFox",
+          "Player2": "frankiepeanuts543",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "MK89",
+          "Player2": "Fuzzy_Meow",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "BubbaFireFox",
+          "Player2": "Fuzzy_Meow",
+          "Result": "0-2-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 8,
+      "Player": "DB_MrSeri",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 7,
+      "Player": "Josh12597",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 6,
+      "Player": "Delta_Sanku",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 5,
+      "Player": "Lord.NazguL",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 4,
+      "Player": "frankiepeanuts543",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 3,
+      "Player": "MK89",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 2,
+      "Player": "BubbaFireFox",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 1,
+      "Player": "Fuzzy_Meow",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    }
+  ]
+}

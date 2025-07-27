@@ -1,0 +1,153 @@
+{
+  "Tournament": {
+    "Id": 12805432,
+    "Date": "2025-07-02T19:00:00",
+    "Name": "Vintage Cube Elimination Draft",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "MaidenJapan",
+          "Player2": "Luigi_mtg",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "gobboboy",
+          "Player2": "RobBoss1",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "prostar30",
+          "Player2": "WhooooKidd",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "akaSteven",
+          "Player2": "lasers2",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "RobBoss1",
+          "Player2": "Luigi_mtg",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "prostar30",
+          "Player2": "akaSteven",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "akaSteven",
+          "Player2": "Luigi_mtg",
+          "Result": "0-2-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 8,
+      "Player": "gobboboy",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 7,
+      "Player": "WhooooKidd",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 6,
+      "Player": "lasers2",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 5,
+      "Player": "MaidenJapan",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 4,
+      "Player": "prostar30",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 3,
+      "Player": "RobBoss1",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 2,
+      "Player": "akaSteven",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 1,
+      "Player": "Luigi_mtg",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    }
+  ]
+}

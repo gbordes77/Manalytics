@@ -1,0 +1,498 @@
+{
+  "Tournament": {
+    "Id": 12804941,
+    "Date": "2025-07-23T23:45:00",
+    "Name": "Duel Commander Trial 16",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "Univerce",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "xb00m",
+          "Player2": "DarkBone",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "sebastianpozzo",
+          "Player2": "GuiBonella",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "glyra",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "bernardocssa",
+          "Player2": "DuduDeNunu",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "sapro31",
+          "Player2": "TryParse",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "cool95",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "pat0presidente",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "TryParse",
+          "Player2": "DarkBone",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "DuduDeNunu",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "GuiBonella",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "glyra",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "sapro31",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "sebastianpozzo",
+          "Player2": "xb00m",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "pat0presidente",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Univerce",
+          "Player2": "bernardocssa",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "cool95",
+          "Player2": "Beicodegeia",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "cool95",
+          "Player2": "xfile",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "DuduDeNunu",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "sebastianpozzo",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "bernardocssa",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "sapro31",
+          "Player2": "DarkBone",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xb00m",
+          "Player2": "Selfeisek",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "Univerce",
+          "Player2": "GuiBonella",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "glyra",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 4",
+      "Matches": [
+        {
+          "Player1": "bernardocssa",
+          "Player2": "xb00m",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "cool95",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "DuduDeNunu",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "GuiBonella",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "Univerce",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "sebastianpozzo",
+          "Player2": "sapro31",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "DarkBone",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "glyra",
+          "Player2": "TryParse",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 5",
+      "Matches": [
+        {
+          "Player1": "xb00m",
+          "Player2": "GuiBonella",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "sebastianpozzo",
+          "Player2": "cool95",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "sapro31",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "TryParse",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "glyra",
+          "Player2": "Jose Guillermo",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "bernardocssa",
+          "Player2": "Selfeisek",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "DarkBone",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "DuduDeNunu",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 6",
+      "Matches": [
+        {
+          "Player1": "glyra",
+          "Player2": "sapro31",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "pat0presidente",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "cool95",
+          "Player2": "DarkBone",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "xfile",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 7",
+      "Matches": [
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "cool95",
+          "Player2": "sapro31",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 8",
+      "Matches": [
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "sapro31",
+          "Result": "2-0-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 18,
+      "Player": "i_b_TRUE",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.7,
+      "GWP": 0.3333,
+      "OGWP": 0.6154
+    },
+    {
+      "Rank": 17,
+      "Player": "Univerce",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5,
+      "GWP": 0.3,
+      "OGWP": 0.508
+    },
+    {
+      "Rank": 16,
+      "Player": "Selfeisek",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.55,
+      "GWP": 0.3333,
+      "OGWP": 0.5285
+    },
+    {
+      "Rank": 15,
+      "Player": "TryParse",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.65,
+      "GWP": 0.11109999999999999,
+      "OGWP": 0.6198
+    },
+    {
+      "Rank": 14,
+      "Player": "bernardocssa",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4533,
+      "GWP": 0.4167,
+      "OGWP": 0.45740000000000003
+    },
+    {
+      "Rank": 13,
+      "Player": "ZacharyHaleComstock",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4533,
+      "GWP": 0.5,
+      "OGWP": 0.45289999999999997
+    },
+    {
+      "Rank": 12,
+      "Player": "xb00m",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.4667,
+      "OGWP": 0.47240000000000004
+    },
+    {
+      "Rank": 11,
+      "Player": "sebastianpozzo",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.56,
+      "GWP": 0.3846,
+      "OGWP": 0.5426
+    },
+    {
+      "Rank": 10,
+      "Player": "DuduDeNunu",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.46149999999999997,
+      "OGWP": 0.5782
+    },
+    {
+      "Rank": 9,
+      "Player": "GuiBonella",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4267,
+      "GWP": 0.5,
+      "OGWP": 0.4512
+    },
+    {
+      "Rank": 8,
+      "Player": "pat0presidente",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.6923,
+      "OGWP": 0.502
+    },
+    {
+      "Rank": 7,
+      "Player": "glyra",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5333,
+      "GWP": 0.6154,
+      "OGWP": 0.504
+    },
+    {
+      "Rank": 6,
+      "Player": "DarkBone",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5867,
+      "GWP": 0.7273000000000001,
+      "OGWP": 0.5590999999999999
+    },
+    {
+      "Rank": 5,
+      "Player": "xfile",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.64,
+      "GWP": 0.6667000000000001,
+      "OGWP": 0.5958
+    },
+    {
+      "Rank": 4,
+      "Player": "cool95",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5467,
+      "GWP": 0.5385,
+      "OGWP": 0.5143
+    },
+    {
+      "Rank": 3,
+      "Player": "Jose Guillermo",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.64,
+      "GWP": 0.5714,
+      "OGWP": 0.5462
+    },
+    {
+      "Rank": 2,
+      "Player": "sapro31",
+      "Points": 15,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5467,
+      "GWP": 0.6364,
+      "OGWP": 0.5224
+    },
+    {
+      "Rank": 1,
+      "Player": "Beicodegeia",
+      "Points": 18,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.49329999999999996,
+      "GWP": 0.6154,
+      "OGWP": 0.45640000000000003
+    }
+  ]
+}

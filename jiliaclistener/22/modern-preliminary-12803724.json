@@ -1,0 +1,272 @@
+{
+  "Tournament": {
+    "Id": 12803724,
+    "Date": "2025-07-22T00:00:00",
+    "Name": "Modern Preliminary",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "BARNYARD",
+          "Player2": "kazoidbakerman",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "NotCicero",
+          "Player2": "thicket_basilisk24",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Zoob5555",
+          "Player2": "Kris_Kav",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "joaoclaudioms",
+          "Player2": "klien7",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "ShawnD4nger",
+          "Player2": "lunaloveee",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Comrade1312",
+          "Player2": "Napoleon_I",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "joaoclaudioms",
+          "Player2": "Comrade1312",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "kazoidbakerman",
+          "Player2": "NotCicero",
+          "Result": "1-2-0"
+        },
+        {
+          "Player1": "ShawnD4nger",
+          "Player2": "thicket_basilisk24",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "lunaloveee",
+          "Player2": "Kris_Kav",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "klien7",
+          "Player2": "Napoleon_I",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "Zoob5555",
+          "Player2": "klien7",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Comrade1312",
+          "Player2": "lunaloveee",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "kazoidbakerman",
+          "Player2": "Kris_Kav",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Napoleon_I",
+          "Player2": "thicket_basilisk24",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "joaoclaudioms",
+          "Player2": "NotCicero",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 4",
+      "Matches": [
+        {
+          "Player1": "joaoclaudioms",
+          "Player2": "thicket_basilisk24",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Zoob5555",
+          "Player2": "Napoleon_I",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "lunaloveee",
+          "Player2": "NotCicero",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "klien7",
+          "Player2": "ShawnD4nger",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "Comrade1312",
+          "Player2": "Kris_Kav",
+          "Result": "0-2-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 12,
+      "Player": "BARNYARD",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5,
+      "GWP": 0.3333,
+      "OGWP": 0.5
+    },
+    {
+      "Rank": 11,
+      "Player": "Napoleon_I",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4583,
+      "GWP": 0.4,
+      "OGWP": 0.4194
+    },
+    {
+      "Rank": 10,
+      "Player": "klien7",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5832999999999999,
+      "GWP": 0.3333,
+      "OGWP": 0.5583
+    },
+    {
+      "Rank": 9,
+      "Player": "Zoob5555",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4722,
+      "GWP": 0.44439999999999996,
+      "OGWP": 0.44439999999999996
+    },
+    {
+      "Rank": 8,
+      "Player": "ShawnD4nger",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5278,
+      "GWP": 0.5,
+      "OGWP": 0.4667
+    },
+    {
+      "Rank": 7,
+      "Player": "kazoidbakerman",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5278,
+      "GWP": 0.5,
+      "OGWP": 0.4683
+    },
+    {
+      "Rank": 6,
+      "Player": "thicket_basilisk24",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5832999999999999,
+      "GWP": 0.4,
+      "OGWP": 0.5722
+    },
+    {
+      "Rank": 5,
+      "Player": "NotCicero",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6875,
+      "GWP": 0.5,
+      "OGWP": 0.6139
+    },
+    {
+      "Rank": 4,
+      "Player": "Comrade1312",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.7082999999999999,
+      "GWP": 0.5,
+      "OGWP": 0.6389
+    },
+    {
+      "Rank": 3,
+      "Player": "Kris_Kav",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5625,
+      "GWP": 0.6,
+      "OGWP": 0.5278
+    },
+    {
+      "Rank": 2,
+      "Player": "lunaloveee",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5556,
+      "GWP": 0.6667000000000001,
+      "OGWP": 0.525
+    },
+    {
+      "Rank": 1,
+      "Player": "joaoclaudioms",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4583,
+      "GWP": 0.8889,
+      "OGWP": 0.43329999999999996
+    }
+  ]
+}

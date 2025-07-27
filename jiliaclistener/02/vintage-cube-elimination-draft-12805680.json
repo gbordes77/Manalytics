@@ -1,0 +1,153 @@
+{
+  "Tournament": {
+    "Id": 12805680,
+    "Date": "2025-07-02T19:00:00",
+    "Name": "Vintage Cube Elimination Draft",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "NWeber",
+          "Player2": "CaveRats",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Ryo-chin",
+          "Player2": "maxbv",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "king_of_fae",
+          "Player2": "Stuuch",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "GPJedi",
+          "Player2": "sauce_boss",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "GPJedi",
+          "Player2": "CaveRats",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "king_of_fae",
+          "Player2": "Ryo-chin",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "king_of_fae",
+          "Player2": "CaveRats",
+          "Result": "2-0-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 8,
+      "Player": "sauce_boss",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 7,
+      "Player": "maxbv",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 6,
+      "Player": "NWeber",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 5,
+      "Player": "Stuuch",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 4,
+      "Player": "GPJedi",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 3,
+      "Player": "Ryo-chin",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 2,
+      "Player": "CaveRats",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 1,
+      "Player": "king_of_fae",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    }
+  ]
+}

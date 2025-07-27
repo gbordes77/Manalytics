@@ -1,0 +1,411 @@
+{
+  "Tournament": {
+    "Id": 12801661,
+    "Date": "2025-07-05T18:00:00",
+    "Name": "Duel Commander Trial 16",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "Boumbo76",
+          "Player2": "JapaneseFisherman",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "LBBL",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "Dreddybajs",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "lovetapsmtg",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "xb00m",
+          "Player2": "Jositoshekel",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "MakiRikka",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "helvetti",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "MdvWin",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "xb00m",
+          "Player2": "lovetapsmtg",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "LBBL",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "helvetti",
+          "Player2": "MdvWin",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "JapaneseFisherman",
+          "Player2": "albertoSD",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "MakiRikka",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Boumbo76",
+          "Player2": "Dreddybajs",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "i_b_TRUE",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "Jositoshekel",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "Dreddybajs",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "helvetti",
+          "Player2": "MakiRikka",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "lovetapsmtg",
+          "Player2": "MdvWin",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "Selfeisek",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "JapaneseFisherman",
+          "Player2": "xb00m",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Boumbo76",
+          "Player2": "Jositoshekel",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "LBBL",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 4",
+      "Matches": [
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "Jositoshekel",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "LBBL",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "JapaneseFisherman",
+          "Player2": "Selfeisek",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Boumbo76",
+          "Player2": "MdvWin",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xb00m",
+          "Player2": "helvetti",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "MakiRikka",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Dreddybajs",
+          "Player2": "ZacharyHaleComstock",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 5",
+      "Matches": [
+        {
+          "Player1": "MakiRikka",
+          "Player2": "LBBL",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xb00m",
+          "Player2": "Jositoshekel",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "helvetti",
+          "Player2": "ZacharyHaleComstock",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Dreddybajs",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 6",
+      "Matches": [
+        {
+          "Player1": "xb00m",
+          "Player2": "LBBL",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "Beicodegeia",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 7",
+      "Matches": [
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "LBBL",
+          "Result": "0-2-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 16,
+      "Player": "albertoSD",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.75,
+      "GWP": 0,
+      "OGWP": 0.6636
+    },
+    {
+      "Rank": 15,
+      "Player": "Jose Guillermo",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5,
+      "GWP": 0.3333,
+      "OGWP": 0.5
+    },
+    {
+      "Rank": 14,
+      "Player": "lovetapsmtg",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5278,
+      "GWP": 0.1429,
+      "OGWP": 0.4899
+    },
+    {
+      "Rank": 13,
+      "Player": "Boumbo76",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5556,
+      "GWP": 0.3636,
+      "OGWP": 0.537
+    },
+    {
+      "Rank": 12,
+      "Player": "Selfeisek",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5832999999999999,
+      "GWP": 0.3333,
+      "OGWP": 0.5515
+    },
+    {
+      "Rank": 11,
+      "Player": "JapaneseFisherman",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.44439999999999996,
+      "GWP": 0.6,
+      "OGWP": 0.4167
+    },
+    {
+      "Rank": 10,
+      "Player": "MdvWin",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4792,
+      "GWP": 0.5,
+      "OGWP": 0.5051
+    },
+    {
+      "Rank": 9,
+      "Player": "i_b_TRUE",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4792,
+      "GWP": 0.5455,
+      "OGWP": 0.4375
+    },
+    {
+      "Rank": 8,
+      "Player": "MakiRikka",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5207999999999999,
+      "GWP": 0.5,
+      "OGWP": 0.5505
+    },
+    {
+      "Rank": 7,
+      "Player": "Dreddybajs",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5417000000000001,
+      "GWP": 0.4545,
+      "OGWP": 0.5132
+    },
+    {
+      "Rank": 6,
+      "Player": "helvetti",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.625,
+      "GWP": 0.5455,
+      "OGWP": 0.5549000000000001
+    },
+    {
+      "Rank": 5,
+      "Player": "Jositoshekel",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5832999999999999,
+      "GWP": 0.5832999999999999,
+      "OGWP": 0.5322
+    },
+    {
+      "Rank": 4,
+      "Player": "xb00m",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5207999999999999,
+      "GWP": 0.6364,
+      "OGWP": 0.5155
+    },
+    {
+      "Rank": 3,
+      "Player": "Beicodegeia",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6875,
+      "GWP": 0.5832999999999999,
+      "OGWP": 0.5787
+    },
+    {
+      "Rank": 2,
+      "Player": "ZacharyHaleComstock",
+      "Points": 15,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.625,
+      "GWP": 0.7778,
+      "OGWP": 0.5455
+    },
+    {
+      "Rank": 1,
+      "Player": "LBBL",
+      "Points": 21,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5417000000000001,
+      "GWP": 0.7273000000000001,
+      "OGWP": 0.5069
+    }
+  ]
+}

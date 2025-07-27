@@ -1,0 +1,153 @@
+{
+  "Tournament": {
+    "Id": 12805726,
+    "Date": "2025-07-02T19:00:00",
+    "Name": "Vintage Cube Elimination Draft",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "Dave_Finkle",
+          "Player2": "OnlineShoppin",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "JackJJr1993",
+          "Player2": "Young_Shaman",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "MrValakut",
+          "Player2": "iGodsWrathi",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "mcnasty1858",
+          "Player2": "PesE",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "Dave_Finkle",
+          "Player2": "JackJJr1993",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "iGodsWrathi",
+          "Player2": "PesE",
+          "Result": "0-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "JackJJr1993",
+          "Player2": "PesE",
+          "Result": "0-2-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 8,
+      "Player": "OnlineShoppin",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 7,
+      "Player": "MrValakut",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 6,
+      "Player": "Young_Shaman",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 5,
+      "Player": "mcnasty1858",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 4,
+      "Player": "Dave_Finkle",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 3,
+      "Player": "iGodsWrathi",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 2,
+      "Player": "JackJJr1993",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 1,
+      "Player": "PesE",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    }
+  ]
+}

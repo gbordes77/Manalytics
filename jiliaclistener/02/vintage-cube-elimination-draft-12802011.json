@@ -1,0 +1,153 @@
+{
+  "Tournament": {
+    "Id": 12802011,
+    "Date": "2025-07-02T19:00:00",
+    "Name": "Vintage Cube Elimination Draft",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "islands",
+          "Player2": "baconator5000",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "CaptainWacky2",
+          "Player2": "jpellman",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Lowkey Lyesmith",
+          "Player2": "complexsimpleton",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "osmanozguney",
+          "Player2": "JCspider",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "osmanozguney",
+          "Player2": "baconator5000",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "complexsimpleton",
+          "Player2": "jpellman",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "osmanozguney",
+          "Player2": "complexsimpleton",
+          "Result": "2-0-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 8,
+      "Player": "islands",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 7,
+      "Player": "CaptainWacky2",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 6,
+      "Player": "Lowkey Lyesmith",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 5,
+      "Player": "JCspider",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 4,
+      "Player": "jpellman",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 3,
+      "Player": "baconator5000",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 2,
+      "Player": "complexsimpleton",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    },
+    {
+      "Rank": 1,
+      "Player": "osmanozguney",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0,
+      "GWP": 0,
+      "OGWP": 0
+    }
+  ]
+}

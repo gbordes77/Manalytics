@@ -1,0 +1,504 @@
+{
+  "Tournament": {
+    "Id": 12802843,
+    "Date": "2025-07-14T01:00:00",
+    "Name": "Duel Commander Trial 16",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "albertoSD",
+          "Player2": "-Nausea-",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "FaMecHiMiCa",
+          "Player2": "VintageCulture",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Viatt",
+          "Player2": "DarkBone",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "Selfeisek",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "simmsey",
+          "Player2": "NickNorman",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "msskinbolic",
+          "Player2": "Ivan_Draw_Go",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "glyra",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "i_b_TRUE",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "GuiBonella",
+          "Player2": "DarkBone",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "msskinbolic",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "simmsey",
+          "Player2": "-Nausea-",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "FaMecHiMiCa",
+          "Player2": "wcl",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "Viatt",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "NickNorman",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "glyra",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "VintageCulture",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "xfile",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "GuiBonella",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "simmsey",
+          "Player2": "glyra",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "msskinbolic",
+          "Player2": "Viatt",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "DarkBone",
+          "Player2": "-Nausea-",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "wcl",
+          "Player2": "VintageCulture",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "xfile",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "Selfeisek",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "NickNorman",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 4",
+      "Matches": [
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "pokerswizard",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "NickNorman",
+          "Player2": "-Nausea-",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "Lord_Beerus",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "msskinbolic",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "DarkBone",
+          "Player2": "FaMecHiMiCa",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "glyra",
+          "Player2": "VintageCulture",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "simmsey",
+          "Player2": "Selfeisek",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "GuiBonella",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 5",
+      "Matches": [
+        {
+          "Player1": "pokerswizard",
+          "Player2": "albertoSD",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "DarkBone",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "msskinbolic",
+          "Player2": "GuiBonella",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "FaMecHiMiCa",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "NickNorman",
+          "Player2": "xfile",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "-Nausea-",
+          "Player2": "wcl",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "VintageCulture",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 6",
+      "Matches": [
+        {
+          "Player1": "albertoSD",
+          "Player2": "NickNorman",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "msskinbolic",
+          "Player2": "GuiBonella",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "pokerswizard",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 7",
+      "Matches": [
+        {
+          "Player1": "albertoSD",
+          "Player2": "GuiBonella",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "xfile",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 8",
+      "Matches": [
+        {
+          "Player1": "xfile",
+          "Player2": "GuiBonella",
+          "Result": "0-2-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 19,
+      "Player": "i_b_TRUE",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5667,
+      "GWP": 0.2,
+      "OGWP": 0.5
+    },
+    {
+      "Rank": 18,
+      "Player": "Ivan_Draw_Go",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0,
+      "OGWP": 0.6154
+    },
+    {
+      "Rank": 17,
+      "Player": "glyra",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.43329999999999996,
+      "GWP": 0.3333,
+      "OGWP": 0.4242
+    },
+    {
+      "Rank": 16,
+      "Player": "Viatt",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.44439999999999996,
+      "GWP": 0.2857,
+      "OGWP": 0.4678
+    },
+    {
+      "Rank": 15,
+      "Player": "simmsey",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4833,
+      "GWP": 0.2727,
+      "OGWP": 0.46399999999999997
+    },
+    {
+      "Rank": 14,
+      "Player": "FaMecHiMiCa",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.45,
+      "GWP": 0.4,
+      "OGWP": 0.4337
+    },
+    {
+      "Rank": 13,
+      "Player": "Selfeisek",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4533,
+      "GWP": 0.3636,
+      "OGWP": 0.4364
+    },
+    {
+      "Rank": 12,
+      "Player": "VintageCulture",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.3333,
+      "OGWP": 0.5196999999999999
+    },
+    {
+      "Rank": 11,
+      "Player": "DarkBone",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.4545,
+      "OGWP": 0.5067
+    },
+    {
+      "Rank": 10,
+      "Player": "-Nausea-",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5467,
+      "GWP": 0.4667,
+      "OGWP": 0.5127
+    },
+    {
+      "Rank": 9,
+      "Player": "Lord_Beerus",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.6667000000000001,
+      "OGWP": 0.46270000000000006
+    },
+    {
+      "Rank": 8,
+      "Player": "wcl",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.52,
+      "GWP": 0.5832999999999999,
+      "OGWP": 0.5015
+    },
+    {
+      "Rank": 7,
+      "Player": "msskinbolic",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5733,
+      "GWP": 0.6154,
+      "OGWP": 0.5167
+    },
+    {
+      "Rank": 6,
+      "Player": "pokerswizard",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5867,
+      "GWP": 0.6667000000000001,
+      "OGWP": 0.5513
+    },
+    {
+      "Rank": 5,
+      "Player": "NickNorman",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5867,
+      "GWP": 0.6923,
+      "OGWP": 0.5549000000000001
+    },
+    {
+      "Rank": 4,
+      "Player": "albertoSD",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.5,
+      "OGWP": 0.5711999999999999
+    },
+    {
+      "Rank": 3,
+      "Player": "Jose Guillermo",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.64,
+      "GWP": 0.6154,
+      "OGWP": 0.5445
+    },
+    {
+      "Rank": 2,
+      "Player": "xfile",
+      "Points": 18,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.68,
+      "GWP": 0.6923,
+      "OGWP": 0.6218
+    },
+    {
+      "Rank": 1,
+      "Player": "GuiBonella",
+      "Points": 21,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.6667000000000001,
+      "OGWP": 0.5943999999999999
+    }
+  ]
+}

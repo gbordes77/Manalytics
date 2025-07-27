@@ -1,0 +1,545 @@
+{
+  "Tournament": {
+    "Id": 12802819,
+    "Date": "2025-07-12T18:00:00",
+    "Name": "Duel Commander Trial 16",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "Mogged",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "ZacharyHaleComstock",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "takeInitiative",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "samsherman",
+          "Player2": "ecobaronen",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "Young_Shaman",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "InterludeShadow",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Gnarlid",
+          "Player2": "torrell8",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Boumbo76",
+          "Player2": "ambroiseb1",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "shadows6307",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "frodomochas",
+          "Player2": "SakOsh",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "takeInitiative",
+          "Player2": "Selfeisek",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "Lord_Beerus",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "samsherman",
+          "Player2": "InterludeShadow",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Boumbo76",
+          "Player2": "Mogged",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "frodomochas",
+          "Player2": "torrell8",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Young_Shaman",
+          "Player2": "Gnarlid",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "SakOsh",
+          "Player2": "shadows6307",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ambroiseb1",
+          "Player2": "i_b_TRUE",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "ecobaronen",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "Lord_Beerus",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Boumbo76",
+          "Player2": "takeInitiative",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "albertoSD",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "ambroiseb1",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "torrell8",
+          "Player2": "SakOsh",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ecobaronen",
+          "Player2": "Gnarlid",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "InterludeShadow",
+          "Player2": "Jose Guillermo",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Selfeisek",
+          "Player2": "shadows6307",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Mogged",
+          "Player2": "frodomochas",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 4",
+      "Matches": [
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "Gnarlid",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "Selfeisek",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "InterludeShadow",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ecobaronen",
+          "Player2": "ambroiseb1",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Beicodegeia",
+          "Player2": "torrell8",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "SakOsh",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "samsherman",
+          "Player2": "Mogged",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "frodomochas",
+          "Player2": "takeInitiative",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Boumbo76",
+          "Player2": "ZacharyHaleComstock",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 5",
+      "Matches": [
+        {
+          "Player1": "ecobaronen",
+          "Player2": "SakOsh",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Mogged",
+          "Player2": "shadows6307",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "InterludeShadow",
+          "Player2": "takeInitiative",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "ambroiseb1",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "i_b_TRUE",
+          "Player2": "Selfeisek",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ZacharyHaleComstock",
+          "Player2": "torrell8",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "Gnarlid",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "Boumbo76",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "samsherman",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 6",
+      "Matches": [
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "torrell8",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ecobaronen",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "ZacharyHaleComstock",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "ambroiseb1",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 7",
+      "Matches": [
+        {
+          "Player1": "albertoSD",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Jose Guillermo",
+          "Player2": "Lord_Beerus",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 8",
+      "Matches": [
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "Beicodegeia",
+          "Result": "0-2-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 20,
+      "Player": "Young_Shaman",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.3667,
+      "GWP": 0.3333,
+      "OGWP": 0.359
+    },
+    {
+      "Rank": 19,
+      "Player": "Mogged",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.44,
+      "GWP": 0.3846,
+      "OGWP": 0.44549999999999995
+    },
+    {
+      "Rank": 18,
+      "Player": "i_b_TRUE",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.3077,
+      "OGWP": 0.495
+    },
+    {
+      "Rank": 17,
+      "Player": "shadows6307",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.43329999999999996,
+      "GWP": 0.3636,
+      "OGWP": 0.4874
+    },
+    {
+      "Rank": 16,
+      "Player": "samsherman",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5333,
+      "GWP": 0.4167,
+      "OGWP": 0.5
+    },
+    {
+      "Rank": 15,
+      "Player": "Selfeisek",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5467,
+      "GWP": 0.4286,
+      "OGWP": 0.4838
+    },
+    {
+      "Rank": 14,
+      "Player": "Gnarlid",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5733,
+      "GWP": 0.3846,
+      "OGWP": 0.5154
+    },
+    {
+      "Rank": 13,
+      "Player": "frodomochas",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5832999999999999,
+      "GWP": 0.3636,
+      "OGWP": 0.5640999999999999
+    },
+    {
+      "Rank": 12,
+      "Player": "InterludeShadow",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.3846,
+      "OGWP": 0.5734
+    },
+    {
+      "Rank": 11,
+      "Player": "SakOsh",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.5,
+      "OGWP": 0.5275
+    },
+    {
+      "Rank": 10,
+      "Player": "Boumbo76",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6267,
+      "GWP": 0.5,
+      "OGWP": 0.5597
+    },
+    {
+      "Rank": 9,
+      "Player": "takeInitiative",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.44,
+      "GWP": 0.5385,
+      "OGWP": 0.44310000000000005
+    },
+    {
+      "Rank": 8,
+      "Player": "ecobaronen",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.56,
+      "GWP": 0.5385,
+      "OGWP": 0.5186999999999999
+    },
+    {
+      "Rank": 7,
+      "Player": "ambroiseb1",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5467,
+      "GWP": 0.6923,
+      "OGWP": 0.5216
+    },
+    {
+      "Rank": 6,
+      "Player": "ZacharyHaleComstock",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.64,
+      "GWP": 0.6,
+      "OGWP": 0.5985
+    },
+    {
+      "Rank": 5,
+      "Player": "torrell8",
+      "Points": 15,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.56,
+      "GWP": 0.8332999999999999,
+      "OGWP": 0.5081
+    },
+    {
+      "Rank": 4,
+      "Player": "Jose Guillermo",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4667,
+      "GWP": 0.5832999999999999,
+      "OGWP": 0.478
+    },
+    {
+      "Rank": 3,
+      "Player": "albertoSD",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.6364,
+      "OGWP": 0.4625
+    },
+    {
+      "Rank": 2,
+      "Player": "Lord_Beerus",
+      "Points": 15,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.56,
+      "GWP": 0.5385,
+      "OGWP": 0.5503
+    },
+    {
+      "Rank": 1,
+      "Player": "Beicodegeia",
+      "Points": 21,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0.6923,
+      "OGWP": 0.5513
+    }
+  ]
+}

@@ -1,0 +1,529 @@
+{
+  "Tournament": {
+    "Id": 12802867,
+    "Date": "2025-07-15T17:00:00",
+    "Name": "Phantom Sealed Trial 24",
+    "Uri": null,
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": null,
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "gilliganisla",
+          "Player2": "ShroudedByMist",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "MrGainzzz",
+          "Player2": "KillerKlown667",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "scipios",
+          "Player2": "juli0p",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "thatMagic",
+          "Player2": "Waidelai",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "slaxx",
+          "Player2": "groot02",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "Adam-Bazika",
+          "Player2": "JJ",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "bennylava1",
+          "Player2": "Adrikmtg",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Merriman",
+          "Player2": "YaGirlBryn",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "HyPPeR",
+          "Player2": "Lifeisrisk7",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "darius89",
+          "Player2": "ninepoundhammer",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "eresopacaso",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "Skpchino",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "JJ",
+          "Player2": "bennylava1",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "groot02",
+          "Player2": "YaGirlBryn",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "MrGainzzz",
+          "Player2": "Adrikmtg",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "eresopacaso",
+          "Player2": "Adam-Bazika",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "HyPPeR",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Lifeisrisk7",
+          "Player2": "juli0p",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Waidelai",
+          "Player2": "gilliganisla",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "scipios",
+          "Player2": "ninepoundhammer",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Skpchino",
+          "Player2": "KillerKlown667",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "darius89",
+          "Player2": "ShroudedByMist",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "MrGainzzz",
+          "Player2": "juli0p",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "eresopacaso",
+          "Player2": "gilliganisla",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "darius89",
+          "Player2": "HyPPeR",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "JJ",
+          "Player2": "Skpchino",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "Adam-Bazika",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Waidelai",
+          "Player2": "groot02",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ninepoundhammer",
+          "Player2": "YaGirlBryn",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ShroudedByMist",
+          "Player2": "KillerKlown667",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "scipios",
+          "Player2": "Adrikmtg",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 4",
+      "Matches": [
+        {
+          "Player1": "Skpchino",
+          "Player2": "Waidelai",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "juli0p",
+          "Player2": "ninepoundhammer",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "eresopacaso",
+          "Player2": "Adrikmtg",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "JJ",
+          "Player2": "HyPPeR",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "groot02",
+          "Player2": "Adam-Bazika",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "darius89",
+          "Player2": "YaGirlBryn",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "scipios",
+          "Player2": "MJ_23",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 5",
+      "Matches": [
+        {
+          "Player1": "darius89",
+          "Player2": "juli0p",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ninepoundhammer",
+          "Player2": "Adam-Bazika",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "Adrikmtg",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Skpchino",
+          "Player2": "HyPPeR",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Waidelai",
+          "Player2": "scipios",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "JJ",
+          "Player2": "eresopacaso",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "ShroudedByMist",
+          "Player2": "groot02",
+          "Result": "2-0-0"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Rank": 24,
+      "Player": "Merriman",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.3333,
+      "GWP": 0,
+      "OGWP": 0.4
+    },
+    {
+      "Rank": 23,
+      "Player": "albertoSD",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4,
+      "GWP": 0,
+      "OGWP": 0.3636
+    },
+    {
+      "Rank": 22,
+      "Player": "slaxx",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4,
+      "GWP": 0,
+      "OGWP": 0.46149999999999997
+    },
+    {
+      "Rank": 21,
+      "Player": "Lifeisrisk7",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4,
+      "GWP": 0.2,
+      "OGWP": 0.45799999999999996
+    },
+    {
+      "Rank": 20,
+      "Player": "KillerKlown667",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5111,
+      "GWP": 0,
+      "OGWP": 0.5065
+    },
+    {
+      "Rank": 19,
+      "Player": "bennylava1",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6,
+      "GWP": 0,
+      "OGWP": 0.6098
+    },
+    {
+      "Rank": 18,
+      "Player": "thatMagic",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 1,
+      "GWP": 0,
+      "OGWP": 0.8332999999999999
+    },
+    {
+      "Rank": 17,
+      "Player": "MrGainzzz",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.44439999999999996,
+      "GWP": 0.4286,
+      "OGWP": 0.4571
+    },
+    {
+      "Rank": 16,
+      "Player": "YaGirlBryn",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4833,
+      "GWP": 0.4,
+      "OGWP": 0.4696
+    },
+    {
+      "Rank": 15,
+      "Player": "gilliganisla",
+      "Points": 3,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6667000000000001,
+      "GWP": 0.4286,
+      "OGWP": 0.5808
+    },
+    {
+      "Rank": 14,
+      "Player": "eresopacaso",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5333,
+      "GWP": 0.3636,
+      "OGWP": 0.5297
+    },
+    {
+      "Rank": 13,
+      "Player": "juli0p",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5333,
+      "GWP": 0.4545,
+      "OGWP": 0.5075
+    },
+    {
+      "Rank": 12,
+      "Player": "HyPPeR",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5867,
+      "GWP": 0.46149999999999997,
+      "OGWP": 0.5529999999999999
+    },
+    {
+      "Rank": 11,
+      "Player": "groot02",
+      "Points": 6,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6133,
+      "GWP": 0.46149999999999997,
+      "OGWP": 0.5558
+    },
+    {
+      "Rank": 10,
+      "Player": "ShroudedByMist",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4167,
+      "GWP": 0.5455,
+      "OGWP": 0.43090000000000006
+    },
+    {
+      "Rank": 9,
+      "Player": "darius89",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.4667,
+      "GWP": 0.5,
+      "OGWP": 0.489
+    },
+    {
+      "Rank": 8,
+      "Player": "JJ",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5067,
+      "GWP": 0.6364,
+      "OGWP": 0.47409999999999997
+    },
+    {
+      "Rank": 7,
+      "Player": "Adrikmtg",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5333,
+      "GWP": 0.5832999999999999,
+      "OGWP": 0.5136
+    },
+    {
+      "Rank": 6,
+      "Player": "ninepoundhammer",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.5867,
+      "GWP": 0.5832999999999999,
+      "OGWP": 0.5427000000000001
+    },
+    {
+      "Rank": 5,
+      "Player": "Skpchino",
+      "Points": 9,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.6267,
+      "GWP": 0.5455,
+      "OGWP": 0.6029
+    },
+    {
+      "Rank": 4,
+      "Player": "Adam-Bazika",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.56,
+      "GWP": 0.6667000000000001,
+      "OGWP": 0.5589999999999999
+    },
+    {
+      "Rank": 3,
+      "Player": "MJ_23",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.64,
+      "GWP": 0.75,
+      "OGWP": 0.5899
+    },
+    {
+      "Rank": 2,
+      "Player": "scipios",
+      "Points": 12,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.68,
+      "GWP": 0.6923,
+      "OGWP": 0.6409
+    },
+    {
+      "Rank": 1,
+      "Player": "Waidelai",
+      "Points": 15,
+      "Wins": 0,
+      "Losses": 0,
+      "Draws": 0,
+      "OMWP": 0.49329999999999996,
+      "GWP": 0.8332999999999999,
+      "OGWP": 0.49219999999999997
+    }
+  ]
+}
