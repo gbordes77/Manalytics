@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manalytics - File Discovery Process</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2d3436;
+            color: #dfe6e9;
+        }
+        .header {
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .code-section {
+            background: #1e272e;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 4px solid #6c5ce7;
+        }
+        .step-number {
+            display: inline-block;
+            background: #6c5ce7;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        pre {
+            background: #0d1117;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .highlight {
+            background: #feca57;
+            color: #2d3436;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .comment {
+            color: #95afc0;
+            font-style: italic;
+        }
+        .string {
+            color: #55a3ff;
+        }
+        .keyword {
+            color: #ff6348;
+        }
+        .function {
+            color: #48dbfb;
+        }
+        .variable {
+            color: #feca57;
+        }
+        .flow-diagram {
+            background: #34495e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .arrow {
+            font-size: 24px;
+            color: #6c5ce7;
+            margin: 10px 0;
+        }
+        .file-tree {
+            background: #2c3e50;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            white-space: pre;
+        }
+        .found {
+            background: #27ae60;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .skipped {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .warning-box {
+            background: #f39c12;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .success-box {
+            background: #27ae60;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        h2 {
+            color: #a29bfe;
+            margin-top: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 Comment je trouve et filtre les fichiers</h1>
+        <p>Processus détaillé de découverte des fichiers Standard</p>
+    </div>
+
+    <div class="container">
+        <h2>📂 Vue d'ensemble: Où je cherche</h2>
+        
+        <div class="file-tree">
+data/
+├── raw/
+│   ├── mtgo/
+│   │   ├── <span class="highlight">standard/</span>          <span class="comment">← Je cherche ici pour MTGO Standard</span>
+│   │   │   ├── challenge/
+│   │   │   ├── leagues/       <span class="skipped">← TOUJOURS IGNORÉ</span>
+│   │   │   └── *.json
+│   │   ├── modern/            <span class="comment">← Ignoré si format=standard</span>
+│   │   ├── legacy/            <span class="comment">← Ignoré si format=standard</span>
+│   │   └── vintage/           <span class="comment">← Ignoré si format=standard</span>
+│   └── melee/
+│       └── <span class="highlight">standard/</span>      <span class="comment">← Je cherche ici pour Melee Standard</span>
+│
+└── cache/
+    ├── tournaments.db         <span class="comment">← WHERE format='standard'</span>
+    └── decklists/
+        └── 2025-07.json       <span class="comment">← Filtré par tournament_id</span>
+        </div>
+
+        <h2>🔍 Processus de découverte étape par étape</h2>
+
+        <div class="code-section">
+            <h3><span class="step-number">1</span> Cache Processor - Trouver les nouveaux tournois</h3>
+            <pre><code><span class="keyword">def</span> <span class="function">_find_new_tournaments</span>(self):
+    <span class="variable">new_files</span> = []
+    
+    <span class="comment"># Check MTGO tournaments</span>
+    <span class="variable">mtgo_dir</span> = Path(<span class="string">"data/raw/mtgo"</span>)
+    
+    <span class="keyword">for</span> <span class="variable">format_dir</span> <span class="keyword">in</span> mtgo_dir.<span class="function">iterdir</span>():
+        <span class="comment"># format_dir = "standard", "modern", etc.</span>
+        <span class="keyword">if</span> format_dir.<span class="function">is_dir</span>():
+            
+            <span class="comment"># Parcourir le dossier principal</span>
+            <span class="keyword">for</span> <span class="variable">json_file</span> <span class="keyword">in</span> format_dir.<span class="function">glob</span>(<span class="string">"*.json"</span>):
+                <span class="keyword">if</span> <span class="string">"league"</span> <span class="keyword">in</span> json_file.name.<span class="function">lower</span>():
+                    <span class="highlight">continue</span>  <span class="comment"># SKIP LEAGUES!</span>
+                
+                <span class="keyword">if</span> <span class="keyword">not</span> self.<span class="function">_is_processed</span>(json_file):
+                    new_files.<span class="function">append</span>(json_file)
+            
+            <span class="comment"># Parcourir les sous-dossiers</span>
+            <span class="keyword">for</span> <span class="variable">subdir</span> <span class="keyword">in</span> format_dir.<span class="function">iterdir</span>():
+                <span class="keyword">if</span> subdir.name.<span class="function">lower</span>() == <span class="string">"leagues"</span>:
+                    <span class="highlight">continue</span>  <span class="comment"># SKIP ENTIRE LEAGUES FOLDER!</span>
+                
+                <span class="keyword">for</span> <span class="variable">json_file</span> <span class="keyword">in</span> subdir.<span class="function">glob</span>(<span class="string">"*.json"</span>):
+                    <span class="keyword">if</span> <span class="keyword">not</span> self.<span class="function">_is_processed</span>(json_file):
+                        new_files.<span class="function">append</span>(json_file)</code></pre>
+        </div>
+
+        <div class="grid">
+            <div class="code-section">
+                <h3>✅ Fichiers que je PRENDS</h3>
+                <pre><code><span class="found">✓</span> standard-challenge-32-12801234.json
+<span class="found">✓</span> standard-challenge-64-12801235.json  
+<span class="found">✓</span> standard-qualifier-12801236.json
+<span class="found">✓</span> 2025-07-01_TournamentName.json
+<span class="found">✓</span> challenge/any_challenge.json</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h3>❌ Fichiers que j'IGNORE</h3>
+                <pre><code><span class="skipped">✗</span> standard-league-12801237.json
+<span class="skipped">✗</span> leagues/anything.json
+<span class="skipped">✗</span> modern/any_file.json (si format=standard)
+<span class="skipped">✗</span> legacy/any_file.json (si format=standard)</code></pre>
+            </div>
+        </div>
+
+        <h2>🎯 Filtrage par format Standard</h2>
+
+        <div class="code-section">
+            <h3><span class="step-number">2</span> Lecture depuis le Cache</h3>
+            <pre><code><span class="comment"># CacheReader - get_meta_snapshot</span>
+<span class="keyword">def</span> <span class="function">get_meta_snapshot</span>(self, <span class="variable">format</span>: str):
+    <span class="comment"># Query SQLite avec filtre format</span>
+    <span class="variable">tournaments</span> = self.db.<span class="function">get_tournaments_by_format</span>(<span class="highlight">"standard"</span>)
+    
+    <span class="comment"># SQL généré:</span>
+    <span class="string">"""
+    SELECT * FROM tournaments 
+    WHERE format = 'standard' 
+    AND type != 'league'
+    ORDER BY date DESC
+    """</span></code></pre>
+        </div>
+
+        <div class="flow-diagram">
+            <h3>Flux de filtrage complet</h3>
+            <div style="font-size: 18px;">
+                📁 Tous les fichiers
+                <div class="arrow">↓</div>
+                🔍 Filtre 1: Bon dossier? (standard/)
+                <div class="arrow">↓</div>
+                🚫 Filtre 2: Pas une league?
+                <div class="arrow">↓</div>
+                📅 Filtre 3: Pas déjà processé?
+                <div class="arrow">↓</div>
+                ✅ Fichier accepté pour processing!
+            </div>
+        </div>
+
+        <h2>🔄 Exemple concret: Processing d'une journée</h2>
+
+        <div class="code-section">
+            <h3>Simulation du 1er Juillet 2025</h3>
+            <pre><code><span class="comment"># 07:00 - Le scraper a tourné cette nuit</span>
+<span class="comment"># Nouveaux fichiers dans data/raw/mtgo/standard/:</span>
+
+2025-07-01_standard-challenge-32-12801234.json  <span class="found">← NOUVEAU</span>
+2025-07-01_standard-challenge-64-12801235.json  <span class="found">← NOUVEAU</span>
+2025-07-01_standard-league-12801237.json        <span class="skipped">← LEAGUE!</span>
+
+<span class="comment"># 07:05 - Je lance process_all_standard_data.py</span>
+
+<span class="variable">processor</span> = <span class="function">CacheProcessor</span>()
+<span class="variable">new_files</span> = processor.<span class="function">_find_new_tournaments</span>()
+
+<span class="comment"># Résultat:</span>
+[
+    Path(<span class="string">"data/raw/mtgo/standard/2025-07-01_standard-challenge-32-12801234.json"</span>),
+    Path(<span class="string">"data/raw/mtgo/standard/2025-07-01_standard-challenge-64-12801235.json"</span>)
+]
+<span class="comment"># La league est IGNORÉE!</span></code></pre>
+        </div>
+
+        <div class="warning-box">
+            ⚠️ PROTECTION LEAGUES: Le système a TROIS niveaux de protection contre les leagues:
+            <ol>
+                <li>Nom de fichier contient "league" → SKIP</li>
+                <li>Dossier nommé "leagues" → SKIP TOUT LE DOSSIER</li>
+                <li>Type dans la DB = "league" → Filtré dans les queries</li>
+            </ol>
+        </div>
+
+        <h2>🔍 Recherche dans le cache existant</h2>
+
+        <div class="code-section">
+            <h3><span class="step-number">3</span> Chargement des decklists par format</h3>
+            <pre><code><span class="keyword">def</span> <span class="function">load_decklists</span>(self, <span class="variable">tournament_ids</span>: List[str] = None):
+    <span class="comment"># D'abord, je récupère les IDs des tournois Standard</span>
+    <span class="variable">tournaments</span> = self.db.<span class="function">get_tournaments_by_format</span>(<span class="string">"standard"</span>)
+    <span class="variable">standard_ids</span> = [t.id <span class="keyword">for</span> t <span class="keyword">in</span> tournaments]
+    
+    <span class="comment"># Puis je charge les JSON du mois</span>
+    <span class="variable">monthly_file</span> = Path(<span class="string">"data/cache/decklists/2025-07.json"</span>)
+    
+    <span class="keyword">with</span> <span class="function">open</span>(monthly_file) <span class="keyword">as</span> f:
+        <span class="variable">all_decklists</span> = json.<span class="function">load</span>(f)
+    
+    <span class="comment"># Je filtre par tournament_id</span>
+    <span class="variable">standard_decklists</span> = []
+    <span class="keyword">for</span> <span class="variable">tid</span> <span class="keyword">in</span> standard_ids:
+        <span class="keyword">if</span> tid <span class="keyword">in</span> all_decklists:
+            standard_decklists.<span class="function">extend</span>(all_decklists[tid][<span class="string">'decklists'</span>])</code></pre>
+        </div>
+
+        <div class="success-box">
+            ✅ <strong>Résultat final:</strong> Seuls les tournois Standard (sans leagues) sont chargés!
+            <br><br>
+            Exemple pour Juillet 2025:
+            <ul>
+                <li>53 tournois MTGO trouvés → 47 Standard challenges/qualifiers processés</li>
+                <li>14 tournois Melee trouvés → 14 Standard tournaments processés</li>
+                <li>6 leagues ignorées automatiquement</li>
+            </ul>
+        </div>
+
+        <h2>🎮 Intégration future: Listener files</h2>
+
+        <div class="code-section">
+            <h3>Comment je vais parcourir les matchs du Listener</h3>
+            <pre><code><span class="keyword">def</span> <span class="function">get_standard_matches</span>(self, <span class="variable">date_range</span>):
+    <span class="variable">matches</span> = []
+    <span class="variable">listener_dir</span> = Path(<span class="string">"data/listener/daily_jsons"</span>)
+    
+    <span class="comment"># Pour chaque jour dans la range</span>
+    <span class="keyword">for</span> <span class="variable">day_folder</span> <span class="keyword">in</span> listener_dir.<span class="function">iterdir</span>():
+        <span class="keyword">if</span> <span class="keyword">not</span> <span class="function">_in_date_range</span>(day_folder.name, date_range):
+            <span class="keyword">continue</span>
+        
+        <span class="comment"># Pour chaque match ce jour-là</span>
+        <span class="keyword">for</span> <span class="variable">match_file</span> <span class="keyword">in</span> day_folder.<span class="function">glob</span>(<span class="string">"match_*.json"</span>):
+            <span class="keyword">with</span> <span class="function">open</span>(match_file) <span class="keyword">as</span> f:
+                <span class="variable">match</span> = json.<span class="function">load</span>(f)
+            
+            <span class="comment"># FILTRE: Format Standard uniquement</span>
+            <span class="keyword">if</span> match[<span class="string">'format'</span>] == <span class="highlight">'standard'</span>:
+                matches.<span class="function">append</span>(match)
+    
+    <span class="keyword">return</span> matches</code></pre>
+        </div>
+
+        <h2>📊 Résumé: Les 3 sources de données</h2>
+
+        <div class="grid">
+            <div class="code-section">
+                <h3>1. Raw Scrapers</h3>
+                <ul>
+                    <li>✅ Filtré par dossier format</li>
+                    <li>✅ Leagues exclues par nom</li>
+                    <li>✅ Stocké avec format tag</li>
+                </ul>
+            </div>
+            
+            <div class="code-section">
+                <h3>2. Cache System</h3>
+                <ul>
+                    <li>✅ SQLite WHERE format='standard'</li>
+                    <li>✅ JSON filtré par tournament_id</li>
+                    <li>✅ Queries excluent type='league'</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="code-section" style="margin-top: 20px;">
+            <h3>3. Listener Data (Future)</h3>
+            <ul>
+                <li>🔄 Filtré par match['format']</li>
+                <li>🔄 Lié aux tournament_ids</li>
+                <li>🔄 Merge avec nos archétypes</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

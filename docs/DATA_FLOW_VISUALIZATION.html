@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manalytics - Data Flow Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .mermaid {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #fffae6;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .file-structure {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            white-space: pre;
+        }
+        .flow-step {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+        .json-example {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .json-key { color: #e06c75; }
+        .json-string { color: #98c379; }
+        .json-number { color: #d19a66; }
+        .tab-container {
+            margin: 20px 0;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .tab-button.active {
+            background: #667eea;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 0 8px 8px 8px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 Manalytics - Comment je traite les données</h1>
+        <p>Visualisation complète du flux de données et de l'intégration avec Jiliac's Listener</p>
+    </div>
+
+    <div class="container">
+        <!-- Section 1: Vue d'ensemble -->
+        <div class="section">
+            <h2>📊 Vue d'ensemble du flux de données</h2>
+            
+            <div class="mermaid">
+            graph TB
+                subgraph "Sources de Données"
+                    A[MTGO Scraper<br/>Tournaments officiels] 
+                    B[Melee Scraper<br/>Tournaments communautaires]
+                    C[Jiliac Listener<br/>Matchups round-par-round]
+                end
+                
+                subgraph "Stockage Raw"
+                    D[data/raw/mtgo/standard/]
+                    E[data/raw/melee/standard/]
+                    F[data/listener/daily_jsons/]
+                end
+                
+                subgraph "Cache Processing"
+                    G[Cache Processor<br/>src/cache/processor.py]
+                    H[SQLite Metadata<br/>tournaments.db]
+                    I[JSON Decklists<br/>data/cache/decklists/]
+                    J[Archetype Summaries<br/>data/cache/archetypes/]
+                end
+                
+                subgraph "Analysis & Viz"
+                    K[Meta Analyzer]
+                    L[Matchup Calculator]
+                    M[Visualizations HTML]
+                end
+                
+                A --> D
+                B --> E
+                C --> F
+                
+                D --> G
+                E --> G
+                F --> L
+                
+                G --> H
+                G --> I
+                G --> J
+                
+                H --> K
+                I --> K
+                J --> K
+                F --> L
+                
+                K --> M
+                L --> M
+                
+                style C fill:#ff6b6b,stroke:#c92a2a,stroke-width:3px
+                style F fill:#ff6b6b,stroke:#c92a2a,stroke-width:3px
+                style L fill:#ff6b6b,stroke:#c92a2a,stroke-width:3px
+            </div>
+            
+            <div class="warning">
+                <strong>⚠️ Point Important:</strong> Les données de Jiliac's Listener (en rouge) ne passent PAS par notre cache system. 
+                Elles sont utilisées directement pour les calculs de matchups car elles contiennent des infos round-par-round 
+                que nos scrapers n'ont pas.
+            </div>
+        </div>
+
+        <!-- Section 2: Structure des dossiers -->
+        <div class="section">
+            <h2>📁 Structure détaillée des dossiers</h2>
+            
+            <div class="file-structure">data/
+├── raw/                          <span style="color: #74b9ff;">← Données brutes des scrapers</span>
+│   ├── mtgo/
+│   │   ├── standard/
+│   │   │   ├── challenge/        <span style="color: #a29bfe;">← Challenges (32+ joueurs)</span>
+│   │   │   │   ├── 2025-07-01_standard-challenge-32-12801234.json
+│   │   │   │   ├── 2025-07-02_standard-challenge-64-12801235.json
+│   │   │   │   └── ...
+│   │   │   ├── leagues/          <span style="color: #e17055;">← IGNORÉ! (5-0 filtrés)</span>
+│   │   │   └── *.json            <span style="color: #a29bfe;">← Qualifiers, etc.</span>
+│   │   └── modern/               <span style="color: #636e72;">← Autres formats</span>
+│   └── melee/
+│       └── standard/
+│           ├── 2025-07-15_Tournament_Name.json
+│           └── ...
+│
+├── cache/                        <span style="color: #74b9ff;">← Données processées</span>
+│   ├── tournaments.db            <span style="color: #fdcb6e;">← SQLite metadata</span>
+│   ├── decklists/
+│   │   └── 2025-07.json         <span style="color: #55a3ff;">← Decklists par mois</span>
+│   └── archetypes/
+│       └── 2025-07.json         <span style="color: #55a3ff;">← Résumés par tournoi</span>
+│
+└── listener/                     <span style="color: #ff6b6b;">← Données Jiliac (NOUVEAU!)</span>
+    └── daily_jsons/
+        ├── 2025-07-01/
+        │   ├── match_12345.json  <span style="color: #ff7675;">← Un match</span>
+        │   ├── match_12346.json
+        │   └── ...
+        ├── 2025-07-02/
+        └── ...</div>
+        </div>
+
+        <!-- Section 3: Comment je filtre par format -->
+        <div class="section">
+            <h2>🎯 Comment je filtre pour le Standard</h2>
+            
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="showTab('scraper-filter')">Filtrage Scrapers</button>
+                    <button class="tab-button" onclick="showTab('cache-filter')">Filtrage Cache</button>
+                    <button class="tab-button" onclick="showTab('listener-filter')">Filtrage Listener</button>
+                </div>
+                
+                <div id="scraper-filter" class="tab-content active">
+                    <h3>1. Au niveau des Scrapers</h3>
+                    <div class="code-block">
+# scrape_all_platforms.py
+def scrape_all(format='<span class="highlight">standard</span>', days=7):
+    # MTGO
+    mtgo_scraper.scrape(
+        format='<span class="highlight">standard</span>',
+        output_dir='data/raw/mtgo/<span class="highlight">standard</span>/'
+    )
+    
+    # Melee  
+    melee_scraper.scrape(
+        format_id=<span class="highlight">STANDARD_ID</span>,
+        output_dir='data/raw/melee/<span class="highlight">standard</span>/'
+    )
+                    </div>
+                </div>
+                
+                <div id="cache-filter" class="tab-content">
+                    <h3>2. Au niveau du Cache Processor</h3>
+                    <div class="code-block">
+# src/cache/processor.py
+def process_all_new(self):
+    # Je parcours TOUS les dossiers
+    for format_dir in ['standard', 'modern', 'legacy']:
+        for json_file in format_dir.glob("*.json"):
+            # MAIS je filtre les leagues
+            if <span class="highlight">"league" in json_file.name.lower()</span>:
+                logger.warning(f"⚠️ SKIPPING LEAGUE: {json_file.name}")
+                continue
+            
+            # Je stocke le format dans la DB
+            tournament = CachedTournament(
+                format=<span class="highlight">format_dir.name</span>,  # 'standard'
+                ...
+            )
+                    </div>
+                </div>
+                
+                <div id="listener-filter" class="tab-content">
+                    <h3>3. Au niveau du Listener (FUTUR)</h3>
+                    <div class="code-block">
+# src/listener/reader.py (À CRÉER)
+def get_matches_for_format(format='standard', date_range=None):
+    matches = []
+    
+    for day_folder in Path('data/listener/daily_jsons').iterdir():
+        for match_file in day_folder.glob('match_*.json'):
+            match_data = json.load(match_file)
+            
+            # Filtrage par format
+            if match_data.get('format') == <span class="highlight">format</span>:
+                matches.append(match_data)
+    
+    return matches
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Processing Pipeline -->
+        <div class="section">
+            <h2>⚙️ Pipeline de Processing Détaillé</h2>
+            
+            <div class="flow-step">
+                <h3>Step 1: Lecture des Tournois Raw</h3>
+                <div class="json-example">
+{
+    <span class="json-key">"tournament_id"</span>: <span class="json-string">"standard-challenge-32-12801234"</span>,
+    <span class="json-key">"format"</span>: <span class="json-string">"standard"</span>,
+    <span class="json-key">"date"</span>: <span class="json-string">"2025-07-01"</span>,
+    <span class="json-key">"decks"</span>: [
+        {
+            <span class="json-key">"player"</span>: <span class="json-string">"PlayerName"</span>,
+            <span class="json-key">"rank"</span>: <span class="json-number">1</span>,
+            <span class="json-key">"mainboard"</span>: [...],
+            <span class="json-key">"sideboard"</span>: [...]
+        }
+    ]
+}
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <h3>Step 2: Détection d'Archétypes</h3>
+                <div class="code-block">
+# Pour chaque deck:
+1. Color Detection → "UR" (Blue/Red)
+2. Archetype Rules → Cherche "Cauldron" dans les cartes
+3. Result → "UR Cauldron" → "Izzet Cauldron"
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <h3>Step 3: Stockage dans le Cache</h3>
+                <div class="mermaid">
+                graph LR
+                    A[Tournament JSON] --> B[Cache Processor]
+                    B --> C[SQLite: Metadata]
+                    B --> D[JSON: Decklists complètes]
+                    B --> E[JSON: Résumés archétypes]
+                    
+                    C --> F[tournaments.db<br/>id, date, format, players]
+                    D --> G[2025-07.json<br/>Toutes les cartes]
+                    E --> H[2025-07.json<br/>Compteurs par archétype]
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <h3>Step 4: Agrégation pour Analyse</h3>
+                <div class="code-block">
+# reader.get_meta_snapshot('standard')
+1. Load tournaments WHERE format='standard' AND type!='league'
+2. Pour chaque tournoi → Load archetype counts
+3. Aggregate: 
+   - Izzet Cauldron: 240 decks
+   - Dimir Midrange: 198 decks
+   - etc.
+4. Calculate percentages
+5. Return snapshot
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Intégration Listener -->
+        <div class="section">
+            <h2>🔴 Intégration Future: Jiliac's Listener</h2>
+            
+            <div class="warning">
+                <strong>🚧 EN DÉVELOPPEMENT</strong> - Cette partie n'est pas encore implémentée
+            </div>
+            
+            <h3>Structure d'un match Listener:</h3>
+            <div class="json-example">
+{
+    <span class="json-key">"match_id"</span>: <span class="json-string">"12345"</span>,
+    <span class="json-key">"tournament_id"</span>: <span class="json-string">"standard-challenge-32-12801234"</span>,
+    <span class="json-key">"format"</span>: <span class="json-string">"standard"</span>,
+    <span class="json-key">"date"</span>: <span class="json-string">"2025-07-01T14:30:00Z"</span>,
+    <span class="json-key">"round"</span>: <span class="json-number">3</span>,
+    <span class="json-key">"player1"</span>: {
+        <span class="json-key">"name"</span>: <span class="json-string">"Alice"</span>,
+        <span class="json-key">"archetype"</span>: <span class="json-string">"Izzet Cauldron"</span>,
+        <span class="json-key">"deck_id"</span>: <span class="json-string">"abc123"</span>
+    },
+    <span class="json-key">"player2"</span>: {
+        <span class="json-key">"name"</span>: <span class="json-string">"Bob"</span>,
+        <span class="json-key">"archetype"</span>: <span class="json-string">"Dimir Midrange"</span>,
+        <span class="json-key">"deck_id"</span>: <span class="json-string">"def456"</span>
+    },
+    <span class="json-key">"result"</span>: {
+        <span class="json-key">"winner"</span>: <span class="json-string">"player1"</span>,
+        <span class="json-key">"games"</span>: [<span class="json-number">2</span>, <span class="json-number">1</span>]
+    }
+}
+            </div>
+            
+            <h3>Comment je vais merger les données:</h3>
+            <div class="mermaid">
+            graph TB
+                subgraph "Nos Données"
+                    A[Tournament Metadata<br/>Date, Format, Joueurs]
+                    B[Decklists Complètes<br/>60+15 cartes]
+                    C[Archétypes Détectés<br/>Izzet Cauldron, etc.]
+                end
+                
+                subgraph "Données Listener"
+                    D[Match Results<br/>Round par round]
+                    E[Archetype vs Archetype<br/>Qui bat qui]
+                end
+                
+                subgraph "Merge"
+                    F[Match deck_id → Notre deck]
+                    G[Validate archetype match]
+                    H[Build Matchup Matrix]
+                end
+                
+                A --> F
+                B --> F
+                C --> G
+                D --> F
+                E --> G
+                
+                F --> H
+                G --> H
+                
+                H --> I[Heatmap Matchups<br/>Win rates réels!]
+                
+                style D fill:#ff6b6b
+                style E fill:#ff6b6b
+                style I fill:#55a3ff
+            </div>
+        </div>
+
+        <!-- Section 6: Exemple Complet -->
+        <div class="section">
+            <h2>🎬 Exemple Complet: Un Tournoi Standard</h2>
+            
+            <div class="flow-step">
+                <h3>1️⃣ Scraping (07:00 AM)</h3>
+                <div class="success">
+                    ✅ MTGO Scraper trouve "standard-challenge-32-12801234"<br>
+                    ✅ Sauvegarde dans: <code>data/raw/mtgo/standard/challenge/2025-07-01_standard-challenge-32-12801234.json</code>
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <h3>2️⃣ Processing (07:05 AM)</h3>
+                <div class="success">
+                    ✅ Cache Processor lit le fichier<br>
+                    ✅ Détecte 32 decks, identifie les archétypes<br>
+                    ✅ Stocke dans cache: metadata → SQLite, decklists → JSON
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <h3>3️⃣ Listener Data (Throughout the day)</h3>
+                <div class="warning">
+                    🔄 Jiliac's Listener capture les matchs en temps réel<br>
+                    🔄 Stocke dans: <code>data/listener/daily_jsons/2025-07-01/match_*.json</code>
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <h3>4️⃣ Analysis (On demand)</h3>
+                <div class="success">
+                    ✅ Load meta snapshot → 32 decks, 8 Izzet Cauldron (25%)<br>
+                    ✅ Load listener matches → Izzet vs Dimir: 12-8 (60% WR)<br>
+                    ✅ Generate visualization → Beautiful charts!
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7: Points Clés -->
+        <div class="section">
+            <h2>💡 Points Clés à Retenir</h2>
+            
+            <ol style="font-size: 1.1em; line-height: 1.8;">
+                <li><strong>Filtrage Format:</strong> Se fait à CHAQUE étape (scraping, processing, analysis)</li>
+                <li><strong>Exclusion Leagues:</strong> Les leagues sont TOUJOURS ignorées (dossier séparé ou nom de fichier)</li>
+                <li><strong>Cache System:</strong> Optimisé pour lecture rapide (SQLite metadata + JSON details)</li>
+                <li><strong>Listener Integration:</strong> Données séparées, merge au moment de l'analyse</li>
+                <li><strong>Monthly Partitioning:</strong> Les données sont organisées par mois pour performance</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+
+        function showTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
