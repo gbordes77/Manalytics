@@ -134,75 +134,53 @@ FastAPI → Frontend/Rapports
 
 C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The Gathering !
 
-## **🚀 État Actuel (26/07/2025)**
+## **🚀 État Actuel (27/07/2025)**
 
-### 🎮 PHASE 4 PLANIFIÉE : MTGO Listener
-**Objectif** : Capturer les données de matchups round-par-round en temps réel
+### ✅ Phase 3 COMPLÈTE : Architecture & Documentation
+- **Architecture modulaire** : Code réorganisé dans `src/manalytics/` (aligné avec Jiliac)
+- **Visualisation de référence** : `data/cache/standard_analysis_no_leagues.html` 
+- **Quick launcher** : `python3 visualize_standard.py` pour accès rapide
+- **Documentation complète** : 15+ guides créés pour les équipes futures
+- **Nettoyage scripts** : De 54 → 29 scripts (archivés dans `_archive_2025_07_27/`)
+
+### 📋 PHASE 4 PLANIFIÉE : MTGO Listener 
+**Objectif** : Capturer les données de matchups round-par-round
 - Basé sur [MTGO-listener](https://github.com/Jiliac/MTGO-listener)
-- Utilise [MTGOSDK](https://github.com/videre-project/MTGOSDK)
-- Capture : qui joue contre qui, résultats de chaque round
-- Permettra ENFIN de créer une vraie matrice de matchups statistique
-- Sans ça, "ce projet ne sert plus à grand chose" - ON VA LE FAIRE!
+- Permettra de créer une vraie matrice de matchups
+- PRIORITÉ ABSOLUE pour dépasser Jiliac
 
-### ✅ Phase 1 COMPLÈTE : Collection de Données
-- **Scrapers avec decklists complètes** - MTGO (enhanced) + Melee (Records field)
-- **Juillet 2025 scrapé** - 53 tournois MTGO + 14 Melee = ~1346 decklists
-- **Correction du problème initial** : Les scrapers récupèrent maintenant les decklists complètes (mainboard + sideboard)
+### ✅ Phase 2 COMPLÈTE : Cache System
+- Cache SQLite pour metadata + JSON pour decklists
+- Parser d'archétypes : 44 règles Standard
+- Performance : <500ms par tournoi
 
-### ✅ Phase 2 COMPLÈTE : Pipeline de Traitement
-- **Cache SQLite** : Metadata + JSON decklists storage
-- **Parser d'archétypes** : 44 règles Standard intégrées (basé sur MTGOArchetypeParser)
-- **Détecteur de couleurs** : 28,000+ cartes database (card_colors.json)
-- **Performance** : <500ms par tournoi
-- **Visualisations** : Charts interactifs avec noms complets (Izzet, Naya, etc.)
+### ✅ Phase 1 COMPLÈTE : Scrapers
+- MTGO + Melee avec decklists complètes
 
-### 🚀 Phase 3 EN COURS : Visualisations Avancées & Insights Compétitifs
-
-**⚠️ LIMITATION CRITIQUE DÉCOUVERTE (26/07/2025)** :
-- Nous n'avons que les données Top 8 (brackets) - PAS les matchups round-par-round
-- Sans matrice de matchups, le projet perd son avantage compétitif principal
-- Solution : Implémenter notre propre MTGO Listener
-**Réalisations Phase 3 :**
-- ✅ **Visualisation Plotly** : `data/cache/standard_analysis_no_leagues.html` - Graphiques interactifs complets
-- ✅ **Pourcentages précis** : Calcul des VRAIS pourcentages sur le total (pas juste le top 10)
-- ✅ **Timeline évolution** : Graphique d'évolution du métagame sur 30 jours
-- ✅ **Export CSV** : Bouton d'export des données pour analyse externe
-- ✅ **Table complète** : Affichage des 70 archétypes avec indicateurs de tendance
-- ✅ **Header moderne** : Design avec gradient purple et cartes de stats cliquables
-- ✅ **Mobile responsive** : Fonctionne parfaitement sur téléphone pendant les tournois
-- ✅ **MTG Color Gradients** : Gradients respectant l'identité des couleurs MTG (mono et multi-couleurs)
-- ✅ **Analyse par Matches** : Méthodologie alignée avec les standards communautaires (Jiliac)
-- ✅ **Exclusion Tournois Fun** : Filtrage automatique des tournois casual (Mosh Pit, Creative, etc.)
-
-**En développement (autonomie créative) :**
-1. **MTGO LISTENER (PRIORITÉ ABSOLUE)** - Capture temps réel des matchups round-par-round
-2. **Dashboard temps réel** - Métagame evolution avec WebSockets
-3. **Heatmap de matchups** - Win rates entre archétypes (DÉPEND DU LISTENER)
-4. **Innovation Detector** - Détection automatique des tech choices émergentes
-5. **Consensus Deck Generator** - LA liste optimale générée par ML
-6. **Sideboard Intelligence** - Patterns et suggestions automatiques
-
-**Documentation Phase 3** :
-  - `docs/PHASE3_VISUALIZATIONS_ROADMAP.md` - 30+ visualisations planifiées
-  - `docs/CONSENSUS_DECK_GENERATOR.md` - Feature unique : génération automatique de LA liste optimale
-  - `docs/INNOVATION_DETECTOR_CONCEPT.md` - Détection des tech choices émergentes
-  - `docs/DECK_COMPARISON_FEATURE.md` - Comparaison visuelle multi-listes
-  - `docs/SIDEBOARD_GUIDE_MATRIX_EXAMPLE.md` - Guide sideboard interactif
-  - `docs/PROJECT_SUMMARY_DIFFERENTIATORS.md` - Nos avantages concurrentiels
-
-## **📁 Structure des Données**
+## **📁 Structure du Projet**
 ```
-data/
-├── raw/
-│   ├── mtgo/
-│   │   ├── standard/
-│   │   │   ├── challenge/   # 26 challenges avec IDs uniques
-│   │   │   └── *.json       # 1 RC Qualifier
-│   │   └── modern/          # À scraper
-│   └── melee/
-│       └── standard/        # Tournois Melee
-│           └── leagues/     # Leagues stockées séparément
-└── processed/               # Non utilisé actuellement
+manalytics/
+├── src/manalytics/        # CODE PRINCIPAL (organisé)
+│   ├── scrapers/          # MTGO & Melee 
+│   ├── parsers/           # Détection archétypes
+│   ├── cache/             # System de cache
+│   ├── analyzers/         # Analyses meta
+│   ├── visualizers/       # Génération charts
+│   ├── pipeline/          # Orchestration
+│   └── api/               # FastAPI
+├── data/
+│   ├── raw/               # Données brutes
+│   │   ├── mtgo/standard/ # ⚠️ Exclut leagues/
+│   │   └── melee/standard/
+│   └── cache/             # Données processées
+│       └── standard_analysis_no_leagues.html  # 🎨 VISUALISATION DE RÉFÉRENCE
+├── scripts/               # Utilitaires one-shot (29 scripts)
+│   └── _archive_2025_07_27/  # Anciens scripts (54 archivés)
+├── docs/                  # DOCUMENTATION COMPLÈTE
+│   ├── PROJECT_COMPLETE_DOCUMENTATION.md  # 🎯 LIRE EN PREMIER
+│   ├── DATA_FLOW_VISUALIZATION.html      # Flux interactif
+│   └── FILE_DISCOVERY_PROCESS.html       # Comment on trouve les fichiers
+└── visualize_standard.py  # 🚀 LANCEUR RAPIDE
 ```
 
 ## **🔧 Architecture Moderne (25/07/2025)**
@@ -212,78 +190,49 @@ data/
 - **Configuration** : `.env` + `src/manalytics/config.py`
 - **Structure** : 100% professionnelle dans `src/manalytics/`
 
-## **📊 État Actuel du Métagame Standard (July 1-20, 2025) - Tournois Compétitifs**
+## **📊 Période d'Analyse OBLIGATOIRE : 1-21 Juillet 2025**
 ```
-Méthodologie: Basée sur le nombre de MATCHES (pas de decks), excluant les tournois fun/casual
-1. Dimir Midrange - 22.4% (1,197 matches)
-2. Izzet Cauldron - 21.9% (1,172 matches)  
-3. Mono White Caretaker - 6.1% (326 matches)
-4. Boros Convoke - 4.9% (260 matches)
-5. Golgari Midrange - 4.6% (247 matches)
+⚠️ TOUJOURS analyser du 1er au 21 juillet 2025
+🎯 Pour permettre la comparaison avec Jiliac
+🚫 JAMAIS au-delà du 21 juillet
 
-Total: 31 tournois compétitifs (6 exclus), 5,345 matches analysés
-Note: Aligné avec la méthodologie communautaire (Jiliac) - différence moyenne de 1.6%
+Méthodologie: Par MATCHES (pas par decks)
+Exclusions: Leagues + tournois casual/fun
 ```
 
-## **⚡ Commandes Utiles (NOUVEAU SYSTÈME)**
+## **⚡ Commandes Essentielles**
 ```bash
-# Installation complète
+# VISUALISATION RAPIDE (recommandé)
+python3 visualize_standard.py
+
+# ANALYSE JUILLET 1-21 (pour comparaison Jiliac)  
+python3 analyze_july_1_21.py
+
+# Pipeline complet
+manalytics scrape --format standard --days 21  # 1-21 juillet
+python3 scripts/process_all_standard_data.py   # Process cache
+python3 visualize_standard.py                  # Generate viz
+
+# Installation
 make install-dev
 
-# Vérifier le système
-manalytics status
-
-# Pipeline complet (scrape → parse → analyze → visualize)
-manalytics pipeline --format standard --days 7
-
-# Scraper seul
-manalytics scrape --format standard --platform all --days 7
-
-# Analyser les données existantes
-manalytics analyze --format standard
-
-# Lancer l'API
+# API
 manalytics serve
-
-# Ancienne méthode (si besoin)
-python3 scripts/scrape_all_platforms.py --format standard --days 7
-
-# Analyser les données existantes  
-python3 scripts/run_pipeline_with_existing_data.py --format standard --platform melee
-
-# Phase 2: Cache processing
-python3 scripts/process_all_standard_data.py
-
-# Phase 3: Visualisation Plotly (MANDATORY UNLESS CONTRARY REQUESTED)
-python3 scripts/create_archetype_visualization_plotly.py
-
-# Alternative: Visualisation Chart.js
-python3 scripts/create_archetype_visualization.py
-
-# Analyse style Jiliac (matches-based, competitive only)
-python3 scripts/analyze_competitive_only.py
-
-# Comparaison avec données Jiliac
-python3 scripts/analyze_like_jiliac.py
-
-# Investigation des différences
-python3 scripts/investigate_jiliac_differences.py
-
-# Statistiques du cache
-python3 scripts/show_cache_stats.py
-
-# Voir les données disponibles
-python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); print(dl.count_tournaments())"
 ```
 
-## **📚 Documentation Importante**
-- `docs/SCRAPING_BEST_PRACTICES.md` : **LEÇONS CRITIQUES** sur le scraping (notamment pourquoi on ne doit JAMAIS deviner les IDs MTGO)
-- **`docs/MELEE_SCRAPING_GUIDE.md`** : Guide complet du scraping Melee avec authentification
-- **`docs/MTGO_SCRAPING_GUIDE.md`** : Guide complet du scraping MTGO (pas d'auth requise)
-- **`docs/CACHE_SYSTEM_IMPLEMENTATION.md`** : Architecture complète du système de cache Phase 2
-- Les IDs MTGO ne sont PAS séquentiels - toujours parser la page de liste officielle
-- Les tournois du même jour ont des IDs complètement différents (écarts de 5, 10, 17...)
-- L'authentification Melee utilise des cookies valides 21 jours (pas de JWT)
+## **📚 Documentation Critique**
+
+### 🎯 À LIRE EN PREMIER
+- **`docs/PROJECT_COMPLETE_DOCUMENTATION.md`** - Guide complet pour les équipes
+- **`docs/VISUALIZATION_TEMPLATE_REFERENCE.md`** - Règles visuelles ABSOLUES
+- **`docs/DATA_FLOW_VISUALIZATION.html`** - Flux de données interactif
+- **`docs/FILE_DISCOVERY_PROCESS.html`** - Comment on trouve les fichiers
+
+### 🔧 Guides Techniques
+- `docs/MELEE_SCRAPING_GUIDE.md` - Scraping Melee avec auth
+- `docs/MTGO_SCRAPING_GUIDE.md` - Scraping MTGO
+- `docs/CACHE_SYSTEM_IMPLEMENTATION.md` - Architecture cache
+- `docs/JILIAC_R_ARCHITECTURE_ANALYSIS.md` - Comparaison avec Jiliac
 
 ## ⛔️ RÈGLES CRITIQUES DE SÉCURITÉ ⛔️
 
@@ -318,11 +267,24 @@ python3 -c "from src.utils.data_loader import DataLoader; dl = DataLoader(); pri
 2. **FORMAT PAR DÉFAUT = STANDARD** : Sauf contre-ordre explicite, toujours scraper le format Standard uniquement.
 3. **CONFIRMATION AVANT LANCEMENT** : Toujours confirmer la période et le format avant de lancer un scraping.
 
-## ⚠️ RÈGLE ABSOLUE : EXCLUSION DES LEAGUES
+## ⚠️ RÈGLES ABSOLUES
 
-**LES LEAGUES (5-0) SONT STOCKÉES DANS UN DOSSIER `leagues/` SÉPARÉ ET NE DOIVENT JAMAIS ÊTRE UTILISÉES DANS LES ANALYSES OU VISUALISATIONS.**
+### 1. EXCLUSION DES LEAGUES
+**LES LEAGUES (5-0) SONT TOUJOURS EXCLUES**
+- Stockées dans `leagues/` séparé
+- Triple protection dans le code
+- Ne représentent pas des tournois compétitifs
 
-Raison : Les leagues ne représentent pas des tournois compétitifs mais des résultats de ladder filtrés. Seuls les vrais tournois (challenges, qualifiers, etc.) doivent être analysés.
+### 2. PÉRIODE D'ANALYSE
+**TOUJOURS ANALYSER DU 1er AU 21 JUILLET 2025**
+- Pour comparaison avec Jiliac
+- Jamais au-delà du 21 juillet
+
+### 3. TEMPLATE VISUEL
+**UTILISER `standard_analysis_no_leagues.html` COMME RÉFÉRENCE**
+- Header gradient purple (#667eea → #764ba2)
+- Gradients MTG pour archétypes
+- Voir `docs/VISUALIZATION_TEMPLATE_REFERENCE.md`
 
 ## 🔴 RÈGLE ABSOLUE : AUTO-COMMIT APRÈS CHAQUE MODIFICATION
 
