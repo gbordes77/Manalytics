@@ -108,7 +108,8 @@ docs/audit/PROJECT_AUDIT.json
 test_*.py
 
 # HTML reports (should be in data/reports/)
-*.html
+data/reports/*.html
+!docs/*.html
 
 # Output files
 *_output.log

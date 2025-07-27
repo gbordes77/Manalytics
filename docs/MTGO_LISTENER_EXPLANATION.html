@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprendre le MTGO Listener - Manalytics</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f8c8d;
+        }
+        .schema-box {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .good {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .bad {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .option {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .example {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .arrow {
+            font-size: 24px;
+            color: #3498db;
+            margin: 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .mermaid {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Comprendre le MTGO Listener et les Données de Matchups</h1>
+        
+        <p><strong>Dernière mise à jour :</strong> 27 juillet 2025</p>
+        
+        <div class="example">
+            <strong>📌 Résumé en 1 phrase :</strong> Actuellement, nous savons QUI gagne les tournois, mais pas COMMENT ils les gagnent (qui bat qui, round par round).
+        </div>
+
+        <h2>📊 1. CE QU'ON FAIT ACTUELLEMENT</h2>
+        
+        <h3>Notre Pipeline Actuel</h3>
+        <div class="schema-box">
+MTGO.com <span class="arrow">→</span> Scraper <span class="arrow">→</span> Données Top 8 <span class="arrow">→</span> Analyse du Meta
+
+Exemple concret:
+1. On scrape un "Standard Challenge"
+2. On récupère les 8 finalistes + leurs decklists
+3. On dit "Dimir représente 25% du Top 8"
+        </div>
+
+        <h3>Ce qu'on obtient ✅</h3>
+        <table>
+            <tr>
+                <th>Information</th>
+                <th>Exemple</th>
+                <th>Utilité</th>
+            </tr>
+            <tr>
+                <td>Tournoi</td>
+                <td>Standard Challenge 64</td>
+                <td>Identifier l'événement</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>2025-07-01</td>
+                <td>Suivre l'évolution</td>
+            </tr>
+            <tr>
+                <td>Top 8 joueurs</td>
+                <td>SoulStrong, peter780108...</td>
+                <td>Qui a réussi</td>
+            </tr>
+            <tr>
+                <td>Decklists complètes</td>
+                <td>60 cartes main + 15 side</td>
+                <td>Analyser les listes</td>
+            </tr>
+            <tr>
+                <td>Archétypes</td>
+                <td>Dimir Midrange, Izzet Cauldron</td>
+                <td>Distribution du meta</td>
+            </tr>
+        </table>
+
+        <h3>Ce qui nous manque ❌</h3>
+        <div class="schema-box bad">
+<strong>AUCUNE DONNÉE SUR LES MATCHUPS !</strong>
+
+❌ Qui a joué contre qui en rounds 1-6
+❌ Les scores exacts (2-0, 2-1, etc.)
+❌ Quel deck bat quel deck
+❌ Les vrais win rates par matchup
+❌ Comment les joueurs sideboard
+        </div>
+
+        <h2>🔍 2. POURQUOI C'EST UN PROBLÈME</h2>
+
+        <div class="example">
+            <h3>Exemple Concret : Dimir vs Izzet</h3>
+            
+            <strong>Ce qu'on sait maintenant :</strong>
+            - Dimir : 30% du meta
+            - Izzet : 25% du meta
+            - Les deux sont populaires ✅
+            
+            <strong>Ce qu'on ne sait PAS :</strong>
+            - Dimir bat-il Izzet ? (55% ? 45% ? 70% ?)
+            - Sur combien de matches ?
+            - Comment évoluent les games post-sideboard ?
+            
+            <span class="highlight">Sans ces données, impossible de savoir quel deck choisir !</span>
+        </div>
+
+        <h2>🎮 3. QU'EST-CE QU'UN MTGO LISTENER ?</h2>
+
+        <div class="schema-box good">
+<strong>MTGO Listener = Programme qui "écoute" le client MTGO en temps réel</strong>
+
+Pendant qu'un tournoi se joue :
+1. Détecte chaque match qui commence
+2. Capture les pseudos des joueurs
+3. Enregistre le résultat à la fin
+4. Sauvegarde tout dans un JSON
+
+Client MTGO <span class="arrow">→</span> Listener <span class="arrow">→</span> Données Round-par-Round
+        </div>
+
+        <h3>Ce que capture le Listener</h3>
+        <div class="example">
+            <pre>{
+  "Tournament": "Standard Challenge 64",
+  "Rounds": [
+    {
+      "Round 1": [
+        {
+          "Player1": "fireshoes",      // Pseudo du joueur 1
+          "Player2": "peter780108",     // Pseudo du joueur 2
+          "Result": "0-2-0"             // fireshoes a perdu 0-2
+        },
+        {
+          "Player1": "SoulStrong",      
+          "Player2": "outZEROo",        
+          "Result": "2-0-0"             // SoulStrong a gagné 2-0
+        }
+        // ... tous les matches du round 1
+      ]
+    },
+    // Rounds 2, 3, 4, 5, 6...
+  ]
+}</pre>
+        </div>
+
+        <h2>🚀 4. LES DEUX OPTIONS PROPOSÉES</h2>
+
+        <div class="option">
+            <h3>📅 Option A : Attendre Notre Propre Listener (29 juillet+)</h3>
+            
+            <div class="schema-box">
+29 juillet : Installation du listener
+30 juillet : Début capture données
+1er août : Premières analyses matchups
+            
+<strong>Avantages :</strong>
+✅ Données 100% à nous
+✅ Contrôle total
+✅ Temps réel
+
+<strong>Inconvénients :</strong>
+❌ Pas de données historiques
+❌ Attendre pour les visualisations
+❌ Juillet 2025 perdu
+            </div>
+        </div>
+
+        <div class="option">
+            <h3>🎯 Option B : Exploiter les Données Jiliac MAINTENANT (Recommandé)</h3>
+            
+            <div class="schema-box">
+<strong>Jiliac nous a donné ses données listener de juillet !</strong>
+
+AUJOURD'HUI : Utiliser données Jiliac
+29 juillet : Installer notre listener
+RÉSULTAT : Historique + Futur couverts !
+
+<strong>Plan d'action immédiat :</strong>
+1. Matcher nos tournois avec ceux de Jiliac (même ID)
+2. Enrichir nos 67 tournois avec les vrais matchups
+3. Créer ENFIN la matrice de matchups
+4. Visualisations Plotly avancées cette semaine !
+            </div>
+        </div>
+
+        <h2>📈 5. CE QU'ON POURRA FAIRE AVEC LES DONNÉES MATCHUPS</h2>
+
+        <table>
+            <tr>
+                <th>Visualisation</th>
+                <th>Sans Listener (maintenant)</th>
+                <th>Avec Listener (bientôt)</th>
+            </tr>
+            <tr>
+                <td>Distribution Meta</td>
+                <td>✅ "Dimir = 30%"</td>
+                <td>✅ "Dimir = 30%"</td>
+            </tr>
+            <tr>
+                <td>Matrice Matchups</td>
+                <td>❌ Impossible</td>
+                <td>✅ "Dimir vs Izzet : 55% (47 matches)"</td>
+            </tr>
+            <tr>
+                <td>Sideboard Guide</td>
+                <td>❌ Devinettes</td>
+                <td>✅ "+3 Negate dans 85% des games"</td>
+            </tr>
+            <tr>
+                <td>Innovation Detector</td>
+                <td>❌ Trop tard</td>
+                <td>✅ "Nouvelle tech détectée Round 3"</td>
+            </tr>
+            <tr>
+                <td>Win Rate Réel</td>
+                <td>❌ Top 8 only</td>
+                <td>✅ "65% sur 234 matches totaux"</td>
+            </tr>
+        </table>
+
+        <h2>🎯 6. ARCHITECTURE PROPOSÉE</h2>
+
+        <div class="schema-box good">
+<strong>Structure de dossiers évolutive :</strong>
+
+data/
+├── raw/
+│   ├── mtgo/          # Nos scrapers actuels (Top 8)
+│   ├── melee/         # Idem
+│   └── matchups/      # <span class="highlight">NOUVEAU !</span>
+│       ├── jiliac/    # Données juillet 2025 (temp)
+│       └── listener/  # Notre listener (permanent)
+│
+├── processed/
+│   └── enriched/      # Tournois + Matchups fusionnés
+│
+└── cache/
+    └── matchup_matrix.json  # La fameuse matrice !
+        </div>
+
+        <h2>✅ 7. PROCHAINES ÉTAPES</h2>
+
+        <ol>
+            <li><strong>Immédiat :</strong> Analyser structure complète données Jiliac</li>
+            <li><strong>Aujourd'hui :</strong> Créer parser pour matcher tournois + matchups</li>
+            <li><strong>Cette semaine :</strong> Première matrice de matchups fonctionnelle</li>
+            <li><strong>29 juillet :</strong> Installer notre listener</li>
+            <li><strong>Août :</strong> Pipeline complet avec nos propres données</li>
+        </ol>
+
+        <div class="example">
+            <h3>🎉 Résultat Final</h3>
+            <p>Au lieu d'attendre août pour avoir des stats de matchups, on aura :</p>
+            <ul>
+                <li>✅ Matrice matchups juillet 2025 (données Jiliac)</li>
+                <li>✅ Visualisations avancées cette semaine</li>
+                <li>✅ Notre propre listener à partir du 29</li>
+                <li>✅ Continuité totale des données</li>
+            </ul>
+            
+            <p><strong>= Le meilleur des deux mondes ! 🚀</strong></p>
+        </div>
+    </div>
+</body>
+</html>
