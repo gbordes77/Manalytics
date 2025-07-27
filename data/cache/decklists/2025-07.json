@@ -1,0 +1,6640 @@
+{
+  "vintage-challenge-32-2025-07-2012803702": {
+    "tournament_id": "vintage-challenge-32-2025-07-2012803702",
+    "date": "2025-07-20T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-0312801629": {
+    "tournament_id": "vintage-challenge-32-2025-07-0312801629",
+    "date": "2025-07-03T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-1012802780": {
+    "tournament_id": "vintage-challenge-32-2025-07-1012802780",
+    "date": "2025-07-10T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-0612801668": {
+    "tournament_id": "vintage-challenge-32-2025-07-0612801668",
+    "date": "2025-07-06T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-0512801662": {
+    "tournament_id": "vintage-challenge-32-2025-07-0512801662",
+    "date": "2025-07-05T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-1112802806": {
+    "tournament_id": "vintage-challenge-32-2025-07-1112802806",
+    "date": "2025-07-11T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-1712803663": {
+    "tournament_id": "vintage-challenge-32-2025-07-1712803663",
+    "date": "2025-07-17T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-1212802820": {
+    "tournament_id": "vintage-challenge-32-2025-07-1212802820",
+    "date": "2025-07-12T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-1912803696": {
+    "tournament_id": "vintage-challenge-32-2025-07-1912803696",
+    "date": "2025-07-19T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-0412801650": {
+    "tournament_id": "vintage-challenge-32-2025-07-0412801650",
+    "date": "2025-07-04T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-2412804860": {
+    "tournament_id": "vintage-challenge-32-2025-07-2412804860",
+    "date": "2025-07-24T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-1312802829": {
+    "tournament_id": "vintage-challenge-32-2025-07-1312802829",
+    "date": "2025-07-13T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "vintage-challenge-32-2025-07-1812803684": {
+    "tournament_id": "vintage-challenge-32-2025-07-1812803684",
+    "date": "2025-07-18T00:00:00",
+    "format": "vintage",
+    "platform": "mtgo",
+    "decklists": []
+  },
+  "2025-07-02_TheGathering.gg Standard Post-BNR Celebration": {
+    "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+    "date": "2025-07-02T16:00:00+00:00",
+    "format": "standard",
+    "platform": "melee",
+    "decklists": [
+      {
+        "deck_id": "eb5724e1-3418-46c6-b4c0-b30d01337009",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+        "player": "nohrg",
+        "rank": 6,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "Boros Equipments",
+        "archetype": "Boros Aggro",
+        "colors": "WR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Kemba, Kha Enduring",
+            "count": 4
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 4
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 4
+          },
+          {
+            "name": "Emberheart Challenger",
+            "count": 2
+          },
+          {
+            "name": "Raubahn, Bull of Ala Mhigo",
+            "count": 4
+          },
+          {
+            "name": "Plains",
+            "count": 3
+          },
+          {
+            "name": "Dragonfire Blade",
+            "count": 4
+          },
+          {
+            "name": "Leyline Axe",
+            "count": 4
+          },
+          {
+            "name": "Lavaspur Boots",
+            "count": 1
+          },
+          {
+            "name": "Plaza of Heroes",
+            "count": 2
+          },
+          {
+            "name": "Kellan, the Fae-Blooded // Birthright Boon",
+            "count": 2
+          },
+          {
+            "name": "Chainsaw",
+            "count": 2
+          },
+          {
+            "name": "Cloud, Midgar Mercenary",
+            "count": 4
+          },
+          {
+            "name": "Blacksmith's Talent",
+            "count": 4
+          },
+          {
+            "name": "Monastery Swiftspear",
+            "count": 2
+          },
+          {
+            "name": "The Mycosynth Gardens",
+            "count": 2
+          },
+          {
+            "name": "Freya Crescent",
+            "count": 4
+          },
+          {
+            "name": "Sunbillow Verge",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Loran of the Third Path",
+            "count": 2
+          },
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 3
+          },
+          {
+            "name": "Surge of Salvation",
+            "count": 3
+          },
+          {
+            "name": "Rest in Peace",
+            "count": 3
+          },
+          {
+            "name": "Get Lost",
+            "count": 4
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.735367"
+      },
+      {
+        "deck_id": "b83b2fe7-a076-4ecc-b36b-b30e00ef7b58",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+        "player": "DarthZear166",
+        "rank": 1,
+        "wins": 3,
+        "losses": 1,
+        "deck_name": "Golgari",
+        "archetype": "Golgari Graveyard",
+        "colors": "BG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 1
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Starting Town",
+            "count": 2
+          },
+          {
+            "name": "Molt Tender",
+            "count": 4
+          },
+          {
+            "name": "Llanowar Elves",
+            "count": 2
+          },
+          {
+            "name": "Town Greeter",
+            "count": 2
+          },
+          {
+            "name": "Forest",
+            "count": 6
+          },
+          {
+            "name": "Llanowar Wastes",
+            "count": 2
+          },
+          {
+            "name": "Vanille, Cheerful l'Cie",
+            "count": 1
+          },
+          {
+            "name": "Scavenging Ooze",
+            "count": 2
+          },
+          {
+            "name": "Blooming Marsh",
+            "count": 4
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 4
+          },
+          {
+            "name": "Insidious Roots",
+            "count": 4
+          },
+          {
+            "name": "Dragon Sniper",
+            "count": 2
+          },
+          {
+            "name": "Osteomancer Adept",
+            "count": 2
+          },
+          {
+            "name": "Tyvar, Jubilant Brawler",
+            "count": 4
+          },
+          {
+            "name": "Rubblebelt Maverick",
+            "count": 2
+          },
+          {
+            "name": "Disruptive Stormbrood // Petty Revenge",
+            "count": 2
+          },
+          {
+            "name": "Cache Grab",
+            "count": 2
+          },
+          {
+            "name": "Great Arashin City",
+            "count": 1
+          },
+          {
+            "name": "Haywire Mite",
+            "count": 4
+          },
+          {
+            "name": "Dredger's Insight",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Balemurk",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Skyfisher Spider",
+            "count": 1
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 2
+          },
+          {
+            "name": "Harvester of Misery",
+            "count": 1
+          },
+          {
+            "name": "Vanille, Cheerful l'Cie",
+            "count": 1
+          },
+          {
+            "name": "Souls of the Lost",
+            "count": 1
+          },
+          {
+            "name": "Cankerbloom",
+            "count": 1
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 1
+          },
+          {
+            "name": "Dragon Sniper",
+            "count": 2
+          },
+          {
+            "name": "Fang, Fearless l'Cie",
+            "count": 3
+          },
+          {
+            "name": "Gastal Raider",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.735408"
+      },
+      {
+        "deck_id": "b6d05f51-8d8a-4324-ad61-b30e00f60b1d",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+        "player": "Beale",
+        "rank": 2,
+        "wins": 3,
+        "losses": 1,
+        "deck_name": "Boros Equipments",
+        "archetype": null,
+        "colors": "WR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Zack Fair",
+            "count": 3
+          },
+          {
+            "name": "The Aetherspark",
+            "count": 1
+          },
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 1
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 4
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 4
+          },
+          {
+            "name": "Lost Jitte",
+            "count": 1
+          },
+          {
+            "name": "Starting Town",
+            "count": 4
+          },
+          {
+            "name": "Kellan, the Fae-Blooded // Birthright Boon",
+            "count": 2
+          },
+          {
+            "name": "Mountain",
+            "count": 1
+          },
+          {
+            "name": "Lavaspur Boots",
+            "count": 4
+          },
+          {
+            "name": "Barbed Batterfist",
+            "count": 2
+          },
+          {
+            "name": "Rebel Salvo",
+            "count": 4
+          },
+          {
+            "name": "Bladehold War-Whip",
+            "count": 4
+          },
+          {
+            "name": "Emberheart Challenger",
+            "count": 4
+          },
+          {
+            "name": "Basilisk Collar",
+            "count": 1
+          },
+          {
+            "name": "Dissection Tools",
+            "count": 1
+          },
+          {
+            "name": "Plains",
+            "count": 5
+          },
+          {
+            "name": "Leyline Axe",
+            "count": 1
+          },
+          {
+            "name": "Chainsaw",
+            "count": 2
+          },
+          {
+            "name": "Cloud, Midgar Mercenary",
+            "count": 4
+          },
+          {
+            "name": "Freya Crescent",
+            "count": 3
+          },
+          {
+            "name": "Sunbillow Verge",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Celestial Armor",
+            "count": 1
+          },
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 3
+          },
+          {
+            "name": "Nettle Guard",
+            "count": 4
+          },
+          {
+            "name": "Chainsaw",
+            "count": 2
+          },
+          {
+            "name": "Rest in Peace",
+            "count": 2
+          },
+          {
+            "name": "Knight of Grace",
+            "count": 3
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.735432"
+      },
+      {
+        "deck_id": "a1df2575-6cbe-4fd3-93ee-b30e00f52774",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+        "player": "Tyrant",
+        "rank": 7,
+        "wins": 1,
+        "losses": 3,
+        "deck_name": "W-U-R-G",
+        "archetype": null,
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Floodpits Drowner",
+            "count": 3
+          },
+          {
+            "name": "Thundering Falls",
+            "count": 3
+          },
+          {
+            "name": "Starting Town",
+            "count": 1
+          },
+          {
+            "name": "Kiora, the Rising Tide",
+            "count": 1
+          },
+          {
+            "name": "Three Tree Mascot",
+            "count": 1
+          },
+          {
+            "name": "Taurean Mauler",
+            "count": 4
+          },
+          {
+            "name": "Ghalta and Mavren",
+            "count": 1
+          },
+          {
+            "name": "Hidden Grotto",
+            "count": 4
+          },
+          {
+            "name": "Trumpeting Carnosaur",
+            "count": 3
+          },
+          {
+            "name": "Etali, Primal Conqueror // Etali, Primal Sickness",
+            "count": 2
+          },
+          {
+            "name": "Mountain",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Throne of the Grim Captain // The Grim Captain",
+            "count": 4
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 4
+          },
+          {
+            "name": "Conduit Pylons",
+            "count": 4
+          },
+          {
+            "name": "Bitter Reunion",
+            "count": 4
+          },
+          {
+            "name": "Brass's Tunnel-Grinder // Tecutlan, the Searing Rift",
+            "count": 2
+          },
+          {
+            "name": "Staunch Crewmate",
+            "count": 3
+          },
+          {
+            "name": "Mishra's Command",
+            "count": 2
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 1
+          },
+          {
+            "name": "Brineborn Cutthroat",
+            "count": 2
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Gleeful Demolition",
+            "count": 1
+          },
+          {
+            "name": "Ephara's Dispersal",
+            "count": 2
+          },
+          {
+            "name": "Break the Spell",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 1
+          },
+          {
+            "name": "Long River's Pull",
+            "count": 2
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 2
+          },
+          {
+            "name": "An Offer You Can't Refuse",
+            "count": 1
+          },
+          {
+            "name": "Abrade",
+            "count": 1
+          },
+          {
+            "name": "Pyroclasm",
+            "count": 2
+          },
+          {
+            "name": "Wear Down",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.735457"
+      },
+      {
+        "deck_id": "8546b185-2aa0-45ad-96ad-b30e00f0b29a",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+        "player": "Bryndis Tamsyn",
+        "rank": 5,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "W-B-R-G Combo",
+        "archetype": null,
+        "colors": "BRG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 1
+          },
+          {
+            "name": "Bonehoard Dracosaur",
+            "count": 1
+          },
+          {
+            "name": "Forest",
+            "count": 3
+          },
+          {
+            "name": "Palani's Hatcher",
+            "count": 1
+          },
+          {
+            "name": "Invasion of Ergamon // Truga Cliffcharger",
+            "count": 4
+          },
+          {
+            "name": "Rakdos Joins Up",
+            "count": 3
+          },
+          {
+            "name": "Underground Mortuary",
+            "count": 1
+          },
+          {
+            "name": "Zombify",
+            "count": 4
+          },
+          {
+            "name": "Trumpeting Carnosaur",
+            "count": 3
+          },
+          {
+            "name": "Fabled Passage",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 2
+          },
+          {
+            "name": "Etali, Primal Conqueror // Etali, Primal Sickness",
+            "count": 3
+          },
+          {
+            "name": "Gishath, Sun's Avatar",
+            "count": 3
+          },
+          {
+            "name": "Thornspire Verge",
+            "count": 4
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 2
+          },
+          {
+            "name": "Generous Plunderer",
+            "count": 2
+          },
+          {
+            "name": "Vaultborn Tyrant",
+            "count": 3
+          },
+          {
+            "name": "Raucous Theater",
+            "count": 1
+          },
+          {
+            "name": "Blazemire Verge",
+            "count": 2
+          },
+          {
+            "name": "Commercial District",
+            "count": 2
+          },
+          {
+            "name": "Ghalta, Stampede Tyrant",
+            "count": 3
+          },
+          {
+            "name": "Balamb T-Rexaur",
+            "count": 4
+          },
+          {
+            "name": "Seize the Spoils",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Thunder Magic",
+            "count": 2
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 3
+          },
+          {
+            "name": "Huatli, Poet of Unity // Roar of the Fifth People",
+            "count": 2
+          },
+          {
+            "name": "Heritage Reclamation",
+            "count": 2
+          },
+          {
+            "name": "Brotherhood's End",
+            "count": 3
+          },
+          {
+            "name": "Fire Magic",
+            "count": 3
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.735479"
+      },
+      {
+        "deck_id": "7010aa06-197e-435c-9cc5-b30d010e28de",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+        "player": "Alexander Raitzig",
+        "rank": 8,
+        "wins": 0,
+        "losses": 3,
+        "deck_name": "Dimir",
+        "archetype": "Dimir Midrange",
+        "colors": "UB",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Floodpits Drowner",
+            "count": 1
+          },
+          {
+            "name": "Vren, the Relentless",
+            "count": 1
+          },
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Kaito, Bane of Nightmares",
+            "count": 1
+          },
+          {
+            "name": "Sheoldred, the Apocalypse",
+            "count": 2
+          },
+          {
+            "name": "Azure Beastbinder",
+            "count": 2
+          },
+          {
+            "name": "Darkslick Shores",
+            "count": 4
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 4
+          },
+          {
+            "name": "Restless Reef",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "Island",
+            "count": 3
+          },
+          {
+            "name": "Swamp",
+            "count": 6
+          },
+          {
+            "name": "Underground River",
+            "count": 4
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 3
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          },
+          {
+            "name": "Faerie Mastermind",
+            "count": 1
+          },
+          {
+            "name": "Spyglass Siren",
+            "count": 2
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 3
+          },
+          {
+            "name": "Preacher of the Schism",
+            "count": 4
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 4
+          },
+          {
+            "name": "Gloomlake Verge",
+            "count": 4
+          },
+          {
+            "name": "Cut Down",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 2
+          },
+          {
+            "name": "Kaito, Bane of Nightmares",
+            "count": 1
+          },
+          {
+            "name": "Negate",
+            "count": 2
+          },
+          {
+            "name": "Vren, the Relentless",
+            "count": 1
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 1
+          },
+          {
+            "name": "Three Steps Ahead",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Faerie Mastermind",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 1
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 1
+          },
+          {
+            "name": "The Filigree Sylex",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.735510"
+      },
+      {
+        "deck_id": "3bba2003-480a-4743-89a6-b30d015c9ed1",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+        "player": "Serg Krush",
+        "rank": 3,
+        "wins": 3,
+        "losses": 1,
+        "deck_name": "Azorius Control",
+        "archetype": null,
+        "colors": "WU",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Negate",
+            "count": 1
+          },
+          {
+            "name": "Three Steps Ahead",
+            "count": 3
+          },
+          {
+            "name": "Restless Anchorage",
+            "count": 2
+          },
+          {
+            "name": "Dreams of Laguna",
+            "count": 2
+          },
+          {
+            "name": "Elspeth's Smite",
+            "count": 2
+          },
+          {
+            "name": "Demolition Field",
+            "count": 2
+          },
+          {
+            "name": "Fountainport",
+            "count": 3
+          },
+          {
+            "name": "Floodfarm Verge",
+            "count": 4
+          },
+          {
+            "name": "Seachrome Coast",
+            "count": 3
+          },
+          {
+            "name": "Adarkar Wastes",
+            "count": 2
+          },
+          {
+            "name": "Get Lost",
+            "count": 3
+          },
+          {
+            "name": "Island",
+            "count": 3
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 3
+          },
+          {
+            "name": "No More Lies",
+            "count": 3
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 4
+          },
+          {
+            "name": "Meticulous Archive",
+            "count": 4
+          },
+          {
+            "name": "Stock Up",
+            "count": 4
+          },
+          {
+            "name": "Ride's End",
+            "count": 1
+          },
+          {
+            "name": "Plains",
+            "count": 3
+          },
+          {
+            "name": "Elspeth, Storm Slayer",
+            "count": 2
+          },
+          {
+            "name": "Marang River Regent // Coil and Catch",
+            "count": 3
+          },
+          {
+            "name": "Change the Equation",
+            "count": 1
+          },
+          {
+            "name": "Ultima",
+            "count": 2
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Change the Equation",
+            "count": 1
+          },
+          {
+            "name": "High Noon",
+            "count": 3
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 2
+          },
+          {
+            "name": "Kutzil's Flanker",
+            "count": 2
+          },
+          {
+            "name": "Boon-Bringer Valkyrie",
+            "count": 1
+          },
+          {
+            "name": "Stoic Sphinx",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 2
+          },
+          {
+            "name": "Jace, the Perfected Mind",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.735533"
+      },
+      {
+        "deck_id": "3b3ccbd3-da2b-45b8-ad6d-b30e01053830",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration",
+        "player": "IPA4BREAKFAST",
+        "rank": 4,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "Abzan",
+        "archetype": "Abzan Yuna",
+        "colors": "WBG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Lush Portico",
+            "count": 3
+          },
+          {
+            "name": "Brushland",
+            "count": 3
+          },
+          {
+            "name": "Swamp",
+            "count": 2
+          },
+          {
+            "name": "Forest",
+            "count": 2
+          },
+          {
+            "name": "Summon: Fenrir",
+            "count": 4
+          },
+          {
+            "name": "Underground Mortuary",
+            "count": 2
+          },
+          {
+            "name": "Get Lost",
+            "count": 3
+          },
+          {
+            "name": "Tranquil Frillback",
+            "count": 1
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 1
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 4
+          },
+          {
+            "name": "Hushwood Verge",
+            "count": 3
+          },
+          {
+            "name": "Overlord of the Hauntwoods",
+            "count": 3
+          },
+          {
+            "name": "Shadowy Backstreet",
+            "count": 1
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 3
+          },
+          {
+            "name": "Summon: Titan",
+            "count": 1
+          },
+          {
+            "name": "Bleachbone Verge",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 3
+          },
+          {
+            "name": "Dredger's Insight",
+            "count": 4
+          },
+          {
+            "name": "Summon: Primal Odin",
+            "count": 1
+          },
+          {
+            "name": "Plains",
+            "count": 2
+          },
+          {
+            "name": "Yuna, Hope of Spira",
+            "count": 4
+          },
+          {
+            "name": "Virtue of Persistence // Locthwain Scorn",
+            "count": 3
+          },
+          {
+            "name": "Overlord of the Balemurk",
+            "count": 4
+          },
+          {
+            "name": "Summon: Bahamut",
+            "count": 1
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Cut Down",
+            "count": 2
+          },
+          {
+            "name": "High Noon",
+            "count": 2
+          },
+          {
+            "name": "Tear Asunder",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 3
+          },
+          {
+            "name": "Duress",
+            "count": 2
+          },
+          {
+            "name": "Summon: Knights of Round",
+            "count": 1
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 2
+          },
+          {
+            "name": "Deadly Cover-Up",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.735622"
+      }
+    ]
+  },
+  "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier": {
+    "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+    "date": "2025-07-06T16:00:00+00:00",
+    "format": "standard",
+    "platform": "melee",
+    "decklists": [
+      {
+        "deck_id": "f9fbb177-1238-4e17-8146-b31201842d46",
+        "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+        "player": "MarP54",
+        "rank": 1,
+        "wins": 6,
+        "losses": 1,
+        "deck_name": "Golgari",
+        "archetype": "Golgari Graveyard",
+        "colors": "BG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 1
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Curious Forager",
+            "count": 1
+          },
+          {
+            "name": "Molt Tender",
+            "count": 4
+          },
+          {
+            "name": "Llanowar Elves",
+            "count": 2
+          },
+          {
+            "name": "Town Greeter",
+            "count": 2
+          },
+          {
+            "name": "Forest",
+            "count": 6
+          },
+          {
+            "name": "Coati Scavenger",
+            "count": 1
+          },
+          {
+            "name": "Llanowar Wastes",
+            "count": 4
+          },
+          {
+            "name": "Scavenging Ooze",
+            "count": 2
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 4
+          },
+          {
+            "name": "Blooming Marsh",
+            "count": 4
+          },
+          {
+            "name": "Insidious Roots",
+            "count": 4
+          },
+          {
+            "name": "Dredger's Insight",
+            "count": 3
+          },
+          {
+            "name": "Tyvar, Jubilant Brawler",
+            "count": 3
+          },
+          {
+            "name": "Osteomancer Adept",
+            "count": 1
+          },
+          {
+            "name": "Rubblebelt Maverick",
+            "count": 4
+          },
+          {
+            "name": "Dragon Sniper",
+            "count": 2
+          },
+          {
+            "name": "Disruptive Stormbrood // Petty Revenge",
+            "count": 2
+          },
+          {
+            "name": "Haywire Mite",
+            "count": 2
+          },
+          {
+            "name": "Great Arashin City",
+            "count": 1
+          },
+          {
+            "name": "Cache Grab",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Balemurk",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Skyfisher Spider",
+            "count": 1
+          },
+          {
+            "name": "Disruptive Stormbrood // Petty Revenge",
+            "count": 1
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 1
+          },
+          {
+            "name": "Glissa Sunslayer",
+            "count": 1
+          },
+          {
+            "name": "Cankerbloom",
+            "count": 2
+          },
+          {
+            "name": "Wrenn and Realmbreaker",
+            "count": 2
+          },
+          {
+            "name": "Dragon Sniper",
+            "count": 2
+          },
+          {
+            "name": "Haywire Mite",
+            "count": 1
+          },
+          {
+            "name": "Darkstar Augur",
+            "count": 3
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.737431"
+      },
+      {
+        "deck_id": "c7f5f6fb-1777-404c-9d4d-b312017a9f69",
+        "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+        "player": "Nik Lyons",
+        "rank": 4,
+        "wins": 4,
+        "losses": 2,
+        "deck_name": "Jeskai",
+        "archetype": "Izzet Oculus",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Inti, Seneschal of the Sun",
+            "count": 1
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 3
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 2
+          },
+          {
+            "name": "Starting Town",
+            "count": 4
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 4
+          },
+          {
+            "name": "Seachrome Coast",
+            "count": 3
+          },
+          {
+            "name": "Abhorrent Oculus",
+            "count": 4
+          },
+          {
+            "name": "Winternight Stories",
+            "count": 1
+          },
+          {
+            "name": "Mountain",
+            "count": 1
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          },
+          {
+            "name": "Marauding Mako",
+            "count": 4
+          },
+          {
+            "name": "Spyglass Siren",
+            "count": 2
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Tersa Lightshatter",
+            "count": 2
+          },
+          {
+            "name": "Glacial Dragonhunt",
+            "count": 2
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Helping Hand",
+            "count": 4
+          },
+          {
+            "name": "Proft's Eidetic Memory",
+            "count": 4
+          },
+          {
+            "name": "Steamcore Scholar",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 1
+          },
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 2
+          },
+          {
+            "name": "Destroy Evil",
+            "count": 1
+          },
+          {
+            "name": "Exorcise",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 1
+          },
+          {
+            "name": "No More Lies",
+            "count": 1
+          },
+          {
+            "name": "Chandra, Spark Hunter",
+            "count": 2
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 2
+          },
+          {
+            "name": "Fire Magic",
+            "count": 1
+          },
+          {
+            "name": "Negate",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.737458"
+      },
+      {
+        "deck_id": "996930a9-f657-4408-bb68-b3120175a79e",
+        "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+        "player": "Liam Hoban",
+        "rank": 6,
+        "wins": 3,
+        "losses": 2,
+        "deck_name": "Izzet",
+        "archetype": "Izzet Prowess",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Thundering Falls",
+            "count": 1
+          },
+          {
+            "name": "Island",
+            "count": 5
+          },
+          {
+            "name": "Opt",
+            "count": 4
+          },
+          {
+            "name": "Roaring Furnace // Steaming Sauna",
+            "count": 2
+          },
+          {
+            "name": "Stormchaser's Talent",
+            "count": 4
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 4
+          },
+          {
+            "name": "Vivi Ornitier",
+            "count": 4
+          },
+          {
+            "name": "Get Out",
+            "count": 1
+          },
+          {
+            "name": "Magic Damper",
+            "count": 1
+          },
+          {
+            "name": "Wild Ride",
+            "count": 1
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Thundertrap Trainer",
+            "count": 4
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 1
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 2
+          },
+          {
+            "name": "Stock Up",
+            "count": 4
+          },
+          {
+            "name": "Valley Floodcaller",
+            "count": 2
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Sleight of Hand",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 1
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 2
+          },
+          {
+            "name": "Eddymurk Crab",
+            "count": 1
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 1
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 1
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 2
+          },
+          {
+            "name": "Abrade",
+            "count": 1
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 1
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 1
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 1
+          },
+          {
+            "name": "Negate",
+            "count": 1
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.737486"
+      },
+      {
+        "deck_id": "7a41f53d-4e4f-4553-9302-b31201884e14",
+        "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+        "player": "Randall Litman",
+        "rank": 7,
+        "wins": 3,
+        "losses": 2,
+        "deck_name": "Jund",
+        "archetype": "Golgari Graveyard",
+        "colors": "BG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 1
+          },
+          {
+            "name": "Snarling Gorehound",
+            "count": 2
+          },
+          {
+            "name": "Cache Grab",
+            "count": 3
+          },
+          {
+            "name": "Forest",
+            "count": 3
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Starting Town",
+            "count": 4
+          },
+          {
+            "name": "Molt Tender",
+            "count": 4
+          },
+          {
+            "name": "Town Greeter",
+            "count": 2
+          },
+          {
+            "name": "Cankerbloom",
+            "count": 1
+          },
+          {
+            "name": "Coati Scavenger",
+            "count": 1
+          },
+          {
+            "name": "Blooming Marsh",
+            "count": 4
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 4
+          },
+          {
+            "name": "Scavenging Ooze",
+            "count": 1
+          },
+          {
+            "name": "Thornvault Forager",
+            "count": 1
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 1
+          },
+          {
+            "name": "Insidious Roots",
+            "count": 4
+          },
+          {
+            "name": "Osteomancer Adept",
+            "count": 2
+          },
+          {
+            "name": "Tyvar, Jubilant Brawler",
+            "count": 4
+          },
+          {
+            "name": "Rubblebelt Maverick",
+            "count": 2
+          },
+          {
+            "name": "Copperline Gorge",
+            "count": 4
+          },
+          {
+            "name": "Haywire Mite",
+            "count": 3
+          },
+          {
+            "name": "Terra, Magical Adept // Esper Terra",
+            "count": 4
+          },
+          {
+            "name": "Overlord of the Balemurk",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Dark Confidant",
+            "count": 3
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Disruptive Stormbrood // Petty Revenge",
+            "count": 2
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 2
+          },
+          {
+            "name": "Harvester of Misery",
+            "count": 2
+          },
+          {
+            "name": "Cankerbloom",
+            "count": 1
+          },
+          {
+            "name": "Scavenging Ooze",
+            "count": 1
+          },
+          {
+            "name": "Pick Your Poison",
+            "count": 2
+          },
+          {
+            "name": "Wear Down",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.737512"
+      },
+      {
+        "deck_id": "2c86f469-09d0-46c1-9aba-b31201706a27",
+        "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+        "player": "AriB8",
+        "rank": 8,
+        "wins": 3,
+        "losses": 3,
+        "deck_name": "Jeskai",
+        "archetype": "Jeskai Control",
+        "colors": "WUR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Dispelling Exhale",
+            "count": 2
+          },
+          {
+            "name": "Cori Mountain Monastery",
+            "count": 1
+          },
+          {
+            "name": "Elegant Parlor",
+            "count": 2
+          },
+          {
+            "name": "Mistrise Village",
+            "count": 1
+          },
+          {
+            "name": "Thundering Falls",
+            "count": 2
+          },
+          {
+            "name": "Negate",
+            "count": 1
+          },
+          {
+            "name": "Three Steps Ahead",
+            "count": 4
+          },
+          {
+            "name": "Floodfarm Verge",
+            "count": 4
+          },
+          {
+            "name": "Jeskai Revelation",
+            "count": 1
+          },
+          {
+            "name": "Fabled Passage",
+            "count": 1
+          },
+          {
+            "name": "Get Lost",
+            "count": 3
+          },
+          {
+            "name": "Mountain",
+            "count": 1
+          },
+          {
+            "name": "Shiko, Paragon of the Way",
+            "count": 4
+          },
+          {
+            "name": "Island",
+            "count": 2
+          },
+          {
+            "name": "Roiling Dragonstorm",
+            "count": 1
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 2
+          },
+          {
+            "name": "Day of Judgment",
+            "count": 2
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 3
+          },
+          {
+            "name": "Meticulous Archive",
+            "count": 4
+          },
+          {
+            "name": "Lightning Helix",
+            "count": 4
+          },
+          {
+            "name": "Chandra, Hope's Beacon",
+            "count": 1
+          },
+          {
+            "name": "Split Up",
+            "count": 1
+          },
+          {
+            "name": "Stock Up",
+            "count": 4
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 2
+          },
+          {
+            "name": "Plains",
+            "count": 2
+          },
+          {
+            "name": "Marang River Regent // Coil and Catch",
+            "count": 2
+          },
+          {
+            "name": "Sunbillow Verge",
+            "count": 3
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Ultima",
+            "count": 1
+          },
+          {
+            "name": "Negate",
+            "count": 2
+          },
+          {
+            "name": "The Stone Brain",
+            "count": 1
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 2
+          },
+          {
+            "name": "Kutzil's Flanker",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 1
+          },
+          {
+            "name": "Authority of the Consuls",
+            "count": 1
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 3
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.737539"
+      },
+      {
+        "deck_id": "2131ac9b-f2a4-4a10-864b-b31201864a85",
+        "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+        "player": "SoggyFrootloops",
+        "rank": 3,
+        "wins": 4,
+        "losses": 1,
+        "deck_name": "Mono-White",
+        "archetype": null,
+        "colors": "W",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Ugin, Eye of the Storms",
+            "count": 3
+          },
+          {
+            "name": "Mazemind Tome",
+            "count": 4
+          },
+          {
+            "name": "Demolition Field",
+            "count": 4
+          },
+          {
+            "name": "Fountainport",
+            "count": 4
+          },
+          {
+            "name": "The Irencrag",
+            "count": 1
+          },
+          {
+            "name": "Hedron Archive",
+            "count": 4
+          },
+          {
+            "name": "Get Lost",
+            "count": 3
+          },
+          {
+            "name": "Sunken Citadel",
+            "count": 1
+          },
+          {
+            "name": "Branch of Vitu-Ghazi",
+            "count": 1
+          },
+          {
+            "name": "Day of Judgment",
+            "count": 3
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 4
+          },
+          {
+            "name": "Plains",
+            "count": 15
+          },
+          {
+            "name": "Lay Down Arms",
+            "count": 4
+          },
+          {
+            "name": "Split Up",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 4
+          },
+          {
+            "name": "Unyielding Gatekeeper",
+            "count": 2
+          },
+          {
+            "name": "Blast Zone",
+            "count": 1
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Devout Decree",
+            "count": 1
+          },
+          {
+            "name": "The Stone Brain",
+            "count": 2
+          },
+          {
+            "name": "Destroy Evil",
+            "count": 1
+          },
+          {
+            "name": "Get Lost",
+            "count": 1
+          },
+          {
+            "name": "Dust Animus",
+            "count": 3
+          },
+          {
+            "name": "Exorcise",
+            "count": 1
+          },
+          {
+            "name": "Elesh Norn, Mother of Machines",
+            "count": 1
+          },
+          {
+            "name": "Rest in Peace",
+            "count": 2
+          },
+          {
+            "name": "Realmbreaker, the Invasion Tree",
+            "count": 1
+          },
+          {
+            "name": "Voice of Victory",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.737561"
+      },
+      {
+        "deck_id": "08d1c53c-5efd-4a4b-be5c-b312017f441f",
+        "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+        "player": "NicR56",
+        "rank": 5,
+        "wins": 3,
+        "losses": 1,
+        "deck_name": "Boros",
+        "archetype": "Mono Red Burn",
+        "colors": "R",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Quintorius Kand",
+            "count": 1
+          },
+          {
+            "name": "Mountain",
+            "count": 10
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 4
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 4
+          },
+          {
+            "name": "Burst Lightning",
+            "count": 4
+          },
+          {
+            "name": "Hired Claw",
+            "count": 4
+          },
+          {
+            "name": "Boltwave",
+            "count": 4
+          },
+          {
+            "name": "Lightning Strike",
+            "count": 2
+          },
+          {
+            "name": "Highway Robbery",
+            "count": 2
+          },
+          {
+            "name": "Restless Bivouac",
+            "count": 2
+          },
+          {
+            "name": "Lightning Helix",
+            "count": 4
+          },
+          {
+            "name": "Boros Charm",
+            "count": 4
+          },
+          {
+            "name": "Viashino Pyromancer",
+            "count": 3
+          },
+          {
+            "name": "Screaming Nemesis",
+            "count": 3
+          },
+          {
+            "name": "Case of the Crimson Pulse",
+            "count": 2
+          },
+          {
+            "name": "Slickshot Show-Off",
+            "count": 4
+          },
+          {
+            "name": "Sunbillow Verge",
+            "count": 3
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 2
+          },
+          {
+            "name": "Destroy Evil",
+            "count": 2
+          },
+          {
+            "name": "Kutzil's Flanker",
+            "count": 3
+          },
+          {
+            "name": "Twinferno",
+            "count": 1
+          },
+          {
+            "name": "Urabrask // The Great Work",
+            "count": 1
+          },
+          {
+            "name": "Tersa Lightshatter",
+            "count": 2
+          },
+          {
+            "name": "Brotherhood's End",
+            "count": 2
+          },
+          {
+            "name": "Case of the Crimson Pulse",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.737584"
+      },
+      {
+        "deck_id": "019b8cc7-91ab-4b1c-9774-b31201684602",
+        "tournament_id": "2025-07-06_F2F Tour Red Deer - Sunday Super Qualifier",
+        "player": "Kody Lyons",
+        "rank": 2,
+        "wins": 5,
+        "losses": 1,
+        "deck_name": "Azorius Combo",
+        "archetype": "Azorius Omniscience",
+        "colors": "WU",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Mistrise Village",
+            "count": 1
+          },
+          {
+            "name": "Fallaji Archaeologist",
+            "count": 2
+          },
+          {
+            "name": "Get Lost",
+            "count": 2
+          },
+          {
+            "name": "Floodfarm Verge",
+            "count": 4
+          },
+          {
+            "name": "Fountainport",
+            "count": 1
+          },
+          {
+            "name": "Seachrome Coast",
+            "count": 3
+          },
+          {
+            "name": "Fabled Passage",
+            "count": 1
+          },
+          {
+            "name": "Adarkar Wastes",
+            "count": 3
+          },
+          {
+            "name": "Island",
+            "count": 3
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 1
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 1
+          },
+          {
+            "name": "Roiling Dragonstorm",
+            "count": 4
+          },
+          {
+            "name": "No More Lies",
+            "count": 3
+          },
+          {
+            "name": "Oracle of Tragedy",
+            "count": 1
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 2
+          },
+          {
+            "name": "Meticulous Archive",
+            "count": 4
+          },
+          {
+            "name": "Repair and Recharge",
+            "count": 4
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 1
+          },
+          {
+            "name": "Plains",
+            "count": 3
+          },
+          {
+            "name": "Omniscience",
+            "count": 4
+          },
+          {
+            "name": "Ephara's Dispersal",
+            "count": 4
+          },
+          {
+            "name": "Scrollshift",
+            "count": 3
+          },
+          {
+            "name": "Builder's Talent",
+            "count": 1
+          },
+          {
+            "name": "Marang River Regent // Coil and Catch",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Negate",
+            "count": 2
+          },
+          {
+            "name": "Kutzil's Flanker",
+            "count": 2
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 1
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 1
+          },
+          {
+            "name": "Sunfall",
+            "count": 1
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 3
+          },
+          {
+            "name": "Voice of Victory",
+            "count": 3
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.737609"
+      }
+    ]
+  },
+  "2025-07-12_Valley Dasher's Bishkek Classic #1": {
+    "tournament_id": "2025-07-12_Valley Dasher's Bishkek Classic #1",
+    "date": "2025-07-12T18:00:00+00:00",
+    "format": "standard",
+    "platform": "melee",
+    "decklists": [
+      {
+        "deck_id": "d11c46a4-4cdb-4603-bf82-b317008faa42",
+        "tournament_id": "2025-07-12_Valley Dasher's Bishkek Classic #1",
+        "player": "Zcat",
+        "rank": 1,
+        "wins": 5,
+        "losses": 1,
+        "deck_name": "Gruul Aggro",
+        "archetype": null,
+        "colors": "RG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Mountain",
+            "count": 5
+          },
+          {
+            "name": "Forest",
+            "count": 1
+          },
+          {
+            "name": "Burst Lightning",
+            "count": 4
+          },
+          {
+            "name": "Rockface Village",
+            "count": 2
+          },
+          {
+            "name": "Hired Claw",
+            "count": 4
+          },
+          {
+            "name": "Innkeeper's Talent",
+            "count": 4
+          },
+          {
+            "name": "Audacity",
+            "count": 1
+          },
+          {
+            "name": "Manifold Mouse",
+            "count": 3
+          },
+          {
+            "name": "Thornspire Verge",
+            "count": 4
+          },
+          {
+            "name": "Emberheart Challenger",
+            "count": 4
+          },
+          {
+            "name": "Twinmaw Stormbrood // Charring Bite",
+            "count": 2
+          },
+          {
+            "name": "Witchstalker Frenzy",
+            "count": 2
+          },
+          {
+            "name": "Questing Druid // Seek the Beast",
+            "count": 2
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Pawpatch Recruit",
+            "count": 4
+          },
+          {
+            "name": "Copperline Gorge",
+            "count": 4
+          },
+          {
+            "name": "Karplusan Forest",
+            "count": 4
+          },
+          {
+            "name": "Restless Ridgeline",
+            "count": 1
+          },
+          {
+            "name": "Screaming Nemesis",
+            "count": 4
+          },
+          {
+            "name": "Overprotect",
+            "count": 3
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Heritage Reclamation",
+            "count": 4
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 4
+          },
+          {
+            "name": "Urabrask's Forge",
+            "count": 3
+          },
+          {
+            "name": "Pyroclasm",
+            "count": 2
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.740077"
+      },
+      {
+        "deck_id": "b10bef27-0da6-49ee-90ce-b319002ab80f",
+        "tournament_id": "2025-07-12_Valley Dasher's Bishkek Classic #1",
+        "player": "Utockaff",
+        "rank": 2,
+        "wins": 3,
+        "losses": 3,
+        "deck_name": "Rakdos Aggro",
+        "archetype": "Rakdos Lizards",
+        "colors": "BR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 1
+          },
+          {
+            "name": "Gev, Scaled Scorch",
+            "count": 3
+          },
+          {
+            "name": "Cut Down",
+            "count": 2
+          },
+          {
+            "name": "Fireglass Mentor",
+            "count": 4
+          },
+          {
+            "name": "Mudflat Village",
+            "count": 1
+          },
+          {
+            "name": "Hired Claw",
+            "count": 4
+          },
+          {
+            "name": "Iridescent Vinelasher",
+            "count": 4
+          },
+          {
+            "name": "Flamecache Gecko",
+            "count": 4
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 4
+          },
+          {
+            "name": "Gastal Thrillseeker",
+            "count": 2
+          },
+          {
+            "name": "Laughing Jasper Flint",
+            "count": 3
+          },
+          {
+            "name": "Blackcleave Cliffs",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 4
+          },
+          {
+            "name": "Valley Flamecaller",
+            "count": 1
+          },
+          {
+            "name": "Thought-Stalker Warlock",
+            "count": 3
+          },
+          {
+            "name": "Blazemire Verge",
+            "count": 4
+          },
+          {
+            "name": "Sulfurous Springs",
+            "count": 4
+          },
+          {
+            "name": "Restless Vents",
+            "count": 1
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Cut Down",
+            "count": 2
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "Withering Torment",
+            "count": 1
+          },
+          {
+            "name": "Scales of Shale",
+            "count": 2
+          },
+          {
+            "name": "The End",
+            "count": 1
+          },
+          {
+            "name": "Urabrask's Forge",
+            "count": 3
+          },
+          {
+            "name": "Abrade",
+            "count": 1
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 1
+          },
+          {
+            "name": "Glistening Deluge",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.740103"
+      },
+      {
+        "deck_id": "375d629e-9ca3-42c1-bc1d-b313009b00e1",
+        "tournament_id": "2025-07-12_Valley Dasher's Bishkek Classic #1",
+        "player": "Kurut4ik",
+        "rank": 5,
+        "wins": 1,
+        "losses": 3,
+        "deck_name": "Golgari Graveyard",
+        "archetype": "Golgari Ramp",
+        "colors": "BG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Bitter Triumph",
+            "count": 4
+          },
+          {
+            "name": "Valgavoth, Terror Eater",
+            "count": 4
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 4
+          },
+          {
+            "name": "Cache Grab",
+            "count": 4
+          },
+          {
+            "name": "Cut Down",
+            "count": 1
+          },
+          {
+            "name": "Lumra, Bellow of the Woods",
+            "count": 1
+          },
+          {
+            "name": "Underground Mortuary",
+            "count": 4
+          },
+          {
+            "name": "The Cruelty of Gix",
+            "count": 3
+          },
+          {
+            "name": "Say Its Name",
+            "count": 4
+          },
+          {
+            "name": "Valgavoth's Faithful",
+            "count": 4
+          },
+          {
+            "name": "Tear Asunder",
+            "count": 1
+          },
+          {
+            "name": "Forest",
+            "count": 6
+          },
+          {
+            "name": "Altanak, the Thrice-Called",
+            "count": 4
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 4
+          },
+          {
+            "name": "Fabled Passage",
+            "count": 4
+          },
+          {
+            "name": "Gnawing Vermin",
+            "count": 2
+          },
+          {
+            "name": "Swamp",
+            "count": 6
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Choking Miasma",
+            "count": 3
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "Cut Down",
+            "count": 2
+          },
+          {
+            "name": "Tear Asunder",
+            "count": 2
+          },
+          {
+            "name": "Haywire Mite",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Cease // Desist",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.740126"
+      },
+      {
+        "deck_id": "2b8bdc75-3c8e-432d-b431-b3190049104a",
+        "tournament_id": "2025-07-12_Valley Dasher's Bishkek Classic #1",
+        "player": "mntsc",
+        "rank": 4,
+        "wins": 2,
+        "losses": 3,
+        "deck_name": "Boros Combo",
+        "archetype": null,
+        "colors": "WR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Elegant Parlor",
+            "count": 2
+          },
+          {
+            "name": "High Noon",
+            "count": 1
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 4
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 2
+          },
+          {
+            "name": "Starting Town",
+            "count": 2
+          },
+          {
+            "name": "Tune Up",
+            "count": 1
+          },
+          {
+            "name": "Get Lost",
+            "count": 1
+          },
+          {
+            "name": "Valor's Flagship",
+            "count": 1
+          },
+          {
+            "name": "Detention Chariot",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 4
+          },
+          {
+            "name": "Day of Judgment",
+            "count": 3
+          },
+          {
+            "name": "Fire Magic",
+            "count": 4
+          },
+          {
+            "name": "Monument to Endurance",
+            "count": 3
+          },
+          {
+            "name": "Split Up",
+            "count": 2
+          },
+          {
+            "name": "Clamorous Ironclad",
+            "count": 4
+          },
+          {
+            "name": "Kickoff Celebrations",
+            "count": 4
+          },
+          {
+            "name": "Push the Limit",
+            "count": 2
+          },
+          {
+            "name": "Brass's Tunnel-Grinder // Tecutlan, the Searing Rift",
+            "count": 4
+          },
+          {
+            "name": "Plains",
+            "count": 5
+          },
+          {
+            "name": "Chandra, Spark Hunter",
+            "count": 1
+          },
+          {
+            "name": "Disenchant",
+            "count": 1
+          },
+          {
+            "name": "Authority of the Consuls",
+            "count": 1
+          },
+          {
+            "name": "Sunbillow Verge",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disenchant",
+            "count": 1
+          },
+          {
+            "name": "Ride's End",
+            "count": 1
+          },
+          {
+            "name": "Get Lost",
+            "count": 3
+          },
+          {
+            "name": "Exorcise",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 1
+          },
+          {
+            "name": "Chandra, Spark Hunter",
+            "count": 1
+          },
+          {
+            "name": "Alacrian Armory",
+            "count": 1
+          },
+          {
+            "name": "Soul-Guide Lantern",
+            "count": 2
+          },
+          {
+            "name": "Final Showdown",
+            "count": 1
+          },
+          {
+            "name": "Brotherhood's End",
+            "count": 2
+          },
+          {
+            "name": "Kolodin, Triumph Caster",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.740150"
+      },
+      {
+        "deck_id": "22763ed7-d1f4-4632-8c3d-b31400b7853f",
+        "tournament_id": "2025-07-12_Valley Dasher's Bishkek Classic #1",
+        "player": "s0b0lev",
+        "rank": 3,
+        "wins": 4,
+        "losses": 1,
+        "deck_name": "Orzhov Control",
+        "archetype": null,
+        "colors": "WB",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 3
+          },
+          {
+            "name": "Concealed Courtyard",
+            "count": 4
+          },
+          {
+            "name": "Legions to Ashes",
+            "count": 2
+          },
+          {
+            "name": "Mazemind Tome",
+            "count": 4
+          },
+          {
+            "name": "Cease // Desist",
+            "count": 2
+          },
+          {
+            "name": "Ketramose, the New Dawn",
+            "count": 4
+          },
+          {
+            "name": "Demolition Field",
+            "count": 2
+          },
+          {
+            "name": "Fountainport",
+            "count": 3
+          },
+          {
+            "name": "Deadly Cover-Up",
+            "count": 3
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "Soul Search",
+            "count": 4
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 3
+          },
+          {
+            "name": "Shadowy Backstreet",
+            "count": 2
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 2
+          },
+          {
+            "name": "Bleachbone Verge",
+            "count": 4
+          },
+          {
+            "name": "Plains",
+            "count": 5
+          },
+          {
+            "name": "Outrageous Robbery",
+            "count": 2
+          },
+          {
+            "name": "Restless Fortress",
+            "count": 2
+          },
+          {
+            "name": "The End",
+            "count": 1
+          },
+          {
+            "name": "Strategic Betrayal",
+            "count": 2
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 2
+          },
+          {
+            "name": "Kaya, Intangible Slayer",
+            "count": 1
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Ultima",
+            "count": 1
+          },
+          {
+            "name": "The Stone Brain",
+            "count": 1
+          },
+          {
+            "name": "Pest Control",
+            "count": 1
+          },
+          {
+            "name": "Blot Out",
+            "count": 1
+          },
+          {
+            "name": "Exorcise",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Elesh Norn, Mother of Machines",
+            "count": 1
+          },
+          {
+            "name": "Authority of the Consuls",
+            "count": 2
+          },
+          {
+            "name": "Outrageous Robbery",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.740172"
+      }
+    ]
+  },
+  "2025-07-19_Boa Qualifier #2 2025 (standard)": {
+    "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+    "date": "2025-07-19T11:10:00+00:00",
+    "format": "standard",
+    "platform": "melee",
+    "decklists": [
+      {
+        "deck_id": "f2712cf6-6961-4b15-95e7-b31f0099667e",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "ChitelArnaud",
+        "rank": 3,
+        "wins": 3,
+        "losses": 1,
+        "deck_name": "Temur Midrange",
+        "archetype": null,
+        "colors": "URG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Mistrise Village",
+            "count": 2
+          },
+          {
+            "name": "Three Steps Ahead",
+            "count": 3
+          },
+          {
+            "name": "Willowrush Verge",
+            "count": 1
+          },
+          {
+            "name": "Smuggler's Surprise",
+            "count": 3
+          },
+          {
+            "name": "Starting Town",
+            "count": 1
+          },
+          {
+            "name": "Hedge Maze",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 3
+          },
+          {
+            "name": "Dragonback Assault",
+            "count": 1
+          },
+          {
+            "name": "Forest",
+            "count": 5
+          },
+          {
+            "name": "Llanowar Elves",
+            "count": 4
+          },
+          {
+            "name": "Bloomvine Regent // Claim Territory",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Boilerbilges",
+            "count": 4
+          },
+          {
+            "name": "Fabled Passage",
+            "count": 3
+          },
+          {
+            "name": "Mountain",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 2
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Hauntwoods",
+            "count": 4
+          },
+          {
+            "name": "Thornspire Verge",
+            "count": 2
+          },
+          {
+            "name": "Vaultborn Tyrant",
+            "count": 2
+          },
+          {
+            "name": "Stock Up",
+            "count": 3
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 2
+          },
+          {
+            "name": "Scorching Dragonfire",
+            "count": 2
+          },
+          {
+            "name": "Commercial District",
+            "count": 2
+          },
+          {
+            "name": "Marang River Regent // Coil and Catch",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Negate",
+            "count": 2
+          },
+          {
+            "name": "Ureni, the Song Unending",
+            "count": 1
+          },
+          {
+            "name": "Dragonback Assault",
+            "count": 1
+          },
+          {
+            "name": "Fresh Start",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Calamity, Galloping Inferno",
+            "count": 1
+          },
+          {
+            "name": "Heritage Reclamation",
+            "count": 3
+          },
+          {
+            "name": "Make Your Own Luck",
+            "count": 1
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.742973"
+      },
+      {
+        "deck_id": "e87b4ce1-7121-44ad-a9be-b31f00927479",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "Cl\u00e9ment Pintout",
+        "rank": 1,
+        "wins": 4,
+        "losses": 0,
+        "deck_name": "Izzet Combo",
+        "archetype": "Izzet Cauldron",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Thundering Falls",
+            "count": 3
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 4
+          },
+          {
+            "name": "Kiora, the Rising Tide",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 3
+          },
+          {
+            "name": "Vivi Ornitier",
+            "count": 4
+          },
+          {
+            "name": "Winternight Stories",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Island",
+            "count": 2
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 3
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 2
+          },
+          {
+            "name": "Marauding Mako",
+            "count": 4
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Tersa Lightshatter",
+            "count": 3
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Scorching Dragonfire",
+            "count": 2
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Proft's Eidetic Memory",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 2
+          },
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 1
+          },
+          {
+            "name": "Unable to Scream",
+            "count": 2
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 2
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 1
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          },
+          {
+            "name": "Broadside Barrage",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743000"
+      },
+      {
+        "deck_id": "d23d7d44-402e-4381-af4f-b31d0186f8b1",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "L\u00e9o Guimard",
+        "rank": 2,
+        "wins": 3,
+        "losses": 1,
+        "deck_name": "Izzet Cauldron",
+        "archetype": "Izzet Cauldron",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Thundering Falls",
+            "count": 2
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 4
+          },
+          {
+            "name": "Kiora, the Rising Tide",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 3
+          },
+          {
+            "name": "Vivi Ornitier",
+            "count": 4
+          },
+          {
+            "name": "Winternight Stories",
+            "count": 4
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 3
+          },
+          {
+            "name": "Island",
+            "count": 3
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 3
+          },
+          {
+            "name": "Marauding Mako",
+            "count": 4
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Tersa Lightshatter",
+            "count": 3
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Glacial Dragonhunt",
+            "count": 1
+          },
+          {
+            "name": "Proft's Eidetic Memory",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 2
+          },
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 1
+          },
+          {
+            "name": "Unable to Scream",
+            "count": 2
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 2
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 1
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          },
+          {
+            "name": "Broadside Barrage",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743025"
+      },
+      {
+        "deck_id": "be6edff0-e835-4f71-9d7b-b31f006865d4",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "Tron Young",
+        "rank": 16,
+        "wins": 0,
+        "losses": 1,
+        "deck_name": "Rakdos Sacrifice",
+        "archetype": null,
+        "colors": "BR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Greedy Freebooter",
+            "count": 4
+          },
+          {
+            "name": "Starting Town",
+            "count": 4
+          },
+          {
+            "name": "Eaten Alive",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 4
+          },
+          {
+            "name": "Clockwork Percussionist",
+            "count": 3
+          },
+          {
+            "name": "Spiteful Hexmage",
+            "count": 4
+          },
+          {
+            "name": "Fabled Passage",
+            "count": 4
+          },
+          {
+            "name": "Disturbing Mirth",
+            "count": 4
+          },
+          {
+            "name": "Swamp",
+            "count": 5
+          },
+          {
+            "name": "Mountain",
+            "count": 2
+          },
+          {
+            "name": "Corrupted Conviction",
+            "count": 3
+          },
+          {
+            "name": "Vengeful Bloodwitch",
+            "count": 4
+          },
+          {
+            "name": "Final Vengeance",
+            "count": 3
+          },
+          {
+            "name": "Blazemire Verge",
+            "count": 4
+          },
+          {
+            "name": "Enduring Courage",
+            "count": 2
+          },
+          {
+            "name": "Restless Vents",
+            "count": 2
+          },
+          {
+            "name": "Alesha, Who Laughs at Fate",
+            "count": 3
+          },
+          {
+            "name": "Midgar, City of Mako // Reactor Raid",
+            "count": 1
+          },
+          {
+            "name": "Nowhere to Run",
+            "count": 3
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Abrade",
+            "count": 3
+          },
+          {
+            "name": "Feed the Swarm",
+            "count": 3
+          },
+          {
+            "name": "Betrayer's Bargain",
+            "count": 3
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "Pyroclasm",
+            "count": 2
+          },
+          {
+            "name": "Fire Magic",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743045"
+      },
+      {
+        "deck_id": "a8cbef67-5933-4ab6-8c93-b31f00a4edf5",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "GELY Baptiste",
+        "rank": 10,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "W-B-R-G Midrange",
+        "archetype": "Humans",
+        "colors": "C",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Lightning, Army of One",
+            "count": 1
+          },
+          {
+            "name": "Zack Fair",
+            "count": 3
+          },
+          {
+            "name": "Dark Confidant",
+            "count": 3
+          },
+          {
+            "name": "Concealed Courtyard",
+            "count": 4
+          },
+          {
+            "name": "Jirina, Dauntless General",
+            "count": 3
+          },
+          {
+            "name": "Kellan, Daring Traveler // Journey On",
+            "count": 2
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 2
+          },
+          {
+            "name": "Starting Town",
+            "count": 4
+          },
+          {
+            "name": "Inti, Seneschal of the Sun",
+            "count": 3
+          },
+          {
+            "name": "Cecil, Dark Knight // Cecil, Redeemed Paladin",
+            "count": 3
+          },
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 4
+          },
+          {
+            "name": "Blackcleave Cliffs",
+            "count": 2
+          },
+          {
+            "name": "Secluded Courtyard",
+            "count": 4
+          },
+          {
+            "name": "Mardu Devotee",
+            "count": 4
+          },
+          {
+            "name": "Cavern of Souls",
+            "count": 2
+          },
+          {
+            "name": "Coppercoat Vanguard",
+            "count": 4
+          },
+          {
+            "name": "Recruitment Officer",
+            "count": 2
+          },
+          {
+            "name": "Plaza of Heroes",
+            "count": 4
+          },
+          {
+            "name": "Aron, Benalia's Ruin",
+            "count": 1
+          },
+          {
+            "name": "Joshua, Phoenix's Dominant // Phoenix, Warden of Fire",
+            "count": 2
+          },
+          {
+            "name": "Alesha, Who Laughs at Fate",
+            "count": 3
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Jirina, Dauntless General",
+            "count": 1
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 1
+          },
+          {
+            "name": "Anointed Peacekeeper",
+            "count": 3
+          },
+          {
+            "name": "Exorcise",
+            "count": 2
+          },
+          {
+            "name": "Loran of the Third Path",
+            "count": 2
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "Elspeth's Smite",
+            "count": 1
+          },
+          {
+            "name": "Kambal, Profiteering Mayor",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743073"
+      },
+      {
+        "deck_id": "99ce9c8c-e382-4f53-8c63-b31f00a769ec",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "LouisLafontdeSentenac",
+        "rank": 6,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "Izzet Aggro",
+        "archetype": "Izzet Cauldron",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Island",
+            "count": 6
+          },
+          {
+            "name": "Opt",
+            "count": 4
+          },
+          {
+            "name": "Roaring Furnace // Steaming Sauna",
+            "count": 1
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Stormchaser's Talent",
+            "count": 4
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 4
+          },
+          {
+            "name": "Vivi Ornitier",
+            "count": 4
+          },
+          {
+            "name": "Get Out",
+            "count": 1
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 1
+          },
+          {
+            "name": "Thundertrap Trainer",
+            "count": 2
+          },
+          {
+            "name": "Astrologian's Planisphere",
+            "count": 4
+          },
+          {
+            "name": "Stock Up",
+            "count": 4
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Sleight of Hand",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 2
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "Get Out",
+            "count": 1
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 2
+          },
+          {
+            "name": "Faerie Mastermind",
+            "count": 2
+          },
+          {
+            "name": "Witness Protection",
+            "count": 1
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 1
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 1
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743098"
+      },
+      {
+        "deck_id": "87811f54-73e9-4891-abeb-b31f00b521ed",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "Kamespon",
+        "rank": 4,
+        "wins": 3,
+        "losses": 1,
+        "deck_name": "Dimir Midrange",
+        "archetype": "Dimir Midrange",
+        "colors": "UB",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Floodpits Drowner",
+            "count": 3
+          },
+          {
+            "name": "Kaito, Bane of Nightmares",
+            "count": 2
+          },
+          {
+            "name": "Phantom Interference",
+            "count": 2
+          },
+          {
+            "name": "Intimidation Tactics",
+            "count": 1
+          },
+          {
+            "name": "Darkslick Shores",
+            "count": 4
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 3
+          },
+          {
+            "name": "Restless Reef",
+            "count": 2
+          },
+          {
+            "name": "Duress",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 3
+          },
+          {
+            "name": "Swamp",
+            "count": 5
+          },
+          {
+            "name": "Underground River",
+            "count": 4
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 3
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 1
+          },
+          {
+            "name": "Spyglass Siren",
+            "count": 4
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 3
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 3
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 1
+          },
+          {
+            "name": "Preacher of the Schism",
+            "count": 3
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 4
+          },
+          {
+            "name": "Cut Down",
+            "count": 3
+          },
+          {
+            "name": "Gloomlake Verge",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Change the Equation",
+            "count": 1
+          },
+          {
+            "name": "Disdainful Stroke",
+            "count": 1
+          },
+          {
+            "name": "Sheoldred, the Apocalypse",
+            "count": 1
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 1
+          },
+          {
+            "name": "Intimidation Tactics",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Faerie Mastermind",
+            "count": 3
+          },
+          {
+            "name": "Duress",
+            "count": 1
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 2
+          },
+          {
+            "name": "Jace, the Perfected Mind",
+            "count": 1
+          },
+          {
+            "name": "Negate",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743125"
+      },
+      {
+        "deck_id": "802555ad-8f79-46f6-99bc-b31f00ad5a4f",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "TeeLooLoo",
+        "rank": 13,
+        "wins": 1,
+        "losses": 3,
+        "deck_name": "Orzhov",
+        "archetype": "Orzhov Caretaker (Mono White Caretaker)",
+        "colors": "WB",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 1
+          },
+          {
+            "name": "Archangel Elspeth",
+            "count": 1
+          },
+          {
+            "name": "Legions to Ashes",
+            "count": 2
+          },
+          {
+            "name": "Demolition Field",
+            "count": 2
+          },
+          {
+            "name": "Fountainport",
+            "count": 3
+          },
+          {
+            "name": "Sunfall",
+            "count": 3
+          },
+          {
+            "name": "Get Lost",
+            "count": 4
+          },
+          {
+            "name": "Sunken Citadel",
+            "count": 2
+          },
+          {
+            "name": "Enduring Innocence",
+            "count": 3
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 1
+          },
+          {
+            "name": "Shadowy Backstreet",
+            "count": 4
+          },
+          {
+            "name": "The Eternal Wanderer",
+            "count": 1
+          },
+          {
+            "name": "Day of Judgment",
+            "count": 1
+          },
+          {
+            "name": "Kaya, Spirits' Justice",
+            "count": 2
+          },
+          {
+            "name": "Plains",
+            "count": 13
+          },
+          {
+            "name": "Lay Down Arms",
+            "count": 3
+          },
+          {
+            "name": "Split Up",
+            "count": 1
+          },
+          {
+            "name": "Mirrex",
+            "count": 1
+          },
+          {
+            "name": "Carrot Cake",
+            "count": 4
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 2
+          },
+          {
+            "name": "Elspeth, Storm Slayer",
+            "count": 2
+          },
+          {
+            "name": "Kaya, Intangible Slayer",
+            "count": 1
+          },
+          {
+            "name": "Caretaker's Talent",
+            "count": 3
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Surge of Salvation",
+            "count": 1
+          },
+          {
+            "name": "Elspeth's Smite",
+            "count": 3
+          },
+          {
+            "name": "Loran of the Third Path",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 2
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 2
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 2
+          },
+          {
+            "name": "Split Up",
+            "count": 1
+          },
+          {
+            "name": "Elesh Norn, Mother of Machines",
+            "count": 1
+          },
+          {
+            "name": "Rest in Peace",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743153"
+      },
+      {
+        "deck_id": "7d877cc2-e5b0-4c4e-a3cf-b31f00b0b3fb",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "FonKydu11",
+        "rank": 9,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "Boros Convoke",
+        "archetype": null,
+        "colors": "WR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Arabella, Abandoned Doll",
+            "count": 2
+          },
+          {
+            "name": "Warden of the Inner Sky",
+            "count": 4
+          },
+          {
+            "name": "Painter's Studio // Defaced Gallery",
+            "count": 2
+          },
+          {
+            "name": "Resolute Reinforcements",
+            "count": 4
+          },
+          {
+            "name": "Imodane's Recruiter // Train Troops",
+            "count": 4
+          },
+          {
+            "name": "Knight-Errant of Eos",
+            "count": 4
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 4
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 4
+          },
+          {
+            "name": "Mirrex",
+            "count": 1
+          },
+          {
+            "name": "Plains",
+            "count": 5
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 1
+          },
+          {
+            "name": "Nesting Bot",
+            "count": 4
+          },
+          {
+            "name": "Case of the Gateway Express",
+            "count": 4
+          },
+          {
+            "name": "Novice Inspector",
+            "count": 4
+          },
+          {
+            "name": "Dragoon's Lance",
+            "count": 2
+          },
+          {
+            "name": "Gleeful Demolition",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Sunbillow Verge",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Aven Interrupter",
+            "count": 4
+          },
+          {
+            "name": "Rest in Peace",
+            "count": 3
+          },
+          {
+            "name": "Destroy Evil",
+            "count": 3
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 3
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743174"
+      },
+      {
+        "deck_id": "70b61225-77c9-4ea7-a2d8-b31f007147fb",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "Gui Gui",
+        "rank": 11,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "Azorius Combo",
+        "archetype": "Azorius Oculus",
+        "colors": "WU",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Opt",
+            "count": 2
+          },
+          {
+            "name": "Soul Partition",
+            "count": 1
+          },
+          {
+            "name": "Overlord of the Floodpits",
+            "count": 4
+          },
+          {
+            "name": "Get Lost",
+            "count": 1
+          },
+          {
+            "name": "Seachrome Coast",
+            "count": 4
+          },
+          {
+            "name": "Abhorrent Oculus",
+            "count": 4
+          },
+          {
+            "name": "Adarkar Wastes",
+            "count": 4
+          },
+          {
+            "name": "Island",
+            "count": 3
+          },
+          {
+            "name": "The Mycosynth Gardens",
+            "count": 3
+          },
+          {
+            "name": "Recommission",
+            "count": 4
+          },
+          {
+            "name": "Monument to Endurance",
+            "count": 4
+          },
+          {
+            "name": "Meticulous Archive",
+            "count": 3
+          },
+          {
+            "name": "Stock Up",
+            "count": 4
+          },
+          {
+            "name": "Plains",
+            "count": 3
+          },
+          {
+            "name": "Helping Hand",
+            "count": 4
+          },
+          {
+            "name": "Sleight of Hand",
+            "count": 4
+          },
+          {
+            "name": "Oracle of Tragedy",
+            "count": 4
+          },
+          {
+            "name": "Guardian of New Benalia",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Soul Partition",
+            "count": 2
+          },
+          {
+            "name": "Get Lost",
+            "count": 1
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 1
+          },
+          {
+            "name": "Exorcise",
+            "count": 3
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 4
+          },
+          {
+            "name": "No More Lies",
+            "count": 1
+          },
+          {
+            "name": "Soul-Guide Lantern",
+            "count": 2
+          },
+          {
+            "name": "Negate",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743197"
+      },
+      {
+        "deck_id": "5e1b8541-5f70-4e5d-adbf-b31c015ea565",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "CorentinDAMOIS",
+        "rank": 14,
+        "wins": 1,
+        "losses": 2,
+        "deck_name": "Mono-Black Control",
+        "archetype": "Mono Black Demons",
+        "colors": "B",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Sheoldred, the Apocalypse",
+            "count": 4
+          },
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Deadly Cover-Up",
+            "count": 1
+          },
+          {
+            "name": "Swamp",
+            "count": 22
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Archfiend of the Dross",
+            "count": 3
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 4
+          },
+          {
+            "name": "Bloodletter of Aclazotz",
+            "count": 3
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 2
+          },
+          {
+            "name": "Unholy Annex // Ritual Chamber",
+            "count": 4
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 3
+          },
+          {
+            "name": "Cut Down",
+            "count": 4
+          },
+          {
+            "name": "Duress",
+            "count": 2
+          },
+          {
+            "name": "Virtue of Persistence // Locthwain Scorn",
+            "count": 2
+          },
+          {
+            "name": "Unstoppable Slasher",
+            "count": 3
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Liliana of the Veil",
+            "count": 3
+          },
+          {
+            "name": "Duress",
+            "count": 2
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 1
+          },
+          {
+            "name": "Preacher of the Schism",
+            "count": 2
+          },
+          {
+            "name": "Aclazotz, Deepest Betrayal // Temple of the Dead",
+            "count": 2
+          },
+          {
+            "name": "Caustic Bronco",
+            "count": 4
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743219"
+      },
+      {
+        "deck_id": "5117f574-6e6b-47db-9aa4-b31e015e9c07",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "Thomas Raer",
+        "rank": 15,
+        "wins": 0,
+        "losses": 3,
+        "deck_name": "Izzet Prowess",
+        "archetype": "Izzet Cauldron",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Thundering Falls",
+            "count": 1
+          },
+          {
+            "name": "Island",
+            "count": 6
+          },
+          {
+            "name": "Opt",
+            "count": 4
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 2
+          },
+          {
+            "name": "Stormchaser's Talent",
+            "count": 4
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 4
+          },
+          {
+            "name": "Vivi Ornitier",
+            "count": 4
+          },
+          {
+            "name": "Get Out",
+            "count": 1
+          },
+          {
+            "name": "Mountain",
+            "count": 2
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 1
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 2
+          },
+          {
+            "name": "Thundertrap Trainer",
+            "count": 2
+          },
+          {
+            "name": "Astrologian's Planisphere",
+            "count": 4
+          },
+          {
+            "name": "Stock Up",
+            "count": 4
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Rebel Salvo",
+            "count": 1
+          },
+          {
+            "name": "Sleight of Hand",
+            "count": 4
+          },
+          {
+            "name": "Fire Magic",
+            "count": 1
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 1
+          },
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "Get Out",
+            "count": 1
+          },
+          {
+            "name": "Unable to Scream",
+            "count": 1
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 1
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 2
+          },
+          {
+            "name": "Faerie Mastermind",
+            "count": 2
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 1
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 1
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 1
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743245"
+      },
+      {
+        "deck_id": "5029dd2a-a694-4784-8196-b31f00a0bcc9",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "Christophe Zozine",
+        "rank": 8,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "Izzet Cauldron",
+        "archetype": "Izzet Cauldron",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Thundering Falls",
+            "count": 2
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 4
+          },
+          {
+            "name": "Kiora, the Rising Tide",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 3
+          },
+          {
+            "name": "Vivi Ornitier",
+            "count": 4
+          },
+          {
+            "name": "Winternight Stories",
+            "count": 4
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 3
+          },
+          {
+            "name": "Island",
+            "count": 3
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 3
+          },
+          {
+            "name": "Marauding Mako",
+            "count": 4
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Tersa Lightshatter",
+            "count": 3
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Glacial Dragonhunt",
+            "count": 1
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Proft's Eidetic Memory",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 2
+          },
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 1
+          },
+          {
+            "name": "Unable to Scream",
+            "count": 2
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 2
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 1
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          },
+          {
+            "name": "Broadside Barrage",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743269"
+      },
+      {
+        "deck_id": "4ed9f916-fdae-4e53-a7a6-b31f00a76ad4",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "Playkahlon G",
+        "rank": 7,
+        "wins": 2,
+        "losses": 2,
+        "deck_name": "Mono-White Tokens",
+        "archetype": "Mono White Caretaker (Mono White Caretaker)",
+        "colors": "W",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Plains",
+            "count": 20
+          },
+          {
+            "name": "Beza, the Bounding Spring",
+            "count": 3
+          },
+          {
+            "name": "Sanguine Evangelist",
+            "count": 1
+          },
+          {
+            "name": "Lay Down Arms",
+            "count": 4
+          },
+          {
+            "name": "Day of Judgment",
+            "count": 2
+          },
+          {
+            "name": "Carrot Cake",
+            "count": 4
+          },
+          {
+            "name": "Overlord of the Mistmoors",
+            "count": 3
+          },
+          {
+            "name": "Elspeth, Storm Slayer",
+            "count": 2
+          },
+          {
+            "name": "Demolition Field",
+            "count": 1
+          },
+          {
+            "name": "Fountainport",
+            "count": 4
+          },
+          {
+            "name": "Sunfall",
+            "count": 2
+          },
+          {
+            "name": "Caretaker's Talent",
+            "count": 4
+          },
+          {
+            "name": "Get Lost",
+            "count": 4
+          },
+          {
+            "name": "Voice of Victory",
+            "count": 2
+          },
+          {
+            "name": "Enduring Innocence",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Ultima",
+            "count": 1
+          },
+          {
+            "name": "Requisition Raid",
+            "count": 2
+          },
+          {
+            "name": "Temporary Lockdown",
+            "count": 1
+          },
+          {
+            "name": "Authority of the Consuls",
+            "count": 3
+          },
+          {
+            "name": "Rest in Peace",
+            "count": 4
+          },
+          {
+            "name": "Destroy Evil",
+            "count": 2
+          },
+          {
+            "name": "Day of Judgment",
+            "count": 1
+          },
+          {
+            "name": "Elspeth, Storm Slayer",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743293"
+      },
+      {
+        "deck_id": "388ccba2-be9c-413d-a37c-b31f00b4a61a",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "Louphy",
+        "rank": 5,
+        "wins": 3,
+        "losses": 1,
+        "deck_name": "Izzet Cauldron",
+        "archetype": "Izzet Cauldron",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Thundering Falls",
+            "count": 2
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 4
+          },
+          {
+            "name": "Kiora, the Rising Tide",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 3
+          },
+          {
+            "name": "Vivi Ornitier",
+            "count": 4
+          },
+          {
+            "name": "Winternight Stories",
+            "count": 4
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 3
+          },
+          {
+            "name": "Island",
+            "count": 3
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 3
+          },
+          {
+            "name": "Marauding Mako",
+            "count": 4
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Tersa Lightshatter",
+            "count": 3
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Glacial Dragonhunt",
+            "count": 1
+          },
+          {
+            "name": "Proft's Eidetic Memory",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Disdainful Stroke",
+            "count": 2
+          },
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          },
+          {
+            "name": "Obliterating Bolt",
+            "count": 1
+          },
+          {
+            "name": "Unable to Scream",
+            "count": 2
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 2
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 1
+          },
+          {
+            "name": "Fire Magic",
+            "count": 2
+          },
+          {
+            "name": "Broadside Barrage",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743317"
+      },
+      {
+        "deck_id": "1c84f248-93df-4bf6-878e-b31f006e3f19",
+        "tournament_id": "2025-07-19_Boa Qualifier #2 2025 (standard)",
+        "player": "IO_fablor",
+        "rank": 12,
+        "wins": 1,
+        "losses": 3,
+        "deck_name": "Golgari Midrange",
+        "archetype": "Golgari Demons",
+        "colors": "BG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 4
+          },
+          {
+            "name": "Sentinel of the Nameless City",
+            "count": 3
+          },
+          {
+            "name": "Forest",
+            "count": 3
+          },
+          {
+            "name": "Qarsi Revenant",
+            "count": 1
+          },
+          {
+            "name": "Sheoldred, the Apocalypse",
+            "count": 1
+          },
+          {
+            "name": "Surrak, Elusive Hunter",
+            "count": 3
+          },
+          {
+            "name": "Restless Cottage",
+            "count": 4
+          },
+          {
+            "name": "Tear Asunder",
+            "count": 1
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 3
+          },
+          {
+            "name": "Fountainport",
+            "count": 1
+          },
+          {
+            "name": "Llanowar Elves",
+            "count": 4
+          },
+          {
+            "name": "Mosswood Dreadknight // Dread Whispers",
+            "count": 4
+          },
+          {
+            "name": "Llanowar Wastes",
+            "count": 4
+          },
+          {
+            "name": "Tranquil Frillback",
+            "count": 1
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 3
+          },
+          {
+            "name": "Blooming Marsh",
+            "count": 4
+          },
+          {
+            "name": "Maelstrom Pulse",
+            "count": 1
+          },
+          {
+            "name": "Archfiend of the Dross",
+            "count": 1
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 3
+          },
+          {
+            "name": "The End",
+            "count": 1
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 2
+          },
+          {
+            "name": "Unholy Annex // Ritual Chamber",
+            "count": 3
+          },
+          {
+            "name": "Cut Down",
+            "count": 3
+          },
+          {
+            "name": "Gix's Command",
+            "count": 2
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Cut Down",
+            "count": 1
+          },
+          {
+            "name": "Choking Miasma",
+            "count": 1
+          },
+          {
+            "name": "Dreams of Steel and Oil",
+            "count": 1
+          },
+          {
+            "name": "Disruptive Stormbrood // Petty Revenge",
+            "count": 2
+          },
+          {
+            "name": "Harvester of Misery",
+            "count": 1
+          },
+          {
+            "name": "Obstinate Baloth",
+            "count": 2
+          },
+          {
+            "name": "Tear Asunder",
+            "count": 2
+          },
+          {
+            "name": "Tranquil Frillback",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "The End",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.743343"
+      }
+    ]
+  },
+  "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2": {
+    "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+    "date": "2025-07-02T22:00:00+00:00",
+    "format": "standard",
+    "platform": "melee",
+    "decklists": [
+      {
+        "deck_id": "fd7b3c5f-1596-4f95-a849-b30e0153aae0",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "JustJR",
+        "rank": 8,
+        "wins": 0,
+        "losses": 3,
+        "deck_name": "Jeskai Oculus",
+        "archetype": "Jeskai Oculus",
+        "colors": "WUR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 1
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 1
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 3
+          },
+          {
+            "name": "Abrade",
+            "count": 2
+          },
+          {
+            "name": "Starting Town",
+            "count": 4
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 2
+          },
+          {
+            "name": "Seachrome Coast",
+            "count": 3
+          },
+          {
+            "name": "Abhorrent Oculus",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 1
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Summon: Brynhildr",
+            "count": 2
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 2
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 1
+          },
+          {
+            "name": "Marauding Mako",
+            "count": 4
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Plains",
+            "count": 1
+          },
+          {
+            "name": "Joshua, Phoenix's Dominant // Phoenix, Warden of Fire",
+            "count": 3
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Glacial Dragonhunt",
+            "count": 1
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Helping Hand",
+            "count": 4
+          },
+          {
+            "name": "Proft's Eidetic Memory",
+            "count": 4
+          },
+          {
+            "name": "Phoenix Down",
+            "count": 2
+          },
+          {
+            "name": "Steamcore Scholar",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "The Stone Brain",
+            "count": 2
+          },
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 2
+          },
+          {
+            "name": "Destroy Evil",
+            "count": 1
+          },
+          {
+            "name": "Exorcise",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Chandra, Spark Hunter",
+            "count": 2
+          },
+          {
+            "name": "No More Lies",
+            "count": 2
+          },
+          {
+            "name": "Abrade",
+            "count": 1
+          },
+          {
+            "name": "Authority of the Consuls",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747330"
+      },
+      {
+        "deck_id": "f3b7dc17-9c6c-4796-8a53-b30e015f8dad",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "Tyrant",
+        "rank": 6,
+        "wins": 1,
+        "losses": 2,
+        "deck_name": "Grim Captain",
+        "archetype": null,
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Floodpits Drowner",
+            "count": 3
+          },
+          {
+            "name": "Thundering Falls",
+            "count": 3
+          },
+          {
+            "name": "Starting Town",
+            "count": 1
+          },
+          {
+            "name": "Kiora, the Rising Tide",
+            "count": 1
+          },
+          {
+            "name": "Three Tree Mascot",
+            "count": 1
+          },
+          {
+            "name": "Taurean Mauler",
+            "count": 4
+          },
+          {
+            "name": "Ghalta and Mavren",
+            "count": 1
+          },
+          {
+            "name": "Hidden Grotto",
+            "count": 4
+          },
+          {
+            "name": "Trumpeting Carnosaur",
+            "count": 3
+          },
+          {
+            "name": "Etali, Primal Conqueror // Etali, Primal Sickness",
+            "count": 2
+          },
+          {
+            "name": "Mountain",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Throne of the Grim Captain // The Grim Captain",
+            "count": 4
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 4
+          },
+          {
+            "name": "Conduit Pylons",
+            "count": 4
+          },
+          {
+            "name": "Bitter Reunion",
+            "count": 4
+          },
+          {
+            "name": "Brass's Tunnel-Grinder // Tecutlan, the Searing Rift",
+            "count": 2
+          },
+          {
+            "name": "Staunch Crewmate",
+            "count": 3
+          },
+          {
+            "name": "Mishra's Command",
+            "count": 2
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 1
+          },
+          {
+            "name": "Brineborn Cutthroat",
+            "count": 2
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Gleeful Demolition",
+            "count": 1
+          },
+          {
+            "name": "Ephara's Dispersal",
+            "count": 2
+          },
+          {
+            "name": "Break the Spell",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 1
+          },
+          {
+            "name": "Long River's Pull",
+            "count": 2
+          },
+          {
+            "name": "Into the Flood Maw",
+            "count": 2
+          },
+          {
+            "name": "An Offer You Can't Refuse",
+            "count": 1
+          },
+          {
+            "name": "Abrade",
+            "count": 1
+          },
+          {
+            "name": "Pyroclasm",
+            "count": 2
+          },
+          {
+            "name": "Wear Down",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747355"
+      },
+      {
+        "deck_id": "a78410b6-1541-4db4-8c10-b30e012b1250",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "DarthZear166",
+        "rank": 5,
+        "wins": 1,
+        "losses": 1,
+        "deck_name": "Golgari Roots",
+        "archetype": "Golgari Graveyard",
+        "colors": "BG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Swamp",
+            "count": 1
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Starting Town",
+            "count": 2
+          },
+          {
+            "name": "Molt Tender",
+            "count": 4
+          },
+          {
+            "name": "Llanowar Elves",
+            "count": 2
+          },
+          {
+            "name": "Town Greeter",
+            "count": 2
+          },
+          {
+            "name": "Forest",
+            "count": 6
+          },
+          {
+            "name": "Llanowar Wastes",
+            "count": 2
+          },
+          {
+            "name": "Vanille, Cheerful l'Cie",
+            "count": 1
+          },
+          {
+            "name": "Scavenging Ooze",
+            "count": 2
+          },
+          {
+            "name": "Blooming Marsh",
+            "count": 4
+          },
+          {
+            "name": "Wastewood Verge",
+            "count": 4
+          },
+          {
+            "name": "Insidious Roots",
+            "count": 4
+          },
+          {
+            "name": "Dragon Sniper",
+            "count": 2
+          },
+          {
+            "name": "Osteomancer Adept",
+            "count": 2
+          },
+          {
+            "name": "Tyvar, Jubilant Brawler",
+            "count": 4
+          },
+          {
+            "name": "Rubblebelt Maverick",
+            "count": 2
+          },
+          {
+            "name": "Disruptive Stormbrood // Petty Revenge",
+            "count": 2
+          },
+          {
+            "name": "Cache Grab",
+            "count": 2
+          },
+          {
+            "name": "Great Arashin City",
+            "count": 1
+          },
+          {
+            "name": "Haywire Mite",
+            "count": 4
+          },
+          {
+            "name": "Dredger's Insight",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Balemurk",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Skyfisher Spider",
+            "count": 1
+          },
+          {
+            "name": "Agatha's Soul Cauldron",
+            "count": 1
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 2
+          },
+          {
+            "name": "Harvester of Misery",
+            "count": 2
+          },
+          {
+            "name": "Vanille, Cheerful l'Cie",
+            "count": 1
+          },
+          {
+            "name": "Cankerbloom",
+            "count": 1
+          },
+          {
+            "name": "Voldaren Thrillseeker",
+            "count": 1
+          },
+          {
+            "name": "Dragon Sniper",
+            "count": 2
+          },
+          {
+            "name": "Fang, Fearless l'Cie",
+            "count": 3
+          },
+          {
+            "name": "Gastal Raider",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747381"
+      },
+      {
+        "deck_id": "78b3f54c-2c49-4a44-b8e3-b30e014c64c4",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "Jaffer",
+        "rank": 1,
+        "wins": 3,
+        "losses": 0,
+        "deck_name": "Dimir Midrange",
+        "archetype": "Dimir Midrange",
+        "colors": "UB",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Sheoldred's Edict",
+            "count": 1
+          },
+          {
+            "name": "Dreams of Steel and Oil",
+            "count": 1
+          },
+          {
+            "name": "Floodpits Drowner",
+            "count": 4
+          },
+          {
+            "name": "Swamp",
+            "count": 4
+          },
+          {
+            "name": "Kaito, Bane of Nightmares",
+            "count": 3
+          },
+          {
+            "name": "Phantom Interference",
+            "count": 2
+          },
+          {
+            "name": "Cecil, Dark Knight // Cecil, Redeemed Paladin",
+            "count": 3
+          },
+          {
+            "name": "Darkslick Shores",
+            "count": 4
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 3
+          },
+          {
+            "name": "Restless Reef",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 4
+          },
+          {
+            "name": "Underground River",
+            "count": 4
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 4
+          },
+          {
+            "name": "Faerie Mastermind",
+            "count": 4
+          },
+          {
+            "name": "Spyglass Siren",
+            "count": 4
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Saiba Cryptomancer",
+            "count": 1
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 3
+          },
+          {
+            "name": "Cut Down",
+            "count": 3
+          },
+          {
+            "name": "Gloomlake Verge",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Kaito, Bane of Nightmares",
+            "count": 1
+          },
+          {
+            "name": "Disdainful Stroke",
+            "count": 1
+          },
+          {
+            "name": "Dreams of Steel and Oil",
+            "count": 1
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 2
+          },
+          {
+            "name": "Blot Out",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Duress",
+            "count": 2
+          },
+          {
+            "name": "Saiba Cryptomancer",
+            "count": 1
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 1
+          },
+          {
+            "name": "The Filigree Sylex",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747411"
+      },
+      {
+        "deck_id": "5a764718-7052-4039-bfbf-b30e01567794",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "gamblet",
+        "rank": 4,
+        "wins": 2,
+        "losses": 1,
+        "deck_name": "Mardu Midrange",
+        "archetype": null,
+        "colors": "WR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Lightning, Army of One",
+            "count": 2
+          },
+          {
+            "name": "Inti, Seneschal of the Sun",
+            "count": 1
+          },
+          {
+            "name": "Cori Mountain Monastery",
+            "count": 1
+          },
+          {
+            "name": "Zack Fair",
+            "count": 1
+          },
+          {
+            "name": "Concealed Courtyard",
+            "count": 4
+          },
+          {
+            "name": "Cut Down",
+            "count": 2
+          },
+          {
+            "name": "Phyrexian Dragon Engine",
+            "count": 1
+          },
+          {
+            "name": "Buster Sword",
+            "count": 1
+          },
+          {
+            "name": "Battlefield Forge",
+            "count": 1
+          },
+          {
+            "name": "Inspiring Vantage",
+            "count": 2
+          },
+          {
+            "name": "Cecil, Dark Knight // Cecil, Redeemed Paladin",
+            "count": 1
+          },
+          {
+            "name": "Starting Town",
+            "count": 4
+          },
+          {
+            "name": "Sheltered by Ghosts",
+            "count": 3
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 2
+          },
+          {
+            "name": "Mishra, Claimed by Gix",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 2
+          },
+          {
+            "name": "Mountain",
+            "count": 1
+          },
+          {
+            "name": "Blackcleave Cliffs",
+            "count": 4
+          },
+          {
+            "name": "Nullpriest of Oblivion",
+            "count": 1
+          },
+          {
+            "name": "Danitha, Benalia's Hope",
+            "count": 1
+          },
+          {
+            "name": "Caves of Koilos",
+            "count": 2
+          },
+          {
+            "name": "Summon: Brynhildr",
+            "count": 4
+          },
+          {
+            "name": "Squall, SeeD Mercenary",
+            "count": 2
+          },
+          {
+            "name": "Fear of Missing Out",
+            "count": 4
+          },
+          {
+            "name": "Veteran Survivor",
+            "count": 3
+          },
+          {
+            "name": "Plains",
+            "count": 2
+          },
+          {
+            "name": "Screaming Nemesis",
+            "count": 2
+          },
+          {
+            "name": "Sulfurous Springs",
+            "count": 2
+          },
+          {
+            "name": "Clarion Conqueror",
+            "count": 2
+          },
+          {
+            "name": "Overlord of the Balemurk",
+            "count": 1
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Elenda, Saint of Dusk",
+            "count": 2
+          },
+          {
+            "name": "Get Lost",
+            "count": 3
+          },
+          {
+            "name": "The Wandering Rescuer",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 1
+          },
+          {
+            "name": "Nahiri, the Unforgiving",
+            "count": 1
+          },
+          {
+            "name": "Neriv, Heart of the Storm",
+            "count": 1
+          },
+          {
+            "name": "Boros Charm",
+            "count": 2
+          },
+          {
+            "name": "Leyline of the Void",
+            "count": 3
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747437"
+      },
+      {
+        "deck_id": "30016a5c-3521-418e-a2f8-b30e01651f77",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "Bryndis Tamsyn",
+        "rank": 7,
+        "wins": 1,
+        "losses": 2,
+        "deck_name": "Niv-Mizzet Control",
+        "archetype": null,
+        "colors": "WUBRG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Elegant Parlor",
+            "count": 1
+          },
+          {
+            "name": "Swamp",
+            "count": 1
+          },
+          {
+            "name": "Thundering Falls",
+            "count": 2
+          },
+          {
+            "name": "Lush Portico",
+            "count": 4
+          },
+          {
+            "name": "Niv-Mizzet, Supreme",
+            "count": 3
+          },
+          {
+            "name": "Legions to Ashes",
+            "count": 1
+          },
+          {
+            "name": "Forest",
+            "count": 2
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 2
+          },
+          {
+            "name": "Hedge Maze",
+            "count": 1
+          },
+          {
+            "name": "Underground Mortuary",
+            "count": 2
+          },
+          {
+            "name": "Ill-Timed Explosion",
+            "count": 3
+          },
+          {
+            "name": "Fabled Passage",
+            "count": 4
+          },
+          {
+            "name": "Urgent Necropsy",
+            "count": 1
+          },
+          {
+            "name": "Mountain",
+            "count": 1
+          },
+          {
+            "name": "Roxanne, Starfall Savant",
+            "count": 1
+          },
+          {
+            "name": "Oko, the Ringleader",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Doppelgang",
+            "count": 2
+          },
+          {
+            "name": "Undercity Sewers",
+            "count": 1
+          },
+          {
+            "name": "Maelstrom Pulse",
+            "count": 2
+          },
+          {
+            "name": "Make Your Own Luck",
+            "count": 1
+          },
+          {
+            "name": "Lightning Helix",
+            "count": 4
+          },
+          {
+            "name": "Split Up",
+            "count": 2
+          },
+          {
+            "name": "Plains",
+            "count": 3
+          },
+          {
+            "name": "Commercial District",
+            "count": 4
+          },
+          {
+            "name": "Leyline Binding",
+            "count": 4
+          },
+          {
+            "name": "Ancient Cornucopia",
+            "count": 4
+          },
+          {
+            "name": "Atraxa, Grand Unifier",
+            "count": 1
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Negate",
+            "count": 2
+          },
+          {
+            "name": "Squirming Emergence",
+            "count": 1
+          },
+          {
+            "name": "Niv-Mizzet, Guildpact",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 3
+          },
+          {
+            "name": "Urgent Necropsy",
+            "count": 1
+          },
+          {
+            "name": "Sephiroth, Planet's Heir",
+            "count": 2
+          },
+          {
+            "name": "Deadly Cover-Up",
+            "count": 1
+          },
+          {
+            "name": "Split Up",
+            "count": 1
+          },
+          {
+            "name": "Jace, the Perfected Mind",
+            "count": 2
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747462"
+      },
+      {
+        "deck_id": "2bcad0b1-0f79-4535-9b92-b30e0115ded9",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "Jackfred99",
+        "rank": null,
+        "wins": null,
+        "losses": null,
+        "deck_name": "Dimir Midrange",
+        "archetype": "Dimir Midrange",
+        "colors": "UB",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Floodpits Drowner",
+            "count": 4
+          },
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Swamp",
+            "count": 4
+          },
+          {
+            "name": "Kaito, Bane of Nightmares",
+            "count": 3
+          },
+          {
+            "name": "Sheoldred, the Apocalypse",
+            "count": 1
+          },
+          {
+            "name": "Phantom Interference",
+            "count": 1
+          },
+          {
+            "name": "Darkslick Shores",
+            "count": 4
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 3
+          },
+          {
+            "name": "Restless Reef",
+            "count": 2
+          },
+          {
+            "name": "Fountainport",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 4
+          },
+          {
+            "name": "Underground River",
+            "count": 4
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 4
+          },
+          {
+            "name": "Spyglass Siren",
+            "count": 4
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 1
+          },
+          {
+            "name": "Preacher of the Schism",
+            "count": 3
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 4
+          },
+          {
+            "name": "Gloomlake Verge",
+            "count": 4
+          },
+          {
+            "name": "Cut Down",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Kaito, Bane of Nightmares",
+            "count": 1
+          },
+          {
+            "name": "Preacher of the Schism",
+            "count": 1
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          },
+          {
+            "name": "Faerie Mastermind",
+            "count": 1
+          },
+          {
+            "name": "Duress",
+            "count": 1
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 3
+          },
+          {
+            "name": "Soul-Guide Lantern",
+            "count": 1
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 2
+          },
+          {
+            "name": "Ertai Resurrected",
+            "count": 1
+          },
+          {
+            "name": "Negate",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747492"
+      },
+      {
+        "deck_id": "299e60fc-43e5-400a-b012-b30e01584b39",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "Leo Finnveden",
+        "rank": 2,
+        "wins": 2,
+        "losses": 1,
+        "deck_name": "Dimir Midrange",
+        "archetype": "Dimir Midrange",
+        "colors": "UB",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Floodpits Drowner",
+            "count": 4
+          },
+          {
+            "name": "Preacher of the Schism",
+            "count": 2
+          },
+          {
+            "name": "Kaito, Bane of Nightmares",
+            "count": 4
+          },
+          {
+            "name": "Cecil, Dark Knight // Cecil, Redeemed Paladin",
+            "count": 1
+          },
+          {
+            "name": "Darkslick Shores",
+            "count": 4
+          },
+          {
+            "name": "Go for the Throat",
+            "count": 4
+          },
+          {
+            "name": "Restless Reef",
+            "count": 1
+          },
+          {
+            "name": "Fountainport",
+            "count": 1
+          },
+          {
+            "name": "Swamp",
+            "count": 5
+          },
+          {
+            "name": "Island",
+            "count": 4
+          },
+          {
+            "name": "Underground River",
+            "count": 4
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 2
+          },
+          {
+            "name": "Enduring Curiosity",
+            "count": 4
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 1
+          },
+          {
+            "name": "Spyglass Siren",
+            "count": 4
+          },
+          {
+            "name": "Soulstone Sanctuary",
+            "count": 2
+          },
+          {
+            "name": "Deep-Cavern Bat",
+            "count": 4
+          },
+          {
+            "name": "Gloomlake Verge",
+            "count": 4
+          },
+          {
+            "name": "Cut Down",
+            "count": 4
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Gix's Command",
+            "count": 1
+          },
+          {
+            "name": "Disdainful Stroke",
+            "count": 1
+          },
+          {
+            "name": "Preacher of the Schism",
+            "count": 1
+          },
+          {
+            "name": "Negate",
+            "count": 2
+          },
+          {
+            "name": "Sheoldred, the Apocalypse",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Duress",
+            "count": 3
+          },
+          {
+            "name": "Tishana's Tidebinder",
+            "count": 3
+          },
+          {
+            "name": "Anoint with Affliction",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747518"
+      },
+      {
+        "deck_id": "298b91e2-9a8a-48f3-a247-b30e0156481d",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "BlueCathode",
+        "rank": null,
+        "wins": null,
+        "losses": null,
+        "deck_name": "Temur Otters",
+        "archetype": "Temur Prowess",
+        "colors": "URG",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Opt",
+            "count": 2
+          },
+          {
+            "name": "Botanical Sanctum",
+            "count": 4
+          },
+          {
+            "name": "Willowrush Verge",
+            "count": 4
+          },
+          {
+            "name": "Get Out",
+            "count": 4
+          },
+          {
+            "name": "Bushwhack",
+            "count": 2
+          },
+          {
+            "name": "Forest",
+            "count": 1
+          },
+          {
+            "name": "Roaring Furnace // Steaming Sauna",
+            "count": 2
+          },
+          {
+            "name": "Stormchaser's Talent",
+            "count": 4
+          },
+          {
+            "name": "Valley Floodcaller",
+            "count": 3
+          },
+          {
+            "name": "Hedge Maze",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 3
+          },
+          {
+            "name": "Analyze the Pollen",
+            "count": 2
+          },
+          {
+            "name": "Song of Totentanz",
+            "count": 2
+          },
+          {
+            "name": "Mountain",
+            "count": 1
+          },
+          {
+            "name": "Island",
+            "count": 1
+          },
+          {
+            "name": "Kitsa, Otterball Elite",
+            "count": 2
+          },
+          {
+            "name": "Thundertrap Trainer",
+            "count": 3
+          },
+          {
+            "name": "Enduring Vitality",
+            "count": 4
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 1
+          },
+          {
+            "name": "Pick Your Poison",
+            "count": 1
+          },
+          {
+            "name": "Stock Up",
+            "count": 2
+          },
+          {
+            "name": "Questing Druid // Seek the Beast",
+            "count": 2
+          },
+          {
+            "name": "Commercial District",
+            "count": 1
+          },
+          {
+            "name": "Splash Portal",
+            "count": 1
+          },
+          {
+            "name": "Copperline Gorge",
+            "count": 4
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 3
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "Scrapshooter",
+            "count": 1
+          },
+          {
+            "name": "Disdainful Stroke",
+            "count": 1
+          },
+          {
+            "name": "Obstinate Baloth",
+            "count": 2
+          },
+          {
+            "name": "Aegis Turtle",
+            "count": 1
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 2
+          },
+          {
+            "name": "Twinmaw Stormbrood // Charring Bite",
+            "count": 1
+          },
+          {
+            "name": "Ral, Crackling Wit",
+            "count": 2
+          },
+          {
+            "name": "Heritage Reclamation",
+            "count": 1
+          },
+          {
+            "name": "Lithomantic Barrage",
+            "count": 2
+          },
+          {
+            "name": "Spell Pierce",
+            "count": 1
+          },
+          {
+            "name": "Fear of Isolation",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747546"
+      },
+      {
+        "deck_id": "21c17755-4980-4c4d-922b-b30e01523df5",
+        "tournament_id": "2025-07-02_TheGathering.gg Standard Post-BNR Celebration #2",
+        "player": "ScuffleDLux",
+        "rank": 3,
+        "wins": 2,
+        "losses": 1,
+        "deck_name": "Izzet Artifacts",
+        "archetype": "Izzet Artifacts",
+        "colors": "UR",
+        "companion": null,
+        "mainboard": [
+          {
+            "name": "Thundering Falls",
+            "count": 2
+          },
+          {
+            "name": "Island",
+            "count": 5
+          },
+          {
+            "name": "Radiant Lotus",
+            "count": 1
+          },
+          {
+            "name": "Braided Net // Braided Quipu",
+            "count": 1
+          },
+          {
+            "name": "Solemn Simulacrum",
+            "count": 1
+          },
+          {
+            "name": "Simulacrum Synthesizer",
+            "count": 4
+          },
+          {
+            "name": "Samurai's Katana",
+            "count": 1
+          },
+          {
+            "name": "Fomori Vault",
+            "count": 2
+          },
+          {
+            "name": "Thran Spider",
+            "count": 3
+          },
+          {
+            "name": "Mazemind Tome",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 1
+          },
+          {
+            "name": "Repurposing Bay",
+            "count": 4
+          },
+          {
+            "name": "Mountain",
+            "count": 3
+          },
+          {
+            "name": "The Enigma Jewel // Locus of Enlightenment",
+            "count": 4
+          },
+          {
+            "name": "Memory Guardian",
+            "count": 2
+          },
+          {
+            "name": "The Mightstone and Weakstone",
+            "count": 2
+          },
+          {
+            "name": "Yotia Declares War",
+            "count": 1
+          },
+          {
+            "name": "Riverpyre Verge",
+            "count": 4
+          },
+          {
+            "name": "Spirebluff Canal",
+            "count": 4
+          },
+          {
+            "name": "Soul-Guide Lantern",
+            "count": 1
+          },
+          {
+            "name": "Shivan Reef",
+            "count": 4
+          },
+          {
+            "name": "Chainsaw",
+            "count": 2
+          },
+          {
+            "name": "Legion Extruder",
+            "count": 4
+          },
+          {
+            "name": "Boommobile",
+            "count": 2
+          }
+        ],
+        "sideboard": [
+          {
+            "name": "The Stone Brain",
+            "count": 1
+          },
+          {
+            "name": "Braided Net // Braided Quipu",
+            "count": 2
+          },
+          {
+            "name": "Scorching Shot",
+            "count": 2
+          },
+          {
+            "name": "Sorcerous Spyglass",
+            "count": 1
+          },
+          {
+            "name": "Torpor Orb",
+            "count": 1
+          },
+          {
+            "name": "Torch the Tower",
+            "count": 2
+          },
+          {
+            "name": "Ghost Vacuum",
+            "count": 1
+          },
+          {
+            "name": "Witchstalker Frenzy",
+            "count": 1
+          },
+          {
+            "name": "Chimil, the Inner Sun",
+            "count": 1
+          },
+          {
+            "name": "Urabrask's Forge",
+            "count": 2
+          },
+          {
+            "name": "The Filigree Sylex",
+            "count": 1
+          }
+        ],
+        "cached_at": "2025-07-28T00:42:01.747576"
+      }
+    ]
+  }
+}
