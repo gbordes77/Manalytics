@@ -1,0 +1,24 @@
+{
+  "match_id": "10074",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-07T00:00:00Z",
+  "round": 4,
+  "player1": {
+    "name": "Player_46",
+    "archetype": "Gruul Prowess",
+    "deck_id": "deck_46"
+  },
+  "player2": {
+    "name": "Player_47",
+    "archetype": "Mono White Caretaker",
+    "deck_id": "deck_47"
+  },
+  "result": {
+    "winner": "player2",
+    "games": [
+      1,
+      2
+    ]
+  }
+}

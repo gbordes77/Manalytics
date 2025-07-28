@@ -1,0 +1,24 @@
+{
+  "match_id": "10009",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-05T00:00:00Z",
+  "round": 4,
+  "player1": {
+    "name": "Player_16",
+    "archetype": "Boros Convoke",
+    "deck_id": "deck_16"
+  },
+  "player2": {
+    "name": "Player_17",
+    "archetype": "Dimir Midrange",
+    "deck_id": "deck_17"
+  },
+  "result": {
+    "winner": "player2",
+    "games": [
+      1,
+      2
+    ]
+  }
+}

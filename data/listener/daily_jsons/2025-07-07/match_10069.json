@@ -1,0 +1,24 @@
+{
+  "match_id": "10069",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-07T00:00:00Z",
+  "round": 4,
+  "player1": {
+    "name": "Player_36",
+    "archetype": "Esper Control",
+    "deck_id": "deck_36"
+  },
+  "player2": {
+    "name": "Player_37",
+    "archetype": "Domain Ramp",
+    "deck_id": "deck_37"
+  },
+  "result": {
+    "winner": "player2",
+    "games": [
+      1,
+      2
+    ]
+  }
+}

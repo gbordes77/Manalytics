@@ -1,0 +1,266 @@
+{
+  "timestamp": "2025-07-28T08:11:18.634807",
+  "summary": {
+    "total_archetypes": 7,
+    "total_unique_matchups": 21,
+    "total_matches": 77,
+    "average_matches_per_matchup": 3.7
+  },
+  "performance": {
+    "Mono White Caretaker": {
+      "overall_win_rate": 70.8,
+      "confidence_lower": 50.8,
+      "confidence_upper": 85.1,
+      "total_matches": 24,
+      "total_wins": 17,
+      "total_losses": 7
+    },
+    "Domain Ramp": {
+      "overall_win_rate": 68.4,
+      "confidence_lower": 46.0,
+      "confidence_upper": 84.6,
+      "total_matches": 19,
+      "total_wins": 13,
+      "total_losses": 6
+    },
+    "Esper Control": {
+      "overall_win_rate": 55.0,
+      "confidence_lower": 34.2,
+      "confidence_upper": 74.2,
+      "total_matches": 20,
+      "total_wins": 11,
+      "total_losses": 9
+    },
+    "Boros Convoke": {
+      "overall_win_rate": 43.3,
+      "confidence_lower": 27.4,
+      "confidence_upper": 60.8,
+      "total_matches": 30,
+      "total_wins": 13,
+      "total_losses": 17
+    },
+    "Izzet Cauldron": {
+      "overall_win_rate": 39.1,
+      "confidence_lower": 22.2,
+      "confidence_upper": 59.2,
+      "total_matches": 23,
+      "total_wins": 9,
+      "total_losses": 14
+    },
+    "Gruul Prowess": {
+      "overall_win_rate": 38.1,
+      "confidence_lower": 20.8,
+      "confidence_upper": 59.1,
+      "total_matches": 21,
+      "total_wins": 8,
+      "total_losses": 13
+    },
+    "Dimir Midrange": {
+      "overall_win_rate": 35.3,
+      "confidence_lower": 17.3,
+      "confidence_upper": 58.7,
+      "total_matches": 17,
+      "total_wins": 6,
+      "total_losses": 11
+    }
+  },
+  "significant_matchups": [
+    {
+      "matchup": "Izzet Cauldron vs Mono White Caretaker",
+      "archetype1": "Izzet Cauldron",
+      "archetype2": "Mono White Caretaker",
+      "archetype1_win_rate": 71.4,
+      "archetype2_win_rate": 28.6,
+      "matches": 7,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Boros Convoke vs Gruul Prowess",
+      "archetype1": "Boros Convoke",
+      "archetype2": "Gruul Prowess",
+      "archetype1_win_rate": 66.7,
+      "archetype2_win_rate": 33.3,
+      "matches": 6,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Boros Convoke vs Mono White Caretaker",
+      "archetype1": "Boros Convoke",
+      "archetype2": "Mono White Caretaker",
+      "archetype1_win_rate": 16.7,
+      "archetype2_win_rate": 83.3,
+      "matches": 6,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Boros Convoke vs Izzet Cauldron",
+      "archetype1": "Boros Convoke",
+      "archetype2": "Izzet Cauldron",
+      "archetype1_win_rate": 83.3,
+      "archetype2_win_rate": 16.7,
+      "matches": 6,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Boros Convoke vs Esper Control",
+      "archetype1": "Boros Convoke",
+      "archetype2": "Esper Control",
+      "archetype1_win_rate": 40.0,
+      "archetype2_win_rate": 60.0,
+      "matches": 5,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Esper Control vs Gruul Prowess",
+      "archetype1": "Esper Control",
+      "archetype2": "Gruul Prowess",
+      "archetype1_win_rate": 20.0,
+      "archetype2_win_rate": 80.0,
+      "matches": 5,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Gruul Prowess vs Mono White Caretaker",
+      "archetype1": "Gruul Prowess",
+      "archetype2": "Mono White Caretaker",
+      "archetype1_win_rate": 0.0,
+      "archetype2_win_rate": 100.0,
+      "matches": 4,
+      "confidence_overlap": false
+    },
+    {
+      "matchup": "Boros Convoke vs Dimir Midrange",
+      "archetype1": "Boros Convoke",
+      "archetype2": "Dimir Midrange",
+      "archetype1_win_rate": 0.0,
+      "archetype2_win_rate": 100.0,
+      "matches": 4,
+      "confidence_overlap": false
+    },
+    {
+      "matchup": "Domain Ramp vs Izzet Cauldron",
+      "archetype1": "Domain Ramp",
+      "archetype2": "Izzet Cauldron",
+      "archetype1_win_rate": 100.0,
+      "archetype2_win_rate": 0.0,
+      "matches": 4,
+      "confidence_overlap": false
+    },
+    {
+      "matchup": "Domain Ramp vs Esper Control",
+      "archetype1": "Domain Ramp",
+      "archetype2": "Esper Control",
+      "archetype1_win_rate": 50.0,
+      "archetype2_win_rate": 50.0,
+      "matches": 4,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Dimir Midrange vs Domain Ramp",
+      "archetype1": "Dimir Midrange",
+      "archetype2": "Domain Ramp",
+      "archetype1_win_rate": 25.0,
+      "archetype2_win_rate": 75.0,
+      "matches": 4,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Boros Convoke vs Domain Ramp",
+      "archetype1": "Boros Convoke",
+      "archetype2": "Domain Ramp",
+      "archetype1_win_rate": 33.3,
+      "archetype2_win_rate": 66.7,
+      "matches": 3,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Dimir Midrange vs Mono White Caretaker",
+      "archetype1": "Dimir Midrange",
+      "archetype2": "Mono White Caretaker",
+      "archetype1_win_rate": 0.0,
+      "archetype2_win_rate": 100.0,
+      "matches": 3,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Gruul Prowess vs Izzet Cauldron",
+      "archetype1": "Gruul Prowess",
+      "archetype2": "Izzet Cauldron",
+      "archetype1_win_rate": 50.0,
+      "archetype2_win_rate": 50.0,
+      "matches": 2,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Esper Control vs Izzet Cauldron",
+      "archetype1": "Esper Control",
+      "archetype2": "Izzet Cauldron",
+      "archetype1_win_rate": 100.0,
+      "archetype2_win_rate": 0.0,
+      "matches": 2,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Esper Control vs Mono White Caretaker",
+      "archetype1": "Esper Control",
+      "archetype2": "Mono White Caretaker",
+      "archetype1_win_rate": 50.0,
+      "archetype2_win_rate": 50.0,
+      "matches": 2,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Domain Ramp vs Mono White Caretaker",
+      "archetype1": "Domain Ramp",
+      "archetype2": "Mono White Caretaker",
+      "archetype1_win_rate": 0.0,
+      "archetype2_win_rate": 100.0,
+      "matches": 2,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Domain Ramp vs Gruul Prowess",
+      "archetype1": "Domain Ramp",
+      "archetype2": "Gruul Prowess",
+      "archetype1_win_rate": 100.0,
+      "archetype2_win_rate": 0.0,
+      "matches": 2,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Dimir Midrange vs Izzet Cauldron",
+      "archetype1": "Dimir Midrange",
+      "archetype2": "Izzet Cauldron",
+      "archetype1_win_rate": 0.0,
+      "archetype2_win_rate": 100.0,
+      "matches": 2,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Dimir Midrange vs Gruul Prowess",
+      "archetype1": "Dimir Midrange",
+      "archetype2": "Gruul Prowess",
+      "archetype1_win_rate": 50.0,
+      "archetype2_win_rate": 50.0,
+      "matches": 2,
+      "confidence_overlap": true
+    },
+    {
+      "matchup": "Dimir Midrange vs Esper Control",
+      "archetype1": "Dimir Midrange",
+      "archetype2": "Esper Control",
+      "archetype1_win_rate": 0.0,
+      "archetype2_win_rate": 100.0,
+      "matches": 2,
+      "confidence_overlap": true
+    }
+  ],
+  "archetype_stats": {
+    "overall_win_rate": 39.1,
+    "confidence_lower": 22.2,
+    "confidence_upper": 59.2,
+    "total_matches": 23,
+    "total_wins": 9,
+    "total_losses": 14
+  }
+}

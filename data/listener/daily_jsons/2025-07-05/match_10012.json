@@ -1,0 +1,24 @@
+{
+  "match_id": "10012",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-05T00:00:00Z",
+  "round": 2,
+  "player1": {
+    "name": "Player_22",
+    "archetype": "Mono White Caretaker",
+    "deck_id": "deck_22"
+  },
+  "player2": {
+    "name": "Player_23",
+    "archetype": "Dimir Midrange",
+    "deck_id": "deck_23"
+  },
+  "result": {
+    "winner": "player1",
+    "games": [
+      2,
+      1
+    ]
+  }
+}

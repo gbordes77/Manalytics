@@ -1,0 +1,24 @@
+{
+  "match_id": "10065",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-07T00:00:00Z",
+  "round": 5,
+  "player1": {
+    "name": "Player_28",
+    "archetype": "Izzet Cauldron",
+    "deck_id": "deck_28"
+  },
+  "player2": {
+    "name": "Player_29",
+    "archetype": "Mono White Caretaker",
+    "deck_id": "deck_29"
+  },
+  "result": {
+    "winner": "player1",
+    "games": [
+      2,
+      1
+    ]
+  }
+}

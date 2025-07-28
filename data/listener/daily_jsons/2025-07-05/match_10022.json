@@ -1,0 +1,24 @@
+{
+  "match_id": "10022",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-05T00:00:00Z",
+  "round": 2,
+  "player1": {
+    "name": "Player_42",
+    "archetype": "Domain Ramp",
+    "deck_id": "deck_42"
+  },
+  "player2": {
+    "name": "Player_43",
+    "archetype": "Gruul Prowess",
+    "deck_id": "deck_43"
+  },
+  "result": {
+    "winner": "player1",
+    "games": [
+      2,
+      1
+    ]
+  }
+}

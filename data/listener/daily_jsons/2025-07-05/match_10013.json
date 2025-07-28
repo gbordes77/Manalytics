@@ -1,0 +1,24 @@
+{
+  "match_id": "10013",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-05T00:00:00Z",
+  "round": 3,
+  "player1": {
+    "name": "Player_24",
+    "archetype": "Esper Control",
+    "deck_id": "deck_24"
+  },
+  "player2": {
+    "name": "Player_25",
+    "archetype": "Dimir Midrange",
+    "deck_id": "deck_25"
+  },
+  "result": {
+    "winner": "player1",
+    "games": [
+      2,
+      1
+    ]
+  }
+}

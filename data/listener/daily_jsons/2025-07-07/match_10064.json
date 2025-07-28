@@ -1,0 +1,24 @@
+{
+  "match_id": "10064",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-07T00:00:00Z",
+  "round": 4,
+  "player1": {
+    "name": "Player_26",
+    "archetype": "Dimir Midrange",
+    "deck_id": "deck_26"
+  },
+  "player2": {
+    "name": "Player_27",
+    "archetype": "Domain Ramp",
+    "deck_id": "deck_27"
+  },
+  "result": {
+    "winner": "player2",
+    "games": [
+      1,
+      2
+    ]
+  }
+}

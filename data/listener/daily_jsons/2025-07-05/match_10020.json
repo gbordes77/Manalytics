@@ -1,0 +1,24 @@
+{
+  "match_id": "10020",
+  "tournament_id": 12801654,
+  "format": "standard",
+  "date": "2025-07-05T00:00:00Z",
+  "round": 5,
+  "player1": {
+    "name": "Player_38",
+    "archetype": "Esper Control",
+    "deck_id": "deck_38"
+  },
+  "player2": {
+    "name": "Player_39",
+    "archetype": "Boros Convoke",
+    "deck_id": "deck_39"
+  },
+  "result": {
+    "winner": "player1",
+    "games": [
+      2,
+      1
+    ]
+  }
+}
