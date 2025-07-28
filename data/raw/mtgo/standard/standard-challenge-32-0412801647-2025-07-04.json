@@ -1,0 +1,3950 @@
+{
+  "tournament_id": "0412801647",
+  "name": "Standard Challenge 32",
+  "format": "standard",
+  "date": "2025-07-04",
+  "tournament_type": "challenge",
+  "total_players": 32,
+  "decks": [
+    {
+      "player": "kthanakit26",
+      "result": "1st Place",
+      "rank": 1,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 3,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix, Yawgmoth Praetor"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 1,
+          "card_name": "Nowhere to Run"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "etoustar",
+      "result": "2nd Place",
+      "rank": 2,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Ertai Resurrected"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "Skeptic2304",
+      "result": "3rd Place",
+      "rank": 3,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Ertai Resurrected"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "416FrowningTable",
+      "result": "4th Place",
+      "rank": 4,
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 3,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 2,
+          "card_name": "Duress"
+        },
+        {
+          "count": 3,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 5,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 2,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 1,
+          "card_name": "Ertai Resurrected"
+        },
+        {
+          "count": 1,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 2,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 1,
+          "card_name": "Strategic Betrayal"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "Lord_Beerus",
+      "result": "5th Place",
+      "rank": 5,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Ertai Resurrected"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "Mogged",
+      "result": "6th Place",
+      "rank": 6,
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Cecil, Dark Knight"
+        },
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 3,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 4,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Saiba Cryptomancer"
+        },
+        {
+          "count": 2,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 3,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 1,
+          "card_name": "Duress"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 2,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 2,
+          "card_name": "Negate"
+        },
+        {
+          "count": 4,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "derk714",
+      "result": "7th Place",
+      "rank": 7,
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Adarkar Wastes"
+        },
+        {
+          "count": 1,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 1,
+          "card_name": "Builder's Talent"
+        },
+        {
+          "count": 2,
+          "card_name": "Cavern of Souls"
+        },
+        {
+          "count": 3,
+          "card_name": "Ephara's Dispersal"
+        },
+        {
+          "count": 1,
+          "card_name": "Fabled Passage"
+        },
+        {
+          "count": 3,
+          "card_name": "Fallaji Archaeologist"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodfarm Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Marang River Regent"
+        },
+        {
+          "count": 4,
+          "card_name": "Meticulous Archive"
+        },
+        {
+          "count": 4,
+          "card_name": "Omniscience"
+        },
+        {
+          "count": 2,
+          "card_name": "Oracle of Tragedy"
+        },
+        {
+          "count": 3,
+          "card_name": "Overlord of the Floodpits"
+        },
+        {
+          "count": 4,
+          "card_name": "Plains"
+        },
+        {
+          "count": 1,
+          "card_name": "Refute"
+        },
+        {
+          "count": 4,
+          "card_name": "Repair and Recharge"
+        },
+        {
+          "count": 4,
+          "card_name": "Roiling Dragonstorm"
+        },
+        {
+          "count": 2,
+          "card_name": "Scrollshift"
+        },
+        {
+          "count": 3,
+          "card_name": "Seachrome Coast"
+        },
+        {
+          "count": 1,
+          "card_name": "Stock Up"
+        },
+        {
+          "count": 3,
+          "card_name": "Temporary Lockdown"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 2,
+          "card_name": "Grand Abolisher"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 1,
+          "card_name": "No More Lies"
+        },
+        {
+          "count": 1,
+          "card_name": "Overlord of the Floodpits"
+        },
+        {
+          "count": 3,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 1,
+          "card_name": "Scrollshift"
+        },
+        {
+          "count": 1,
+          "card_name": "Soul Partition"
+        },
+        {
+          "count": 1,
+          "card_name": "Temporary Lockdown"
+        }
+      ]
+    },
+    {
+      "player": "outZEROo",
+      "result": "8th Place",
+      "rank": 8,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Ertai Resurrected"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "ovmlcabrera",
+      "result": "9th Place",
+      "rank": 9,
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 4,
+          "card_name": "Caretaker's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Carrot Cake"
+        },
+        {
+          "count": 1,
+          "card_name": "Day of Judgment"
+        },
+        {
+          "count": 2,
+          "card_name": "Demolition Field"
+        },
+        {
+          "count": 1,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Innocence"
+        },
+        {
+          "count": 4,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 3,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 1,
+          "card_name": "Idyllic Beachfront"
+        },
+        {
+          "count": 1,
+          "card_name": "Jace, the Perfected Mind"
+        },
+        {
+          "count": 4,
+          "card_name": "Lay Down Arms"
+        },
+        {
+          "count": 4,
+          "card_name": "Meticulous Archive"
+        },
+        {
+          "count": 3,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 12,
+          "card_name": "Plains"
+        },
+        {
+          "count": 1,
+          "card_name": "Soul Partition"
+        },
+        {
+          "count": 2,
+          "card_name": "Sunken Citadel"
+        },
+        {
+          "count": 1,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 2,
+          "card_name": "Ultima"
+        },
+        {
+          "count": 3,
+          "card_name": "Voice of Victory"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Day of Judgment"
+        },
+        {
+          "count": 1,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 1,
+          "card_name": "Exorcise"
+        },
+        {
+          "count": 1,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 1,
+          "card_name": "Jace, the Perfected Mind"
+        },
+        {
+          "count": 1,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 2,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 1,
+          "card_name": "Serra Paragon"
+        },
+        {
+          "count": 2,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 2,
+          "card_name": "The Stone Brain"
+        },
+        {
+          "count": 1,
+          "card_name": "Ultima"
+        },
+        {
+          "count": 1,
+          "card_name": "Voice of Victory"
+        }
+      ]
+    },
+    {
+      "player": "Tsubasa_Cat",
+      "result": "10th Place",
+      "rank": 10,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Blooming Marsh"
+        },
+        {
+          "count": 3,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 3,
+          "card_name": "Demon Wall"
+        },
+        {
+          "count": 1,
+          "card_name": "Disruptive Stormbrood"
+        },
+        {
+          "count": 4,
+          "card_name": "Forest"
+        },
+        {
+          "count": 2,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 1,
+          "card_name": "Jenova, Ancient Calamity"
+        },
+        {
+          "count": 4,
+          "card_name": "Llanowar Elves"
+        },
+        {
+          "count": 2,
+          "card_name": "Llanowar Wastes"
+        },
+        {
+          "count": 4,
+          "card_name": "Lumbering Worldwagon"
+        },
+        {
+          "count": 2,
+          "card_name": "Qarsi Revenant"
+        },
+        {
+          "count": 1,
+          "card_name": "Restless Cottage"
+        },
+        {
+          "count": 2,
+          "card_name": "Rot-Curse Rakshasa"
+        },
+        {
+          "count": 2,
+          "card_name": "Sentinel of the Nameless City"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 2,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 1,
+          "card_name": "Shoot the Sheriff"
+        },
+        {
+          "count": 3,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 2,
+          "card_name": "Surrak, Elusive Hunter"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 2,
+          "card_name": "Tear Asunder"
+        },
+        {
+          "count": 2,
+          "card_name": "Underground Mortuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Unholy Annex // Ritual Chamber"
+        },
+        {
+          "count": 4,
+          "card_name": "Wastewood Verge"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 1,
+          "card_name": "Blot Out"
+        },
+        {
+          "count": 2,
+          "card_name": "Choking Miasma"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 2,
+          "card_name": "Liliana of the Veil"
+        },
+        {
+          "count": 1,
+          "card_name": "Nissa, Ascended Animist"
+        },
+        {
+          "count": 1,
+          "card_name": "Outrageous Robbery"
+        },
+        {
+          "count": 1,
+          "card_name": "Scavenger Regent"
+        },
+        {
+          "count": 1,
+          "card_name": "Scavenging Ooze"
+        },
+        {
+          "count": 1,
+          "card_name": "Tear Asunder"
+        }
+      ]
+    },
+    {
+      "player": "VitorCarvalho01",
+      "result": "11th Place",
+      "rank": 11,
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 4,
+          "card_name": "Caretaker's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Carrot Cake"
+        },
+        {
+          "count": 2,
+          "card_name": "Day of Judgment"
+        },
+        {
+          "count": 3,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Innocence"
+        },
+        {
+          "count": 4,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 4,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 4,
+          "card_name": "Lay Down Arms"
+        },
+        {
+          "count": 4,
+          "card_name": "Meticulous Archive"
+        },
+        {
+          "count": 2,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 17,
+          "card_name": "Plains"
+        },
+        {
+          "count": 1,
+          "card_name": "Split Up"
+        },
+        {
+          "count": 4,
+          "card_name": "Voice of Victory"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Authority of the Consuls"
+        },
+        {
+          "count": 1,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 2,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 2,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 4,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 2,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 2,
+          "card_name": "The Stone Brain"
+        }
+      ]
+    },
+    {
+      "player": "therock988",
+      "result": "12th Place",
+      "rank": 12,
+      "mainboard": [
+        {
+          "count": 1,
+          "card_name": "Arabella, Abandoned Doll"
+        },
+        {
+          "count": 4,
+          "card_name": "Battlefield Forge"
+        },
+        {
+          "count": 4,
+          "card_name": "Case of the Gateway Express"
+        },
+        {
+          "count": 2,
+          "card_name": "Dragoon's Lance"
+        },
+        {
+          "count": 4,
+          "card_name": "Gleeful Demolition"
+        },
+        {
+          "count": 4,
+          "card_name": "Imodane's Recruiter"
+        },
+        {
+          "count": 4,
+          "card_name": "Inspiring Vantage"
+        },
+        {
+          "count": 4,
+          "card_name": "Knight-Errant of Eos"
+        },
+        {
+          "count": 1,
+          "card_name": "Mirrex"
+        },
+        {
+          "count": 3,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Nesting Bot"
+        },
+        {
+          "count": 4,
+          "card_name": "Novice Inspector"
+        },
+        {
+          "count": 5,
+          "card_name": "Plains"
+        },
+        {
+          "count": 4,
+          "card_name": "Resolute Reinforcements"
+        },
+        {
+          "count": 2,
+          "card_name": "Sanguine Evangelist"
+        },
+        {
+          "count": 4,
+          "card_name": "Sunbillow Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Warden of the Inner Sky"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 4,
+          "card_name": "Aven Interrupter"
+        },
+        {
+          "count": 2,
+          "card_name": "Chandra, Spark Hunter"
+        },
+        {
+          "count": 3,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 2,
+          "card_name": "Invasion of Gobakhan"
+        },
+        {
+          "count": 3,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 1,
+          "card_name": "Torch the Tower"
+        }
+      ]
+    },
+    {
+      "player": "fingers1991",
+      "result": "13th Place",
+      "rank": 13,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Ertai Resurrected"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "xfile",
+      "result": "14th Place",
+      "rank": 14,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Brightglass Gearhulk"
+        },
+        {
+          "count": 4,
+          "card_name": "Brushland"
+        },
+        {
+          "count": 4,
+          "card_name": "Cavern of Souls"
+        },
+        {
+          "count": 1,
+          "card_name": "Dragonmaster Outcast"
+        },
+        {
+          "count": 1,
+          "card_name": "Dusk Rose Reliquary"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Innocence"
+        },
+        {
+          "count": 1,
+          "card_name": "Floodfarm Verge"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 4,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 1,
+          "card_name": "Haywire Mite"
+        },
+        {
+          "count": 4,
+          "card_name": "Hushwood Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Llanowar Elves"
+        },
+        {
+          "count": 1,
+          "card_name": "Lush Portico"
+        },
+        {
+          "count": 4,
+          "card_name": "Mockingbird"
+        },
+        {
+          "count": 1,
+          "card_name": "Phoenix Down"
+        },
+        {
+          "count": 1,
+          "card_name": "Plains"
+        },
+        {
+          "count": 4,
+          "card_name": "Razorverge Thicket"
+        },
+        {
+          "count": 1,
+          "card_name": "Soul-Guide Lantern"
+        },
+        {
+          "count": 4,
+          "card_name": "Starting Town"
+        },
+        {
+          "count": 3,
+          "card_name": "Surrak, Elusive Hunter"
+        },
+        {
+          "count": 4,
+          "card_name": "Tender Wildguide"
+        },
+        {
+          "count": 4,
+          "card_name": "Voice of Victory"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Lyra Dawnbringer"
+        },
+        {
+          "count": 4,
+          "card_name": "Mold Adder"
+        },
+        {
+          "count": 4,
+          "card_name": "Nissa, Ascended Animist"
+        },
+        {
+          "count": 4,
+          "card_name": "Nissa, Resurgent Animist"
+        },
+        {
+          "count": 2,
+          "card_name": "Scavenging Ooze"
+        }
+      ]
+    },
+    {
+      "player": "wcl",
+      "result": "15th Place",
+      "rank": 15,
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Adarkar Wastes"
+        },
+        {
+          "count": 1,
+          "card_name": "Ambrosia Whiteheart"
+        },
+        {
+          "count": 2,
+          "card_name": "Caves of Koilos"
+        },
+        {
+          "count": 4,
+          "card_name": "Concealed Courtyard"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Isolation"
+        },
+        {
+          "count": 4,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 4,
+          "card_name": "Momentum Breaker"
+        },
+        {
+          "count": 4,
+          "card_name": "Nowhere to Run"
+        },
+        {
+          "count": 4,
+          "card_name": "Nurturing Pixie"
+        },
+        {
+          "count": 4,
+          "card_name": "Optimistic Scavenger"
+        },
+        {
+          "count": 1,
+          "card_name": "Plains"
+        },
+        {
+          "count": 4,
+          "card_name": "Seachrome Coast"
+        },
+        {
+          "count": 4,
+          "card_name": "Starting Town"
+        },
+        {
+          "count": 4,
+          "card_name": "Stormchaser's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Sunpearl Kirin"
+        },
+        {
+          "count": 4,
+          "card_name": "Tinybones Joins Up"
+        },
+        {
+          "count": 2,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Innocence"
+        },
+        {
+          "count": 2,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 2,
+          "card_name": "Grim Bauble"
+        },
+        {
+          "count": 1,
+          "card_name": "Loran of the Third Path"
+        },
+        {
+          "count": 4,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 2,
+          "card_name": "Temporary Lockdown"
+        }
+      ]
+    },
+    {
+      "player": "GzusReturned",
+      "result": "16th Place",
+      "rank": 16,
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Cecil, Dark Knight"
+        },
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 3,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 4,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Saiba Cryptomancer"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 3,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 1,
+          "card_name": "Blot Out"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 2,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 2,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 3,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        }
+      ]
+    },
+    {
+      "player": "_Me",
+      "result": "17th Place",
+      "rank": 17,
+      "mainboard": [
+        {
+          "count": 1,
+          "card_name": "Anim Pakal, Thousandth Moon"
+        },
+        {
+          "count": 4,
+          "card_name": "Battlefield Forge"
+        },
+        {
+          "count": 4,
+          "card_name": "Case of the Gateway Express"
+        },
+        {
+          "count": 2,
+          "card_name": "Cavern of Souls"
+        },
+        {
+          "count": 1,
+          "card_name": "Clockwork Percussionist"
+        },
+        {
+          "count": 4,
+          "card_name": "Gleeful Demolition"
+        },
+        {
+          "count": 4,
+          "card_name": "Imodane's Recruiter"
+        },
+        {
+          "count": 4,
+          "card_name": "Inspiring Vantage"
+        },
+        {
+          "count": 4,
+          "card_name": "Knight-Errant of Eos"
+        },
+        {
+          "count": 4,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Nesting Bot"
+        },
+        {
+          "count": 4,
+          "card_name": "Novice Inspector"
+        },
+        {
+          "count": 4,
+          "card_name": "Plains"
+        },
+        {
+          "count": 4,
+          "card_name": "Resolute Reinforcements"
+        },
+        {
+          "count": 1,
+          "card_name": "Sanguine Evangelist"
+        },
+        {
+          "count": 4,
+          "card_name": "Sunbillow Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Warden of the Inner Sky"
+        },
+        {
+          "count": 3,
+          "card_name": "Warleader's Call"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 2,
+          "card_name": "Invasion of Gobakhan"
+        },
+        {
+          "count": 1,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 1,
+          "card_name": "Obliterating Bolt"
+        },
+        {
+          "count": 1,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 3,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Urabrask's Forge"
+        },
+        {
+          "count": 1,
+          "card_name": "Witchstalker Frenzy"
+        }
+      ]
+    },
+    {
+      "player": "Cordingley23",
+      "result": "18th Place",
+      "rank": 18,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 4,
+          "card_name": "Caretaker's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Carrot Cake"
+        },
+        {
+          "count": 2,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Innocence"
+        },
+        {
+          "count": 4,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 4,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 4,
+          "card_name": "Lay Down Arms"
+        },
+        {
+          "count": 1,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 18,
+          "card_name": "Plains"
+        },
+        {
+          "count": 2,
+          "card_name": "Soul Partition"
+        },
+        {
+          "count": 4,
+          "card_name": "Sunfall"
+        },
+        {
+          "count": 3,
+          "card_name": "Sunken Citadel"
+        },
+        {
+          "count": 2,
+          "card_name": "Virtue of Loyalty"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 3,
+          "card_name": "Authority of the Consuls"
+        },
+        {
+          "count": 4,
+          "card_name": "Exorcise"
+        },
+        {
+          "count": 3,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 3,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 2,
+          "card_name": "The Stone Brain"
+        }
+      ]
+    },
+    {
+      "player": "fireshoes",
+      "result": "19th Place",
+      "rank": 19,
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Aloe Alchemist"
+        },
+        {
+          "count": 3,
+          "card_name": "Axebane Ferox"
+        },
+        {
+          "count": 4,
+          "card_name": "Flourishing Bloom-Kin"
+        },
+        {
+          "count": 21,
+          "card_name": "Forest"
+        },
+        {
+          "count": 1,
+          "card_name": "Hard-Hitting Question"
+        },
+        {
+          "count": 3,
+          "card_name": "Herd Heirloom"
+        },
+        {
+          "count": 4,
+          "card_name": "Keen-Eyed Curator"
+        },
+        {
+          "count": 4,
+          "card_name": "Llanowar Elves"
+        },
+        {
+          "count": 2,
+          "card_name": "Overprotect"
+        },
+        {
+          "count": 4,
+          "card_name": "Pawpatch Recruit"
+        },
+        {
+          "count": 1,
+          "card_name": "Pick Your Poison"
+        },
+        {
+          "count": 2,
+          "card_name": "Scrapshooter"
+        },
+        {
+          "count": 4,
+          "card_name": "Spinner of Souls"
+        },
+        {
+          "count": 3,
+          "card_name": "Surrak, Elusive Hunter"
+        },
+        {
+          "count": 2,
+          "card_name": "Thrun, Breaker of Silence"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Dragon Sniper"
+        },
+        {
+          "count": 1,
+          "card_name": "Hard-Hitting Question"
+        },
+        {
+          "count": 2,
+          "card_name": "Heritage Reclamation"
+        },
+        {
+          "count": 1,
+          "card_name": "Hunter's Talent"
+        },
+        {
+          "count": 1,
+          "card_name": "Nissa, Ascended Animist"
+        },
+        {
+          "count": 2,
+          "card_name": "Pick Your Poison"
+        },
+        {
+          "count": 2,
+          "card_name": "Sandstalker Moloch"
+        },
+        {
+          "count": 2,
+          "card_name": "Scrapshooter"
+        },
+        {
+          "count": 1,
+          "card_name": "Tail Swipe"
+        },
+        {
+          "count": 1,
+          "card_name": "Vivien Reid"
+        }
+      ]
+    },
+    {
+      "player": "Misplacedginger",
+      "result": "20th Place",
+      "rank": 20,
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 4,
+          "card_name": "Caretaker's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Carrot Cake"
+        },
+        {
+          "count": 2,
+          "card_name": "Day of Judgment"
+        },
+        {
+          "count": 2,
+          "card_name": "Demolition Field"
+        },
+        {
+          "count": 2,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Innocence"
+        },
+        {
+          "count": 4,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 4,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 4,
+          "card_name": "Lay Down Arms"
+        },
+        {
+          "count": 3,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 15,
+          "card_name": "Plains"
+        },
+        {
+          "count": 1,
+          "card_name": "Sunfall"
+        },
+        {
+          "count": 4,
+          "card_name": "Sunken Citadel"
+        },
+        {
+          "count": 4,
+          "card_name": "Voice of Victory"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Authority of the Consuls"
+        },
+        {
+          "count": 1,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 2,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 1,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 1,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 4,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 2,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 2,
+          "card_name": "The Stone Brain"
+        }
+      ]
+    },
+    {
+      "player": "Cachorrowo",
+      "result": "21th Place",
+      "rank": 21,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Adarkar Wastes"
+        },
+        {
+          "count": 1,
+          "card_name": "Blast Zone"
+        },
+        {
+          "count": 1,
+          "card_name": "Cavern of Souls"
+        },
+        {
+          "count": 3,
+          "card_name": "Ephara's Dispersal"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodfarm Verge"
+        },
+        {
+          "count": 1,
+          "card_name": "Founding the Third Path"
+        },
+        {
+          "count": 1,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Marang River Regent"
+        },
+        {
+          "count": 4,
+          "card_name": "Meticulous Archive"
+        },
+        {
+          "count": 4,
+          "card_name": "Moment of Truth"
+        },
+        {
+          "count": 4,
+          "card_name": "Omniscience"
+        },
+        {
+          "count": 3,
+          "card_name": "Plains"
+        },
+        {
+          "count": 4,
+          "card_name": "Repair and Recharge"
+        },
+        {
+          "count": 4,
+          "card_name": "Roiling Dragonstorm"
+        },
+        {
+          "count": 1,
+          "card_name": "Scrollshift"
+        },
+        {
+          "count": 3,
+          "card_name": "Seachrome Coast"
+        },
+        {
+          "count": 2,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 4,
+          "card_name": "Stock Up"
+        },
+        {
+          "count": 4,
+          "card_name": "Temporary Lockdown"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Authority of the Consuls"
+        },
+        {
+          "count": 2,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 2,
+          "card_name": "Clarion Conqueror"
+        },
+        {
+          "count": 1,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 2,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Voice of Victory"
+        }
+      ]
+    },
+    {
+      "player": "Jumba",
+      "result": "22th Place",
+      "rank": 22,
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Cavern of Souls"
+        },
+        {
+          "count": 4,
+          "card_name": "Dredger's Insight"
+        },
+        {
+          "count": 4,
+          "card_name": "Elegant Parlor"
+        },
+        {
+          "count": 4,
+          "card_name": "Esper Origins"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 2,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 4,
+          "card_name": "Hushwood Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Joshua, Phoenix's Dominant"
+        },
+        {
+          "count": 3,
+          "card_name": "Lush Portico"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Overlord of the Boilerbilges"
+        },
+        {
+          "count": 2,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 1,
+          "card_name": "Plains"
+        },
+        {
+          "count": 3,
+          "card_name": "Starting Town"
+        },
+        {
+          "count": 1,
+          "card_name": "Summon: Brynhildr"
+        },
+        {
+          "count": 2,
+          "card_name": "Sunbillow Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Terra, Magical Adept"
+        },
+        {
+          "count": 4,
+          "card_name": "Thornspire Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Yuna, Hope of Spira"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 3,
+          "card_name": "Clarion Conqueror"
+        },
+        {
+          "count": 3,
+          "card_name": "Day of Judgment"
+        },
+        {
+          "count": 2,
+          "card_name": "Exorcise"
+        },
+        {
+          "count": 2,
+          "card_name": "Fire Magic"
+        },
+        {
+          "count": 2,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Summon: Knights of Round"
+        }
+      ]
+    },
+    {
+      "player": "mortadela",
+      "result": "23th Place",
+      "rank": 23,
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 2,
+          "card_name": "Dreams of Steel and Oil"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 2,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 3,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 6,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Ertai Resurrected"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "kcomedina",
+      "result": "24th Place",
+      "rank": 24,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Cut Down"
+        },
+        {
+          "count": 4,
+          "card_name": "Darkslick Shores"
+        },
+        {
+          "count": 4,
+          "card_name": "Deep-Cavern Bat"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 2,
+          "card_name": "Faebloom Trick"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodpits Drowner"
+        },
+        {
+          "count": 1,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 4,
+          "card_name": "Gloomlake Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Go for the Throat"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 2,
+          "card_name": "Phantom Interference"
+        },
+        {
+          "count": 2,
+          "card_name": "Restless Reef"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred's Edict"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Spyglass Siren"
+        },
+        {
+          "count": 4,
+          "card_name": "Swamp"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 4,
+          "card_name": "Underground River"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Anoint with Affliction"
+        },
+        {
+          "count": 3,
+          "card_name": "Duress"
+        },
+        {
+          "count": 1,
+          "card_name": "Ertai Resurrected"
+        },
+        {
+          "count": 1,
+          "card_name": "Faerie Mastermind"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Gix's Command"
+        },
+        {
+          "count": 1,
+          "card_name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Preacher of the Schism"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "Goomy_",
+      "result": "25th Place",
+      "rank": 25,
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Deduce"
+        },
+        {
+          "count": 3,
+          "card_name": "Demolition Field"
+        },
+        {
+          "count": 2,
+          "card_name": "Dispelling Exhale"
+        },
+        {
+          "count": 3,
+          "card_name": "Elspeth's Smite"
+        },
+        {
+          "count": 2,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodfarm Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 4,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 4,
+          "card_name": "Island"
+        },
+        {
+          "count": 3,
+          "card_name": "Marang River Regent"
+        },
+        {
+          "count": 4,
+          "card_name": "Meticulous Archive"
+        },
+        {
+          "count": 4,
+          "card_name": "No More Lies"
+        },
+        {
+          "count": 3,
+          "card_name": "Plains"
+        },
+        {
+          "count": 3,
+          "card_name": "Restless Anchorage"
+        },
+        {
+          "count": 1,
+          "card_name": "Ride's End"
+        },
+        {
+          "count": 3,
+          "card_name": "Seachrome Coast"
+        },
+        {
+          "count": 4,
+          "card_name": "Stock Up"
+        },
+        {
+          "count": 1,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 4,
+          "card_name": "Three Steps Ahead"
+        },
+        {
+          "count": 3,
+          "card_name": "Ultima"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 2,
+          "card_name": "Devout Decree"
+        },
+        {
+          "count": 1,
+          "card_name": "Jace, the Perfected Mind"
+        },
+        {
+          "count": 2,
+          "card_name": "Kutzil's Flanker"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 2,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 2,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 3,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "player": "LucasG1ggs",
+      "result": "26th Place",
+      "rank": 26,
+      "mainboard": [
+        {
+          "count": 1,
+          "card_name": "Audacity"
+        },
+        {
+          "count": 4,
+          "card_name": "Burst Lightning"
+        },
+        {
+          "count": 4,
+          "card_name": "Copperline Gorge"
+        },
+        {
+          "count": 4,
+          "card_name": "Emberheart Challenger"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 4,
+          "card_name": "Hired Claw"
+        },
+        {
+          "count": 4,
+          "card_name": "Innkeeper's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Karplusan Forest"
+        },
+        {
+          "count": 4,
+          "card_name": "Manifold Mouse"
+        },
+        {
+          "count": 5,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Overprotect"
+        },
+        {
+          "count": 4,
+          "card_name": "Pawpatch Recruit"
+        },
+        {
+          "count": 2,
+          "card_name": "Questing Druid"
+        },
+        {
+          "count": 1,
+          "card_name": "Restless Ridgeline"
+        },
+        {
+          "count": 2,
+          "card_name": "Rockface Village"
+        },
+        {
+          "count": 4,
+          "card_name": "Screaming Nemesis"
+        },
+        {
+          "count": 1,
+          "card_name": "Self-Destruct"
+        },
+        {
+          "count": 1,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Thornspire Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Twinmaw Stormbrood"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 3,
+          "card_name": "Pawpatch Formation"
+        },
+        {
+          "count": 2,
+          "card_name": "Pyroclasm"
+        },
+        {
+          "count": 2,
+          "card_name": "Questing Druid"
+        },
+        {
+          "count": 1,
+          "card_name": "Sentinel of the Nameless City"
+        },
+        {
+          "count": 2,
+          "card_name": "Sunspine Lynx"
+        },
+        {
+          "count": 3,
+          "card_name": "Urabrask's Forge"
+        }
+      ]
+    },
+    {
+      "player": "Deathnote1999",
+      "result": "27th Place",
+      "rank": 27,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Agatha's Soul Cauldron"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 2,
+          "card_name": "Glacial Dragonhunt"
+        },
+        {
+          "count": 3,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 2,
+          "card_name": "Island"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 3,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 4,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 3,
+          "card_name": "Tersa Lightshatter"
+        },
+        {
+          "count": 3,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 2,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 4,
+          "card_name": "Vivi Ornitier"
+        },
+        {
+          "count": 3,
+          "card_name": "Voldaren Thrillseeker"
+        },
+        {
+          "count": 4,
+          "card_name": "Winternight Stories"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 2,
+          "card_name": "Draconautics Engineer"
+        },
+        {
+          "count": 2,
+          "card_name": "Enduring Curiosity"
+        },
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 2,
+          "card_name": "Negate"
+        },
+        {
+          "count": 1,
+          "card_name": "Scorching Shot"
+        },
+        {
+          "count": 1,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 1,
+          "card_name": "Tishana's Tidebinder"
+        },
+        {
+          "count": 2,
+          "card_name": "Unable to Scream"
+        }
+      ]
+    },
+    {
+      "player": "LuffyDoChapeuDePalha",
+      "result": "28th Place",
+      "rank": 28,
+      "mainboard": [
+        {
+          "count": 1,
+          "card_name": "Audacity"
+        },
+        {
+          "count": 4,
+          "card_name": "Burst Lightning"
+        },
+        {
+          "count": 4,
+          "card_name": "Copperline Gorge"
+        },
+        {
+          "count": 4,
+          "card_name": "Emberheart Challenger"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 4,
+          "card_name": "Hired Claw"
+        },
+        {
+          "count": 4,
+          "card_name": "Innkeeper's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Karplusan Forest"
+        },
+        {
+          "count": 4,
+          "card_name": "Manifold Mouse"
+        },
+        {
+          "count": 5,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Overprotect"
+        },
+        {
+          "count": 4,
+          "card_name": "Pawpatch Recruit"
+        },
+        {
+          "count": 2,
+          "card_name": "Questing Druid"
+        },
+        {
+          "count": 1,
+          "card_name": "Restless Ridgeline"
+        },
+        {
+          "count": 2,
+          "card_name": "Rockface Village"
+        },
+        {
+          "count": 4,
+          "card_name": "Screaming Nemesis"
+        },
+        {
+          "count": 1,
+          "card_name": "Self-Destruct"
+        },
+        {
+          "count": 1,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Thornspire Verge"
+        },
+        {
+          "count": 2,
+          "card_name": "Twinmaw Stormbrood"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 3,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 3,
+          "card_name": "Pawpatch Formation"
+        },
+        {
+          "count": 2,
+          "card_name": "Pyroclasm"
+        },
+        {
+          "count": 2,
+          "card_name": "Questing Druid"
+        },
+        {
+          "count": 2,
+          "card_name": "Sunspine Lynx"
+        },
+        {
+          "count": 3,
+          "card_name": "Urabrask's Forge"
+        }
+      ]
+    },
+    {
+      "player": "ice_nine_BIGFAN",
+      "result": "29th Place",
+      "rank": 29,
+      "mainboard": [
+        {
+          "count": 3,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 4,
+          "card_name": "Caretaker's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Carrot Cake"
+        },
+        {
+          "count": 2,
+          "card_name": "Cavern of Souls"
+        },
+        {
+          "count": 2,
+          "card_name": "Day of Judgment"
+        },
+        {
+          "count": 2,
+          "card_name": "Demolition Field"
+        },
+        {
+          "count": 2,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 4,
+          "card_name": "Enduring Innocence"
+        },
+        {
+          "count": 3,
+          "card_name": "Fountainport"
+        },
+        {
+          "count": 4,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 4,
+          "card_name": "Lay Down Arms"
+        },
+        {
+          "count": 4,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 14,
+          "card_name": "Plains"
+        },
+        {
+          "count": 1,
+          "card_name": "Sunfall"
+        },
+        {
+          "count": 4,
+          "card_name": "Sunken Citadel"
+        },
+        {
+          "count": 4,
+          "card_name": "Voice of Victory"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 2,
+          "card_name": "Cavern of Souls"
+        },
+        {
+          "count": 2,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 1,
+          "card_name": "Elspeth, Storm Slayer"
+        },
+        {
+          "count": 4,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 2,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 2,
+          "card_name": "The Stone Brain"
+        }
+      ]
+    },
+    {
+      "player": "EventideX",
+      "result": "30th Place",
+      "rank": 30,
+      "mainboard": [
+        {
+          "count": 4,
+          "card_name": "Abhorrent Oculus"
+        },
+        {
+          "count": 1,
+          "card_name": "Abrade"
+        },
+        {
+          "count": 2,
+          "card_name": "Adarkar Wastes"
+        },
+        {
+          "count": 4,
+          "card_name": "Fear of Missing Out"
+        },
+        {
+          "count": 4,
+          "card_name": "Helping Hand"
+        },
+        {
+          "count": 2,
+          "card_name": "Inspiring Vantage"
+        },
+        {
+          "count": 1,
+          "card_name": "Inti, Seneschal of the Sun"
+        },
+        {
+          "count": 1,
+          "card_name": "Into the Flood Maw"
+        },
+        {
+          "count": 1,
+          "card_name": "Island"
+        },
+        {
+          "count": 2,
+          "card_name": "Joshua, Phoenix's Dominant"
+        },
+        {
+          "count": 4,
+          "card_name": "Marauding Mako"
+        },
+        {
+          "count": 1,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 4,
+          "card_name": "Proft's Eidetic Memory"
+        },
+        {
+          "count": 4,
+          "card_name": "Seachrome Coast"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheltered by Ghosts"
+        },
+        {
+          "count": 4,
+          "card_name": "Shivan Reef"
+        },
+        {
+          "count": 2,
+          "card_name": "Spell Pierce"
+        },
+        {
+          "count": 4,
+          "card_name": "Spirebluff Canal"
+        },
+        {
+          "count": 3,
+          "card_name": "Starting Town"
+        },
+        {
+          "count": 4,
+          "card_name": "Steamcore Scholar"
+        },
+        {
+          "count": 1,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 4,
+          "card_name": "Torch the Tower"
+        },
+        {
+          "count": 2,
+          "card_name": "Winternight Stories"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 2,
+          "card_name": "Brotherhood's End"
+        },
+        {
+          "count": 2,
+          "card_name": "Chandra, Spark Hunter"
+        },
+        {
+          "count": 3,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 3,
+          "card_name": "Disdainful Stroke"
+        },
+        {
+          "count": 2,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 1,
+          "card_name": "Loran of the Third Path"
+        },
+        {
+          "count": 1,
+          "card_name": "Sheltered by Ghosts"
+        },
+        {
+          "count": 1,
+          "card_name": "Winternight Stories"
+        }
+      ]
+    },
+    {
+      "player": "deleon91",
+      "result": "31th Place",
+      "rank": 31,
+      "mainboard": [
+        {
+          "count": 1,
+          "card_name": "Audacity"
+        },
+        {
+          "count": 4,
+          "card_name": "Burst Lightning"
+        },
+        {
+          "count": 4,
+          "card_name": "Copperline Gorge"
+        },
+        {
+          "count": 4,
+          "card_name": "Emberheart Challenger"
+        },
+        {
+          "count": 1,
+          "card_name": "Forest"
+        },
+        {
+          "count": 1,
+          "card_name": "Greasewrench Goblin"
+        },
+        {
+          "count": 4,
+          "card_name": "Hired Claw"
+        },
+        {
+          "count": 4,
+          "card_name": "Innkeeper's Talent"
+        },
+        {
+          "count": 4,
+          "card_name": "Karplusan Forest"
+        },
+        {
+          "count": 3,
+          "card_name": "Manifold Mouse"
+        },
+        {
+          "count": 5,
+          "card_name": "Mountain"
+        },
+        {
+          "count": 3,
+          "card_name": "Overprotect"
+        },
+        {
+          "count": 4,
+          "card_name": "Pawpatch Recruit"
+        },
+        {
+          "count": 2,
+          "card_name": "Questing Druid"
+        },
+        {
+          "count": 1,
+          "card_name": "Restless Ridgeline"
+        },
+        {
+          "count": 2,
+          "card_name": "Rockface Village"
+        },
+        {
+          "count": 4,
+          "card_name": "Screaming Nemesis"
+        },
+        {
+          "count": 2,
+          "card_name": "Soulstone Sanctuary"
+        },
+        {
+          "count": 4,
+          "card_name": "Thornspire Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Twinmaw Stormbrood"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 4,
+          "card_name": "Heritage Reclamation"
+        },
+        {
+          "count": 2,
+          "card_name": "Lithomantic Barrage"
+        },
+        {
+          "count": 4,
+          "card_name": "Obliterating Bolt"
+        },
+        {
+          "count": 2,
+          "card_name": "Pyroclasm"
+        },
+        {
+          "count": 3,
+          "card_name": "Urabrask's Forge"
+        }
+      ]
+    },
+    {
+      "player": "Pugface",
+      "result": "32th Place",
+      "rank": 32,
+      "mainboard": [
+        {
+          "count": 2,
+          "card_name": "Beza, the Bounding Spring"
+        },
+        {
+          "count": 1,
+          "card_name": "Cori Mountain Monastery"
+        },
+        {
+          "count": 2,
+          "card_name": "Day of Judgment"
+        },
+        {
+          "count": 1,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 3,
+          "card_name": "Dispelling Exhale"
+        },
+        {
+          "count": 4,
+          "card_name": "Elegant Parlor"
+        },
+        {
+          "count": 4,
+          "card_name": "Floodfarm Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Get Lost"
+        },
+        {
+          "count": 2,
+          "card_name": "Island"
+        },
+        {
+          "count": 1,
+          "card_name": "Jace, the Perfected Mind"
+        },
+        {
+          "count": 3,
+          "card_name": "Lightning Helix"
+        },
+        {
+          "count": 2,
+          "card_name": "Marang River Regent"
+        },
+        {
+          "count": 4,
+          "card_name": "Meticulous Archive"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 1,
+          "card_name": "No More Lies"
+        },
+        {
+          "count": 3,
+          "card_name": "Plains"
+        },
+        {
+          "count": 2,
+          "card_name": "Rediscover the Way"
+        },
+        {
+          "count": 3,
+          "card_name": "Riverpyre Verge"
+        },
+        {
+          "count": 4,
+          "card_name": "Shiko, Paragon of the Way"
+        },
+        {
+          "count": 4,
+          "card_name": "Stock Up"
+        },
+        {
+          "count": 3,
+          "card_name": "Sunbillow Verge"
+        },
+        {
+          "count": 3,
+          "card_name": "Temporary Lockdown"
+        },
+        {
+          "count": 2,
+          "card_name": "Thundering Falls"
+        },
+        {
+          "count": 2,
+          "card_name": "Ultima"
+        }
+      ],
+      "sideboard": [
+        {
+          "count": 1,
+          "card_name": "Change the Equation"
+        },
+        {
+          "count": 1,
+          "card_name": "Destroy Evil"
+        },
+        {
+          "count": 1,
+          "card_name": "Devout Decree"
+        },
+        {
+          "count": 1,
+          "card_name": "Elesh Norn, Mother of Machines"
+        },
+        {
+          "count": 1,
+          "card_name": "Ghost Vacuum"
+        },
+        {
+          "count": 2,
+          "card_name": "Jace, the Perfected Mind"
+        },
+        {
+          "count": 1,
+          "card_name": "Negate"
+        },
+        {
+          "count": 3,
+          "card_name": "Overlord of the Mistmoors"
+        },
+        {
+          "count": 2,
+          "card_name": "Rest in Peace"
+        },
+        {
+          "count": 2,
+          "card_name": "Tishana's Tidebinder"
+        }
+      ]
+    }
+  ]
+}

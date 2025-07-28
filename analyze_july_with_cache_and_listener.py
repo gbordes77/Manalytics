@@ -131,14 +131,15 @@ class CompleteJulyAnalyzer:
             
             # Chercher le tournoi correspondant dans le cache
             for cache_id, cache_data in self.tournament_cache_data.items():
-                # Match par date et type de tournoi
-                cache_date = datetime.fromisoformat(cache_data.get('date', ''))
-                
-                if (cache_date.date() == listener_tournament['date'].date() and 
-                    listener_tournament['name'].lower() in cache_data.get('name', '').lower()):
+                # Match par ID dans le cache_id
+                # Les IDs du cache peuvent être : "1812803681" ou "standard-challenge-32-2025-07-1812803681"
+                if (str(listener_id) in cache_id or 
+                    (str(listener_id)[:4] in cache_id and cache_id.endswith(str(listener_id)))):
                     
                     matched = True
                     matched_tournaments += 1
+                    
+                    print(f"✅ Matched: Listener {listener_id} → Cache {cache_id}")
                     
                     # Créer mapping player -> archetype
                     player_archetypes = {}
