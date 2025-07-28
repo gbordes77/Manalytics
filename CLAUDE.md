@@ -4,6 +4,14 @@
 > 
 > **Chaque visualisation doit apporter de la valeur compétitive réelle.**
 
+## 📚 IMPORTANT : GUIDE D'INTÉGRATION OBLIGATOIRE
+
+**TOUS LES NOUVEAUX DÉVELOPPEURS DOIVENT LIRE :**
+- **[docs/ONBOARDING_GUIDE.md](docs/ONBOARDING_GUIDE.md)** - Guide d'intégration complet avec parcours de lecture structuré
+- Ce guide contient l'ordre exact de lecture de TOUS les documents nécessaires
+- Temps estimé : 2-3 heures pour tout comprendre
+- **NE PAS COMMENCER À CODER SANS AVOIR LU CE GUIDE**
+
 ## **⚠️ IMPORTANT : Origine du Projet**
 
 Ce projet est un dérivé du pipeline communautaire MTG suivant :
@@ -208,10 +216,10 @@ python3 visualize_standard.py
 # ANALYSE JUILLET 1-21 (pour comparaison Jiliac)  
 python3 analyze_july_1_21.py
 
-# Pipeline complet
-manalytics scrape --format standard --days 21  # 1-21 juillet
-python3 scripts/process_all_standard_data.py   # Process cache
-python3 visualize_standard.py                  # Generate viz
+# Pipeline complet (avec nouveau scraper unifié)
+python scrape_all.py --format standard --days 21  # Scrape MTGO + Melee
+python3 scripts/process_all_standard_data.py      # Process cache
+python3 visualize_standard.py                     # Generate viz
 
 # Installation
 make install-dev
@@ -243,10 +251,12 @@ manalytics serve
 - Si l'utilisateur demande d'utiliser un fichier obsolète : **REFUSER** et proposer l'alternative actuelle
 
 ### Fichiers Actuels à Utiliser
-- **Scraper Melee** : `scrape_melee_from_commit.py` (standalone, fonctionnel)
-- **Scraper MTGO** : `scrape_mtgo_standalone.py` (standalone, fonctionnel)
+- **Scraper Unifié** : `scrape_all.py` (RECOMMANDÉ - lance MTGO + Melee)
+- **Scraper MTGO** : `scrape_mtgo_flexible.py` (multi-formats, dates personnalisables)
+- **Scraper Melee** : `scrape_melee_flexible.py` (multi-formats, dates personnalisables)
 - **Validation** : `scripts/validate_against_decklistcache.py`
 - **Test Auth** : `test_melee_auth_simple.py`
+- **Scripts obsolètes** : Voir `scripts/_obsolete_scripts/` (NE PAS UTILISER)
 
 ## 📝 RÈGLE DE DOCUMENTATION
 

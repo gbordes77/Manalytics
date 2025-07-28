@@ -4,6 +4,13 @@
 > 
 > **Chaque visualisation doit apporter de la valeur compétitive réelle.**
 
+## 📚 IMPORTANT : GUIDE D'INTÉGRATION POUR NOUVEAUX DÉVELOPPEURS
+
+**👋 NOUVEAU SUR LE PROJET ? COMMENCEZ ICI :**
+- **[docs/ONBOARDING_GUIDE.md](docs/ONBOARDING_GUIDE.md)** - Guide d'intégration complet avec parcours de lecture structuré
+- Ce guide vous dira EXACTEMENT quoi lire et dans quel ordre (2-3h pour tout comprendre)
+- **NE PAS COMMENCER À CODER SANS AVOIR LU CE GUIDE**
+
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -124,10 +131,10 @@ Visit http://localhost:8000/docs for API documentation.
 # Quick visualization (RECOMMANDÉ)
 python3 visualize_standard.py
 
-# Pipeline complet
-manalytics scrape --format standard --days 21  # 1-21 juillet
-python3 scripts/process_all_standard_data.py   # Process cache
-python3 visualize_standard.py                  # Generate viz
+# Pipeline complet (nouveau scraper unifié!)
+python scrape_all.py --format standard --days 21  # Scrape MTGO + Melee
+python3 scripts/process_all_standard_data.py      # Process cache
+python3 visualize_standard.py                     # Generate viz
 
 # Analyse juillet 1-21 (pour comparaison Jiliac)
 python3 analyze_july_1_21.py
@@ -236,17 +243,23 @@ Full documentation at `/api/docs` when running.
 
 ### 📚 Documentation Essentielle
 
-**Pour commencer** :
-- 🎯 [PROJECT COMPLETE DOCUMENTATION](docs/PROJECT_COMPLETE_DOCUMENTATION.md) - **LIRE EN PREMIER**
-- 🎨 [VISUALIZATION TEMPLATE REFERENCE](docs/VISUALIZATION_TEMPLATE_REFERENCE.md) - Règles visuelles ABSOLUES
-- 📊 [DATA FLOW VISUALIZATION](docs/DATA_FLOW_VISUALIZATION.html) - Flux interactif (ouvrir dans browser)
-- 🔍 [FILE DISCOVERY PROCESS](docs/FILE_DISCOVERY_PROCESS.html) - Comment on trouve les fichiers
+**👋 NOUVEAU ? Commencez par** :
+- 🎓 **[ONBOARDING GUIDE](docs/ONBOARDING_GUIDE.md)** - **GUIDE D'INTÉGRATION COMPLET**
+  - Parcours de lecture structuré
+  - Ordre exact des documents à lire
+  - Scripts actuels vs obsolètes
+  - Quick Start guidé
 
-**Guides techniques** :
-- [MTGO Scraping Guide](docs/MTGO_SCRAPING_GUIDE.md) - Scraper MTGO
-- [Melee Scraping Guide](docs/MELEE_SCRAPING_GUIDE.md) - Scraper Melee avec auth
-- [Cache System Implementation](docs/CACHE_SYSTEM_IMPLEMENTATION.md) - Architecture cache
-- [Jiliac R Architecture Analysis](docs/JILIAC_R_ARCHITECTURE_ANALYSIS.md) - Comparaison architectures
+**Documentation principale** :
+- 🎯 [PROJECT COMPLETE DOCUMENTATION](docs/PROJECT_COMPLETE_DOCUMENTATION.md) - Vue d'ensemble complète
+- 🏗️ [MANALYTICS COMPLETE ARCHITECTURE](docs/MANALYTICS_COMPLETE_ARCHITECTURE.html) - Architecture interactive
+- 🕷️ [SCRAPERS COMPLETE GUIDE](docs/SCRAPERS_COMPLETE_GUIDE.md) - Tout sur les scrapers
+- 🎨 [VISUALIZATION TEMPLATE REFERENCE](docs/VISUALIZATION_TEMPLATE_REFERENCE.md) - Standards visuels
+
+**Flux et processus** :
+- 📊 [DATA FLOW VISUALIZATION](docs/DATA_FLOW_VISUALIZATION.html) - Flux de données interactif
+- 🔍 [FILE DISCOVERY PROCESS](docs/FILE_DISCOVERY_PROCESS.html) - Découverte des fichiers
+- 💾 [CACHE SYSTEM IMPLEMENTATION](docs/CACHE_SYSTEM_IMPLEMENTATION.md) - Architecture cache
 
 **Roadmaps & Concepts** :
 - [Phase 3 Visualizations Roadmap](docs/PHASE3_VISUALIZATIONS_ROADMAP.md) - 30+ visualisations
