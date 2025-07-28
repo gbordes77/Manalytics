@@ -318,3 +318,10 @@ git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
 
 Cette règle s'applique à TOUTES tes réponses contenant du code.
 Aucune exception. Aucune demande de confirmation.
+
+## 💬 CONTACT & SUPPORT
+
+**Questions ou problèmes ?**
+- Pas de GitHub issues pour l'instant
+- Contacter directement via le chat
+- Consulter la documentation complète dans `docs/`
