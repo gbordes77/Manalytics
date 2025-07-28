@@ -238,23 +238,53 @@ graph TB
             
             <div class="script-grid">
                 <div class="script-card">
-                    <h4>MTGO Scraper <span class="status-badge status-active">Actif</span></h4>
-                    <div class="script-path">scrape_mtgo_standalone.py</div>
+                    <h4>MTGO Scraper Flexible <span class="status-badge status-active">Actif</span></h4>
+                    <div class="script-path">scrape_mtgo_flexible.py</div>
                     <div class="script-desc">
-                        Scrape les tournois depuis www.mtgo.com. Récupère les métadonnées et identifiants des tournois.
+                        Scrape les tournois depuis www.mtgo.com. Support multi-formats et dates personnalisables.
                     </div>
-                    <div class="command-example">python scrape_mtgo_standalone.py --format standard --days 21</div>
-                    <strong>Output:</strong> data/raw/mtgo/standard/*.json
+                    <div class="command-example"># Un seul format sur 21 jours
+python scrape_mtgo_flexible.py --format standard --days 21
+
+# Plusieurs formats avec dates spécifiques
+python scrape_mtgo_flexible.py --format standard modern legacy --start-date 2025-07-01 --end-date 2025-07-21
+
+# Tous les formats
+python scrape_mtgo_flexible.py --format all --days 7
+
+# Mode incrémental (futur)
+python scrape_mtgo_flexible.py --format standard --incremental</div>
+                    <strong>Formats supportés:</strong> standard, modern, legacy, vintage, pioneer, pauper, limited, duel-commander<br>
+                    <strong>Output:</strong> data/raw/mtgo/{format}/*.json (leagues dans {format}/leagues/)
                 </div>
                 
                 <div class="script-card">
-                    <h4>Melee Scraper <span class="status-badge status-active">Actif</span></h4>
-                    <div class="script-path">scrape_melee_from_commit.py</div>
+                    <h4>Melee Scraper Flexible <span class="status-badge status-active">Actif</span></h4>
+                    <div class="script-path">scrape_melee_flexible.py</div>
                     <div class="script-desc">
-                        Utilise l'API Melee avec authentification pour récupérer tournois et decklists complètes.
+                        Utilise l'API Melee avec authentification. Support multi-formats et dates personnalisables.
                     </div>
-                    <div class="command-example">python scrape_melee_from_commit.py --days 21</div>
-                    <strong>Output:</strong> data/raw/melee/standard/*.json
+                    <div class="command-example"># Un seul format sur 21 jours
+python scrape_melee_flexible.py --format standard --days 21
+
+# Plusieurs formats avec dates spécifiques
+python scrape_melee_flexible.py --format standard modern pioneer --start-date 2025-07-01 --end-date 2025-07-21
+
+# Tous les formats avec récupération des decks
+python scrape_melee_flexible.py --format all --days 7 --get-decks
+
+# Mode incrémental (futur)
+python scrape_melee_flexible.py --format standard --incremental</div>
+                    <strong>Formats supportés:</strong> standard, modern, legacy, vintage, pioneer, pauper, commander, duel-commander, limited<br>
+                    <strong>Output:</strong> data/raw/melee/{format}/*.json
+                </div>
+                
+                <div class="script-card">
+                    <h4>Scripts Legacy <span class="status-badge status-legacy">Dépréciés</span></h4>
+                    <div class="script-path">scrape_mtgo_standalone.py & scrape_melee_from_commit.py</div>
+                    <div class="script-desc">
+                        Versions originales limitées à juillet 2025 et format Standard uniquement. Remplacées par les versions flexibles.
+                    </div>
                 </div>
             </div>
             
@@ -467,9 +497,14 @@ cp .env.example .env
             
             <h3>Pipeline Complet</h3>
             <div class="command-example">
-# 1. Scraper les données (21 jours)
-python scrape_mtgo_standalone.py --format standard --days 21
-python scrape_melee_from_commit.py --days 21
+# 1. Scraper les données flexibles
+# Standard sur 21 jours
+python scrape_mtgo_flexible.py --format standard --days 21
+python scrape_melee_flexible.py --format standard --days 21
+
+# Ou multi-formats avec dates spécifiques
+python scrape_mtgo_flexible.py --format standard modern pioneer --start-date 2025-07-01 --end-date 2025-07-21
+python scrape_melee_flexible.py --format standard modern pioneer --start-date 2025-07-01 --end-date 2025-07-21
 
 # 2. Processer dans le cache
 python scripts/process_all_standard_data.py
