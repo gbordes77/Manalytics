@@ -493,8 +493,15 @@ class MtgMeleeClientFlexible:
             logger.error(f"Erreur récupération round IDs: {e}")
             return []
     
-    def save_tournaments(self, entries: List[Dict], get_decks: bool = False, get_rounds: bool = False) -> int:
-        """Sauvegarder les tournois par format"""
+    def save_tournaments(self, entries: List[Dict], get_decks: bool = False, get_rounds: bool = False, min_players: int = 12) -> int:
+        """Sauvegarder les tournois par format
+        
+        Args:
+            entries: Liste des entrées de decklists
+            get_decks: Récupérer les détails des decks
+            get_rounds: Récupérer les round standings
+            min_players: Nombre minimum de joueurs pour inclure un tournoi (défaut: 12)
+        """
         # Grouper par tournoi et format
         tournaments_by_format = {}
         
@@ -527,12 +534,20 @@ class MtgMeleeClientFlexible:
         
         # Sauvegarder par format
         saved_count = 0
+        skipped_count = 0
         
         for format_key, tournaments in tournaments_by_format.items():
             output_dir = Path(f"data/raw/melee/{format_key}")
             output_dir.mkdir(parents=True, exist_ok=True)
             
             for tournament_id, tournament_data in tournaments.items():
+                # Vérifier le nombre de joueurs
+                num_players = len(tournament_data['Decks'])
+                
+                if num_players < min_players:
+                    logger.info(f"⏭️  {format_key}: {tournament_data['TournamentName']} - IGNORÉ ({num_players} joueurs < {min_players})")
+                    skipped_count += 1
+                    continue
                 # Parser la date
                 date_str = tournament_data["TournamentStartDate"]
                 if date_str:
@@ -604,6 +619,9 @@ class MtgMeleeClientFlexible:
                 
                 logger.info(f"   💾 Sauvegardé: {filename}")
                 saved_count += 1
+        
+        if skipped_count > 0:
+            logger.info(f"\n⚠️  {skipped_count} tournois ignorés (moins de {min_players} joueurs)")
                 
         return saved_count
     
@@ -640,6 +658,8 @@ def main():
                        help='Récupérer les détails des decks (plus lent)')
     parser.add_argument('--get-rounds', action='store_true',
                        help='Récupérer les round standings pour la matrice de matchups')
+    parser.add_argument('--min-players', type=int, default=12,
+                       help='Nombre minimum de joueurs par tournoi (défaut: 12)')
     parser.add_argument('--incremental', action='store_true',
                        help='Mode incrémental: scraper seulement les nouveaux tournois')
     
@@ -665,6 +685,7 @@ def main():
     logger.info("=" * 50)
     logger.info(f"📅 Période: {start_date.strftime('%Y-%m-%d')} → {end_date.strftime('%Y-%m-%d')}")
     logger.info(f"🎮 Formats: {', '.join(formats)}")
+    logger.info(f"👥 Minimum de joueurs: {args.min_players}")
     if args.get_decks:
         logger.info("📝 Récupération des decks activée")
     if args.get_rounds:
@@ -691,7 +712,7 @@ def main():
             logger.info(f"  {fmt}: {count} entrées")
         
         # Sauvegarder
-        saved = client.save_tournaments(entries, get_decks=args.get_decks, get_rounds=args.get_rounds)
+        saved = client.save_tournaments(entries, get_decks=args.get_decks, get_rounds=args.get_rounds, min_players=args.min_players)
         logger.info(f"\n✅ {saved} tournois sauvegardés")
         
         if args.incremental:
