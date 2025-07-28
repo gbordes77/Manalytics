@@ -1,0 +1,552 @@
+{
+  "meta_analysis": {
+    "total_decks": 1170,
+    "archetypes": {
+      "Izzet Cauldron": {
+        "count": 197,
+        "percentage": 16.84
+      },
+      "Dimir Midrange": {
+        "count": 204,
+        "percentage": 17.44
+      },
+      "Mono Green Landfall": {
+        "count": 36,
+        "percentage": 3.08
+      },
+      "Golgari Graveyard": {
+        "count": 8,
+        "percentage": 0.68
+      },
+      "Azorius Control": {
+        "count": 10,
+        "percentage": 0.85
+      },
+      "4c Yuna": {
+        "count": 8,
+        "percentage": 0.68
+      },
+      "Selesnya Landfall": {
+        "count": 3,
+        "percentage": 0.26
+      },
+      "Golgari Midrange": {
+        "count": 40,
+        "percentage": 3.42
+      },
+      "Gruul Aggro": {
+        "count": 17,
+        "percentage": 1.45
+      },
+      "Humans": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Orzhov Caretaker (Mono White Caretaker)": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Azorius Oculus": {
+        "count": 2,
+        "percentage": 0.17
+      },
+      "Mono Black Demons": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Mono White Caretaker (Mono White Caretaker)": {
+        "count": 52,
+        "percentage": 4.44
+      },
+      "Golgari Demons": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Boros Convoke": {
+        "count": 42,
+        "percentage": 3.59
+      },
+      "Colorless Convoke": {
+        "count": 14,
+        "percentage": 1.2
+      },
+      "Mono White Caretaker": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Abzan Yuna": {
+        "count": 5,
+        "percentage": 0.43
+      },
+      "Colorless Midrange": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Mono Red Aggro": {
+        "count": 8,
+        "percentage": 0.68
+      },
+      "Rakdos Demons": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Izzet Oculus": {
+        "count": 6,
+        "percentage": 0.51
+      },
+      "Mono White Convoke": {
+        "count": 4,
+        "percentage": 0.34
+      },
+      "Temur Prowess": {
+        "count": 4,
+        "percentage": 0.34
+      },
+      "Mono Green Ramp": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Bant Omniscience": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Izzet Prowess": {
+        "count": 19,
+        "percentage": 1.62
+      },
+      "Poison": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Azorius Convoke": {
+        "count": 8,
+        "percentage": 0.68
+      },
+      "Mono White Legends": {
+        "count": 3,
+        "percentage": 0.26
+      },
+      "Naya Yuna": {
+        "count": 17,
+        "percentage": 1.45
+      },
+      "Rakdos Lizards": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Golgari Ramp": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Esper Oculus": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Mono Black Legends": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Mono Red Burn": {
+        "count": 6,
+        "percentage": 0.51
+      },
+      "Colorless Oculus": {
+        "count": 2,
+        "percentage": 0.17
+      },
+      "Azorius Omniscience": {
+        "count": 8,
+        "percentage": 0.68
+      },
+      "Mono Blue Legends": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Colorless Auras": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Dimir Legends": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Jeskai Control": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Reanimator": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Orzhov Demons": {
+        "count": 2,
+        "percentage": 0.17
+      },
+      "Selesnya Yuna": {
+        "count": 2,
+        "percentage": 0.17
+      },
+      "Mono Blue Midrange": {
+        "count": 2,
+        "percentage": 0.17
+      },
+      "Esper Midrange": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "4c Ramp": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Mono White Auras": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Boros Aggro": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Jeskai Oculus": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "Izzet Artifacts": {
+        "count": 1,
+        "percentage": 0.09
+      }
+    },
+    "colors": {
+      "C": {
+        "count": 278,
+        "percentage": 23.76
+      },
+      "UR": {
+        "count": 226,
+        "percentage": 19.32
+      },
+      "RG": {
+        "count": 65,
+        "percentage": 5.56
+      },
+      "UB": {
+        "count": 209,
+        "percentage": 17.86
+      },
+      "G": {
+        "count": 40,
+        "percentage": 3.42
+      },
+      "WU": {
+        "count": 57,
+        "percentage": 4.87
+      },
+      "BG": {
+        "count": 59,
+        "percentage": 5.04
+      },
+      "WR": {
+        "count": 50,
+        "percentage": 4.27
+      },
+      "WG": {
+        "count": 20,
+        "percentage": 1.71
+      },
+      "WUBG": {
+        "count": 9,
+        "percentage": 0.77
+      },
+      "URG": {
+        "count": 8,
+        "percentage": 0.68
+      },
+      "BR": {
+        "count": 8,
+        "percentage": 0.68
+      },
+      "WB": {
+        "count": 11,
+        "percentage": 0.94
+      },
+      "B": {
+        "count": 4,
+        "percentage": 0.34
+      },
+      "W": {
+        "count": 67,
+        "percentage": 5.73
+      },
+      "WBG": {
+        "count": 5,
+        "percentage": 0.43
+      },
+      "R": {
+        "count": 21,
+        "percentage": 1.79
+      },
+      "WUB": {
+        "count": 4,
+        "percentage": 0.34
+      },
+      "UG": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "WUG": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "WRG": {
+        "count": 17,
+        "percentage": 1.45
+      },
+      "WBRG": {
+        "count": 1,
+        "percentage": 0.09
+      },
+      "U": {
+        "count": 3,
+        "percentage": 0.26
+      },
+      "WUR": {
+        "count": 2,
+        "percentage": 0.17
+      },
+      "WUBRG": {
+        "count": 3,
+        "percentage": 0.26
+      },
+      "BRG": {
+        "count": 1,
+        "percentage": 0.09
+      }
+    }
+  },
+  "match_analysis": {
+    "mtgo": {
+      "matches": 41,
+      "source": "listener"
+    },
+    "melee": {
+      "matches": 19,
+      "tournaments_with_standings": 5,
+      "unique_matchups": 19,
+      "source": "round_standings_estimation"
+    },
+    "total_matches": 60
+  },
+  "matchup_matrix": {
+    "note": "Donn\u00e9es Melee bas\u00e9es sur estimations Swiss, MTGO donn\u00e9es exactes",
+    "melee_matchups": {
+      "Gruul Cauldron vs W-U-B-R-G Control": {
+        "archetypes": [
+          "Gruul Cauldron",
+          "W-U-B-R-G Control"
+        ],
+        "total": 1,
+        "wins": {
+          "Gruul Cauldron": 1,
+          "W-U-B-R-G Control": 0
+        }
+      },
+      "Selesnya Midrange vs W-U-B-R-G": {
+        "archetypes": [
+          "Selesnya Midrange",
+          "W-U-B-R-G"
+        ],
+        "total": 1,
+        "wins": {
+          "Selesnya Midrange": 1,
+          "W-U-B-R-G": 0
+        }
+      },
+      "Jeskai Control vs Mono-Black Demons": {
+        "archetypes": [
+          "Jeskai Control",
+          "Mono-Black Demons"
+        ],
+        "total": 1,
+        "wins": {
+          "Jeskai Control": 1,
+          "Mono-Black Demons": 0
+        }
+      },
+      "Azorius Control vs Boros": {
+        "archetypes": [
+          "Azorius Control",
+          "Boros"
+        ],
+        "total": 1,
+        "wins": {
+          "Azorius Control": 1,
+          "Boros": 0
+        }
+      },
+      "Azorius Combo vs Jeskai Oculus": {
+        "archetypes": [
+          "Azorius Combo",
+          "Jeskai Oculus"
+        ],
+        "total": 1,
+        "wins": {
+          "Jeskai Oculus": 1,
+          "Azorius Combo": 0
+        }
+      },
+      "Mardu Aggro vs Rakdos Reanimator": {
+        "archetypes": [
+          "Mardu Aggro",
+          "Rakdos Reanimator"
+        ],
+        "total": 1,
+        "wins": {
+          "Rakdos Reanimator": 1,
+          "Mardu Aggro": 0
+        }
+      },
+      "Simic vs W-U-B-R-G Graveyard": {
+        "archetypes": [
+          "Simic",
+          "W-U-B-R-G Graveyard"
+        ],
+        "total": 1,
+        "wins": {
+          "Simic": 1,
+          "W-U-B-R-G Graveyard": 0
+        }
+      },
+      "Dimir Midrange vs Mono-White Control": {
+        "archetypes": [
+          "Dimir Midrange",
+          "Mono-White Control"
+        ],
+        "total": 1,
+        "wins": {
+          "Dimir Midrange": 1,
+          "Mono-White Control": 0
+        }
+      },
+      "Izzet Combo vs Orzhov Demons": {
+        "archetypes": [
+          "Izzet Combo",
+          "Orzhov Demons"
+        ],
+        "total": 1,
+        "wins": {
+          "Izzet Combo": 1,
+          "Orzhov Demons": 0
+        }
+      },
+      "Izzet Cauldron vs Izzet Cauldron": {
+        "archetypes": [
+          "Izzet Cauldron",
+          "Izzet Cauldron"
+        ],
+        "total": 1,
+        "wins": {
+          "Izzet Cauldron": 1
+        }
+      },
+      "Azorius Control vs Mono-Green Aggro": {
+        "archetypes": [
+          "Azorius Control",
+          "Mono-Green Aggro"
+        ],
+        "total": 1,
+        "wins": {
+          "Mono-Green Aggro": 1,
+          "Azorius Control": 0
+        }
+      },
+      "Golgari Midrange vs Mono-White Tokens": {
+        "archetypes": [
+          "Golgari Midrange",
+          "Mono-White Tokens"
+        ],
+        "total": 1,
+        "wins": {
+          "Mono-White Tokens": 1,
+          "Golgari Midrange": 0
+        }
+      },
+      "Dimir Midrange vs Orzhov": {
+        "archetypes": [
+          "Dimir Midrange",
+          "Orzhov"
+        ],
+        "total": 1,
+        "wins": {
+          "Dimir Midrange": 1,
+          "Orzhov": 0
+        }
+      },
+      "Rakdos Sacrifice vs Temur Midrange": {
+        "archetypes": [
+          "Rakdos Sacrifice",
+          "Temur Midrange"
+        ],
+        "total": 1,
+        "wins": {
+          "Temur Midrange": 1,
+          "Rakdos Sacrifice": 0
+        }
+      },
+      "Azorius Combo vs Izzet Cauldron": {
+        "archetypes": [
+          "Azorius Combo",
+          "Izzet Cauldron"
+        ],
+        "total": 1,
+        "wins": {
+          "Izzet Cauldron": 1,
+          "Azorius Combo": 0
+        }
+      },
+      "Boros Convoke vs Izzet Cauldron": {
+        "archetypes": [
+          "Boros Convoke",
+          "Izzet Cauldron"
+        ],
+        "total": 1,
+        "wins": {
+          "Izzet Cauldron": 1,
+          "Boros Convoke": 0
+        }
+      },
+      "Mono-Black Control vs W-B-R-G Midrange": {
+        "archetypes": [
+          "Mono-Black Control",
+          "W-B-R-G Midrange"
+        ],
+        "total": 1,
+        "wins": {
+          "Mono-Black Control": 1,
+          "W-B-R-G Midrange": 0
+        }
+      },
+      "Izzet Combo vs Izzet Prowess": {
+        "archetypes": [
+          "Izzet Combo",
+          "Izzet Prowess"
+        ],
+        "total": 1,
+        "wins": {
+          "Izzet Combo": 1,
+          "Izzet Prowess": 0
+        }
+      },
+      "Izzet Aggro vs Izzet Cauldron": {
+        "archetypes": [
+          "Izzet Aggro",
+          "Izzet Cauldron"
+        ],
+        "total": 1,
+        "wins": {
+          "Izzet Aggro": 1,
+          "Izzet Cauldron": 0
+        }
+      }
+    }
+  },
+  "timestamp": "2025-07-28T14:45:32.673242"
+}
