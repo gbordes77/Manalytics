@@ -144,19 +144,20 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 
 ## **🚀 État Actuel (28/07/2025)**
 
-### 🔥 Session du 28/07 - Phase 4 : Intégration Round Standings Melee
-- **SUCCÈS MAJEUR** : +46% de données matchs (41→60) grâce aux Round Standings!
-- **Round Standings Melee** : API intégrée avec succès dans `scrape_melee_flexible.py`
-  - Extraction des round IDs depuis HTML
-  - Payload correct trouvé dans `Melee_model.py`
-  - Filtre `--min-players 12` pour qualité des données
-- **Scripts d'intégration créés** :
-  - `integrate_melee_matches.py` - Combine MTGO + Melee matches
-  - `analyze_melee_round_standings.py` - Analyse exploratoire
-- **Documentation Phase 4** :
-  - `MELEE_ROUND_STANDINGS_INTEGRATION.md` - Guide complet
-  - `PHASE_4_LISTENER_INTEGRATION_STATUS.md` - État actuel
-  - `ROUND_STANDINGS_TECHNICAL_DETAILS.md` - Détails techniques
+### 🚨 Session du 28/07 - Phase 4 : DONNÉES LISTENER MANQUANTES
+- **🔴 CAUSE IDENTIFIÉE** : Le dossier `jiliaclistener/` est VIDE
+  - 33 tournois MTGO scraped (juillet 1-21)
+  - 0 matchs dans `data/MTGOData/`
+  - 0 fichiers dans `jiliaclistener/`
+  - Les "41 matchs" sont une erreur/cache obsolète
+- **PROBLÈME FONDAMENTAL** :
+  - Les scrapers MTGO actuels NE capturent PAS les matchs
+  - Ils récupèrent seulement les decklists
+  - Pour les matchs, il FAUT le MTGO Listener
+- **SOLUTION REQUISE** :
+  - Option 1: Implémenter MTGO-listener maintenant
+  - Option 2: Obtenir les données listener de Jiliac
+  - Option 3: Se contenter des 19 matchs Melee (insuffisant!)
 
 ### ✅ Session du 28/07 matin : Architecture Pipeline & Scrapers Flexibles
 - **Clarification architecture** : Compréhension correcte du flux de données (scrapers → cache → analyse)
@@ -178,12 +179,14 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - **Documentation complète** : 20+ guides créés pour les équipes futures
 - **Nettoyage scripts** : De 54 → 29 scripts (archivés dans `_archive_2025_07_27/`)
 
-### 🚧 PHASE 4 EN COURS : Intégration Matchs & Visualisations
-**Progression** : 60% complète
-- ✅ **Round Standings Melee** : +46% de matchs (41→60)
-- ✅ **Visualisations Plotly** : 3/5 complétées
-- 📋 **En cours** : Sideboard Intelligence & Innovation Tracker
-- 🔜 **Prochaine étape** : MTGO Listener pour matchs temps réel
+### 🚨 PHASE 4 BLOQUÉE : Investigation Problème Matchs MTGO
+**PROBLÈME CRITIQUE** : 41 matchs sur 22 tournois = IMPOSSIBLE
+- 🔴 **Investigation urgente** : Où sont les matchs MTGO?
+- ❓ **Questions clés** :
+  - Les 22 tournois existent-ils vraiment?
+  - Le scraper MTGO capture-t-il les matchs?
+  - Faut-il le MTGO Listener pour avoir les matchs?
+- ⚠️ **Melee n'est PAS la solution** : 19 matchs ajoutés mais problème non résolu
 
 ### ✅ Phase 2 COMPLÈTE : Cache System
 - Cache SQLite pour metadata + JSON pour decklists
