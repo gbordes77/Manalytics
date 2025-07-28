@@ -69,6 +69,9 @@ Exemples d'utilisation:
   # Seulement MTGO ou Melee
   python scrape_all.py --format standard --days 7 --only mtgo
   python scrape_all.py --format standard --days 7 --only melee
+  
+  # Avec round standings pour créer la matrice de matchups
+  python scrape_all.py --format standard --days 21 --get-rounds
         """
     )
     
@@ -93,6 +96,8 @@ Exemples d'utilisation:
     # Options supplémentaires
     parser.add_argument('--get-decks', action='store_true',
                        help='Récupérer les détails des decks pour Melee (plus lent)')
+    parser.add_argument('--get-rounds', action='store_true',
+                       help='Récupérer les round standings pour la matrice de matchups (Melee)')
     parser.add_argument('--incremental', action='store_true',
                        help='Mode incrémental (futur)')
     
@@ -124,6 +129,8 @@ Exemples d'utilisation:
     melee_args = scraper_args.copy()
     if args.get_decks:
         melee_args.append('--get-decks')
+    if args.get_rounds:
+        melee_args.append('--get-rounds')
     
     # Afficher la configuration
     logger.info("🎯 Manalytics - Scraper Unifié")
@@ -147,6 +154,8 @@ Exemples d'utilisation:
     logger.info(f"🌐 Plateformes: {args.only if args.only else 'MTGO + Melee'}")
     if args.get_decks:
         logger.info("📝 Récupération des decks Melee activée")
+    if args.get_rounds:
+        logger.info("🎲 Récupération des round standings Melee activée")
     
     # Lancer les scrapers
     success_count = 0
