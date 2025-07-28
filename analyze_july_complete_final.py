@@ -433,8 +433,7 @@ class FinalJulyAnalyzer:
         # 8. Scatter Win Rate vs Presence avec clusters
         viz_html.append(self._create_cluster_scatter_chart(meta_data))
         
-        # Générer les insights
-        insights_html = self._generate_insights_html(analysis, meta_data)
+        # [REMOVED - Key Insights section était mauvais]
         
         # Générer la liste des tournois
         tournaments_html = self._generate_tournaments_list(analysis)
@@ -485,8 +484,6 @@ class FinalJulyAnalyzer:
                 <div class="summary-value">{int(analysis['total_matches'] / analysis['matched_tournaments']) if analysis['matched_tournaments'] > 0 else 0}</div>
             </div>
         </div>
-        
-        {insights_html}
         
         {''.join(viz_html)}
         
@@ -1122,79 +1119,6 @@ class FinalJulyAnalyzer:
         
         return f'<div class="visualization-container">{fig.to_html(include_plotlyjs=False, div_id="scatter-chart")}</div>'
     
-    def _generate_insights_html(self, analysis: Dict, meta_data: List) -> str:
-        """Génère les insights clés sous forme HTML"""
-        # Calculer les insights
-        total_unique_players = len(set().union(*[set(s['players']) for s in analysis['archetype_stats'].values()]))
-        avg_deck_per_tournament = sum(s['decks'] for s in analysis['archetype_stats'].values()) / analysis['matched_tournaments']
-        
-        # Top performers
-        top_wr = [(a, d) for a, d in meta_data if d['matches'] >= 20]
-        top_wr.sort(key=lambda x: x[1]['win_rate'], reverse=True)
-        
-        # Most played
-        most_played = meta_data[:3]
-        
-        # Trouve les meilleurs matchups
-        best_matchups = []
-        for arch1, opponents in analysis['matchup_data'].items():
-            for arch2, results in opponents.items():
-                total = results['wins'] + results['losses']
-                if total >= 10:
-                    wr = results['wins'] / total * 100
-                    if wr > 70:
-                        best_matchups.append((arch1, arch2, wr, total))
-        best_matchups.sort(key=lambda x: x[2], reverse=True)
-        
-        html = f"""
-        <div class="info-box">
-            <h2 class="gradient-text">🔍 Key Insights - July 1-21 Meta Analysis</h2>
-            
-            <div class="insights-grid">
-                <div class="insight-card">
-                    <h3>👑 Dominant Deck</h3>
-                    <p><strong>{most_played[0][0]}</strong></p>
-                    <p>{most_played[0][1]['percentage']:.1f}% of the meta ({most_played[0][1]['matches']} matches)</p>
-                    <p>Win Rate: {most_played[0][1]['win_rate']:.1f}%</p>
-                </div>
-                
-                <div class="insight-card">
-                    <h3>🏆 Best Performer</h3>
-                    <p><strong>{top_wr[0][0]}</strong></p>
-                    <p>Win Rate: {top_wr[0][1]['win_rate']:.1f}% ({top_wr[0][1]['matches']} matches)</p>
-                    <p>Meta Share: {top_wr[0][1]['percentage']:.1f}%</p>
-                </div>
-                
-                <div class="insight-card">
-                    <h3>📈 Meta Diversity</h3>
-                    <p><strong>{len(analysis['archetype_stats'])}</strong> unique archetypes</p>
-                    <p><strong>{total_unique_players}</strong> unique players</p>
-                    <p><strong>{avg_deck_per_tournament:.1f}</strong> decks per tournament</p>
-                </div>
-            </div>
-            
-            <h3>🎲 Notable Matchups</h3>
-            <table>
-                <tr>
-                    <th>Favored Deck</th>
-                    <th>vs</th>
-                    <th>Opponent</th>
-                    <th>Win Rate</th>
-                    <th>Matches</th>
-                </tr>
-                {"".join(f'<tr><td>{m[0]}</td><td>vs</td><td>{m[1]}</td><td>{m[2]:.1f}%</td><td>{m[3]}</td></tr>' for m in best_matchups[:5])}
-            </table>
-            
-            <h3>📊 Meta Breakdown</h3>
-            <ul>
-                <li><strong>Tier 1 (>10% share):</strong> {', '.join(a[0] for a in meta_data if a[1]['percentage'] > 10)}</li>
-                <li><strong>Tier 2 (5-10% share):</strong> {', '.join(a[0] for a in meta_data if 5 <= a[1]['percentage'] <= 10)}</li>
-                <li><strong>Tier 3 (<5% share):</strong> {len([a for a in meta_data if a[1]['percentage'] < 5])} archetypes</li>
-            </ul>
-        </div>
-        """
-        
-        return html
     
     def _generate_tournaments_list(self, analysis: Dict) -> str:
         """Génère la liste cliquable des tournois utilisés"""
