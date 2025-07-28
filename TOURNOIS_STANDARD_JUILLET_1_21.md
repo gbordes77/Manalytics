@@ -147,3 +147,23 @@
 ### Impact
 - **Tournois Melee manqués** : 3 gros tournois (173 joueurs total)
 - Ces tournois auraient ajouté ~300-500 matches supplémentaires
+
+---
+
+## 📊 Comparaison avec la liste de Jiliac
+
+### Tournois Melee dans la liste de Jiliac (8/8 - TOUS INCLUS) :
+1. ✅ **TheGathering.gg Standard Post-BNR Celebration** (2 juillet)
+2. ✅ **TheGathering.gg Standard Post-BNR Celebration #2** (2 juillet)
+3. ✅ **第2回シングルスター杯　サブイベント** (6 juillet) - 53 joueurs
+4. ✅ **Jaffer's Tarkir Dragonstorm Mosh Pit** (6 juillet) - 91 joueurs
+5. ✅ **F2F Tour Red Deer - Sunday Super Qualifier** (6 juillet)
+6. ✅ **Valley Dasher's Bishkek Classic #1** (12 juillet)
+7. ✅ **Jaffer's Final Fantasy Mosh Pit** (13 juillet) - 29 joueurs
+8. ✅ **Boa Qualifier #2 2025 (standard)** (19 juillet)
+
+### Observation CRITIQUE :
+**Jiliac inclut TOUS les tournois Melee, même ceux avec ≤16 joueurs !**
+- Cela explique pourquoi Jiliac a plus de données
+- Notre code actuel ne récupère aucun tournoi Melee (MTGOData = MTGO only)
+- Nous manquons donc 8 tournois Melee complets
