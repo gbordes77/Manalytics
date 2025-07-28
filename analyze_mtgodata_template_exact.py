@@ -412,34 +412,34 @@ class MTGODataTemplateAnalyzer:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manalytics - Interactive Standard Metagame Analysis</title>
     <style>
-        body {
+        body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
-        }
-        .container {
+        }}
+        .container {{
             max-width: 1600px;
             margin: 0 auto;
             padding: 20px;
-        }
-        .header {
+        }}
+        .header {{
             text-align: center;
             padding: 20px;
             background: white;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             margin-bottom: 20px;
-        }
-        .controls {
+        }}
+        .controls {{
             display: flex;
             justify-content: center;
             gap: 20px;
             margin: 20px 0;
             flex-wrap: wrap;
-        }
-        .btn {
+        }}
+        .btn {{
             padding: 10px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -448,30 +448,30 @@ class MTGODataTemplateAnalyzer:
             cursor: pointer;
             font-weight: bold;
             transition: transform 0.2s;
-        }
-        .btn:hover {
+        }}
+        .btn:hover {{
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        #plotly-div {
+        }}
+        #plotly-div {{
             background: white;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             padding: 20px;
-        }
+        }}
         
         /* Mobile responsive */
-        @media (max-width: 768px) {
-            .container {
+        @media (max-width: 768px) {{
+            .container {{
                 padding: 10px;
-            }
-            .header h1 {
+            }}
+            .header h1 {{
                 font-size: 1.5em;
-            }
-            #plotly-div {
+            }}
+            #plotly-div {{
                 padding: 10px;
-            }
-        }
+            }}
+        }}
     </style>
 </head>
 <body>
@@ -492,7 +492,7 @@ class MTGODataTemplateAnalyzer:
     
     <script>
         // CSV download function
-        function downloadCSV() {
+        function downloadCSV() {{
             const data = {csv_data};
             
             const csv = [
