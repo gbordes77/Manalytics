@@ -23,6 +23,7 @@ from src.manalytics.listener.listener_reader import ListenerReader
 from src.cache.reader import CacheReader
 from src.cache.database import CacheDatabase
 from src.manalytics.visualizers.metagame_dynamics import MetagameDynamicsVisualizer
+from src.manalytics.visualizers.unified_dashboard import UnifiedDashboard
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
