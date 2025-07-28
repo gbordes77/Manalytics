@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manalytics - Fixed Analysis with MTGOData</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                min-height: 100vh;
+            }
+            .container {
+                max-width: 1600px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .header {
+                text-align: center;
+                padding: 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-radius: 15px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+                margin-bottom: 20px;
+            }
+            .visualization-container {
+                background: white;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 20px 0;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+            .summary-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                margin: 30px 0;
+            }
+            .summary-card {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 25px;
+                border-radius: 15px;
+                text-align: center;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+            .summary-value {
+                font-size: 3em;
+                font-weight: 700;
+                margin: 10px 0;
+            }
+            .summary-label {
+                font-size: 1.1em;
+                opacity: 0.9;
+            }
+            .warning-box {
+                background: #fff3cd;
+                border: 1px solid #ffeaa7;
+                border-radius: 10px;
+                padding: 20px;
+                margin: 20px 0;
+                color: #856404;
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Manalytics - Fixed Analysis with MTGOData</h1>
+            <p>Standard Format - July 1-21, 2025</p>
+            <p style="font-size: 0.9em; opacity: 0.8;">Real matchup data from 0 tournaments</p>
+        </div>
+        
+        
+            <div class="warning-box">
+                <h3>⚠️ Données limitées</h3>
+                <p>Seulement 0 matchs analysés sur 0 tournois matchés.</p>
+                <p>Les statistiques peuvent ne pas être représentatives.</p>
+                <p>Tournois non-matchés : 25</p>
+            </div>
+            
+        
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="summary-label">Total Matches Analyzed</div>
+                <div class="summary-value">0</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-label">Matched Tournaments</div>
+                <div class="summary-value">0</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-label">Unique Archetypes</div>
+                <div class="summary-value">0</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-label">Total Decks</div>
+                <div class="summary-value">0</div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</body>
+</html>

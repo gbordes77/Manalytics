@@ -36,18 +36,22 @@ class FixedJulyAnalyzer:
         
     def extract_tournament_id(self, text: str) -> str:
         """Extraire l'ID numérique du tournoi depuis différents formats"""
-        patterns = [
-            r'(\d{8})\.json$',
-            r'-(\d{8})\.json$',  
-            r'\((\d{8})\)',
-            r'(\d{8})(?=\.json$)',
-            r'(\d{8})',  # N'importe quel nombre de 8 chiffres
-        ]
+        # Chercher spécifiquement les 8 derniers chiffres
+        # Formats possibles:
+        # - "standard-challenge-32-2025-07-0412801637" -> 12801637
+        # - "2012803712" -> 12803712
+        # - "(12801654)" -> 12801654
         
-        for pattern in patterns:
-            match = re.search(pattern, str(text))
-            if match:
-                return match.group(1)
+        # D'abord essayer de trouver 8 chiffres à la fin
+        match = re.search(r'(\d{8})(?:\D|$)', str(text))
+        if match:
+            return match.group(1)
+            
+        # Si pas trouvé, chercher n'importe quel nombre de 8 chiffres
+        match = re.search(r'(\d{8})', str(text))
+        if match:
+            return match.group(1)
+            
         return None
         
     def load_listener_data(self):
@@ -120,17 +124,19 @@ class FixedJulyAnalyzer:
             
             print(f"📁 Trouvé {len(month_data)} entrées dans le cache JSON")
             
-            # Parser chaque entrée
+            # Parser chaque entrée - FILTRER UNIQUEMENT STANDARD
             for key, data in month_data.items():
-                # Extraire l'ID du key
-                tournament_id = self.extract_tournament_id(key)
-                if tournament_id:
-                    self.tournament_cache_data[tournament_id] = {
-                        'key': key,
-                        'data': data,
-                        'name': data.get('name', 'Unknown'),
-                        'date': data.get('date', 'Unknown')
-                    }
+                # Vérifier que c'est un tournoi Standard
+                if data.get('format', '').lower() == 'standard' or 'standard' in key.lower():
+                    # Extraire l'ID du key
+                    tournament_id = self.extract_tournament_id(key)
+                    if tournament_id:
+                        self.tournament_cache_data[tournament_id] = {
+                            'key': key,
+                            'data': data,
+                            'name': data.get('name', 'Unknown'),
+                            'date': data.get('date', 'Unknown')
+                        }
         
         print(f"✅ Chargé {len(self.tournament_cache_data)} tournois du cache avec IDs extraits")
         
