@@ -338,6 +338,14 @@ git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
 Cette règle s'applique à TOUTES tes réponses contenant du code.
 Aucune exception. Aucune demande de confirmation.
 
+## 🚨 RÈGLE CRITIQUE : OUVRIR AUTOMATIQUEMENT LES ANALYSES
+
+**QUAND TU ME PRÉPARES UNE ANALYSE OU UN DOCUMENT : TU ME L'OUVRES AUTOMATIQUEMENT**
+- Après génération d'un fichier HTML d'analyse : `open [fichier]`
+- Après création d'un rapport : `open [fichier]`
+- Après toute visualisation : `open [fichier]`
+- **PAS BESOIN DE DEMANDER - OUVRE-LE DIRECTEMENT !**
+
 ## 💬 CONTACT & SUPPORT
 
 **Questions ou problèmes ?**
