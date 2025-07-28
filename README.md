@@ -15,9 +15,9 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Version**: 3.0.0  
+**Version**: 3.1.0  
 **Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | ✅ Phase 3 Complete (Architecture & Docs) | 📋 Phase 4 Next (MTGO Listener)  
-**Last Update**: July 27, 2025
+**Last Update**: July 28, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
 
@@ -65,20 +65,23 @@ Pour obtenir les vraies données de matchups et créer une matrice statistique :
 
 *Note: Analyse par MATCHES (pas par decks) suivant la méthodologie Jiliac*
 
-### ✅ Phase 3: Complete - Architecture & Documentation
+### ✅ Phase 3: Complete - Architecture & Documentation 
 
-**Réalisations Phase 3**:
+**Nouvelles Réalisations (28/07/2025)**:
+- ✅ **Scrapers Flexibles** : Nouveau système unifié multi-formats
+  - `scrape_all.py` - Scraper unifié MTGO + Melee (RECOMMANDÉ)
+  - Support multi-formats : `--format standard modern legacy` ou `--format all`
+  - Dates personnalisables : `--start-date 2025-07-01 --end-date 2025-07-21`
+- ✅ **Guide d'Intégration** : `docs/ONBOARDING_GUIDE.md` - Parcours structuré pour nouveaux développeurs
+- ✅ **Architecture Documentée** : `docs/MANALYTICS_COMPLETE_ARCHITECTURE.html` - Diagrammes interactifs
+- ✅ **Scripts Obsolètes Archivés** : Anciens scrapers déplacés dans `scripts/_obsolete_scripts/`
+
+**Réalisations Phase 3 Complètes**:
 - ✅ **Architecture modulaire** alignée avec Jiliac (src/manalytics/)
 - ✅ **Visualisation de référence** : `data/cache/standard_analysis_no_leagues.html`
-- ✅ **Documentation complète** : 15+ guides techniques créés
+- ✅ **Documentation complète** : 20+ guides techniques créés
 - ✅ **Scripts réorganisés** : De 54 → 29 scripts utilitaires
 - ✅ **Quick launcher** : `python3 visualize_standard.py`
-
-**Documentation créée**:
-- `docs/PROJECT_COMPLETE_DOCUMENTATION.md` - Guide complet pour les équipes
-- `docs/DATA_FLOW_VISUALIZATION.html` - Flux de données interactif
-- `docs/FILE_DISCOVERY_PROCESS.html` - Comment on trouve les fichiers
-- `docs/VISUALIZATION_TEMPLATE_REFERENCE.md` - Règles visuelles ABSOLUES
 
 ## 📋 Features
 

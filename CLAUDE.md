@@ -142,13 +142,26 @@ FastAPI → Frontend/Rapports
 
 C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The Gathering !
 
-## **🚀 État Actuel (27/07/2025)**
+## **🚀 État Actuel (28/07/2025)**
+
+### ✅ Session du 28/07 : Architecture Pipeline & Scrapers Flexibles
+- **Clarification architecture** : Compréhension correcte du flux de données (scrapers → cache → analyse)
+- **Nettoyage erreurs** : Suppression des imports erronés depuis jiliac_pipeline
+- **Scrapers flexibles créés** :
+  - `scrape_all.py` - Scraper unifié MTGO + Melee (RECOMMANDÉ)
+  - `scrape_mtgo_flexible.py` - Support multi-formats et dates personnalisables
+  - `scrape_melee_flexible.py` - Support multi-formats et dates personnalisables
+- **Documentation majeure** :
+  - `docs/ONBOARDING_GUIDE.md` - Guide d'intégration complet pour nouveaux développeurs
+  - `docs/MANALYTICS_COMPLETE_ARCHITECTURE.html` - Architecture complète avec diagrammes
+  - `docs/SCRAPERS_COMPLETE_GUIDE.md` - Guide complet des scrapers
+- **Scripts obsolètes archivés** : `scripts/_obsolete_scripts/`
 
 ### ✅ Phase 3 COMPLÈTE : Architecture & Documentation
 - **Architecture modulaire** : Code réorganisé dans `src/manalytics/` (aligné avec Jiliac)
 - **Visualisation de référence** : `data/cache/standard_analysis_no_leagues.html` 
 - **Quick launcher** : `python3 visualize_standard.py` pour accès rapide
-- **Documentation complète** : 15+ guides créés pour les équipes futures
+- **Documentation complète** : 20+ guides créés pour les équipes futures
 - **Nettoyage scripts** : De 54 → 29 scripts (archivés dans `_archive_2025_07_27/`)
 
 ### 📋 PHASE 4 PLANIFIÉE : MTGO Listener 
