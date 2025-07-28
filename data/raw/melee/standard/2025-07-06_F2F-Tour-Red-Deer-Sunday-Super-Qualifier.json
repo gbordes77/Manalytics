@@ -1,0 +1,1884 @@
+{
+  "TournamentId": 335273,
+  "TournamentName": "F2F Tour Red Deer - Sunday Super Qualifier",
+  "TournamentStartDate": "2025-07-06T16:00:00Z",
+  "OrganizationName": "F2FTour.com",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "f9fbb177-1238-4e17-8146-b31201842d46",
+      "PlayerName": "MarP54",
+      "DeckName": "Golgari",
+      "Rank": 1,
+      "Wins": 6,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c7f5f6fb-1777-404c-9d4d-b312017a9f69",
+      "PlayerName": "Nik Lyons",
+      "DeckName": "Jeskai",
+      "Rank": 4,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "996930a9-f657-4408-bb68-b3120175a79e",
+      "PlayerName": "Liam Hoban",
+      "DeckName": "Izzet",
+      "Rank": 6,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7a41f53d-4e4f-4553-9302-b31201884e14",
+      "PlayerName": "Randall Litman",
+      "DeckName": "Jund",
+      "Rank": 7,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2c86f469-09d0-46c1-9aba-b31201706a27",
+      "PlayerName": "AriB8",
+      "DeckName": "Jeskai",
+      "Rank": 8,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2131ac9b-f2a4-4a10-864b-b31201864a85",
+      "PlayerName": "SoggyFrootloops",
+      "DeckName": "Mono-White",
+      "Rank": 3,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "08d1c53c-5efd-4a4b-be5c-b312017f441f",
+      "PlayerName": "NicR56",
+      "DeckName": "Boros",
+      "Rank": 5,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "019b8cc7-91ab-4b1c-9774-b31201684602",
+      "PlayerName": "Kody Lyons",
+      "DeckName": "Azorius Combo",
+      "Rank": 2,
+      "Wins": 5,
+      "IsValid": true
+    }
+  ],
+  "RoundStandings": [
+    {
+      "round": 1,
+      "round_id": "1172943",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Adam Pio",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "1-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 2,
+          "Player": "NicR56",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 3,
+          "Player": "BR7609",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "DavR46",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 5,
+          "Player": "Kody Lyons",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 6,
+          "Player": "MarP54",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 7,
+          "Player": "Liam Hoban",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 8,
+          "Player": "Gavin Bennett",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 9,
+          "Player": "Nik Lyons",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 10,
+          "Player": "Joshua Saruga",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 11,
+          "Player": "maxorag",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 12,
+          "Player": "SoggyFrootloops",
+          "MatchRecord": "0-0-1",
+          "GameRecord": "0-0-3",
+          "Points": 1,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 13,
+          "Player": "Kyle Mah",
+          "MatchRecord": "0-0-1",
+          "GameRecord": "0-0-3",
+          "Points": 1,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 14,
+          "Player": "Randall Litman",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 15,
+          "Player": "Ryan Primdahl",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 16,
+          "Player": "tannerarnold",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 17,
+          "Player": "BenF5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 18,
+          "Player": "DomB5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 19,
+          "Player": "JonP29",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-1-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 20,
+          "Player": "ScoS8",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 21,
+          "Player": "ConD12",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 22,
+          "Player": "AriB8",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "round_id": "1172944",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Liam Hoban",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "3-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 2,
+          "Player": "Kody Lyons",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 3,
+          "Player": "BR7609",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "NicR56",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 5,
+          "Player": "MarP54",
+          "MatchRecord": "1-0-1",
+          "GameRecord": "3-1-0",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.75
+        },
+        {
+          "Rank": 6,
+          "Player": "Gavin Bennett",
+          "MatchRecord": "1-0-1",
+          "GameRecord": "3-1-0",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.75
+        },
+        {
+          "Rank": 7,
+          "Player": "Kyle Mah",
+          "MatchRecord": "1-0-1",
+          "GameRecord": "2-0-3",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.45
+        },
+        {
+          "Rank": 8,
+          "Player": "SoggyFrootloops",
+          "MatchRecord": "1-0-1",
+          "GameRecord": "2-1-3",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 9,
+          "Player": "Nik Lyons",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.75
+        },
+        {
+          "Rank": 10,
+          "Player": "Joshua Saruga",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.8
+        },
+        {
+          "Rank": 11,
+          "Player": "Adam Pio",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.83333333
+        },
+        {
+          "Rank": 12,
+          "Player": "DavR46",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 13,
+          "Player": "maxorag",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 14,
+          "Player": "Ryan Primdahl",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.4
+        },
+        {
+          "Rank": 15,
+          "Player": "JonP29",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 16,
+          "Player": "AriB8",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 17,
+          "Player": "Randall Litman",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 18,
+          "Player": "DomB5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.8
+        },
+        {
+          "Rank": 19,
+          "Player": "BenF5",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.83333333,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.75
+        },
+        {
+          "Rank": 20,
+          "Player": "tannerarnold",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "0-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.83333333
+        },
+        {
+          "Rank": 21,
+          "Player": "ConD12",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "0-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.75
+        },
+        {
+          "Rank": 22,
+          "Player": "ScoS8",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.55
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "round_id": "1172945",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "NicR56",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.57142857
+        },
+        {
+          "Rank": 2,
+          "Player": "Kody Lyons",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.52380952
+        },
+        {
+          "Rank": 3,
+          "Player": "Gavin Bennett",
+          "MatchRecord": "2-0-1",
+          "GameRecord": "5-2-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 4,
+          "Player": "SoggyFrootloops",
+          "MatchRecord": "2-0-1",
+          "GameRecord": "4-1-3",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.40740741,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.44444444
+        },
+        {
+          "Rank": 5,
+          "Player": "Liam Hoban",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.66349206
+        },
+        {
+          "Rank": 6,
+          "Player": "DavR46",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.53015873
+        },
+        {
+          "Rank": 7,
+          "Player": "BR7609",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.50793651
+        },
+        {
+          "Rank": 8,
+          "Player": "Joshua Saruga",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.53968254
+        },
+        {
+          "Rank": 9,
+          "Player": "Nik Lyons",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.47619048
+        },
+        {
+          "Rank": 10,
+          "Player": "Randall Litman",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 11,
+          "Player": "MarP54",
+          "MatchRecord": "1-1-1",
+          "GameRecord": "3-3-0",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.77777778,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.66964286
+        },
+        {
+          "Rank": 12,
+          "Player": "Kyle Mah",
+          "MatchRecord": "1-1-1",
+          "GameRecord": "3-2-3",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.62962963,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.55753968
+        },
+        {
+          "Rank": 13,
+          "Player": "Ryan Primdahl",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.68571429
+        },
+        {
+          "Rank": 14,
+          "Player": "maxorag",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.59259259,
+          "TeamGameWinPercentage": 0.28571429,
+          "OpponentGameWinPercentage": 0.56547619
+        },
+        {
+          "Rank": 15,
+          "Player": "AriB8",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.58611111
+        },
+        {
+          "Rank": 16,
+          "Player": "ConD12",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.28571429,
+          "OpponentGameWinPercentage": 0.50793651
+        },
+        {
+          "Rank": 17,
+          "Player": "JonP29",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.46031746
+        },
+        {
+          "Rank": 18,
+          "Player": "Adam Pio",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 19,
+          "Player": "tannerarnold",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 20,
+          "Player": "DomB5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.85714286
+        },
+        {
+          "Rank": 21,
+          "Player": "ScoS8",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.66964286
+        },
+        {
+          "Rank": 22,
+          "Player": "BenF5",
+          "MatchRecord": "0-3-0",
+          "GameRecord": "1-6-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.59259259,
+          "TeamGameWinPercentage": 0.14285714,
+          "OpponentGameWinPercentage": 0.54166667
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "round_id": "1172946",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Kody Lyons",
+          "MatchRecord": "3-0-1",
+          "GameRecord": "6-1-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.64583333,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.57361111
+        },
+        {
+          "Rank": 2,
+          "Player": "NicR56",
+          "MatchRecord": "3-0-1",
+          "GameRecord": "6-1-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.54166667,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.53611111
+        },
+        {
+          "Rank": 3,
+          "Player": "SoggyFrootloops",
+          "MatchRecord": "3-0-1",
+          "GameRecord": "6-1-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.45833333,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.47474747
+        },
+        {
+          "Rank": 4,
+          "Player": "Liam Hoban",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.60416667,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.58373016
+        },
+        {
+          "Rank": 5,
+          "Player": "Nik Lyons",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.52083333,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.55138889
+        },
+        {
+          "Rank": 6,
+          "Player": "Randall Litman",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.43055556
+        },
+        {
+          "Rank": 7,
+          "Player": "MarP54",
+          "MatchRecord": "2-1-1",
+          "GameRecord": "5-4-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.57003367
+        },
+        {
+          "Rank": 8,
+          "Player": "Gavin Bennett",
+          "MatchRecord": "2-1-1",
+          "GameRecord": "5-4-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.57003367
+        },
+        {
+          "Rank": 9,
+          "Player": "DavR46",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.60416667,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.59761905
+        },
+        {
+          "Rank": 10,
+          "Player": "AriB8",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "4-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.55670996
+        },
+        {
+          "Rank": 11,
+          "Player": "BR7609",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5625,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.50075758
+        },
+        {
+          "Rank": 12,
+          "Player": "Joshua Saruga",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "4-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5625,
+          "TeamGameWinPercentage": 0.44444444,
+          "OpponentGameWinPercentage": 0.54583333
+        },
+        {
+          "Rank": 13,
+          "Player": "ConD12",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "4-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.48333333
+        },
+        {
+          "Rank": 14,
+          "Player": "JonP29",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "4-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.375,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.38888889
+        },
+        {
+          "Rank": 15,
+          "Player": "Kyle Mah",
+          "MatchRecord": "1-2-1",
+          "GameRecord": "4-4-3",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.45454545,
+          "OpponentGameWinPercentage": 0.53611111
+        },
+        {
+          "Rank": 16,
+          "Player": "Ryan Primdahl",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.56719577
+        },
+        {
+          "Rank": 17,
+          "Player": "BenF5",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-7-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.5625,
+          "TeamGameWinPercentage": 0.3,
+          "OpponentGameWinPercentage": 0.52916667
+        },
+        {
+          "Rank": 18,
+          "Player": "maxorag",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-7-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.52083333,
+          "TeamGameWinPercentage": 0.3,
+          "OpponentGameWinPercentage": 0.50883838
+        },
+        {
+          "Rank": 19,
+          "Player": "Adam Pio",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.45833333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.44722222
+        },
+        {
+          "Rank": 20,
+          "Player": "tannerarnold",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "2-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.45833333,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.47222222
+        },
+        {
+          "Rank": 21,
+          "Player": "DomB5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.83333333,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.7
+        },
+        {
+          "Rank": 22,
+          "Player": "ScoS8",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.625,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.5959596
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "round_id": "1172947",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Kody Lyons",
+          "MatchRecord": "3-0-2",
+          "GameRecord": "6-1-6",
+          "Points": 11,
+          "OpponentMatchWinPercentage": 0.58666667,
+          "TeamGameWinPercentage": 0.61538462,
+          "OpponentGameWinPercentage": 0.53368298
+        },
+        {
+          "Rank": 2,
+          "Player": "NicR56",
+          "MatchRecord": "3-0-2",
+          "GameRecord": "6-1-6",
+          "Points": 11,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.61538462,
+          "OpponentGameWinPercentage": 0.52459207
+        },
+        {
+          "Rank": 3,
+          "Player": "SoggyFrootloops",
+          "MatchRecord": "3-0-2",
+          "GameRecord": "6-1-6",
+          "Points": 11,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.61538462,
+          "OpponentGameWinPercentage": 0.52470862
+        },
+        {
+          "Rank": 4,
+          "Player": "Liam Hoban",
+          "MatchRecord": "3-1-1",
+          "GameRecord": "6-2-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.57333333,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.53615385
+        },
+        {
+          "Rank": 5,
+          "Player": "Nik Lyons",
+          "MatchRecord": "3-1-1",
+          "GameRecord": "6-1-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.52155844
+        },
+        {
+          "Rank": 6,
+          "Player": "Randall Litman",
+          "MatchRecord": "3-1-1",
+          "GameRecord": "7-4-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.51575758
+        },
+        {
+          "Rank": 7,
+          "Player": "MarP54",
+          "MatchRecord": "3-1-1",
+          "GameRecord": "7-4-0",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.51666667,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.5270979
+        },
+        {
+          "Rank": 8,
+          "Player": "AriB8",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.49787546
+        },
+        {
+          "Rank": 9,
+          "Player": "BR7609",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.4540293
+        },
+        {
+          "Rank": 10,
+          "Player": "JonP29",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.37333333,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.38449883
+        },
+        {
+          "Rank": 11,
+          "Player": "Gavin Bennett",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "6-6-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.61666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.58391608
+        },
+        {
+          "Rank": 12,
+          "Player": "Kyle Mah",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "6-4-3",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.53846154,
+          "OpponentGameWinPercentage": 0.50034965
+        },
+        {
+          "Rank": 13,
+          "Player": "DavR46",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.45454545,
+          "OpponentGameWinPercentage": 0.56610723
+        },
+        {
+          "Rank": 14,
+          "Player": "Joshua Saruga",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.53034965
+        },
+        {
+          "Rank": 15,
+          "Player": "ConD12",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-8-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.38461538,
+          "OpponentGameWinPercentage": 0.48792541
+        },
+        {
+          "Rank": 16,
+          "Player": "maxorag",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.48106893
+        },
+        {
+          "Rank": 17,
+          "Player": "BenF5",
+          "MatchRecord": "1-4-0",
+          "GameRecord": "3-9-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.49137529
+        },
+        {
+          "Rank": 18,
+          "Player": "tannerarnold",
+          "MatchRecord": "1-4-0",
+          "GameRecord": "2-8-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.48484848
+        },
+        {
+          "Rank": 19,
+          "Player": "Ryan Primdahl",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.48888889,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.50042735
+        },
+        {
+          "Rank": 20,
+          "Player": "Adam Pio",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.48333333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.46168415
+        },
+        {
+          "Rank": 21,
+          "Player": "ScoS8",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.51298701
+        },
+        {
+          "Rank": 22,
+          "Player": "DomB5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "round_id": "1172949",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "SoggyFrootloops",
+          "MatchRecord": "4-0-2",
+          "GameRecord": "8-2-6",
+          "Points": 14,
+          "OpponentMatchWinPercentage": 0.5537037,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.5433635
+        },
+        {
+          "Rank": 2,
+          "Player": "Kody Lyons",
+          "MatchRecord": "4-0-2",
+          "GameRecord": "8-1-6",
+          "Points": 14,
+          "OpponentMatchWinPercentage": 0.54074074,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.49876374
+        },
+        {
+          "Rank": 3,
+          "Player": "MarP54",
+          "MatchRecord": "4-1-1",
+          "GameRecord": "9-4-0",
+          "Points": 13,
+          "OpponentMatchWinPercentage": 0.54444444,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.53026807
+        },
+        {
+          "Rank": 4,
+          "Player": "Nik Lyons",
+          "MatchRecord": "4-1-1",
+          "GameRecord": "8-2-3",
+          "Points": 13,
+          "OpponentMatchWinPercentage": 0.46888889,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.48338485
+        },
+        {
+          "Rank": 5,
+          "Player": "NicR56",
+          "MatchRecord": "3-1-2",
+          "GameRecord": "6-3-6",
+          "Points": 11,
+          "OpponentMatchWinPercentage": 0.56481481,
+          "TeamGameWinPercentage": 0.53333333,
+          "OpponentGameWinPercentage": 0.55026918
+        },
+        {
+          "Rank": 6,
+          "Player": "Liam Hoban",
+          "MatchRecord": "3-2-1",
+          "GameRecord": "7-4-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.56888889,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.52846154
+        },
+        {
+          "Rank": 7,
+          "Player": "Randall Litman",
+          "MatchRecord": "3-2-1",
+          "GameRecord": "8-6-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.52941176,
+          "OpponentGameWinPercentage": 0.51869658
+        },
+        {
+          "Rank": 8,
+          "Player": "AriB8",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "6-7-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54259259,
+          "TeamGameWinPercentage": 0.46153846,
+          "OpponentGameWinPercentage": 0.51772247
+        },
+        {
+          "Rank": 9,
+          "Player": "BR7609",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.4540293
+        },
+        {
+          "Rank": 10,
+          "Player": "JonP29",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.37333333,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.38449883
+        },
+        {
+          "Rank": 11,
+          "Player": "Gavin Bennett",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "6-6-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.61666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.58391608
+        },
+        {
+          "Rank": 12,
+          "Player": "Kyle Mah",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "6-4-3",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.53846154,
+          "OpponentGameWinPercentage": 0.50034965
+        },
+        {
+          "Rank": 13,
+          "Player": "DavR46",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.45454545,
+          "OpponentGameWinPercentage": 0.56610723
+        },
+        {
+          "Rank": 14,
+          "Player": "Joshua Saruga",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.53034965
+        },
+        {
+          "Rank": 15,
+          "Player": "ConD12",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-8-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.38461538,
+          "OpponentGameWinPercentage": 0.48792541
+        },
+        {
+          "Rank": 16,
+          "Player": "maxorag",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.48106893
+        },
+        {
+          "Rank": 17,
+          "Player": "BenF5",
+          "MatchRecord": "1-4-0",
+          "GameRecord": "3-9-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.49137529
+        },
+        {
+          "Rank": 18,
+          "Player": "tannerarnold",
+          "MatchRecord": "1-4-0",
+          "GameRecord": "2-8-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.48484848
+        },
+        {
+          "Rank": 19,
+          "Player": "Ryan Primdahl",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.48888889,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.50042735
+        },
+        {
+          "Rank": 20,
+          "Player": "Adam Pio",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.48333333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.46168415
+        },
+        {
+          "Rank": 21,
+          "Player": "DomB5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.73333333,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.61538462
+        },
+        {
+          "Rank": 22,
+          "Player": "ScoS8",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.51298701
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "round_id": "1172950",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Kody Lyons",
+          "MatchRecord": "5-0-2",
+          "GameRecord": "10-2-6",
+          "Points": 17,
+          "OpponentMatchWinPercentage": 0.53605442,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.51021854
+        },
+        {
+          "Rank": 2,
+          "Player": "MarP54",
+          "MatchRecord": "5-1-1",
+          "GameRecord": "11-5-0",
+          "Points": 16,
+          "OpponentMatchWinPercentage": 0.52222222,
+          "TeamGameWinPercentage": 0.6875,
+          "OpponentGameWinPercentage": 0.52105754
+        },
+        {
+          "Rank": 3,
+          "Player": "SoggyFrootloops",
+          "MatchRecord": "4-1-2",
+          "GameRecord": "9-4-6",
+          "Points": 14,
+          "OpponentMatchWinPercentage": 0.56560847,
+          "TeamGameWinPercentage": 0.57894737,
+          "OpponentGameWinPercentage": 0.54256222
+        },
+        {
+          "Rank": 4,
+          "Player": "Nik Lyons",
+          "MatchRecord": "4-2-1",
+          "GameRecord": "9-4-3",
+          "Points": 13,
+          "OpponentMatchWinPercentage": 0.52566138,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.51393182
+        },
+        {
+          "Rank": 5,
+          "Player": "NicR56",
+          "MatchRecord": "3-1-2",
+          "GameRecord": "6-3-6",
+          "Points": 11,
+          "OpponentMatchWinPercentage": 0.57671958,
+          "TeamGameWinPercentage": 0.53333333,
+          "OpponentGameWinPercentage": 0.54946789
+        },
+        {
+          "Rank": 6,
+          "Player": "Liam Hoban",
+          "MatchRecord": "3-2-1",
+          "GameRecord": "7-4-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.55460317,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.515
+        },
+        {
+          "Rank": 7,
+          "Player": "Randall Litman",
+          "MatchRecord": "3-2-1",
+          "GameRecord": "8-6-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.51984127,
+          "TeamGameWinPercentage": 0.52941176,
+          "OpponentGameWinPercentage": 0.49980319
+        },
+        {
+          "Rank": 8,
+          "Player": "AriB8",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "6-7-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.53068783,
+          "TeamGameWinPercentage": 0.46153846,
+          "OpponentGameWinPercentage": 0.50650452
+        },
+        {
+          "Rank": 9,
+          "Player": "BR7609",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.4540293
+        },
+        {
+          "Rank": 10,
+          "Player": "JonP29",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.37333333,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.38449883
+        },
+        {
+          "Rank": 11,
+          "Player": "Gavin Bennett",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "6-6-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.61666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.58391608
+        },
+        {
+          "Rank": 12,
+          "Player": "Kyle Mah",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "6-4-3",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.53846154,
+          "OpponentGameWinPercentage": 0.50034965
+        },
+        {
+          "Rank": 13,
+          "Player": "DavR46",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.45454545,
+          "OpponentGameWinPercentage": 0.56610723
+        },
+        {
+          "Rank": 14,
+          "Player": "Joshua Saruga",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.53034965
+        },
+        {
+          "Rank": 15,
+          "Player": "ConD12",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-8-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.38461538,
+          "OpponentGameWinPercentage": 0.48792541
+        },
+        {
+          "Rank": 16,
+          "Player": "maxorag",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.48106893
+        },
+        {
+          "Rank": 17,
+          "Player": "BenF5",
+          "MatchRecord": "1-4-0",
+          "GameRecord": "3-9-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.49137529
+        },
+        {
+          "Rank": 18,
+          "Player": "tannerarnold",
+          "MatchRecord": "1-4-0",
+          "GameRecord": "2-8-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.48484848
+        },
+        {
+          "Rank": 19,
+          "Player": "Ryan Primdahl",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.48888889,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.50042735
+        },
+        {
+          "Rank": 20,
+          "Player": "Adam Pio",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.48333333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.46168415
+        },
+        {
+          "Rank": 21,
+          "Player": "DomB5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.73333333,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.61538462
+        },
+        {
+          "Rank": 22,
+          "Player": "ScoS8",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.51298701
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "round_id": "1172951",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "MarP54",
+          "MatchRecord": "6-1-1",
+          "GameRecord": "13-6-0",
+          "Points": 19,
+          "OpponentMatchWinPercentage": 0.55324074,
+          "TeamGameWinPercentage": 0.68421053,
+          "OpponentGameWinPercentage": 0.53738922
+        },
+        {
+          "Rank": 2,
+          "Player": "Kody Lyons",
+          "MatchRecord": "5-1-2",
+          "GameRecord": "11-4-6",
+          "Points": 17,
+          "OpponentMatchWinPercentage": 0.56800595,
+          "TeamGameWinPercentage": 0.61904762,
+          "OpponentGameWinPercentage": 0.53196754
+        },
+        {
+          "Rank": 3,
+          "Player": "SoggyFrootloops",
+          "MatchRecord": "4-1-2",
+          "GameRecord": "9-4-6",
+          "Points": 14,
+          "OpponentMatchWinPercentage": 0.5537037,
+          "TeamGameWinPercentage": 0.57894737,
+          "OpponentGameWinPercentage": 0.53407746
+        },
+        {
+          "Rank": 4,
+          "Player": "Nik Lyons",
+          "MatchRecord": "4-2-1",
+          "GameRecord": "9-4-3",
+          "Points": 13,
+          "OpponentMatchWinPercentage": 0.5087963,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.50599531
+        },
+        {
+          "Rank": 5,
+          "Player": "NicR56",
+          "MatchRecord": "3-1-2",
+          "GameRecord": "6-3-6",
+          "Points": 11,
+          "OpponentMatchWinPercentage": 0.56481481,
+          "TeamGameWinPercentage": 0.53333333,
+          "OpponentGameWinPercentage": 0.54098314
+        },
+        {
+          "Rank": 6,
+          "Player": "Liam Hoban",
+          "MatchRecord": "3-2-1",
+          "GameRecord": "7-4-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.53436508,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.50547619
+        },
+        {
+          "Rank": 7,
+          "Player": "Randall Litman",
+          "MatchRecord": "3-2-1",
+          "GameRecord": "8-6-3",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.51984127,
+          "TeamGameWinPercentage": 0.52941176,
+          "OpponentGameWinPercentage": 0.49980319
+        },
+        {
+          "Rank": 8,
+          "Player": "AriB8",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "6-7-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.51382275,
+          "TeamGameWinPercentage": 0.46153846,
+          "OpponentGameWinPercentage": 0.49856802
+        },
+        {
+          "Rank": 9,
+          "Player": "BR7609",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.4540293
+        },
+        {
+          "Rank": 10,
+          "Player": "JonP29",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.37333333,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.38449883
+        },
+        {
+          "Rank": 11,
+          "Player": "Gavin Bennett",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "6-6-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.61666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.58391608
+        },
+        {
+          "Rank": 12,
+          "Player": "Kyle Mah",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "6-4-3",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.53846154,
+          "OpponentGameWinPercentage": 0.50034965
+        },
+        {
+          "Rank": 13,
+          "Player": "DavR46",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.45454545,
+          "OpponentGameWinPercentage": 0.56610723
+        },
+        {
+          "Rank": 14,
+          "Player": "Joshua Saruga",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.53034965
+        },
+        {
+          "Rank": 15,
+          "Player": "ConD12",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-8-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.38461538,
+          "OpponentGameWinPercentage": 0.48792541
+        },
+        {
+          "Rank": 16,
+          "Player": "maxorag",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.48106893
+        },
+        {
+          "Rank": 17,
+          "Player": "BenF5",
+          "MatchRecord": "1-4-0",
+          "GameRecord": "3-9-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.49137529
+        },
+        {
+          "Rank": 18,
+          "Player": "tannerarnold",
+          "MatchRecord": "1-4-0",
+          "GameRecord": "2-8-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.48484848
+        },
+        {
+          "Rank": 19,
+          "Player": "Ryan Primdahl",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.48888889,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.50042735
+        },
+        {
+          "Rank": 20,
+          "Player": "Adam Pio",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.48333333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.46168415
+        },
+        {
+          "Rank": 21,
+          "Player": "DomB5",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.73333333,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.61538462
+        },
+        {
+          "Rank": 22,
+          "Player": "ScoS8",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.51298701
+        }
+      ]
+    }
+  ],
+  "TotalRounds": 8
+}

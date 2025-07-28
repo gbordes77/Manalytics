@@ -1,0 +1,804 @@
+{
+  "TournamentId": 304273,
+  "TournamentName": "Boa Qualifier #2 2025 (standard)",
+  "TournamentStartDate": "2025-07-19T11:10:00Z",
+  "OrganizationName": "ElGranBoa",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "f2712cf6-6961-4b15-95e7-b31f0099667e",
+      "PlayerName": "ChitelArnaud",
+      "DeckName": "Temur Midrange",
+      "Rank": 3,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e87b4ce1-7121-44ad-a9be-b31f00927479",
+      "PlayerName": "Clément Pintout",
+      "DeckName": "Izzet Combo",
+      "Rank": 1,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d23d7d44-402e-4381-af4f-b31d0186f8b1",
+      "PlayerName": "Léo Guimard",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 2,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "be6edff0-e835-4f71-9d7b-b31f006865d4",
+      "PlayerName": "Tron Young",
+      "DeckName": "Rakdos Sacrifice",
+      "Rank": 16,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a8cbef67-5933-4ab6-8c93-b31f00a4edf5",
+      "PlayerName": "GELY Baptiste",
+      "DeckName": "W-B-R-G Midrange",
+      "Rank": 10,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "99ce9c8c-e382-4f53-8c63-b31f00a769ec",
+      "PlayerName": "LouisLafontdeSentenac",
+      "DeckName": "Izzet Aggro",
+      "Rank": 6,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "87811f54-73e9-4891-abeb-b31f00b521ed",
+      "PlayerName": "Kamespon",
+      "DeckName": "Dimir Midrange",
+      "Rank": 4,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "802555ad-8f79-46f6-99bc-b31f00ad5a4f",
+      "PlayerName": "TeeLooLoo",
+      "DeckName": "Orzhov",
+      "Rank": 13,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7d877cc2-e5b0-4c4e-a3cf-b31f00b0b3fb",
+      "PlayerName": "FonKydu11",
+      "DeckName": "Boros Convoke",
+      "Rank": 9,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "70b61225-77c9-4ea7-a2d8-b31f007147fb",
+      "PlayerName": "Gui Gui",
+      "DeckName": "Azorius Combo",
+      "Rank": 11,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5e1b8541-5f70-4e5d-adbf-b31c015ea565",
+      "PlayerName": "CorentinDAMOIS",
+      "DeckName": "Mono-Black Control",
+      "Rank": 14,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5117f574-6e6b-47db-9aa4-b31e015e9c07",
+      "PlayerName": "Thomas Raer",
+      "DeckName": "Izzet Prowess",
+      "Rank": 15,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5029dd2a-a694-4784-8196-b31f00a0bcc9",
+      "PlayerName": "Christophe Zozine",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 8,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4ed9f916-fdae-4e53-a7a6-b31f00a76ad4",
+      "PlayerName": "Playkahlon G",
+      "DeckName": "Mono-White Tokens",
+      "Rank": 7,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "388ccba2-be9c-413d-a37c-b31f00b4a61a",
+      "PlayerName": "Louphy",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 5,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "1c84f248-93df-4bf6-878e-b31f006e3f19",
+      "PlayerName": "IO_fablor",
+      "DeckName": "Golgari Midrange",
+      "Rank": 12,
+      "Wins": 1,
+      "IsValid": true
+    }
+  ],
+  "RoundStandings": [
+    {
+      "round": 1,
+      "round_id": "1060187",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Playkahlon G",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 2,
+          "Player": "Kamespon",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 3,
+          "Player": "ChitelArnaud",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "Christophe Zozine",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 5,
+          "Player": "Léo Guimard",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 6,
+          "Player": "CorentinDAMOIS",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 7,
+          "Player": "Clément Pintout",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 8,
+          "Player": "LouisLafontdeSentenac",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 9,
+          "Player": "IO_fablor",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 10,
+          "Player": "TeeLooLoo",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 11,
+          "Player": "Tron Young",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 12,
+          "Player": "Gui Gui",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 13,
+          "Player": "FonKydu11",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 14,
+          "Player": "GELY Baptiste",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 15,
+          "Player": "Thomas Raer",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 16,
+          "Player": "Louphy",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "round_id": "1060188",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Clément Pintout",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.45
+        },
+        {
+          "Rank": 2,
+          "Player": "ChitelArnaud",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 3,
+          "Player": "Léo Guimard",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 4,
+          "Player": "LouisLafontdeSentenac",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 5,
+          "Player": "Christophe Zozine",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.65
+        },
+        {
+          "Rank": 6,
+          "Player": "Kamespon",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.58333333
+        },
+        {
+          "Rank": 7,
+          "Player": "Playkahlon G",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.6
+        },
+        {
+          "Rank": 8,
+          "Player": "TeeLooLoo",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 9,
+          "Player": "CorentinDAMOIS",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 10,
+          "Player": "FonKydu11",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.6
+        },
+        {
+          "Rank": 11,
+          "Player": "Louphy",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 12,
+          "Player": "GELY Baptiste",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 13,
+          "Player": "Gui Gui",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.58333333
+        },
+        {
+          "Rank": 14,
+          "Player": "IO_fablor",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.65
+        },
+        {
+          "Rank": 15,
+          "Player": "Thomas Raer",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.6
+        },
+        {
+          "Rank": 16,
+          "Player": "Tron Young",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.4
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "round_id": "1060189",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Léo Guimard",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.44444444
+        },
+        {
+          "Rank": 2,
+          "Player": "Clément Pintout",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.44444444
+        },
+        {
+          "Rank": 3,
+          "Player": "LouisLafontdeSentenac",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.60648148
+        },
+        {
+          "Rank": 4,
+          "Player": "Kamespon",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.54232804
+        },
+        {
+          "Rank": 5,
+          "Player": "ChitelArnaud",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.56349206
+        },
+        {
+          "Rank": 6,
+          "Player": "FonKydu11",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.53472222
+        },
+        {
+          "Rank": 7,
+          "Player": "Louphy",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.42063492
+        },
+        {
+          "Rank": 8,
+          "Player": "GELY Baptiste",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 9,
+          "Player": "IO_fablor",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.83333333,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.76190476
+        },
+        {
+          "Rank": 10,
+          "Player": "Playkahlon G",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.77777778,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.6984127
+        },
+        {
+          "Rank": 11,
+          "Player": "Christophe Zozine",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "4-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.62103175
+        },
+        {
+          "Rank": 12,
+          "Player": "TeeLooLoo",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "4-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.44444444,
+          "OpponentGameWinPercentage": 0.58862434
+        },
+        {
+          "Rank": 13,
+          "Player": "CorentinDAMOIS",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.28571429,
+          "OpponentGameWinPercentage": 0.5515873
+        },
+        {
+          "Rank": 14,
+          "Player": "Gui Gui",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "4-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.44444444,
+          "OpponentGameWinPercentage": 0.44444444
+        },
+        {
+          "Rank": 15,
+          "Player": "Thomas Raer",
+          "MatchRecord": "0-3-0",
+          "GameRecord": "2-6-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.52910053
+        },
+        {
+          "Rank": 16,
+          "Player": "Tron Young",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "round_id": "1060190",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Clément Pintout",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-2-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.46590909
+        },
+        {
+          "Rank": 2,
+          "Player": "Léo Guimard",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.64583333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.55833333
+        },
+        {
+          "Rank": 3,
+          "Player": "ChitelArnaud",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.52083333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.525
+        },
+        {
+          "Rank": 4,
+          "Player": "Kamespon",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.525
+        },
+        {
+          "Rank": 5,
+          "Player": "Louphy",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.45833333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.48333333
+        },
+        {
+          "Rank": 6,
+          "Player": "LouisLafontdeSentenac",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "6-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.66212121
+        },
+        {
+          "Rank": 7,
+          "Player": "Playkahlon G",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "4-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.61111111
+        },
+        {
+          "Rank": 8,
+          "Player": "Christophe Zozine",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "6-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.64583333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 9,
+          "Player": "FonKydu11",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.61111111,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.53333333
+        },
+        {
+          "Rank": 10,
+          "Player": "GELY Baptiste",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.45075758
+        },
+        {
+          "Rank": 11,
+          "Player": "Gui Gui",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.375,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.38257576
+        },
+        {
+          "Rank": 12,
+          "Player": "IO_fablor",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.62626263
+        },
+        {
+          "Rank": 13,
+          "Player": "TeeLooLoo",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-7-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.625,
+          "TeamGameWinPercentage": 0.36363636,
+          "OpponentGameWinPercentage": 0.61136364
+        },
+        {
+          "Rank": 14,
+          "Player": "CorentinDAMOIS",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.61111111,
+          "TeamGameWinPercentage": 0.28571429,
+          "OpponentGameWinPercentage": 0.54444444
+        },
+        {
+          "Rank": 15,
+          "Player": "Thomas Raer",
+          "MatchRecord": "0-3-0",
+          "GameRecord": "2-6-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.54848485
+        },
+        {
+          "Rank": 16,
+          "Player": "Tron Young",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    }
+  ],
+  "TotalRounds": 4
+}

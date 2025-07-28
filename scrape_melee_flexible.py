@@ -13,6 +13,18 @@ import re
 import argparse
 from pathlib import Path
 import logging
+import sys
+import os
+
+# Ajouter le dossier scrapers au path pour importer les constants
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+try:
+    from scrapers.models.Melee_model import MtgMeleeConstants
+except ImportError:
+    # Si pas trouvé, utiliser notre propre définition
+    class MtgMeleeConstants:
+        ROUND_PAGE = "https://melee.gg/Standing/GetRoundStandings"
+        ROUND_PAGE_PARAMETERS = "draw=1&columns%5B0%5D%5Bdata%5D=Rank&columns%5B0%5D%5Bname%5D=Rank&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=Player&columns%5B1%5D%5Bname%5D=Player&columns%5B1%5D%5Bsearchable%5D=false&columns%5B1%5D%5Borderable%5D=false&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=Decklists&columns%5B2%5D%5Bname%5D=Decklists&columns%5B2%5D%5Bsearchable%5D=false&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=MatchRecord&columns%5B3%5D%5Bname%5D=MatchRecord&columns%5B3%5D%5Bsearchable%5D=false&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=GameRecord&columns%5B4%5D%5Bname%5D=GameRecord&columns%5B4%5D%5Bsearchable%5D=false&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=Points&columns%5B5%5D%5Bname%5D=Points&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=OpponentMatchWinPercentage&columns%5B6%5D%5Bname%5D=OpponentMatchWinPercentage&columns%5B6%5D%5Bsearchable%5D=false&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=TeamGameWinPercentage&columns%5B7%5D%5Bname%5D=TeamGameWinPercentage&columns%5B7%5D%5Bsearchable%5D=false&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=OpponentGameWinPercentage&columns%5B8%5D%5Bname%5D=OpponentGameWinPercentage&columns%5B8%5D%5Bsearchable%5D=false&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=FinalTiebreaker&columns%5B9%5D%5Bname%5D=FinalTiebreaker&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=true&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B10%5D%5Bdata%5D=OpponentCount&columns%5B10%5D%5Bname%5D=OpponentCount&columns%5B10%5D%5Bsearchable%5D=true&columns%5B10%5D%5Borderable%5D=true&columns%5B10%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B10%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start={start}&length=25&search%5Bvalue%5D=&search%5Bregex%5D=false&roundId={roundId}"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -294,84 +306,52 @@ class MtgMeleeClientFlexible:
     def get_round_standings(self, tournament_id: int, round_id: int) -> Optional[List[Dict]]:
         """Récupérer les standings d'un round spécifique"""
         try:
-            payload = {
-                "draw": "1",
-                "columns[0][data]": "Rank",
-                "columns[0][name]": "Rank",
-                "columns[0][searchable]": "true",
-                "columns[0][orderable]": "true",
-                "columns[0][search][value]": "",
-                "columns[0][search][regex]": "false",
-                "columns[1][data]": "Player",
-                "columns[1][name]": "Player",
-                "columns[1][searchable]": "true",
-                "columns[1][orderable]": "true",
-                "columns[1][search][value]": "",
-                "columns[1][search][regex]": "false",
-                "columns[2][data]": "Decklists",
-                "columns[2][name]": "Decklists",
-                "columns[2][searchable]": "true",
-                "columns[2][orderable]": "true",
-                "columns[2][search][value]": "",
-                "columns[2][search][regex]": "false",
-                "columns[3][data]": "MatchRecord",
-                "columns[3][name]": "MatchRecord",
-                "columns[3][searchable]": "true",
-                "columns[3][orderable]": "true",
-                "columns[3][search][value]": "",
-                "columns[3][search][regex]": "false",
-                "columns[4][data]": "GameRecord",
-                "columns[4][name]": "GameRecord",
-                "columns[4][searchable]": "true",
-                "columns[4][orderable]": "true",
-                "columns[4][search][value]": "",
-                "columns[4][search][regex]": "false",
-                "columns[5][data]": "Points",
-                "columns[5][name]": "Points",
-                "columns[5][searchable]": "true",
-                "columns[5][orderable]": "true",
-                "columns[5][search][value]": "",
-                "columns[5][search][regex]": "false",
-                "columns[6][data]": "OpponentMatchWinPercentage",
-                "columns[6][name]": "OpponentMatchWinPercentage",
-                "columns[6][searchable]": "true",
-                "columns[6][orderable]": "true",
-                "columns[6][search][value]": "",
-                "columns[6][search][regex]": "false",
-                "columns[7][data]": "TeamGamesWinPercentage",
-                "columns[7][name]": "TeamGamesWinPercentage",
-                "columns[7][searchable]": "true",
-                "columns[7][orderable]": "true",
-                "columns[7][search][value]": "",
-                "columns[7][search][regex]": "false",
-                "columns[8][data]": "OpponentGameWinPercentage",
-                "columns[8][name]": "OpponentGameWinPercentage",
-                "columns[8][searchable]": "true",
-                "columns[8][orderable]": "true",
-                "columns[8][search][value]": "",
-                "columns[8][search][regex]": "false",
-                "start": "0",
-                "length": "100",
-                "search[value]": "",
-                "search[regex]": "false",
-                "tournamentId": str(tournament_id),
-                "roundId": str(round_id)
-            }
-            
-            if self.token:
-                payload["__RequestVerificationToken"] = self.token
+            # Utiliser le payload template depuis les constants
+            payload_str = MtgMeleeConstants.ROUND_PAGE_PARAMETERS.replace("{start}", "0").replace("{roundId}", str(round_id))
             
             response = self.session.post(
-                "https://melee.gg/Standing/GetRoundStandings",
-                data=payload
+                MtgMeleeConstants.ROUND_PAGE,
+                data=payload_str,
+                headers={
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
             )
             
             if response.status_code != 200:
                 logger.error(f"Erreur standings: {response.status_code}")
                 return None
                 
-            data = response.json()
-            return data.get('data', [])
+            # Parser la réponse
+            try:
+                data = response.json()
+                if 'data' in data:
+                    # Formater les données selon le format attendu
+                    standings = []
+                    for entry in data['data']:
+                        # Extraire les infos du joueur
+                        team = entry.get('Team', {})
+                        players = team.get('Players', [])
+                        player_name = players[0].get('DisplayName', 'Unknown') if players else 'Unknown'
+                        
+                        standing = {
+                            'Rank': entry.get('Rank'),
+                            'Player': player_name,
+                            'MatchRecord': entry.get('MatchRecord'),
+                            'GameRecord': entry.get('GameRecord'),
+                            'Points': entry.get('Points'),
+                            'OpponentMatchWinPercentage': entry.get('OpponentMatchWinPercentage'),
+                            'TeamGameWinPercentage': entry.get('TeamGameWinPercentage'),
+                            'OpponentGameWinPercentage': entry.get('OpponentGameWinPercentage')
+                        }
+                        standings.append(standing)
+                    return standings
+                else:
+                    logger.warning(f"Pas de 'data' dans la réponse: {list(data.keys())}")
+                    return None
+            except json.JSONDecodeError:
+                logger.error(f"Réponse non-JSON: {response.text[:200]}")
+                return None
             
         except Exception as e:
             logger.error(f"Erreur récupération standings: {e}")
@@ -483,6 +463,36 @@ class MtgMeleeClientFlexible:
         
         return payload
     
+    def get_tournament_round_ids(self, tournament_id: int) -> List[str]:
+        """Récupérer les IDs des rounds depuis la page HTML du tournoi"""
+        try:
+            # Récupérer la page du tournoi
+            tournament_url = f"https://melee.gg/Tournament/View/{tournament_id}"
+            response = self.session.get(tournament_url)
+            
+            if response.status_code != 200:
+                logger.error(f"Erreur accès tournoi {tournament_id}: {response.status_code}")
+                return []
+            
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Chercher les boutons de rounds complétés
+            round_nodes = soup.select('button.btn.btn-gray.round-selector[data-is-completed="True"]')
+            
+            if not round_nodes:
+                logger.debug(f"Pas de rounds trouvés pour tournoi {tournament_id}")
+                return []
+            
+            # Extraire les IDs
+            round_ids = [node.get('data-id') for node in round_nodes if node.get('data-id')]
+            logger.debug(f"   📋 {len(round_ids)} rounds trouvés: {round_ids}")
+            
+            return round_ids
+            
+        except Exception as e:
+            logger.error(f"Erreur récupération round IDs: {e}")
+            return []
+    
     def save_tournaments(self, entries: List[Dict], get_decks: bool = False, get_rounds: bool = False) -> int:
         """Sauvegarder les tournois par format"""
         # Grouper par tournoi et format
@@ -558,20 +568,30 @@ class MtgMeleeClientFlexible:
                 # Récupérer les round standings si demandé
                 if get_rounds:
                     logger.info(f"   🎲 Récupération des round standings...")
-                    round_standings = []
+                    logger.info(f"      Tournament ID: {tournament_id}")
                     
-                    # Essayer de récupérer les standings pour les 15 premiers rounds
-                    for round_num in range(1, 16):
-                        standings = self.get_round_standings(tournament_id, round_num)
-                        if standings:
-                            logger.info(f"      Round {round_num}: {len(standings)} joueurs")
-                            round_standings.append({
-                                'round': round_num,
-                                'standings': standings
-                            })
-                        else:
-                            # Si pas de standings, on suppose qu'il n'y a plus de rounds
-                            break
+                    # D'abord récupérer les vrais round IDs depuis la page HTML
+                    round_ids = self.get_tournament_round_ids(tournament_id)
+                    
+                    if round_ids:
+                        logger.info(f"      📋 {len(round_ids)} rounds trouvés")
+                        round_standings = []
+                        
+                        for idx, round_id in enumerate(round_ids, 1):
+                            logger.debug(f"      Récupération round {idx} (ID: {round_id})...")
+                            standings = self.get_round_standings(tournament_id, round_id)
+                            if standings:
+                                logger.info(f"      Round {idx}: {len(standings)} joueurs")
+                                round_standings.append({
+                                    'round': idx,
+                                    'round_id': round_id,
+                                    'standings': standings
+                                })
+                            else:
+                                logger.warning(f"      Round {idx} (ID: {round_id}): Pas de données")
+                    else:
+                        logger.warning(f"      Pas de round IDs trouvés pour ce tournoi")
+                        round_standings = []
                     
                     if round_standings:
                         tournament_data['RoundStandings'] = round_standings

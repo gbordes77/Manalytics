@@ -1,0 +1,358 @@
+{
+  "TournamentId": 334445,
+  "TournamentName": "TheGathering.gg Standard Post-BNR Celebration #2",
+  "TournamentStartDate": "2025-07-02T22:00:00Z",
+  "OrganizationName": "TheGathering.gg",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "fd7b3c5f-1596-4f95-a849-b30e0153aae0",
+      "PlayerName": "JustJR",
+      "DeckName": "Jeskai Oculus",
+      "Rank": 8,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f3b7dc17-9c6c-4796-8a53-b30e015f8dad",
+      "PlayerName": "Tyrant",
+      "DeckName": "Grim Captain",
+      "Rank": 6,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a78410b6-1541-4db4-8c10-b30e012b1250",
+      "PlayerName": "DarthZear166",
+      "DeckName": "Golgari Roots",
+      "Rank": 5,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "78b3f54c-2c49-4a44-b8e3-b30e014c64c4",
+      "PlayerName": "Jaffer",
+      "DeckName": "Dimir Midrange",
+      "Rank": 1,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5a764718-7052-4039-bfbf-b30e01567794",
+      "PlayerName": "gamblet",
+      "DeckName": "Mardu Midrange",
+      "Rank": 4,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3d86cd21-5070-42be-8024-b30e01591b1d",
+      "PlayerName": "xbyssxl",
+      "DeckName": "Decklist",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "30016a5c-3521-418e-a2f8-b30e01651f77",
+      "PlayerName": "Bryndis Tamsyn",
+      "DeckName": "Niv-Mizzet Control",
+      "Rank": 7,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2bcad0b1-0f79-4535-9b92-b30e0115ded9",
+      "PlayerName": "Jackfred99",
+      "DeckName": "Dimir Midrange",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "299e60fc-43e5-400a-b012-b30e01584b39",
+      "PlayerName": "Leo Finnveden",
+      "DeckName": "Dimir Midrange",
+      "Rank": 2,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "298b91e2-9a8a-48f3-a247-b30e0156481d",
+      "PlayerName": "BlueCathode",
+      "DeckName": "Temur Otters",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "21c17755-4980-4c4d-922b-b30e01523df5",
+      "PlayerName": "ScuffleDLux",
+      "DeckName": "Izzet Artifacts",
+      "Rank": 3,
+      "Wins": 2,
+      "IsValid": true
+    }
+  ],
+  "RoundStandings": [
+    {
+      "round": 1,
+      "round_id": "1170263",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Jaffer",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 2,
+          "Player": "DarthZear166",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 3,
+          "Player": "Leo Finnveden",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "ScuffleDLux",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 5,
+          "Player": "Bryndis Tamsyn",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 6,
+          "Player": "Tyrant",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 7,
+          "Player": "gamblet",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 8,
+          "Player": "JustJR",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "round_id": "1170264",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Leo Finnveden",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 2,
+          "Player": "Jaffer",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 3,
+          "Player": "DarthZear166",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.6
+        },
+        {
+          "Rank": 4,
+          "Player": "ScuffleDLux",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 5,
+          "Player": "Bryndis Tamsyn",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 6,
+          "Player": "gamblet",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 7,
+          "Player": "JustJR",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "0-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.65
+        },
+        {
+          "Rank": 8,
+          "Player": "Tyrant",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.5
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "round_id": "1170265",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Jaffer",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.5015873
+        },
+        {
+          "Rank": 2,
+          "Player": "Leo Finnveden",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.63492063
+        },
+        {
+          "Rank": 3,
+          "Player": "ScuffleDLux",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.44444444
+        },
+        {
+          "Rank": 4,
+          "Player": "gamblet",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.38888889,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.45396825
+        },
+        {
+          "Rank": 5,
+          "Player": "DarthZear166",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.83333333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.67857143
+        },
+        {
+          "Rank": 6,
+          "Player": "Tyrant",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.60714286
+        },
+        {
+          "Rank": 7,
+          "Player": "Bryndis Tamsyn",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.53968254
+        },
+        {
+          "Rank": 8,
+          "Player": "JustJR",
+          "MatchRecord": "0-3-0",
+          "GameRecord": "1-6-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.14285714,
+          "OpponentGameWinPercentage": 0.56349206
+        }
+      ]
+    }
+  ],
+  "TotalRounds": 3
+}

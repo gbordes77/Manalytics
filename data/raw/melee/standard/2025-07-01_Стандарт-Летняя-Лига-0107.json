@@ -1,0 +1,604 @@
+{
+  "TournamentId": 334010,
+  "TournamentName": "Стандарт. Летняя Лига (01.07)",
+  "TournamentStartDate": "2025-07-01T16:00:00Z",
+  "OrganizationName": "Club \"Another World\"",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "32f2e9c4-f5f7-4bfc-a649-b30d0103be17",
+      "PlayerName": "Hogar",
+      "DeckName": "Mardu Graveyard",
+      "Rank": 12,
+      "Wins": 1,
+      "IsValid": true
+    }
+  ],
+  "RoundStandings": [
+    {
+      "round": 1,
+      "round_id": "1168844",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Ilya Bogdan",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 2,
+          "Player": "BuRial63",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 3,
+          "Player": "IgnS",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "OMGProfunny",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 5,
+          "Player": "Роман Кохан",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 6,
+          "Player": "Valentine Novikov",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 7,
+          "Player": "Valery Zubovich",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 8,
+          "Player": "Maksim Martseniuk",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 9,
+          "Player": "Rostislav Brozhat",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 10,
+          "Player": "Maxim Shagoiko",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 11,
+          "Player": "Aleksei Raptunovich",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 12,
+          "Player": "[OMG]Summie",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 13,
+          "Player": "Hogar",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 14,
+          "Player": "Basya_55",
+          "MatchRecord": "0-0-0",
+          "GameRecord": "0-0-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": -0.2,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "round_id": "1168845",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "IgnS",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 2,
+          "Player": "OMGProfunny",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 3,
+          "Player": "Valery Zubovich",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 4,
+          "Player": "Роман Кохан",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 5,
+          "Player": "Rostislav Brozhat",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 6,
+          "Player": "BuRial63",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 7,
+          "Player": "Valentine Novikov",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.58333333
+        },
+        {
+          "Rank": 8,
+          "Player": "Ilya Bogdan",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 9,
+          "Player": "Hogar",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 10,
+          "Player": "Maksim Martseniuk",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 11,
+          "Player": "Aleksei Raptunovich",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.58333333
+        },
+        {
+          "Rank": 12,
+          "Player": "[OMG]Summie",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.58333333
+        },
+        {
+          "Rank": 13,
+          "Player": "Maxim Shagoiko",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.58333333
+        },
+        {
+          "Rank": 14,
+          "Player": "Basya_55",
+          "MatchRecord": "0-0-0",
+          "GameRecord": "0-0-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": -0.2,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "round_id": "1168846",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Роман Кохан",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.51322751
+        },
+        {
+          "Rank": 2,
+          "Player": "OMGProfunny",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.47619048
+        },
+        {
+          "Rank": 3,
+          "Player": "Valentine Novikov",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.5734127
+        },
+        {
+          "Rank": 4,
+          "Player": "Valery Zubovich",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.5734127
+        },
+        {
+          "Rank": 5,
+          "Player": "IgnS",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.53571429
+        },
+        {
+          "Rank": 6,
+          "Player": "Rostislav Brozhat",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.49206349
+        },
+        {
+          "Rank": 7,
+          "Player": "Maksim Martseniuk",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.43915344
+        },
+        {
+          "Rank": 8,
+          "Player": "BuRial63",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.83333333,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.6875
+        },
+        {
+          "Rank": 9,
+          "Player": "Hogar",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.5734127
+        },
+        {
+          "Rank": 10,
+          "Player": "Ilya Bogdan",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.55026455
+        },
+        {
+          "Rank": 11,
+          "Player": "Maxim Shagoiko",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.47619048
+        },
+        {
+          "Rank": 12,
+          "Player": "[OMG]Summie",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.49206349
+        },
+        {
+          "Rank": 13,
+          "Player": "Aleksei Raptunovich",
+          "MatchRecord": "0-3-0",
+          "GameRecord": "2-6-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.60119048
+        },
+        {
+          "Rank": 14,
+          "Player": "Basya_55",
+          "MatchRecord": "0-0-0",
+          "GameRecord": "0-0-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": -0.2,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "round_id": "1168847",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "OMGProfunny",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-3-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.72727273,
+          "OpponentGameWinPercentage": 0.49186508
+        },
+        {
+          "Rank": 2,
+          "Player": "Роман Кохан",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.70833333,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.57348485
+        },
+        {
+          "Rank": 3,
+          "Player": "Valery Zubovich",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.5625,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.53472222
+        },
+        {
+          "Rank": 4,
+          "Player": "Valentine Novikov",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54166667,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.52797619
+        },
+        {
+          "Rank": 5,
+          "Player": "Maksim Martseniuk",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.47797619
+        },
+        {
+          "Rank": 6,
+          "Player": "Rostislav Brozhat",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.61111111,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56111111
+        },
+        {
+          "Rank": 7,
+          "Player": "IgnS",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.60416667,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.53479437
+        },
+        {
+          "Rank": 8,
+          "Player": "[OMG]Summie",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.47222222,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.47063492
+        },
+        {
+          "Rank": 9,
+          "Player": "BuRial63",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.875,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.71363636
+        },
+        {
+          "Rank": 10,
+          "Player": "Aleksei Raptunovich",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.69444444,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.60909091
+        },
+        {
+          "Rank": 11,
+          "Player": "Ilya Bogdan",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.5462963
+        },
+        {
+          "Rank": 12,
+          "Player": "Hogar",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.52083333,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.50972222
+        },
+        {
+          "Rank": 13,
+          "Player": "Maxim Shagoiko",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "4-6-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.47083333
+        },
+        {
+          "Rank": 14,
+          "Player": "Basya_55",
+          "MatchRecord": "0-0-0",
+          "GameRecord": "0-0-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": -0.2,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    }
+  ],
+  "TotalRounds": 4
+}

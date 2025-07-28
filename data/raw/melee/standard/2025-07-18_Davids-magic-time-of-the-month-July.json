@@ -1,0 +1,448 @@
+{
+  "TournamentId": 340163,
+  "TournamentName": "David’s magic time of the month (July)",
+  "TournamentStartDate": "2025-07-18T04:00:00Z",
+  "OrganizationName": "MM MTGA",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "e537f90b-7552-4189-890d-b31d004275b7",
+      "PlayerName": "Dazai3331",
+      "DeckName": "Jund Midrange",
+      "Rank": 8,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c9f15a7d-230c-4958-81c4-b31d0081b822",
+      "PlayerName": "dinosaursinluv",
+      "DeckName": "Azorius Omniscience",
+      "Rank": 6,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9ee49e28-1c01-4f59-8a07-b31c00ec72a9",
+      "PlayerName": "D3COGIN",
+      "DeckName": "Decklist",
+      "Rank": 11,
+      "Wins": 0,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "98c4745e-b57b-4bfe-9825-b31d013d3ce5",
+      "PlayerName": "CantorDust",
+      "DeckName": "Izzet combo",
+      "Rank": 3,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8ab3e5ec-bae3-4438-8879-b31d01174135",
+      "PlayerName": "KIRIYATO",
+      "DeckName": "Mono-Black Aggro",
+      "Rank": 4,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7b31b863-6ae7-4033-92f3-b31d00f606f4",
+      "PlayerName": "TifasFeet",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 5,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "78a004ae-a0f9-4b08-821f-b31e0036df74",
+      "PlayerName": "BiggusDickusBebop",
+      "DeckName": "Simic landfall",
+      "Rank": 9,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "56b36377-4a61-4733-85bd-b31d011513dc",
+      "PlayerName": "DavidTun",
+      "DeckName": "Mono-Green Omniscience",
+      "Rank": 7,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "516c5649-f668-4119-833f-b31c0086e7c0",
+      "PlayerName": "VongolaXIX",
+      "DeckName": "Sultai control",
+      "Rank": 10,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "434a5844-90ef-4137-930d-b31d00e670d9",
+      "PlayerName": "SleepyMug",
+      "DeckName": "Dimir Terror",
+      "Rank": 2,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2493fff0-7182-47aa-b66f-b31d009438e3",
+      "PlayerName": "Arkar Kyaw",
+      "DeckName": "Dimir Midrange",
+      "Rank": 1,
+      "Wins": 3,
+      "IsValid": true
+    }
+  ],
+  "RoundStandings": [
+    {
+      "round": 1,
+      "round_id": "1189456",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Arkar Kyaw",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 2,
+          "Player": "TifasFeet",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 3,
+          "Player": "SleepyMug",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "CantorDust",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 5,
+          "Player": "BiggusDickusBebop",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 6,
+          "Player": "dinosaursinluv",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 7,
+          "Player": "DavidTun",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 8,
+          "Player": "KIRIYATO",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 9,
+          "Player": "VongolaXIX",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 10,
+          "Player": "Dazai3331",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 11,
+          "Player": "D3COGIN",
+          "MatchRecord": "0-0-0",
+          "GameRecord": "0-0-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": -0.2,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "round_id": "1189457",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "CantorDust",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 2,
+          "Player": "Arkar Kyaw",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 3,
+          "Player": "dinosaursinluv",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.6
+        },
+        {
+          "Rank": 4,
+          "Player": "SleepyMug",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.7
+        },
+        {
+          "Rank": 5,
+          "Player": "TifasFeet",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 6,
+          "Player": "BiggusDickusBebop",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.6
+        },
+        {
+          "Rank": 7,
+          "Player": "KIRIYATO",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 8,
+          "Player": "DavidTun",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 9,
+          "Player": "VongolaXIX",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "0-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.7
+        },
+        {
+          "Rank": 10,
+          "Player": "Dazai3331",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "0-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 11,
+          "Player": "D3COGIN",
+          "MatchRecord": "0-0-0",
+          "GameRecord": "0-0-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": -0.2,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "round_id": "1189462",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Arkar Kyaw",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.52777778
+        },
+        {
+          "Rank": 2,
+          "Player": "SleepyMug",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.63095238
+        },
+        {
+          "Rank": 3,
+          "Player": "CantorDust",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.61507937
+        },
+        {
+          "Rank": 4,
+          "Player": "KIRIYATO",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.46230159
+        },
+        {
+          "Rank": 5,
+          "Player": "TifasFeet",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.43055556
+        },
+        {
+          "Rank": 6,
+          "Player": "dinosaursinluv",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.52777778
+        },
+        {
+          "Rank": 7,
+          "Player": "DavidTun",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.46031746
+        },
+        {
+          "Rank": 8,
+          "Player": "Dazai3331",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.47619048
+        },
+        {
+          "Rank": 9,
+          "Player": "BiggusDickusBebop",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "2-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.28571429,
+          "OpponentGameWinPercentage": 0.50793651
+        },
+        {
+          "Rank": 10,
+          "Player": "VongolaXIX",
+          "MatchRecord": "0-3-0",
+          "GameRecord": "0-6-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 0.59920635
+        },
+        {
+          "Rank": 11,
+          "Player": "D3COGIN",
+          "MatchRecord": "0-0-0",
+          "GameRecord": "0-0-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": -0.2,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    }
+  ],
+  "TotalRounds": 3
+}

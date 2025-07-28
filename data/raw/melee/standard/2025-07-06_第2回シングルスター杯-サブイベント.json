@@ -1,0 +1,1972 @@
+{
+  "TournamentId": 312385,
+  "TournamentName": "第2回シングルスター杯　サブイベント",
+  "TournamentStartDate": "2025-07-06T06:00:00Z",
+  "OrganizationName": "Single Star",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "ff3a89bb-b3da-4636-bd28-b3120001e8f4",
+      "PlayerName": "Takuma Yokota",
+      "DeckName": "Gruul",
+      "Rank": 41,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ff028640-656b-4dac-9c76-b31100c31121",
+      "PlayerName": "zyagakky",
+      "DeckName": "Izzet Aggro",
+      "Rank": 31,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f8fa33ec-22e7-4b58-969d-b3110111db30",
+      "PlayerName": "Yukio Kozakai",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 9,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "edbfbf4d-2462-4655-a712-b3110084c729",
+      "PlayerName": "Seito89",
+      "DeckName": "Azorius Artifacts",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ea94fb73-4216-49af-a1b1-b312004000c8",
+      "PlayerName": "KazukiYada",
+      "DeckName": "Selesnya Tokens",
+      "Rank": 3,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e43a3d5f-b27b-4c15-9cec-b311011215cd",
+      "PlayerName": "Keita Yoshida",
+      "DeckName": "Orzhov Demons",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e2832d9f-a200-45ee-b5a8-b3120055cb99",
+      "PlayerName": "taiyo ishii",
+      "DeckName": "Izzet",
+      "Rank": 38,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "dffc02ed-3edd-4450-a333-b31100a4937d",
+      "PlayerName": "44die",
+      "DeckName": "Mono-Black",
+      "Rank": 27,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d87a6d7b-121e-47db-9f4c-b31200560d91",
+      "PlayerName": "bushido469ma",
+      "DeckName": "Azorius Combo",
+      "Rank": 25,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d62e2a5d-d2da-4e17-9024-b31101836a40",
+      "PlayerName": "Ran_Error_YiCheng",
+      "DeckName": "Dimir",
+      "Rank": 23,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d498023e-985c-48a9-8e5b-b31200497298",
+      "PlayerName": "Taishi_Tokairin",
+      "DeckName": "Gruul Aggro",
+      "Rank": 42,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d39655a5-c0c5-488f-a12d-b3120055d0bd",
+      "PlayerName": "YUTA IWAMOTO",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 2,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ca5c7af5-163c-41fb-ab43-b311018b2e58",
+      "PlayerName": "RyosukeOshimi",
+      "DeckName": "Jeskai Control",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c6f5a4b1-920d-4ba5-aa94-b31100f083a6",
+      "PlayerName": "Satoshi Tsukahara",
+      "DeckName": "Mono-White Tokens",
+      "Rank": 8,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c6c9ebaa-f467-4b68-b5ae-b31200412031",
+      "PlayerName": "hirokawa",
+      "DeckName": "Golgari Midrange",
+      "Rank": 43,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "aeec7b93-486a-48d7-be4e-b312002eea70",
+      "PlayerName": "JUNKI WATANABE",
+      "DeckName": "Naya",
+      "Rank": 39,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ad03bec3-508d-4752-a3f7-b312003cf04a",
+      "PlayerName": "SAYAMA TATSUNOSUKE",
+      "DeckName": "Dimir",
+      "Rank": 5,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ac22c573-e4f1-45b8-b7e5-b31100d92fa4",
+      "PlayerName": "Kevin Stevanus",
+      "DeckName": "Dimir Midrange",
+      "Rank": 28,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a47f581a-2484-44b6-b65b-b312000c3b8f",
+      "PlayerName": "恭維 上田",
+      "DeckName": "Abzan Midrange",
+      "Rank": 30,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9e6916bb-623d-48fc-b33d-b311013734f4",
+      "PlayerName": "RYOUJI UEMATSU",
+      "DeckName": "Rakdos",
+      "Rank": 13,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9734f991-eb20-4ce7-b4b8-b31100f4fa84",
+      "PlayerName": "Hiromochi Kimura",
+      "DeckName": "Dimir Midrange",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "97096b86-7941-416a-8fe7-b312000d6f77",
+      "PlayerName": "GEN YOSHIZAWA",
+      "DeckName": "Mono-Green Aggro",
+      "Rank": 16,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "966f7d6d-d144-4317-b9f7-b312005fd0a0",
+      "PlayerName": "ゆい 常盤",
+      "DeckName": "Mono-Black Demons",
+      "Rank": 33,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "93e9f4ed-f2cd-442d-8093-b31100d720e7",
+      "PlayerName": "Yuuki Fukuda",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 32,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "93d3817d-090c-4c68-a327-b31100f4c63e",
+      "PlayerName": "YAYU",
+      "DeckName": "W-U-B-G Reanimator",
+      "Rank": 40,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "916139fc-bbe1-4116-b6db-b312005931e0",
+      "PlayerName": "Yuuhei Komatsu",
+      "DeckName": "Naya Delirium",
+      "Rank": 36,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8b3df2d4-3d37-4380-8466-b312000dc043",
+      "PlayerName": "azrael708",
+      "DeckName": "Jeskai Oculus",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7cd1996c-7067-4d82-b36f-b31200597775",
+      "PlayerName": "RUKI",
+      "DeckName": "Dimir Aggro",
+      "Rank": 17,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7a48e12c-2a50-444d-b392-b312005777da",
+      "PlayerName": "kawasaki",
+      "DeckName": "Rakdos Aggro",
+      "Rank": 24,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6c8894db-ab06-4898-8b3f-b31101220568",
+      "PlayerName": "Ayase",
+      "DeckName": "W-U-R-G Otters",
+      "Rank": 45,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6ade1d3c-8fc0-4970-901c-b311011edeaa",
+      "PlayerName": "大貴 伊東",
+      "DeckName": "Naya",
+      "Rank": 15,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "651248f2-531d-452d-8918-b31200621131",
+      "PlayerName": "Kotaro Takahashi",
+      "DeckName": "Orzhov Sacrifice",
+      "Rank": 29,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "62b979fe-1576-4736-95e1-b312001285cf",
+      "PlayerName": "teruki0927",
+      "DeckName": "Mardu Aggro",
+      "Rank": 22,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6064a972-9583-4c9a-9f69-b3120019c876",
+      "PlayerName": "Yusuke Arai",
+      "DeckName": "Boros Aggro",
+      "Rank": 20,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5ee01e46-6a54-4753-96fb-b3120055d978",
+      "PlayerName": "shoichishimpuku",
+      "DeckName": "Dimir Tempo",
+      "Rank": 11,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "59902b9c-ad8f-4de4-aff3-b3120035a82c",
+      "PlayerName": "shimon sasaki",
+      "DeckName": "Izzet",
+      "Rank": 26,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "58391bb8-9d9a-4c34-98af-b31100d6d6ea",
+      "PlayerName": "hifumin777",
+      "DeckName": "W-U-B-R-G Legends",
+      "Rank": 1,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4f991bfc-f470-48b5-9df7-b311008324ac",
+      "PlayerName": "hirasou",
+      "DeckName": "Esper Midrange",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "46350126-fb5c-44e3-8409-b31000f70401",
+      "PlayerName": "Ryo Maeda",
+      "DeckName": "Jeskai Convoke",
+      "Rank": 12,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "414ba40d-a8cf-4b14-a9c8-b3110062b76d",
+      "PlayerName": "Kazuhisa Hamasaki",
+      "DeckName": "Jeskai Oculus",
+      "Rank": 10,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "407a8a5c-d5ed-4ae2-bb83-b31100f89bd7",
+      "PlayerName": "april418",
+      "DeckName": "Jeskai Control",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "397ce20a-290c-497f-81a7-b3110126d9e2",
+      "PlayerName": "Chapter44",
+      "DeckName": "Golgari Combo",
+      "Rank": 44,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2f20198c-c5e3-4428-9cef-b31100e5ac97",
+      "PlayerName": "Satoki Sano",
+      "DeckName": "Golgari",
+      "Rank": 37,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2ee7fe28-feba-4478-b97d-b31100f2441f",
+      "PlayerName": "Junichi Yoshihashi",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 18,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2e07c5f8-88c8-4a05-ae19-b3110099d670",
+      "PlayerName": "gehigasi",
+      "DeckName": "Gruul Aggro",
+      "Rank": 7,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2d8449f0-bf55-49dd-b606-b3110171b865",
+      "PlayerName": "Uzuhara",
+      "DeckName": "Izzet Prowess",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2b3ae2ca-a766-415c-873b-b312005d8d3e",
+      "PlayerName": "GO FUKUDA",
+      "DeckName": "W-U-B-R-G",
+      "Rank": 35,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "24cbe1bb-0e6b-41b0-a5d1-b3120049a159",
+      "PlayerName": "rumraisin",
+      "DeckName": "Izzet",
+      "Rank": 21,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "16e07a2d-52f7-407a-ab99-b31100f9630d",
+      "PlayerName": "Ryota Motegi",
+      "DeckName": "Bant Omniscience",
+      "Rank": 19,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "13e91b62-8534-4652-92e1-b312004a06a8",
+      "PlayerName": "ryunosuke iida",
+      "DeckName": "Rakdos Combo",
+      "Rank": 14,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0af474f5-5511-4fed-81f4-b31100dcbf0a",
+      "PlayerName": "Tetsuya Fukuyama",
+      "DeckName": "Izzet Midrange",
+      "Rank": 34,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "07035555-9303-4ece-af9f-b3110076d680",
+      "PlayerName": "Ryo Ito",
+      "DeckName": "Izzet Cauldron",
+      "Rank": 4,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0440f941-be8f-4b87-a5c6-b312005a7e6d",
+      "PlayerName": "fukusuke",
+      "DeckName": "Sultai Omniscience",
+      "Rank": 6,
+      "Wins": 4,
+      "IsValid": true
+    }
+  ],
+  "RoundStandings": [
+    {
+      "round": 1,
+      "round_id": "1104123",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "大貴 伊東",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 2,
+          "Player": "GEN YOSHIZAWA",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 3,
+          "Player": "gehigasi",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "44die",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 5,
+          "Player": "shimon sasaki",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 6,
+          "Player": "KazukiYada",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 7,
+          "Player": "Yuuki Fukuda",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 8,
+          "Player": "SAYAMA TATSUNOSUKE",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 9,
+          "Player": "Yukio Kozakai",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 10,
+          "Player": "fukusuke",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 11,
+          "Player": "YUTA IWAMOTO",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 12,
+          "Player": "taiyo ishii",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 13,
+          "Player": "ryunosuke iida",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 14,
+          "Player": "Junichi Yoshihashi",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 15,
+          "Player": "hifumin777",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 16,
+          "Player": "Kazuhisa Hamasaki",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 17,
+          "Player": "Tetsuya Fukuyama",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 18,
+          "Player": "Yusuke Arai",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 19,
+          "Player": "Yuuhei Komatsu",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 20,
+          "Player": "RUKI",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 21,
+          "Player": "Kotaro Takahashi",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 22,
+          "Player": "zyagakky",
+          "MatchRecord": "0-0-1",
+          "GameRecord": "1-1-0",
+          "Points": 1,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 23,
+          "Player": "JUNKI WATANABE",
+          "MatchRecord": "0-0-1",
+          "GameRecord": "1-1-0",
+          "Points": 1,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 24,
+          "Player": "YAYU",
+          "MatchRecord": "0-0-1",
+          "GameRecord": "1-1-0",
+          "Points": 1,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 25,
+          "Player": "Ran_Error_YiCheng",
+          "MatchRecord": "0-0-1",
+          "GameRecord": "1-1-0",
+          "Points": 1,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.5
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "round_id": "1104124",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "大貴 伊東",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 2,
+          "Player": "Junichi Yoshihashi",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 3,
+          "Player": "Yukio Kozakai",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 4,
+          "Player": "fukusuke",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 5,
+          "Player": "gehigasi",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 6,
+          "Player": "GEN YOSHIZAWA",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.45
+        },
+        {
+          "Rank": 7,
+          "Player": "SAYAMA TATSUNOSUKE",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 8,
+          "Player": "shimon sasaki",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 9,
+          "Player": "YUTA IWAMOTO",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 10,
+          "Player": "Yusuke Arai",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 11,
+          "Player": "hifumin777",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 12,
+          "Player": "Ran_Error_YiCheng",
+          "MatchRecord": "1-0-1",
+          "GameRecord": "3-1-0",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 13,
+          "Player": "44die",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 1.0
+        },
+        {
+          "Rank": 14,
+          "Player": "Yuuki Fukuda",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.65
+        },
+        {
+          "Rank": 15,
+          "Player": "KazukiYada",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.6
+        },
+        {
+          "Rank": 16,
+          "Player": "Tetsuya Fukuyama",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.7
+        },
+        {
+          "Rank": 17,
+          "Player": "RUKI",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.7
+        },
+        {
+          "Rank": 18,
+          "Player": "Kazuhisa Hamasaki",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.8
+        },
+        {
+          "Rank": 19,
+          "Player": "RYOUJI UEMATSU",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 20,
+          "Player": "恭維 上田",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 21,
+          "Player": "ryunosuke iida",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 22,
+          "Player": "Ryo Maeda",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 23,
+          "Player": "kawasaki",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 24,
+          "Player": "Yuuhei Komatsu",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56666667
+        },
+        {
+          "Rank": 25,
+          "Player": "taiyo ishii",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.56666667
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "round_id": "1104125",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "fukusuke",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.61904762
+        },
+        {
+          "Rank": 2,
+          "Player": "大貴 伊東",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-0-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.49206349
+        },
+        {
+          "Rank": 3,
+          "Player": "Yukio Kozakai",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.53174603
+        },
+        {
+          "Rank": 4,
+          "Player": "SAYAMA TATSUNOSUKE",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.50992063
+        },
+        {
+          "Rank": 5,
+          "Player": "gehigasi",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.46759259
+        },
+        {
+          "Rank": 6,
+          "Player": "hifumin777",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.37037037,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.4265873
+        },
+        {
+          "Rank": 7,
+          "Player": "KazukiYada",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.61904762
+        },
+        {
+          "Rank": 8,
+          "Player": "44die",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.75
+        },
+        {
+          "Rank": 9,
+          "Player": "GEN YOSHIZAWA",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.625
+        },
+        {
+          "Rank": 10,
+          "Player": "Kazuhisa Hamasaki",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.60515873
+        },
+        {
+          "Rank": 11,
+          "Player": "Yusuke Arai",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.58201058
+        },
+        {
+          "Rank": 12,
+          "Player": "Ryo Maeda",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.50793651
+        },
+        {
+          "Rank": 13,
+          "Player": "shimon sasaki",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.54497354
+        },
+        {
+          "Rank": 14,
+          "Player": "YUTA IWAMOTO",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.50925926
+        },
+        {
+          "Rank": 15,
+          "Player": "Junichi Yoshihashi",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.57142857
+        },
+        {
+          "Rank": 16,
+          "Player": "kawasaki",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.55357143
+        },
+        {
+          "Rank": 17,
+          "Player": "Kevin Stevanus",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.44973545
+        },
+        {
+          "Rank": 18,
+          "Player": "shoichishimpuku",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.5297619
+        },
+        {
+          "Rank": 19,
+          "Player": "Kotaro Takahashi",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.45238095
+        },
+        {
+          "Rank": 20,
+          "Player": "Ryo Ito",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.44973545
+        },
+        {
+          "Rank": 21,
+          "Player": "Satoshi Tsukahara",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.43650794
+        },
+        {
+          "Rank": 22,
+          "Player": "Ryota Motegi",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.4021164
+        },
+        {
+          "Rank": 23,
+          "Player": "Ran_Error_YiCheng",
+          "MatchRecord": "1-1-1",
+          "GameRecord": "4-3-0",
+          "Points": 4,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.45833333
+        },
+        {
+          "Rank": 24,
+          "Player": "Yuuki Fukuda",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.77777778,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.71428571
+        },
+        {
+          "Rank": 25,
+          "Player": "RUKI",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "4-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.44444444,
+          "OpponentGameWinPercentage": 0.61309524
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "round_id": "1104126",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "SAYAMA TATSUNOSUKE",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-2-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.56136364
+        },
+        {
+          "Rank": 2,
+          "Player": "gehigasi",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-3-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.54166667,
+          "TeamGameWinPercentage": 0.72727273,
+          "OpponentGameWinPercentage": 0.52853535
+        },
+        {
+          "Rank": 3,
+          "Player": "hifumin777",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.53819444
+        },
+        {
+          "Rank": 4,
+          "Player": "fukusuke",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.6875,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.62626263
+        },
+        {
+          "Rank": 5,
+          "Player": "大貴 伊東",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.64583333,
+          "TeamGameWinPercentage": 0.77777778,
+          "OpponentGameWinPercentage": 0.51111111
+        },
+        {
+          "Rank": 6,
+          "Player": "KazukiYada",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.77777778,
+          "OpponentGameWinPercentage": 0.57380952
+        },
+        {
+          "Rank": 7,
+          "Player": "Yukio Kozakai",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.54603175
+        },
+        {
+          "Rank": 8,
+          "Player": "Kazuhisa Hamasaki",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.5219697
+        },
+        {
+          "Rank": 9,
+          "Player": "YUTA IWAMOTO",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.5290404
+        },
+        {
+          "Rank": 10,
+          "Player": "GEN YOSHIZAWA",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.54955808
+        },
+        {
+          "Rank": 11,
+          "Player": "shoichishimpuku",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.51294192
+        },
+        {
+          "Rank": 12,
+          "Player": "Ryo Ito",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.4625
+        },
+        {
+          "Rank": 13,
+          "Player": "Ryota Motegi",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.45833333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.46850649
+        },
+        {
+          "Rank": 14,
+          "Player": "Satoshi Tsukahara",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.77777778,
+          "OpponentGameWinPercentage": 0.43888889
+        },
+        {
+          "Rank": 15,
+          "Player": "Ran_Error_YiCheng",
+          "MatchRecord": "2-1-1",
+          "GameRecord": "6-3-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.42708333
+        },
+        {
+          "Rank": 16,
+          "Player": "44die",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "4-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.44444444,
+          "OpponentGameWinPercentage": 0.66329966
+        },
+        {
+          "Rank": 17,
+          "Player": "shimon sasaki",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.64583333,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.55416667
+        },
+        {
+          "Rank": 18,
+          "Player": "Junichi Yoshihashi",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.55714286
+        },
+        {
+          "Rank": 19,
+          "Player": "Yusuke Arai",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "4-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.56641414
+        },
+        {
+          "Rank": 20,
+          "Player": "Ryo Maeda",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.54166667,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.50075758
+        },
+        {
+          "Rank": 21,
+          "Player": "Kevin Stevanus",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.54166667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.58333333
+        },
+        {
+          "Rank": 22,
+          "Player": "ryunosuke iida",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "6-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.54166667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.52272727
+        },
+        {
+          "Rank": 23,
+          "Player": "kawasaki",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.54166667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.50511364
+        },
+        {
+          "Rank": 24,
+          "Player": "RYOUJI UEMATSU",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.50694444
+        },
+        {
+          "Rank": 25,
+          "Player": "Kotaro Takahashi",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-6-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.45454545,
+          "OpponentGameWinPercentage": 0.47380952
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "round_id": "1104127",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "hifumin777",
+          "MatchRecord": "5-0-0",
+          "GameRecord": "10-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.53235931
+        },
+        {
+          "Rank": 2,
+          "Player": "YUTA IWAMOTO",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.62666667,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.57012987
+        },
+        {
+          "Rank": 3,
+          "Player": "gehigasi",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.62666667,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.56068376
+        },
+        {
+          "Rank": 4,
+          "Player": "SAYAMA TATSUNOSUKE",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "8-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.57820513
+        },
+        {
+          "Rank": 5,
+          "Player": "Satoshi Tsukahara",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-2-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.55,
+          "TeamGameWinPercentage": 0.81818182,
+          "OpponentGameWinPercentage": 0.52258159
+        },
+        {
+          "Rank": 6,
+          "Player": "KazukiYada",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-2-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.81818182,
+          "OpponentGameWinPercentage": 0.51147186
+        },
+        {
+          "Rank": 7,
+          "Player": "Kazuhisa Hamasaki",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "8-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.48333333
+        },
+        {
+          "Rank": 8,
+          "Player": "Ryo Ito",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "8-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.48666667,
+          "TeamGameWinPercentage": 0.61538462,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 9,
+          "Player": "fukusuke",
+          "MatchRecord": "3-1-1",
+          "GameRecord": "8-4-0",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.67333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.64535465
+        },
+        {
+          "Rank": 10,
+          "Player": "大貴 伊東",
+          "MatchRecord": "3-1-1",
+          "GameRecord": "8-3-0",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.72727273,
+          "OpponentGameWinPercentage": 0.50606061
+        },
+        {
+          "Rank": 11,
+          "Player": "GEN YOSHIZAWA",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-6-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.64,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.61486014
+        },
+        {
+          "Rank": 12,
+          "Player": "Yukio Kozakai",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "8-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.62666667,
+          "TeamGameWinPercentage": 0.61538462,
+          "OpponentGameWinPercentage": 0.57196137
+        },
+        {
+          "Rank": 13,
+          "Player": "Ryota Motegi",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-6-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.52307692
+        },
+        {
+          "Rank": 14,
+          "Player": "shoichishimpuku",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.56590909
+        },
+        {
+          "Rank": 15,
+          "Player": "Junichi Yoshihashi",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-6-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.53846154,
+          "OpponentGameWinPercentage": 0.55238095
+        },
+        {
+          "Rank": 16,
+          "Player": "RYOUJI UEMATSU",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.53158508
+        },
+        {
+          "Rank": 17,
+          "Player": "Yusuke Arai",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-7-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.50666667,
+          "TeamGameWinPercentage": 0.46153846,
+          "OpponentGameWinPercentage": 0.53030303
+        },
+        {
+          "Rank": 18,
+          "Player": "Ryo Maeda",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.46759907
+        },
+        {
+          "Rank": 19,
+          "Player": "ryunosuke iida",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "8-6-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.50167832
+        },
+        {
+          "Rank": 20,
+          "Player": "rumraisin",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-6-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.42666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.43333333
+        },
+        {
+          "Rank": 21,
+          "Player": "Ran_Error_YiCheng",
+          "MatchRecord": "2-2-1",
+          "GameRecord": "7-5-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.44935897
+        },
+        {
+          "Rank": 22,
+          "Player": "shimon sasaki",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "7-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.52564103
+        },
+        {
+          "Rank": 23,
+          "Player": "RUKI",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "7-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.58666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.57004662
+        },
+        {
+          "Rank": 24,
+          "Player": "bushido469ma",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.54861111
+        },
+        {
+          "Rank": 25,
+          "Player": "Kevin Stevanus",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.57333333,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.57474747
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "round_id": "1148640",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "hifumin777",
+          "MatchRecord": "5-0-1",
+          "GameRecord": "11-6-0",
+          "Points": 16,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.64705882,
+          "OpponentGameWinPercentage": 0.51926937
+        },
+        {
+          "Rank": 2,
+          "Player": "YUTA IWAMOTO",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-4-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.62037037,
+          "TeamGameWinPercentage": 0.73333333,
+          "OpponentGameWinPercentage": 0.5611578
+        },
+        {
+          "Rank": 3,
+          "Player": "KazukiYada",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-3-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54814815,
+          "TeamGameWinPercentage": 0.78571429,
+          "OpponentGameWinPercentage": 0.53097572
+        },
+        {
+          "Rank": 4,
+          "Player": "Ryo Ito",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "10-6-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.50172736
+        },
+        {
+          "Rank": 5,
+          "Player": "SAYAMA TATSUNOSUKE",
+          "MatchRecord": "4-1-1",
+          "GameRecord": "9-5-0",
+          "Points": 13,
+          "OpponentMatchWinPercentage": 0.64259259,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.5822479
+        },
+        {
+          "Rank": 6,
+          "Player": "fukusuke",
+          "MatchRecord": "4-1-1",
+          "GameRecord": "10-4-0",
+          "Points": 13,
+          "OpponentMatchWinPercentage": 0.59259259,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.56946779
+        },
+        {
+          "Rank": 7,
+          "Player": "gehigasi",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.65740741,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.60969499
+        },
+        {
+          "Rank": 8,
+          "Player": "Satoshi Tsukahara",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.63333333,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.5537395
+        },
+        {
+          "Rank": 9,
+          "Player": "Yukio Kozakai",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.56481481,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.52539683
+        },
+        {
+          "Rank": 10,
+          "Player": "Kazuhisa Hamasaki",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "8-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.54814815,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.5140873
+        },
+        {
+          "Rank": 11,
+          "Player": "shoichishimpuku",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "8-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.50925926,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.55095599
+        },
+        {
+          "Rank": 12,
+          "Player": "Ryo Maeda",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.47638889
+        },
+        {
+          "Rank": 13,
+          "Player": "RYOUJI UEMATSU",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.48333333,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.48704482
+        },
+        {
+          "Rank": 14,
+          "Player": "ryunosuke iida",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.48148148,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.52020202
+        },
+        {
+          "Rank": 15,
+          "Player": "大貴 伊東",
+          "MatchRecord": "3-2-1",
+          "GameRecord": "9-5-0",
+          "Points": 10,
+          "OpponentMatchWinPercentage": 0.57407407,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.51101774
+        },
+        {
+          "Rank": 16,
+          "Player": "GEN YOSHIZAWA",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "7-8-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.62037037,
+          "TeamGameWinPercentage": 0.46666667,
+          "OpponentGameWinPercentage": 0.5922619
+        },
+        {
+          "Rank": 17,
+          "Player": "RUKI",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "9-8-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.56666667,
+          "TeamGameWinPercentage": 0.52941176,
+          "OpponentGameWinPercentage": 0.54702381
+        },
+        {
+          "Rank": 18,
+          "Player": "Junichi Yoshihashi",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "8-8-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.5462963,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.57142857
+        },
+        {
+          "Rank": 19,
+          "Player": "Ryota Motegi",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "7-8-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.53888889,
+          "TeamGameWinPercentage": 0.46666667,
+          "OpponentGameWinPercentage": 0.51663165
+        },
+        {
+          "Rank": 20,
+          "Player": "Yusuke Arai",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "6-9-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.52037037,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.53670635
+        },
+        {
+          "Rank": 21,
+          "Player": "rumraisin",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "6-8-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.45,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.46269841
+        },
+        {
+          "Rank": 22,
+          "Player": "teruki0927",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "8-7-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.38888889,
+          "TeamGameWinPercentage": 0.53333333,
+          "OpponentGameWinPercentage": 0.40296346
+        },
+        {
+          "Rank": 23,
+          "Player": "Ran_Error_YiCheng",
+          "MatchRecord": "2-3-1",
+          "GameRecord": "8-7-0",
+          "Points": 7,
+          "OpponentMatchWinPercentage": 0.50925926,
+          "TeamGameWinPercentage": 0.53333333,
+          "OpponentGameWinPercentage": 0.4628268
+        },
+        {
+          "Rank": 24,
+          "Player": "kawasaki",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.52857143
+        },
+        {
+          "Rank": 25,
+          "Player": "bushido469ma",
+          "MatchRecord": "2-3-0",
+          "GameRecord": "5-7-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.41666667,
+          "OpponentGameWinPercentage": 0.53968254
+        }
+      ]
+    }
+  ],
+  "TotalRounds": 6
+}

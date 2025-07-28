@@ -1,0 +1,420 @@
+{
+  "TournamentId": 333892,
+  "TournamentName": "TheGathering.gg Standard Post-BNR Celebration",
+  "TournamentStartDate": "2025-07-02T16:00:00Z",
+  "OrganizationName": "TheGathering.gg",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "eb5724e1-3418-46c6-b4c0-b30d01337009",
+      "PlayerName": "nohrg",
+      "DeckName": "Boros Equipments",
+      "Rank": 6,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b83b2fe7-a076-4ecc-b36b-b30e00ef7b58",
+      "PlayerName": "DarthZear166",
+      "DeckName": "Golgari",
+      "Rank": 1,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b6d05f51-8d8a-4324-ad61-b30e00f60b1d",
+      "PlayerName": "Beale",
+      "DeckName": "Boros Equipments",
+      "Rank": 2,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a1df2575-6cbe-4fd3-93ee-b30e00f52774",
+      "PlayerName": "Tyrant",
+      "DeckName": "W-U-R-G",
+      "Rank": 7,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8546b185-2aa0-45ad-96ad-b30e00f0b29a",
+      "PlayerName": "Bryndis Tamsyn",
+      "DeckName": "W-B-R-G Combo",
+      "Rank": 5,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7010aa06-197e-435c-9cc5-b30d010e28de",
+      "PlayerName": "Alexander Raitzig",
+      "DeckName": "Dimir",
+      "Rank": 8,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3bba2003-480a-4743-89a6-b30d015c9ed1",
+      "PlayerName": "Serg Krush",
+      "DeckName": "Azorius Control",
+      "Rank": 3,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "3b3ccbd3-da2b-45b8-ad6d-b30e01053830",
+      "PlayerName": "IPA4BREAKFAST",
+      "DeckName": "Abzan",
+      "Rank": 4,
+      "Wins": 2,
+      "IsValid": true
+    }
+  ],
+  "RoundStandings": [
+    {
+      "round": 1,
+      "round_id": "1168466",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "IPA4BREAKFAST",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 2,
+          "Player": "Beale",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 3,
+          "Player": "Serg Krush",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "DarthZear166",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 5,
+          "Player": "nohrg",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 6,
+          "Player": "Bryndis Tamsyn",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 7,
+          "Player": "Tyrant",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "1-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.66666667
+        },
+        {
+          "Rank": 8,
+          "Player": "Alexander Raitzig",
+          "MatchRecord": "0-1-0",
+          "GameRecord": "0-2-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.0,
+          "OpponentGameWinPercentage": 1.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "round_id": "1168467",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Serg Krush",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 2,
+          "Player": "Beale",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 3,
+          "Player": "DarthZear166",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.4,
+          "OpponentGameWinPercentage": 0.65
+        },
+        {
+          "Rank": 4,
+          "Player": "IPA4BREAKFAST",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 5,
+          "Player": "Tyrant",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 6,
+          "Player": "Bryndis Tamsyn",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-3-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 7,
+          "Player": "nohrg",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "2-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.33333333,
+          "OpponentGameWinPercentage": 0.65
+        },
+        {
+          "Rank": 8,
+          "Player": "Alexander Raitzig",
+          "MatchRecord": "0-2-0",
+          "GameRecord": "1-4-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.2,
+          "OpponentGameWinPercentage": 0.55
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "round_id": "1168468",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Serg Krush",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.45833333
+        },
+        {
+          "Rank": 2,
+          "Player": "Beale",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.58862434
+        },
+        {
+          "Rank": 3,
+          "Player": "DarthZear166",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.54166667
+        },
+        {
+          "Rank": 4,
+          "Player": "Bryndis Tamsyn",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.46362434
+        },
+        {
+          "Rank": 5,
+          "Player": "IPA4BREAKFAST",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-4-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.42857143,
+          "OpponentGameWinPercentage": 0.5515873
+        },
+        {
+          "Rank": 6,
+          "Player": "Tyrant",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "3-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.375,
+          "OpponentGameWinPercentage": 0.56944444
+        },
+        {
+          "Rank": 7,
+          "Player": "nohrg",
+          "MatchRecord": "1-2-0",
+          "GameRecord": "4-5-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.44444444,
+          "OpponentGameWinPercentage": 0.50992063
+        },
+        {
+          "Rank": 8,
+          "Player": "Alexander Raitzig",
+          "MatchRecord": "0-3-0",
+          "GameRecord": "2-6-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.41600529
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "round_id": "1168469",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "DarthZear166",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.625,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.57525253
+        },
+        {
+          "Rank": 2,
+          "Player": "Beale",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.625,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.58939394
+        },
+        {
+          "Rank": 3,
+          "Player": "Serg Krush",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.53888889
+        },
+        {
+          "Rank": 4,
+          "Player": "IPA4BREAKFAST",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.61111111,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.53333333
+        },
+        {
+          "Rank": 5,
+          "Player": "Bryndis Tamsyn",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.53636364
+        },
+        {
+          "Rank": 6,
+          "Player": "nohrg",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.4530303
+        },
+        {
+          "Rank": 7,
+          "Player": "Tyrant",
+          "MatchRecord": "1-3-0",
+          "GameRecord": "3-7-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.52083333,
+          "TeamGameWinPercentage": 0.3,
+          "OpponentGameWinPercentage": 0.50606061
+        },
+        {
+          "Rank": 8,
+          "Player": "Alexander Raitzig",
+          "MatchRecord": "0-3-0",
+          "GameRecord": "2-6-0",
+          "Points": 0,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.25,
+          "OpponentGameWinPercentage": 0.47811448
+        }
+      ]
+    }
+  ],
+  "TotalRounds": 4
+}

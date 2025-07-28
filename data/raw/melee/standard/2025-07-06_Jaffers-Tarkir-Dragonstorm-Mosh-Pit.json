@@ -1,0 +1,3300 @@
+{
+  "TournamentId": 285372,
+  "TournamentName": "Jaffer's Tarkir Dragonstorm Mosh Pit",
+  "TournamentStartDate": "2025-07-06T16:00:00Z",
+  "OrganizationName": "Jaffer's Arena Amphitheatre",
+  "FormatDescription": "Standard",
+  "Decks": [
+    {
+      "DecklistId": "fade8571-0b48-4755-9939-b2ca003a6221",
+      "PlayerName": "raptorjesus656",
+      "DeckName": "Bant Bounce",
+      "Rank": 13,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f803f2fa-203d-492f-9c4b-b2cb014263a3",
+      "PlayerName": "eyLDS",
+      "DeckName": "Izzet Aggro",
+      "Rank": 70,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f63e0818-b4ef-4fb3-b264-b2cc008043e2",
+      "PlayerName": "kouta bandou",
+      "DeckName": "Esper Aggro",
+      "Rank": 43,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f482978b-3720-408d-8be1-b2cc00ec310c",
+      "PlayerName": "Saibottob",
+      "DeckName": "Izzet Prowess",
+      "Rank": 58,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f43ce37c-7d66-453e-9022-b2cc0047c326",
+      "PlayerName": "skills422",
+      "DeckName": "Golgari Demons",
+      "Rank": 33,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f323e869-ddad-4bfa-8e5c-b2cc00f8d8ef",
+      "PlayerName": "Lordan",
+      "DeckName": "Azorius",
+      "Rank": 9,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f2f8468e-ccf3-46f7-a3c6-b2ca001b8e8f",
+      "PlayerName": "BasscannonMTG",
+      "DeckName": "Selesnya Aggro",
+      "Rank": 47,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f1967ee9-7c14-413a-aef8-b2cc007e1668",
+      "PlayerName": "lambozilla",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 22,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "f18ae392-b290-4d84-9e5f-b2cc00fff438",
+      "PlayerName": "leandro floresta",
+      "DeckName": "Azorius Control",
+      "Rank": 79,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "edf4929d-d931-4801-a4c2-b2ca0032f653",
+      "PlayerName": "mirandamedel",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 26,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e6c8819e-e3aa-4db8-a2fc-b2cc00fad4c7",
+      "PlayerName": "Nathanael Williams",
+      "DeckName": "Azorius Omniscience",
+      "Rank": 61,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e6922e02-d29e-448c-b1bd-b2cb01448389",
+      "PlayerName": "Rybsson",
+      "DeckName": "Orzhov Bounce",
+      "Rank": 38,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e5df91e9-1866-44d5-9009-b2cc0100396e",
+      "PlayerName": "Riley Bennett",
+      "DeckName": "Golgari Control",
+      "Rank": 27,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e589a237-640b-4051-9827-b2cc0045b9d9",
+      "PlayerName": "Sojourn",
+      "DeckName": "Jeskai Control",
+      "Rank": 21,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e37f704f-f4ad-4fad-9678-b2cc00e694be",
+      "PlayerName": "SirHamilton1",
+      "DeckName": "Izzet Prowess",
+      "Rank": 12,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e32a08ae-a941-4fb5-8feb-b2cc00aaca11",
+      "PlayerName": "Ashkan Paykar",
+      "DeckName": "Jeskai Control",
+      "Rank": 7,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e31dbd88-94cc-4890-9183-b2cc00a75bd1",
+      "PlayerName": "okiscoop",
+      "DeckName": "Dimir Control",
+      "Rank": 2,
+      "Wins": 8,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e2a32896-5252-4c7a-92fb-b2cc006ea6e8",
+      "PlayerName": "Carlo Favretto",
+      "DeckName": "Mono-White Control",
+      "Rank": 46,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "e190e990-a04d-495b-8cf0-b2cb0120d4ef",
+      "PlayerName": "Brett Guzzo",
+      "DeckName": "Golgari Midrange",
+      "Rank": 20,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ddae0ba9-a4d7-4708-9e0b-b2cc003d55e2",
+      "PlayerName": "pfeng",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 1,
+      "Wins": 9,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "da1fdf90-a938-4838-87f6-b2bf00684418",
+      "PlayerName": "LordBrimir",
+      "DeckName": "Decklist",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "d5a8d93a-b134-4f39-b104-b2cc00f8114f",
+      "PlayerName": "Diego Chomali",
+      "DeckName": "Izzet",
+      "Rank": 42,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d2350634-86cb-4965-91eb-b2cc00fd4d39",
+      "PlayerName": "Gadien",
+      "DeckName": "Jeskai Tokens",
+      "Rank": 49,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "d0b59b5e-9ec1-45a4-bf35-b2cc00613af4",
+      "PlayerName": "BeeisMe",
+      "DeckName": "Izzet Aggro",
+      "Rank": 50,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "cdf87ba4-cae1-43cb-9c44-b2cc001a0a26",
+      "PlayerName": "Jake Chaimowitz",
+      "DeckName": "Jeskai Control",
+      "Rank": 67,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "cdec061d-7412-4a41-838e-b2cc00e478fb",
+      "PlayerName": "geoffreygussilverio",
+      "DeckName": "Dimir Aggro",
+      "Rank": 56,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ccb41e28-74eb-45f4-8237-b2cc00cbcf18",
+      "PlayerName": "Tlacaelel Campos",
+      "DeckName": "Orzhov Pixie",
+      "Rank": 5,
+      "Wins": 6,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "cba7b35b-8fe2-477d-9c1a-b2cc00fbd2d4",
+      "PlayerName": "Chase Clark",
+      "DeckName": "Izzet Midrange",
+      "Rank": 74,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ca25c02f-8409-4946-a3a8-b2cb0065b3c7",
+      "PlayerName": "Nate Muhlbach",
+      "DeckName": "Izzet Aggro",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c91cc419-93ea-4069-915e-b2cc002a2e2f",
+      "PlayerName": "Matt Pointon",
+      "DeckName": "Jeskai Oculus",
+      "Rank": 23,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c6c6ed8a-5e54-4f33-9f3f-b2cc006c33f8",
+      "PlayerName": "Simón Arboleda ",
+      "DeckName": "Azorius Artifacts",
+      "Rank": 15,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c13e5d99-ec60-4f74-aa64-b2cc00d0a8e7",
+      "PlayerName": "Zachary Okorn",
+      "DeckName": "Jeskai Control",
+      "Rank": 73,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "c03d99a6-71bf-49db-9d4a-b2cc003e398b",
+      "PlayerName": "Dasbunny",
+      "DeckName": "Orzhov Bounce",
+      "Rank": 45,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "bc889694-4ced-4a19-96d1-b2cc010102b4",
+      "PlayerName": "damienf16",
+      "DeckName": "Azorius Control",
+      "Rank": 69,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "babdf106-8cf3-4ea0-9747-b2ca012bcd5c",
+      "PlayerName": "Jefmatos11",
+      "DeckName": "Esper Aggro",
+      "Rank": 28,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ba1f9257-61f0-45f9-8a45-b2cb01160615",
+      "PlayerName": "RalphVilla",
+      "DeckName": "Bant Overlords",
+      "Rank": 41,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b75e7e94-c8c3-40eb-a741-b2b80163b26b",
+      "PlayerName": "Deltagulf",
+      "DeckName": "Izzet Aggro",
+      "Rank": 11,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b6ba4c4a-5b65-4c09-a849-b2cc00fdde4e",
+      "PlayerName": "Brett Eischens",
+      "DeckName": "Mono-Red Aggro",
+      "Rank": 66,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "b350e545-25d6-420a-afe6-b2cc004c5cdb",
+      "PlayerName": "MW702",
+      "DeckName": "Izzet Prowess",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "ad7dceb6-2f9f-4a49-9cd2-b2cc00063ad3",
+      "PlayerName": "tilten",
+      "DeckName": "Golgari Midrange",
+      "Rank": 17,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a65bb9f9-e567-45e0-a0ff-b2cc0104c53c",
+      "PlayerName": "gokalper",
+      "DeckName": "Mono-Green",
+      "Rank": 24,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a38f45c6-1afc-4d91-90be-b2cc01068a0d",
+      "PlayerName": "IsaacWLevy",
+      "DeckName": "Izzet Aggro",
+      "Rank": 18,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "a2702661-cbf2-4019-b046-b2cb00f6abc1",
+      "PlayerName": "BaptisteAcademy",
+      "DeckName": "W-U-B-G Beanstalk",
+      "Rank": 36,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9f9215f3-a934-4729-aaeb-b2bc0032ecd8",
+      "PlayerName": "Ikval",
+      "DeckName": "Jeskai Control",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "9ec7f4a4-c545-48b3-b9bd-b2cc007bdf99",
+      "PlayerName": "Hemsi",
+      "DeckName": "Jeskai Control",
+      "Rank": 76,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "96417f5e-990b-4ba7-bfa6-b2cc0106da51",
+      "PlayerName": "ERICK DA SILVA Biscoito",
+      "DeckName": "Mono-Green",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "95734347-1f6d-4593-a1d5-b2cc00e2ad5e",
+      "PlayerName": "Alex Krakovski",
+      "DeckName": "Izzet Prowess",
+      "Rank": 14,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "933edd40-55ae-4e5a-ad70-b2c70145b28e",
+      "PlayerName": "Freddie  Barber",
+      "DeckName": "Mardu Pixie",
+      "Rank": 34,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "90746df4-3642-416e-b4d0-b2cc00fffe4c",
+      "PlayerName": "JJBIG72",
+      "DeckName": "Esper",
+      "Rank": 65,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8f1a60f2-6879-4703-8634-b2c90146fccf",
+      "PlayerName": "GabrielSarmento",
+      "DeckName": "Jeskai Aggro",
+      "Rank": 72,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8eb51e02-b1fb-4f8d-aa35-b2cc0102af05",
+      "PlayerName": "peterhmasters",
+      "DeckName": "Dimir Midrange",
+      "Rank": 71,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8d87f26c-cacc-40c5-bb59-b2cb00277bce",
+      "PlayerName": "Damian Cohen",
+      "DeckName": "Jeskai Prowess",
+      "Rank": 31,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "87c29e98-012e-483c-9ed2-b2ca01690dca",
+      "PlayerName": "Bryan Blouin",
+      "DeckName": "Azorius Control",
+      "Rank": 52,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "876ec687-6dc7-4f64-af51-b2c700ba7bc4",
+      "PlayerName": "Maicon Gabriel Friedel",
+      "DeckName": "Izzet Aggro",
+      "Rank": 30,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "85fec684-c990-435b-aa96-b2cc00870e1d",
+      "PlayerName": "Patrick O'Boyle",
+      "DeckName": "Orzhov Midrange",
+      "Rank": 37,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "8424a1a3-3cf4-4d76-ba61-b2cc00d3e2b2",
+      "PlayerName": "Franco rovigatti",
+      "DeckName": "Rakdos Aggro",
+      "Rank": 39,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7fde8e30-7856-4d1b-9ff3-b2cc00ffe4e0",
+      "PlayerName": "Ramirinho",
+      "DeckName": "Esper Bounce",
+      "Rank": 55,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "79bd7fc3-129c-4d28-a6f8-b2cc0103b81b",
+      "PlayerName": "Taylor Spain",
+      "DeckName": "Izzet Aggro",
+      "Rank": 3,
+      "Wins": 7,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "78313842-7e0a-440a-ab45-b2cc00d80fc5",
+      "PlayerName": "Alejandro Funes",
+      "DeckName": "Jeskai Control",
+      "Rank": 77,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "774e1a94-ddf9-492c-a02c-b2cc007fcb67",
+      "PlayerName": "Alexander Winter",
+      "DeckName": "Mardu Aggro",
+      "Rank": 48,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "7251a73d-cbbe-424f-af48-b2cc0107003e",
+      "PlayerName": "ULT888",
+      "DeckName": "Bant Overlords",
+      "Rank": 35,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6af34e85-cf6e-4e5f-a2fa-b2cc0100d4b9",
+      "PlayerName": "JustJR",
+      "DeckName": "Boros",
+      "Rank": 44,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "69815aba-e442-4342-b870-b2ca00b22178",
+      "PlayerName": "caleb klingler",
+      "DeckName": "Decklist",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": false
+    },
+    {
+      "DecklistId": "67f82bde-59fb-4343-966a-b2cc0035edbe",
+      "PlayerName": "Predrag Markovic",
+      "DeckName": "Abzan Bounce",
+      "Rank": 54,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "6396c470-6744-4a07-aaf1-b2b801633870",
+      "PlayerName": "Sebastian James",
+      "DeckName": "Golgari Aggro",
+      "Rank": 4,
+      "Wins": 7,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "594c4386-9232-44b7-aa07-b2cc003695dd",
+      "PlayerName": "MTGObeast",
+      "DeckName": "Gruul Aggro",
+      "Rank": 63,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "5594be34-ec39-4cb8-a352-b2cb0013e13e",
+      "PlayerName": "Olin Rubinow",
+      "DeckName": "Izzet",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "53ca506c-8fb4-4e9e-be8a-b2cc0056e1a8",
+      "PlayerName": "WhattupMang",
+      "DeckName": "Izzet Aggro",
+      "Rank": 59,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "453d1909-59b1-4aa7-a4c2-b2cc008b65e2",
+      "PlayerName": "Traith Kreios",
+      "DeckName": "Mono-Black Midrange",
+      "Rank": 10,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "4312fc15-342a-4b6a-b39a-b2cc00f9801d",
+      "PlayerName": "MalcolmTaylor",
+      "DeckName": "Sultai",
+      "Rank": 60,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "412b0c32-00a2-4bf9-b02c-b2bb005f641a",
+      "PlayerName": "DOAHITMAN",
+      "DeckName": "Mono-Red",
+      "Rank": 75,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "36e2ab51-d1be-45aa-959d-b2cc00a62904",
+      "PlayerName": "caladynus6",
+      "DeckName": "W-U-B-G Beanstalk",
+      "Rank": 51,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2e4fcabe-b24a-4f4b-9afd-b2cc00e1d983",
+      "PlayerName": "GregHighwind",
+      "DeckName": "Dimir Midrange",
+      "Rank": 62,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2e2233ec-ed18-42c3-8c75-b2cc005ce607",
+      "PlayerName": "Coolius",
+      "DeckName": "Jeskai Aggro",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2d2569a5-082b-4fc6-9b05-b2cc00e0f64d",
+      "PlayerName": "Angel Rafael Hidalgo Pimentel",
+      "DeckName": "Golgari Midrange",
+      "Rank": 19,
+      "Wins": 4,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2b93e317-962d-4c3d-8967-b2cc00e9ae5f",
+      "PlayerName": "Love Janse",
+      "DeckName": "Jeskai Control",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2abe118e-de3e-4cea-af9d-b2cc00f184e9",
+      "PlayerName": "Jozzyal The Fool",
+      "DeckName": "Rakdos Midrange",
+      "Rank": 68,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "2876ee67-fc9e-4c29-9f43-b2cc01056a20",
+      "PlayerName": "pokenine101",
+      "DeckName": "W-U-R-G Control",
+      "Rank": 6,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "280d4a79-b41a-40eb-ae74-b2cc00ffe6c6",
+      "PlayerName": "Jesus Ramos",
+      "DeckName": "Dimir Control",
+      "Rank": 53,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "1d47e0df-35a2-4f83-be2a-b2c901547c68",
+      "PlayerName": "Jon Wilkins",
+      "DeckName": "Esper Pixie",
+      "Rank": 16,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "1637622a-a706-44a3-a5b1-b2cc0104947e",
+      "PlayerName": "Korgoth",
+      "DeckName": "Jeskai Control",
+      "Rank": 25,
+      "Wins": 3,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0de5a97e-0b6c-432f-84f5-b2c90169ddcf",
+      "PlayerName": "ProfFriends",
+      "DeckName": "Orzhov Pixie",
+      "Rank": 40,
+      "Wins": 2,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0d8ef79b-d418-45fa-b866-b2be014fe609",
+      "PlayerName": "Kyler Saunders",
+      "DeckName": "Jeskai Combo",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0d5b40a1-50c0-40e2-909a-b2cc01014d70",
+      "PlayerName": "Thomas Johnson",
+      "DeckName": "Izzet Prowess",
+      "Rank": 80,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0c53f6b1-f4ed-42eb-a5c0-b2cc00f707a8",
+      "PlayerName": "s460",
+      "DeckName": "Jeskai Oculus",
+      "Rank": 8,
+      "Wins": 5,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "0810823e-a3e2-4bd0-8b57-b2bc0010eef8",
+      "PlayerName": "Ryan Birdwell",
+      "DeckName": "W-U-R-G Midrange",
+      "Rank": 64,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "073b811d-b0c0-4e18-b0d4-b2bf0045b6df",
+      "PlayerName": "Shylo Elliott",
+      "DeckName": "Jeskai Control",
+      "Rank": 78,
+      "Wins": 0,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "02ff3aaa-14ff-4879-935c-b2cc00358227",
+      "PlayerName": "zulugnu",
+      "DeckName": "Selesnya Aggro",
+      "Rank": 29,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "02f35ea3-18f5-4200-93d2-b2cc00ffb2db",
+      "PlayerName": "Hudson Santos",
+      "DeckName": "Selesnya Aggro",
+      "Rank": 57,
+      "Wins": 1,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "01c12b19-a772-4d9c-a985-b2ca01130f56",
+      "PlayerName": "João Afonso",
+      "DeckName": "Jeskai Aggro",
+      "Rank": null,
+      "Wins": null,
+      "IsValid": true
+    },
+    {
+      "DecklistId": "00ae5c41-00ed-4665-94af-b2cc0069aa86",
+      "PlayerName": "daledo",
+      "DeckName": "Abzan Midrange",
+      "Rank": 32,
+      "Wins": 3,
+      "IsValid": true
+    }
+  ],
+  "RoundStandings": [
+    {
+      "round": 1,
+      "round_id": "993470",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "GregHighwind",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 2,
+          "Player": "Predrag Markovic",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 3,
+          "Player": "Sebastian James",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 4,
+          "Player": "Ramirinho",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 5,
+          "Player": "s460",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 6,
+          "Player": "RalphVilla",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 7,
+          "Player": "pfeng",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 8,
+          "Player": "skills422",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 9,
+          "Player": "kouta bandou",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 10,
+          "Player": "Riley Bennett",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 11,
+          "Player": "Franco rovigatti",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 12,
+          "Player": "Jon Wilkins",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 13,
+          "Player": "ProfFriends",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 14,
+          "Player": "Gadien",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 15,
+          "Player": "Damian Cohen",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 16,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 17,
+          "Player": "WhattupMang",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 18,
+          "Player": "caladynus6",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 19,
+          "Player": "Saibottob",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 20,
+          "Player": "Taylor Spain",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 21,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 22,
+          "Player": "ULT888",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 23,
+          "Player": "Korgoth",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-0-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 24,
+          "Player": "Deltagulf",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        },
+        {
+          "Rank": 25,
+          "Player": "BeeisMe",
+          "MatchRecord": "1-0-0",
+          "GameRecord": "2-1-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.33333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.33333333
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "round_id": "993471",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 2,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 3,
+          "Player": "Korgoth",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.45
+        },
+        {
+          "Rank": 4,
+          "Player": "pfeng",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 5,
+          "Player": "kouta bandou",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 6,
+          "Player": "Lordan",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 7,
+          "Player": "Sebastian James",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 8,
+          "Player": "Brett Guzzo",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.5
+        },
+        {
+          "Rank": 9,
+          "Player": "Taylor Spain",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.45
+        },
+        {
+          "Rank": 10,
+          "Player": "tilten",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.6
+        },
+        {
+          "Rank": 11,
+          "Player": "SirHamilton1",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.55
+        },
+        {
+          "Rank": 12,
+          "Player": "skills422",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-0-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 13,
+          "Player": "s460",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.46666667
+        },
+        {
+          "Rank": 14,
+          "Player": "Freddie  Barber",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 15,
+          "Player": "Sojourn",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 16,
+          "Player": "daledo",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 17,
+          "Player": "ULT888",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 18,
+          "Player": "Maicon Gabriel Friedel",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-1-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.36666667
+        },
+        {
+          "Rank": 19,
+          "Player": "okiscoop",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 20,
+          "Player": "pokenine101",
+          "MatchRecord": "2-0-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 21,
+          "Player": "MTGObeast",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 1.0,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.8
+        },
+        {
+          "Rank": 22,
+          "Player": "Jon Wilkins",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "3-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.65
+        },
+        {
+          "Rank": 23,
+          "Player": "Franco rovigatti",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.75
+        },
+        {
+          "Rank": 24,
+          "Player": "GregHighwind",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.7
+        },
+        {
+          "Rank": 25,
+          "Player": "RalphVilla",
+          "MatchRecord": "1-1-0",
+          "GameRecord": "2-2-0",
+          "Points": 3,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.7
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "round_id": "993472",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Sebastian James",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.5952381
+        },
+        {
+          "Rank": 2,
+          "Player": "Taylor Spain",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.53703704
+        },
+        {
+          "Rank": 3,
+          "Player": "Freddie  Barber",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.57142857
+        },
+        {
+          "Rank": 4,
+          "Player": "daledo",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.54166667
+        },
+        {
+          "Rank": 5,
+          "Player": "Lordan",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.53439153
+        },
+        {
+          "Rank": 6,
+          "Player": "tilten",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.61309524
+        },
+        {
+          "Rank": 7,
+          "Player": "skills422",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-0-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 1.0,
+          "OpponentGameWinPercentage": 0.41269841
+        },
+        {
+          "Rank": 8,
+          "Player": "s460",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-1-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.85714286,
+          "OpponentGameWinPercentage": 0.46825397
+        },
+        {
+          "Rank": 9,
+          "Player": "pfeng",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.51587302
+        },
+        {
+          "Rank": 10,
+          "Player": "okiscoop",
+          "MatchRecord": "3-0-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.44444444,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.45833333
+        },
+        {
+          "Rank": 11,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.77777778,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.69444444
+        },
+        {
+          "Rank": 12,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.72222222,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.60714286
+        },
+        {
+          "Rank": 13,
+          "Player": "Korgoth",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.55952381
+        },
+        {
+          "Rank": 14,
+          "Player": "Maicon Gabriel Friedel",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.5515873
+        },
+        {
+          "Rank": 15,
+          "Player": "ULT888",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.65277778
+        },
+        {
+          "Rank": 16,
+          "Player": "kouta bandou",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.65079365
+        },
+        {
+          "Rank": 17,
+          "Player": "pokenine101",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-4-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.5462963
+        },
+        {
+          "Rank": 18,
+          "Player": "Brett Guzzo",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.61111111,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.53333333
+        },
+        {
+          "Rank": 19,
+          "Player": "ProfFriends",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.50793651
+        },
+        {
+          "Rank": 20,
+          "Player": "BaptisteAcademy",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.47222222
+        },
+        {
+          "Rank": 21,
+          "Player": "raptorjesus656",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "5-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.44444444
+        },
+        {
+          "Rank": 22,
+          "Player": "RalphVilla",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.53769841
+        },
+        {
+          "Rank": 23,
+          "Player": "Riley Bennett",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.50396825
+        },
+        {
+          "Rank": 24,
+          "Player": "Damian Cohen",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-2-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.48611111
+        },
+        {
+          "Rank": 25,
+          "Player": "Patrick O'Boyle",
+          "MatchRecord": "2-1-0",
+          "GameRecord": "4-3-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.55555556,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.55753968
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "round_id": "993473",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "pfeng",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-3-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.72727273,
+          "OpponentGameWinPercentage": 0.55378788
+        },
+        {
+          "Rank": 2,
+          "Player": "tilten",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.60353535
+        },
+        {
+          "Rank": 3,
+          "Player": "Sebastian James",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-2-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5625,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.50909091
+        },
+        {
+          "Rank": 4,
+          "Player": "s460",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-2-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.52083333,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.50631313
+        },
+        {
+          "Rank": 5,
+          "Player": "okiscoop",
+          "MatchRecord": "4-0-0",
+          "GameRecord": "8-2-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.48958333
+        },
+        {
+          "Rank": 6,
+          "Player": "Taylor Spain",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.75,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.61818182
+        },
+        {
+          "Rank": 7,
+          "Player": "Freddie  Barber",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.70833333,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.63194444
+        },
+        {
+          "Rank": 8,
+          "Player": "Lordan",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.70833333,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.61742424
+        },
+        {
+          "Rank": 9,
+          "Player": "daledo",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.64583333,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.56313131
+        },
+        {
+          "Rank": 10,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.625,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.53156566
+        },
+        {
+          "Rank": 11,
+          "Player": "skills422",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.60416667,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.53333333
+        },
+        {
+          "Rank": 12,
+          "Player": "ULT888",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.55694444
+        },
+        {
+          "Rank": 13,
+          "Player": "pokenine101",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.51262626
+        },
+        {
+          "Rank": 14,
+          "Player": "BaptisteAcademy",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.5625,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.50631313
+        },
+        {
+          "Rank": 15,
+          "Player": "raptorjesus656",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54166667,
+          "TeamGameWinPercentage": 0.77777778,
+          "OpponentGameWinPercentage": 0.45833333
+        },
+        {
+          "Rank": 16,
+          "Player": "Korgoth",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.52083333,
+          "TeamGameWinPercentage": 0.77777778,
+          "OpponentGameWinPercentage": 0.47272727
+        },
+        {
+          "Rank": 17,
+          "Player": "Maicon Gabriel Friedel",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.52083333,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.5229798
+        },
+        {
+          "Rank": 18,
+          "Player": "Damian Cohen",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.42575758
+        },
+        {
+          "Rank": 19,
+          "Player": "Simón Arboleda ",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-3-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.44444444
+        },
+        {
+          "Rank": 20,
+          "Player": "Deltagulf",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.51388889
+        },
+        {
+          "Rank": 21,
+          "Player": "Tlacaelel Campos",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.45833333
+        },
+        {
+          "Rank": 22,
+          "Player": "SirHamilton1",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.47916667,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.43686869
+        },
+        {
+          "Rank": 23,
+          "Player": "Angel Rafael Hidalgo Pimentel",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "7-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.77777778,
+          "OpponentGameWinPercentage": 0.41666667
+        },
+        {
+          "Rank": 24,
+          "Player": "Alex Krakovski",
+          "MatchRecord": "3-1-0",
+          "GameRecord": "6-2-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.41666667,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.40277778
+        },
+        {
+          "Rank": 25,
+          "Player": "kouta bandou",
+          "MatchRecord": "2-2-0",
+          "GameRecord": "4-5-0",
+          "Points": 6,
+          "OpponentMatchWinPercentage": 0.70833333,
+          "TeamGameWinPercentage": 0.44444444,
+          "OpponentGameWinPercentage": 0.66130952
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "round_id": "993474",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "pfeng",
+          "MatchRecord": "5-0-0",
+          "GameRecord": "10-3-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.62666667,
+          "TeamGameWinPercentage": 0.76923077,
+          "OpponentGameWinPercentage": 0.56172161
+        },
+        {
+          "Rank": 2,
+          "Player": "okiscoop",
+          "MatchRecord": "5-0-0",
+          "GameRecord": "10-3-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.76923077,
+          "OpponentGameWinPercentage": 0.52012821
+        },
+        {
+          "Rank": 3,
+          "Player": "Taylor Spain",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.72,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.6032967
+        },
+        {
+          "Rank": 4,
+          "Player": "tilten",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "8-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.6484349
+        },
+        {
+          "Rank": 5,
+          "Player": "Lordan",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.62666667,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.58404928
+        },
+        {
+          "Rank": 6,
+          "Player": "pokenine101",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.62666667,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.56586747
+        },
+        {
+          "Rank": 7,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-3-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.62,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.54335664
+        },
+        {
+          "Rank": 8,
+          "Player": "s460",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.60666667,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.55392385
+        },
+        {
+          "Rank": 9,
+          "Player": "Sebastian James",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.56,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.497336
+        },
+        {
+          "Rank": 10,
+          "Player": "Tlacaelel Campos",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.53333333,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.49631702
+        },
+        {
+          "Rank": 11,
+          "Player": "Maicon Gabriel Friedel",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.52,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.54254079
+        },
+        {
+          "Rank": 12,
+          "Player": "raptorjesus656",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-2-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.51333333,
+          "TeamGameWinPercentage": 0.81818182,
+          "OpponentGameWinPercentage": 0.46761905
+        },
+        {
+          "Rank": 13,
+          "Player": "Damian Cohen",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "8-3-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.72727273,
+          "OpponentGameWinPercentage": 0.47489177
+        },
+        {
+          "Rank": 14,
+          "Player": "Deltagulf",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.50649351
+        },
+        {
+          "Rank": 15,
+          "Player": "SirHamilton1",
+          "MatchRecord": "4-1-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.49333333,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.46759907
+        },
+        {
+          "Rank": 16,
+          "Player": "Freddie  Barber",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "8-6-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.58225108
+        },
+        {
+          "Rank": 17,
+          "Player": "daledo",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-6-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.53846154,
+          "OpponentGameWinPercentage": 0.58834499
+        },
+        {
+          "Rank": 18,
+          "Player": "skills422",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.61333333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.55990676
+        },
+        {
+          "Rank": 19,
+          "Player": "BaptisteAcademy",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "8-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.61538462,
+          "OpponentGameWinPercentage": 0.52915418
+        },
+        {
+          "Rank": 20,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.53384615
+        },
+        {
+          "Rank": 21,
+          "Player": "ULT888",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.58,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.56529915
+        },
+        {
+          "Rank": 22,
+          "Player": "Angel Rafael Hidalgo Pimentel",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.52179487
+        },
+        {
+          "Rank": 23,
+          "Player": "Korgoth",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.63636364,
+          "OpponentGameWinPercentage": 0.5040293
+        },
+        {
+          "Rank": 24,
+          "Player": "Patrick O'Boyle",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "7-5-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.58333333,
+          "OpponentGameWinPercentage": 0.52214452
+        },
+        {
+          "Rank": 25,
+          "Player": "Traith Kreios",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-6-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54666667,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.55664336
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "round_id": "993475",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "okiscoop",
+          "MatchRecord": "6-0-0",
+          "GameRecord": "12-3-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.57222222,
+          "TeamGameWinPercentage": 0.8,
+          "OpponentGameWinPercentage": 0.54027778
+        },
+        {
+          "Rank": 2,
+          "Player": "Taylor Spain",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.69444444,
+          "TeamGameWinPercentage": 0.6875,
+          "OpponentGameWinPercentage": 0.61123366
+        },
+        {
+          "Rank": 3,
+          "Player": "pfeng",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "10-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.66666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.58888889
+        },
+        {
+          "Rank": 4,
+          "Player": "pokenine101",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-6-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.61111111,
+          "TeamGameWinPercentage": 0.64705882,
+          "OpponentGameWinPercentage": 0.55621229
+        },
+        {
+          "Rank": 5,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-4-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.59444444,
+          "TeamGameWinPercentage": 0.73333333,
+          "OpponentGameWinPercentage": 0.53911644
+        },
+        {
+          "Rank": 6,
+          "Player": "Sebastian James",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-4-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.59444444,
+          "TeamGameWinPercentage": 0.73333333,
+          "OpponentGameWinPercentage": 0.53740287
+        },
+        {
+          "Rank": 7,
+          "Player": "Tlacaelel Campos",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.56666667,
+          "TeamGameWinPercentage": 0.6875,
+          "OpponentGameWinPercentage": 0.51963384
+        },
+        {
+          "Rank": 8,
+          "Player": "Deltagulf",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.52777778,
+          "TeamGameWinPercentage": 0.6875,
+          "OpponentGameWinPercentage": 0.50611154
+        },
+        {
+          "Rank": 9,
+          "Player": "raptorjesus656",
+          "MatchRecord": "5-1-0",
+          "GameRecord": "11-3-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.48888889,
+          "TeamGameWinPercentage": 0.78571429,
+          "OpponentGameWinPercentage": 0.47152778
+        },
+        {
+          "Rank": 10,
+          "Player": "tilten",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "8-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.68333333,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.64236111
+        },
+        {
+          "Rank": 11,
+          "Player": "s460",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.62222222,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.56593013
+        },
+        {
+          "Rank": 12,
+          "Player": "Lordan",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.61111111,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.5691145
+        },
+        {
+          "Rank": 13,
+          "Player": "Maicon Gabriel Friedel",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.58333333,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.5816163
+        },
+        {
+          "Rank": 14,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "8-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.57777778,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.53441558
+        },
+        {
+          "Rank": 15,
+          "Player": "Damian Cohen",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.57222222,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.52460317
+        },
+        {
+          "Rank": 16,
+          "Player": "SirHamilton1",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.53888889,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.48789364
+        },
+        {
+          "Rank": 17,
+          "Player": "Traith Kreios",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "8-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.53888889,
+          "TeamGameWinPercentage": 0.53333333,
+          "OpponentGameWinPercentage": 0.54979257
+        },
+        {
+          "Rank": 18,
+          "Player": "Brett Guzzo",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.51111111,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.49180264
+        },
+        {
+          "Rank": 19,
+          "Player": "Angel Rafael Hidalgo Pimentel",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-4-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.69230769,
+          "OpponentGameWinPercentage": 0.49946581
+        },
+        {
+          "Rank": 20,
+          "Player": "Alex Krakovski",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.48677249
+        },
+        {
+          "Rank": 21,
+          "Player": "lambozilla",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.48333333,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.48253968
+        },
+        {
+          "Rank": 22,
+          "Player": "Simón Arboleda ",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.47222222,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.42835596
+        },
+        {
+          "Rank": 23,
+          "Player": "Jon Wilkins",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.46666667,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.44191919
+        },
+        {
+          "Rank": 24,
+          "Player": "daledo",
+          "MatchRecord": "3-3-0",
+          "GameRecord": "8-8-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.63888889,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.58230311
+        },
+        {
+          "Rank": 25,
+          "Player": "skills422",
+          "MatchRecord": "3-2-0",
+          "GameRecord": "6-4-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.6,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.54278388
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "round_id": "993476",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Taylor Spain",
+          "MatchRecord": "6-1-0",
+          "GameRecord": "13-5-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.73809524,
+          "TeamGameWinPercentage": 0.72222222,
+          "OpponentGameWinPercentage": 0.63206423
+        },
+        {
+          "Rank": 2,
+          "Player": "Sebastian James",
+          "MatchRecord": "6-1-0",
+          "GameRecord": "13-5-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.63537415,
+          "TeamGameWinPercentage": 0.72222222,
+          "OpponentGameWinPercentage": 0.56744133
+        },
+        {
+          "Rank": 3,
+          "Player": "pfeng",
+          "MatchRecord": "6-1-0",
+          "GameRecord": "12-6-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.6292517,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.56934985
+        },
+        {
+          "Rank": 4,
+          "Player": "okiscoop",
+          "MatchRecord": "6-1-0",
+          "GameRecord": "12-5-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.60952381,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.5542517
+        },
+        {
+          "Rank": 5,
+          "Player": "Tlacaelel Campos",
+          "MatchRecord": "6-1-0",
+          "GameRecord": "13-6-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.60136054,
+          "TeamGameWinPercentage": 0.68421053,
+          "OpponentGameWinPercentage": 0.54058631
+        },
+        {
+          "Rank": 6,
+          "Player": "pokenine101",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-8-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.64965986,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.57738426
+        },
+        {
+          "Rank": 7,
+          "Player": "s460",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.62517007,
+          "TeamGameWinPercentage": 0.61111111,
+          "OpponentGameWinPercentage": 0.57359531
+        },
+        {
+          "Rank": 8,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-6-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.62176871,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.55519037
+        },
+        {
+          "Rank": 9,
+          "Player": "Lordan",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.58843537,
+          "TeamGameWinPercentage": 0.61111111,
+          "OpponentGameWinPercentage": 0.53850251
+        },
+        {
+          "Rank": 10,
+          "Player": "Traith Kreios",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "10-8-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54693878,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.56208544
+        },
+        {
+          "Rank": 11,
+          "Player": "Deltagulf",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54421769,
+          "TeamGameWinPercentage": 0.63157895,
+          "OpponentGameWinPercentage": 0.52107216
+        },
+        {
+          "Rank": 12,
+          "Player": "SirHamilton1",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.52993197,
+          "TeamGameWinPercentage": 0.63157895,
+          "OpponentGameWinPercentage": 0.49806483
+        },
+        {
+          "Rank": 13,
+          "Player": "raptorjesus656",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.50748299,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.48770886
+        },
+        {
+          "Rank": 14,
+          "Player": "Alex Krakovski",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.49659864,
+          "TeamGameWinPercentage": 0.6875,
+          "OpponentGameWinPercentage": 0.4893424
+        },
+        {
+          "Rank": 15,
+          "Player": "Simón Arboleda ",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.47959184,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.44156432
+        },
+        {
+          "Rank": 16,
+          "Player": "Jon Wilkins",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.46462585,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.44545455
+        },
+        {
+          "Rank": 17,
+          "Player": "tilten",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-10-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.64353741,
+          "TeamGameWinPercentage": 0.47368421,
+          "OpponentGameWinPercentage": 0.61070042
+        },
+        {
+          "Rank": 18,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.59387755,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.55143232
+        },
+        {
+          "Rank": 19,
+          "Player": "Damian Cohen",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.56825397,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.52463624
+        },
+        {
+          "Rank": 20,
+          "Player": "Maicon Gabriel Friedel",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.54761905,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.55305011
+        },
+        {
+          "Rank": 21,
+          "Player": "Angel Rafael Hidalgo Pimentel",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.52040816,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.5197479
+        },
+        {
+          "Rank": 22,
+          "Player": "Brett Guzzo",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.51292517,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.48396399
+        },
+        {
+          "Rank": 23,
+          "Player": "Sojourn",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.4884364
+        },
+        {
+          "Rank": 24,
+          "Player": "lambozilla",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.48911565,
+          "TeamGameWinPercentage": 0.52941176,
+          "OpponentGameWinPercentage": 0.49466556
+        },
+        {
+          "Rank": 25,
+          "Player": "Matt Pointon",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.41496599,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.41213819
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "round_id": "993477",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "Taylor Spain",
+          "MatchRecord": "7-1-0",
+          "GameRecord": "15-6-0",
+          "Points": 21,
+          "OpponentMatchWinPercentage": 0.71502976,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.6251697
+        },
+        {
+          "Rank": 2,
+          "Player": "okiscoop",
+          "MatchRecord": "7-1-0",
+          "GameRecord": "14-5-0",
+          "Points": 21,
+          "OpponentMatchWinPercentage": 0.6203869,
+          "TeamGameWinPercentage": 0.73684211,
+          "OpponentGameWinPercentage": 0.56056548
+        },
+        {
+          "Rank": 3,
+          "Player": "Sebastian James",
+          "MatchRecord": "7-1-0",
+          "GameRecord": "15-6-0",
+          "Points": 21,
+          "OpponentMatchWinPercentage": 0.61175595,
+          "TeamGameWinPercentage": 0.71428571,
+          "OpponentGameWinPercentage": 0.55284993
+        },
+        {
+          "Rank": 4,
+          "Player": "pfeng",
+          "MatchRecord": "7-1-0",
+          "GameRecord": "14-6-0",
+          "Points": 21,
+          "OpponentMatchWinPercentage": 0.60629252,
+          "TeamGameWinPercentage": 0.7,
+          "OpponentGameWinPercentage": 0.55917774
+        },
+        {
+          "Rank": 5,
+          "Player": "Tlacaelel Campos",
+          "MatchRecord": "6-2-0",
+          "GameRecord": "13-8-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.62886905,
+          "TeamGameWinPercentage": 0.61904762,
+          "OpponentGameWinPercentage": 0.55817384
+        },
+        {
+          "Rank": 6,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "13-8-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.6578869,
+          "TeamGameWinPercentage": 0.61904762,
+          "OpponentGameWinPercentage": 0.5782519
+        },
+        {
+          "Rank": 7,
+          "Player": "pokenine101",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "12-10-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.65221088,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.58214616
+        },
+        {
+          "Rank": 8,
+          "Player": "s460",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "12-9-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.6452381,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.58690621
+        },
+        {
+          "Rank": 9,
+          "Player": "Lordan",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.58843537,
+          "TeamGameWinPercentage": 0.61111111,
+          "OpponentGameWinPercentage": 0.53850251
+        },
+        {
+          "Rank": 10,
+          "Player": "Traith Kreios",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "10-8-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54693878,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.56208544
+        },
+        {
+          "Rank": 11,
+          "Player": "Deltagulf",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54421769,
+          "TeamGameWinPercentage": 0.63157895,
+          "OpponentGameWinPercentage": 0.52107216
+        },
+        {
+          "Rank": 12,
+          "Player": "SirHamilton1",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.52993197,
+          "TeamGameWinPercentage": 0.63157895,
+          "OpponentGameWinPercentage": 0.49806483
+        },
+        {
+          "Rank": 13,
+          "Player": "raptorjesus656",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.50748299,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.48770886
+        },
+        {
+          "Rank": 14,
+          "Player": "Alex Krakovski",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.49659864,
+          "TeamGameWinPercentage": 0.6875,
+          "OpponentGameWinPercentage": 0.4893424
+        },
+        {
+          "Rank": 15,
+          "Player": "Simón Arboleda ",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.47959184,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.44156432
+        },
+        {
+          "Rank": 16,
+          "Player": "Jon Wilkins",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.46462585,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.44545455
+        },
+        {
+          "Rank": 17,
+          "Player": "tilten",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-10-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.64353741,
+          "TeamGameWinPercentage": 0.47368421,
+          "OpponentGameWinPercentage": 0.61070042
+        },
+        {
+          "Rank": 18,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.59387755,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.55143232
+        },
+        {
+          "Rank": 19,
+          "Player": "Damian Cohen",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.56825397,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.52463624
+        },
+        {
+          "Rank": 20,
+          "Player": "Maicon Gabriel Friedel",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.54761905,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.55305011
+        },
+        {
+          "Rank": 21,
+          "Player": "Angel Rafael Hidalgo Pimentel",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.52040816,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.5197479
+        },
+        {
+          "Rank": 22,
+          "Player": "Brett Guzzo",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.51292517,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.48396399
+        },
+        {
+          "Rank": 23,
+          "Player": "Sojourn",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.4884364
+        },
+        {
+          "Rank": 24,
+          "Player": "lambozilla",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.48911565,
+          "TeamGameWinPercentage": 0.52941176,
+          "OpponentGameWinPercentage": 0.49466556
+        },
+        {
+          "Rank": 25,
+          "Player": "Matt Pointon",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.41496599,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.41213819
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "round_id": "993478",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "pfeng",
+          "MatchRecord": "8-1-0",
+          "GameRecord": "16-6-0",
+          "Points": 24,
+          "OpponentMatchWinPercentage": 0.62946429,
+          "TeamGameWinPercentage": 0.72727273,
+          "OpponentGameWinPercentage": 0.56960609
+        },
+        {
+          "Rank": 2,
+          "Player": "okiscoop",
+          "MatchRecord": "8-1-0",
+          "GameRecord": "16-6-0",
+          "Points": 24,
+          "OpponentMatchWinPercentage": 0.60997024,
+          "TeamGameWinPercentage": 0.72727273,
+          "OpponentGameWinPercentage": 0.55802219
+        },
+        {
+          "Rank": 3,
+          "Player": "Taylor Spain",
+          "MatchRecord": "7-2-0",
+          "GameRecord": "16-8-0",
+          "Points": 21,
+          "OpponentMatchWinPercentage": 0.7046131,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.61620955
+        },
+        {
+          "Rank": 4,
+          "Player": "Sebastian James",
+          "MatchRecord": "7-2-0",
+          "GameRecord": "15-8-0",
+          "Points": 21,
+          "OpponentMatchWinPercentage": 0.63174603,
+          "TeamGameWinPercentage": 0.65217391,
+          "OpponentGameWinPercentage": 0.56693923
+        },
+        {
+          "Rank": 5,
+          "Player": "Tlacaelel Campos",
+          "MatchRecord": "6-2-0",
+          "GameRecord": "13-8-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.6062996,
+          "TeamGameWinPercentage": 0.61904762,
+          "OpponentGameWinPercentage": 0.54326132
+        },
+        {
+          "Rank": 6,
+          "Player": "pokenine101",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "12-10-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.65419501,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.58604227
+        },
+        {
+          "Rank": 7,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "13-8-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.63531746,
+          "TeamGameWinPercentage": 0.61904762,
+          "OpponentGameWinPercentage": 0.56794463
+        },
+        {
+          "Rank": 8,
+          "Player": "s460",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "12-9-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.63482143,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.57794607
+        },
+        {
+          "Rank": 9,
+          "Player": "Lordan",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.58843537,
+          "TeamGameWinPercentage": 0.61111111,
+          "OpponentGameWinPercentage": 0.53850251
+        },
+        {
+          "Rank": 10,
+          "Player": "Traith Kreios",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "10-8-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54693878,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.56208544
+        },
+        {
+          "Rank": 11,
+          "Player": "Deltagulf",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54421769,
+          "TeamGameWinPercentage": 0.63157895,
+          "OpponentGameWinPercentage": 0.52107216
+        },
+        {
+          "Rank": 12,
+          "Player": "SirHamilton1",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.52993197,
+          "TeamGameWinPercentage": 0.63157895,
+          "OpponentGameWinPercentage": 0.49806483
+        },
+        {
+          "Rank": 13,
+          "Player": "raptorjesus656",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.50748299,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.48770886
+        },
+        {
+          "Rank": 14,
+          "Player": "Alex Krakovski",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.49659864,
+          "TeamGameWinPercentage": 0.6875,
+          "OpponentGameWinPercentage": 0.4893424
+        },
+        {
+          "Rank": 15,
+          "Player": "Simón Arboleda ",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.47959184,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.44156432
+        },
+        {
+          "Rank": 16,
+          "Player": "Jon Wilkins",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.46462585,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.44545455
+        },
+        {
+          "Rank": 17,
+          "Player": "tilten",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-10-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.64353741,
+          "TeamGameWinPercentage": 0.47368421,
+          "OpponentGameWinPercentage": 0.61070042
+        },
+        {
+          "Rank": 18,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.59387755,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.55143232
+        },
+        {
+          "Rank": 19,
+          "Player": "Damian Cohen",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "9-5-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.56825397,
+          "TeamGameWinPercentage": 0.64285714,
+          "OpponentGameWinPercentage": 0.52463624
+        },
+        {
+          "Rank": 20,
+          "Player": "Maicon Gabriel Friedel",
+          "MatchRecord": "4-2-0",
+          "GameRecord": "10-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.54761905,
+          "TeamGameWinPercentage": 0.625,
+          "OpponentGameWinPercentage": 0.55305011
+        },
+        {
+          "Rank": 21,
+          "Player": "Angel Rafael Hidalgo Pimentel",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.52040816,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.5197479
+        },
+        {
+          "Rank": 22,
+          "Player": "Brett Guzzo",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.51292517,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.48396399
+        },
+        {
+          "Rank": 23,
+          "Player": "Sojourn",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.4884364
+        },
+        {
+          "Rank": 24,
+          "Player": "lambozilla",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.48911565,
+          "TeamGameWinPercentage": 0.52941176,
+          "OpponentGameWinPercentage": 0.49466556
+        },
+        {
+          "Rank": 25,
+          "Player": "Matt Pointon",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.41496599,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.41213819
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "round_id": "993479",
+      "standings": [
+        {
+          "Rank": 1,
+          "Player": "pfeng",
+          "MatchRecord": "9-1-0",
+          "GameRecord": "18-6-0",
+          "Points": 27,
+          "OpponentMatchWinPercentage": 0.61835317,
+          "TeamGameWinPercentage": 0.75,
+          "OpponentGameWinPercentage": 0.56203033
+        },
+        {
+          "Rank": 2,
+          "Player": "okiscoop",
+          "MatchRecord": "8-2-0",
+          "GameRecord": "16-8-0",
+          "Points": 24,
+          "OpponentMatchWinPercentage": 0.61135913,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.5608631
+        },
+        {
+          "Rank": 3,
+          "Player": "Taylor Spain",
+          "MatchRecord": "7-2-0",
+          "GameRecord": "16-8-0",
+          "Points": 21,
+          "OpponentMatchWinPercentage": 0.69350198,
+          "TeamGameWinPercentage": 0.66666667,
+          "OpponentGameWinPercentage": 0.60863379
+        },
+        {
+          "Rank": 4,
+          "Player": "Sebastian James",
+          "MatchRecord": "7-2-0",
+          "GameRecord": "15-8-0",
+          "Points": 21,
+          "OpponentMatchWinPercentage": 0.6329806,
+          "TeamGameWinPercentage": 0.65217391,
+          "OpponentGameWinPercentage": 0.56946449
+        },
+        {
+          "Rank": 5,
+          "Player": "Tlacaelel Campos",
+          "MatchRecord": "6-2-0",
+          "GameRecord": "13-8-0",
+          "Points": 18,
+          "OpponentMatchWinPercentage": 0.59518849,
+          "TeamGameWinPercentage": 0.61904762,
+          "OpponentGameWinPercentage": 0.53568556
+        },
+        {
+          "Rank": 6,
+          "Player": "pokenine101",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "12-10-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.65578231,
+          "TeamGameWinPercentage": 0.54545455,
+          "OpponentGameWinPercentage": 0.58928902
+        },
+        {
+          "Rank": 7,
+          "Player": "Ashkan Paykar",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "13-8-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.63670635,
+          "TeamGameWinPercentage": 0.61904762,
+          "OpponentGameWinPercentage": 0.57078554
+        },
+        {
+          "Rank": 8,
+          "Player": "s460",
+          "MatchRecord": "5-3-0",
+          "GameRecord": "12-9-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.62371032,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.57037031
+        },
+        {
+          "Rank": 9,
+          "Player": "Lordan",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.58843537,
+          "TeamGameWinPercentage": 0.61111111,
+          "OpponentGameWinPercentage": 0.53850251
+        },
+        {
+          "Rank": 10,
+          "Player": "Traith Kreios",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "10-8-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54693878,
+          "TeamGameWinPercentage": 0.55555556,
+          "OpponentGameWinPercentage": 0.56208544
+        },
+        {
+          "Rank": 11,
+          "Player": "Deltagulf",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.54421769,
+          "TeamGameWinPercentage": 0.63157895,
+          "OpponentGameWinPercentage": 0.52107216
+        },
+        {
+          "Rank": 12,
+          "Player": "SirHamilton1",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-7-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.52993197,
+          "TeamGameWinPercentage": 0.63157895,
+          "OpponentGameWinPercentage": 0.49806483
+        },
+        {
+          "Rank": 13,
+          "Player": "raptorjesus656",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.50748299,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.48770886
+        },
+        {
+          "Rank": 14,
+          "Player": "Alex Krakovski",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "11-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.49659864,
+          "TeamGameWinPercentage": 0.6875,
+          "OpponentGameWinPercentage": 0.4893424
+        },
+        {
+          "Rank": 15,
+          "Player": "Simón Arboleda ",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.47959184,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.44156432
+        },
+        {
+          "Rank": 16,
+          "Player": "Jon Wilkins",
+          "MatchRecord": "5-2-0",
+          "GameRecord": "12-5-0",
+          "Points": 15,
+          "OpponentMatchWinPercentage": 0.46462585,
+          "TeamGameWinPercentage": 0.70588235,
+          "OpponentGameWinPercentage": 0.44545455
+        },
+        {
+          "Rank": 17,
+          "Player": "tilten",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-10-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.64353741,
+          "TeamGameWinPercentage": 0.47368421,
+          "OpponentGameWinPercentage": 0.61070042
+        },
+        {
+          "Rank": 18,
+          "Player": "IsaacWLevy",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.59387755,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.55143232
+        },
+        {
+          "Rank": 19,
+          "Player": "Angel Rafael Hidalgo Pimentel",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.52040816,
+          "TeamGameWinPercentage": 0.6,
+          "OpponentGameWinPercentage": 0.5197479
+        },
+        {
+          "Rank": 20,
+          "Player": "Brett Guzzo",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.51292517,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.48396399
+        },
+        {
+          "Rank": 21,
+          "Player": "Sojourn",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.5,
+          "TeamGameWinPercentage": 0.5,
+          "OpponentGameWinPercentage": 0.4884364
+        },
+        {
+          "Rank": 22,
+          "Player": "lambozilla",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "9-8-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.48911565,
+          "TeamGameWinPercentage": 0.52941176,
+          "OpponentGameWinPercentage": 0.49466556
+        },
+        {
+          "Rank": 23,
+          "Player": "Matt Pointon",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "10-7-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.41496599,
+          "TeamGameWinPercentage": 0.58823529,
+          "OpponentGameWinPercentage": 0.41213819
+        },
+        {
+          "Rank": 24,
+          "Player": "gokalper",
+          "MatchRecord": "4-3-0",
+          "GameRecord": "8-6-0",
+          "Points": 12,
+          "OpponentMatchWinPercentage": 0.4,
+          "TeamGameWinPercentage": 0.57142857,
+          "OpponentGameWinPercentage": 0.40803958
+        },
+        {
+          "Rank": 25,
+          "Player": "Korgoth",
+          "MatchRecord": "3-4-0",
+          "GameRecord": "7-8-0",
+          "Points": 9,
+          "OpponentMatchWinPercentage": 0.54829932,
+          "TeamGameWinPercentage": 0.46666667,
+          "OpponentGameWinPercentage": 0.53368322
+        }
+      ]
+    }
+  ],
+  "TotalRounds": 10
+}
