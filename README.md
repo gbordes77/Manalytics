@@ -16,24 +16,26 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Version**: 3.1.0  
-**Status**: ✅ Phase 1-3 Complete | 🚨 Phase 4 BLOCKED (Only 41 MTGO matches found - investigation needed)  
+**Status**: ✅ Phase 1-3 Complete | 🚧 Phase 4 In Progress (Listener active, debugging match extraction)  
 **Last Update**: July 28, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
 
 ## 🎯 What Makes Us Different
 
-### 🎮 Phase 4 EN COURS : Investigation Problème Matchs MTGO
-**🚨 PROBLÈME CRITIQUE** : Seulement 41 matchs trouvés sur 22 tournois MTGO (à vérifier)
-- ❓ **Investigation nécessaire** : Pourquoi si peu de matchs MTGO?
-  - Normale attendue : ~300-500 matchs pour 22 tournois
-  - Réalité : 41 matchs seulement
-- 🔍 **Hypothèses à vérifier** :
-  - Les données de matchs ne sont pas dans les scrapers actuels?
-  - Il faut implémenter le MTGO Listener pour capturer les matchs?
-  - Les 22 tournois sont-ils vraiment tous scraped correctement?
-- 📊 **Melee Round Standings** : 19 matchs supplémentaires (mais ce n'est PAS une solution)
-- 🚧 **PRIORITÉ ABSOLUE** : Comprendre et résoudre le problème des matchs MTGO
+### 🎮 Phase 4 EN COURS : Intégration Listener MTGO & Visualisations
+**État des matchs** : 41 matchs Standard extraits du listener (investigation en cours)
+- ✅ **Listener MTGO actif** : 241 fichiers JSON dans `data/MTGOData/`
+  - Données round-par-round fournies par votre listener
+  - Module `listener_reader.py` intégré dans notre pipeline
+- 🔍 **Debug en cours** : Pourquoi seulement 41 matchs Standard?
+  - Vérifier le matching listener ↔ cache
+  - Analyser les tournois Standard dans MTGOData
+  - Optimiser l'extraction des matchs
+- 📊 **Melee Round Standings** : +19 matchs via API (total: 60)
+- 🎯 **Visualisations Plotly** : 3/5 complétées
+  - ✅ Métagame Dynamique, Matchup Matrix, Consensus Deck
+  - 📋 En cours: Sideboard Intelligence, Innovation Tracker
 
 ### Unique Features (Nobody Else Has):
 - **🤖 Consensus Deck Generator** - Automatically generates THE optimal decklist from 20+ tournament results
@@ -81,21 +83,25 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 - ✅ **Architecture Documentée** : `docs/MANALYTICS_COMPLETE_ARCHITECTURE.html` - Diagrammes interactifs
 - ✅ **Scripts Obsolètes Archivés** : Anciens scrapers déplacés dans `scripts/_obsolete_scripts/`
 
-### 🚨 Phase 4: BLOQUÉE - Données Listener Manquantes
+### 🚧 Phase 4: EN COURS - Intégration Listener & Visualisations
 
-**Problème Critique Identifié (28/07/2025)**:
-- **🔴 AUCUNE DONNÉE LISTENER** : Le dossier `jiliaclistener/` est VIDE
-  - 33 tournois MTGO scraped (pas 22)
-  - 0 matchs dans `data/MTGOData/`
-  - Les "41 matchs" viennent d'un cache obsolète/incorrect
-- **CAUSE RACINE** : 
-  - Les scrapers MTGO actuels ne capturent PAS les matchs
-  - Il FAUT implémenter le MTGO Listener pour avoir les matchs
-  - Sans listener = pas de matchups = pas de matrice
-- **ACTION REQUISE** : 
-  - Implémenter MTGO-listener (github.com/Jiliac/MTGO-listener)
-  - OU trouver les données listener de Jiliac
-  - Les Round Standings Melee (19 matchs) sont insuffisants
+**État Actuel (28/07/2025)**:
+- **✅ LISTENER FONCTIONNEL** : 241 fichiers JSON dans `data/MTGOData/`
+  - Données générées par votre listener externe
+  - Module `listener_reader.py` créé pour lire ces données
+  - Format compatible avec notre architecture
+- **🔍 Investigation en cours** : 
+  - Pourquoi seulement 41 matchs Standard extraits?
+  - Les tournois Standard sont-ils bien dans MTGOData?
+  - Problème de matching entre listener et cache?
+- **📊 Intégration Melee** : 
+  - Round Standings API intégrée (+19 matchs)
+  - Script `integrate_melee_matches.py` fonctionnel
+  - Documentation complète créée
+- **🎯 Prochaines étapes** :
+  - Debugger l'extraction des matchs Standard
+  - Compléter visualisations Plotly 4 & 5
+  - Valider la matrice de matchups complète
 
 **Réalisations Phase 3 Complètes**:
 - ✅ **Architecture modulaire** alignée avec Jiliac (src/manalytics/)

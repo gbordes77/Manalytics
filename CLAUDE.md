@@ -144,20 +144,20 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 
 ## **🚀 État Actuel (28/07/2025)**
 
-### 🚨 Session du 28/07 - Phase 4 : DONNÉES LISTENER MANQUANTES
-- **🔴 CAUSE IDENTIFIÉE** : Le dossier `jiliaclistener/` est VIDE
-  - 33 tournois MTGO scraped (juillet 1-21)
-  - 0 matchs dans `data/MTGOData/`
-  - 0 fichiers dans `jiliaclistener/`
-  - Les "41 matchs" sont une erreur/cache obsolète
-- **PROBLÈME FONDAMENTAL** :
-  - Les scrapers MTGO actuels NE capturent PAS les matchs
-  - Ils récupèrent seulement les decklists
-  - Pour les matchs, il FAUT le MTGO Listener
-- **SOLUTION REQUISE** :
-  - Option 1: Implémenter MTGO-listener maintenant
-  - Option 2: Obtenir les données listener de Jiliac
-  - Option 3: Se contenter des 19 matchs Melee (insuffisant!)
+### 🚧 Session du 28/07 - Phase 4 : Intégration Listener & Debug
+- **✅ LISTENER MTGO ACTIF** : 241 fichiers dans `data/MTGOData/`
+  - Données fournies par votre listener externe
+  - Module `listener_reader.py` créé et fonctionnel
+  - Intégration avec `analyze_july_with_cache_and_listener.py`
+- **🔍 PROBLÈME À DEBUGGER** : Seulement 41 matchs Standard extraits
+  - 33 tournois MTGO scraped mais peu de matchs
+  - Vérifier le matching listener ↔ cache
+  - Analyser pourquoi si peu de tournois matchent
+- **📊 INTÉGRATION MELEE RÉUSSIE** :
+  - Round Standings API fonctionnelle
+  - 19 matchs extraits avec `integrate_melee_matches.py`
+  - Documentation technique complète
+- **🎯 VISUALISATIONS PLOTLY** : 3/5 créées, 2 en attente
 
 ### ✅ Session du 28/07 matin : Architecture Pipeline & Scrapers Flexibles
 - **Clarification architecture** : Compréhension correcte du flux de données (scrapers → cache → analyse)
@@ -179,14 +179,15 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - **Documentation complète** : 20+ guides créés pour les équipes futures
 - **Nettoyage scripts** : De 54 → 29 scripts (archivés dans `_archive_2025_07_27/`)
 
-### 🚨 PHASE 4 BLOQUÉE : Investigation Problème Matchs MTGO
-**PROBLÈME CRITIQUE** : 41 matchs sur 22 tournois = IMPOSSIBLE
-- 🔴 **Investigation urgente** : Où sont les matchs MTGO?
-- ❓ **Questions clés** :
-  - Les 22 tournois existent-ils vraiment?
-  - Le scraper MTGO capture-t-il les matchs?
-  - Faut-il le MTGO Listener pour avoir les matchs?
-- ⚠️ **Melee n'est PAS la solution** : 19 matchs ajoutés mais problème non résolu
+### 🚧 PHASE 4 EN COURS : Listener MTGO + Visualisations
+**État actuel** : Listener actif, 41 matchs Standard extraits (debug en cours)
+- ✅ **Listener MTGO** : 241 fichiers dans `data/MTGOData/`
+- 🔍 **Debug matching** : Pourquoi seulement 41 matchs?
+  - Vérifier IDs tournois listener vs cache
+  - Analyser les tournois Standard dans MTGOData
+  - Optimiser l'algorithme de matching
+- 📊 **Melee intégré** : +19 matchs via Round Standings
+- 🎯 **Visualisations** : 3/5 Plotly complétées
 
 ### ✅ Phase 2 COMPLÈTE : Cache System
 - Cache SQLite pour metadata + JSON pour decklists
