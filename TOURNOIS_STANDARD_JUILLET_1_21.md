@@ -227,3 +227,26 @@
 - ❌ Valley Dasher's Bishkek - 5 joueurs
 
 **Total : 4 tournois Melee retenus (189 joueurs total)**
+
+---
+
+## 🚨 DÉCOUVERTE CRITIQUE : Pas de matchs dans les données Melee !
+
+### Données MTGO vs Melee :
+- **MTGO (via MTGOData)** : ✅ Matchs round par round disponibles
+- **Melee (via API)** : ❌ PAS de matchs, seulement standings finaux
+
+### Ce qu'on a dans Melee :
+- Classement final (Rank)
+- Score total (Wins/Losses)
+- Decklists complètes
+
+### Ce qu'on N'A PAS dans Melee :
+- ❌ Rounds détaillés
+- ❌ Matchups joués
+- ❌ Résultats match par match
+
+**IMPACT : Les tournois Melee ne peuvent PAS contribuer aux données de matchups !**
+- Impossible de calculer des win rates entre archétypes
+- Impossible de faire une matrice de matchups
+- On peut seulement calculer la distribution du méta (% de chaque deck)
