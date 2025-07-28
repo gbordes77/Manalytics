@@ -209,3 +209,21 @@
 - **Inclure si** : ≥16 joueurs OU événement qualificatif/officiel
 - **Exclure si** : <16 joueurs ET tournoi casual
 - **Total recommandé** : 5 tournois sur 8
+
+---
+
+## 📊 DÉCISION FINALE : Limite à 12 joueurs
+
+### Avec limite à 12 joueurs, on retient 4 tournois :
+1. **✅ Jaffer's Tarkir Dragonstorm** - 91 joueurs
+2. **✅ 第2回シングルスター杯** - 53 joueurs  
+3. **✅ Jaffer's Final Fantasy** - 29 joueurs
+4. **✅ Boa Qualifier #2** - 16 joueurs
+
+### On exclut 4 tournois (<12 joueurs) :
+- ❌ TheGathering.gg Post-BNR #2 - 11 joueurs
+- ❌ TheGathering.gg Post-BNR - 8 joueurs
+- ❌ F2F Tour Red Deer - 8 joueurs (même si Super Qualifier)
+- ❌ Valley Dasher's Bishkek - 5 joueurs
+
+**Total : 4 tournois Melee retenus (189 joueurs total)**
