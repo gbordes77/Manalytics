@@ -127,3 +127,23 @@
 - **Pas de leagues dans MTGOData** ✅ (seulement Challenges, Preliminaries, Qualifiers)
 - **Pas de tournois Melee** ❌ (MTGOData = MTGO uniquement)
 - **Manque certains challenges** qui sont dans nos scrapers
+
+---
+
+## 🎯 Analyse des Tournois Melee (>16 joueurs)
+
+### Tournois Melee significatifs (3 sur 8) :
+- ✅ **2025-07-06 Jaffer's Tarkir Dragonstorm Mosh Pit** : 91 joueurs
+- ✅ **2025-07-06 第2回シングルスター杯　サブイベント** : 53 joueurs  
+- ✅ **2025-07-13 Jaffer's Final Fantasy Mosh Pit** : 29 joueurs
+
+### Tournois Melee trop petits (≤16 joueurs) :
+- ❌ 2025-07-19 Boa Qualifier #2 : 16 joueurs
+- ❌ 2025-07-02 TheGathering.gg Post-BNR #2 : 11 joueurs
+- ❌ 2025-07-06 F2F Tour Red Deer : 8 joueurs
+- ❌ 2025-07-02 TheGathering.gg Post-BNR : 8 joueurs
+- ❌ 2025-07-12 Valley Dasher's Bishkek : 5 joueurs
+
+### Impact
+- **Tournois Melee manqués** : 3 gros tournois (173 joueurs total)
+- Ces tournois auraient ajouté ~300-500 matches supplémentaires
