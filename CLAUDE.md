@@ -144,13 +144,27 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 
 ## **🚀 État Actuel (28/07/2025)**
 
-### ✅ Session du 28/07 : Architecture Pipeline & Scrapers Flexibles
+### 🔥 Session du 28/07 - Phase 4 : Intégration Round Standings Melee
+- **SUCCÈS MAJEUR** : +46% de données matchs (41→60) grâce aux Round Standings!
+- **Round Standings Melee** : API intégrée avec succès dans `scrape_melee_flexible.py`
+  - Extraction des round IDs depuis HTML
+  - Payload correct trouvé dans `Melee_model.py`
+  - Filtre `--min-players 12` pour qualité des données
+- **Scripts d'intégration créés** :
+  - `integrate_melee_matches.py` - Combine MTGO + Melee matches
+  - `analyze_melee_round_standings.py` - Analyse exploratoire
+- **Documentation Phase 4** :
+  - `MELEE_ROUND_STANDINGS_INTEGRATION.md` - Guide complet
+  - `PHASE_4_LISTENER_INTEGRATION_STATUS.md` - État actuel
+  - `ROUND_STANDINGS_TECHNICAL_DETAILS.md` - Détails techniques
+
+### ✅ Session du 28/07 matin : Architecture Pipeline & Scrapers Flexibles
 - **Clarification architecture** : Compréhension correcte du flux de données (scrapers → cache → analyse)
 - **Nettoyage erreurs** : Suppression des imports erronés depuis jiliac_pipeline
 - **Scrapers flexibles créés** :
   - `scrape_all.py` - Scraper unifié MTGO + Melee (RECOMMANDÉ)
   - `scrape_mtgo_flexible.py` - Support multi-formats et dates personnalisables
-  - `scrape_melee_flexible.py` - Support multi-formats et dates personnalisables
+  - `scrape_melee_flexible.py` - Support multi-formats et dates personnalisables + Round Standings!
 - **Documentation majeure** :
   - `docs/ONBOARDING_GUIDE.md` - Guide d'intégration complet pour nouveaux développeurs
   - `docs/MANALYTICS_COMPLETE_ARCHITECTURE.html` - Architecture complète avec diagrammes
@@ -164,11 +178,12 @@ C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The G
 - **Documentation complète** : 20+ guides créés pour les équipes futures
 - **Nettoyage scripts** : De 54 → 29 scripts (archivés dans `_archive_2025_07_27/`)
 
-### 📋 PHASE 4 PLANIFIÉE : MTGO Listener 
-**Objectif** : Capturer les données de matchups round-par-round
-- Basé sur [MTGO-listener](https://github.com/Jiliac/MTGO-listener)
-- Permettra de créer une vraie matrice de matchups
-- PRIORITÉ ABSOLUE pour dépasser Jiliac
+### 🚧 PHASE 4 EN COURS : Intégration Matchs & Visualisations
+**Progression** : 60% complète
+- ✅ **Round Standings Melee** : +46% de matchs (41→60)
+- ✅ **Visualisations Plotly** : 3/5 complétées
+- 📋 **En cours** : Sideboard Intelligence & Innovation Tracker
+- 🔜 **Prochaine étape** : MTGO Listener pour matchs temps réel
 
 ### ✅ Phase 2 COMPLÈTE : Cache System
 - Cache SQLite pour metadata + JSON pour decklists

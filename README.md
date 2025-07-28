@@ -16,19 +16,20 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Version**: 3.1.0  
-**Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | ✅ Phase 3 Complete (Architecture & Docs) | 📋 Phase 4 Next (MTGO Listener)  
+**Status**: ✅ Phase 1 Complete (Data Collection) | ✅ Phase 2 Complete (Cache & Analysis) | ✅ Phase 3 Complete (Architecture & Docs) | 🚧 Phase 4 In Progress (Match Integration +46%)  
 **Last Update**: July 28, 2025
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
 
 ## 🎯 What Makes Us Different
 
-### 🎮 Phase 4 PLANIFIÉE : MTGO Listener
-Pour obtenir les vraies données de matchups et créer une matrice statistique :
-- Implementation basée sur [MTGO-listener](https://github.com/Jiliac/MTGO-listener)
-- Utilisation de [MTGOSDK](https://github.com/videre-project/MTGOSDK)
-- Capture temps réel : qui joue contre qui, résultats round-par-round
-- Permettra ENFIN la création d'une vraie matrice de matchups
+### 🎮 Phase 4 EN COURS : MTGO Listener & Intégration Matchs
+**Progrès actuel** : Intégration Round Standings Melee (+46% de données matchs!)
+- ✅ **Round Standings Melee intégrés** : 19 matchs extraits de 5 tournois
+- ✅ **Total matchs** : 60 (41 MTGO + 19 Melee) - amélioration de 46%
+- ✅ **3/5 visualisations Plotly créées** : Métagame Dynamique, Matchup Matrix, Consensus Deck
+- 🚧 **MTGO Listener prévu** : Basé sur [MTGO-listener](https://github.com/Jiliac/MTGO-listener)
+- 📋 **Prochaines étapes** : Visualisations 4 & 5 (Sideboard Intelligence, Innovation Tracker)
 
 ### Unique Features (Nobody Else Has):
 - **🤖 Consensus Deck Generator** - Automatically generates THE optimal decklist from 20+ tournament results
@@ -75,6 +76,18 @@ Pour obtenir les vraies données de matchups et créer une matrice statistique :
 - ✅ **Guide d'Intégration** : `docs/ONBOARDING_GUIDE.md` - Parcours structuré pour nouveaux développeurs
 - ✅ **Architecture Documentée** : `docs/MANALYTICS_COMPLETE_ARCHITECTURE.html` - Diagrammes interactifs
 - ✅ **Scripts Obsolètes Archivés** : Anciens scrapers déplacés dans `scripts/_obsolete_scripts/`
+
+### 🚀 Phase 4: En Cours - Intégration Matchs & Visualisations
+
+**Réalisations (28/07/2025)**:
+- ✅ **Round Standings Melee** : Intégration réussie de l'API Round Standings
+  - Ajout à `scrape_melee_flexible.py` avec `--min-players` pour filtrer
+  - Script `integrate_melee_matches.py` pour extraction des matchs
+  - +46% de données matchs (41→60 matchs)
+- ✅ **Documentation Phase 4** : 
+  - `MELEE_ROUND_STANDINGS_INTEGRATION.md` - Guide complet d'intégration
+  - `PHASE_4_LISTENER_INTEGRATION_STATUS.md` - Statut actuel
+  - `ROUND_STANDINGS_TECHNICAL_DETAILS.md` - Détails techniques API
 
 **Réalisations Phase 3 Complètes**:
 - ✅ **Architecture modulaire** alignée avec Jiliac (src/manalytics/)
