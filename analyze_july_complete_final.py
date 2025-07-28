@@ -129,7 +129,6 @@ class FinalJulyAnalyzer:
             'players': set(),
             'sideboard_cards': defaultdict(int),
             'maindeck_variance': {},
-            'performance_by_round': defaultdict(lambda: {'wins': 0, 'losses': 0})
         })
         
         total_matches = 0
@@ -203,15 +202,11 @@ class FinalJulyAnalyzer:
                                     matchup_data[arch2][arch1]['losses'] += 1
                                     archetype_stats[arch1]['wins'] += 1
                                     archetype_stats[arch2]['losses'] += 1
-                                    archetype_stats[arch1]['performance_by_round'][round_num]['wins'] += 1
-                                    archetype_stats[arch2]['performance_by_round'][round_num]['losses'] += 1
                                 else:
                                     matchup_data[arch1][arch2]['losses'] += 1
                                     matchup_data[arch2][arch1]['wins'] += 1
                                     archetype_stats[arch1]['losses'] += 1
                                     archetype_stats[arch2]['wins'] += 1
-                                    archetype_stats[arch1]['performance_by_round'][round_num]['losses'] += 1
-                                    archetype_stats[arch2]['performance_by_round'][round_num]['wins'] += 1
                             except ValueError:
                                 continue
         
@@ -267,7 +262,6 @@ class FinalJulyAnalyzer:
                 'tournaments': len(stats['tournaments']),
                 'unique_players': len(stats['players']),
                 'sideboard_cards': dict(stats['sideboard_cards']),
-                'performance_by_round': dict(stats['performance_by_round'])
             }))
         
         meta_data.sort(key=lambda x: x[1]['percentage'], reverse=True)
@@ -434,8 +428,7 @@ class FinalJulyAnalyzer:
         # 6. Sideboard Intelligence Heatmap
         viz_html.append(self._create_sideboard_heatmap(meta_data))
         
-        # 7. Performance par round
-        viz_html.append(self._create_round_performance_chart(meta_data))
+        # 7. [REMOVED - Performance par round n'apporte pas de valeur compétitive]
         
         # 8. Scatter Win Rate vs Presence avec clusters
         viz_html.append(self._create_cluster_scatter_chart(meta_data))
@@ -1030,71 +1023,6 @@ class FinalJulyAnalyzer:
         
         return f'<div class="visualization-container">{fig.to_html(include_plotlyjs=False, div_id="sideboard-heatmap")}</div>'
     
-    def _create_round_performance_chart(self, meta_data: List) -> str:
-        """Crée un graphique de performance par round"""
-        # Top 8 archétypes avec assez de données
-        top_archs = [(a, d) for a, d in meta_data[:8] if d['matches'] >= 30]
-        
-        fig = go.Figure()
-        
-        for archetype, data in top_archs:
-            rounds = sorted(data['performance_by_round'].keys())
-            win_rates = []
-            
-            for round_num in range(1, max(rounds) + 1 if rounds else 8):
-                if round_num in data['performance_by_round']:
-                    perf = data['performance_by_round'][round_num]
-                    total = perf['wins'] + perf['losses']
-                    wr = (perf['wins'] / total * 100) if total > 0 else 50
-                    win_rates.append(wr)
-                else:
-                    win_rates.append(None)
-            
-            # Couleur
-            arch_colors = get_archetype_colors(archetype)
-            if len(arch_colors) == 1:
-                color = MTG_COLORS.get(arch_colors[0], '#808080')
-            else:
-                color = blend_colors(
-                    MTG_COLORS.get(arch_colors[0], '#808080'),
-                    MTG_COLORS.get(arch_colors[1], '#404040'),
-                    0.6
-                )
-            
-            fig.add_trace(go.Scatter(
-                x=list(range(1, len(win_rates) + 1)),
-                y=win_rates,
-                mode='lines+markers',
-                name=archetype,
-                line=dict(width=2, color=color),
-                marker=dict(size=6),
-                connectgaps=False
-            ))
-        
-        fig.add_hline(y=50, line_dash="dash", line_color="red", opacity=0.3)
-        
-        fig.update_layout(
-            title={
-                'text': '📊 Performance by Round - Tournament Progression',
-                'x': 0.5,
-                'xanchor': 'center',
-                'font': {'size': 26, 'color': '#333'}
-            },
-            xaxis=dict(title='Round Number', dtick=1),
-            yaxis=dict(title='Win Rate %', range=[30, 70]),
-            width=1200,
-            height=600,
-            hovermode='x unified',
-            legend=dict(
-                orientation="v",
-                yanchor="middle",
-                y=0.5,
-                xanchor="left",
-                x=1.02
-            )
-        )
-        
-        return f'<div class="visualization-container">{fig.to_html(include_plotlyjs=False, div_id="round-performance")}</div>'
     
     def _create_cluster_scatter_chart(self, meta_data: List) -> str:
         """Crée un scatter plot avec clusters de performance"""
