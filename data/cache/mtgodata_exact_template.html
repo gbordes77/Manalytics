@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manalytics - Interactive Standard Metagame Analysis</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        #plotly-div {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 1.5em;
+            }
+            #plotly-div {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Manalytics - Interactive Metagame Analysis</h1>
+            <p>Click on charts to filter • Hover for details • Export to PNG/SVG</p>
+            <div class="controls">
+                <button class="btn" onclick="downloadCSV()">📊 Download CSV</button>
+                <button class="btn" onclick="resetFilters()">🔄 Reset Filters</button>
+            </div>
+        </div>
+        
+        <div id="plotly-div" class="plotly-graph-div" style="height:1400px; width:100%;">
+            <html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.1.min.js" integrity="sha256-oy6Be7Eh6eiQFs5M7oXuPxxm9qbJXEtTpfSI93dW16Q=" crossorigin="anonymous"></script>                <div id="plotly-div" class="plotly-graph-div" style="height:1400px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("plotly-div")) {                    Plotly.newPlot(                        "plotly-div",                        [{"hovertemplate":"\u003cb\u003e%{label}\u003c\u002fb\u003e\u003cbr\u003eDecks: %{value}\u003cbr\u003eMeta Share: %{percent}\u003cbr\u003e\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Dimir Midrange","Izzet Cauldron","Mono Red Aggro","Izzet Prowess","Mono White Caretaker (Mono White Caretaker)","Boros Convoke","Naya Yuna","Selesnya Yuna","Mono Blue Midrange","Azorius Omniscience"],"marker":{"colors":["#154263","#815570","#F44336","#815570","#FFFBD5","#f99f85","#708090","#a5d592","#0E68AB","#86b1c0"]},"text":["Dimir Midrange\u003cbr\u003e36.59%","Izzet Cauldron\u003cbr\u003e21.95%","Mono Red Aggro\u003cbr\u003e8.54%","Izzet Prowess\u003cbr\u003e7.32%","Mono White Caretaker (Mono White Caretaker)\u003cbr\u003e7.32%","Boros Convoke\u003cbr\u003e6.10%","Naya Yuna\u003cbr\u003e4.88%","Selesnya Yuna\u003cbr\u003e3.66%","Mono Blue Midrange\u003cbr\u003e2.44%","Azorius Omniscience\u003cbr\u003e1.22%"],"textinfo":"text","textposition":"auto","values":[7,5,2,1,2,1,2,1,1,1],"type":"pie","domain":{"x":[0.0,0.405],"y":[0.72,1.0]}},{"customdata":[[0.3181818181818182],[0.22727272727272727],[0.09090909090909091],[0.045454545454545456],[0.09090909090909091],[0.045454545454545456],[0.09090909090909091],[0.045454545454545456],[0.045454545454545456],[0.045454545454545456]],"hovertemplate":"\u003cb\u003e%{x}\u003c\u002fb\u003e\u003cbr\u003eDecks: %{y}\u003cbr\u003ePer Tournament: %{customdata[0]:.1f}\u003cbr\u003e\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#154263","#815570","#F44336","#815570","#FFFBD5","#f99f85","#708090","#a5d592","#0E68AB","#86b1c0"]},"text":["7 (36.59%)","5 (21.95%)","2 (8.54%)","1 (7.32%)","2 (7.32%)","1 (6.10%)","2 (4.88%)","1 (3.66%)","1 (2.44%)","1 (1.22%)"],"textposition":"outside","x":["Dimir Midrange","Izzet Cauldron","Mono Red Aggro","Izzet Prowess","Mono White Caretaker (Mono White Caretaker)","Boros Convoke","Naya Yuna","Selesnya Yuna","Mono Blue Midrange","Azorius Omniscience"],"y":[7,5,2,1,2,1,2,1,1,1],"type":"bar","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{fullData.name}\u003c\u002fb\u003e\u003cbr\u003eDate: %{x}\u003cbr\u003eMeta Share: %{y:.1f}%\u003cbr\u003e\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"size":8},"mode":"lines+markers","name":"Dimir Midrange","x":["2025-07-05"],"y":[36.58536585365854],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{fullData.name}\u003c\u002fb\u003e\u003cbr\u003eDate: %{x}\u003cbr\u003eMeta Share: %{y:.1f}%\u003cbr\u003e\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"size":8},"mode":"lines+markers","name":"Izzet Cauldron","x":["2025-07-05"],"y":[21.951219512195124],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{fullData.name}\u003c\u002fb\u003e\u003cbr\u003eDate: %{x}\u003cbr\u003eMeta Share: %{y:.1f}%\u003cbr\u003e\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"size":8},"mode":"lines+markers","name":"Mono Red Aggro","x":["2025-07-05"],"y":[8.536585365853659],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{fullData.name}\u003c\u002fb\u003e\u003cbr\u003eDate: %{x}\u003cbr\u003eMeta Share: %{y:.1f}%\u003cbr\u003e\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"size":8},"mode":"lines+markers","name":"Izzet Prowess","x":["2025-07-05"],"y":[7.317073170731707],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{fullData.name}\u003c\u002fb\u003e\u003cbr\u003eDate: %{x}\u003cbr\u003eMeta Share: %{y:.1f}%\u003cbr\u003e\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"size":8},"mode":"lines+markers","name":"Mono White Caretaker (Mono White Caretaker)","x":["2025-07-05"],"y":[7.317073170731707],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"cells":{"align":["center","left","center","center","center","center"],"fill":{"color":["#f0f0f0","white"]},"font":{"size":12},"height":30,"values":[["#1","#2","#3","#4","#5","#6","#7","#8","#9","#10"],["Dimir Midrange","Izzet Cauldron","Mono Red Aggro","Izzet Prowess","Mono White Caretaker (Mono White Caretaker)","Boros Convoke","Naya Yuna","Selesnya Yuna","Mono Blue Midrange","Azorius Omniscience"],[7,5,2,1,2,1,2,1,1,1],["36.59%","21.95%","8.54%","7.32%","7.32%","6.10%","4.88%","3.66%","2.44%","1.22%"],["0.3","0.2","0.1","0.0","0.1","0.0","0.1","0.0","0.0","0.0"],["➡️ Stable","➡️ Stable","➡️ Stable","➡️ Stable","➡️ Stable","➡️ Stable","➡️ Stable","➡️ Stable","➡️ Stable","➡️ Stable"]]},"header":{"align":"left","fill":{"color":"#667eea"},"font":{"color":"white","size":14},"height":35,"values":["Rank","Archetype","Decks","Meta %","Avg\u002fTournament","Trend"]},"type":"table","domain":{"x":[0.0,1.0],"y":[0.0,0.24]}}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.505,1.0],"tickangle":-45},"yaxis":{"anchor":"x","domain":[0.72,1.0]},"xaxis2":{"anchor":"y2","domain":[0.0,1.0],"title":{"text":"Date"}},"yaxis2":{"anchor":"x2","domain":[0.33999999999999997,0.6199999999999999],"title":{"text":"Meta Share %"}},"annotations":[{"font":{"size":12},"showarrow":false,"text":"\n    \u003cb\u003e📊 Summary Statistics\u003c\u002fb\u003e\u003cbr\u003e\n    Total Tournaments: 22\u003cbr\u003e\n    Total Decks: 23\u003cbr\u003e\n    Unique Archetypes: 10\u003cbr\u003e\n    Top Archetype: Dimir Midrange (36.59%)\n    ","x":0.02,"xanchor":"center","xref":"paper","y":0.98,"yanchor":"bottom","yref":"paper","bgcolor":"white","bordercolor":"#667eea","borderwidth":2,"borderpad":10,"align":"left","opacity":0.95},{"font":{"size":12},"showarrow":false,"text":"\n    \u003cb\u003e📊 Summary Statistics\u003c\u002fb\u003e\u003cbr\u003e\n    Total Tournaments: 22\u003cbr\u003e\n    Total Decks: 23\u003cbr\u003e\n    Unique Archetypes: 10\u003cbr\u003e\n    Top Archetype: Dimir Midrange (36.59%)\n    ","x":0.02,"xanchor":"center","xref":"paper","y":0.98,"yanchor":"bottom","yref":"paper","bgcolor":"white","bordercolor":"#667eea","borderwidth":2,"borderpad":10,"align":"left","opacity":0.95},{"font":{"size":12},"showarrow":false,"text":"\n    \u003cb\u003e📊 Summary Statistics\u003c\u002fb\u003e\u003cbr\u003e\n    Total Tournaments: 22\u003cbr\u003e\n    Total Decks: 23\u003cbr\u003e\n    Unique Archetypes: 10\u003cbr\u003e\n    Top Archetype: Dimir Midrange (36.59%)\n    ","x":0.02,"xanchor":"center","xref":"paper","y":0.98,"yanchor":"bottom","yref":"paper","bgcolor":"white","bordercolor":"#667eea","borderwidth":2,"borderpad":10,"align":"left","opacity":0.95},{"font":{"size":12},"showarrow":false,"text":"\n    \u003cb\u003e📊 Summary Statistics\u003c\u002fb\u003e\u003cbr\u003e\n    Total Tournaments: 22\u003cbr\u003e\n    Total Decks: 23\u003cbr\u003e\n    Unique Archetypes: 10\u003cbr\u003e\n    Top Archetype: Dimir Midrange (36.59%)\n    ","x":0.02,"xanchor":"center","xref":"paper","y":0.98,"yanchor":"bottom","yref":"paper","bgcolor":"white","bordercolor":"#667eea","borderwidth":2,"borderpad":10,"align":"left","opacity":0.95}],"title":{"font":{"size":24},"text":"🎯 Manalytics - Interactive Standard Metagame Analysis\u003cbr\u003e\u003csub\u003eTournaments Only (Leagues Excluded) - July 28, 2025\u003c\u002fsub\u003e","x":0.5,"xanchor":"center"},"font":{"family":"Arial, sans-serif"},"showlegend":true,"height":1400,"plot_bgcolor":"white","paper_bgcolor":"#f5f7fa"},                        {"toImageButtonOptions": {"format": "png", "filename": "manalytics_meta_20250728", "height": 1400, "width": 1600, "scale": 2}, "displaylogo": false, "modeBarButtonsToAdd": ["downloadSvg"], "modeBarButtonsToRemove": ["pan2d", "select2d", "lasso2d", "autoScale2d", "hoverClosestCartesian", "hoverCompareCartesian"], "responsive": true}                    )                };            </script>        </div>
+</body>
+</html>
+        </div>
+    </div>
+    
+    <script>
+        // CSV download function
+        function downloadCSV() {
+            const data = [{"Archetype": "Dimir Midrange", "Decks": 7, "Percentage": 36.59, "Per_Tournament": 0.3}, {"Archetype": "Izzet Cauldron", "Decks": 5, "Percentage": 21.95, "Per_Tournament": 0.2}, {"Archetype": "Mono Red Aggro", "Decks": 2, "Percentage": 8.54, "Per_Tournament": 0.1}, {"Archetype": "Izzet Prowess", "Decks": 1, "Percentage": 7.32, "Per_Tournament": 0.0}, {"Archetype": "Mono White Caretaker (Mono White Caretaker)", "Decks": 2, "Percentage": 7.32, "Per_Tournament": 0.1}, {"Archetype": "Boros Convoke", "Decks": 1, "Percentage": 6.1, "Per_Tournament": 0.0}, {"Archetype": "Naya Yuna", "Decks": 2, "Percentage": 4.88, "Per_Tournament": 0.1}, {"Archetype": "Selesnya Yuna", "Decks": 1, "Percentage": 3.66, "Per_Tournament": 0.0}, {"Archetype": "Mono Blue Midrange", "Decks": 1, "Percentage": 2.44, "Per_Tournament": 0.0}, {"Archetype": "Azorius Omniscience", "Decks": 1, "Percentage": 1.22, "Per_Tournament": 0.0}];
+            
+            const csv = [
+                Object.keys(data[0]).join(','),
+                ...data.map(row => Object.values(row).join(','))
+            ].join('\n');
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'manalytics_meta_20250728.csv';
+            a.click();
+        }
+        
+        // Reset filters function  
+        function resetFilters() {
+            Plotly.Fx.reset('plotly-div');
+        }
+    </script>
+</body>
+</html>
