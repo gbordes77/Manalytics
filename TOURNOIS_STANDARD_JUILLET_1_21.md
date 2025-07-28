@@ -167,3 +167,45 @@
 - Cela explique pourquoi Jiliac a plus de données
 - Notre code actuel ne récupère aucun tournoi Melee (MTGOData = MTGO only)
 - Nous manquons donc 8 tournois Melee complets
+
+---
+
+## 🎯 Recommandation : Tournois Melee à Retenir
+
+### TOURNOIS À GARDER (≥16 joueurs ou événements qualificatifs) :
+
+1. **✅ Jaffer's Tarkir Dragonstorm Mosh Pit** (6 juillet)
+   - 91 joueurs - Gros tournoi communautaire
+   - DOIT être inclus
+
+2. **✅ 第2回シングルスター杯　サブイベント** (6 juillet)
+   - 53 joueurs - Tournoi japonais significatif
+   - DOIT être inclus
+
+3. **✅ Jaffer's Final Fantasy Mosh Pit** (13 juillet)
+   - 29 joueurs - Tournoi moyen mais significatif
+   - DOIT être inclus
+
+4. **✅ Boa Qualifier #2 2025** (19 juillet)
+   - 16 joueurs - Qualifier = compétitif même si petit
+   - Devrait être inclus (événement qualificatif)
+
+5. **✅ F2F Tour Red Deer - Sunday Super Qualifier** (6 juillet)
+   - 8 joueurs MAIS c'est un Super Qualifier
+   - Devrait être inclus (événement qualificatif officiel)
+
+### TOURNOIS À EXCLURE (<16 joueurs ET casual) :
+
+6. **❌ TheGathering.gg Post-BNR Celebration** (2 juillet)
+   - 8 joueurs - Trop petit et casual
+
+7. **❌ TheGathering.gg Post-BNR Celebration #2** (2 juillet)
+   - 11 joueurs - Trop petit et casual
+
+8. **❌ Valley Dasher's Bishkek Classic #1** (12 juillet)
+   - 5 joueurs - Beaucoup trop petit
+
+### Résumé des critères de sélection :
+- **Inclure si** : ≥16 joueurs OU événement qualificatif/officiel
+- **Exclure si** : <16 joueurs ET tournoi casual
+- **Total recommandé** : 5 tournois sur 8
