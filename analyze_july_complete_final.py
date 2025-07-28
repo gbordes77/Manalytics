@@ -436,6 +436,9 @@ class FinalJulyAnalyzer:
         # Générer les insights
         insights_html = self._generate_insights_html(analysis, meta_data)
         
+        # Générer la liste des tournois
+        tournaments_html = self._generate_tournaments_list(analysis)
+        
         html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -460,9 +463,10 @@ class FinalJulyAnalyzer:
                 <div class="summary-label">Total Matches Analyzed</div>
                 <div class="summary-value">{analysis['total_matches']:,}</div>
             </div>
-            <div class="summary-card">
+            <div class="summary-card" style="cursor: pointer;" onclick="document.getElementById('tournament-list').scrollIntoView({{behavior: 'smooth'}});">
                 <div class="summary-label">Matched Tournaments</div>
                 <div class="summary-value">{analysis['matched_tournaments']}</div>
+                <div style="font-size: 0.8em; opacity: 0.7; margin-top: 5px;">↓ Click to see list</div>
             </div>
             <div class="summary-card">
                 <div class="summary-label">Unique Archetypes</div>
@@ -485,6 +489,8 @@ class FinalJulyAnalyzer:
         {insights_html}
         
         {''.join(viz_html)}
+        
+        {tournaments_html}
         
         <div class="info-box">
             <h2>📋 Methodology & Data Quality</h2>
@@ -1185,6 +1191,73 @@ class FinalJulyAnalyzer:
                 <li><strong>Tier 2 (5-10% share):</strong> {', '.join(a[0] for a in meta_data if 5 <= a[1]['percentage'] <= 10)}</li>
                 <li><strong>Tier 3 (<5% share):</strong> {len([a for a in meta_data if a[1]['percentage'] < 5])} archetypes</li>
             </ul>
+        </div>
+        """
+        
+        return html
+    
+    def _generate_tournaments_list(self, analysis: Dict) -> str:
+        """Génère la liste cliquable des tournois utilisés"""
+        # Collecter les infos des tournois matchés
+        matched_tournaments = []
+        
+        for listener_id, listener_data in self.listener_data.items():
+            if listener_id in self.tournament_cache_data:
+                tournament_info = {
+                    'id': listener_id,
+                    'name': listener_data['name'],
+                    'date': listener_data['date'],
+                    'matches': listener_data['match_count'],
+                    'url': f"https://www.mtgo.com/decklist/{listener_data['name'].lower().replace(' ', '-')}-{listener_data['date'].strftime('%Y-%m-%d')}{listener_id}"
+                }
+                matched_tournaments.append(tournament_info)
+        
+        # Trier par date
+        matched_tournaments.sort(key=lambda x: x['date'])
+        
+        # Créer le HTML
+        rows_html = []
+        for i, t in enumerate(matched_tournaments, 1):
+            row = f"""
+                <tr>
+                    <td>{i}</td>
+                    <td>{t['date'].strftime('%Y-%m-%d')}</td>
+                    <td><a href="{t['url']}" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600;">{t['name']}</a></td>
+                    <td>{t['id']}</td>
+                    <td>{t['matches']}</td>
+                </tr>
+            """
+            rows_html.append(row)
+        
+        html = f"""
+        <div class="info-box" id="tournament-list">
+            <h2>🏆 Tournaments Used in This Analysis</h2>
+            <p style="color: #666; margin-bottom: 20px;">
+                All {len(matched_tournaments)} tournaments from July 1-21, 2025 that were successfully matched between listener data and cache.
+            </p>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <th style="padding: 12px; text-align: left;">#</th>
+                        <th style="padding: 12px; text-align: left;">Date</th>
+                        <th style="padding: 12px; text-align: left;">Tournament Name</th>
+                        <th style="padding: 12px; text-align: left;">ID</th>
+                        <th style="padding: 12px; text-align: left;">Matches</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {''.join(rows_html)}
+                </tbody>
+                <tfoot>
+                    <tr style="background: #f5f5f5; font-weight: 600;">
+                        <td colspan="4" style="padding: 12px;">Total</td>
+                        <td style="padding: 12px;">{sum(t['matches'] for t in matched_tournaments)}</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p style="color: #999; font-size: 0.9em; margin-top: 15px;">
+                💡 Click on tournament names to view on MTGO.com
+            </p>
         </div>
         """
         
