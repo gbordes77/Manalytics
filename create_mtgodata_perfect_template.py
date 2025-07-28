@@ -383,8 +383,8 @@ class PerfectDashboardCreator:
                 <div class="stat-label">Archetypes > 1.5%</div>
             </div>
             <div class="stat-box">
-                <div class="stat-value" style="font-size: 1.5em;">{meta_data['top_archetype']}</div>
-                <div class="stat-label">Top Archetype</div>
+                <div class="stat-value">{meta_data['total_matches']}</div>
+                <div class="stat-label">Total Matches</div>
             </div>
             <div class="stat-box">
                 <div class="stat-value">Standard</div>
