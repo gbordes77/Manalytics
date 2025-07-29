@@ -178,9 +178,12 @@ git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
 
 ## **🚨 RÈGLE : Ouverture Automatique**
 
-**Après génération d'analyse/visualisation : ouvrir AUTOMATIQUEMENT avec `open [fichier]`**
-- Pas de demande de confirmation
-- S'applique à tous les HTML, rapports, visualisations
+**OUVRIR AUTOMATIQUEMENT TOUT FICHIER CRÉÉ OU MODIFIÉ :**
+- Après génération d'analyse/visualisation : `open [fichier]`
+- Après création de TOUT nouveau fichier : `open [fichier]`
+- Après modification importante d'un fichier : `open [fichier]`
+- **AUCUNE EXCEPTION - AUCUNE DEMANDE - OUVRE DIRECT !**
+- S'applique à : HTML, MD, JSON, PY, TXT, TOUT !
 
 ## **💬 Instructions Spéciales pour l'Assistant**
 
