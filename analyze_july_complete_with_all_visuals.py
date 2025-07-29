@@ -146,8 +146,7 @@ class CompleteJulyAnalyzer:
                 continue
                 
             matched_tournaments += 1
-            cache_info = self.tournament_cache_data[tid]
-            cache_data = cache_info['data']
+            cache_data = self.tournament_cache_data[tid]
             
             # Créer un mapping player -> archetype
             player_archetypes = {}
