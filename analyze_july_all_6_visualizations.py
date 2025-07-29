@@ -491,11 +491,17 @@ class CompleteJulyAnalyzer:
             
         archetypes = [d[0] for d in meta_data]
         percentages = [d[1]['percentage'] for d in meta_data]
+        # Get colors for each archetype
         colors = []
         for arch in archetypes:
-            arch_colors = get_archetype_colors(arch)
-            if isinstance(arch_colors, dict):
-                colors.append(arch_colors.get('primary', '#666'))
+            color_codes = get_archetype_colors(arch)
+            if color_codes:
+                # Blend colors if multiple
+                if len(color_codes) == 1:
+                    colors.append(MTG_COLORS.get(color_codes[0], '#666'))
+                else:
+                    blended = blend_colors([MTG_COLORS.get(c, '#666') for c in color_codes])
+                    colors.append(blended)
             else:
                 colors.append('#666')
         
@@ -537,11 +543,17 @@ class CompleteJulyAnalyzer:
         x_values = [d[1]['percentage'] for d in filtered_data]
         y_values = [d[1]['win_rate'] for d in filtered_data]
         sizes = [min(d[1]['matches'], 100) for d in filtered_data]
+        # Get colors for each archetype
         colors = []
         for arch in archetypes:
-            arch_colors = get_archetype_colors(arch)
-            if isinstance(arch_colors, dict):
-                colors.append(arch_colors.get('primary', '#666'))
+            color_codes = get_archetype_colors(arch)
+            if color_codes:
+                # Blend colors if multiple
+                if len(color_codes) == 1:
+                    colors.append(MTG_COLORS.get(color_codes[0], '#666'))
+                else:
+                    blended = blend_colors([MTG_COLORS.get(c, '#666') for c in color_codes])
+                    colors.append(blended)
             else:
                 colors.append('#666')
         
@@ -695,11 +707,17 @@ class CompleteJulyAnalyzer:
             labels.append(f'Others ({len(meta_data) - 10} archetypes)')
             values.append(others_pct)
         
+        # Get colors for each archetype
         colors = []
         for arch in labels[:-1]:
-            arch_colors = get_archetype_colors(arch)
-            if isinstance(arch_colors, dict):
-                colors.append(arch_colors.get('primary', '#666'))
+            color_codes = get_archetype_colors(arch)
+            if color_codes:
+                # Blend colors if multiple
+                if len(color_codes) == 1:
+                    colors.append(MTG_COLORS.get(color_codes[0], '#666'))
+                else:
+                    blended = blend_colors([MTG_COLORS.get(c, '#666') for c in color_codes])
+                    colors.append(blended)
             else:
                 colors.append('#666')
         colors.append('#808080')  # Gray for others
@@ -742,9 +760,13 @@ class CompleteJulyAnalyzer:
                 percentage = (count / total * 100) if total > 0 else 0
                 y_values.append(percentage)
             
-            arch_colors = get_archetype_colors(arch)
-            if isinstance(arch_colors, dict):
-                color = arch_colors.get('primary', '#666')
+            color_codes = get_archetype_colors(arch)
+            if color_codes:
+                # Blend colors if multiple
+                if len(color_codes) == 1:
+                    color = MTG_COLORS.get(color_codes[0], '#666')
+                else:
+                    color = blend_colors([MTG_COLORS.get(c, '#666') for c in color_codes])
             else:
                 color = '#666'
             
