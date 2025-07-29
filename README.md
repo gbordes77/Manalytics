@@ -170,6 +170,19 @@ python3 visualize_standard.py                     # Generate viz
 python3 analyze_july_1_21.py
 ```
 
+## 📊 Travail Réalisé (29/07/2025)
+
+### Intégration Decklists MTGO
+- Scraper MTGO modifié pour récupérer les decklists complètes
+- Script : `scrape_mtgo_json.py`
+
+### Analyse Générée
+- Script : `analyze_july_complete_final.py`
+- Résultat : `data/cache/july_1_21_complete_analysis.html`
+- Période : Juillet 1-21, 2025
+
+⚠️ **Note** : Beaucoup de choses restent à vérifier. Attendre les ordres du responsable avant toute modification.
+
 ### Running Tests
 
 ```bash

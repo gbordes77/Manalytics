@@ -142,7 +142,21 @@ FastAPI → Frontend/Rapports
 
 C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The Gathering !
 
-## **🚀 État Actuel (28/07/2025)**
+## **🚀 État Actuel (29/07/2025)**
+
+### 🔧 Travail du 29/07/2025
+
+#### Scraping MTGO avec Decklists
+- Intégration réussie de la récupération des decklists dans le scraper MTGO
+- Script utilisé : `scrape_mtgo_json.py`
+
+#### Analyse Générée
+- Script d'analyse : `analyze_july_complete_final.py`
+- Fichier généré : `data/cache/july_1_21_complete_analysis.html`
+
+⚠️ **IMPORTANT** : De nombreux points restent à vérifier dans le projet. Attendre les instructions du responsable avant de poursuivre.
+
+## **📅 État Précédent (28/07/2025)**
 
 ### 🚧 Session du 28/07 - Phase 4 : Intégration Listener & Debug
 - **✅ LISTENER MTGO ACTIF** : 241 fichiers dans `data/MTGOData/`
