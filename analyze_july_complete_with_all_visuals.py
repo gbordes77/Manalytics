@@ -146,15 +146,15 @@ class CompleteJulyAnalyzer:
                 continue
                 
             matched_tournaments += 1
-            cache_data = self.tournament_cache_data[tid]
-            decklists = cache_data['decklists']
+            cache_info = self.tournament_cache_data[tid]
+            cache_data = cache_info['data']
             
             # Créer un mapping player -> archetype
             player_archetypes = {}
-            for deck in decklists:
-                player = deck.get('player', '')
-                archetype = deck.get('archetype', 'Unknown')
-                if player and archetype and archetype != 'Unknown':
+            for deck in cache_data.get('decklists', []):
+                player = deck.get('player')
+                archetype = deck.get('archetype') or 'Unknown'
+                if player and archetype != 'Unknown':
                     player_archetypes[player] = archetype
                     archetype_stats[archetype]['decks'].add(player)
             
