@@ -491,7 +491,13 @@ class CompleteJulyAnalyzer:
             
         archetypes = [d[0] for d in meta_data]
         percentages = [d[1]['percentage'] for d in meta_data]
-        colors = [get_archetype_colors(arch).get('primary', '#666') for arch in archetypes]
+        colors = []
+        for arch in archetypes:
+            arch_colors = get_archetype_colors(arch)
+            if isinstance(arch_colors, dict):
+                colors.append(arch_colors.get('primary', '#666'))
+            else:
+                colors.append('#666')
         
         fig = go.Figure()
         
@@ -531,7 +537,13 @@ class CompleteJulyAnalyzer:
         x_values = [d[1]['percentage'] for d in filtered_data]
         y_values = [d[1]['win_rate'] for d in filtered_data]
         sizes = [min(d[1]['matches'], 100) for d in filtered_data]
-        colors = [get_archetype_colors(arch).get('primary', '#666') for arch in archetypes]
+        colors = []
+        for arch in archetypes:
+            arch_colors = get_archetype_colors(arch)
+            if isinstance(arch_colors, dict):
+                colors.append(arch_colors.get('primary', '#666'))
+            else:
+                colors.append('#666')
         
         fig = go.Figure()
         
@@ -683,7 +695,13 @@ class CompleteJulyAnalyzer:
             labels.append(f'Others ({len(meta_data) - 10} archetypes)')
             values.append(others_pct)
         
-        colors = [get_archetype_colors(arch).get('primary', '#666') for arch in labels[:-1]]
+        colors = []
+        for arch in labels[:-1]:
+            arch_colors = get_archetype_colors(arch)
+            if isinstance(arch_colors, dict):
+                colors.append(arch_colors.get('primary', '#666'))
+            else:
+                colors.append('#666')
         colors.append('#808080')  # Gray for others
         
         fig = go.Figure(data=[go.Pie(
@@ -724,7 +742,11 @@ class CompleteJulyAnalyzer:
                 percentage = (count / total * 100) if total > 0 else 0
                 y_values.append(percentage)
             
-            color = get_archetype_colors(arch).get('primary', '#666')
+            arch_colors = get_archetype_colors(arch)
+            if isinstance(arch_colors, dict):
+                color = arch_colors.get('primary', '#666')
+            else:
+                color = '#666'
             
             fig.add_trace(go.Scatter(
                 x=dates,
