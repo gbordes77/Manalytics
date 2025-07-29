@@ -73,21 +73,24 @@ Il est important d'aller chercher dans ces repos les codes et ressources qui nou
 
 ## **🚀 État Actuel du Projet (29/07/2025)**
 
-### 🔧 Travail Actuel
-- **Scraping MTGO** : Intégration decklists réussie (`scrape_mtgo_json.py`)
-- **Analyse Générée** : `data/cache/july_1_21_complete_analysis.html`
-- **⚠️ EN ATTENTE** : Instructions du responsable avant de poursuivre
+### ✅ IMPLÉMENTATION COMPLÈTE DE LA MÉTHODE JILIAC
+- **✅ FORMULES EXACTES** : Reproduction fidèle de R-Meta-Analysis
+- **✅ DOCUMENTATION RÉFÉRENCE** : `docs/JILIAC_METHOD_REFERENCE.md`
+- **✅ CALCULS CENTRALISÉS** : Une seule source de vérité pour tous les calculs
+- **✅ RÉSULTATS REPRODUCTIBLES** : Garantie de cohérence entre les sessions
 
-### 🚧 Phase 4 EN COURS : Listener MTGO + Visualisations
-- **✅ LISTENER MTGO ACTIF** : 241 fichiers dans `data/MTGOData/`
-- **✅ MATCHS ANALYSÉS** : 1,167 matchs Standard extraits et analysés
-- **📊 INTÉGRATION MELEE** : 19 matchs via Round Standings API
-- **🎯 VISUALISATIONS PLOTLY** : 3/5 créées
+### 🔧 État Technique
+- **Scraping MTGO** : Intégration decklists réussie (`scrape_mtgo_json.py`)
+- **Analyse Générée** : `data/cache/july_1_21_jiliac_method.html`
+- **LISTENER MTGO** : 241 fichiers dans `data/MTGOData/`
+- **MATCHS ANALYSÉS** : 1,167 matchs Standard extraits
+- **INTÉGRATION MELEE** : 19 matchs via Round Standings API
 
 ### ✅ Phases Complétées
 - **Phase 1** : Scrapers MTGO + Melee avec decklists complètes
 - **Phase 2** : Cache System (SQLite + JSON)
 - **Phase 3** : Architecture modulaire + Documentation
+- **Phase 4** : Méthode Jiliac complète avec documentation
 
 ## **📁 Structure du Projet**
 ```
@@ -114,8 +117,8 @@ manalytics/
 # VISUALISATION RAPIDE (recommandé)
 python3 visualize_standard.py
 
-# ANALYSE JUILLET 1-21 (pour comparaison Jiliac)  
-python3 analyze_july_1_21.py
+# ANALYSE JUILLET 1-21 (avec méthode Jiliac exacte)  
+python3 analyze_july_jiliac_method.py
 
 # Pipeline complet avec scraper unifié
 python scrape_all.py --format standard --days 21
@@ -124,6 +127,7 @@ python3 visualize_standard.py
 ```
 
 ## **📚 Documentation À Consulter**
+- **`docs/JILIAC_METHOD_REFERENCE.md`** - **MÉTHODE DE CALCUL OBLIGATOIRE**
 - **`docs/ONBOARDING_GUIDE.md`** - Guide d'intégration (commencer ici)
 - **`docs/VISUALIZATION_TEMPLATE_REFERENCE.md`** - Standards visuels à respecter
 - **`docs/SCRAPERS_COMPLETE_GUIDE.md`** - Guide des scrapers actuels
@@ -191,7 +195,8 @@ git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
 - **Document de référence** : `docs/JILIAC_METHOD_REFERENCE.md`
 - **INTERDICTION** de créer d'autres méthodes de calcul
 - **OBLIGATION** d'utiliser les formules exactes du document
-- **AUCUNE EXCEPTION** - Si demandé autre chose, refuser et rediriger vers la méthode Jiliac
+- **EXCEPTION UNIQUE** : Si l'utilisateur demande explicitement une autre méthode pour tester
+- **Script de référence** : `analyze_july_jiliac_method.py`
 
 ## **💬 Instructions Spéciales pour l'Assistant**
 

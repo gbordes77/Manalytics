@@ -1,4 +1,4 @@
-# 📐 MÉTHODE DE RÉFÉRENCE - CALCULS JILIAC
+peux tu m assurer que si je sors et# 📐 MÉTHODE DE RÉFÉRENCE - CALCULS JILIAC
 
 > **⚠️ DOCUMENT DE RÉFÉRENCE OFFICIEL**
 > 

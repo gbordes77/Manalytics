@@ -26,10 +26,10 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Version**: 3.1.0  
+**Version**: 3.2.0  
 **Status**: ✅ Production Ready
 
-A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
+A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg. Features the **Jiliac Method** for accurate metagame analysis.
 
 ## 📚 Documentation
 
@@ -43,13 +43,16 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 - **🔍 Multi-Platform Scraping**: Automated collection from MTGO and Melee.gg
 - **🤖 Smart Archetype Detection**: Automatic deck categorization using community rules
 - **📊 Advanced Analytics**: 
-  - Metagame share tracking
+  - Metagame share tracking with Jiliac Method
+  - Wilson confidence intervals for win rates
+  - Tier assignment based on CI lower bounds
   - Matchup win rate analysis
   - Innovation detection for emerging tech
   - Consensus deck generation from tournament results
 - **🎨 Beautiful Visualizations**: Interactive charts with MTG color gradients
 - **🚀 REST API**: Full-featured API with JWT authentication
 - **💾 Efficient Storage**: Lightweight cache system with SQLite + JSON
+- **📐 Reference Implementation**: Exact reproduction of [Jiliac's R-Meta-Analysis](https://github.com/Jiliac/R-Meta-Analysis)
 
 ## 🎮 Supported Formats
 
@@ -228,6 +231,7 @@ For detailed documentation, see:
 - [Scraping Guide](docs/SCRAPERS_COMPLETE_GUIDE.md) - Complete scraping documentation
 - [API Reference](docs/API_REFERENCE.md) - Full API documentation
 - [Development Guide](docs/DEVELOPMENT_GUIDE.md) - Contributing guidelines
+- [Jiliac Method Reference](docs/JILIAC_METHOD_REFERENCE.md) - Complete methodology documentation
 
 ## 🔒 Security
 
@@ -242,8 +246,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- [Jiliac](https://github.com/Jiliac) for the R-Meta-Analysis methodology
 - MTG community for archetype definitions
 - Original scrapers from mtg_decklist_scrapper
+- [Badaro](https://github.com/Badaro) for MTGOArchetypeParser
 - All contributors and testers
 
 ---
