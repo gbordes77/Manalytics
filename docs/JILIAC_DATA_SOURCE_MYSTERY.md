@@ -151,13 +151,40 @@ Sur le Discord ou GitHub, demander :
 
 ---
 
-## 📌 CONCLUSION
+## 📌 CONCLUSION - MYSTÈRE RÉSOLU ! 🎉
 
-**Le mystère reste entier** : Nous n'avons pas trouvé la source exacte des données de matchups de Jiliac.
+**Le mystère est résolu** : MTGOArchetypeParser PEUT générer les matchups, mais il faut :
 
-**Ce qui est certain** :
-- R-Meta-Analysis CONSOMME des données avec matchups pré-calculés
-- Ces données ne viennent NI de MTGODecklistCache NI de MTGOArchetypeParser seuls
-- Il existe une étape de traitement/fusion que nous n'avons pas identifiée
+1. **Activer `IncludeMatchups: true`** dans settings.json
+2. **Fournir des JSONs qui contiennent DEUX éléments** :
+   - `Decks` : Les decklists (depuis les scrapers)
+   - `Rounds` : Les matchs round par round (depuis le listener MTGO)
 
-**Prochaine étape critique** : Soit reconstruire cette logique, soit obtenir plus d'informations sur le pipeline exact.
+### 🔑 LA CLÉ DU MYSTÈRE
+
+Le code de MTGOArchetypeParser dans `RecordLoader.cs` montre :
+```csharp
+if (includeMatchups && tournament.Rounds != null)
+{
+    // Génère les matchups en croisant :
+    // - Les rounds (qui dit qui a joué contre qui)
+    // - Les archétypes détectés pour chaque deck
+    // Résultat : Matchups avec OpponentArchetype !
+}
+```
+
+### 🎯 CE QUE FAIT JILIAC
+
+1. **Fusionne les données** du listener MTGO (rounds) avec les scrapers (decklists)
+2. **Exécute MTGOArchetypeParser** avec `IncludeMatchups: true`
+3. **Obtient des JSONs enrichis** avec les matchups et archétypes
+4. **Alimente R-Meta-Analysis** avec ces données complètes
+
+### 🚀 PROCHAINE ÉTAPE
+
+Implémenter un script de fusion qui :
+1. Prend nos fichiers listener (`data/mtgodata/`)
+2. Prend nos fichiers scrapers (`data/raw/mtgo/`)
+3. Les fusionne dans le format attendu par MTGOArchetypeParser
+4. Exécute MTGOArchetypeParser avec les bons paramètres
+5. Génère les JSONs avec matchups pour R-Meta-Analysis
