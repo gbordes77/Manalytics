@@ -574,7 +574,7 @@ def main():
                        help='Limiter le nombre de tournois à scraper')
     
     # Mode async
-    parser.add_argument('--async', action='store_true',
+    parser.add_argument('--async-mode', action='store_true',
                        help='Utiliser le scraping asynchrone (plus rapide)')
     
     args = parser.parse_args()
@@ -650,7 +650,7 @@ def main():
         # Scraper
         start_time = time.time()
         
-        if args.async:
+        if args.async_mode:
             # Mode async
             logger.info("\n⚡ Mode async activé")
             loop = asyncio.get_event_loop()
