@@ -225,10 +225,32 @@ Manalytics utilise actuellement :
 
 ---
 
+## 🎨 VISUALISATIONS GÉNÉRÉES PAR LE PIPELINE
+
+Le pipeline `_main.R` génère **8 visualisations standard** :
+
+1. **01_Presence-Pie-Chart** - Camembert de la répartition du métagame
+2. **02_Presence-Bar-Chart** - Graphique en barres de présence
+3. **03_Winrate-Mustache-Box** - Win rates avec intervalles de confiance
+4. **04_Winrate-Box-Plot** - Box plots des win rates par archétype
+5. **05_Scatterplot-of-Tiers** - Distribution des tiers (CI Lower Bound)
+6. **06_Winrate-&-Presence-Full-Scatterplot** - Vue complète présence vs win rate
+7. **07_Winrate-&-Presence-Zoom-Scatterplot** - Vue zoomée avec détails et tiers
+8. **08_Matchup-Matrix** - Matrice complète des matchups
+
+### Exports additionnels :
+- Données joueurs (optionnel)
+- Données cartes
+- Données archétypes/cartes
+- Synthèse textuelle
+
+---
+
 ## 📌 CONCLUSION
 
 Le système de Jiliac est **extrêmement flexible** avec de multiples combinaisons possibles :
 - 22 types de filtrage × 3 méthodes de présence × 2 options time-weight × 2 méthodes de tiers = **264 combinaisons de base**
 - Sans compter les variantes de seuils, intervalles de confiance, et analyses spécialisées
+- Plus 8 visualisations standard générées automatiquement
 
 La méthode actuellement implémentée dans Manalytics correspond à **UNE configuration spécifique** parmi toutes ces possibilités.
