@@ -15,14 +15,14 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional
 import argparse
-import sys
+import logging
 
-# Ajouter le chemin parent pour importer les modules
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from src.manalytics.utils.logging_setup import setup_logging
-
-logger = setup_logging()
+# Configuration du logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 def load_listener_data(listener_path: Path) -> Dict:

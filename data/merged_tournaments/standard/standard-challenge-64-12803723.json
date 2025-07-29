@@ -1,0 +1,5619 @@
+{
+  "Tournament": {
+    "Id": 12803723,
+    "Date": "2025-07-21T22:00:00",
+    "Name": "Standard Challenge 64",
+    "Uri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+    "JsonFile": null,
+    "ForceRedownload": false
+  },
+  "Decks": [
+    {
+      "Player": "L1X0",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Forest"
+        },
+        {
+          "Count": 1,
+          "Card": "Forest"
+        },
+        {
+          "Count": 3,
+          "Card": "Forest"
+        },
+        {
+          "Count": 8,
+          "Card": "Forest"
+        },
+        {
+          "Count": 2,
+          "Card": "Llanowar Elves"
+        },
+        {
+          "Count": 4,
+          "Card": "Traveling Chocobo"
+        },
+        {
+          "Count": 1,
+          "Card": "Snakeskin Veil"
+        },
+        {
+          "Count": 4,
+          "Card": "Sazh's Chocobo"
+        },
+        {
+          "Count": 3,
+          "Card": "Snakeskin Veil"
+        },
+        {
+          "Count": 4,
+          "Card": "Escape Tunnel"
+        },
+        {
+          "Count": 4,
+          "Card": "Fabled Passage"
+        },
+        {
+          "Count": 2,
+          "Card": "Llanowar Elves"
+        },
+        {
+          "Count": 4,
+          "Card": "Bushwhack"
+        },
+        {
+          "Count": 3,
+          "Card": "Bristly Bill, Spine Sower"
+        },
+        {
+          "Count": 1,
+          "Card": "Sazh Katzroy"
+        },
+        {
+          "Count": 1,
+          "Card": "Scavenging Ooze"
+        },
+        {
+          "Count": 3,
+          "Card": "Archdruid's Charm"
+        },
+        {
+          "Count": 4,
+          "Card": "Mossborn Hydra"
+        },
+        {
+          "Count": 4,
+          "Card": "Tifa Lockhart"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 3,
+          "Card": "Pawpatch Recruit"
+        },
+        {
+          "Count": 2,
+          "Card": "Insidious Fungus"
+        },
+        {
+          "Count": 1,
+          "Card": "Scavenging Ooze"
+        },
+        {
+          "Count": 1,
+          "Card": "Nissa, Ascended Animist"
+        },
+        {
+          "Count": 2,
+          "Card": "Sazh Katzroy"
+        },
+        {
+          "Count": 1,
+          "Card": "Heritage Reclamation"
+        },
+        {
+          "Count": 3,
+          "Card": "Tribute to the World Tree"
+        },
+        {
+          "Count": 2,
+          "Card": "Soul-Guide Lantern"
+        }
+      ]
+    },
+    {
+      "Player": "Capitano_CL",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 1,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 4,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 1,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 1,
+          "Card": "Kiora, the Rising Tide"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 1,
+          "Card": "Glacial Dragonhunt"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 3,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 2,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 3,
+          "Card": "Island"
+        },
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 1,
+          "Card": "Thundering Falls"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Unable to Scream"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 1,
+          "Card": "Obliterating Bolt"
+        },
+        {
+          "Count": 2,
+          "Card": "Broadside Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        }
+      ]
+    },
+    {
+      "Player": "qbturtle15",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Emberheart Challenger"
+        },
+        {
+          "Count": 4,
+          "Card": "Cheeky House-Mouse"
+        },
+        {
+          "Count": 4,
+          "Card": "Flowerfoot Swordmaster"
+        },
+        {
+          "Count": 4,
+          "Card": "Might of the Meek"
+        },
+        {
+          "Count": 3,
+          "Card": "Witchstalker Frenzy"
+        },
+        {
+          "Count": 4,
+          "Card": "Burst Lightning"
+        },
+        {
+          "Count": 4,
+          "Card": "Hired Claw"
+        },
+        {
+          "Count": 4,
+          "Card": "Screaming Nemesis"
+        },
+        {
+          "Count": 4,
+          "Card": "Manifold Mouse"
+        },
+        {
+          "Count": 3,
+          "Card": "Rockface Village"
+        },
+        {
+          "Count": 4,
+          "Card": "Inspiring Vantage"
+        },
+        {
+          "Count": 4,
+          "Card": "Battlefield Forge"
+        },
+        {
+          "Count": 4,
+          "Card": "Sunbillow Verge"
+        },
+        {
+          "Count": 1,
+          "Card": "Plains"
+        },
+        {
+          "Count": 6,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 3,
+          "Card": "Lightning Helix"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 3,
+          "Card": "Invasion of Gobakhan"
+        },
+        {
+          "Count": 3,
+          "Card": "Urabrask's Forge"
+        },
+        {
+          "Count": 2,
+          "Card": "Rest in Peace"
+        },
+        {
+          "Count": 2,
+          "Card": "Destroy Evil"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 2,
+          "Card": "Gleeful Demolition"
+        }
+      ]
+    },
+    {
+      "Player": "O_danielakos",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 3,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 3,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 3,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Island"
+        },
+        {
+          "Count": 2,
+          "Card": "Phantom Interference"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 3,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 1,
+          "Card": "Gix's Command"
+        },
+        {
+          "Count": 4,
+          "Card": "Deep-Cavern Bat"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 1,
+          "Card": "Fountainport"
+        },
+        {
+          "Count": 2,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 1,
+          "Card": "Gix, Yawgmoth Praetor"
+        },
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Duress"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 1,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 1,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 1,
+          "Card": "Ertai Resurrected"
+        },
+        {
+          "Count": 1,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 1,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 2,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 1,
+          "Card": "Intimidation Tactics"
+        },
+        {
+          "Count": 1,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 1,
+          "Card": "Neutralize the Guards"
+        },
+        {
+          "Count": 1,
+          "Card": "Enduring Curiosity"
+        }
+      ]
+    },
+    {
+      "Player": "makusong24",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 1,
+          "Card": "Glacial Dragonhunt"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 4,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 3,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 4,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 2,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 2,
+          "Card": "Draconautics Engineer"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 2,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 2,
+          "Card": "Twinmaw Stormbrood"
+        }
+      ]
+    },
+    {
+      "Player": "StickyWicket",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 5,
+          "Card": "Island"
+        },
+        {
+          "Count": 3,
+          "Card": "Astrologian's Planisphere"
+        },
+        {
+          "Count": 2,
+          "Card": "Get Out"
+        },
+        {
+          "Count": 1,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 1,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 2,
+          "Card": "Roaring Furnace // Steaming Sauna"
+        },
+        {
+          "Count": 2,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Opt"
+        },
+        {
+          "Count": 1,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 4,
+          "Card": "Stock Up"
+        },
+        {
+          "Count": 4,
+          "Card": "Stormchaser's Talent"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 1,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 1,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Sleight of Hand"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 3,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 1,
+          "Card": "Marang River Regent"
+        },
+        {
+          "Count": 1,
+          "Card": "Rebel Salvo"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Twinmaw Stormbrood"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 2,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 1,
+          "Card": "Marang River Regent"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 1,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 1,
+          "Card": "Ral, Crackling Wit"
+        }
+      ]
+    },
+    {
+      "Player": "SoulStrong",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 2,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 3,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 1,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 3,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 2,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 2,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 3,
+          "Card": "Island"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 2,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 1,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 3,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Kiora, the Rising Tide"
+        },
+        {
+          "Count": 1,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 1,
+          "Card": "Voldaren Thrillseeker"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 2,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Broadside Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Obliterating Bolt"
+        },
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 1,
+          "Card": "Unable to Scream"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        }
+      ]
+    },
+    {
+      "Player": "sultai4lyfe",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Copperline Gorge"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 4,
+          "Card": "Keen-Eyed Curator"
+        },
+        {
+          "Count": 4,
+          "Card": "Karplusan Forest"
+        },
+        {
+          "Count": 1,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 4,
+          "Card": "Patchwork Beastie"
+        },
+        {
+          "Count": 4,
+          "Card": "Thornspire Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Violent Urge"
+        },
+        {
+          "Count": 4,
+          "Card": "Wildfire Wickerfolk"
+        },
+        {
+          "Count": 2,
+          "Card": "Cenote Scout"
+        },
+        {
+          "Count": 2,
+          "Card": "Balustrade Wurm"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 3,
+          "Card": "Screaming Nemesis"
+        },
+        {
+          "Count": 1,
+          "Card": "Snakeskin Veil"
+        },
+        {
+          "Count": 1,
+          "Card": "Overprotect"
+        },
+        {
+          "Count": 3,
+          "Card": "Bushwhack"
+        },
+        {
+          "Count": 4,
+          "Card": "Break Out"
+        },
+        {
+          "Count": 8,
+          "Card": "Forest"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 4,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Suplex"
+        },
+        {
+          "Count": 3,
+          "Card": "Scrapshooter"
+        },
+        {
+          "Count": 3,
+          "Card": "Obliterating Bolt"
+        },
+        {
+          "Count": 1,
+          "Card": "Twinmaw Stormbrood"
+        },
+        {
+          "Count": 1,
+          "Card": "Snakeskin Veil"
+        },
+        {
+          "Count": 2,
+          "Card": "Chandra, Spark Hunter"
+        }
+      ]
+    },
+    {
+      "Player": "gazmon48",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 1,
+          "Card": "Glacial Dragonhunt"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 4,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 1,
+          "Card": "Kiora, the Rising Tide"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 2,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 1,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 2,
+          "Card": "Island"
+        },
+        {
+          "Count": 1,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 2,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 2,
+          "Card": "Broadside Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Obliterating Bolt"
+        },
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Unable to Scream"
+        }
+      ]
+    },
+    {
+      "Player": "happypster",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Astrologian's Planisphere"
+        },
+        {
+          "Count": 1,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 2,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 1,
+          "Card": "Rebel Salvo"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 2,
+          "Card": "Roaring Furnace // Steaming Sauna"
+        },
+        {
+          "Count": 5,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Sleight of Hand"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 4,
+          "Card": "Stock Up"
+        },
+        {
+          "Count": 4,
+          "Card": "Stormchaser's Talent"
+        },
+        {
+          "Count": 1,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 4,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 1,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 4,
+          "Card": "Opt"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 1,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 3,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 1,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Rebel Salvo"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 2,
+          "Card": "Change the Equation"
+        },
+        {
+          "Count": 1,
+          "Card": "Brotherhood's End"
+        }
+      ]
+    },
+    {
+      "Player": "Lord_Beerus",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 2,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 2,
+          "Card": "Cecil, Dark Knight"
+        },
+        {
+          "Count": 4,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 4,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 3,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 4,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 3,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 4,
+          "Card": "Island"
+        },
+        {
+          "Count": 1,
+          "Card": "Phantom Interference"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Saiba Cryptomancer"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred's Edict"
+        },
+        {
+          "Count": 3,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        },
+        {
+          "Count": 4,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 1,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 2,
+          "Card": "Negate"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 2,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 2,
+          "Card": "Gix's Command"
+        },
+        {
+          "Count": 1,
+          "Card": "Duress"
+        },
+        {
+          "Count": 4,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        }
+      ]
+    },
+    {
+      "Player": "ShadowTitan1",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 1,
+          "Card": "Glacial Dragonhunt"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 3,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 1,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 2,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 2,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Draconautics Engineer"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Draconautics Engineer"
+        },
+        {
+          "Count": 2,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 2,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 2,
+          "Card": "Unable to Scream"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 2,
+          "Card": "Twinmaw Stormbrood"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Faerie Mastermind"
+        }
+      ]
+    },
+    {
+      "Player": "bless_von",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 2,
+          "Card": "Overlord of the Mistmoors"
+        },
+        {
+          "Count": 1,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 4,
+          "Card": "Shiko, Paragon of the Way"
+        },
+        {
+          "Count": 1,
+          "Card": "Cori Mountain Monastery"
+        },
+        {
+          "Count": 1,
+          "Card": "Roiling Dragonstorm"
+        },
+        {
+          "Count": 2,
+          "Card": "Marang River Regent"
+        },
+        {
+          "Count": 2,
+          "Card": "Dispelling Exhale"
+        },
+        {
+          "Count": 3,
+          "Card": "Sunbillow Verge"
+        },
+        {
+          "Count": 3,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Stock Up"
+        },
+        {
+          "Count": 4,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 1,
+          "Card": "Jace Reawakened"
+        },
+        {
+          "Count": 3,
+          "Card": "Get Lost"
+        },
+        {
+          "Count": 1,
+          "Card": "Scorching Dragonfire"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Cavern of Souls"
+        },
+        {
+          "Count": 1,
+          "Card": "Day of Judgment"
+        },
+        {
+          "Count": 3,
+          "Card": "Lightning Helix"
+        },
+        {
+          "Count": 2,
+          "Card": "Island"
+        },
+        {
+          "Count": 2,
+          "Card": "Three Steps Ahead"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodfarm Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Elegant Parlor"
+        },
+        {
+          "Count": 4,
+          "Card": "Meticulous Archive"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 2,
+          "Card": "Split Up"
+        },
+        {
+          "Count": 2,
+          "Card": "Plains"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Split Up"
+        },
+        {
+          "Count": 2,
+          "Card": "Loran of the Third Path"
+        },
+        {
+          "Count": 1,
+          "Card": "Beza, the Bounding Spring"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 4,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 1,
+          "Card": "Exorcise"
+        },
+        {
+          "Count": 2,
+          "Card": "Negate"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        }
+      ]
+    },
+    {
+      "Player": "xfile",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 2,
+          "Card": "Cecil, Dark Knight"
+        },
+        {
+          "Count": 4,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        },
+        {
+          "Count": 3,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 4,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 4,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 1,
+          "Card": "Phantom Interference"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred's Edict"
+        },
+        {
+          "Count": 3,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 4,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 2,
+          "Card": "Negate"
+        },
+        {
+          "Count": 1,
+          "Card": "Duress"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 2,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 2,
+          "Card": "Gix's Command"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 4,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 1,
+          "Card": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "Player": "Kampo",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 4,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 2,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 4,
+          "Card": "Island"
+        },
+        {
+          "Count": 3,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 1,
+          "Card": "Lord Skitter, Sewer King"
+        },
+        {
+          "Count": 1,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        },
+        {
+          "Count": 4,
+          "Card": "Deep-Cavern Bat"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred's Edict"
+        },
+        {
+          "Count": 1,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 1,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 3,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        },
+        {
+          "Count": 2,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Shoot the Sheriff"
+        },
+        {
+          "Count": 2,
+          "Card": "Saiba Cryptomancer"
+        },
+        {
+          "Count": 4,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred's Edict"
+        },
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Intimidation Tactics"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 2,
+          "Card": "Duress"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 1,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 1,
+          "Card": "Lord Skitter, Sewer King"
+        },
+        {
+          "Count": 1,
+          "Card": "Qarsi Revenant"
+        },
+        {
+          "Count": 2,
+          "Card": "Ghost Vacuum"
+        }
+      ]
+    },
+    {
+      "Player": "HouseOfManaMTG",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 2,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 6,
+          "Card": "Island"
+        },
+        {
+          "Count": 1,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 4,
+          "Card": "Sleight of Hand"
+        },
+        {
+          "Count": 4,
+          "Card": "Stock Up"
+        },
+        {
+          "Count": 4,
+          "Card": "Stormchaser's Talent"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 4,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 1,
+          "Card": "Obliterating Bolt"
+        },
+        {
+          "Count": 4,
+          "Card": "Opt"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 1,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 4,
+          "Card": "Astrologian's Planisphere"
+        },
+        {
+          "Count": 1,
+          "Card": "Wild Ride"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundertrap Trainer"
+        },
+        {
+          "Count": 2,
+          "Card": "Roaring Furnace // Steaming Sauna"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Roaring Furnace // Steaming Sauna"
+        },
+        {
+          "Count": 1,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Rebel Salvo"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 2,
+          "Card": "Ghost Vacuum"
+        }
+      ]
+    },
+    {
+      "Player": "Ivan_Draw_Go",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 2,
+          "Card": "Cecil, Dark Knight"
+        },
+        {
+          "Count": 3,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 4,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 4,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 4,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 3,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 3,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 4,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Nowhere to Run"
+        },
+        {
+          "Count": 3,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        },
+        {
+          "Count": 2,
+          "Card": "Spell Stutter"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 4,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 1,
+          "Card": "Blot Out"
+        },
+        {
+          "Count": 1,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 2,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 2,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 2,
+          "Card": "Gix's Command"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 1,
+          "Card": "Spell Stutter"
+        },
+        {
+          "Count": 2,
+          "Card": "Duress"
+        }
+      ]
+    },
+    {
+      "Player": "Ale_Mtg",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 1,
+          "Card": "Glacial Dragonhunt"
+        },
+        {
+          "Count": 3,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 4,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 2,
+          "Card": "Island"
+        },
+        {
+          "Count": 3,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Broadside Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 2,
+          "Card": "Unable to Scream"
+        },
+        {
+          "Count": 1,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 2,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        }
+      ]
+    },
+    {
+      "Player": "Azja",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 1,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 1,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 2,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 3,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 1,
+          "Card": "Astrologian's Planisphere"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 1,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 1,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 3,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 3,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Twinmaw Stormbrood"
+        },
+        {
+          "Count": 2,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 3,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        }
+      ]
+    },
+    {
+      "Player": "InterludeShadow",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 2,
+          "Card": "Plains"
+        },
+        {
+          "Count": 2,
+          "Card": "Cori Mountain Monastery"
+        },
+        {
+          "Count": 1,
+          "Card": "Plains"
+        },
+        {
+          "Count": 2,
+          "Card": "Dispelling Exhale"
+        },
+        {
+          "Count": 4,
+          "Card": "Meticulous Archive"
+        },
+        {
+          "Count": 3,
+          "Card": "Floodfarm Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Lightning Helix"
+        },
+        {
+          "Count": 1,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Get Lost"
+        },
+        {
+          "Count": 2,
+          "Card": "Marang River Regent"
+        },
+        {
+          "Count": 1,
+          "Card": "Floodfarm Verge"
+        },
+        {
+          "Count": 3,
+          "Card": "Overlord of the Mistmoors"
+        },
+        {
+          "Count": 3,
+          "Card": "Elegant Parlor"
+        },
+        {
+          "Count": 2,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 2,
+          "Card": "Roiling Dragonstorm"
+        },
+        {
+          "Count": 1,
+          "Card": "Runescale Stormbrood"
+        },
+        {
+          "Count": 2,
+          "Card": "Scrollshift"
+        },
+        {
+          "Count": 4,
+          "Card": "Shiko, Paragon of the Way"
+        },
+        {
+          "Count": 1,
+          "Card": "Day of Judgment"
+        },
+        {
+          "Count": 4,
+          "Card": "Stock Up"
+        },
+        {
+          "Count": 3,
+          "Card": "Sunbillow Verge"
+        },
+        {
+          "Count": 2,
+          "Card": "Three Steps Ahead"
+        },
+        {
+          "Count": 1,
+          "Card": "Adarkar Wastes"
+        },
+        {
+          "Count": 1,
+          "Card": "Twinmaw Stormbrood"
+        },
+        {
+          "Count": 2,
+          "Card": "Split Up"
+        },
+        {
+          "Count": 3,
+          "Card": "Thundering Falls"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "The Filigree Sylex"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 2,
+          "Card": "Clarion Conqueror"
+        },
+        {
+          "Count": 1,
+          "Card": "Destroy Evil"
+        },
+        {
+          "Count": 1,
+          "Card": "Dispelling Exhale"
+        },
+        {
+          "Count": 1,
+          "Card": "Kutzil's Flanker"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 1,
+          "Card": "Magmatic Hellkite"
+        },
+        {
+          "Count": 1,
+          "Card": "Temporary Lockdown"
+        },
+        {
+          "Count": 2,
+          "Card": "Aven Interrupter"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "Player": "ashame",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 2,
+          "Card": "Cecil, Dark Knight"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 4,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 1,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 3,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        },
+        {
+          "Count": 2,
+          "Card": "Dispelling Exhale"
+        },
+        {
+          "Count": 4,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 4,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 3,
+          "Card": "Island"
+        },
+        {
+          "Count": 6,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 3,
+          "Card": "Azure Beastbinder"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Negate"
+        },
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 2,
+          "Card": "Gix's Command"
+        },
+        {
+          "Count": 1,
+          "Card": "Wail of War"
+        },
+        {
+          "Count": 3,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 3,
+          "Card": "Duress"
+        },
+        {
+          "Count": 2,
+          "Card": "Strategic Betrayal"
+        }
+      ]
+    },
+    {
+      "Player": "Okayasu",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Llanowar Wastes"
+        },
+        {
+          "Count": 2,
+          "Card": "Llanowar Elves"
+        },
+        {
+          "Count": 3,
+          "Card": "Cache Grab"
+        },
+        {
+          "Count": 1,
+          "Card": "Coati Scavenger"
+        },
+        {
+          "Count": 2,
+          "Card": "Disruptive Stormbrood"
+        },
+        {
+          "Count": 2,
+          "Card": "Dragon Sniper"
+        },
+        {
+          "Count": 1,
+          "Card": "Dredger's Insight"
+        },
+        {
+          "Count": 1,
+          "Card": "Great Arashin City"
+        },
+        {
+          "Count": 3,
+          "Card": "Forest"
+        },
+        {
+          "Count": 4,
+          "Card": "Haywire Mite"
+        },
+        {
+          "Count": 4,
+          "Card": "Insidious Roots"
+        },
+        {
+          "Count": 1,
+          "Card": "Forest"
+        },
+        {
+          "Count": 1,
+          "Card": "Forest"
+        },
+        {
+          "Count": 4,
+          "Card": "Molt Tender"
+        },
+        {
+          "Count": 2,
+          "Card": "Osteomancer Adept"
+        },
+        {
+          "Count": 1,
+          "Card": "Forest"
+        },
+        {
+          "Count": 2,
+          "Card": "Rubblebelt Maverick"
+        },
+        {
+          "Count": 2,
+          "Card": "Scavenging Ooze"
+        },
+        {
+          "Count": 4,
+          "Card": "Blooming Marsh"
+        },
+        {
+          "Count": 2,
+          "Card": "Town Greeter"
+        },
+        {
+          "Count": 4,
+          "Card": "Tyvar, Jubilant Brawler"
+        },
+        {
+          "Count": 1,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 4,
+          "Card": "Overlord of the Balemurk"
+        },
+        {
+          "Count": 1,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 4,
+          "Card": "Wastewood Verge"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Cankerbloom"
+        },
+        {
+          "Count": 1,
+          "Card": "Coati Scavenger"
+        },
+        {
+          "Count": 1,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 2,
+          "Card": "Dragon Sniper"
+        },
+        {
+          "Count": 1,
+          "Card": "Gastal Raider"
+        },
+        {
+          "Count": 1,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 2,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 1,
+          "Card": "Skyfisher Spider"
+        },
+        {
+          "Count": 2,
+          "Card": "Souls of the Lost"
+        },
+        {
+          "Count": 3,
+          "Card": "Dark Confidant"
+        }
+      ]
+    },
+    {
+      "Player": "Drugo",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 3,
+          "Card": "Bristly Bill, Spine Sower"
+        },
+        {
+          "Count": 6,
+          "Card": "Forest"
+        },
+        {
+          "Count": 3,
+          "Card": "Escape Tunnel"
+        },
+        {
+          "Count": 1,
+          "Card": "Forest"
+        },
+        {
+          "Count": 1,
+          "Card": "Forest"
+        },
+        {
+          "Count": 1,
+          "Card": "Forest"
+        },
+        {
+          "Count": 4,
+          "Card": "Fabled Passage"
+        },
+        {
+          "Count": 1,
+          "Card": "Royal Treatment"
+        },
+        {
+          "Count": 2,
+          "Card": "Sazh Katzroy"
+        },
+        {
+          "Count": 4,
+          "Card": "Sazh's Chocobo"
+        },
+        {
+          "Count": 1,
+          "Card": "Snakeskin Veil"
+        },
+        {
+          "Count": 4,
+          "Card": "Bushwhack"
+        },
+        {
+          "Count": 4,
+          "Card": "Tifa Lockhart"
+        },
+        {
+          "Count": 4,
+          "Card": "Traveling Chocobo"
+        },
+        {
+          "Count": 7,
+          "Card": "Forest"
+        },
+        {
+          "Count": 4,
+          "Card": "Llanowar Elves"
+        },
+        {
+          "Count": 4,
+          "Card": "Mossborn Hydra"
+        },
+        {
+          "Count": 3,
+          "Card": "Snakeskin Veil"
+        },
+        {
+          "Count": 3,
+          "Card": "Springbloom Druid"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Insidious Fungus"
+        },
+        {
+          "Count": 2,
+          "Card": "Wrenn and Realmbreaker"
+        },
+        {
+          "Count": 2,
+          "Card": "Pawpatch Recruit"
+        },
+        {
+          "Count": 1,
+          "Card": "Pick Your Poison"
+        },
+        {
+          "Count": 2,
+          "Card": "Sazh Katzroy"
+        },
+        {
+          "Count": 2,
+          "Card": "Soul-Guide Lantern"
+        },
+        {
+          "Count": 2,
+          "Card": "Scavenging Ooze"
+        },
+        {
+          "Count": 2,
+          "Card": "Nissa, Ascended Animist"
+        }
+      ]
+    },
+    {
+      "Player": "Univerce",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 3,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 4,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 2,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 3,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 3,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 1,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        },
+        {
+          "Count": 3,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 2,
+          "Card": "Spell Stutter"
+        },
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 3,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        },
+        {
+          "Count": 4,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 4,
+          "Card": "Island"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 3,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 2,
+          "Card": "Duress"
+        },
+        {
+          "Count": 2,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 1,
+          "Card": "Neutralize the Guards"
+        },
+        {
+          "Count": 2,
+          "Card": "Gix's Command"
+        },
+        {
+          "Count": 1,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 3,
+          "Card": "Strategic Betrayal"
+        }
+      ]
+    },
+    {
+      "Player": "IronBeagle",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 1,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 1,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 1,
+          "Card": "Island"
+        },
+        {
+          "Count": 1,
+          "Card": "Glacial Dragonhunt"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 1,
+          "Card": "Island"
+        },
+        {
+          "Count": 1,
+          "Card": "Kiora, the Rising Tide"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 1,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 1,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 2,
+          "Card": "Voldaren Thrillseeker"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 2,
+          "Card": "Broadside Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Obliterating Bolt"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Unable to Scream"
+        }
+      ]
+    },
+    {
+      "Player": "jackie42005",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 3,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 3,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 3,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 2,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 4,
+          "Card": "Proft's Eidetic Memory"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 1,
+          "Card": "Kiora, the Rising Tide"
+        },
+        {
+          "Count": 4,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 1,
+          "Card": "Glacial Dragonhunt"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Unable to Scream"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Obliterating Bolt"
+        },
+        {
+          "Count": 2,
+          "Card": "Broadside Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        }
+      ]
+    },
+    {
+      "Player": "RezerDeDog",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 3,
+          "Card": "Island"
+        },
+        {
+          "Count": 5,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        },
+        {
+          "Count": 2,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        },
+        {
+          "Count": 4,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 2,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 2,
+          "Card": "Dreams of Steel and Oil"
+        },
+        {
+          "Count": 2,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 4,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 1,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 2,
+          "Card": "Phantom Interference"
+        },
+        {
+          "Count": 1,
+          "Card": "Fountainport"
+        },
+        {
+          "Count": 3,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 3,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 2,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Negate"
+        },
+        {
+          "Count": 1,
+          "Card": "Duress"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 2,
+          "Card": "Sheoldred's Edict"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 1,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 2,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 1,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        }
+      ]
+    },
+    {
+      "Player": "Tyabelx",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        },
+        {
+          "Count": 4,
+          "Card": "Deep-Cavern Bat"
+        },
+        {
+          "Count": 4,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 2,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 1,
+          "Card": "Fountainport"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 3,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 4,
+          "Card": "Island"
+        },
+        {
+          "Count": 3,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 2,
+          "Card": "Phantom Interference"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred's Edict"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 4,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 2,
+          "Card": "Duress"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 2,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 1,
+          "Card": "Gix's Command"
+        },
+        {
+          "Count": 1,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 2,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        }
+      ]
+    },
+    {
+      "Player": "DskBayWolf",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 4,
+          "Card": "Astrologian's Planisphere"
+        },
+        {
+          "Count": 4,
+          "Card": "Cloud, Midgar Mercenary"
+        },
+        {
+          "Count": 2,
+          "Card": "Assimilation Aegis"
+        },
+        {
+          "Count": 3,
+          "Card": "Nurturing Pixie"
+        },
+        {
+          "Count": 4,
+          "Card": "Stormchaser's Talent"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 4,
+          "Card": "Opt"
+        },
+        {
+          "Count": 4,
+          "Card": "Sleight of Hand"
+        },
+        {
+          "Count": 4,
+          "Card": "Stock Up"
+        },
+        {
+          "Count": 4,
+          "Card": "Adarkar Wastes"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodfarm Verge"
+        },
+        {
+          "Count": 5,
+          "Card": "Island"
+        },
+        {
+          "Count": 2,
+          "Card": "Meticulous Archive"
+        },
+        {
+          "Count": 1,
+          "Card": "Plains"
+        },
+        {
+          "Count": 2,
+          "Card": "Starting Town"
+        },
+        {
+          "Count": 4,
+          "Card": "Seachrome Coast"
+        },
+        {
+          "Count": 4,
+          "Card": "Sheltered by Ghosts"
+        },
+        {
+          "Count": 1,
+          "Card": "Magic Damper"
+        },
+        {
+          "Count": 1,
+          "Card": "Jace Reawakened"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 3,
+          "Card": "Elspeth's Smite"
+        },
+        {
+          "Count": 2,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 1,
+          "Card": "Devout Decree"
+        },
+        {
+          "Count": 1,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 2,
+          "Card": "Negate"
+        },
+        {
+          "Count": 1,
+          "Card": "Get Lost"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 2,
+          "Card": "Exorcise"
+        },
+        {
+          "Count": 1,
+          "Card": "Agatha's Soul Cauldron"
+        }
+      ]
+    },
+    {
+      "Player": "Predrag133",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 1,
+          "Card": "Haywire Mite"
+        },
+        {
+          "Count": 2,
+          "Card": "Plains"
+        },
+        {
+          "Count": 1,
+          "Card": "Nurturing Pixie"
+        },
+        {
+          "Count": 1,
+          "Card": "Forest"
+        },
+        {
+          "Count": 3,
+          "Card": "Voice of Victory"
+        },
+        {
+          "Count": 3,
+          "Card": "Forest"
+        },
+        {
+          "Count": 1,
+          "Card": "Elspeth, Storm Slayer"
+        },
+        {
+          "Count": 1,
+          "Card": "Elspeth, Storm Slayer"
+        },
+        {
+          "Count": 2,
+          "Card": "Get Lost"
+        },
+        {
+          "Count": 4,
+          "Card": "Collector's Cage"
+        },
+        {
+          "Count": 2,
+          "Card": "Dusk Rose Reliquary"
+        },
+        {
+          "Count": 4,
+          "Card": "Overlord of the Mistmoors"
+        },
+        {
+          "Count": 1,
+          "Card": "Dion, Bahamut's Dominant"
+        },
+        {
+          "Count": 4,
+          "Card": "Brightglass Gearhulk"
+        },
+        {
+          "Count": 4,
+          "Card": "Enduring Innocence"
+        },
+        {
+          "Count": 4,
+          "Card": "Brushland"
+        },
+        {
+          "Count": 3,
+          "Card": "Pawpatch Recruit"
+        },
+        {
+          "Count": 3,
+          "Card": "Mirrex"
+        },
+        {
+          "Count": 4,
+          "Card": "Llanowar Elves"
+        },
+        {
+          "Count": 4,
+          "Card": "Hushwood Verge"
+        },
+        {
+          "Count": 1,
+          "Card": "Plains"
+        },
+        {
+          "Count": 4,
+          "Card": "Razorverge Thicket"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Prairie"
+        },
+        {
+          "Count": 1,
+          "Card": "Soul-Guide Lantern"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Elesh Norn, Mother of Machines"
+        },
+        {
+          "Count": 1,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 1,
+          "Card": "Dusk Rose Reliquary"
+        },
+        {
+          "Count": 2,
+          "Card": "Beza, the Bounding Spring"
+        },
+        {
+          "Count": 1,
+          "Card": "Voice of Victory"
+        },
+        {
+          "Count": 1,
+          "Card": "Loran of the Third Path"
+        },
+        {
+          "Count": 1,
+          "Card": "Scavenging Ooze"
+        },
+        {
+          "Count": 1,
+          "Card": "Authority of the Consuls"
+        },
+        {
+          "Count": 1,
+          "Card": "Elesh Norn, Mother of Machines"
+        },
+        {
+          "Count": 2,
+          "Card": "Aven Interrupter"
+        },
+        {
+          "Count": 1,
+          "Card": "Soul-Guide Lantern"
+        },
+        {
+          "Count": 1,
+          "Card": "Elesh Norn, Mother of Machines"
+        },
+        {
+          "Count": 1,
+          "Card": "Haywire Mite"
+        }
+      ]
+    },
+    {
+      "Player": "VitorCarvalho01",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 3,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 4,
+          "Card": "Deep-Cavern Bat"
+        },
+        {
+          "Count": 4,
+          "Card": "Enduring Curiosity"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 4,
+          "Card": "Gloomlake Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Floodpits Drowner"
+        },
+        {
+          "Count": 2,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 3,
+          "Card": "Go for the Throat"
+        },
+        {
+          "Count": 2,
+          "Card": "Restless Reef"
+        },
+        {
+          "Count": 2,
+          "Card": "Phantom Interference"
+        },
+        {
+          "Count": 4,
+          "Card": "Swamp"
+        },
+        {
+          "Count": 1,
+          "Card": "Nowhere to Run"
+        },
+        {
+          "Count": 4,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Spyglass Siren"
+        },
+        {
+          "Count": 4,
+          "Card": "Darkslick Shores"
+        },
+        {
+          "Count": 3,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 4,
+          "Card": "Underground River"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 3,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 2,
+          "Card": "Tishana's Tidebinder"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 1,
+          "Card": "Anoint with Affliction"
+        },
+        {
+          "Count": 1,
+          "Card": "Cut Down"
+        },
+        {
+          "Count": 1,
+          "Card": "Negate"
+        },
+        {
+          "Count": 1,
+          "Card": "Ghost Vacuum"
+        },
+        {
+          "Count": 2,
+          "Card": "Gix's Command"
+        },
+        {
+          "Count": 1,
+          "Card": "Intimidation Tactics"
+        },
+        {
+          "Count": 1,
+          "Card": "Preacher of the Schism"
+        },
+        {
+          "Count": 1,
+          "Card": "Tishana's Tidebinder"
+        },
+        {
+          "Count": 1,
+          "Card": "Kaito, Bane of Nightmares"
+        },
+        {
+          "Count": 1,
+          "Card": "Faebloom Trick"
+        },
+        {
+          "Count": 1,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 1,
+          "Card": "Sheoldred, the Apocalypse"
+        },
+        {
+          "Count": 2,
+          "Card": "Duress"
+        }
+      ]
+    },
+    {
+      "Player": "_Shikamaru_",
+      "Date": "2025-07-21T00:00:00",
+      "Result": "",
+      "AnchorUri": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-2112803723",
+      "Mainboard": [
+        {
+          "Count": 2,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 4,
+          "Card": "Agatha's Soul Cauldron"
+        },
+        {
+          "Count": 4,
+          "Card": "Fear of Missing Out"
+        },
+        {
+          "Count": 1,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 3,
+          "Card": "Into the Flood Maw"
+        },
+        {
+          "Count": 1,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Marauding Mako"
+        },
+        {
+          "Count": 1,
+          "Card": "Island"
+        },
+        {
+          "Count": 4,
+          "Card": "Spirebluff Canal"
+        },
+        {
+          "Count": 3,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 1,
+          "Card": "Island"
+        },
+        {
+          "Count": 2,
+          "Card": "Soulstone Sanctuary"
+        },
+        {
+          "Count": 4,
+          "Card": "Vivi Ornitier"
+        },
+        {
+          "Count": 3,
+          "Card": "Tersa Lightshatter"
+        },
+        {
+          "Count": 2,
+          "Card": "Thundering Falls"
+        },
+        {
+          "Count": 2,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 3,
+          "Card": "Voldaren Thrillseeker"
+        },
+        {
+          "Count": 4,
+          "Card": "Winternight Stories"
+        },
+        {
+          "Count": 1,
+          "Card": "Mountain"
+        },
+        {
+          "Count": 4,
+          "Card": "Shivan Reef"
+        },
+        {
+          "Count": 2,
+          "Card": "Torch the Tower"
+        },
+        {
+          "Count": 1,
+          "Card": "Riverpyre Verge"
+        },
+        {
+          "Count": 4,
+          "Card": "Proft's Eidetic Memory"
+        }
+      ],
+      "Sideboard": [
+        {
+          "Count": 2,
+          "Card": "Spell Pierce"
+        },
+        {
+          "Count": 2,
+          "Card": "Disdainful Stroke"
+        },
+        {
+          "Count": 2,
+          "Card": "Faerie Mastermind"
+        },
+        {
+          "Count": 2,
+          "Card": "Fire Magic"
+        },
+        {
+          "Count": 1,
+          "Card": "Lithomantic Barrage"
+        },
+        {
+          "Count": 1,
+          "Card": "Abrade"
+        },
+        {
+          "Count": 1,
+          "Card": "Twinmaw Stormbrood"
+        },
+        {
+          "Count": 2,
+          "Card": "Ral, Crackling Wit"
+        },
+        {
+          "Count": 2,
+          "Card": "Obliterating Bolt"
+        }
+      ]
+    }
+  ],
+  "Standings": [
+    {
+      "Player": "DskBayWolf",
+      "Points": 13,
+      "Wins": 4,
+      "Losses": 1,
+      "Draws": 1
+    },
+    {
+      "Player": "_Shikamaru_",
+      "Points": 13,
+      "Wins": 4,
+      "Losses": 1,
+      "Draws": 1
+    },
+    {
+      "Player": "andrw1232",
+      "Points": 1,
+      "Wins": 0,
+      "Losses": 1,
+      "Draws": 1
+    },
+    {
+      "Player": "plaza23",
+      "Points": 1,
+      "Wins": 0,
+      "Losses": 2,
+      "Draws": 1
+    },
+    {
+      "Player": "pat0presidente",
+      "Points": 7,
+      "Wins": 2,
+      "Losses": 3,
+      "Draws": 1
+    },
+    {
+      "Player": "sultai4lyfe",
+      "Points": 17,
+      "Wins": 5,
+      "Losses": 2,
+      "Draws": 2
+    },
+    {
+      "Player": "Wizard_2002",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 1,
+      "Draws": 0
+    },
+    {
+      "Player": "Ivan_Draw_Go",
+      "Points": 12,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "Capitano_CL",
+      "Points": 12,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "Okayasu",
+      "Points": 13,
+      "Wins": 4,
+      "Losses": 1,
+      "Draws": 1
+    },
+    {
+      "Player": "fireshoes",
+      "Points": 1,
+      "Wins": 0,
+      "Losses": 2,
+      "Draws": 1
+    },
+    {
+      "Player": "makusong24",
+      "Points": 11,
+      "Wins": 3,
+      "Losses": 1,
+      "Draws": 2
+    },
+    {
+      "Player": "gazmon48",
+      "Points": 15,
+      "Wins": 5,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "ashame",
+      "Points": 12,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "karatedom",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 1,
+      "Draws": 0
+    },
+    {
+      "Player": "hermanomlg",
+      "Points": 3,
+      "Wins": 1,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "StickyWicket",
+      "Points": 12,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "valentinaaaa",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "happypster",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "VitorCarvalho01",
+      "Points": 13,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 1
+    },
+    {
+      "Player": "Hernan72",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "Dark_Shine",
+      "Points": 10,
+      "Wins": 3,
+      "Losses": 2,
+      "Draws": 1
+    },
+    {
+      "Player": "pokerswizard",
+      "Points": 6,
+      "Wins": 2,
+      "Losses": 4,
+      "Draws": 0
+    },
+    {
+      "Player": "RileyLBJ",
+      "Points": 6,
+      "Wins": 2,
+      "Losses": 4,
+      "Draws": 0
+    },
+    {
+      "Player": "MJ_23",
+      "Points": 6,
+      "Wins": 2,
+      "Losses": 4,
+      "Draws": 0
+    },
+    {
+      "Player": "termidor",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "O_danielakos",
+      "Points": 18,
+      "Wins": 6,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "YaGirlBryn",
+      "Points": 3,
+      "Wins": 1,
+      "Losses": 4,
+      "Draws": 0
+    },
+    {
+      "Player": "albertoSD",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 1,
+      "Draws": 0
+    },
+    {
+      "Player": "Lord_Beerus",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "Dr4ken",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "IronBeagle",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "derlumberzack",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "Tyabelx",
+      "Points": 12,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "L1X0",
+      "Points": 12,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "Drugo",
+      "Points": 10,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 1
+    },
+    {
+      "Player": "Lexmart",
+      "Points": 3,
+      "Wins": 1,
+      "Losses": 4,
+      "Draws": 0
+    },
+    {
+      "Player": "xfile",
+      "Points": 15,
+      "Wins": 5,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "Raydan",
+      "Points": 6,
+      "Wins": 2,
+      "Losses": 4,
+      "Draws": 0
+    },
+    {
+      "Player": "Kampo",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "Ale_Mtg",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "TheKingJijah",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "ShadowTitan1",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "deleon91",
+      "Points": 1,
+      "Wins": 0,
+      "Losses": 3,
+      "Draws": 1
+    },
+    {
+      "Player": "Azja",
+      "Points": 12,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "InterludeShadow",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "qbturtle15",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "WadeB",
+      "Points": 6,
+      "Wins": 2,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "etoustar",
+      "Points": 3,
+      "Wins": 1,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "ZendicardGames",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "jackie42005",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "wcl",
+      "Points": 0,
+      "Wins": 0,
+      "Losses": 5,
+      "Draws": 0
+    },
+    {
+      "Player": "SoulStrong",
+      "Points": 27,
+      "Wins": 9,
+      "Losses": 0,
+      "Draws": 0
+    },
+    {
+      "Player": "Predrag133",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "peter780108",
+      "Points": 4,
+      "Wins": 1,
+      "Losses": 4,
+      "Draws": 1
+    },
+    {
+      "Player": "Univerce",
+      "Points": 18,
+      "Wins": 6,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "unagieel",
+      "Points": 3,
+      "Wins": 1,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "HouseOfManaMTG",
+      "Points": 10,
+      "Wins": 3,
+      "Losses": 2,
+      "Draws": 1
+    },
+    {
+      "Player": "Brunes",
+      "Points": 3,
+      "Wins": 1,
+      "Losses": 4,
+      "Draws": 0
+    },
+    {
+      "Player": "Bartowski",
+      "Points": 3,
+      "Wins": 1,
+      "Losses": 4,
+      "Draws": 0
+    },
+    {
+      "Player": "Sapoa",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    },
+    {
+      "Player": "RezerDeDog",
+      "Points": 12,
+      "Wins": 4,
+      "Losses": 2,
+      "Draws": 0
+    },
+    {
+      "Player": "claudioh",
+      "Points": 1,
+      "Wins": 0,
+      "Losses": 1,
+      "Draws": 1
+    },
+    {
+      "Player": "bless_von",
+      "Points": 9,
+      "Wins": 3,
+      "Losses": 3,
+      "Draws": 0
+    }
+  ],
+  "Rounds": [
+    {
+      "RoundName": "Round 1",
+      "Matches": [
+        {
+          "Player1": "DskBayWolf",
+          "Player2": "_Shikamaru_",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "andrw1232",
+          "Player2": "plaza23",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "sultai4lyfe",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "Wizard_2002",
+          "Player2": "Ivan_Draw_Go",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Capitano_CL",
+          "Player2": "Okayasu",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "fireshoes",
+          "Player2": "makusong24",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "gazmon48",
+          "Player2": "ashame",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "karatedom",
+          "Player2": "hermanomlg",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "StickyWicket",
+          "Player2": "valentinaaaa",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "happypster",
+          "Player2": "VitorCarvalho01",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Hernan72",
+          "Player2": "Dark_Shine",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "RileyLBJ",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "termidor",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "O_danielakos",
+          "Player2": "YaGirlBryn",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "albertoSD",
+          "Player2": "Lord_Beerus",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Dr4ken",
+          "Player2": "IronBeagle",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "derlumberzack",
+          "Player2": "Tyabelx",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "L1X0",
+          "Player2": "Drugo",
+          "Result": "1-2-0"
+        },
+        {
+          "Player1": "Lexmart",
+          "Player2": "xfile",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Raydan",
+          "Player2": "Kampo",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Ale_Mtg",
+          "Player2": "TheKingJijah",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ShadowTitan1",
+          "Player2": "deleon91",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Azja",
+          "Player2": "InterludeShadow",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "qbturtle15",
+          "Player2": "WadeB",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "etoustar",
+          "Player2": "ZendicardGames",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "jackie42005",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "SoulStrong",
+          "Player2": "Predrag133",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "peter780108",
+          "Player2": "Univerce",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "unagieel",
+          "Player2": "HouseOfManaMTG",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Brunes",
+          "Player2": "Bartowski",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Sapoa",
+          "Player2": "RezerDeDog",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "claudioh",
+          "Player2": "bless_von",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 2",
+      "Matches": [
+        {
+          "Player1": "Kampo",
+          "Player2": "etoustar",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Univerce",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Hernan72",
+          "Player2": "HouseOfManaMTG",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "andrw1232",
+          "Player2": "valentinaaaa",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "termidor",
+          "Player2": "_Shikamaru_",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "happypster",
+          "Player2": "Lexmart",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "hermanomlg",
+          "Player2": "Azja",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ShadowTitan1",
+          "Player2": "Drugo",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "makusong24",
+          "Player2": "xfile",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "RileyLBJ",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "L1X0",
+          "Player2": "WadeB",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Raydan",
+          "Player2": "Predrag133",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Capitano_CL",
+          "Player2": "RezerDeDog",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "SoulStrong",
+          "Player2": "Tyabelx",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Dr4ken",
+          "Player2": "TheKingJijah",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "derlumberzack",
+          "Player2": "InterludeShadow",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "StickyWicket",
+          "Player2": "gazmon48",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ashame",
+          "Player2": "YaGirlBryn",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "fireshoes",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Ivan_Draw_Go",
+          "Player2": "IronBeagle",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "DskBayWolf",
+          "Player2": "VitorCarvalho01",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "sultai4lyfe",
+          "Player2": "Dark_Shine",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "qbturtle15",
+          "Player2": "unagieel",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "Sapoa",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "claudioh",
+          "Player2": "deleon91",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "Ale_Mtg",
+          "Player2": "Bartowski",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "ZendicardGames",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "peter780108",
+          "Player2": "Okayasu",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "O_danielakos",
+          "Player2": "jackie42005",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "bless_von",
+          "Player2": "plaza23",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 3",
+      "Matches": [
+        {
+          "Player1": "etoustar",
+          "Player2": "DskBayWolf",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Ivan_Draw_Go",
+          "Player2": "RileyLBJ",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "WadeB",
+          "Player2": "valentinaaaa",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "qbturtle15",
+          "Player2": "gazmon48",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "hermanomlg",
+          "Player2": "Dr4ken",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "happypster",
+          "Player2": "InterludeShadow",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ShadowTitan1",
+          "Player2": "VitorCarvalho01",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "peter780108",
+          "Player2": "Ale_Mtg",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "O_danielakos",
+          "Player2": "xfile",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "deleon91",
+          "Player2": "YaGirlBryn",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "HouseOfManaMTG",
+          "Player2": "plaza23",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "sultai4lyfe",
+          "Player2": "Lord_Beerus",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "L1X0",
+          "Player2": "Lexmart",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ashame",
+          "Player2": "_Shikamaru_",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "RezerDeDog",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "makusong24",
+          "Player2": "Brunes",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Drugo",
+          "Player2": "jackie42005",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "Azja",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "StickyWicket",
+          "Player2": "Dark_Shine",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Univerce",
+          "Player2": "Bartowski",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "unagieel",
+          "Player2": "Tyabelx",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "fireshoes",
+          "Player2": "Predrag133",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Sapoa",
+          "Player2": "ZendicardGames",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "Okayasu",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "bless_von",
+          "Player2": "Kampo",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Capitano_CL",
+          "Player2": "Raydan",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "derlumberzack",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "SoulStrong",
+          "Player2": "IronBeagle",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 4",
+      "Matches": [
+        {
+          "Player1": "bless_von",
+          "Player2": "xfile",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "SoulStrong",
+          "Player2": "Ale_Mtg",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Drugo",
+          "Player2": "_Shikamaru_",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "StickyWicket",
+          "Player2": "VitorCarvalho01",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "gazmon48",
+          "Player2": "Kampo",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "WadeB",
+          "Player2": "Tyabelx",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "RileyLBJ",
+          "Player2": "Brunes",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "L1X0",
+          "Player2": "Predrag133",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "O_danielakos",
+          "Player2": "Azja",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Lexmart",
+          "Player2": "hermanomlg",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "etoustar",
+          "Player2": "RezerDeDog",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ashame",
+          "Player2": "Bartowski",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "HouseOfManaMTG",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Raydan",
+          "Player2": "InterludeShadow",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "unagieel",
+          "Player2": "jackie42005",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "YaGirlBryn",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "ZendicardGames",
+          "Player2": "Univerce",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "happypster",
+          "Player2": "Okayasu",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "qbturtle15",
+          "Player2": "makusong24",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Ivan_Draw_Go",
+          "Player2": "Dr4ken",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "sultai4lyfe",
+          "Player2": "ShadowTitan1",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "deleon91",
+          "Player2": "valentinaaaa",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "Dark_Shine",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Capitano_CL",
+          "Player2": "peter780108",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "IronBeagle",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Sapoa",
+          "Player2": "DskBayWolf",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 5",
+      "Matches": [
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "Univerce",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Dark_Shine",
+          "Player2": "YaGirlBryn",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "gazmon48",
+          "Player2": "Azja",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Capitano_CL",
+          "Player2": "DskBayWolf",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "SoulStrong",
+          "Player2": "sultai4lyfe",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "O_danielakos",
+          "Player2": "ShadowTitan1",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "StickyWicket",
+          "Player2": "Dr4ken",
+          "Result": "2-1-0"
+        },
+        {
+          "Player1": "peter780108",
+          "Player2": "valentinaaaa",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Ivan_Draw_Go",
+          "Player2": "Drugo",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "InterludeShadow",
+          "Player2": "ZendicardGames",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "bless_von",
+          "Player2": "jackie42005",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "makusong24",
+          "Player2": "HouseOfManaMTG",
+          "Result": "0-0-0"
+        },
+        {
+          "Player1": "qbturtle15",
+          "Player2": "_Shikamaru_",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "L1X0",
+          "Player2": "MJ_23",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "WadeB",
+          "Player2": "ashame",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "happypster",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "RileyLBJ",
+          "Player2": "Predrag133",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Raydan",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Okayasu",
+          "Player2": "VitorCarvalho01",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "IronBeagle",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Brunes",
+          "Player2": "RezerDeDog",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Sapoa",
+          "Player2": "Bartowski",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "Ale_Mtg",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Kampo",
+          "Player2": "Tyabelx",
+          "Result": "0-2-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 6",
+      "Matches": [
+        {
+          "Player1": "ShadowTitan1",
+          "Player2": "Ivan_Draw_Go",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "L1X0",
+          "Player2": "Ale_Mtg",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Okayasu",
+          "Player2": "valentinaaaa",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "makusong24",
+          "Player2": "Kampo",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "qbturtle15",
+          "Player2": "Raydan",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Lord_Beerus",
+          "Player2": "RezerDeDog",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "HouseOfManaMTG",
+          "Player2": "Univerce",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "pat0presidente",
+          "Player2": "jackie42005",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "StickyWicket",
+          "Player2": "bless_von",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "InterludeShadow",
+          "Player2": "_Shikamaru_",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "RileyLBJ",
+          "Player2": "wcl",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Brunes",
+          "Player2": "Dark_Shine",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Lexmart",
+          "Player2": "ZendicardGames",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "peter780108",
+          "Player2": "Sapoa",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "SoulStrong",
+          "Player2": "gazmon48",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "happypster",
+          "Player2": "DskBayWolf",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "MJ_23",
+          "Player2": "Predrag133",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "Capitano_CL",
+          "Player2": "O_danielakos",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "sultai4lyfe",
+          "Player2": "Drugo",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "pokerswizard",
+          "Player2": "Dr4ken",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "xfile",
+          "Player2": "Azja",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "Tyabelx",
+          "Player2": "VitorCarvalho01",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "ashame",
+          "Player2": "IronBeagle",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 7",
+      "Matches": [
+        {
+          "Player1": "sultai4lyfe",
+          "Player2": "VitorCarvalho01",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "SoulStrong",
+          "Player2": "Drugo",
+          "Result": "2-0-0"
+        },
+        {
+          "Player1": "gazmon48",
+          "Player2": "Univerce",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "O_danielakos",
+          "Player2": "xfile",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 8",
+      "Matches": [
+        {
+          "Player1": "O_danielakos",
+          "Player2": "SoulStrong",
+          "Result": "0-2-0"
+        },
+        {
+          "Player1": "sultai4lyfe",
+          "Player2": "Univerce",
+          "Result": "2-0-0"
+        }
+      ]
+    },
+    {
+      "RoundName": "Round 9",
+      "Matches": [
+        {
+          "Player1": "SoulStrong",
+          "Player2": "sultai4lyfe",
+          "Result": "2-0-0"
+        }
+      ]
+    }
+  ]
+}
