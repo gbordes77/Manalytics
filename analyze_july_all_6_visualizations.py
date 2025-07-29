@@ -496,12 +496,17 @@ class CompleteJulyAnalyzer:
         for arch in archetypes:
             color_codes = get_archetype_colors(arch)
             if color_codes:
-                # Blend colors if multiple
+                # Use first color or blend if multiple
                 if len(color_codes) == 1:
                     colors.append(MTG_COLORS.get(color_codes[0], '#666'))
+                elif len(color_codes) == 2:
+                    # Simple blend for 2 colors
+                    c1 = MTG_COLORS.get(color_codes[0], '#666')
+                    c2 = MTG_COLORS.get(color_codes[1], '#666')
+                    colors.append(blend_colors(c1, c2))
                 else:
-                    blended = blend_colors([MTG_COLORS.get(c, '#666') for c in color_codes])
-                    colors.append(blended)
+                    # For 3+ colors, use the first one
+                    colors.append(MTG_COLORS.get(color_codes[0], '#666'))
             else:
                 colors.append('#666')
         
@@ -548,12 +553,17 @@ class CompleteJulyAnalyzer:
         for arch in archetypes:
             color_codes = get_archetype_colors(arch)
             if color_codes:
-                # Blend colors if multiple
+                # Use first color or blend if multiple
                 if len(color_codes) == 1:
                     colors.append(MTG_COLORS.get(color_codes[0], '#666'))
+                elif len(color_codes) == 2:
+                    # Simple blend for 2 colors
+                    c1 = MTG_COLORS.get(color_codes[0], '#666')
+                    c2 = MTG_COLORS.get(color_codes[1], '#666')
+                    colors.append(blend_colors(c1, c2))
                 else:
-                    blended = blend_colors([MTG_COLORS.get(c, '#666') for c in color_codes])
-                    colors.append(blended)
+                    # For 3+ colors, use the first one
+                    colors.append(MTG_COLORS.get(color_codes[0], '#666'))
             else:
                 colors.append('#666')
         
@@ -712,12 +722,17 @@ class CompleteJulyAnalyzer:
         for arch in labels[:-1]:
             color_codes = get_archetype_colors(arch)
             if color_codes:
-                # Blend colors if multiple
+                # Use first color or blend if multiple
                 if len(color_codes) == 1:
                     colors.append(MTG_COLORS.get(color_codes[0], '#666'))
+                elif len(color_codes) == 2:
+                    # Simple blend for 2 colors
+                    c1 = MTG_COLORS.get(color_codes[0], '#666')
+                    c2 = MTG_COLORS.get(color_codes[1], '#666')
+                    colors.append(blend_colors(c1, c2))
                 else:
-                    blended = blend_colors([MTG_COLORS.get(c, '#666') for c in color_codes])
-                    colors.append(blended)
+                    # For 3+ colors, use the first one
+                    colors.append(MTG_COLORS.get(color_codes[0], '#666'))
             else:
                 colors.append('#666')
         colors.append('#808080')  # Gray for others
@@ -762,11 +777,17 @@ class CompleteJulyAnalyzer:
             
             color_codes = get_archetype_colors(arch)
             if color_codes:
-                # Blend colors if multiple
+                # Use first color or blend if multiple
                 if len(color_codes) == 1:
                     color = MTG_COLORS.get(color_codes[0], '#666')
+                elif len(color_codes) == 2:
+                    # Simple blend for 2 colors
+                    c1 = MTG_COLORS.get(color_codes[0], '#666')
+                    c2 = MTG_COLORS.get(color_codes[1], '#666')
+                    color = blend_colors(c1, c2)
                 else:
-                    color = blend_colors([MTG_COLORS.get(c, '#666') for c in color_codes])
+                    # For 3+ colors, use the first one
+                    color = MTG_COLORS.get(color_codes[0], '#666')
             else:
                 color = '#666'
             
