@@ -1,5 +1,26 @@
 # 🎯 **Instructions Spécifiques pour Claude - Projet Manalytics**
 
+> **🤖 RÔLE DE CE FICHIER CLAUDE.md**
+> 
+> Ce fichier contient les **instructions spécifiques pour les assistants IA** travaillant sur le projet.
+> 
+> **CE QUI DOIT ÊTRE DANS CE FICHIER :**
+> - ✅ État actuel détaillé du développement
+> - ✅ Règles de travail spécifiques (auto-commit, ouverture auto, etc.)
+> - ✅ Contexte technique approfondi du projet
+> - ✅ Instructions sur comment modifier le code
+> - ✅ Méthodologies et standards à respecter
+> - ✅ Historique des décisions importantes
+> 
+> **CE QUI NE DOIT PAS ÊTRE ICI :**
+> - ❌ Documentation publique générale
+> - ❌ Instructions d'installation basiques
+> - ❌ Informations destinées aux utilisateurs finaux
+> 
+> ➡️ **Pour la documentation publique, voir README.md**
+> 
+> ---
+
 > **"Chaque visualisation doit raconter une histoire. Pas de graphs pour faire joli - uniquement des insights actionnables pour gagner des tournois."**
 > 
 > **Chaque visualisation doit apporter de la valeur compétitive réelle.**

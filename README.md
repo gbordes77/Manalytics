@@ -1,5 +1,27 @@
 # 🎯 Manalytics - MTG Tournament Analysis Platform
 
+> **📖 RÔLE DE CE FICHIER README.md**
+> 
+> Ce fichier est la **documentation publique** du projet, destinée aux :
+> - **Développeurs externes** qui veulent utiliser ou contribuer au projet
+> - **Utilisateurs** qui veulent installer et utiliser l'application
+> - **Visiteurs GitHub** qui découvrent le projet
+> 
+> **CE QUI DOIT ÊTRE DANS CE FICHIER :**
+> - ✅ Description du projet et ses fonctionnalités
+> - ✅ Instructions d'installation et d'utilisation
+> - ✅ Documentation de l'API publique
+> - ✅ Guide de contribution
+> - ✅ Informations techniques générales
+> 
+> **CE QUI NE DOIT PAS ÊTRE ICI :**
+> - ❌ Instructions spécifiques pour les assistants IA
+> - ❌ État détaillé du développement en cours
+> - ❌ Règles internes de travail
+> - ❌ Informations sensibles ou temporaires
+> 
+> ➡️ **Pour les instructions IA, voir CLAUDE.md**
+
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
