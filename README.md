@@ -27,11 +27,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Version**: 3.3.0  
-**Status**: 🔧 Active Development (Pipeline Integration)
+**Status**: 🚧 Major Restructuring (Architecture Consolidation)
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg. Features the **Jiliac Method** for accurate metagame analysis.
 
-> **🚧 Current Focus**: Integration with the MTG community pipeline (MTGODecklistCache → MTGOArchetypeParser → R-Meta-Analysis)
+> **🚧 Current Focus**: Major architecture restructuring to consolidate 36+ scattered scripts into a unified, maintainable codebase. This will enable proper investigation of the Jiliac pipeline integration.
 
 ## 📚 Documentation
 
@@ -103,30 +103,28 @@ Visit http://localhost:8000/docs for API documentation.
 
 ## 🎮 Usage
 
-### Scraping Tournaments
+> **⚠️ Note**: The project is currently undergoing major restructuring. The commands below represent the current temporary interface. A unified CLI is being developed.
+
+### Current Usage (Temporary)
 
 ```bash
 # Scrape both MTGO and Melee tournaments
 python scrape_all.py --format standard --days 30
 
-# Process and analyze data
-python scripts/process_all_standard_data.py
+# Analyze data using Jiliac method
+python analyze_july_jiliac_method.py
 
 # Generate visualizations
 python visualize_standard.py
 ```
 
-### Using the CLI
+### Future CLI (In Development)
 
 ```bash
-# Start the API server
-manalytics serve
-
-# Run a complete pipeline
-manalytics run --format standard --days 7
-
-# Generate analysis report
-manalytics analyze --format standard --output report.html
+# Unified command interface (coming soon)
+manalytics scrape --format standard --days 30
+manalytics analyze --method jiliac --period july_1_21
+manalytics visualize --format html --output report.html
 ```
 
 ### Running Tests
@@ -157,20 +155,35 @@ make check
 
 ## 📁 Project Structure
 
+> **⚠️ Architecture Restructuring in Progress**: The project structure is being consolidated from 36+ scattered scripts into a unified architecture.
+
+### Current Structure (Temporary)
 ```
 manalytics/
-├── src/manalytics/        # Main application code
-│   ├── scrapers/          # MTGO & Melee scrapers
-│   ├── parsers/           # Archetype detection
-│   ├── cache/             # Cache system
-│   ├── analyzers/         # Meta analysis
-│   ├── visualizers/       # Chart generation
-│   ├── pipeline/          # Orchestration
-│   └── api/               # FastAPI endpoints
-├── data/
-│   ├── raw/               # Raw tournament data
-│   └── cache/             # Processed data
-├── scripts/               # Utility scripts
+├── src/manalytics/        # Modern architecture (partial)
+├── analyze_*.py           # 21 analysis scripts (being consolidated)
+├── scrape_*.py            # 15 scraping scripts (being consolidated)
+├── visualize_*.py         # Visualization scripts (being consolidated)
+├── data/                  # Tournament data and cache
+├── docs/                  # Documentation
+└── _archive/              # Archived scripts (post-restructuring)
+```
+
+### Target Structure (In Development)
+```
+manalytics/
+├── src/manalytics/        # Unified main package
+│   ├── cli/               # Single entry points
+│   │   ├── analyze.py     # Unified analysis command
+│   │   ├── scrape.py      # Unified scraping command
+│   │   └── visualize.py   # Unified visualization command
+│   ├── core/              # Core business logic
+│   │   ├── analyzers/     # Analysis engines
+│   │   ├── scrapers/      # Data collection
+│   │   └── visualizers/   # Chart generation
+│   └── utils/             # Shared utilities
+├── investigation/         # Jiliac pipeline research
+├── data/                  # Data storage
 ├── docs/                  # Documentation
 └── tests/                 # Test suite
 ```
@@ -220,6 +233,24 @@ The application will be available at:
 
 Full documentation at `/api/docs` when running.
 
+## 🚧 Current Development Status
+
+### Architecture Restructuring (Phase 7)
+
+The project is currently undergoing a major restructuring to address architectural inconsistencies:
+
+- **Problem Identified**: 36+ scattered scripts (21 analysis + 15 scraping) with conflicting logic
+- **Solution**: Consolidation into unified architecture with single entry points
+- **Progress**: Specification complete, implementation in progress
+- **Timeline**: Restructuring before resuming Jiliac pipeline investigation
+
+### What This Means for Contributors
+
+- **New Features**: Please wait for restructuring completion
+- **Bug Fixes**: Focus on critical issues only
+- **Documentation**: Updates welcome, especially for the new architecture
+- **Testing**: Help validate that consolidated scripts produce consistent results
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -228,16 +259,26 @@ Full documentation at `/api/docs` when running.
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+> **Note**: During restructuring, please coordinate with maintainers before starting major work to avoid conflicts.
+
 ## 📚 Additional Documentation
 
-For detailed documentation, see:
-- [Scraping Guide](docs/SCRAPERS_COMPLETE_GUIDE.md) - Complete scraping documentation
-- [API Reference](docs/API_REFERENCE.md) - Full API documentation
-- [Development Guide](docs/DEVELOPMENT_GUIDE.md) - Contributing guidelines
+### Core Documentation
 - [Jiliac Method Reference](docs/JILIAC_METHOD_REFERENCE.md) - Complete methodology documentation
+- [Scraping Guide](docs/SCRAPERS_COMPLETE_GUIDE.md) - Complete scraping documentation
+- [Development Guide](docs/DEVELOPMENT_GUIDE.md) - Contributing guidelines
+
+### Research & Investigation
 - [Pipeline Analysis](docs/JILIAC_PIPELINE_COMPLETE_ANALYSIS.md) - Deep dive into the community pipeline
 - [All Calculation Methods](docs/JILIAC_ALL_CALCULATION_METHODS.md) - 264+ calculation combinations
 - [Data Source Mystery](docs/JILIAC_DATA_SOURCE_MYSTERY.md) - Investigation into matchup data sources
+
+### Project Status & Architecture
+- [Architecture Restructuring Spec](.kiro/specs/project-restructuration/) - Complete restructuring plan
+- [Project Structure Diagnosis](DIAGNOSTIC_STRUCTURE_PROJET.md) - Analysis of current architectural issues
+- [Scripts Audit](AUDIT_SCRIPTS_ACTIFS.md) - Inventory of existing scripts
+
+> **Note**: Some documentation may be temporarily outdated during the restructuring process. Please refer to CLAUDE.md for the most current development status.
 
 ## 🔒 Security
 

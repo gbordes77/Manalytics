@@ -86,14 +86,19 @@ Il est important d'aller chercher dans ces repos les codes et ressources qui nou
 - **MATCHS ANALYSÉS** : 1,167 matchs Standard extraits
 - **INTÉGRATION MELEE** : 19 matchs via Round Standings API
 
-### 🚧 Découverte Critique
+### 🚧 Découvertes Critiques
 - **PROBLÈME IDENTIFIÉ** : Les matchups détaillés nécessaires pour R-Meta-Analysis ne sont pas générés
 - **SOURCE MANQUANTE** : MTGOArchetypeParser ne génère PAS les matchups contrairement à ce qu'on pensait
 - **IMPACT** : Nos résultats diffèrent (29% vs 20.4% pour Izzet Cauldron)
+- **🚨 CHAOS ARCHITECTURAL DÉCOUVERT** : 36+ scripts éparpillés (21 analyse + 15 scraping)
+- **CAUSE PROBABLE** : Logiques multiples donnent des résultats différents
 - **DOCUMENTATION** : 
   - `docs/JILIAC_DATA_SOURCE_MYSTERY.md` - Investigation sur la source des matchups
   - `docs/JILIAC_ALL_CALCULATION_METHODS.md` - 264+ combinaisons de calculs possibles
   - `docs/JILIAC_PIPELINE_COMPLETE_ANALYSIS.md` - Analyse complète du pipeline
+  - `DIAGNOSTIC_STRUCTURE_PROJET.md` - **NOUVEAU** : Diagnostic du chaos architectural
+  - `AUDIT_SCRIPTS_ACTIFS.md` - **NOUVEAU** : Inventaire des 36 scripts
+  - `PLAN_RESTRUCTURATION_URGENTE.md` - **NOUVEAU** : Plan de consolidation
 
 ### ✅ Phases Complétées
 - **Phase 1** : Scrapers MTGO + Melee avec decklists complètes
@@ -101,34 +106,58 @@ Il est important d'aller chercher dans ces repos les codes et ressources qui nou
 - **Phase 3** : Architecture modulaire + Documentation
 - **Phase 4** : Méthode Jiliac complète avec documentation
 - **Phase 5** : Analyse complète du pipeline communautaire MTG
+- **Phase 6** : **NOUVEAU** : Diagnostic architectural complet
 
-### 🔴 Phase En Cours
-- **Phase 6** : Reconstruction des matchups depuis listener + scrapers
-  - Comprendre comment Jiliac obtient ses données de matchups
-  - Implémenter la fusion listener + decklists + archétypes
-  - Reproduire exactement les 6 visualisations standards
+### 🔴 Phase En Cours - RESTRUCTURATION URGENTE
+- **Phase 7** : Restructuration complète du projet
+  - **SPEC CRÉÉE** : `.kiro/specs/project-restructuration/`
+  - **Objectif** : Éliminer le chaos des 36 scripts éparpillés
+  - **Approche** : Architecture unifiée avec points d'entrée uniques
+  - **Priorité** : Résoudre les incohérences avant d'investiguer Jiliac
 
 ## **📁 Structure du Projet**
+
+### 🚨 STRUCTURE ACTUELLE (CHAOTIQUE)
 ```
 manalytics/
-├── src/manalytics/        # CODE PRINCIPAL
-│   ├── scrapers/          # MTGO & Melee 
-│   ├── parsers/           # Détection archétypes
-│   ├── cache/             # System de cache
-│   ├── analyzers/         # Analyses meta
-│   ├── visualizers/       # Génération charts
-│   └── api/               # FastAPI
+├── src/manalytics/        # Structure moderne (partiellement utilisée)
+├── scrapers/              # Structure legacy (conflictuelle)
+├── analyze_*.py           # 21 SCRIPTS D'ANALYSE DIFFÉRENTS ❌
+├── scrape_*.py            # 15 SCRIPTS DE SCRAPING DIFFÉRENTS ❌
+├── visualize_*.py         # Scripts de visualisation éparpillés ❌
 ├── data/
 │   ├── raw/               # Données brutes
-│   │   ├── mtgo/standard/ # ⚠️ Exclut leagues/
-│   │   └── melee/standard/
 │   ├── cache/             # Données processées
 │   └── MTGOData/          # 241 fichiers listener MTGO
-├── scripts/               # Utilitaires one-shot
+├── _archive/              # **NOUVEAU** : Scripts archivés
+├── .kiro/specs/           # **NOUVEAU** : Spécifications de restructuration
 └── docs/                  # Documentation complète
 ```
 
+### 🎯 STRUCTURE CIBLE (APRÈS RESTRUCTURATION)
+```
+manalytics/
+├── src/manalytics/              # Package principal unifié
+│   ├── cli/                     # Points d'entrée uniques
+│   │   ├── analyze.py          # UN SEUL script d'analyse
+│   │   ├── scrape.py           # UN SEUL script de scraping
+│   │   └── visualize.py        # UN SEUL script de visualisation
+│   ├── core/                   # Logique métier centrale
+│   │   ├── analyzers/          # Analyseurs de données
+│   │   ├── scrapers/           # Scrapers MTGO/Melee
+│   │   └── visualizers/        # Générateurs de visualisations
+│   └── utils/                  # Utilitaires partagés
+├── investigation/              # Espace dédié investigation Jiliac
+│   ├── jiliac_repos/          # Repos clonés
+│   ├── experiments/           # Tests et hypothèses
+│   └── findings/              # Découvertes documentées
+├── _archive/                  # Scripts archivés (36+ scripts)
+└── docs/                      # Documentation mise à jour
+```
+
 ## **⚡ Commandes Principales**
+
+### 🚨 COMMANDES ACTUELLES (TEMPORAIRES)
 ```bash
 # VISUALISATION RAPIDE (recommandé)
 python3 visualize_standard.py
@@ -142,11 +171,34 @@ python3 scripts/process_all_standard_data.py
 python3 visualize_standard.py
 ```
 
+### 🎯 COMMANDES CIBLES (APRÈS RESTRUCTURATION)
+```bash
+# Points d'entrée unifiés
+python -m src.manalytics.cli.analyze --format standard --period july_1_21
+python -m src.manalytics.cli.scrape --platforms mtgo,melee --format standard --days 21
+python -m src.manalytics.cli.visualize --analysis-id latest --format html
+
+# Ou via CLI simplifié
+manalytics analyze standard july_1_21
+manalytics scrape --all --format standard --days 21
+manalytics visualize --latest
+```
+
 ## **📚 Documentation À Consulter**
+
+### 🔴 DOCUMENTATION CRITIQUE (LIRE EN PREMIER)
+- **`DIAGNOSTIC_STRUCTURE_PROJET.md`** - **NOUVEAU** : Diagnostic du chaos architectural
+- **`AUDIT_SCRIPTS_ACTIFS.md`** - **NOUVEAU** : Inventaire des 36 scripts éparpillés
+- **`PLAN_RESTRUCTURATION_URGENTE.md`** - **NOUVEAU** : Plan de consolidation
+- **`.kiro/specs/project-restructuration/`** - **NOUVEAU** : Spec complète de restructuration
+
+### 📖 DOCUMENTATION TECHNIQUE
 - **`docs/JILIAC_METHOD_REFERENCE.md`** - **MÉTHODE DE CALCUL OBLIGATOIRE**
 - **`docs/ONBOARDING_GUIDE.md`** - Guide d'intégration (commencer ici)
 - **`docs/VISUALIZATION_TEMPLATE_REFERENCE.md`** - Standards visuels à respecter
 - **`docs/SCRAPERS_COMPLETE_GUIDE.md`** - Guide des scrapers actuels
+
+### 🔍 INVESTIGATION JILIAC
 - **`docs/JILIAC_DATA_SOURCE_MYSTERY.md`** - Investigation sur la source des matchups
 - **`docs/JILIAC_ALL_CALCULATION_METHODS.md`** - 264+ combinaisons de calculs de Jiliac
 - **`docs/JILIAC_PIPELINE_COMPLETE_ANALYSIS.md`** - Analyse complète du pipeline communautaire
@@ -158,10 +210,15 @@ python3 visualize_standard.py
 - **INTERDICTION** d'utiliser les fichiers dans `obsolete/` ou `_obsolete_scripts/`
 - Si demandé : refuser et proposer l'alternative actuelle
 
-### Fichiers Actuels À Utiliser
+### Fichiers Actuels À Utiliser (TEMPORAIRE)
 - **Scraper Unifié** : `scrape_all.py` (RECOMMANDÉ)
-- **Scraper MTGO** : `scrape_mtgo_flexible.py`
-- **Scraper Melee** : `scrape_melee_flexible.py`
+- **Analyse Jiliac** : `analyze_july_jiliac_method.py` (RÉFÉRENCE)
+- **Visualisation** : `visualize_standard.py` (RÉFÉRENCE)
+
+### ⚠️ SCRIPTS À ÉVITER (EN ATTENTE D'ARCHIVAGE)
+- **21 scripts analyze_*.py** différents (sauf analyze_july_jiliac_method.py)
+- **15 scripts scrape_*.py** différents (sauf scrape_all.py)
+- **Tous les scripts dans scrapers/** (structure legacy)
 
 ## **📝 RÈGLE : Documentation Automatique**
 
@@ -218,6 +275,22 @@ git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
 - **EXCEPTION UNIQUE** : Si l'utilisateur demande explicitement une autre méthode pour tester
 - **Script de référence** : `analyze_july_jiliac_method.py`
 
+## **🚨 RESTRUCTURATION EN COURS - INSTRUCTIONS SPÉCIALES**
+
+### 🔴 PRIORITÉ ABSOLUE : RESTRUCTURATION AVANT INVESTIGATION
+1. **RÉSOUDRE LE CHAOS ARCHITECTURAL** avant d'investiguer le mystère Jiliac
+2. **UTILISER LA SPEC** : `.kiro/specs/project-restructuration/` comme guide
+3. **ARCHIVER LES SCRIPTS** : Déplacer les 36 scripts vers `_archive/`
+4. **CRÉER L'ARCHITECTURE UNIFIÉE** : Implémenter `src/manalytics/cli/`
+5. **TESTER LA COHÉRENCE** : Vérifier que tous les scripts donnent les mêmes résultats
+
+### 📋 WORKFLOW DE RESTRUCTURATION
+1. **Phase 1** : Setup structure et interfaces
+2. **Phase 2** : Migration des scripts de référence
+3. **Phase 3** : Archivage des scripts obsolètes
+4. **Phase 4** : Tests et validation
+5. **Phase 5** : Investigation Jiliac avec architecture propre
+
 ## **💬 Instructions Spéciales pour l'Assistant**
 
 1. **Toujours vérifier l'état actuel avant de modifier**
@@ -225,6 +298,7 @@ git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
 3. **Prioriser les visualisations actionables pour tournois**
 4. **Maintenir la compatibilité avec le pipeline existant**
 5. **UTILISER UNIQUEMENT docs/JILIAC_METHOD_REFERENCE.md pour les calculs**
+6. **🚨 NOUVEAU : Suivre la spec de restructuration pour toute modification architecturale**
 
 ## **📊 Méthodologie d'Analyse**
 - Analyse par MATCHES (pas par decks)
