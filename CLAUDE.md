@@ -86,11 +86,27 @@ Il est important d'aller chercher dans ces repos les codes et ressources qui nou
 - **MATCHS ANALYSÉS** : 1,167 matchs Standard extraits
 - **INTÉGRATION MELEE** : 19 matchs via Round Standings API
 
+### 🚧 Découverte Critique
+- **PROBLÈME IDENTIFIÉ** : Les matchups détaillés nécessaires pour R-Meta-Analysis ne sont pas générés
+- **SOURCE MANQUANTE** : MTGOArchetypeParser ne génère PAS les matchups contrairement à ce qu'on pensait
+- **IMPACT** : Nos résultats diffèrent (29% vs 20.4% pour Izzet Cauldron)
+- **DOCUMENTATION** : 
+  - `docs/JILIAC_DATA_SOURCE_MYSTERY.md` - Investigation sur la source des matchups
+  - `docs/JILIAC_ALL_CALCULATION_METHODS.md` - 264+ combinaisons de calculs possibles
+  - `docs/JILIAC_PIPELINE_COMPLETE_ANALYSIS.md` - Analyse complète du pipeline
+
 ### ✅ Phases Complétées
 - **Phase 1** : Scrapers MTGO + Melee avec decklists complètes
 - **Phase 2** : Cache System (SQLite + JSON)
 - **Phase 3** : Architecture modulaire + Documentation
 - **Phase 4** : Méthode Jiliac complète avec documentation
+- **Phase 5** : Analyse complète du pipeline communautaire MTG
+
+### 🔴 Phase En Cours
+- **Phase 6** : Reconstruction des matchups depuis listener + scrapers
+  - Comprendre comment Jiliac obtient ses données de matchups
+  - Implémenter la fusion listener + decklists + archétypes
+  - Reproduire exactement les 6 visualisations standards
 
 ## **📁 Structure du Projet**
 ```
@@ -131,6 +147,10 @@ python3 visualize_standard.py
 - **`docs/ONBOARDING_GUIDE.md`** - Guide d'intégration (commencer ici)
 - **`docs/VISUALIZATION_TEMPLATE_REFERENCE.md`** - Standards visuels à respecter
 - **`docs/SCRAPERS_COMPLETE_GUIDE.md`** - Guide des scrapers actuels
+- **`docs/JILIAC_DATA_SOURCE_MYSTERY.md`** - Investigation sur la source des matchups
+- **`docs/JILIAC_ALL_CALCULATION_METHODS.md`** - 264+ combinaisons de calculs de Jiliac
+- **`docs/JILIAC_PIPELINE_COMPLETE_ANALYSIS.md`** - Analyse complète du pipeline communautaire
+- **`docs/PHASE_1_OBJECTIF_VISUALISATIONS_JILIAC.md`** - Les 6 visualisations à reproduire exactement
 
 ## **⛔️ RÈGLES DE SÉCURITÉ**
 
