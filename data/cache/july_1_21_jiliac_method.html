@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manalytics - Analysis using Jiliac's R Method</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                min-height: 100vh;
+            }
+            .container {
+                max-width: 1600px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .header {
+                text-align: center;
+                padding: 30px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-radius: 15px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+                margin-bottom: 30px;
+            }
+            .header h1 {
+                margin: 0;
+                font-size: 2.5em;
+                font-weight: 700;
+            }
+            .header p {
+                margin: 10px 0;
+                font-size: 1.2em;
+                opacity: 0.9;
+            }
+            .visualization-container {
+                background: white;
+                border-radius: 15px;
+                padding: 25px;
+                margin: 20px 0;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+            .method-box {
+                background: #e8f5e9;
+                border-left: 4px solid #4CAF50;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 5px;
+            }
+            .tier-badge {
+                padding: 6px 15px;
+                border-radius: 20px;
+                font-weight: 600;
+                color: white;
+                display: inline-block;
+                margin: 2px;
+            }
+            .tier-0 { background: #1b5e20; }
+            .tier-0\.5 { background: #2e7d32; }
+            .tier-1 { background: #388e3c; }
+            .tier-1\.5 { background: #43a047; }
+            .tier-2 { background: #fb8c00; }
+            .tier-2\.5 { background: #ff6f00; }
+            .tier-3 { background: #e53935; }
+            .tier-Other { background: #757575; }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            th, td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            th {
+                background: #f5f5f5;
+                font-weight: 600;
+                color: #667eea;
+            }
+            tr:hover {
+                background: #f9f9f9;
+            }
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin: 20px 0;
+            }
+            .stat-card {
+                background: #f5f5f5;
+                padding: 15px;
+                border-radius: 10px;
+                text-align: center;
+            }
+            .stat-value {
+                font-size: 2em;
+                font-weight: 700;
+                color: #667eea;
+            }
+            .stat-label {
+                font-size: 0.9em;
+                color: #666;
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Manalytics - Jiliac Method Analysis</h1>
+            <p>Standard Format - July 1-21, 2025</p>
+            <p style="font-size: 1em; opacity: 0.8;">
+                Using exact methodology from R-Meta-Analysis by Jiliac
+            </p>
+        </div>
+        
+        
+        <div class="visualization-container">
+            <h2>📐 Jiliac's R-Meta-Analysis Methodology</h2>
+            <div class="method-box">
+                <h3>Key Calculations:</h3>
+                <ul>
+                    <li><strong>Presence %</strong> = (Archetype Matches / Total Matches) × 100</li>
+                    <li><strong>Win Rate %</strong> = Wins × 100 / (Wins + Losses) <em>(draws excluded)</em></li>
+                    <li><strong>Normalized Presence</strong> = [log(Presence) - log(min)] / max</li>
+                    <li><strong>Normalized Win Rate</strong> = [WR - min(WR)] / max</li>
+                    <li><strong>Composite Score</strong> = Normalized Presence + Normalized Win Rate</li>
+                </ul>
+                <h3>Tier System (based on CI lower bound):</h3>
+                <ul>
+                    <li><span class="tier-badge tier-0">Tier 0</span> CI lower ≥ mean + 3σ</li>
+                    <li><span class="tier-badge tier-0.5">Tier 0.5</span> CI lower ≥ mean + 2σ</li>
+                    <li><span class="tier-badge tier-1">Tier 1</span> CI lower ≥ mean + 1σ</li>
+                    <li><span class="tier-badge tier-1.5">Tier 1.5</span> CI lower ≥ mean</li>
+                    <li><span class="tier-badge tier-2">Tier 2</span> CI lower ≥ mean - 1σ</li>
+                    <li><span class="tier-badge tier-2.5">Tier 2.5</span> CI lower ≥ mean - 2σ</li>
+                    <li><span class="tier-badge tier-3">Tier 3</span> CI lower ≥ mean - 3σ</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="visualization-container">
+            <h2>📊 Tier Distribution Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">40.4%</div>
+                    <div class="stat-label">Mean CI Lower</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">±6.4%</div>
+                    <div class="stat-label">Std Deviation</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">9</div>
+                    <div class="stat-label">Archetypes Analyzed</div>
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+        <span class="tier-badge tier-1">1: 2 archetypes</span> <span class="tier-badge tier-1.5">1.5: 4 archetypes</span> <span class="tier-badge tier-2">2: 2 archetypes</span> <span class="tier-badge tier-3">3: 1 archetypes</span> 
+            </div>
+        </div>
+        
+        <div class="visualization-container">
+            <h2>📋 Archetype Metrics (Jiliac Method)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Archetype</th>
+                        <th>Tier</th>
+                        <th>Presence %</th>
+                        <th>Win Rate %</th>
+                        <th>CI Lower</th>
+                        <th>CI Upper</th>
+                        <th>Matches</th>
+                        <th>Norm. Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+        
+                <tr>
+                    <td>1</td>
+                    <td><strong>Izzet Cauldron</strong></td>
+                    <td><span class="tier-badge tier-1">1</span></td>
+                    <td>29.0%</td>
+                    <td>52.1%</td>
+                    <td>48.3%</td>
+                    <td>55.8%</td>
+                    <td>678</td>
+                    <td>2.000</td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td><strong>Dimir Midrange</strong></td>
+                    <td><span class="tier-badge tier-1">1</span></td>
+                    <td>25.4%</td>
+                    <td>50.9%</td>
+                    <td>46.9%</td>
+                    <td>54.9%</td>
+                    <td>593</td>
+                    <td>1.864</td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td><strong>Golgari Midrange</strong></td>
+                    <td><span class="tier-badge tier-1\.5">1.5</span></td>
+                    <td>5.8%</td>
+                    <td>51.9%</td>
+                    <td>43.5%</td>
+                    <td>60.1%</td>
+                    <td>135</td>
+                    <td>1.375</td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td><strong>Mono Green Landfall</strong></td>
+                    <td><span class="tier-badge tier-1\.5">1.5</span></td>
+                    <td>6.3%</td>
+                    <td>51.0%</td>
+                    <td>43.0%</td>
+                    <td>59.0%</td>
+                    <td>147</td>
+                    <td>1.344</td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td><strong>Mono White Caretaker (Mono White Caretaker)</strong></td>
+                    <td><span class="tier-badge tier-1\.5">1.5</span></td>
+                    <td>5.4%</td>
+                    <td>49.2%</td>
+                    <td>40.6%</td>
+                    <td>57.8%</td>
+                    <td>126</td>
+                    <td>1.150</td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td><strong>Boros Convoke</strong></td>
+                    <td><span class="tier-badge tier-1\.5">1.5</span></td>
+                    <td>6.1%</td>
+                    <td>48.6%</td>
+                    <td>40.5%</td>
+                    <td>56.7%</td>
+                    <td>142</td>
+                    <td>1.150</td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td><strong>Izzet Prowess</strong></td>
+                    <td><span class="tier-badge tier-2">2</span></td>
+                    <td>2.4%</td>
+                    <td>51.8%</td>
+                    <td>39.0%</td>
+                    <td>64.3%</td>
+                    <td>56</td>
+                    <td>1.037</td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td><strong>Colorless Convoke</strong></td>
+                    <td><span class="tier-badge tier-2">2</span></td>
+                    <td>2.1%</td>
+                    <td>47.9%</td>
+                    <td>34.5%</td>
+                    <td>61.7%</td>
+                    <td>48</td>
+                    <td>0.689</td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td><strong>Gruul Aggro</strong></td>
+                    <td><span class="tier-badge tier-3">3</span></td>
+                    <td>2.7%</td>
+                    <td>38.7%</td>
+                    <td>27.6%</td>
+                    <td>51.2%</td>
+                    <td>62</td>
+                    <td>0.097</td>
+                </tr>
+            
+                </tbody>
+            </table>
+        </div>
+        <div class="visualization-container"><html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>                            <div id="jiliac-pie" class="plotly-graph-div" style="height:600px; width:900px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("jiliac-pie")) {                    Plotly.newPlot(                        "jiliac-pie",                        [{"hovertemplate":"\u003cb\u003e%{label}\u003c\u002fb\u003e\u003cbr\u003ePresence: %{value:.1f}%\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Izzet Cauldron","Dimir Midrange","Golgari Midrange","Mono Green Landfall","Mono White Caretaker (Mono White Caretaker)","Boros Convoke","Izzet Prowess","Colorless Convoke","Gruul Aggro"],"marker":{"colors":["#6a597c","#134971","#2f5630","#4CAF50","#FFFBD5","#f88c75","#6a597c","#9E9E9E","#b06e40"],"line":{"color":"white","width":2}},"textinfo":"percent","textposition":"inside","texttemplate":"%{percent}","values":[29.048843187660665,25.4070265638389,5.784061696658098,6.298200514138817,5.3984575835475574,6.083976006855185,2.3993144815766922,2.056555269922879,2.6563838903170525],"type":"pie"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"font":{"size":24,"color":"#333"},"text":"Metagame Distribution (Jiliac Method)","x":0.5,"xanchor":"center"},"width":900,"height":600,"showlegend":true},                        {"responsive": true}                    )                };            </script>        </div>
+</body>
+</html></div><div class="visualization-container"><html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>                            <div id="jiliac-bar" class="plotly-graph-div" style="height:600px; width:1200px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("jiliac-bar")) {                    Plotly.newPlot(                        "jiliac-bar",                        [{"marker":{"color":["#388e3c","#388e3c","#43a047","#43a047","#43a047","#43a047","#fb8c00","#fb8c00","#e53935"],"line":{"color":"black","width":1}},"name":"Presence %","text":["29.0%\u003cbr\u003eTier 1","25.4%\u003cbr\u003eTier 1","5.8%\u003cbr\u003eTier 1.5","6.3%\u003cbr\u003eTier 1.5","5.4%\u003cbr\u003eTier 1.5","6.1%\u003cbr\u003eTier 1.5","2.4%\u003cbr\u003eTier 2","2.1%\u003cbr\u003eTier 2","2.7%\u003cbr\u003eTier 3"],"textposition":"outside","x":["Izzet Cauldron","Dimir Midrange","Golgari Midrange","Mono Green Landfall","Mono White Caretaker (Mono White Caretaker)","Boros Convoke","Izzet Prowess","Colorless Convoke","Gruul Aggro"],"y":[29.048843187660665,25.4070265638389,5.784061696658098,6.298200514138817,5.3984575835475574,6.083976006855185,2.3993144815766922,2.056555269922879,2.6563838903170525],"type":"bar"},{"line":{"color":"#667eea","width":3},"marker":{"size":8},"mode":"lines+markers","name":"Win Rate (÷2)","x":["Izzet Cauldron","Dimir Midrange","Golgari Midrange","Mono Green Landfall","Mono White Caretaker (Mono White Caretaker)","Boros Convoke","Izzet Prowess","Colorless Convoke","Gruul Aggro"],"y":[26.032448377581122,25.463743676222595,25.925925925925927,25.510204081632654,24.603174603174605,24.295774647887324,25.892857142857142,23.958333333333332,19.35483870967742],"yaxis":"y2","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"tickangle":-45},"yaxis2":{"title":{"text":"Win Rate % (÷2)"},"overlaying":"y","side":"right","range":[20,35]},"margin":{"b":150},"title":{"text":"Presence Bar Chart (Jiliac Method)"},"yaxis":{"title":{"text":"Presence %"}},"width":1200,"height":600},                        {"responsive": true}                    )                };            </script>        </div>
+</body>
+</html></div><div class="visualization-container"><html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>                            <div id="jiliac-mustache" class="plotly-graph-div" style="height:600px; width:1000px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("jiliac-mustache")) {                    Plotly.newPlot(                        "jiliac-mustache",                        [{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[48.303396768325186,55.803128852874806],"y":[0,0],"type":"scatter"},{"hovertemplate":"\u003cb\u003eIzzet Cauldron\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 52.1%\u003cbr\u003e95% CI: [48.3%, 55.8%]\u003cbr\u003eTier: 1\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[52.064896755162245],"y":[0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[46.91079810380465,54.93223696613685],"y":[1,1],"type":"scatter"},{"hovertemplate":"\u003cb\u003eDimir Midrange\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 50.9%\u003cbr\u003e95% CI: [46.9%, 54.9%]\u003cbr\u003eTier: 1\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[50.92748735244519],"y":[1],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[43.48916972113996,60.112056424338036],"y":[2,2],"type":"scatter"},{"hovertemplate":"\u003cb\u003eGolgari Midrange\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 51.9%\u003cbr\u003e95% CI: [43.5%, 60.1%]\u003cbr\u003eTier: 1.5\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[51.851851851851855],"y":[2],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[43.01672697699696,58.97211429755861],"y":[3,3],"type":"scatter"},{"hovertemplate":"\u003cb\u003eMono Green Landfall\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 51.0%\u003cbr\u003e95% CI: [43.0%, 59.0%]\u003cbr\u003eTier: 1.5\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[51.02040816326531],"y":[3],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[40.630472445130124,57.82918917333423],"y":[4,4],"type":"scatter"},{"hovertemplate":"\u003cb\u003eMono White Caretaker (Mono White Caretaker)\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 49.2%\u003cbr\u003e95% CI: [40.6%, 57.8%]\u003cbr\u003eTier: 1.5\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[49.20634920634921],"y":[4],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[40.51684355909101,56.74045477005512],"y":[5,5],"type":"scatter"},{"hovertemplate":"\u003cb\u003eBoros Convoke\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 48.6%\u003cbr\u003e95% CI: [40.5%, 56.7%]\u003cbr\u003eTier: 1.5\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[48.59154929577465],"y":[5],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[39.01016225125491,64.33199437557326],"y":[6,6],"type":"scatter"},{"hovertemplate":"\u003cb\u003eIzzet Prowess\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 51.8%\u003cbr\u003e95% CI: [39.0%, 64.3%]\u003cbr\u003eTier: 2\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[51.785714285714285],"y":[6],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[34.47109001578747,61.67100436401562],"y":[7,7],"type":"scatter"},{"hovertemplate":"\u003cb\u003eColorless Convoke\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 47.9%\u003cbr\u003e95% CI: [34.5%, 61.7%]\u003cbr\u003eTier: 2\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[47.916666666666664],"y":[7],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#667eea","width":2},"mode":"lines","showlegend":false,"x":[27.58446342699068,51.15238379421901],"y":[8,8],"type":"scatter"},{"hovertemplate":"\u003cb\u003eGruul Aggro\u003c\u002fb\u003e\u003cbr\u003eWin Rate: 38.7%\u003cbr\u003e95% CI: [27.6%, 51.2%]\u003cbr\u003eTier: 3\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#667eea","size":10},"mode":"markers","showlegend":false,"x":[38.70967741935484],"y":[8],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"title":{"text":"Win Rate %"},"range":[30,70]},"yaxis":{"tickmode":"array","tickvals":[0,1,2,3,4,5,6,7,8],"ticktext":["Izzet Cauldron","Dimir Midrange","Golgari Midrange","Mono Green Landfall","Mono White Caretaker (Mono White Caretaker)","Boros Convoke","Izzet Prowess","Colorless Convoke","Gruul Aggro"],"autorange":"reversed"},"margin":{"l":200},"title":{"text":"Win Rate with Confidence Intervals (Jiliac Method)"},"width":1000,"height":600,"shapes":[{"line":{"color":"red","dash":"dash"},"opacity":0.5,"type":"line","x0":50,"x1":50,"xref":"x","y0":0,"y1":1,"yref":"y domain"}]},                        {"responsive": true}                    )                };            </script>        </div>
+</body>
+</html></div><div class="visualization-container"><html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>                            <div id="jiliac-scatter" class="plotly-graph-div" style="height:700px; width:1200px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("jiliac-scatter")) {                    Plotly.newPlot(                        "jiliac-scatter",                        [{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003ePresence: %{x:.1f}%\u003cbr\u003eWin Rate: %{y:.1f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#388e3c","line":{"color":"black","width":1},"size":[36.03843313258307,34.35159132377184]},"mode":"markers+text","name":"Tier 1","text":["Izzet Cauldron","Dimir Midrange"],"textposition":"top center","x":[29.048843187660665,25.4070265638389],"y":[52.064896755162245,50.92748735244519],"type":"scatter"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003ePresence: %{x:.1f}%\u003cbr\u003eWin Rate: %{y:.1f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#43a047","line":{"color":"black","width":1},"size":[21.618950038622252,22.12435565298214,21.224972160321826,21.916375287812983]},"mode":"markers+text","name":"Tier 1.5","text":["Golgari Midrange","Mono Green Landfall","Mono White Caretaker (Mono White Caretaker)","Boros Convoke"],"textposition":"top center","x":[5.784061696658098,6.298200514138817,5.3984575835475574,6.083976006855185],"y":[51.851851851851855,51.02040816326531,49.20634920634921,48.59154929577465],"type":"scatter"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003ePresence: %{x:.1f}%\u003cbr\u003eWin Rate: %{y:.1f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#fb8c00","line":{"color":"black","width":1},"size":[17.48331477354788,16.928203230275507]},"mode":"markers+text","name":"Tier 2","text":["",""],"textposition":"top center","x":[2.3993144815766922,2.056555269922879],"y":[51.785714285714285,47.916666666666664],"type":"scatter"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003ePresence: %{x:.1f}%\u003cbr\u003eWin Rate: %{y:.1f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#e53935","line":{"color":"black","width":1},"size":[17.87400787401181]},"mode":"markers+text","name":"Tier 3","text":[""],"textposition":"top center","x":[2.6563838903170525],"y":[38.70967741935484],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"title":{"text":"Presence %"},"type":"log","range":[-0.5,2]},"yaxis":{"title":{"text":"Win Rate %"},"range":[30,70]},"title":{"text":"Win Rate & Presence Scatterplot (Jiliac Method)"},"width":1200,"height":700,"shapes":[{"line":{"color":"black","dash":"dash"},"opacity":0.3,"type":"line","x0":0,"x1":1,"xref":"x domain","y0":50,"y1":50,"yref":"y"}]},                        {"responsive": true}                    )                };            </script>        </div>
+</body>
+</html></div>
+        
+        <div class="visualization-container" style="text-align: center; color: #666;">
+            <p>Generated by Manalytics v3.4.0 (Jiliac Method) - 2025-07-29 09:08:56</p>
+            <p style="font-size: 0.9em;">📊 Based on R-Meta-Analysis methodology</p>
+        </div>
+    </div>
+</body>
+</html>
