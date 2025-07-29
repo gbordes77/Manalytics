@@ -11,7 +11,7 @@ import sys
 # Add project root
 sys.path.append(str(Path(__file__).parent))
 
-from src.manalytics.parsers.archetype_parser import ArchetypeParser
+from src.parsers.archetype_parser import ArchetypeParser
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger(__name__)
@@ -65,7 +65,12 @@ def process_mtgo_data():
                 all_cards.extend([card['name']] * card['quantity'])
             
             # Identifier l'archétype
-            archetype = parser.identify_archetype(all_cards, 'standard')
+            # Le parser attend un format dict, pas une liste de strings
+            deck_dict = {
+                'mainboard': deck.get('mainboard', []),
+                'sideboard': deck.get('sideboard', [])
+            }
+            archetype = parser.detect_archetype(deck_dict, 'standard')
             
             # Créer l'entrée de decklist
             processed_deck = {

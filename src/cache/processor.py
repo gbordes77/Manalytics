@@ -192,8 +192,8 @@ class CacheProcessor:
         decklists = []
         
         if platform == "mtgo":
-            # Check format - new format uses 'decks', old uses 'Decks'
-            decks_key = 'decks' if 'decks' in data else 'Decks'
+            # Check format - new format uses 'decklists', old uses 'Decks'
+            decks_key = 'decklists' if 'decklists' in data else 'Decks'
             for deck_data in data.get(decks_key, []):
                 decklist = self._process_mtgo_deck(deck_data, tournament_id)
                 if decklist:

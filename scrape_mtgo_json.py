@@ -154,21 +154,21 @@ class MTGOJsonScraper:
         for card in deck_data.get('main_deck', []):
             card_info = card.get('card_attributes', {})
             mainboard.append({
-                'quantity': int(card.get('qty', 1)),
-                'name': card_info.get('card_name', 'Unknown Card')
+                'count': int(card.get('qty', 1)),
+                'card_name': card_info.get('card_name', 'Unknown Card')
             })
         
         # Parser le sideboard
         for card in deck_data.get('sideboard_deck', []):
             card_info = card.get('card_attributes', {})
             sideboard.append({
-                'quantity': int(card.get('qty', 1)),
-                'name': card_info.get('card_name', 'Unknown Card')
+                'count': int(card.get('qty', 1)),
+                'card_name': card_info.get('card_name', 'Unknown Card')
             })
         
         # Vérifier que le deck est valide
-        main_count = sum(c['quantity'] for c in mainboard)
-        side_count = sum(c['quantity'] for c in sideboard)
+        main_count = sum(c['count'] for c in mainboard)
+        side_count = sum(c['count'] for c in sideboard)
         
         if main_count < 60:
             logger.warning(f"Deck de {player} a seulement {main_count} cartes dans le main")
@@ -209,8 +209,8 @@ class MTGOJsonScraper:
             return False
             
         try:
-            # Structure similaire à MTG_decklistcache
-            base_dir = Path("data/mtg_decklistcache")
+            # Sauvegarder directement dans data/raw/mtgo
+            base_dir = Path("data/raw/mtgo")
             format_name = tournament_data['format']
             
             # Créer l'arborescence
