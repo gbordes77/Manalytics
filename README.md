@@ -1,123 +1,43 @@
 # 🎯 Manalytics - MTG Tournament Analysis Platform
 
-> **"Chaque visualisation doit raconter une histoire. Pas de graphs pour faire joli - uniquement des insights actionnables pour gagner des tournois."**
-> 
-> **Chaque visualisation doit apporter de la valeur compétitive réelle.**
-
-## 📚 IMPORTANT : GUIDE D'INTÉGRATION POUR NOUVEAUX DÉVELOPPEURS
-
-**👋 NOUVEAU SUR LE PROJET ? COMMENCEZ ICI :**
-- **[docs/ONBOARDING_GUIDE.md](docs/ONBOARDING_GUIDE.md)** - Guide d'intégration complet avec parcours de lecture structuré
-- Ce guide vous dira EXACTEMENT quoi lire et dans quel ordre (2-3h pour tout comprendre)
-- **NE PAS COMMENCER À CODER SANS AVOIR LU CE GUIDE**
-
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Version**: 3.1.0  
-**Status**: ✅ Phase 1-3 Complete | 🚧 Phase 4 In Progress (Listener active, debugging match extraction)  
-**Last Update**: July 28, 2025
+**Status**: ✅ Production Ready
 
 A professional-grade platform for collecting, analyzing, and visualizing Magic: The Gathering tournament data from MTGO and Melee.gg.
 
-## 🎯 What Makes Us Different
+## 📚 Documentation
 
-### 🎮 Phase 4 EN COURS : Intégration Listener MTGO & Visualisations
-**État des matchs** : 41 matchs Standard extraits du listener (investigation en cours)
-- ✅ **Listener MTGO actif** : 241 fichiers JSON dans `data/MTGOData/`
-  - Données round-par-round fournies par votre listener
-  - Module `listener_reader.py` intégré dans notre pipeline
-- 🔍 **Debug en cours** : Pourquoi seulement 41 matchs Standard?
-  - Vérifier le matching listener ↔ cache
-  - Analyser les tournois Standard dans MTGOData
-  - Optimiser l'extraction des matchs
-- 📊 **Melee Round Standings** : +19 matchs via API (total: 60)
-- 🎯 **Visualisations Plotly** : 3/5 complétées
-  - ✅ Métagame Dynamique, Matchup Matrix, Consensus Deck
-  - 📋 En cours: Sideboard Intelligence, Innovation Tracker
+**New to the project?** Start with our comprehensive guides:
+- 📖 [Getting Started Guide](docs/ONBOARDING_GUIDE.md) - Complete onboarding for new developers
+- 🏗️ [Architecture Overview](docs/MANALYTICS_COMPLETE_ARCHITECTURE.html) - Interactive system architecture
+- 📊 [API Documentation](http://localhost:8000/docs) - Full API reference (when running)
 
-### Unique Features (Nobody Else Has):
-- **🤖 Consensus Deck Generator** - Automatically generates THE optimal decklist from 20+ tournament results
-- **🔍 Innovation Detector** - Real-time detection of emerging tech choices before they go mainstream
-- **📊 Multi-Deck Visual Comparison** - See exactly why some decks win and others don't
-- **🎯 Unified MTGO + Melee Analysis** - Most sites do one OR the other, we do both
-- **🎨 MTG Color Gradients** - Beautiful gradient visualizations respecting MTG color identity
-- **📈 Match-Based Analysis** - Following community standards (Jiliac methodology) for accurate meta %
+## 🎯 Key Features
 
-## 🎉 Current Status (Phase 1 & 2 Complete!)
+- **🔍 Multi-Platform Scraping**: Automated collection from MTGO and Melee.gg
+- **🤖 Smart Archetype Detection**: Automatic deck categorization using community rules
+- **📊 Advanced Analytics**: 
+  - Metagame share tracking
+  - Matchup win rate analysis
+  - Innovation detection for emerging tech
+  - Consensus deck generation from tournament results
+- **🎨 Beautiful Visualizations**: Interactive charts with MTG color gradients
+- **🚀 REST API**: Full-featured API with JWT authentication
+- **💾 Efficient Storage**: Lightweight cache system with SQLite + JSON
 
-### ✅ Phase 1: Data Collection
-- **Full decklists collection** : MTGO (enhanced scraper) + Melee (Records field parsing)
-- **July 2025 scraped** : 67 tournaments = 1,140 complete decklists
-- **Fixed initial issue** : Now retrieving complete mainboard + sideboard data
+## 🎮 Supported Formats
 
-### ✅ Phase 2: Cache System & Analysis (NEW!)
-- **Archetype Detection** : 44 Standard rules from MTGOFormatData integrated
-- **Color Detection** : 28,000+ cards database for accurate color identification
-- **Performance** : <500ms per tournament processing
-- **Cache System** : Lightweight SQLite for tournament metadata only (JSON files contain actual data)
-- **Guild Names** : Full support (Izzet, Dimir, Naya, Jeskai, etc.)
-- **Interactive Visualization** : HTML charts with pie chart labels & percentages
-- **Meta Snapshot** : Real-time metagame breakdown
-
-### 📊 Period d'Analyse Standard: July 1-21, 2025
-
-⚠️ **IMPORTANT**: Toutes les analyses doivent être effectuées du **1er au 21 juillet 2025** pour permettre la comparaison avec les données de Jiliac.
-
-**Exemple de métagame** (données partielles - scraping MTGO nécessaire):
-1. **Izzet Cauldron** - ~22%
-2. **Dimir Midrange** - ~20%
-3. **Mono White Caretaker** - ~6%
-
-*Note: Analyse par MATCHES (pas par decks) suivant la méthodologie Jiliac*
-
-### ✅ Phase 3: Complete - Architecture & Documentation 
-
-**Nouvelles Réalisations (28/07/2025)**:
-- ✅ **Scrapers Flexibles** : Nouveau système unifié multi-formats
-  - `scrape_all.py` - Scraper unifié MTGO + Melee (RECOMMANDÉ)
-  - Support multi-formats : `--format standard modern legacy` ou `--format all`
-  - Dates personnalisables : `--start-date 2025-07-01 --end-date 2025-07-21`
-- ✅ **Guide d'Intégration** : `docs/ONBOARDING_GUIDE.md` - Parcours structuré pour nouveaux développeurs
-- ✅ **Architecture Documentée** : `docs/MANALYTICS_COMPLETE_ARCHITECTURE.html` - Diagrammes interactifs
-- ✅ **Scripts Obsolètes Archivés** : Anciens scrapers déplacés dans `scripts/_obsolete_scripts/`
-
-### 🚧 Phase 4: EN COURS - Intégration Listener & Visualisations
-
-**État Actuel (28/07/2025)**:
-- **✅ LISTENER FONCTIONNEL** : 241 fichiers JSON dans `data/MTGOData/`
-  - Données générées par votre listener externe
-  - Module `listener_reader.py` créé pour lire ces données
-  - Format compatible avec notre architecture
-- **🔍 Investigation en cours** : 
-  - Pourquoi seulement 41 matchs Standard extraits?
-  - Les tournois Standard sont-ils bien dans MTGOData?
-  - Problème de matching entre listener et cache?
-- **📊 Intégration Melee** : 
-  - Round Standings API intégrée (+19 matchs)
-  - Script `integrate_melee_matches.py` fonctionnel
-  - Documentation complète créée
-- **🎯 Prochaines étapes** :
-  - Debugger l'extraction des matchs Standard
-  - Compléter visualisations Plotly 4 & 5
-  - Valider la matrice de matchups complète
-
-**Réalisations Phase 3 Complètes**:
-- ✅ **Architecture modulaire** alignée avec Jiliac (src/manalytics/)
-- ✅ **Visualisation de référence** : `data/cache/standard_analysis_no_leagues.html`
-- ✅ **Documentation complète** : 20+ guides techniques créés
-- ✅ **Scripts réorganisés** : De 54 → 29 scripts utilitaires
-- ✅ **Quick launcher** : `python3 visualize_standard.py`
-
-## 📋 Features
-
-- **🔍 Tournament Scraping**: Automated collection from MTGO and Melee.gg
-- **📊 Metagame Analysis**: Track deck performance and meta share
-- **🎨 Archetype Detection**: Automatic deck categorization
-- **📈 Visualizations**: Heatmaps, charts, and trend analysis
-- **🚀 REST API**: Full-featured API for data access
-- **🐳 Docker Support**: Easy deployment with Docker Compose
+- Standard
+- Modern  
+- Legacy
+- Pioneer
+- Pauper
+- Vintage
+- Commander (Melee only)
 
 ## 🚀 Quick Start
 
@@ -138,7 +58,7 @@ A professional-grade platform for collecting, analyzing, and visualizing Magic: 
 2. **Set up environment**
    ```bash
    cp .env.example .env
-   # Edit .env with your credentials
+   # Edit .env with your Melee.gg credentials
    ```
 
 3. **Install dependencies**
@@ -158,30 +78,28 @@ Visit http://localhost:8000/docs for API documentation.
 ### Scraping Tournaments
 
 ```bash
-# Quick visualization (RECOMMANDÉ)
-python3 visualize_standard.py
+# Scrape both MTGO and Melee tournaments
+python scrape_all.py --format standard --days 30
 
-# Pipeline complet (nouveau scraper unifié!)
-python scrape_all.py --format standard --days 21  # Scrape MTGO + Melee
-python3 scripts/process_all_standard_data.py      # Process cache
-python3 visualize_standard.py                     # Generate viz
+# Process and analyze data
+python scripts/process_all_standard_data.py
 
-# Analyse juillet 1-21 (pour comparaison Jiliac)
-python3 analyze_july_1_21.py
+# Generate visualizations
+python visualize_standard.py
 ```
 
-## 📊 Travail Réalisé (29/07/2025)
+### Using the CLI
 
-### Intégration Decklists MTGO
-- Scraper MTGO modifié pour récupérer les decklists complètes
-- Script : `scrape_mtgo_json.py`
+```bash
+# Start the API server
+manalytics serve
 
-### Analyse Générée
-- Script : `analyze_july_complete_final.py`
-- Résultat : `data/cache/july_1_21_complete_analysis.html`
-- Période : Juillet 1-21, 2025
+# Run a complete pipeline
+manalytics run --format standard --days 7
 
-⚠️ **Note** : Beaucoup de choses restent à vérifier. Attendre les ordres du responsable avant toute modification.
+# Generate analysis report
+manalytics analyze --format standard --output report.html
+```
 
 ### Running Tests
 
@@ -213,24 +131,20 @@ make check
 
 ```
 manalytics/
-├── src/manalytics/        # CODE PRINCIPAL (organisé)
+├── src/manalytics/        # Main application code
 │   ├── scrapers/          # MTGO & Melee scrapers
 │   ├── parsers/           # Archetype detection
-│   ├── cache/             # Cache system (SQLite + JSON)
+│   ├── cache/             # Cache system
 │   ├── analyzers/         # Meta analysis
 │   ├── visualizers/       # Chart generation
 │   ├── pipeline/          # Orchestration
-│   └── api/               # FastAPI
+│   └── api/               # FastAPI endpoints
 ├── data/
-│   ├── raw/               # Données brutes
-│   │   ├── mtgo/standard/ # ⚠️ Exclut leagues/
-│   │   └── melee/standard/
-│   └── cache/             # Données processées
-│       └── standard_analysis_no_leagues.html  # 📊 RÉFÉRENCE
-├── scripts/               # Utilitaires one-shot
-│   └── _archive_2025_07_27/  # Anciens scripts
-├── docs/                  # DOCUMENTATION COMPLÈTE
-└── visualize_standard.py  # 🚀 LANCEUR RAPIDE
+│   ├── raw/               # Raw tournament data
+│   └── cache/             # Processed data
+├── scripts/               # Utility scripts
+├── docs/                  # Documentation
+└── tests/                 # Test suite
 ```
 
 ## 🔧 Configuration
@@ -262,6 +176,10 @@ docker-compose logs -f
 docker-compose down
 ```
 
+The application will be available at:
+- API: http://localhost:8000
+- API Docs: http://localhost:8000/docs
+
 ## 📊 API Endpoints
 
 | Endpoint | Description |
@@ -282,32 +200,12 @@ Full documentation at `/api/docs` when running.
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📚 Documentation
+## 📚 Additional Documentation
 
-### 📚 Documentation Essentielle
-
-**👋 NOUVEAU ? Commencez par** :
-- 🎓 **[ONBOARDING GUIDE](docs/ONBOARDING_GUIDE.md)** - **GUIDE D'INTÉGRATION COMPLET**
-  - Parcours de lecture structuré
-  - Ordre exact des documents à lire
-  - Scripts actuels vs obsolètes
-  - Quick Start guidé
-
-**Documentation principale** :
-- 🎯 [PROJECT COMPLETE DOCUMENTATION](docs/PROJECT_COMPLETE_DOCUMENTATION.md) - Vue d'ensemble complète
-- 🏗️ [MANALYTICS COMPLETE ARCHITECTURE](docs/MANALYTICS_COMPLETE_ARCHITECTURE.html) - Architecture interactive
-- 🕷️ [SCRAPERS COMPLETE GUIDE](docs/SCRAPERS_COMPLETE_GUIDE.md) - Tout sur les scrapers
-- 🎨 [VISUALIZATION TEMPLATE REFERENCE](docs/VISUALIZATION_TEMPLATE_REFERENCE.md) - Standards visuels
-
-**Flux et processus** :
-- 📊 [DATA FLOW VISUALIZATION](docs/DATA_FLOW_VISUALIZATION.html) - Flux de données interactif
-- 🔍 [FILE DISCOVERY PROCESS](docs/FILE_DISCOVERY_PROCESS.html) - Découverte des fichiers
-- 💾 [CACHE SYSTEM IMPLEMENTATION](docs/CACHE_SYSTEM_IMPLEMENTATION.md) - Architecture cache
-
-**Roadmaps & Concepts** :
-- [Phase 3 Visualizations Roadmap](docs/PHASE3_VISUALIZATIONS_ROADMAP.md) - 30+ visualisations
-- [Consensus Deck Generator](docs/CONSENSUS_DECK_GENERATOR.md) - Feature ML unique
-- [Innovation Detector](docs/INNOVATION_DETECTOR_CONCEPT.md) - Détection tech choices
+For detailed documentation, see:
+- [Scraping Guide](docs/SCRAPERS_COMPLETE_GUIDE.md) - Complete scraping documentation
+- [API Reference](docs/API_REFERENCE.md) - Full API documentation
+- [Development Guide](docs/DEVELOPMENT_GUIDE.md) - Contributing guidelines
 
 ## 🔒 Security
 

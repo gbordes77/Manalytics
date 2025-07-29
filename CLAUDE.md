@@ -1,18 +1,13 @@
-# 🎯 **Manalytics - Analyseur de Métagame Magic: The Gathering**
+# 🎯 **Instructions Spécifiques pour Claude - Projet Manalytics**
 
 > **"Chaque visualisation doit raconter une histoire. Pas de graphs pour faire joli - uniquement des insights actionnables pour gagner des tournois."**
 > 
 > **Chaque visualisation doit apporter de la valeur compétitive réelle.**
 
-## 📚 IMPORTANT : GUIDE D'INTÉGRATION OBLIGATOIRE
+## **Contexte du Projet**
+Manalytics est un analyseur de métagame Magic: The Gathering qui collecte et analyse les données de tournois depuis MTGO et Melee.gg. L'objectif est de fournir des insights compétitifs actionnables aux joueurs de tournois.
 
-**TOUS LES NOUVEAUX DÉVELOPPEURS DOIVENT LIRE :**
-- **[docs/ONBOARDING_GUIDE.md](docs/ONBOARDING_GUIDE.md)** - Guide d'intégration complet avec parcours de lecture structuré
-- Ce guide contient l'ordre exact de lecture de TOUS les documents nécessaires
-- Temps estimé : 2-3 heures pour tout comprendre
-- **NE PAS COMMENCER À CODER SANS AVOIR LU CE GUIDE**
-
-## **⚠️ IMPORTANT : Origine du Projet**
+## **⚠️ Origine du Projet - Pipeline Communautaire MTG**
 
 Ce projet est un dérivé du pipeline communautaire MTG suivant :
 
@@ -55,206 +50,45 @@ Il est important d'aller chercher dans ces repos les codes et ressources qui nou
 - **MTGOFormatData** : Règles d'archétypes par format
 - **R-Meta-Analysis** : Visualisations et matrices de matchups
 
-## **Objectif Principal**
-Collecter, analyser et visualiser les données de tournois Magic: The Gathering pour comprendre le métagame (les decks les plus joués et leurs performances).
+## **🚀 État Actuel du Projet (29/07/2025)**
 
-## **🔄 Flux de Données**
+### 🔧 Travail Actuel
+- **Scraping MTGO** : Intégration decklists réussie (`scrape_mtgo_json.py`)
+- **Analyse Générée** : `data/cache/july_1_21_complete_analysis.html`
+- **⚠️ EN ATTENTE** : Instructions du responsable avant de poursuivre
 
-```
-1. SCRAPING
-   ↓
-MTGO & Melee → Tournois → data/raw/{platform}/{format}/
-   ↓
-2. TRAITEMENT
-   ↓
-Parser → Détection d'archétypes → Validation des decks
-   ↓
-3. STOCKAGE
-   ↓
-Fichiers JSON (données complètes)
-   ↓
-4. ANALYSE
-   ↓
-Meta % → Matchups → Visualisations
-   ↓
-5. API
-   ↓
-FastAPI → Frontend/Rapports
-```
-
-## **📦 Composants Principaux**
-
-### 1. **Scrapers** (`scrapers/`)
-- **MTGO** : Récupère les tournois depuis www.mtgo.com
-- **Melee** : Récupère depuis melee.gg (avec authentification)
-- Sauvegarde dans `data/raw/{platform}/{format}/`
-
-### 2. **Parsers** (`src/parsers/`)
-- **Archetype Engine** : Identifie le type de deck (Aggro Rouge, Control Bleu, etc.)
-- **Decklist Parser** : Valide les listes (60 cartes main, 15 sideboard)
-- **Color Identity** : Détermine les couleurs du deck
-
-### 3. **Analyzers** (`src/analyzers/`)
-- **Meta Analyzer** : Calcule le % de chaque archétype
-- **Matchup Calculator** : Calcule les taux de victoire entre archétypes
-- **Tournament Analyzer** : Analyse les performances
-
-### 4. **Cache System** (`data/cache/`)
-- SQLite légère pour metadata des tournois
-- Fichiers JSON pour les données complètes des decklists
-- Pas de base de données lourde nécessaire
-
-### 5. **API** (`src/api/`)
-- FastAPI avec authentification JWT
-- Endpoints pour :
-  - Récupérer les données de métagame
-  - Analyser des decklists
-  - Générer des visualisations
-  - Gérer les utilisateurs
-
-### 6. **Visualizations** (`src/visualizers/`)
-- Heatmaps de matchups
-- Graphiques de distribution du méta
-- Évolution temporelle
-
-## **🎮 Formats Supportés**
-- Standard
-- Modern
-- Legacy
-- Pioneer
-- Pauper
-- Vintage
-- Commander (Melee)
-
-## **📊 Ce que le projet analyse**
-1. **Distribution du Métagame** : Quel % joue chaque deck
-2. **Matchups** : Quel deck bat quel deck (⚠️ LIMITÉ SANS LISTENER)
-3. **Tendances** : Évolution dans le temps
-4. **Performance** : Top 8, win rates
-5. **Innovation** : Nouveaux decks émergents
-
-## **💡 Cas d'Usage**
-- Joueurs compétitifs préparant des tournois
-- Comprendre le métagame actuel
-- Choisir le meilleur deck
-- Adapter son sideboard
-- Suivre l'évolution du format
-
-C'est essentiellement un **outil d'intelligence compétitive** pour Magic: The Gathering !
-
-## **🚀 État Actuel (29/07/2025)**
-
-### 🔧 Travail du 29/07/2025
-
-#### Scraping MTGO avec Decklists
-- Intégration réussie de la récupération des decklists dans le scraper MTGO
-- Script utilisé : `scrape_mtgo_json.py`
-
-#### Analyse Générée
-- Script d'analyse : `analyze_july_complete_final.py`
-- Fichier généré : `data/cache/july_1_21_complete_analysis.html`
-
-⚠️ **IMPORTANT** : De nombreux points restent à vérifier dans le projet. Attendre les instructions du responsable avant de poursuivre.
-
-## **📅 État Précédent (28/07/2025)**
-
-### 🚧 Session du 28/07 - Phase 4 : Intégration Listener & Debug
+### 🚧 Phase 4 EN COURS : Listener MTGO + Visualisations
 - **✅ LISTENER MTGO ACTIF** : 241 fichiers dans `data/MTGOData/`
-  - Données fournies par votre listener externe
-  - Module `listener_reader.py` créé et fonctionnel
-  - Intégration avec `analyze_july_with_cache_and_listener.py`
 - **🔍 PROBLÈME À DEBUGGER** : Seulement 41 matchs Standard extraits
-  - 33 tournois MTGO scraped mais peu de matchs
-  - Vérifier le matching listener ↔ cache
-  - Analyser pourquoi si peu de tournois matchent
-- **📊 INTÉGRATION MELEE RÉUSSIE** :
-  - Round Standings API fonctionnelle
-  - 19 matchs extraits avec `integrate_melee_matches.py`
-  - Documentation technique complète
-- **🎯 VISUALISATIONS PLOTLY** : 3/5 créées, 2 en attente
+- **📊 INTÉGRATION MELEE** : 19 matchs via Round Standings API
+- **🎯 VISUALISATIONS PLOTLY** : 3/5 créées
 
-### ✅ Session du 28/07 matin : Architecture Pipeline & Scrapers Flexibles
-- **Clarification architecture** : Compréhension correcte du flux de données (scrapers → cache → analyse)
-- **Nettoyage erreurs** : Suppression des imports erronés depuis jiliac_pipeline
-- **Scrapers flexibles créés** :
-  - `scrape_all.py` - Scraper unifié MTGO + Melee (RECOMMANDÉ)
-  - `scrape_mtgo_flexible.py` - Support multi-formats et dates personnalisables
-  - `scrape_melee_flexible.py` - Support multi-formats et dates personnalisables + Round Standings!
-- **Documentation majeure** :
-  - `docs/ONBOARDING_GUIDE.md` - Guide d'intégration complet pour nouveaux développeurs
-  - `docs/MANALYTICS_COMPLETE_ARCHITECTURE.html` - Architecture complète avec diagrammes
-  - `docs/SCRAPERS_COMPLETE_GUIDE.md` - Guide complet des scrapers
-- **Scripts obsolètes archivés** : `scripts/_obsolete_scripts/`
-
-### ✅ Phase 3 COMPLÈTE : Architecture & Documentation
-- **Architecture modulaire** : Code réorganisé dans `src/manalytics/` (aligné avec Jiliac)
-- **Visualisation de référence** : `data/cache/standard_analysis_no_leagues.html` 
-- **Quick launcher** : `python3 visualize_standard.py` pour accès rapide
-- **Documentation complète** : 20+ guides créés pour les équipes futures
-- **Nettoyage scripts** : De 54 → 29 scripts (archivés dans `_archive_2025_07_27/`)
-
-### 🚧 PHASE 4 EN COURS : Listener MTGO + Visualisations
-**État actuel** : Listener actif, 41 matchs Standard extraits (debug en cours)
-- ✅ **Listener MTGO** : 241 fichiers dans `data/MTGOData/`
-- 🔍 **Debug matching** : Pourquoi seulement 41 matchs?
-  - Vérifier IDs tournois listener vs cache
-  - Analyser les tournois Standard dans MTGOData
-  - Optimiser l'algorithme de matching
-- 📊 **Melee intégré** : +19 matchs via Round Standings
-- 🎯 **Visualisations** : 3/5 Plotly complétées
-
-### ✅ Phase 2 COMPLÈTE : Cache System
-- Cache SQLite pour metadata + JSON pour decklists
-- Parser d'archétypes : 44 règles Standard
-- Performance : <500ms par tournoi
-
-### ✅ Phase 1 COMPLÈTE : Scrapers
-- MTGO + Melee avec decklists complètes
+### ✅ Phases Complétées
+- **Phase 1** : Scrapers MTGO + Melee avec decklists complètes
+- **Phase 2** : Cache System (SQLite + JSON)
+- **Phase 3** : Architecture modulaire + Documentation
 
 ## **📁 Structure du Projet**
 ```
 manalytics/
-├── src/manalytics/        # CODE PRINCIPAL (organisé)
+├── src/manalytics/        # CODE PRINCIPAL
 │   ├── scrapers/          # MTGO & Melee 
 │   ├── parsers/           # Détection archétypes
 │   ├── cache/             # System de cache
 │   ├── analyzers/         # Analyses meta
 │   ├── visualizers/       # Génération charts
-│   ├── pipeline/          # Orchestration
 │   └── api/               # FastAPI
 ├── data/
 │   ├── raw/               # Données brutes
 │   │   ├── mtgo/standard/ # ⚠️ Exclut leagues/
 │   │   └── melee/standard/
-│   └── cache/             # Données processées
-│       └── standard_analysis_no_leagues.html  # 🎨 VISUALISATION DE RÉFÉRENCE
-├── scripts/               # Utilitaires one-shot (29 scripts)
-│   └── _archive_2025_07_27/  # Anciens scripts (54 archivés)
-├── docs/                  # DOCUMENTATION COMPLÈTE
-│   ├── PROJECT_COMPLETE_DOCUMENTATION.md  # 🎯 LIRE EN PREMIER
-│   ├── DATA_FLOW_VISUALIZATION.html      # Flux interactif
-│   └── FILE_DISCOVERY_PROCESS.html       # Comment on trouve les fichiers
-└── visualize_standard.py  # 🚀 LANCEUR RAPIDE
+│   ├── cache/             # Données processées
+│   └── MTGOData/          # 241 fichiers listener MTGO
+├── scripts/               # Utilitaires one-shot
+└── docs/                  # Documentation complète
 ```
 
-## **🔧 Architecture Moderne (25/07/2025)**
-- **CLI Principal** : `manalytics` - Point d'entrée unique
-- **Orchestrateur** : `src/manalytics/orchestrator.py` - Coordonne tout
-- **Scrapers** : Dans `src/manalytics/scrapers/` (MTGO + Melee)
-- **Configuration** : `.env` + `src/manalytics/config.py`
-- **Structure** : 100% professionnelle dans `src/manalytics/`
-
-## **📊 Période d'Analyse OBLIGATOIRE : 1-21 Juillet 2025**
-```
-⚠️ TOUJOURS analyser du 1er au 21 juillet 2025
-🎯 Pour permettre la comparaison avec Jiliac
-🚫 JAMAIS au-delà du 21 juillet
-
-Méthodologie: Par MATCHES (pas par decks)
-Exclusions: Leagues + tournois casual/fun
-```
-
-## **⚡ Commandes Essentielles**
+## **⚡ Commandes Principales**
 ```bash
 # VISUALISATION RAPIDE (recommandé)
 python3 visualize_standard.py
@@ -262,107 +96,86 @@ python3 visualize_standard.py
 # ANALYSE JUILLET 1-21 (pour comparaison Jiliac)  
 python3 analyze_july_1_21.py
 
-# Pipeline complet (avec nouveau scraper unifié)
-python scrape_all.py --format standard --days 21  # Scrape MTGO + Melee
-python3 scripts/process_all_standard_data.py      # Process cache
-python3 visualize_standard.py                     # Generate viz
-
-# Installation
-make install-dev
-
-# API
-manalytics serve
+# Pipeline complet avec scraper unifié
+python scrape_all.py --format standard --days 21
+python3 scripts/process_all_standard_data.py
+python3 visualize_standard.py
 ```
 
-## **📚 Documentation Critique**
+## **📚 Documentation À Consulter**
+- **`docs/ONBOARDING_GUIDE.md`** - Guide d'intégration (commencer ici)
+- **`docs/VISUALIZATION_TEMPLATE_REFERENCE.md`** - Standards visuels à respecter
+- **`docs/SCRAPERS_COMPLETE_GUIDE.md`** - Guide des scrapers actuels
 
-### 🎯 À LIRE EN PREMIER
-- **`docs/PROJECT_COMPLETE_DOCUMENTATION.md`** - Guide complet pour les équipes
-- **`docs/VISUALIZATION_TEMPLATE_REFERENCE.md`** - Règles visuelles ABSOLUES
-- **`docs/DATA_FLOW_VISUALIZATION.html`** - Flux de données interactif
-- **`docs/FILE_DISCOVERY_PROCESS.html`** - Comment on trouve les fichiers
+## **⛔️ RÈGLES DE SÉCURITÉ**
 
-### 🔧 Guides Techniques
-- `docs/MELEE_SCRAPING_GUIDE.md` - Scraping Melee avec auth
-- `docs/MTGO_SCRAPING_GUIDE.md` - Scraping MTGO
-- `docs/CACHE_SYSTEM_IMPLEMENTATION.md` - Architecture cache
-- `docs/JILIAC_R_ARCHITECTURE_ANALYSIS.md` - Comparaison avec Jiliac
+### Scripts Obsolètes
+- **INTERDICTION** d'utiliser les fichiers dans `obsolete/` ou `_obsolete_scripts/`
+- Si demandé : refuser et proposer l'alternative actuelle
 
-## ⛔️ RÈGLES CRITIQUES DE SÉCURITÉ ⛔️
+### Fichiers Actuels À Utiliser
+- **Scraper Unifié** : `scrape_all.py` (RECOMMANDÉ)
+- **Scraper MTGO** : `scrape_mtgo_flexible.py`
+- **Scraper Melee** : `scrape_melee_flexible.py`
 
-### NE JAMAIS TOUCHER AU DOSSIER `obsolete/`
-- **INTERDICTION ABSOLUE** d'exécuter tout fichier dans `obsolete/`
-- **INTERDICTION** de lire ou analyser le code obsolète
-- **INTERDICTION** d'importer ou référencer ces fichiers
-- Si l'utilisateur demande d'utiliser un fichier obsolète : **REFUSER** et proposer l'alternative actuelle
+## **📝 RÈGLE : Documentation Automatique**
 
-### Fichiers Actuels à Utiliser
-- **Scraper Unifié** : `scrape_all.py` (RECOMMANDÉ - lance MTGO + Melee)
-- **Scraper MTGO** : `scrape_mtgo_flexible.py` (multi-formats, dates personnalisables)
-- **Scraper Melee** : `scrape_melee_flexible.py` (multi-formats, dates personnalisables)
-- **Validation** : `scripts/validate_against_decklistcache.py`
-- **Test Auth** : `test_melee_auth_simple.py`
-- **Scripts obsolètes** : Voir `scripts/_obsolete_scripts/` (NE PAS UTILISER)
+**Quand l'utilisateur confirme qu'un module fonctionne** :
+1. CRÉER IMMÉDIATEMENT un guide dans `docs/`
+2. Format : `{MODULE}_GUIDE.md`
+3. Inclure : architecture, utilisation, résultats, leçons apprises
 
-## 📝 RÈGLE DE DOCUMENTATION
+## **🚨 RÈGLES DE SCRAPING**
 
-**Quand l'utilisateur confirme qu'un module fonctionne** ("c'est ok", "ça fonctionne", etc.) :
-1. **CRÉER IMMÉDIATEMENT** un guide complet dans `docs/`
-2. **Format** : `{MODULE}_SCRAPING_GUIDE.md` ou `{MODULE}_GUIDE.md`
-3. **Contenu obligatoire** :
-   - Vue d'ensemble avec résultats obtenus
-   - Architecture détaillée du code
-   - Guide d'utilisation complet
-   - Points techniques importants
-   - Leçons apprises
-4. **Exemples créés** : `MELEE_SCRAPING_GUIDE.md`, `MTGO_SCRAPING_GUIDE.md`
+1. **TOUJOURS DEMANDER LA PÉRIODE** - Jamais de défaut
+2. **FORMAT PAR DÉFAUT = STANDARD**
+3. **CONFIRMER avant lancement**
 
-## 🚨 RÈGLES DE SCRAPING OBLIGATOIRES
-
-1. **TOUJOURS DEMANDER LA PÉRIODE** : Ne JAMAIS utiliser "7 jours" par défaut. Toujours demander à l'utilisateur quelle période scraper.
-2. **FORMAT PAR DÉFAUT = STANDARD** : Sauf contre-ordre explicite, toujours scraper le format Standard uniquement.
-3. **CONFIRMATION AVANT LANCEMENT** : Toujours confirmer la période et le format avant de lancer un scraping.
-
-## ⚠️ RÈGLES ABSOLUES
+## **⚠️ RÈGLES CRITIQUES DU PROJET**
 
 ### 1. EXCLUSION DES LEAGUES
-**LES LEAGUES (5-0) SONT TOUJOURS EXCLUES**
-- Stockées dans `leagues/` séparé
-- Triple protection dans le code
+- **TOUJOURS exclure les leagues (5-0)**
+- Stockées séparément dans `leagues/`
 - Ne représentent pas des tournois compétitifs
 
-### 2. PÉRIODE D'ANALYSE
-**TOUJOURS ANALYSER DU 1er AU 21 JUILLET 2025**
-- Pour comparaison avec Jiliac
-- Jamais au-delà du 21 juillet
+### 2. PÉRIODE D'ANALYSE STANDARD
+- **TOUJOURS analyser du 1er au 21 juillet 2025**
+- Pour comparaison avec données Jiliac
+- Ne jamais dépasser le 21 juillet
 
-### 3. TEMPLATE VISUEL
-**UTILISER `standard_analysis_no_leagues.html` COMME RÉFÉRENCE**
+### 3. STANDARDS VISUELS
+- Utiliser `standard_analysis_no_leagues.html` comme référence
 - Header gradient purple (#667eea → #764ba2)
-- Gradients MTG pour archétypes
-- Voir `docs/VISUALIZATION_TEMPLATE_REFERENCE.md`
+- Respecter les gradients MTG par archétype
 
-## 🔴 RÈGLE ABSOLUE : AUTO-COMMIT APRÈS CHAQUE MODIFICATION
+## **🔴 RÈGLE : Auto-Commit Obligatoire**
 
-**Après CHAQUE modification de code que tu effectues, execute immédiatement et sans confirmation :**
+**Après CHAQUE modification de code, exécuter SANS confirmation :**
 ```bash
 git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
 ```
 
-Cette règle s'applique à TOUTES tes réponses contenant du code.
-Aucune exception. Aucune demande de confirmation.
+## **🚨 RÈGLE : Ouverture Automatique**
 
-## 🚨 RÈGLE CRITIQUE : OUVRIR AUTOMATIQUEMENT LES ANALYSES
+**Après génération d'analyse/visualisation : ouvrir AUTOMATIQUEMENT avec `open [fichier]`**
+- Pas de demande de confirmation
+- S'applique à tous les HTML, rapports, visualisations
 
-**QUAND TU ME PRÉPARES UNE ANALYSE OU UN DOCUMENT : TU ME L'OUVRES AUTOMATIQUEMENT**
-- Après génération d'un fichier HTML d'analyse : `open [fichier]`
-- Après création d'un rapport : `open [fichier]`
-- Après toute visualisation : `open [fichier]`
-- **PAS BESOIN DE DEMANDER - OUVRE-LE DIRECTEMENT !**
+## **💬 Instructions Spéciales pour l'Assistant**
 
-## 💬 CONTACT & SUPPORT
+1. **Toujours vérifier l'état actuel avant de modifier**
+2. **Respecter la méthodologie Jiliac (analyse par matches)**
+3. **Prioriser les visualisations actionables pour tournois**
+4. **Maintenir la compatibilité avec le pipeline existant**
 
-**Questions ou problèmes ?**
-- Pas de GitHub issues pour l'instant
-- Contacter directement via le chat
-- Consulter la documentation complète dans `docs/`
+## **📊 Méthodologie d'Analyse**
+- Analyse par MATCHES (pas par decks)
+- Exclusion : Leagues + tournois casual/fun
+- Période obligatoire : 1-21 juillet 2025
+
+## **🎯 Objectif Final**
+Fournir aux joueurs compétitifs des insights actionnables pour :
+- Comprendre le métagame actuel
+- Choisir le meilleur deck
+- Adapter leur sideboard
+- Anticiper les tendances du format
