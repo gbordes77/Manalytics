@@ -48,7 +48,7 @@ class MTGOCompleteScraper:
         })
         self.base_url = "https://www.mtgo.com"
         
-    def get_tournaments(self, start_date: datetime, end_date: datetime, formats: Set[str]) -> List[dict]:
+    def get_tournaments(self, start_date: datetime, end_date: datetime, formats: Set[str], include_leagues: bool = False) -> List[dict]:
         """Récupère les tournois pour la période et formats spécifiés"""
         url = f"{self.base_url}/decklists"
         logger.info(f"📋 Fetching tournament list: {url}")
@@ -153,6 +153,10 @@ class MTGOCompleteScraper:
                 
             # Extraire le nom propre
             name = t['text']
+            
+            # EXCLURE LES LEAGUES (sauf si explicitement demandé)
+            if not include_leagues and 'league' in name.lower():
+                continue
             
             # Déterminer le format
             format_name = self._get_format(name)
@@ -577,6 +581,10 @@ def main():
     parser.add_argument('--async-mode', action='store_true',
                        help='Utiliser le scraping asynchrone (plus rapide)')
     
+    # Inclure/Exclure leagues
+    parser.add_argument('--include-leagues', action='store_true',
+                       help='Inclure les leagues (par défaut: exclues)')
+    
     args = parser.parse_args()
     
     # Déterminer les dates
@@ -631,8 +639,8 @@ def main():
     scraper = MTGOCompleteScraper()
     
     # Récupérer la liste des tournois
-    tournaments = scraper.get_tournaments(start_date, end_date, formats)
-    logger.info(f"\n✅ Found {len(tournaments)} tournaments to scrape")
+    tournaments = scraper.get_tournaments(start_date, end_date, formats, args.include_leagues)
+    logger.info(f"\n✅ Found {len(tournaments)} tournaments to scrape (leagues {'included' if args.include_leagues else 'excluded'})")
     
     if tournaments:
         # Limiter si demandé

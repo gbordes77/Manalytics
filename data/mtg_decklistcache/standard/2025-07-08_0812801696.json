@@ -1,0 +1,4137 @@
+{
+  "source": "mtgo",
+  "format": "standard",
+  "name": "Standard Challenge 64\n\n\nJuly\n8\n2025",
+  "date": "2025-07-08",
+  "url": "https://www.mtgo.com/decklist/standard-challenge-64-2025-07-0812801696",
+  "tournament_id": "0812801696",
+  "event_id": "12801696",
+  "description": "Standard Challenge 64",
+  "scraped_at": "2025-07-29T02:16:00.817753",
+  "decklists": [
+    {
+      "player": "AchiIIes",
+      "login_id": "157954",
+      "decktournamentid": "58188021",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Simulacrum Synthesizer"
+        },
+        {
+          "quantity": 4,
+          "name": "United Battlefront"
+        },
+        {
+          "quantity": 4,
+          "name": "Candy Trail"
+        },
+        {
+          "quantity": 2,
+          "name": "Kayla's Reconstruction"
+        },
+        {
+          "quantity": 4,
+          "name": "Clay-Fired Bricks"
+        },
+        {
+          "quantity": 4,
+          "name": "Spring-Loaded Sawblades"
+        },
+        {
+          "quantity": 3,
+          "name": "Braided Net"
+        },
+        {
+          "quantity": 1,
+          "name": "The Irencrag"
+        },
+        {
+          "quantity": 2,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 4,
+          "name": "Perilous Snare"
+        },
+        {
+          "quantity": 2,
+          "name": "Repurposing Bay"
+        },
+        {
+          "quantity": 1,
+          "name": "Thousand Moons Smithy"
+        },
+        {
+          "quantity": 1,
+          "name": "The Irencrag"
+        },
+        {
+          "quantity": 4,
+          "name": "Adarkar Wastes"
+        },
+        {
+          "quantity": 4,
+          "name": "Seachrome Coast"
+        },
+        {
+          "quantity": 4,
+          "name": "Floodfarm Verge"
+        },
+        {
+          "quantity": 2,
+          "name": "Fomori Vault"
+        },
+        {
+          "quantity": 3,
+          "name": "Island"
+        },
+        {
+          "quantity": 7,
+          "name": "Plains"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 3,
+          "name": "Day of Judgment"
+        },
+        {
+          "quantity": 3,
+          "name": "Rest in Peace"
+        },
+        {
+          "quantity": 4,
+          "name": "Voice of Victory"
+        },
+        {
+          "quantity": 2,
+          "name": "Authority of the Consuls"
+        },
+        {
+          "quantity": 3,
+          "name": "Disdainful Stroke"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "L1X0",
+      "login_id": "467289",
+      "decktournamentid": "58188009",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Brightglass Gearhulk"
+        },
+        {
+          "quantity": 3,
+          "name": "Plains"
+        },
+        {
+          "quantity": 1,
+          "name": "Plains"
+        },
+        {
+          "quantity": 1,
+          "name": "Dusk Rose Reliquary"
+        },
+        {
+          "quantity": 3,
+          "name": "Pawpatch Recruit"
+        },
+        {
+          "quantity": 4,
+          "name": "Enduring Innocence"
+        },
+        {
+          "quantity": 4,
+          "name": "Overlord of the Mistmoors"
+        },
+        {
+          "quantity": 2,
+          "name": "Mirrex"
+        },
+        {
+          "quantity": 1,
+          "name": "Haywire Mite"
+        },
+        {
+          "quantity": 4,
+          "name": "Hushwood Verge"
+        },
+        {
+          "quantity": 2,
+          "name": "Llanowar Elves"
+        },
+        {
+          "quantity": 2,
+          "name": "Llanowar Elves"
+        },
+        {
+          "quantity": 1,
+          "name": "Nurturing Pixie"
+        },
+        {
+          "quantity": 2,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 1,
+          "name": "Forest"
+        },
+        {
+          "quantity": 1,
+          "name": "Forest"
+        },
+        {
+          "quantity": 1,
+          "name": "Forest"
+        },
+        {
+          "quantity": 2,
+          "name": "Elspeth, Storm Slayer"
+        },
+        {
+          "quantity": 4,
+          "name": "Collector's Cage"
+        },
+        {
+          "quantity": 4,
+          "name": "Brushland"
+        },
+        {
+          "quantity": 4,
+          "name": "Razorverge Thicket"
+        },
+        {
+          "quantity": 3,
+          "name": "Restless Prairie"
+        },
+        {
+          "quantity": 4,
+          "name": "Sandstorm Salvager"
+        },
+        {
+          "quantity": 2,
+          "name": "Sanguine Evangelist"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Wrenn and Realmbreaker"
+        },
+        {
+          "quantity": 2,
+          "name": "Scrapshooter"
+        },
+        {
+          "quantity": 1,
+          "name": "Scavenging Ooze"
+        },
+        {
+          "quantity": 1,
+          "name": "Elesh Norn, Mother of Machines"
+        },
+        {
+          "quantity": 1,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "Invasion of Gobakhan"
+        },
+        {
+          "quantity": 1,
+          "name": "Phoenix Down"
+        },
+        {
+          "quantity": 2,
+          "name": "Devout Decree"
+        },
+        {
+          "quantity": 2,
+          "name": "Beza, the Bounding Spring"
+        },
+        {
+          "quantity": 1,
+          "name": "Aven Interrupter"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "LucasG1ggs",
+      "login_id": "750888",
+      "decktournamentid": "58187955",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "Anoint with Affliction"
+        },
+        {
+          "quantity": 2,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 4,
+          "name": "Llanowar Elves"
+        },
+        {
+          "quantity": 2,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 3,
+          "name": "Go for the Throat"
+        },
+        {
+          "quantity": 3,
+          "name": "Forest"
+        },
+        {
+          "quantity": 1,
+          "name": "Llanowar Wastes"
+        },
+        {
+          "quantity": 1,
+          "name": "Maelstrom Pulse"
+        },
+        {
+          "quantity": 3,
+          "name": "Mishra's Foundry"
+        },
+        {
+          "quantity": 2,
+          "name": "Preacher of the Schism"
+        },
+        {
+          "quantity": 4,
+          "name": "Sentinel of the Nameless City"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "quantity": 1,
+          "name": "Shoot the Sheriff"
+        },
+        {
+          "quantity": 2,
+          "name": "Tear Asunder"
+        },
+        {
+          "quantity": 1,
+          "name": "The End"
+        },
+        {
+          "quantity": 2,
+          "name": "Thrun, Breaker of Silence"
+        },
+        {
+          "quantity": 1,
+          "name": "Tranquil Frillback"
+        },
+        {
+          "quantity": 2,
+          "name": "Unholy Annex // Ritual Chamber"
+        },
+        {
+          "quantity": 4,
+          "name": "Wastewood Verge"
+        },
+        {
+          "quantity": 3,
+          "name": "Llanowar Wastes"
+        },
+        {
+          "quantity": 1,
+          "name": "Maelstrom Pulse"
+        },
+        {
+          "quantity": 4,
+          "name": "Mosswood Dreadknight"
+        },
+        {
+          "quantity": 4,
+          "name": "Restless Cottage"
+        },
+        {
+          "quantity": 3,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "Blooming Marsh"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Anoint with Affliction"
+        },
+        {
+          "quantity": 2,
+          "name": "Choking Miasma"
+        },
+        {
+          "quantity": 1,
+          "name": "Maelstrom Pulse"
+        },
+        {
+          "quantity": 4,
+          "name": "Leyline of the Void"
+        },
+        {
+          "quantity": 3,
+          "name": "Duress"
+        },
+        {
+          "quantity": 1,
+          "name": "Nissa, Ascended Animist"
+        },
+        {
+          "quantity": 1,
+          "name": "Unholy Annex // Ritual Chamber"
+        },
+        {
+          "quantity": 2,
+          "name": "Harvester of Misery"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "HoldTheElle",
+      "login_id": "976841",
+      "decktournamentid": "58188028",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 4,
+          "name": "Blooming Marsh"
+        },
+        {
+          "quantity": 2,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 3,
+          "name": "Demon Wall"
+        },
+        {
+          "quantity": 1,
+          "name": "Disruptive Stormbrood"
+        },
+        {
+          "quantity": 4,
+          "name": "Forest"
+        },
+        {
+          "quantity": 2,
+          "name": "Glissa Sunslayer"
+        },
+        {
+          "quantity": 2,
+          "name": "Go for the Throat"
+        },
+        {
+          "quantity": 4,
+          "name": "Llanowar Elves"
+        },
+        {
+          "quantity": 2,
+          "name": "Llanowar Wastes"
+        },
+        {
+          "quantity": 3,
+          "name": "Lumbering Worldwagon"
+        },
+        {
+          "quantity": 1,
+          "name": "Maelstrom Pulse"
+        },
+        {
+          "quantity": 1,
+          "name": "Qarsi Revenant"
+        },
+        {
+          "quantity": 1,
+          "name": "Restless Cottage"
+        },
+        {
+          "quantity": 1,
+          "name": "Scavenging Ooze"
+        },
+        {
+          "quantity": 2,
+          "name": "Sentinel of the Nameless City"
+        },
+        {
+          "quantity": 3,
+          "name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred's Edict"
+        },
+        {
+          "quantity": 1,
+          "name": "Thrun, Breaker of Silence"
+        },
+        {
+          "quantity": 3,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 2,
+          "name": "Surrak, Elusive Hunter"
+        },
+        {
+          "quantity": 4,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "Tear Asunder"
+        },
+        {
+          "quantity": 2,
+          "name": "Underground Mortuary"
+        },
+        {
+          "quantity": 4,
+          "name": "Unholy Annex // Ritual Chamber"
+        },
+        {
+          "quantity": 1,
+          "name": "Vivien Reid"
+        },
+        {
+          "quantity": 4,
+          "name": "Wastewood Verge"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Nissa, Ascended Animist"
+        },
+        {
+          "quantity": 2,
+          "name": "Heritage Reclamation"
+        },
+        {
+          "quantity": 2,
+          "name": "Liliana of the Veil"
+        },
+        {
+          "quantity": 1,
+          "name": "Blot Out"
+        },
+        {
+          "quantity": 1,
+          "name": "Scavenging Ooze"
+        },
+        {
+          "quantity": 2,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "Thrun, Breaker of Silence"
+        },
+        {
+          "quantity": 3,
+          "name": "Duress"
+        },
+        {
+          "quantity": 1,
+          "name": "Anoint with Affliction"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "O_danielakos",
+      "login_id": "1017550",
+      "decktournamentid": "58188049",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 4,
+          "name": "Spyglass Siren"
+        },
+        {
+          "quantity": 4,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 3,
+          "name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "quantity": 4,
+          "name": "Gloomlake Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Island"
+        },
+        {
+          "quantity": 2,
+          "name": "Phantom Interference"
+        },
+        {
+          "quantity": 2,
+          "name": "Restless Reef"
+        },
+        {
+          "quantity": 4,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "Underground River"
+        },
+        {
+          "quantity": 4,
+          "name": "Floodpits Drowner"
+        },
+        {
+          "quantity": 3,
+          "name": "Go for the Throat"
+        },
+        {
+          "quantity": 2,
+          "name": "Faebloom Trick"
+        },
+        {
+          "quantity": 4,
+          "name": "Darkslick Shores"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred's Edict"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 4,
+          "name": "Deep-Cavern Bat"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "quantity": 1,
+          "name": "Fountainport"
+        },
+        {
+          "quantity": 1,
+          "name": "Faerie Mastermind"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 3,
+          "name": "Duress"
+        },
+        {
+          "quantity": 1,
+          "name": "Negate"
+        },
+        {
+          "quantity": 1,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 2,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 1,
+          "name": "Ertai Resurrected"
+        },
+        {
+          "quantity": 1,
+          "name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "quantity": 1,
+          "name": "Faerie Mastermind"
+        },
+        {
+          "quantity": 2,
+          "name": "Preacher of the Schism"
+        },
+        {
+          "quantity": 2,
+          "name": "Anoint with Affliction"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "Venom1",
+      "login_id": "1123336",
+      "decktournamentid": "58188011",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "Beza, the Bounding Spring"
+        },
+        {
+          "quantity": 4,
+          "name": "Caretaker's Talent"
+        },
+        {
+          "quantity": 4,
+          "name": "Carrot Cake"
+        },
+        {
+          "quantity": 2,
+          "name": "Elspeth, Storm Slayer"
+        },
+        {
+          "quantity": 2,
+          "name": "Day of Judgment"
+        },
+        {
+          "quantity": 4,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 4,
+          "name": "Enduring Innocence"
+        },
+        {
+          "quantity": 4,
+          "name": "Fountainport"
+        },
+        {
+          "quantity": 2,
+          "name": "Demolition Field"
+        },
+        {
+          "quantity": 4,
+          "name": "Lay Down Arms"
+        },
+        {
+          "quantity": 3,
+          "name": "Overlord of the Mistmoors"
+        },
+        {
+          "quantity": 15,
+          "name": "Plains"
+        },
+        {
+          "quantity": 1,
+          "name": "Sunfall"
+        },
+        {
+          "quantity": 4,
+          "name": "Sunken Citadel"
+        },
+        {
+          "quantity": 4,
+          "name": "Voice of Victory"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Authority of the Consuls"
+        },
+        {
+          "quantity": 1,
+          "name": "Beza, the Bounding Spring"
+        },
+        {
+          "quantity": 2,
+          "name": "Destroy Evil"
+        },
+        {
+          "quantity": 1,
+          "name": "Elspeth, Storm Slayer"
+        },
+        {
+          "quantity": 1,
+          "name": "Overlord of the Mistmoors"
+        },
+        {
+          "quantity": 2,
+          "name": "Temporary Lockdown"
+        },
+        {
+          "quantity": 2,
+          "name": "The Stone Brain"
+        },
+        {
+          "quantity": 4,
+          "name": "Rest in Peace"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "GodOfSlaughter",
+      "login_id": "1185021",
+      "decktournamentid": "58187995",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "Plains"
+        },
+        {
+          "quantity": 2,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "Chandra, Spark Hunter"
+        },
+        {
+          "quantity": 4,
+          "name": "Dredger's Insight"
+        },
+        {
+          "quantity": 3,
+          "name": "Hushwood Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Esper Origins"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 1,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 1,
+          "name": "Forest"
+        },
+        {
+          "quantity": 1,
+          "name": "Forest"
+        },
+        {
+          "quantity": 2,
+          "name": "Joshua, Phoenix's Dominant"
+        },
+        {
+          "quantity": 3,
+          "name": "Lush Portico"
+        },
+        {
+          "quantity": 3,
+          "name": "Elegant Parlor"
+        },
+        {
+          "quantity": 4,
+          "name": "Overlord of the Boilerbilges"
+        },
+        {
+          "quantity": 2,
+          "name": "Cavern of Souls"
+        },
+        {
+          "quantity": 4,
+          "name": "Starting Town"
+        },
+        {
+          "quantity": 1,
+          "name": "Summon: Bahamut"
+        },
+        {
+          "quantity": 2,
+          "name": "Summon: Fenrir"
+        },
+        {
+          "quantity": 1,
+          "name": "Summon: Knights of Round"
+        },
+        {
+          "quantity": 1,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 2,
+          "name": "Terra, Magical Adept"
+        },
+        {
+          "quantity": 1,
+          "name": "Abrade"
+        },
+        {
+          "quantity": 4,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Yuna, Hope of Spira"
+        },
+        {
+          "quantity": 4,
+          "name": "Thornspire Verge"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Chandra, Spark Hunter"
+        },
+        {
+          "quantity": 2,
+          "name": "Clarion Conqueror"
+        },
+        {
+          "quantity": 2,
+          "name": "Nissa, Ascended Animist"
+        },
+        {
+          "quantity": 2,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 2,
+          "name": "Exorcise"
+        },
+        {
+          "quantity": 2,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 1,
+          "name": "Elspeth, Storm Slayer"
+        },
+        {
+          "quantity": 2,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "Day of Judgment"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "Deathnote1999",
+      "login_id": "1742290",
+      "decktournamentid": "58188018",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Agatha's Soul Cauldron"
+        },
+        {
+          "quantity": 2,
+          "name": "Cori Mountain Monastery"
+        },
+        {
+          "quantity": 2,
+          "name": "Draconautics Engineer"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Glacial Dragonhunt"
+        },
+        {
+          "quantity": 3,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 2,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Marauding Mako"
+        },
+        {
+          "quantity": 3,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Proft's Eidetic Memory"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 3,
+          "name": "Tersa Lightshatter"
+        },
+        {
+          "quantity": 3,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 4,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 3,
+          "name": "Voldaren Thrillseeker"
+        },
+        {
+          "quantity": 4,
+          "name": "Winternight Stories"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Change the Equation"
+        },
+        {
+          "quantity": 1,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 4,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 2,
+          "name": "Frostcliff Siege"
+        },
+        {
+          "quantity": 1,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 1,
+          "name": "Negate"
+        },
+        {
+          "quantity": 1,
+          "name": "Scorching Dragonfire"
+        },
+        {
+          "quantity": 2,
+          "name": "Spell Pierce"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "burnet7",
+      "login_id": "2105702",
+      "decktournamentid": "58188041",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "Alesha, Who Laughs at Fate"
+        },
+        {
+          "quantity": 1,
+          "name": "Blooming Marsh"
+        },
+        {
+          "quantity": 1,
+          "name": "Botanical Sanctum"
+        },
+        {
+          "quantity": 2,
+          "name": "Jirina, Dauntless General"
+        },
+        {
+          "quantity": 1,
+          "name": "Cecil, Dark Knight"
+        },
+        {
+          "quantity": 1,
+          "name": "Djeru and Hazoret"
+        },
+        {
+          "quantity": 2,
+          "name": "Ertai Resurrected"
+        },
+        {
+          "quantity": 2,
+          "name": "Hajar, Loyal Bodyguard"
+        },
+        {
+          "quantity": 4,
+          "name": "Honest Rutstein"
+        },
+        {
+          "quantity": 1,
+          "name": "Yavimaya Coast"
+        },
+        {
+          "quantity": 2,
+          "name": "Sephiroth, Fabled SOLDIER"
+        },
+        {
+          "quantity": 2,
+          "name": "Jill, Shiva's Dominant"
+        },
+        {
+          "quantity": 3,
+          "name": "Jodah, the Unifier"
+        },
+        {
+          "quantity": 1,
+          "name": "Llanowar Wastes"
+        },
+        {
+          "quantity": 2,
+          "name": "Louisoix's Sacrifice"
+        },
+        {
+          "quantity": 4,
+          "name": "Plaza of Heroes"
+        },
+        {
+          "quantity": 4,
+          "name": "Relic of Legends"
+        },
+        {
+          "quantity": 4,
+          "name": "Cavern of Souls"
+        },
+        {
+          "quantity": 1,
+          "name": "Seachrome Coast"
+        },
+        {
+          "quantity": 4,
+          "name": "Secluded Courtyard"
+        },
+        {
+          "quantity": 1,
+          "name": "Surrak, Elusive Hunter"
+        },
+        {
+          "quantity": 1,
+          "name": "Serah Farron"
+        },
+        {
+          "quantity": 4,
+          "name": "Starting Town"
+        },
+        {
+          "quantity": 1,
+          "name": "Underground River"
+        },
+        {
+          "quantity": 1,
+          "name": "Island"
+        },
+        {
+          "quantity": 2,
+          "name": "Zack Fair"
+        },
+        {
+          "quantity": 1,
+          "name": "Cecil, Dark Knight"
+        },
+        {
+          "quantity": 2,
+          "name": "Inti, Seneschal of the Sun"
+        },
+        {
+          "quantity": 4,
+          "name": "Rona, Herald of Invasion"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Drana and Linvala"
+        },
+        {
+          "quantity": 1,
+          "name": "Elesh Norn, Mother of Machines"
+        },
+        {
+          "quantity": 1,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 1,
+          "name": "Lightning, Army of One"
+        },
+        {
+          "quantity": 1,
+          "name": "Loran of the Third Path"
+        },
+        {
+          "quantity": 1,
+          "name": "Maelstrom Pulse"
+        },
+        {
+          "quantity": 1,
+          "name": "Rosa, Resolute White Mage"
+        },
+        {
+          "quantity": 1,
+          "name": "Sephiroth, Planet's Heir"
+        },
+        {
+          "quantity": 1,
+          "name": "Serah Farron"
+        },
+        {
+          "quantity": 1,
+          "name": "Thalia and The Gitrog Monster"
+        },
+        {
+          "quantity": 2,
+          "name": "The Filigree Sylex"
+        },
+        {
+          "quantity": 2,
+          "name": "Soul-Guide Lantern"
+        },
+        {
+          "quantity": 1,
+          "name": "Disdainful Stroke"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "kthanakit26",
+      "login_id": "2122697",
+      "decktournamentid": "58188046",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 3,
+          "name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "quantity": 4,
+          "name": "Deep-Cavern Bat"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 2,
+          "name": "Faebloom Trick"
+        },
+        {
+          "quantity": 1,
+          "name": "Faerie Mastermind"
+        },
+        {
+          "quantity": 3,
+          "name": "Floodpits Drowner"
+        },
+        {
+          "quantity": 1,
+          "name": "Fountainport"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 4,
+          "name": "Underground River"
+        },
+        {
+          "quantity": 3,
+          "name": "Go for the Throat"
+        },
+        {
+          "quantity": 1,
+          "name": "Island"
+        },
+        {
+          "quantity": 2,
+          "name": "Restless Reef"
+        },
+        {
+          "quantity": 2,
+          "name": "Phantom Interference"
+        },
+        {
+          "quantity": 1,
+          "name": "Nowhere to Run"
+        },
+        {
+          "quantity": 4,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 4,
+          "name": "Spyglass Siren"
+        },
+        {
+          "quantity": 2,
+          "name": "Island"
+        },
+        {
+          "quantity": 2,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix, Yawgmoth Praetor"
+        },
+        {
+          "quantity": 1,
+          "name": "Island"
+        },
+        {
+          "quantity": 1,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 1,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "Darkslick Shores"
+        },
+        {
+          "quantity": 4,
+          "name": "Gloomlake Verge"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Anoint with Affliction"
+        },
+        {
+          "quantity": 2,
+          "name": "Duress"
+        },
+        {
+          "quantity": 1,
+          "name": "Faerie Mastermind"
+        },
+        {
+          "quantity": 1,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 1,
+          "name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "quantity": 2,
+          "name": "Preacher of the Schism"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "quantity": 1,
+          "name": "Duress"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Negate"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "ultrasuperbob",
+      "login_id": "2186940",
+      "decktournamentid": "58188033",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "Arabella, Abandoned Doll"
+        },
+        {
+          "quantity": 1,
+          "name": "Plains"
+        },
+        {
+          "quantity": 4,
+          "name": "Case of the Gateway Express"
+        },
+        {
+          "quantity": 2,
+          "name": "Dragoon's Lance"
+        },
+        {
+          "quantity": 4,
+          "name": "Gleeful Demolition"
+        },
+        {
+          "quantity": 4,
+          "name": "Imodane's Recruiter"
+        },
+        {
+          "quantity": 4,
+          "name": "Inspiring Vantage"
+        },
+        {
+          "quantity": 4,
+          "name": "Knight-Errant of Eos"
+        },
+        {
+          "quantity": 1,
+          "name": "Mirrex"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Nesting Bot"
+        },
+        {
+          "quantity": 4,
+          "name": "Novice Inspector"
+        },
+        {
+          "quantity": 2,
+          "name": "Painter's Studio // Defaced Gallery"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Battlefield Forge"
+        },
+        {
+          "quantity": 1,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Warden of the Inner Sky"
+        },
+        {
+          "quantity": 1,
+          "name": "Plains"
+        },
+        {
+          "quantity": 2,
+          "name": "Plains"
+        },
+        {
+          "quantity": 1,
+          "name": "Plains"
+        },
+        {
+          "quantity": 4,
+          "name": "Resolute Reinforcements"
+        },
+        {
+          "quantity": 4,
+          "name": "Sunbillow Verge"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 4,
+          "name": "Aven Interrupter"
+        },
+        {
+          "quantity": 3,
+          "name": "Destroy Evil"
+        },
+        {
+          "quantity": 2,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 3,
+          "name": "Rest in Peace"
+        },
+        {
+          "quantity": 3,
+          "name": "Torch the Tower"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "GTX120",
+      "login_id": "2268646",
+      "decktournamentid": "58188037",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Agatha's Soul Cauldron"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Glacial Dragonhunt"
+        },
+        {
+          "quantity": 2,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 2,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Marauding Mako"
+        },
+        {
+          "quantity": 3,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Proft's Eidetic Memory"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 3,
+          "name": "Tersa Lightshatter"
+        },
+        {
+          "quantity": 3,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 4,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 3,
+          "name": "Voldaren Thrillseeker"
+        },
+        {
+          "quantity": 4,
+          "name": "Winternight Stories"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 2,
+          "name": "Draconautics Engineer"
+        },
+        {
+          "quantity": 2,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 3,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 2,
+          "name": "Negate"
+        },
+        {
+          "quantity": 1,
+          "name": "Scorching Shot"
+        },
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Unable to Scream"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "pepeteam",
+      "login_id": "2272105",
+      "decktournamentid": "58188045",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "Cecil, Dark Knight"
+        },
+        {
+          "quantity": 4,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 4,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 4,
+          "name": "Faerie Mastermind"
+        },
+        {
+          "quantity": 4,
+          "name": "Floodpits Drowner"
+        },
+        {
+          "quantity": 4,
+          "name": "Gloomlake Verge"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 2,
+          "name": "Phantom Interference"
+        },
+        {
+          "quantity": 1,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 1,
+          "name": "Saiba Cryptomancer"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred's Edict"
+        },
+        {
+          "quantity": 4,
+          "name": "Spyglass Siren"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 4,
+          "name": "Darkslick Shores"
+        },
+        {
+          "quantity": 2,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 2,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "Underground River"
+        },
+        {
+          "quantity": 3,
+          "name": "Go for the Throat"
+        },
+        {
+          "quantity": 2,
+          "name": "Restless Reef"
+        },
+        {
+          "quantity": 2,
+          "name": "Faebloom Trick"
+        },
+        {
+          "quantity": 1,
+          "name": "Deep-Cavern Bat"
+        },
+        {
+          "quantity": 3,
+          "name": "Kaito, Bane of Nightmares"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Anoint with Affliction"
+        },
+        {
+          "quantity": 1,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 1,
+          "name": "Duress"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 2,
+          "name": "Negate"
+        },
+        {
+          "quantity": 4,
+          "name": "Preacher of the Schism"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "quantity": 2,
+          "name": "Ghost Vacuum"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "416FrowningTable",
+      "login_id": "2397690",
+      "decktournamentid": "58187997",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Glacial Dragonhunt"
+        },
+        {
+          "quantity": 3,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 1,
+          "name": "Loot, the Pathfinder"
+        },
+        {
+          "quantity": 4,
+          "name": "Marauding Mako"
+        },
+        {
+          "quantity": 3,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Proft's Eidetic Memory"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 2,
+          "name": "Willowrush Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 3,
+          "name": "Tersa Lightshatter"
+        },
+        {
+          "quantity": 3,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 3,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 2,
+          "name": "Voldaren Thrillseeker"
+        },
+        {
+          "quantity": 4,
+          "name": "Winternight Stories"
+        },
+        {
+          "quantity": 4,
+          "name": "Agatha's Soul Cauldron"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 2,
+          "name": "Negate"
+        },
+        {
+          "quantity": 2,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 3,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 2,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Draconautics Engineer"
+        },
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 1,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 1,
+          "name": "Scorching Shot"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "eli2107",
+      "login_id": "2405794",
+      "decktournamentid": "58188039",
+      "mainboard": [
+        {
+          "quantity": 6,
+          "name": "Forest"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Karplusan Forest"
+        },
+        {
+          "quantity": 4,
+          "name": "Copperline Gorge"
+        },
+        {
+          "quantity": 2,
+          "name": "Bushwhack"
+        },
+        {
+          "quantity": 4,
+          "name": "Seed of Hope"
+        },
+        {
+          "quantity": 2,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 2,
+          "name": "Commercial District"
+        },
+        {
+          "quantity": 4,
+          "name": "Break Out"
+        },
+        {
+          "quantity": 3,
+          "name": "Cunning Coyote"
+        },
+        {
+          "quantity": 4,
+          "name": "Keen-Eyed Curator"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 4,
+          "name": "Violent Urge"
+        },
+        {
+          "quantity": 4,
+          "name": "Patchwork Beastie"
+        },
+        {
+          "quantity": 4,
+          "name": "Wildfire Wickerfolk"
+        },
+        {
+          "quantity": 1,
+          "name": "Hushwood Verge"
+        },
+        {
+          "quantity": 3,
+          "name": "Thornspire Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Tersa Lightshatter"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Pyroclasm"
+        },
+        {
+          "quantity": 2,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 2,
+          "name": "Wrenn and Realmbreaker"
+        },
+        {
+          "quantity": 1,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 2,
+          "name": "Pawpatch Formation"
+        },
+        {
+          "quantity": 2,
+          "name": "Scrapshooter"
+        },
+        {
+          "quantity": 2,
+          "name": "Balustrade Wurm"
+        },
+        {
+          "quantity": 2,
+          "name": "Twinmaw Stormbrood"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "_Falcon_",
+      "login_id": "2498069",
+      "decktournamentid": "58187953",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "Arabella, Abandoned Doll"
+        },
+        {
+          "quantity": 4,
+          "name": "Resolute Reinforcements"
+        },
+        {
+          "quantity": 4,
+          "name": "Case of the Gateway Express"
+        },
+        {
+          "quantity": 2,
+          "name": "Dragoon's Lance"
+        },
+        {
+          "quantity": 5,
+          "name": "Plains"
+        },
+        {
+          "quantity": 4,
+          "name": "Imodane's Recruiter"
+        },
+        {
+          "quantity": 4,
+          "name": "Warden of the Inner Sky"
+        },
+        {
+          "quantity": 4,
+          "name": "Knight-Errant of Eos"
+        },
+        {
+          "quantity": 3,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "Mirrex"
+        },
+        {
+          "quantity": 4,
+          "name": "Nesting Bot"
+        },
+        {
+          "quantity": 4,
+          "name": "Novice Inspector"
+        },
+        {
+          "quantity": 2,
+          "name": "Painter's Studio // Defaced Gallery"
+        },
+        {
+          "quantity": 4,
+          "name": "Gleeful Demolition"
+        },
+        {
+          "quantity": 4,
+          "name": "Battlefield Forge"
+        },
+        {
+          "quantity": 4,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 1,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Inspiring Vantage"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 3,
+          "name": "Destroy Evil"
+        },
+        {
+          "quantity": 2,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 3,
+          "name": "Rest in Peace"
+        },
+        {
+          "quantity": 3,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Aven Interrupter"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "Kampo",
+      "login_id": "2603719",
+      "decktournamentid": "58188043",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 4,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "Floodpits Drowner"
+        },
+        {
+          "quantity": 4,
+          "name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "quantity": 4,
+          "name": "Island"
+        },
+        {
+          "quantity": 3,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 4,
+          "name": "Spyglass Siren"
+        },
+        {
+          "quantity": 1,
+          "name": "Lord Skitter, Sewer King"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 4,
+          "name": "Darkslick Shores"
+        },
+        {
+          "quantity": 4,
+          "name": "Deep-Cavern Bat"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred's Edict"
+        },
+        {
+          "quantity": 2,
+          "name": "Go for the Throat"
+        },
+        {
+          "quantity": 2,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 4,
+          "name": "Gloomlake Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Underground River"
+        },
+        {
+          "quantity": 3,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 2,
+          "name": "Restless Reef"
+        },
+        {
+          "quantity": 2,
+          "name": "Preacher of the Schism"
+        },
+        {
+          "quantity": 1,
+          "name": "Shoot the Sheriff"
+        },
+        {
+          "quantity": 2,
+          "name": "Saiba Cryptomancer"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Anoint with Affliction"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred's Edict"
+        },
+        {
+          "quantity": 2,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 1,
+          "name": "Intimidation Tactics"
+        },
+        {
+          "quantity": 2,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "Faebloom Trick"
+        },
+        {
+          "quantity": 1,
+          "name": "Preacher of the Schism"
+        },
+        {
+          "quantity": 1,
+          "name": "Lord Skitter, Sewer King"
+        },
+        {
+          "quantity": 2,
+          "name": "Duress"
+        },
+        {
+          "quantity": 1,
+          "name": "Qarsi Revenant"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "etoustar",
+      "login_id": "2649417",
+      "decktournamentid": "58188038",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "Underground River"
+        },
+        {
+          "quantity": 3,
+          "name": "Go for the Throat"
+        },
+        {
+          "quantity": 4,
+          "name": "Darkslick Shores"
+        },
+        {
+          "quantity": 4,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred, the Apocalypse"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred's Edict"
+        },
+        {
+          "quantity": 1,
+          "name": "Faerie Mastermind"
+        },
+        {
+          "quantity": 4,
+          "name": "Spyglass Siren"
+        },
+        {
+          "quantity": 4,
+          "name": "Deep-Cavern Bat"
+        },
+        {
+          "quantity": 2,
+          "name": "Restless Reef"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Phantom Interference"
+        },
+        {
+          "quantity": 1,
+          "name": "Fountainport"
+        },
+        {
+          "quantity": 4,
+          "name": "Floodpits Drowner"
+        },
+        {
+          "quantity": 4,
+          "name": "Gloomlake Verge"
+        },
+        {
+          "quantity": 3,
+          "name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "quantity": 4,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 2,
+          "name": "Faebloom Trick"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Negate"
+        },
+        {
+          "quantity": 2,
+          "name": "Duress"
+        },
+        {
+          "quantity": 1,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 1,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 2,
+          "name": "Anoint with Affliction"
+        },
+        {
+          "quantity": 1,
+          "name": "Faerie Mastermind"
+        },
+        {
+          "quantity": 2,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Preacher of the Schism"
+        },
+        {
+          "quantity": 2,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 1,
+          "name": "Kaito, Bane of Nightmares"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "ARunningHans",
+      "login_id": "2656740",
+      "decktournamentid": "58188057",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Agatha's Soul Cauldron"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 4,
+          "name": "Marauding Mako"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 3,
+          "name": "Proft's Eidetic Memory"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 3,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 3,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Spyglass Siren"
+        },
+        {
+          "quantity": 3,
+          "name": "Tersa Lightshatter"
+        },
+        {
+          "quantity": 2,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 4,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 3,
+          "name": "Voldaren Thrillseeker"
+        },
+        {
+          "quantity": 4,
+          "name": "Winternight Stories"
+        },
+        {
+          "quantity": 2,
+          "name": "Glacial Dragonhunt"
+        },
+        {
+          "quantity": 2,
+          "name": "Spell Pierce"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Negate"
+        },
+        {
+          "quantity": 1,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 2,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 2,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 2,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 2,
+          "name": "Draconautics Engineer"
+        },
+        {
+          "quantity": 2,
+          "name": "Unable to Scream"
+        },
+        {
+          "quantity": 2,
+          "name": "Abrade"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "xRagedFurballx",
+      "login_id": "2659046",
+      "decktournamentid": "58187986",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Kaito, Bane of Nightmares"
+        },
+        {
+          "quantity": 2,
+          "name": "Go for the Throat"
+        },
+        {
+          "quantity": 2,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 3,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 1,
+          "name": "Sheoldred's Edict"
+        },
+        {
+          "quantity": 2,
+          "name": "Restless Reef"
+        },
+        {
+          "quantity": 2,
+          "name": "Deep-Cavern Bat"
+        },
+        {
+          "quantity": 3,
+          "name": "Faerie Mastermind"
+        },
+        {
+          "quantity": 4,
+          "name": "Darkslick Shores"
+        },
+        {
+          "quantity": 2,
+          "name": "Phantom Interference"
+        },
+        {
+          "quantity": 4,
+          "name": "Floodpits Drowner"
+        },
+        {
+          "quantity": 4,
+          "name": "Gloomlake Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Underground River"
+        },
+        {
+          "quantity": 4,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 2,
+          "name": "Faebloom Trick"
+        },
+        {
+          "quantity": 3,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 2,
+          "name": "Cecil, Dark Knight"
+        },
+        {
+          "quantity": 5,
+          "name": "Swamp"
+        },
+        {
+          "quantity": 4,
+          "name": "Spyglass Siren"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 3,
+          "name": "Duress"
+        },
+        {
+          "quantity": 2,
+          "name": "Negate"
+        },
+        {
+          "quantity": 1,
+          "name": "Cut Down"
+        },
+        {
+          "quantity": 2,
+          "name": "Gix's Command"
+        },
+        {
+          "quantity": 2,
+          "name": "Anoint with Affliction"
+        },
+        {
+          "quantity": 3,
+          "name": "Preacher of the Schism"
+        },
+        {
+          "quantity": 1,
+          "name": "Ghost Vacuum"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "Ale_Mtg",
+      "login_id": "2683189",
+      "decktournamentid": "58188023",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Agatha's Soul Cauldron"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Glacial Dragonhunt"
+        },
+        {
+          "quantity": 3,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 3,
+          "name": "Voldaren Thrillseeker"
+        },
+        {
+          "quantity": 4,
+          "name": "Marauding Mako"
+        },
+        {
+          "quantity": 4,
+          "name": "Proft's Eidetic Memory"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 3,
+          "name": "Tersa Lightshatter"
+        },
+        {
+          "quantity": 3,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 2,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 2,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Winternight Stories"
+        },
+        {
+          "quantity": 3,
+          "name": "Mountain"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 2,
+          "name": "Draconautics Engineer"
+        },
+        {
+          "quantity": 2,
+          "name": "Enduring Curiosity"
+        },
+        {
+          "quantity": 3,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 2,
+          "name": "Negate"
+        },
+        {
+          "quantity": 1,
+          "name": "Scorching Shot"
+        },
+        {
+          "quantity": 1,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Unable to Scream"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "Off1ine__",
+      "login_id": "2856617",
+      "decktournamentid": "58187940",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "Arabella, Abandoned Doll"
+        },
+        {
+          "quantity": 4,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Case of the Gateway Express"
+        },
+        {
+          "quantity": 4,
+          "name": "Gleeful Demolition"
+        },
+        {
+          "quantity": 4,
+          "name": "Imodane's Recruiter"
+        },
+        {
+          "quantity": 4,
+          "name": "Knight-Errant of Eos"
+        },
+        {
+          "quantity": 4,
+          "name": "Resolute Reinforcements"
+        },
+        {
+          "quantity": 1,
+          "name": "Mirrex"
+        },
+        {
+          "quantity": 4,
+          "name": "Warden of the Inner Sky"
+        },
+        {
+          "quantity": 4,
+          "name": "Nesting Bot"
+        },
+        {
+          "quantity": 4,
+          "name": "Novice Inspector"
+        },
+        {
+          "quantity": 2,
+          "name": "Painter's Studio // Defaced Gallery"
+        },
+        {
+          "quantity": 1,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Battlefield Forge"
+        },
+        {
+          "quantity": 2,
+          "name": "Frontline Rush"
+        },
+        {
+          "quantity": 1,
+          "name": "Plains"
+        },
+        {
+          "quantity": 2,
+          "name": "Plains"
+        },
+        {
+          "quantity": 2,
+          "name": "Plains"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Inspiring Vantage"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 3,
+          "name": "Rest in Peace"
+        },
+        {
+          "quantity": 3,
+          "name": "Destroy Evil"
+        },
+        {
+          "quantity": 2,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 1,
+          "name": "Witchstalker Frenzy"
+        },
+        {
+          "quantity": 2,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Aven Interrupter"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "Psychperiod",
+      "login_id": "2972974",
+      "decktournamentid": "58188040",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "Dusk Rose Reliquary"
+        },
+        {
+          "quantity": 2,
+          "name": "Elspeth, Storm Slayer"
+        },
+        {
+          "quantity": 4,
+          "name": "Brushland"
+        },
+        {
+          "quantity": 4,
+          "name": "Sandstorm Salvager"
+        },
+        {
+          "quantity": 1,
+          "name": "Nurturing Pixie"
+        },
+        {
+          "quantity": 1,
+          "name": "Haywire Mite"
+        },
+        {
+          "quantity": 2,
+          "name": "Forest"
+        },
+        {
+          "quantity": 4,
+          "name": "Overlord of the Mistmoors"
+        },
+        {
+          "quantity": 4,
+          "name": "Brightglass Gearhulk"
+        },
+        {
+          "quantity": 4,
+          "name": "Llanowar Elves"
+        },
+        {
+          "quantity": 4,
+          "name": "Enduring Innocence"
+        },
+        {
+          "quantity": 3,
+          "name": "Restless Prairie"
+        },
+        {
+          "quantity": 2,
+          "name": "Mirrex"
+        },
+        {
+          "quantity": 2,
+          "name": "Sanguine Evangelist"
+        },
+        {
+          "quantity": 3,
+          "name": "Pawpatch Recruit"
+        },
+        {
+          "quantity": 2,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 4,
+          "name": "Collector's Cage"
+        },
+        {
+          "quantity": 4,
+          "name": "Razorverge Thicket"
+        },
+        {
+          "quantity": 1,
+          "name": "Forest"
+        },
+        {
+          "quantity": 2,
+          "name": "Plains"
+        },
+        {
+          "quantity": 2,
+          "name": "Plains"
+        },
+        {
+          "quantity": 4,
+          "name": "Hushwood Verge"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Phoenix Down"
+        },
+        {
+          "quantity": 1,
+          "name": "Elesh Norn, Mother of Machines"
+        },
+        {
+          "quantity": 1,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "Scrapshooter"
+        },
+        {
+          "quantity": 2,
+          "name": "Devout Decree"
+        },
+        {
+          "quantity": 2,
+          "name": "Beza, the Bounding Spring"
+        },
+        {
+          "quantity": 1,
+          "name": "Aven Interrupter"
+        },
+        {
+          "quantity": 1,
+          "name": "Scavenging Ooze"
+        },
+        {
+          "quantity": 2,
+          "name": "Invasion of Gobakhan"
+        },
+        {
+          "quantity": 2,
+          "name": "Wrenn and Realmbreaker"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "ItsJustSquid",
+      "login_id": "3046767",
+      "decktournamentid": "58187998",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Boltwave"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 2,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "Case of the Crimson Pulse"
+        },
+        {
+          "quantity": 4,
+          "name": "Monastery Swiftspear"
+        },
+        {
+          "quantity": 4,
+          "name": "Lightning Helix"
+        },
+        {
+          "quantity": 4,
+          "name": "Inspiring Vantage"
+        },
+        {
+          "quantity": 4,
+          "name": "Hired Claw"
+        },
+        {
+          "quantity": 4,
+          "name": "Burst Lightning"
+        },
+        {
+          "quantity": 4,
+          "name": "Opera Love Song"
+        },
+        {
+          "quantity": 4,
+          "name": "Boros Charm"
+        },
+        {
+          "quantity": 4,
+          "name": "Battlefield Forge"
+        },
+        {
+          "quantity": 4,
+          "name": "Slickshot Show-Off"
+        },
+        {
+          "quantity": 4,
+          "name": "Starting Town"
+        },
+        {
+          "quantity": 2,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 2,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Screaming Nemesis"
+        },
+        {
+          "quantity": 2,
+          "name": "Shock"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Case of the Crimson Pulse"
+        },
+        {
+          "quantity": 2,
+          "name": "Destroy Evil"
+        },
+        {
+          "quantity": 2,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 2,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 2,
+          "name": "Urabrask's Forge"
+        },
+        {
+          "quantity": 2,
+          "name": "Shardmage's Rescue"
+        },
+        {
+          "quantity": 2,
+          "name": "Sheltered by Ghosts"
+        },
+        {
+          "quantity": 2,
+          "name": "Rest in Peace"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "RubyXillia",
+      "login_id": "3060766",
+      "decktournamentid": "58188047",
+      "mainboard": [
+        {
+          "quantity": 3,
+          "name": "Brushland"
+        },
+        {
+          "quantity": 4,
+          "name": "Starting Town"
+        },
+        {
+          "quantity": 1,
+          "name": "Wingspan Stride"
+        },
+        {
+          "quantity": 2,
+          "name": "Lightwheel Enhancements"
+        },
+        {
+          "quantity": 2,
+          "name": "Entity Tracker"
+        },
+        {
+          "quantity": 4,
+          "name": "Sheltered by Ghosts"
+        },
+        {
+          "quantity": 4,
+          "name": "Optimistic Scavenger"
+        },
+        {
+          "quantity": 1,
+          "name": "Feather of Flight"
+        },
+        {
+          "quantity": 4,
+          "name": "Toadstool Admirer"
+        },
+        {
+          "quantity": 2,
+          "name": "Royal Treatment"
+        },
+        {
+          "quantity": 1,
+          "name": "Bestial Bloodline"
+        },
+        {
+          "quantity": 4,
+          "name": "Saiba Cryptomancer"
+        },
+        {
+          "quantity": 4,
+          "name": "Razorverge Thicket"
+        },
+        {
+          "quantity": 4,
+          "name": "Audacity"
+        },
+        {
+          "quantity": 3,
+          "name": "Combat Research"
+        },
+        {
+          "quantity": 4,
+          "name": "Botanical Sanctum"
+        },
+        {
+          "quantity": 3,
+          "name": "Unflinching Courage"
+        },
+        {
+          "quantity": 4,
+          "name": "Ethereal Armor"
+        },
+        {
+          "quantity": 4,
+          "name": "Seachrome Coast"
+        },
+        {
+          "quantity": 1,
+          "name": "Yavimaya Coast"
+        },
+        {
+          "quantity": 1,
+          "name": "Adarkar Wastes"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 3,
+          "name": "Rest in Peace"
+        },
+        {
+          "quantity": 3,
+          "name": "Knight of Grace"
+        },
+        {
+          "quantity": 3,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 2,
+          "name": "Shardmage's Rescue"
+        },
+        {
+          "quantity": 2,
+          "name": "Entity Tracker"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "EdgarB",
+      "login_id": "3062968",
+      "decktournamentid": "58187973",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "Audacity"
+        },
+        {
+          "quantity": 1,
+          "name": "Restless Ridgeline"
+        },
+        {
+          "quantity": 5,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 3,
+          "name": "Manifold Mouse"
+        },
+        {
+          "quantity": 4,
+          "name": "Innkeeper's Talent"
+        },
+        {
+          "quantity": 4,
+          "name": "Karplusan Forest"
+        },
+        {
+          "quantity": 4,
+          "name": "Hired Claw"
+        },
+        {
+          "quantity": 2,
+          "name": "Questing Druid"
+        },
+        {
+          "quantity": 1,
+          "name": "Overprotect"
+        },
+        {
+          "quantity": 4,
+          "name": "Pawpatch Recruit"
+        },
+        {
+          "quantity": 4,
+          "name": "Emberheart Challenger"
+        },
+        {
+          "quantity": 3,
+          "name": "Burst Lightning"
+        },
+        {
+          "quantity": 2,
+          "name": "Rockface Village"
+        },
+        {
+          "quantity": 1,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 4,
+          "name": "Copperline Gorge"
+        },
+        {
+          "quantity": 3,
+          "name": "Screaming Nemesis"
+        },
+        {
+          "quantity": 4,
+          "name": "Thornspire Verge"
+        },
+        {
+          "quantity": 1,
+          "name": "Forest"
+        },
+        {
+          "quantity": 1,
+          "name": "Forest"
+        },
+        {
+          "quantity": 1,
+          "name": "Surrak, Elusive Hunter"
+        },
+        {
+          "quantity": 2,
+          "name": "Twinmaw Stormbrood"
+        },
+        {
+          "quantity": 3,
+          "name": "Dreadmaw's Ire"
+        },
+        {
+          "quantity": 2,
+          "name": "Torch the Tower"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 1,
+          "name": "Soul-Guide Lantern"
+        },
+        {
+          "quantity": 2,
+          "name": "Questing Druid"
+        },
+        {
+          "quantity": 1,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 3,
+          "name": "Heritage Reclamation"
+        },
+        {
+          "quantity": 3,
+          "name": "Urabrask's Forge"
+        },
+        {
+          "quantity": 2,
+          "name": "Pyroclasm"
+        },
+        {
+          "quantity": 1,
+          "name": "Ghost Vacuum"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "DookieTrouserMD",
+      "login_id": "3082384",
+      "decktournamentid": "58188020",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "Cori Mountain Monastery"
+        },
+        {
+          "quantity": 2,
+          "name": "Draconautics Engineer"
+        },
+        {
+          "quantity": 3,
+          "name": "Island"
+        },
+        {
+          "quantity": 2,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 3,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 2,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 4,
+          "name": "Marauding Mako"
+        },
+        {
+          "quantity": 4,
+          "name": "Agatha's Soul Cauldron"
+        },
+        {
+          "quantity": 4,
+          "name": "Proft's Eidetic Memory"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Glacial Dragonhunt"
+        },
+        {
+          "quantity": 4,
+          "name": "Winternight Stories"
+        },
+        {
+          "quantity": 3,
+          "name": "Voldaren Thrillseeker"
+        },
+        {
+          "quantity": 3,
+          "name": "Tersa Lightshatter"
+        },
+        {
+          "quantity": 1,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 3,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 1,
+          "name": "Kitsa, Otterball Elite"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 4,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 2,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 1,
+          "name": "Change the Equation"
+        },
+        {
+          "quantity": 1,
+          "name": "Negate"
+        },
+        {
+          "quantity": 1,
+          "name": "Scorching Dragonfire"
+        },
+        {
+          "quantity": 2,
+          "name": "Frostcliff Siege"
+        },
+        {
+          "quantity": 1,
+          "name": "Enduring Curiosity"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "J0hnWick",
+      "login_id": "3107900",
+      "decktournamentid": "58187999",
+      "mainboard": [
+        {
+          "quantity": 2,
+          "name": "Arabella, Abandoned Doll"
+        },
+        {
+          "quantity": 4,
+          "name": "Battlefield Forge"
+        },
+        {
+          "quantity": 4,
+          "name": "Case of the Gateway Express"
+        },
+        {
+          "quantity": 2,
+          "name": "Dragoon's Lance"
+        },
+        {
+          "quantity": 4,
+          "name": "Gleeful Demolition"
+        },
+        {
+          "quantity": 4,
+          "name": "Imodane's Recruiter"
+        },
+        {
+          "quantity": 4,
+          "name": "Warden of the Inner Sky"
+        },
+        {
+          "quantity": 4,
+          "name": "Knight-Errant of Eos"
+        },
+        {
+          "quantity": 1,
+          "name": "Mirrex"
+        },
+        {
+          "quantity": 1,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Nesting Bot"
+        },
+        {
+          "quantity": 4,
+          "name": "Novice Inspector"
+        },
+        {
+          "quantity": 2,
+          "name": "Painter's Studio // Defaced Gallery"
+        },
+        {
+          "quantity": 4,
+          "name": "Resolute Reinforcements"
+        },
+        {
+          "quantity": 5,
+          "name": "Plains"
+        },
+        {
+          "quantity": 4,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 3,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Inspiring Vantage"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 4,
+          "name": "Aven Interrupter"
+        },
+        {
+          "quantity": 3,
+          "name": "Destroy Evil"
+        },
+        {
+          "quantity": 2,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 2,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 1,
+          "name": "Witchstalker Frenzy"
+        },
+        {
+          "quantity": 3,
+          "name": "Rest in Peace"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "Thief_Of_Crowns",
+      "login_id": "3114647",
+      "decktournamentid": "58188001",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Winternight Stories"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 1,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Recommission"
+        },
+        {
+          "quantity": 1,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Agatha's Soul Cauldron"
+        },
+        {
+          "quantity": 4,
+          "name": "Helping Hand"
+        },
+        {
+          "quantity": 2,
+          "name": "Artist's Talent"
+        },
+        {
+          "quantity": 2,
+          "name": "Elegant Parlor"
+        },
+        {
+          "quantity": 3,
+          "name": "Floodfarm Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Starting Town"
+        },
+        {
+          "quantity": 1,
+          "name": "Voldaren Thrillseeker"
+        },
+        {
+          "quantity": 4,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 2,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 1,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 2,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 1,
+          "name": "Geralf, the Fleshwright"
+        },
+        {
+          "quantity": 4,
+          "name": "Picklock Prankster"
+        },
+        {
+          "quantity": 2,
+          "name": "Artist's Talent"
+        },
+        {
+          "quantity": 2,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 2,
+          "name": "Meticulous Archive"
+        },
+        {
+          "quantity": 3,
+          "name": "Abhorrent Oculus"
+        },
+        {
+          "quantity": 1,
+          "name": "Abhorrent Oculus"
+        },
+        {
+          "quantity": 1,
+          "name": "Sunbillow Verge"
+        },
+        {
+          "quantity": 1,
+          "name": "Floodfarm Verge"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "No More Lies"
+        },
+        {
+          "quantity": 2,
+          "name": "Get Lost"
+        },
+        {
+          "quantity": 1,
+          "name": "Abrade"
+        },
+        {
+          "quantity": 2,
+          "name": "Abrade"
+        },
+        {
+          "quantity": 4,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 3,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 1,
+          "name": "Geralf, the Fleshwright"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "DB_Dykman",
+      "login_id": "3224603",
+      "decktournamentid": "58187989",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Proft's Eidetic Memory"
+        },
+        {
+          "quantity": 4,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 4,
+          "name": "Steamcore Scholar"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 4,
+          "name": "Marauding Mako"
+        },
+        {
+          "quantity": 6,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 4,
+          "name": "Bitter Reunion"
+        },
+        {
+          "quantity": 2,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 4,
+          "name": "Monument to Endurance"
+        },
+        {
+          "quantity": 3,
+          "name": "Winternight Stories"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 2,
+          "name": "Unable to Scream"
+        },
+        {
+          "quantity": 3,
+          "name": "Tersa Lightshatter"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Get Out"
+        },
+        {
+          "quantity": 3,
+          "name": "Ghost Vacuum"
+        },
+        {
+          "quantity": 2,
+          "name": "Negate"
+        },
+        {
+          "quantity": 2,
+          "name": "Ral, Crackling Wit"
+        },
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 3,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 2,
+          "name": "Twinmaw Stormbrood"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "VitorCarvalho01",
+      "login_id": "3295882",
+      "decktournamentid": "58188031",
+      "mainboard": [
+        {
+          "quantity": 1,
+          "name": "Nahiri's Warcrafting"
+        },
+        {
+          "quantity": 4,
+          "name": "Slickshot Show-Off"
+        },
+        {
+          "quantity": 1,
+          "name": "Get Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 2,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "Magic Damper"
+        },
+        {
+          "quantity": 1,
+          "name": "Restless Spire"
+        },
+        {
+          "quantity": 1,
+          "name": "Scorching Dragonfire"
+        },
+        {
+          "quantity": 1,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 2,
+          "name": "Ral, Crackling Wit"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 1,
+          "name": "Roaring Furnace // Steaming Sauna"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 4,
+          "name": "Sleight of Hand"
+        },
+        {
+          "quantity": 4,
+          "name": "Stock Up"
+        },
+        {
+          "quantity": 4,
+          "name": "Stormchaser's Talent"
+        },
+        {
+          "quantity": 2,
+          "name": "Dreams of Laguna"
+        },
+        {
+          "quantity": 4,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 3,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 6,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Opt"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 2,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 1,
+          "name": "Pyroclasm"
+        },
+        {
+          "quantity": 1,
+          "name": "Fire Magic"
+        },
+        {
+          "quantity": 2,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 1,
+          "name": "Get Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 2,
+          "name": "Agatha's Soul Cauldron"
+        },
+        {
+          "quantity": 2,
+          "name": "Enduring Curiosity"
+        }
+      ],
+      "archetype": null
+    },
+    {
+      "player": "monzatubarao",
+      "login_id": "3306137",
+      "decktournamentid": "58187983",
+      "mainboard": [
+        {
+          "quantity": 4,
+          "name": "Proft's Eidetic Memory"
+        },
+        {
+          "quantity": 4,
+          "name": "Fear of Missing Out"
+        },
+        {
+          "quantity": 2,
+          "name": "Glacial Dragonhunt"
+        },
+        {
+          "quantity": 3,
+          "name": "Into the Flood Maw"
+        },
+        {
+          "quantity": 2,
+          "name": "Island"
+        },
+        {
+          "quantity": 4,
+          "name": "Marauding Mako"
+        },
+        {
+          "quantity": 4,
+          "name": "Agatha's Soul Cauldron"
+        },
+        {
+          "quantity": 4,
+          "name": "Shivan Reef"
+        },
+        {
+          "quantity": 4,
+          "name": "Riverpyre Verge"
+        },
+        {
+          "quantity": 4,
+          "name": "Spirebluff Canal"
+        },
+        {
+          "quantity": 2,
+          "name": "Soulstone Sanctuary"
+        },
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 4,
+          "name": "Winternight Stories"
+        },
+        {
+          "quantity": 3,
+          "name": "Tersa Lightshatter"
+        },
+        {
+          "quantity": 3,
+          "name": "Thundering Falls"
+        },
+        {
+          "quantity": 2,
+          "name": "Torch the Tower"
+        },
+        {
+          "quantity": 4,
+          "name": "Vivi Ornitier"
+        },
+        {
+          "quantity": 3,
+          "name": "Voldaren Thrillseeker"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        },
+        {
+          "quantity": 1,
+          "name": "Mountain"
+        }
+      ],
+      "sideboard": [
+        {
+          "quantity": 1,
+          "name": "Disdainful Stroke"
+        },
+        {
+          "quantity": 2,
+          "name": "Draconautics Engineer"
+        },
+        {
+          "quantity": 3,
+          "name": "Lithomantic Barrage"
+        },
+        {
+          "quantity": 1,
+          "name": "Spell Pierce"
+        },
+        {
+          "quantity": 1,
+          "name": "Scorching Shot"
+        },
+        {
+          "quantity": 2,
+          "name": "Negate"
+        },
+        {
+          "quantity": 1,
+          "name": "Tishana's Tidebinder"
+        },
+        {
+          "quantity": 2,
+          "name": "Unable to Scream"
+        },
+        {
+          "quantity": 2,
+          "name": "Enduring Curiosity"
+        }
+      ],
+      "archetype": null
+    }
+  ]
+}
