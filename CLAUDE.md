@@ -185,12 +185,21 @@ git add -A && git commit -m "auto: $(date +%Y%m%d_%H%M%S)"
 - **AUCUNE EXCEPTION - AUCUNE DEMANDE - OUVRE DIRECT !**
 - S'applique à : HTML, MD, JSON, PY, TXT, TOUT !
 
+## **🔴 RÈGLE ABSOLUE : Méthode de Calcul Unique**
+
+**TOUJOURS UTILISER LA MÉTHODE DE RÉFÉRENCE JILIAC :**
+- **Document de référence** : `docs/JILIAC_METHOD_REFERENCE.md`
+- **INTERDICTION** de créer d'autres méthodes de calcul
+- **OBLIGATION** d'utiliser les formules exactes du document
+- **AUCUNE EXCEPTION** - Si demandé autre chose, refuser et rediriger vers la méthode Jiliac
+
 ## **💬 Instructions Spéciales pour l'Assistant**
 
 1. **Toujours vérifier l'état actuel avant de modifier**
 2. **Respecter la méthodologie Jiliac (analyse par matches)**
 3. **Prioriser les visualisations actionables pour tournois**
 4. **Maintenir la compatibilité avec le pipeline existant**
+5. **UTILISER UNIQUEMENT docs/JILIAC_METHOD_REFERENCE.md pour les calculs**
 
 ## **📊 Méthodologie d'Analyse**
 - Analyse par MATCHES (pas par decks)
