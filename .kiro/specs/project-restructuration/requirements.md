@@ -76,6 +76,8 @@ Ce projet vise à restructurer complètement l'architecture du projet Manalytics
 3. WHEN je veux comprendre l'architecture THEN je dois avoir des diagrammes et explications
 4. IF je veux contribuer THEN je dois connaître les standards et conventions
 5. WHEN je rencontre un problème THEN je dois avoir des guides de troubleshooting
+6. WHEN la restructuration est terminée THEN CLAUDE.md doit être mis à jour avec la nouvelle architecture
+7. WHEN la restructuration est terminée THEN README.md doit refléter la nouvelle structure publique
 
 ### Requirement 7 - Environnement de Développement
 

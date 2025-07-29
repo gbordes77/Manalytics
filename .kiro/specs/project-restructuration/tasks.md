@@ -130,13 +130,19 @@
     - _Requirements: 3.4, 5.1, 7.2_
 
 - [ ] 11. Create Documentation and Onboarding System
-  - [ ] 11.1 Create comprehensive architecture documentation
+  - [ ] 11.1 Update existing documentation files
+    - Update CLAUDE.md with new architecture, rules, and script references
+    - Update README.md to reflect new public structure and usage
+    - Preserve all existing critical information while updating structure references
+    - _Requirements: 6.6, 6.7_
+
+  - [ ] 11.2 Create comprehensive architecture documentation
     - Write detailed ARCHITECTURE.md with diagrams and explanations
     - Create SCRIPTS_REFERENCE.md documenting which scripts to use
     - Write API documentation for all core components
     - _Requirements: 6.1, 6.2, 6.3_
 
-  - [ ] 11.2 Create onboarding and troubleshooting guides
+  - [ ] 11.3 Create onboarding and troubleshooting guides
     - Write ONBOARDING.md for new developers
     - Create troubleshooting guides for common issues
     - Add examples and tutorials for typical workflows

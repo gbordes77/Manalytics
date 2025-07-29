@@ -39,7 +39,12 @@ manalytics/
 ├── docs/                      # Documentation
 │   ├── ARCHITECTURE.md        # Architecture détaillée
 │   ├── SCRIPTS_REFERENCE.md   # Guide des scripts de référence
-│   └── ONBOARDING.md          # Guide d'onboarding
+│   ├── ONBOARDING.md          # Guide d'onboarding
+│   └── migration/             # Documentation de migration
+│       ├── BEFORE_AFTER.md    # Comparaison avant/après
+│       └── DECISION_LOG.md    # Log des décisions prises
+├── CLAUDE.md                  # Instructions spécifiques IA (PRÉSERVÉ)
+├── README.md                  # Documentation publique (MISE À JOUR)
 └── tests/                     # Tests automatisés
 ```
 
@@ -303,7 +308,57 @@ class ResultValidator:
         """Compare results with known Jiliac benchmarks"""
 ```
 
+## Documentation Strategy
+
+### Gestion des Fichiers Existants Critiques
+
+#### CLAUDE.md (Instructions IA)
+- **Action** : MISE À JOUR (pas remplacement)
+- **Contenu à préserver** :
+  - État actuel du projet et découvertes critiques
+  - Règles de travail (auto-commit, ouverture auto)
+  - Méthodologie Jiliac et références
+  - Historique des décisions importantes
+- **Contenu à mettre à jour** :
+  - Structure du projet (nouvelle architecture)
+  - Scripts de référence (nouveaux points d'entrée)
+  - Commandes principales (nouveaux CLI)
+  - Documentation à consulter (nouveaux fichiers)
+
+#### README.md (Documentation Publique)
+- **Action** : MISE À JOUR MAJEURE
+- **Contenu à préserver** :
+  - Description du projet et fonctionnalités
+  - Crédits et remerciements
+  - Informations de licence
+- **Contenu à mettre à jour** :
+  - Structure du projet (refléter nouvelle architecture)
+  - Instructions d'installation (nouveaux workflows)
+  - Guide d'utilisation (nouveaux CLI)
+  - Documentation de l'API (nouveaux endpoints)
+
+### Stratégie de Mise à Jour
+
+```python
+class DocumentationUpdater:
+    """Système de mise à jour de la documentation existante"""
+    
+    def update_claude_md(self, new_structure: ProjectStructure):
+        """Update CLAUDE.md with new architecture while preserving critical info"""
+        
+    def update_readme_md(self, new_structure: ProjectStructure):
+        """Update README.md for public consumption with new structure"""
+        
+    def create_migration_docs(self, changes: List[Change]):
+        """Create documentation explaining what changed and why"""
+```
+
 ## Migration Strategy
+
+### Phase 0: Documentation Backup and Analysis
+1. Créer des backups de CLAUDE.md et README.md
+2. Analyser le contenu critique à préserver
+3. Identifier les sections à mettre à jour
 
 ### Phase 1: Structure Setup
 1. Créer la nouvelle structure de dossiers
